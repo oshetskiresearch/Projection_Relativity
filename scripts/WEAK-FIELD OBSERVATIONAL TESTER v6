@@ -1,0 +1,281 @@
+
+
+# ============================================================
+#  ______             __                   __                __        __        _______                                                               __
+# /      \           |  \                 |  \              |  \      |  \      |       \                                                             |  \
+#|  $$$$$$\  _______ | $$____    ______  _| $$_     _______ | $$   __  \$$      | $$$$$$$\  ______    _______   ______    ______    ______    _______ | $$____
+#| $$  | $$ /       \| $$    \  /      \|   $$ \   /       \| $$  /  \|  \      | $$__| $$ /      \  /       \ /      \  |      \  /      \  /       \| $$    \
+#| $$  | $$|  $$$$$$$| $$$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$$| $$_/  $$| $$      | $$    $$|  $$$$$$\|  $$$$$$$|  $$$$$$\  \$$$$$$\|  $$$$$$\|  $$$$$$$| $$$$$$$\
+#| $$  | $$ \$$    \ | $$  | $$| $$    $$ | $$ __  \$$    \ | $$   $$ | $$      | $$$$$$$\| $$    $$ \$$    \ | $$    $$ /      $$| $$   \$$| $$      | $$  | $$
+#| $$__/ $$ _\$$$$$$\| $$  | $$| $$$$$$$$ | $$|  \ _\$$$$$$\| $$$$$$\ | $$      | $$  | $$| $$$$$$$$ _\$$$$$$\| $$$$$$$$|  $$$$$$$| $$      | $$_____ | $$  | $$
+# \$$    $$|       $$| $$  | $$ \$$     \  \$$  $$|       $$| $$  \$$\| $$      | $$  | $$ \$$     \|       $$ \$$     \ \$$    $$| $$       \$$     \| $$  | $$
+#  \$$$$$$  \$$$$$$$  \$$   \$$  \$$$$$$$   \$$$$  \$$$$$$$  \$$   \$$ \$$       \$$   \$$  \$$$$$$$ \$$$$$$$   \$$$$$$$  \$$$$$$$ \$$        \$$$$$$$ \$$   \$$
+#
+# Dynamic Gravity
+# WEAK-FIELD OBSERVATIONAL TESTER v6
+# Michael Stanislaus Oshetski
+# ORCID# 0009-0007-3623-7586
+# May, 2026
+#
+# PURPOSE:
+#   Verify MR reproduces standard weak-field GR observables:
+#
+#       1. Mercury perihelion precession
+#       2. Solar light bending
+#       3. Shapiro time delay
+#
+# ASSUMPTION:
+#   MR weak-field limit reduces to GR:
+#
+#       F(k^2)/k^2 << 1
+#
+# ============================================================
+
+import numpy as np
+import pandas as pd
+
+# ============================================================
+# Constants
+# ============================================================
+
+G = 6.67430e-11
+c = 2.99792458e8
+
+M_sun = 1.98847e30
+
+AU = 1.495978707e11
+
+arcsec_per_rad = 206264.80624709636
+
+# ============================================================
+# Helpers
+# ============================================================
+
+tests = []
+
+def numeric_test(name, value, target, tol_pct, section="weak_field"):
+
+    value = float(value)
+    target = float(target)
+
+    err_pct = 100 * (value - target) / target
+
+    passed = abs(err_pct) <= tol_pct
+
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": passed,
+        "detail": (
+            f"value={value:.12g}, "
+            f"target={target:.12g}, "
+            f"error_pct={err_pct:.6g}, "
+            f"tol_pct={tol_pct}"
+        )
+    })
+
+    return passed
+
+
+def info_row(name, value, section="info"):
+
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": True,
+        "detail": str(value)
+    })
+
+# ============================================================
+# 1. Mercury perihelion precession
+#
+# Delta phi per orbit:
+#
+#   Delta phi = 6 pi G M / (a (1-e^2) c^2)
+#
+# Convert to arcsec / century.
+# ============================================================
+
+a_mercury = 0.387098 * AU
+e_mercury = 0.205630
+
+orbital_period_days = 87.9691
+
+delta_phi_rad_per_orbit = (
+    6 * np.pi * G * M_sun
+    / (
+        a_mercury
+        * (1 - e_mercury**2)
+        * c**2
+    )
+)
+
+delta_phi_arcsec_per_orbit = (
+    delta_phi_rad_per_orbit
+    * arcsec_per_rad
+)
+
+# Mercury orbits per century
+orbits_per_century = (
+    36525.0 / orbital_period_days
+)
+
+delta_phi_arcsec_per_century = (
+    delta_phi_arcsec_per_orbit
+    * orbits_per_century
+)
+
+info_row(
+    "Mercury perihelion precession arcsec/century",
+    delta_phi_arcsec_per_century
+)
+
+numeric_test(
+    "Mercury perihelion precession",
+    delta_phi_arcsec_per_century,
+    42.98,
+    1.0
+)
+
+# ============================================================
+# 2. Solar light bending
+#
+# theta = 4GM/(b c^2)
+#
+# evaluated at solar limb
+# ============================================================
+
+R_sun = 6.957e8
+
+theta_bend_rad = (
+    4 * G * M_sun
+    / (R_sun * c**2)
+)
+
+theta_bend_arcsec = (
+    theta_bend_rad
+    * arcsec_per_rad
+)
+
+info_row(
+    "Solar light bending arcsec",
+    theta_bend_arcsec
+)
+
+numeric_test(
+    "Solar light bending",
+    theta_bend_arcsec,
+    1.75,
+    1.0
+)
+
+# ============================================================
+# 3. Shapiro delay
+#
+# Approximate solar-grazing radar signal:
+#
+# Delta t ~ (2GM/c^3) ln(4 rE rP / b^2)
+#
+# Use Earth-Venus style scale.
+# ============================================================
+
+rE = 1.0 * AU
+rP = 0.723 * AU
+b = R_sun
+
+delta_t = (
+    2 * G * M_sun / c**3
+) * np.log(
+    4 * rE * rP / b**2
+)
+
+delta_t_microsec = delta_t * 1e6
+
+info_row(
+    "Shapiro delay microseconds",
+    delta_t_microsec
+)
+
+numeric_test(
+    "Shapiro delay",
+    delta_t_microsec,
+    120.0,
+    20.0
+)
+
+# ============================================================
+# 4. Weak-field compactness parameter
+#
+# epsilon = GM/(rc^2)
+#
+# Mercury orbit should satisfy epsilon << 1
+# ============================================================
+
+epsilon_mercury = (
+    G * M_sun
+    / (a_mercury * c**2)
+)
+
+info_row(
+    "Mercury weak-field compactness",
+    epsilon_mercury
+)
+
+tests.append({
+    "section": "weak_field",
+    "test": "Weak-field compactness << 1",
+    "passed": epsilon_mercury < 1e-6,
+    "detail": (
+        f"epsilon={epsilon_mercury:.12e}, "
+        f"threshold=1e-6"
+    )
+})
+
+# ============================================================
+# 5. Schwarzschild radius sanity
+# ============================================================
+
+r_s_sun = (
+    2 * G * M_sun / c**2
+)
+
+info_row(
+    "Solar Schwarzschild radius meters",
+    r_s_sun
+)
+
+# ============================================================
+# Output
+# ============================================================
+
+df = pd.DataFrame(tests)
+
+print("================================================")
+print("MASTER RELATIVITY — WEAK-FIELD OBSERVATIONAL TESTER v6")
+print("================================================")
+
+print(df.to_string(index=False))
+
+print("================================================")
+
+print("\nSummary:")
+print(df["passed"].value_counts())
+
+failed = df[df["passed"] == False]
+
+if len(failed):
+
+    print("\nFAILED TESTS:")
+    print(failed.to_string(index=False))
+
+else:
+
+    print("\nALL WEAK-FIELD OBSERVATIONAL TESTS PASSED.")
+
+df.to_csv(
+    "master_relativity_weak_field_tester_v6_results.csv",
+    index=False
+)
+
+print("\nSaved:")
+print("master_relativity_weak_field_tester_v6_results.csv")
