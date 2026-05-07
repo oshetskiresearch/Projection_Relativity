@@ -1,0 +1,393 @@
+
+# ============================================================
+#  ______             __                   __                __        __        _______                                                               __
+# /      \           |  \                 |  \              |  \      |  \      |       \                                                             |  \
+#|  $$$$$$\  _______ | $$____    ______  _| $$_     _______ | $$   __  \$$      | $$$$$$$\  ______    _______   ______    ______    ______    _______ | $$____
+#| $$  | $$ /       \| $$    \  /      \|   $$ \   /       \| $$  /  \|  \      | $$__| $$ /      \  /       \ /      \  |      \  /      \  /       \| $$    \
+#| $$  | $$|  $$$$$$$| $$$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$$| $$_/  $$| $$      | $$    $$|  $$$$$$\|  $$$$$$$|  $$$$$$\  \$$$$$$\|  $$$$$$\|  $$$$$$$| $$$$$$$\
+#| $$  | $$ \$$    \ | $$  | $$| $$    $$ | $$ __  \$$    \ | $$   $$ | $$      | $$$$$$$\| $$    $$ \$$    \ | $$    $$ /      $$| $$   \$$| $$      | $$  | $$
+#| $$__/ $$ _\$$$$$$\| $$  | $$| $$$$$$$$ | $$|  \ _\$$$$$$\| $$$$$$\ | $$      | $$  | $$| $$$$$$$$ _\$$$$$$\| $$$$$$$$|  $$$$$$$| $$      | $$_____ | $$  | $$
+# \$$    $$|       $$| $$  | $$ \$$     \  \$$  $$|       $$| $$  \$$\| $$      | $$  | $$ \$$     \|       $$ \$$     \ \$$    $$| $$       \$$     \| $$  | $$
+#  \$$$$$$  \$$$$$$$  \$$   \$$  \$$$$$$$   \$$$$  \$$$$$$$  \$$   \$$ \$$       \$$   \$$  \$$$$$$$ \$$$$$$$   \$$$$$$$  \$$$$$$$ \$$        \$$$$$$$ \$$   \$$
+#
+# Dynamic Gravity
+# FINITE-CORE REGULARITY TESTER v5.1
+# Michael Stanislaus Oshetski
+# ORCID# 0009-0007-3623-7586
+# May, 2026
+# 
+# Fix:
+#   Replaces percent-error check against zero with inequality test.
+#
+# Tests:
+#   1. Nonlinear saturation equation
+#   2. High-density asymptotic scaling
+#   3. Finite curvature bound
+#   4. Core radius scaling
+#   5. Schwarzschild singularity comparison
+#   6. Kretschmann regularization toy model
+# ============================================================
+
+import sympy as sp
+import pandas as pd
+import numpy as np
+
+# ============================================================
+# Helpers
+# ============================================================
+
+tests = []
+
+def symbolic_test(name, lhs, rhs=0, section="finite_core"):
+    diff = sp.simplify(lhs - rhs)
+
+    if isinstance(diff, sp.MatrixBase):
+        passed = diff.equals(sp.zeros(*diff.shape))
+    else:
+        passed = bool(sp.simplify(diff) == 0)
+
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": passed,
+        "detail": str(diff)
+    })
+
+    return passed, diff
+
+
+def numeric_test(name, value, target, tol_pct, section="finite_core"):
+    value = float(value)
+    target = float(target)
+
+    if target == 0:
+        passed = abs(value) <= tol_pct
+        detail = (
+            f"value={value:.12g}, "
+            f"target=0, "
+            f"abs_tol={tol_pct}"
+        )
+    else:
+        err_pct = 100 * (value - target) / target
+        passed = abs(err_pct) <= tol_pct
+        detail = (
+            f"value={value:.12g}, "
+            f"target={target:.12g}, "
+            f"error_pct={err_pct:.6g}, "
+            f"tol_pct={tol_pct}"
+        )
+
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": passed,
+        "detail": detail
+    })
+
+    return passed
+
+
+def inequality_test(name, value, threshold, relation="<", section="finite_core"):
+    value = float(value)
+    threshold = float(threshold)
+
+    if relation == "<":
+        passed = value < threshold
+    elif relation == "<=":
+        passed = value <= threshold
+    elif relation == ">":
+        passed = value > threshold
+    elif relation == ">=":
+        passed = value >= threshold
+    else:
+        raise ValueError("relation must be one of: <, <=, >, >=")
+
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": passed,
+        "detail": f"value={value:.12e}, relation='{relation}', threshold={threshold:.12e}"
+    })
+
+    return passed
+
+
+def info_row(name, value, section="info"):
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": True,
+        "detail": str(value)
+    })
+
+
+# ============================================================
+# Symbols
+# ============================================================
+
+rho, rho_star = sp.symbols(
+    "rho rho_star",
+    positive=True
+)
+
+y = sp.symbols("y", real=True)
+
+G, M, c, Rmax = sp.symbols(
+    "G M c Rmax",
+    positive=True
+)
+
+r = sp.symbols("r", positive=True)
+
+# ============================================================
+# 1. Saturation equation
+# y^3 - y = rho/rho*
+# ============================================================
+
+sat_eq = y**3 - y - rho/rho_star
+
+info_row(
+    "MR saturation equation",
+    sat_eq
+)
+
+# ============================================================
+# 2. High-density asymptotic scaling
+#
+# For rho >> rho*:
+#   y^3 dominates
+# so:
+#   y ~ (rho/rho*)^(1/3)
+# ============================================================
+
+y_asym = (rho/rho_star)**sp.Rational(1, 3)
+
+sat_asym = sp.expand(
+    sat_eq.subs(y, y_asym)
+)
+
+info_row(
+    "High-density asymptotic residual",
+    sat_asym
+)
+
+dominant = rho/rho_star
+
+relative_error = sp.simplify(
+    sat_asym / dominant
+)
+
+limit_rel = sp.limit(
+    relative_error,
+    rho,
+    sp.oo
+)
+
+symbolic_test(
+    "High-density asymptotic relative error -> 0",
+    limit_rel,
+    0
+)
+
+# ============================================================
+# 3. Finite curvature scaling
+#
+# Schwarzschild/Kerr singularity:
+#   K ~ M^2 / r^6
+#
+# MR toy bounded curvature:
+#   K_MR = Rmax * tanh(K_schw / Rmax)
+# so:
+#   K_MR -> Rmax as r -> 0
+# ============================================================
+
+K_schw = M**2 / r**6
+
+info_row(
+    "Schwarzschild singular Kretschmann scaling",
+    K_schw
+)
+
+K_MR = Rmax * sp.tanh(K_schw / Rmax)
+
+limit_KMR = sp.limit(
+    K_MR,
+    r,
+    0,
+    dir="+"
+)
+
+symbolic_test(
+    "MR Kretschmann curvature remains finite at r->0",
+    limit_KMR,
+    Rmax
+)
+
+# ============================================================
+# 4. Core radius scaling
+#
+# r_c = (G M / c^2 Rmax)^(1/3)
+# ============================================================
+
+r_c = (
+    G*M / (c**2 * Rmax)
+)**sp.Rational(1, 3)
+
+symbolic_test(
+    "Core radius cube relation",
+    r_c**3,
+    G*M / (c**2 * Rmax)
+)
+
+# ============================================================
+# 5. Curvature at core radius
+#
+# K ~ M^2/r^6 evaluated at r_c
+# scales like c^4 Rmax^2/G^2
+# ============================================================
+
+K_at_rc = sp.simplify(
+    K_schw.subs(r, r_c)
+)
+
+info_row(
+    "Curvature evaluated at core radius",
+    K_at_rc
+)
+
+symbolic_test(
+    "Core curvature scaling",
+    K_at_rc,
+    c**4 * Rmax**2 / G**2
+)
+
+# ============================================================
+# 6. Numerical example
+#
+# 65 solar-mass black hole
+# ============================================================
+
+G_num = 6.67430e-11
+c_num = 2.99792458e8
+
+M_sun = 1.98847e30
+M65 = 65 * M_sun
+
+# Example maximum curvature scale
+# Toy effective scale. This is not a final physical fit.
+Rmax_num = 1e52
+
+rc_num = (
+    G_num * M65 / (c_num**2 * Rmax_num)
+)**(1/3)
+
+rs_num = 2 * G_num * M65 / c_num**2
+
+ratio_core_to_horizon = rc_num / rs_num
+
+info_row(
+    "Example finite core radius for 65 solar masses (meters)",
+    rc_num
+)
+
+info_row(
+    "65 solar mass Schwarzschild radius (meters)",
+    rs_num
+)
+
+info_row(
+    "Finite core radius / Schwarzschild radius",
+    ratio_core_to_horizon
+)
+
+inequality_test(
+    "Finite core radius much smaller than horizon",
+    ratio_core_to_horizon,
+    1e-6,
+    relation="<"
+)
+
+# ============================================================
+# 7. Bounded curvature toy scan
+# ============================================================
+
+r_vals = np.logspace(-6, 2, 200)
+
+M_num = 1.0
+Rmax_scan = 1e3
+
+K_schw_vals = M_num**2 / r_vals**6
+
+K_mr_vals = Rmax_scan * np.tanh(
+    K_schw_vals / Rmax_scan
+)
+
+K_mr_max = np.max(K_mr_vals)
+
+numeric_test(
+    "Numerical bounded curvature check",
+    K_mr_max,
+    Rmax_scan,
+    1e-6
+)
+
+# ============================================================
+# 8. Optional monotonic boundedness checks
+# ============================================================
+
+# K_MR should never exceed Rmax_scan in the toy scan.
+inequality_test(
+    "Toy curvature never exceeds Rmax",
+    np.max(K_mr_vals),
+    Rmax_scan * (1 + 1e-12),
+    relation="<="
+)
+
+# K_MR should approach Schwarzschild scaling at small K/Rmax.
+# Check at large radius r=100, where K_schw/Rmax is tiny.
+r_large = 100.0
+K_schw_large = M_num**2 / r_large**6
+K_mr_large = Rmax_scan * np.tanh(K_schw_large / Rmax_scan)
+
+numeric_test(
+    "Toy curvature recovers Schwarzschild at weak curvature",
+    K_mr_large,
+    K_schw_large,
+    1e-6
+)
+
+# ============================================================
+# Output
+# ============================================================
+
+df = pd.DataFrame(tests)
+
+print("================================================")
+print("Dynamic Gravity — FINITE-CORE REGULARITY TESTER v5.1")
+print("================================================")
+
+print(df.to_string(index=False))
+
+print("================================================")
+
+print("\nSummary:")
+print(df["passed"].value_counts())
+
+failed = df[df["passed"] == False]
+
+if len(failed):
+
+    print("\nFAILED TESTS:")
+    print(failed.to_string(index=False))
+
+else:
+
+    print("\nALL FINITE-CORE TESTS PASSED.")
+
+df.to_csv(
+    "master_relativity_finite_core_tester_v5_1_results.csv",
+    index=False
+)
+
+print("\nSaved:")
+print("master_relativity_finite_core_tester_v5_1_results.csv")

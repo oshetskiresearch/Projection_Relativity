@@ -388,7 +388,7 @@ info_row(
 df = pd.DataFrame(tests)
 
 print("================================================")
-print("MASTER RELATIVITY — CURVATURE / EINSTEIN GEOMETRY TESTER v4")
+print("Dynamic Gravity — CURVATURE / EINSTEIN GEOMETRY TESTER v4")
 print("================================================")
 print(df.to_string(index=False))
 print("================================================")

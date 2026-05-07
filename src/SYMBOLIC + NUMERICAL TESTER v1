@@ -328,7 +328,7 @@ numeric_test("I_EWH MR vs compact target", I_EWH_MR, I_EWH_target, 2.0)
 df = pd.DataFrame(tests)
 
 print("================================================")
-print("MASTER RELATIVITY — SYMBOLIC + NUMERICAL TESTER v1")
+print("Dynamic Gravity — SYMBOLIC + NUMERICAL TESTER v1")
 print("================================================")
 print(df.to_string(index=False))
 print("================================================")
