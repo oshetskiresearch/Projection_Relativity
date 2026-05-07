@@ -1,0 +1,329 @@
+# ============================================================
+#  ______             __                   __                __        __        _______                                                               __       
+# /      \           |  \                 |  \              |  \      |  \      |       \                                                             |  \      
+#|  $$$$$$\  _______ | $$____    ______  _| $$_     _______ | $$   __  \$$      | $$$$$$$\  ______    _______   ______    ______    ______    _______ | $$____  
+#| $$  | $$ /       \| $$    \  /      \|   $$ \   /       \| $$  /  \|  \      | $$__| $$ /      \  /       \ /      \  |      \  /      \  /       \| $$    \ 
+#| $$  | $$|  $$$$$$$| $$$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$$| $$_/  $$| $$      | $$    $$|  $$$$$$\|  $$$$$$$|  $$$$$$\  \$$$$$$\|  $$$$$$\|  $$$$$$$| $$$$$$$\
+#| $$  | $$ \$$    \ | $$  | $$| $$    $$ | $$ __  \$$    \ | $$   $$ | $$      | $$$$$$$\| $$    $$ \$$    \ | $$    $$ /      $$| $$   \$$| $$      | $$  | $$
+#| $$__/ $$ _\$$$$$$\| $$  | $$| $$$$$$$$ | $$|  \ _\$$$$$$\| $$$$$$\ | $$      | $$  | $$| $$$$$$$$ _\$$$$$$\| $$$$$$$$|  $$$$$$$| $$      | $$_____ | $$  | $$
+# \$$    $$|       $$| $$  | $$ \$$     \  \$$  $$|       $$| $$  \$$\| $$      | $$  | $$ \$$     \|       $$ \$$     \ \$$    $$| $$       \$$     \| $$  | $$
+#  \$$$$$$  \$$$$$$$  \$$   \$$  \$$$$$$$   \$$$$  \$$$$$$$  \$$   \$$ \$$       \$$   \$$  \$$$$$$$ \$$$$$$$   \$$$$$$$  \$$$$$$$ \$$        \$$$$$$$ \$$   \$$
+# 
+# Dynamic Gravity
+# TENSOR CONSISTENCY TESTER v2.1
+# Michael Stanislaus Oshetski
+# ORCID# 0009-0007-3623-7586
+# May, 2026
+#
+# Focus:
+#   Kerr/Schwarzschild tensor checks
+#   metric determinant
+#   inverse metric consistency
+#   horizon structure
+#   weak-field Newtonian potential check
+#   Schwarzschild Ricci-flatness
+# ============================================================
+
+import sympy as sp
+import pandas as pd
+
+# ============================================================
+# Test Developer
+# ============================================================
+
+tests = []
+
+def symbolic_test(name, lhs, rhs=0):
+    """
+    Symbolic equality tester that correctly handles both scalar
+    expressions and SymPy matrices.
+    """
+    diff = sp.simplify(lhs - rhs)
+
+    if isinstance(diff, sp.MatrixBase):
+        zero_matrix = sp.zeros(*diff.shape)
+        passed = diff.equals(zero_matrix)
+    else:
+        passed = bool(sp.simplify(diff) == 0)
+
+    tests.append({
+        "section": "symbolic_tensor",
+        "test": name,
+        "passed": passed,
+        "detail": str(diff)
+    })
+
+    return passed, diff
+
+
+def info_row(name, value):
+    tests.append({
+        "section": "info",
+        "test": name,
+        "passed": True,
+        "detail": str(value)
+    })
+
+
+# ============================================================
+# Symbols
+# ============================================================
+
+t, r, th, ph = sp.symbols("t r theta phi", real=True)
+G, M, a = sp.symbols("G M a", positive=True, real=True)
+
+coords = [t, r, th, ph]
+
+# ============================================================
+# Kerr metric in Boyer-Lindquist-like form
+# Signature: (-,+,+,+)
+# ============================================================
+
+Sigma = r**2 + a**2 * sp.cos(th)**2
+Delta = r**2 - 2*G*M*r + a**2
+
+g_tt = -(1 - 2*G*M*r/Sigma)
+g_tph = -2*G*M*a*r*sp.sin(th)**2 / Sigma
+g_rr = Sigma / Delta
+g_thth = Sigma
+g_phph = (
+    r**2 + a**2 + (2*G*M*a**2*r*sp.sin(th)**2)/Sigma
+) * sp.sin(th)**2
+
+g = sp.Matrix([
+    [g_tt, 0,    0,      g_tph],
+    [0,    g_rr, 0,      0],
+    [0,    0,    g_thth, 0],
+    [g_tph,0,    0,      g_phph]
+])
+
+# ============================================================
+# 1. Basic Kerr identities
+# ============================================================
+
+symbolic_test(
+    "Sigma nonrotating limit",
+    Sigma.subs(a, 0),
+    r**2
+)
+
+symbolic_test(
+    "Delta Schwarzschild limit",
+    Delta.subs(a, 0),
+    r**2 - 2*G*M*r
+)
+
+symbolic_test(
+    "Delta flat rotating limit",
+    Delta.subs(M, 0),
+    r**2 + a**2
+)
+
+r_plus = G*M + sp.sqrt(G**2*M**2 - a**2)
+r_minus = G*M - sp.sqrt(G**2*M**2 - a**2)
+
+symbolic_test(
+    "Delta horizon factorization",
+    sp.expand((r-r_plus)*(r-r_minus)),
+    Delta
+)
+
+# ============================================================
+# 2. Determinant identity
+# Kerr determinant should be:
+# det(g) = -Sigma^2 sin^2(theta)
+# ============================================================
+
+det_g = sp.factor(sp.simplify(g.det()))
+
+symbolic_test(
+    "Kerr determinant identity",
+    det_g,
+    -Sigma**2 * sp.sin(th)**2
+)
+
+# ============================================================
+# 3. Inverse metric consistency
+# Check g * g^{-1} = I
+# ============================================================
+
+g_inv = sp.simplify(g.inv())
+identity_check = sp.simplify(g * g_inv)
+
+symbolic_test(
+    "Metric inverse consistency",
+    identity_check,
+    sp.eye(4)
+)
+
+# ============================================================
+# 4. Schwarzschild limit
+# a -> 0 should produce Schwarzschild metric:
+# ds^2 = -(1-2GM/r)dt^2 + (1-2GM/r)^-1 dr^2
+#        + r^2 dtheta^2 + r^2 sin^2(theta) dphi^2
+# ============================================================
+
+f_s = 1 - 2*G*M/r
+
+g_schw_expected = sp.Matrix([
+    [-f_s,       0,        0,                  0],
+    [0,          1/f_s,    0,                  0],
+    [0,          0,        r**2,               0],
+    [0,          0,        0,                  r**2*sp.sin(th)**2]
+])
+
+g_a0 = sp.simplify(g.subs(a, 0))
+
+symbolic_test(
+    "Kerr metric reduces to Schwarzschild at a=0",
+    g_a0,
+    g_schw_expected
+)
+
+# ============================================================
+# 5. Flat-space limit
+# M -> 0 and a -> 0 should produce spherical Minkowski:
+# diag(-1,1,r^2,r^2 sin^2 theta)
+# ============================================================
+
+g_flat_expected = sp.Matrix([
+    [-1, 0, 0, 0],
+    [0,  1, 0, 0],
+    [0,  0, r**2, 0],
+    [0,  0, 0, r**2*sp.sin(th)**2]
+])
+
+g_flat = sp.simplify(g.subs({M: 0, a: 0}))
+
+symbolic_test(
+    "Kerr metric reduces to spherical Minkowski at M=a=0",
+    g_flat,
+    g_flat_expected
+)
+
+# ============================================================
+# 6. Frame-dragging asymptotic behavior
+# g_tphi should approach -2GJ sin^2(theta)/r where J=Ma
+# ============================================================
+
+J = M*a
+asym_g_tph = sp.series(g_tph, r, sp.oo, 2).removeO()
+
+symbolic_test(
+    "Asymptotic frame dragging leading term",
+    asym_g_tph,
+    -2*G*J*sp.sin(th)**2/r
+)
+
+# ============================================================
+# 7. Newtonian weak-field check
+# g_tt = -(1 - 2GM/r + ...)
+# In weak field, g_tt = -1 + 2GM/r.
+# With c=1 convention and Phi = -GM/r:
+# g_tt = -1 - 2Phi
+# ============================================================
+
+gtt_schw = g_tt.subs(a, 0)
+weak_gtt_series = sp.series(gtt_schw, r, sp.oo, 2).removeO()
+
+symbolic_test(
+    "Weak-field g_tt expansion",
+    weak_gtt_series,
+    -1 + 2*G*M/r
+)
+
+Phi = -G*M/r
+
+symbolic_test(
+    "Newtonian potential from g_tt with c=1",
+    -1 + 2*G*M/r,
+    -1 - 2*Phi
+)
+
+# ============================================================
+# 8. Christoffel / Ricci check for Schwarzschild
+# Verify Ricci tensor = 0 for Schwarzschild exterior.
+# ============================================================
+
+def christoffel_symbols(metric, coordinates):
+    n = len(coordinates)
+    inv_metric = sp.simplify(metric.inv())
+
+    Gamma = [[[
+        sp.simplify(
+            sp.Rational(1,2) * sum(
+                inv_metric[i,l] * (
+                    sp.diff(metric[l,j], coordinates[k]) +
+                    sp.diff(metric[l,k], coordinates[j]) -
+                    sp.diff(metric[j,k], coordinates[l])
+                )
+                for l in range(n)
+            )
+        )
+        for k in range(n)]
+        for j in range(n)]
+        for i in range(n)]
+
+    return Gamma
+
+
+def ricci_tensor(metric, coordinates):
+    n = len(coordinates)
+    Gamma = christoffel_symbols(metric, coordinates)
+    R = [[0 for _ in range(n)] for _ in range(n)]
+
+    for i in range(n):
+        for j in range(n):
+            term = 0
+
+            for k in range(n):
+                term += sp.diff(Gamma[k][i][j], coordinates[k])
+                term -= sp.diff(Gamma[k][i][k], coordinates[j])
+
+                for l in range(n):
+                    term += Gamma[k][i][j] * Gamma[l][k][l]
+                    term -= Gamma[l][i][k] * Gamma[k][j][l]
+
+            R[i][j] = sp.simplify(term)
+
+    return sp.Matrix(R)
+
+
+print("Computing Schwarzschild Ricci tensor. This may take a moment...")
+
+R_schw = ricci_tensor(g_schw_expected, coords)
+R_schw_simplified = sp.simplify(R_schw)
+
+symbolic_test(
+    "Schwarzschild exterior Ricci tensor equals zero",
+    R_schw_simplified,
+    sp.zeros(4)
+)
+
+# ============================================================
+# Output
+# ============================================================
+
+df = pd.DataFrame(tests)
+
+print("================================================")
+print("MASTER RELATIVITY — TENSOR CONSISTENCY TESTER v2.1")
+print("================================================")
+print(df.to_string(index=False))
+print("================================================")
+
+print("\nSummary:")
+print(df["passed"].value_counts())
+
+failed = df[df["passed"] == False]
+
+if len(failed):
+    print("\nFAILED TESTS:")
+    print(failed.to_string(index=False))
+else:
+    print("\nAll tensor tests passed.")
+
+df.to_csv("master_relativity_tensor_consistency_tester_v2_1_results.csv", index=False)
+
+print("\nSaved:")
+print("master_relativity_tensor_consistency_tester_v2_1_results.csv")
