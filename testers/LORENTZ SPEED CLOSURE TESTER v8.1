@@ -1,0 +1,358 @@
+# ============================================================
+#  ______             __                   __                __        __        _______                                                               __
+# /      \           |  \                 |  \              |  \      |  \      |       \                                                             |  \
+#|  $$$$$$\  _______ | $$____    ______  _| $$_     _______ | $$   __  \$$      | $$$$$$$\  ______    _______   ______    ______    ______    _______ | $$____
+#| $$  | $$ /       \| $$    \  /      \|   $$ \   /       \| $$  /  \|  \      | $$__| $$ /      \  /       \ /      \  |      \  /      \  /       \| $$    \
+#| $$  | $$|  $$$$$$$| $$$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$$| $$_/  $$| $$      | $$    $$|  $$$$$$\|  $$$$$$$|  $$$$$$\  \$$$$$$\|  $$$$$$\|  $$$$$$$| $$$$$$$\
+#| $$  | $$ \$$    \ | $$  | $$| $$    $$ | $$ __  \$$    \ | $$   $$ | $$      | $$$$$$$\| $$    $$ \$$    \ | $$    $$ /      $$| $$   \$$| $$      | $$  | $$
+#| $$__/ $$ _\$$$$$$\| $$  | $$| $$$$$$$$ | $$|  \ _\$$$$$$\| $$$$$$\ | $$      | $$  | $$| $$$$$$$$ _\$$$$$$\| $$$$$$$$|  $$$$$$$| $$      | $$_____ | $$  | $$
+# \$$    $$|       $$| $$  | $$ \$$     \  \$$  $$|       $$| $$  \$$\| $$      | $$  | $$ \$$     \|       $$ \$$     \ \$$    $$| $$       \$$     \| $$  | $$
+#  \$$$$$$  \$$$$$$$  \$$   \$$  \$$$$$$$   \$$$$  \$$$$$$$  \$$   \$$ \$$       \$$   \$$  \$$$$$$$ \$$$$$$$   \$$$$$$$  \$$$$$$$ \$$        \$$$$$$$ \$$   \$$
+#
+# Dynamic Gravity
+# LORENTZ SPEED CLOSURE TESTER v8.1
+# Michael Stanislaus Oshetski
+# ORCID# 0009-0007-3623-7586
+# May, 2026
+# 
+# PURPOSE:
+#   Does the Euler-Lagrange gives anisotropic MR wave equation?                                                                                                                 
+#            Dispersion relation omega^2                                                                                                                 
+#            Massless limiting speed c_MR^2 = Zx/Zt                                                                                                            
+#            Lorentz closure Zt=Zx gives c_MR^2=1                                                                                                             
+#            Massive projection mode dispersion                                                                                                                    
+#            Spectral isotropy Kx=Kt gives Zx=Zt                                                                                                           
+#            Spectral c_MR^2 becomes 1 under isotropy                                                                                                                
+#            Common phase-winding factor cancels from c_MR                                                                                                                      
+#            Small anisotropy speed expansion
+#            Chicken or the egg?                                                                                                            
+# ============================================================
+
+import sympy as sp
+import pandas as pd
+
+tests = []
+
+def symbolic_test(name, lhs, rhs=0, section="lorentz_speed"):
+
+    diff = sp.simplify(lhs - rhs)
+
+    if isinstance(diff, sp.MatrixBase):
+        passed = diff.equals(sp.zeros(*diff.shape))
+    else:
+        passed = bool(diff == 0)
+
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": passed,
+        "detail": str(diff)
+    })
+
+    return passed, diff
+
+
+def info_row(name, value, section="info"):
+
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": True,
+        "detail": str(value)
+    })
+
+
+# ============================================================
+# Symbols
+# ============================================================
+
+t, x = sp.symbols("t x", real=True)
+
+Psi = sp.Function("Psi")(t, x)
+
+Zt, Zx = sp.symbols(
+    "Z_t Z_x",
+    positive=True
+)
+
+omega, k = sp.symbols(
+    "omega k",
+    real=True
+)
+
+Vpp = sp.symbols(
+    "Vpp",
+    real=True
+)
+
+# ============================================================
+# Lagrangian
+#
+# L = 1/2 Zt (d_t Psi)^2
+#   - 1/2 Zx (d_x Psi)^2
+#   - 1/2 Vpp Psi^2
+# ============================================================
+
+Psi_t = sp.diff(Psi, t)
+Psi_x = sp.diff(Psi, x)
+
+L = (
+    sp.Rational(1,2) * Zt * Psi_t**2
+    - sp.Rational(1,2) * Zx * Psi_x**2
+    - sp.Rational(1,2) * Vpp * Psi**2
+)
+
+# ============================================================
+# Euler-Lagrange equation
+# ============================================================
+
+EL = sp.simplify(
+
+    sp.diff(sp.diff(L, Psi_t), t)
+
+    + sp.diff(sp.diff(L, Psi_x), x)
+
+    - sp.diff(L, Psi)
+
+)
+
+expected_EL = (
+
+    Zt * sp.diff(Psi, t, 2)
+
+    - Zx * sp.diff(Psi, x, 2)
+
+    + Vpp * Psi
+
+)
+
+symbolic_test(
+    "Euler-Lagrange gives anisotropic MR wave equation",
+    EL,
+    expected_EL
+)
+
+# ============================================================
+# Dispersion relation
+#
+# Psi ~ exp(i(kx - omega t))
+#
+# => omega^2 = (Zx/Zt) k^2 + Vpp/Zt
+# ============================================================
+
+dispersion = (
+
+    -Zt * omega**2
+
+    + Zx * k**2
+
+    + Vpp
+
+)
+
+omega2_solution = sp.solve(
+    sp.Eq(dispersion, 0),
+    omega**2
+)[0]
+
+symbolic_test(
+    "Dispersion relation omega^2",
+    omega2_solution,
+    (Zx*k**2 + Vpp)/Zt
+)
+
+# ============================================================
+# Massless propagation speed
+# ============================================================
+
+cMR_squared = sp.simplify(
+
+    omega2_solution.subs(Vpp, 0) / k**2
+
+)
+
+symbolic_test(
+    "Massless limiting speed c_MR^2 = Zx/Zt",
+    cMR_squared,
+    Zx/Zt
+)
+
+# ============================================================
+# Lorentz closure
+#
+# If Zx = Zt:
+#
+# c_MR^2 = 1
+# ============================================================
+
+symbolic_test(
+    "Lorentz closure Zt=Zx gives c_MR^2=1",
+    cMR_squared.subs(Zx, Zt),
+    1
+)
+
+# ============================================================
+# Massive mode dispersion
+# ============================================================
+
+meff2 = Vpp / Zt
+
+symbolic_test(
+    "Massive projection mode dispersion",
+    omega2_solution,
+    (Zx/Zt)*k**2 + meff2
+)
+
+# ============================================================
+# Spectral stiffness sums
+# ============================================================
+
+N = 5
+
+rho = sp.symbols(
+    "rho0:%d" % N,
+    positive=True
+)
+
+Kt = sp.symbols(
+    "Kt0:%d" % N,
+    positive=True
+)
+
+Kx = sp.symbols(
+    "Kx0:%d" % N,
+    positive=True
+)
+
+Zt_sum = sum(
+    rho[i] * Kt[i]
+    for i in range(N)
+)
+
+Zx_sum = sum(
+    rho[i] * Kx[i]
+    for i in range(N)
+)
+
+subs_isotropic = {
+
+    Kx[i]: Kt[i]
+
+    for i in range(N)
+
+}
+
+symbolic_test(
+    "Spectral isotropy Kx=Kt gives Zx=Zt",
+    Zx_sum.subs(subs_isotropic),
+    Zt_sum
+)
+
+cMR2_spectral = sp.simplify(
+
+    Zx_sum / Zt_sum
+
+)
+
+symbolic_test(
+    "Spectral c_MR^2 becomes 1 under isotropy",
+    cMR2_spectral.subs(subs_isotropic),
+    1
+)
+
+# ============================================================
+# Phase-winding cancellation
+# ============================================================
+
+Ztheta = sp.symbols(
+    "Z_theta",
+    positive=True
+)
+
+symbolic_test(
+    "Common phase-winding factor cancels from c_MR",
+    (Ztheta*Zx)/(Ztheta*Zt),
+    Zx/Zt
+)
+
+# ============================================================
+# Small anisotropy expansion
+#
+# c = sqrt(1 + epsilon)
+#
+# => c ~ 1 + epsilon/2
+# ============================================================
+
+eps = sp.symbols(
+    "epsilon",
+    real=True
+)
+
+c_aniso = sp.sqrt(1 + eps)
+
+series_c = sp.series(
+    c_aniso,
+    eps,
+    0,
+    2
+).removeO()
+
+symbolic_test(
+    "Small anisotropy speed expansion",
+    series_c,
+    1 + eps/2
+)
+
+# ============================================================
+# Interpretation
+# ============================================================
+
+info_row(
+    "Interpretation",
+    (
+        "Universal limiting speed follows if "
+        "MR internal projection symmetry enforces "
+        "equal temporal and spatial stiffness."
+    )
+)
+
+# ============================================================
+# Output
+# ============================================================
+
+df = pd.DataFrame(tests)
+
+print("================================================")
+print("Dynamic Gravity — LORENTZ SPEED CLOSURE TESTER v8.1")
+print("================================================")
+
+print(df.to_string(index=False))
+
+print("================================================")
+
+print("\nSummary:")
+
+print(df["passed"].value_counts())
+
+failed = df[df["passed"] == False]
+
+if len(failed):
+
+    print("\nFAILED TESTS:")
+
+    print(failed.to_string(index=False))
+
+else:
+
+    print("\nALL LORENTZ SPEED CLOSURE TESTS PASSED.")
+
+df.to_csv(
+    "master_relativity_lorentz_speed_closure_tester_v8_1_results.csv",
+    index=False
+)
+
+print("\nSaved:")
+
+print(
+    "master_relativity_lorentz_speed_closure_tester_v8_1_results.csv"
+)
