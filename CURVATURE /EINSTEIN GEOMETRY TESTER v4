@@ -1,0 +1,410 @@
+# ============================================================
+#  ______             __                   __                __        __        _______                                                               __       
+# /      \           |  \                 |  \              |  \      |  \      |       \                                                             |  \      
+#|  $$$$$$\  _______ | $$____    ______  _| $$_     _______ | $$   __  \$$      | $$$$$$$\  ______    _______   ______    ______    ______    _______ | $$____  
+#| $$  | $$ /       \| $$    \  /      \|   $$ \   /       \| $$  /  \|  \      | $$__| $$ /      \  /       \ /      \  |      \  /      \  /       \| $$    \ 
+#| $$  | $$|  $$$$$$$| $$$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$$| $$_/  $$| $$      | $$    $$|  $$$$$$\|  $$$$$$$|  $$$$$$\  \$$$$$$\|  $$$$$$\|  $$$$$$$| $$$$$$$\
+#| $$  | $$ \$$    \ | $$  | $$| $$    $$ | $$ __  \$$    \ | $$   $$ | $$      | $$$$$$$\| $$    $$ \$$    \ | $$    $$ /      $$| $$   \$$| $$      | $$  | $$
+#| $$__/ $$ _\$$$$$$\| $$  | $$| $$$$$$$$ | $$|  \ _\$$$$$$\| $$$$$$\ | $$      | $$  | $$| $$$$$$$$ _\$$$$$$\| $$$$$$$$|  $$$$$$$| $$      | $$_____ | $$  | $$
+# \$$    $$|       $$| $$  | $$ \$$     \  \$$  $$|       $$| $$  \$$\| $$      | $$  | $$ \$$     \|       $$ \$$     \ \$$    $$| $$       \$$     \| $$  | $$
+#  \$$$$$$  \$$$$$$$  \$$   \$$  \$$$$$$$   \$$$$  \$$$$$$$  \$$   \$$ \$$       \$$   \$$  \$$$$$$$ \$$$$$$$   \$$$$$$$  \$$$$$$$ \$$        \$$$$$$$ \$$   \$$
+# 
+# Dynamic Gravity
+# CURVATURE / EINSTEIN GEOMETRY TESTER v4
+# Michael Stanislaus Oshetski
+# ORCID# 0009-0007-3623-7586
+# May, 2026
+#
+# Focus:
+#   Schwarzschild Ricci-flatness
+#   Kerr determinant
+#   Kerr inverse
+#   Kerr limits
+#   Optional full Kerr Ricci-flatness
+#
+# NOTE:
+#   Full Kerr Ricci symbolic simplification can be slow.
+#   Set RUN_FULL_KERR_RICCI = True only when ready.
+# ============================================================
+
+import sympy as sp
+import pandas as pd
+
+# ============================================================
+# Controls
+# ============================================================
+
+RUN_FULL_KERR_RICCI = False   # Change to True for full Kerr Ricci check
+
+# ============================================================
+# Test Developer
+# ============================================================
+
+tests = []
+
+def symbolic_test(name, lhs, rhs=0, section="curvature"):
+    diff = sp.simplify(lhs - rhs)
+
+    if isinstance(diff, sp.MatrixBase):
+        passed = diff.equals(sp.zeros(*diff.shape))
+    else:
+        passed = bool(sp.simplify(diff) == 0)
+
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": passed,
+        "detail": str(diff)
+    })
+
+    return passed, diff
+
+
+def info_row(name, value, section="info"):
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": True,
+        "detail": str(value)
+    })
+
+
+def matrix_simplify(M):
+    return M.applyfunc(lambda x: sp.simplify(sp.factor(x)))
+
+
+# ============================================================
+# Symbols / coordinates
+# ============================================================
+
+t, r, th, ph = sp.symbols("t r theta phi", real=True)
+G, M, a = sp.symbols("G M a", positive=True, real=True)
+
+coords = [t, r, th, ph]
+n = len(coords)
+
+# ============================================================
+# Metric construction
+# ============================================================
+
+def kerr_metric():
+    Sigma = r**2 + a**2*sp.cos(th)**2
+    Delta = r**2 - 2*G*M*r + a**2
+
+    g_tt = -(1 - 2*G*M*r/Sigma)
+    g_tph = -2*G*M*a*r*sp.sin(th)**2/Sigma
+    g_rr = Sigma/Delta
+    g_thth = Sigma
+    g_phph = (
+        r**2 + a**2 + 2*G*M*a**2*r*sp.sin(th)**2/Sigma
+    )*sp.sin(th)**2
+
+    g = sp.Matrix([
+        [g_tt,  0,     0,      g_tph],
+        [0,     g_rr,  0,      0],
+        [0,     0,     g_thth, 0],
+        [g_tph, 0,     0,      g_phph]
+    ])
+
+    return g, Sigma, Delta
+
+
+def schwarzschild_metric():
+    f = 1 - 2*G*M/r
+
+    g = sp.Matrix([
+        [-f, 0,   0,                  0],
+        [0,  1/f, 0,                  0],
+        [0,  0,   r**2,               0],
+        [0,  0,   0,                  r**2*sp.sin(th)**2]
+    ])
+
+    return g
+
+
+g_kerr, Sigma, Delta = kerr_metric()
+g_schw = schwarzschild_metric()
+
+# ============================================================
+# Tensor functions
+# ============================================================
+
+def christoffel_symbols(metric, coordinates):
+    n = len(coordinates)
+    inv_metric = sp.simplify(metric.inv())
+
+    Gamma = [[[
+        sp.simplify(
+            sp.Rational(1, 2) * sum(
+                inv_metric[i, l] * (
+                    sp.diff(metric[l, j], coordinates[k])
+                    + sp.diff(metric[l, k], coordinates[j])
+                    - sp.diff(metric[j, k], coordinates[l])
+                )
+                for l in range(n)
+            )
+        )
+        for k in range(n)]
+        for j in range(n)]
+        for i in range(n)]
+
+    return Gamma
+
+
+def ricci_tensor(metric, coordinates):
+    n = len(coordinates)
+    Gamma = christoffel_symbols(metric, coordinates)
+
+    R = [[0 for _ in range(n)] for _ in range(n)]
+
+    for i in range(n):
+        for j in range(n):
+            expr = 0
+
+            for k in range(n):
+                expr += sp.diff(Gamma[k][i][j], coordinates[k])
+                expr -= sp.diff(Gamma[k][i][k], coordinates[j])
+
+                for l in range(n):
+                    expr += Gamma[k][i][j]*Gamma[l][k][l]
+                    expr -= Gamma[l][i][k]*Gamma[k][j][l]
+
+            R[i][j] = sp.simplify(sp.factor(expr))
+
+    return sp.Matrix(R)
+
+
+def ricci_scalar(metric, coordinates):
+    inv_metric = sp.simplify(metric.inv())
+    Ricci = ricci_tensor(metric, coordinates)
+
+    Rscalar = 0
+    for i in range(len(coordinates)):
+        for j in range(len(coordinates)):
+            Rscalar += inv_metric[i, j]*Ricci[i, j]
+
+    return sp.simplify(sp.factor(Rscalar))
+
+
+def einstein_tensor(metric, coordinates):
+    Ricci = ricci_tensor(metric, coordinates)
+    Rscalar = ricci_scalar(metric, coordinates)
+
+    return matrix_simplify(
+        Ricci - sp.Rational(1, 2)*metric*Rscalar
+    )
+
+
+# ============================================================
+# 1. Kerr algebraic geometry checks
+# ============================================================
+
+symbolic_test(
+    "Kerr Sigma nonrotating limit",
+    Sigma.subs(a, 0),
+    r**2
+)
+
+symbolic_test(
+    "Kerr Delta Schwarzschild limit",
+    Delta.subs(a, 0),
+    r**2 - 2*G*M*r
+)
+
+symbolic_test(
+    "Kerr Delta flat rotating limit",
+    Delta.subs(M, 0),
+    r**2 + a**2
+)
+
+r_plus = G*M + sp.sqrt(G**2*M**2 - a**2)
+r_minus = G*M - sp.sqrt(G**2*M**2 - a**2)
+
+symbolic_test(
+    "Kerr horizon factorization",
+    sp.expand((r-r_plus)*(r-r_minus)),
+    Delta
+)
+
+det_kerr = sp.factor(sp.simplify(g_kerr.det()))
+
+symbolic_test(
+    "Kerr determinant identity",
+    det_kerr,
+    -Sigma**2*sp.sin(th)**2
+)
+
+g_inv_kerr = sp.simplify(g_kerr.inv())
+
+symbolic_test(
+    "Kerr inverse consistency",
+    sp.simplify(g_kerr*g_inv_kerr),
+    sp.eye(4)
+)
+
+# ============================================================
+# 2. Kerr metric limits
+# ============================================================
+
+f = 1 - 2*G*M/r
+
+g_schw_expected = sp.Matrix([
+    [-f, 0,   0,                  0],
+    [0,  1/f, 0,                  0],
+    [0,  0,   r**2,               0],
+    [0,  0,   0,                  r**2*sp.sin(th)**2]
+])
+
+symbolic_test(
+    "Kerr metric reduces to Schwarzschild at a=0",
+    sp.simplify(g_kerr.subs(a, 0)),
+    g_schw_expected
+)
+
+g_flat_expected = sp.Matrix([
+    [-1, 0, 0, 0],
+    [0,  1, 0, 0],
+    [0,  0, r**2, 0],
+    [0,  0, 0, r**2*sp.sin(th)**2]
+])
+
+symbolic_test(
+    "Kerr metric reduces to spherical Minkowski at M=a=0",
+    sp.simplify(g_kerr.subs({M: 0, a: 0})),
+    g_flat_expected
+)
+
+J = M*a
+
+g_tph = g_kerr[0, 3]
+
+asym_g_tph = sp.series(g_tph, r, sp.oo, 2).removeO()
+
+symbolic_test(
+    "Kerr asymptotic frame dragging",
+    asym_g_tph,
+    -2*G*J*sp.sin(th)**2/r
+)
+
+gtt_schw = g_kerr[0, 0].subs(a, 0)
+weak_gtt_series = sp.series(gtt_schw, r, sp.oo, 2).removeO()
+
+symbolic_test(
+    "Schwarzschild weak-field g_tt expansion",
+    weak_gtt_series,
+    -1 + 2*G*M/r
+)
+
+# ============================================================
+# 3. Schwarzschild curvature validation
+# ============================================================
+
+print("Computing Schwarzschild Ricci tensor...")
+
+R_schw = ricci_tensor(g_schw, coords)
+R_schw = matrix_simplify(R_schw)
+
+symbolic_test(
+    "Schwarzschild Ricci tensor equals zero",
+    R_schw,
+    sp.zeros(4)
+)
+
+print("Computing Schwarzschild Ricci scalar...")
+
+Rscalar_schw = ricci_scalar(g_schw, coords)
+
+symbolic_test(
+    "Schwarzschild Ricci scalar equals zero",
+    Rscalar_schw,
+    0
+)
+
+print("Computing Schwarzschild Einstein tensor...")
+
+G_schw = einstein_tensor(g_schw, coords)
+
+symbolic_test(
+    "Schwarzschild Einstein tensor equals zero",
+    G_schw,
+    sp.zeros(4)
+)
+
+# ============================================================
+# 4. Optional full Kerr Ricci validation
+# ============================================================
+
+if RUN_FULL_KERR_RICCI:
+    print("Computing full Kerr Ricci tensor. This may take a long time...")
+
+    R_kerr = ricci_tensor(g_kerr, coords)
+    R_kerr = matrix_simplify(R_kerr)
+
+    symbolic_test(
+        "Full Kerr Ricci tensor equals zero",
+        R_kerr,
+        sp.zeros(4),
+        section="full_kerr"
+    )
+
+    print("Computing full Kerr Ricci scalar...")
+
+    Rscalar_kerr = ricci_scalar(g_kerr, coords)
+
+    symbolic_test(
+        "Full Kerr Ricci scalar equals zero",
+        Rscalar_kerr,
+        0,
+        section="full_kerr"
+    )
+
+else:
+    info_row(
+        "Full Kerr Ricci tensor check skipped",
+        "Set RUN_FULL_KERR_RICCI=True to run. May be slow.",
+        section="full_kerr"
+    )
+
+# ============================================================
+# 5. Lorentzian determinant / signature sanity
+# ============================================================
+
+# Determinant is negative outside coordinate degeneracies if Sigma>0 and sin(theta)^2>0.
+# This records symbolic determinant form.
+info_row(
+    "Kerr determinant form",
+    det_kerr
+)
+
+info_row(
+    "Expected determinant sign outside axis",
+    "det(g) = -Sigma^2 sin(theta)^2 < 0 for Sigma>0 and sin(theta)!=0"
+)
+
+# ============================================================
+# Output
+# ============================================================
+
+df = pd.DataFrame(tests)
+
+print("================================================")
+print("MASTER RELATIVITY — CURVATURE / EINSTEIN GEOMETRY TESTER v4")
+print("================================================")
+print(df.to_string(index=False))
+print("================================================")
+
+print("\nSummary:")
+print(df["passed"].value_counts())
+
+failed = df[df["passed"] == False]
+
+if len(failed):
+    print("\nFAILED TESTS:")
+    print(failed.to_string(index=False))
+else:
+    print("\nAll curvature geometry tests passed or intentionally skipped.")
+
+df.to_csv("master_relativity_curvature_geometry_tester_v4_results.csv", index=False)
+
+print("\nSaved:")
+print("master_relativity_curvature_geometry_tester_v4_results.csv")
