@@ -1,0 +1,349 @@
+# ============================================================
+#  ______             __                   __                __        __        _______                                                               __       
+# /      \           |  \                 |  \              |  \      |  \      |       \                                                             |  \      
+#|  $$$$$$\  _______ | $$____    ______  _| $$_     _______ | $$   __  \$$      | $$$$$$$\  ______    _______   ______    ______    ______    _______ | $$____  
+#| $$  | $$ /       \| $$    \  /      \|   $$ \   /       \| $$  /  \|  \      | $$__| $$ /      \  /       \ /      \  |      \  /      \  /       \| $$    \ 
+#| $$  | $$|  $$$$$$$| $$$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$$| $$_/  $$| $$      | $$    $$|  $$$$$$\|  $$$$$$$|  $$$$$$\  \$$$$$$\|  $$$$$$\|  $$$$$$$| $$$$$$$\
+#| $$  | $$ \$$    \ | $$  | $$| $$    $$ | $$ __  \$$    \ | $$   $$ | $$      | $$$$$$$\| $$    $$ \$$    \ | $$    $$ /      $$| $$   \$$| $$      | $$  | $$
+#| $$__/ $$ _\$$$$$$\| $$  | $$| $$$$$$$$ | $$|  \ _\$$$$$$\| $$$$$$\ | $$      | $$  | $$| $$$$$$$$ _\$$$$$$\| $$$$$$$$|  $$$$$$$| $$      | $$_____ | $$  | $$
+# \$$    $$|       $$| $$  | $$ \$$     \  \$$  $$|       $$| $$  \$$\| $$      | $$  | $$ \$$     \|       $$ \$$     \ \$$    $$| $$       \$$     \| $$  | $$
+#  \$$$$$$  \$$$$$$$  \$$   \$$  \$$$$$$$   \$$$$  \$$$$$$$  \$$   \$$ \$$       \$$   \$$  \$$$$$$$ \$$$$$$$   \$$$$$$$  \$$$$$$$ \$$        \$$$$$$$ \$$   \$$
+# 
+# Dynamic Gravity
+# SYMBOLIC + NUMERICAL TESTER v1
+# Michael Stanislaus Oshetski
+# ORCID# 0009-0007-3623-7586
+# May, 2026
+# ============================================================
+
+import sympy as sp
+import numpy as np
+import pandas as pd
+
+# ============================================================
+# Test Developer
+# ============================================================
+
+tests = []
+
+def symbolic_test(name, lhs, rhs=0):
+    diff = sp.simplify(lhs - rhs)
+    passed = bool(diff == 0)
+    tests.append({
+        "section": "symbolic",
+        "test": name,
+        "passed": passed,
+        "detail": str(diff)
+    })
+    return passed, diff
+
+def numeric_test(name, value, target, tol_pct):
+    value = float(value)
+    target = float(target)
+    error_pct = 100 * (value - target) / target
+    passed = abs(error_pct) <= tol_pct
+    tests.append({
+        "section": "numeric",
+        "test": name,
+        "passed": passed,
+        "detail": f"value={value:.12g}, target={target:.12g}, error_pct={error_pct:.6g}, tol_pct={tol_pct}"
+    })
+    return passed, error_pct
+
+def info_row(name, value):
+    tests.append({
+        "section": "info",
+        "test": name,
+        "passed": True,
+        "detail": str(value)
+    })
+
+# ============================================================
+# Symbols
+# ============================================================
+
+k2, F = sp.symbols("k2 F", nonzero=True)
+G, M, r, c, Rmax = sp.symbols("G M r c Rmax", positive=True)
+a, theta = sp.symbols("a theta", real=True)
+a2, a4, ZH, v = sp.symbols("a2 a4 ZH v", nonzero=True)
+Z_A, Z2, Z1 = sp.symbols("Z_A Z2 Z1", positive=True)
+g, gp = sp.symbols("g gp", positive=True)
+b = sp.symbols("b")
+dZ = sp.symbols("dZ")
+
+# ============================================================
+# 1. GR / Newton Recovery
+# ============================================================
+
+D_MR = 1/(k2 - F)
+D_GR = 1/k2
+
+symbolic_test(
+    "GR propagator recovery when F -> 0",
+    D_MR.subs(F, 0),
+    D_GR
+)
+
+Phi, rho = sp.symbols("Phi rho")
+poisson_MR = (k2 - F)*Phi - 4*sp.pi*G*rho
+poisson_GR = k2*Phi - 4*sp.pi*G*rho
+
+symbolic_test(
+    "Newton/Poisson recovery when F -> 0",
+    poisson_MR.subs(F, 0),
+    poisson_GR
+)
+
+rc = (G*M/(c**2*Rmax))**sp.Rational(1,3)
+
+symbolic_test(
+    "Finite core radius cube relation",
+    rc**3,
+    G*M/(c**2*Rmax)
+)
+
+# ============================================================
+# 2. Kerr Structure
+# ============================================================
+
+Sigma = r**2 + a**2*sp.cos(theta)**2
+Delta = r**2 - 2*G*M*r + a**2
+
+symbolic_test(
+    "Kerr Sigma nonrotating limit",
+    Sigma.subs(a, 0),
+    r**2
+)
+
+symbolic_test(
+    "Kerr Delta Schwarzschild limit",
+    Delta.subs(a, 0),
+    r**2 - 2*G*M*r
+)
+
+symbolic_test(
+    "Kerr Delta flat oblate limit",
+    Delta.subs(M, 0),
+    r**2 + a**2
+)
+
+r_plus = G*M + sp.sqrt(G**2*M**2 - a**2)
+r_minus = G*M - sp.sqrt(G**2*M**2 - a**2)
+
+symbolic_test(
+    "Kerr Delta horizon factorization",
+    sp.expand((r - r_plus)*(r - r_minus)),
+    Delta
+)
+
+# ============================================================
+# 3. Higgs Algebra
+# ============================================================
+
+w = sp.symbols("w")
+V = sp.Rational(1,2)*a2*w**2 + sp.Rational(1,4)*a4*w**4
+w0sq = -a2/a4
+
+dV = sp.diff(V, w)
+d2V = sp.diff(V, w, 2)
+
+symbolic_test(
+    "Higgs nonzero vacuum condition",
+    sp.simplify((a2*w + a4*w**3)/w).subs(w**2, w0sq),
+    0
+)
+
+symbolic_test(
+    "Higgs curvature at displaced vacuum",
+    d2V.subs(w**2, w0sq),
+    -2*a2
+)
+
+# IMPORTANT:
+# Use convention V(H)= -mu^2 |H|^2 + lambda |H|^4.
+# Then v^2 = mu^2/lambda, mH^2 = 2 lambda v^2.
+# MR closure convention:
+# v^2 = -ZH*a2/a4
+# mH^2 = -2*a2/ZH
+# Therefore lambda must equal a4/ZH^2, not a4/(4ZH^2), under this convention.
+
+lambda_MR = a4/ZH**2
+v2_MR = -ZH*a2/a4
+mH2_MR = -2*a2/ZH
+
+symbolic_test(
+    "Higgs relation mH^2 = 2 lambda v^2",
+    2*lambda_MR*v2_MR,
+    mH2_MR
+)
+
+# ============================================================
+# 4. Gauge / Electroweak Identities
+# ============================================================
+
+alpha = sp.symbols("alpha", positive=True)
+
+symbolic_test(
+    "Alpha closure alpha^-1 = 4 pi Z_A",
+    (1/alpha).subs(alpha, 1/(4*sp.pi*Z_A)),
+    4*sp.pi*Z_A
+)
+
+symbolic_test(
+    "Electroweak split Z_A = Z2 + Z1",
+    (Z2 + Z1),
+    Z_A.subs(Z_A, Z2 + Z1)
+)
+
+sin2_expr = Z2/Z_A
+cos2_expr = Z1/Z_A
+
+symbolic_test(
+    "sin2 + cos2 = 1 under Z_A split",
+    (sin2_expr + cos2_expr).subs(Z_A, Z2 + Z1),
+    1
+)
+
+g_expr = 1/sp.sqrt(Z2)
+gp_expr = 1/sp.sqrt(Z1)
+
+mW2_expr = (sp.Rational(1,2)*g_expr*v)**2
+mZ2_expr = (sp.Rational(1,2)*v*sp.sqrt(g_expr**2 + gp_expr**2))**2
+
+symbolic_test(
+    "W mass squared formula",
+    mW2_expr,
+    v**2/(4*Z2)
+)
+
+symbolic_test(
+    "Z mass squared formula",
+    sp.simplify(mZ2_expr),
+    v**2/4*(1/Z2 + 1/Z1)
+)
+
+symbolic_test(
+    "mW/mZ equals cos thetaW",
+    sp.simplify(sp.sqrt(mW2_expr/mZ2_expr)),
+    sp.sqrt(Z1/(Z1 + Z2))
+)
+
+# ============================================================
+# 5. Beta Coefficient Identities
+# ============================================================
+
+bY_val = sp.Rational(41,6)
+b2_val = -sp.Rational(19,6)
+b3_val = -sp.Integer(7)
+NA_val = sp.Integer(5)
+
+symbolic_test(
+    "Beta identity bY - b2 = 2NA",
+    bY_val - b2_val,
+    2*NA_val
+)
+
+symbolic_test(
+    "Beta identity bY + b2 = 11/3",
+    bY_val + b2_val,
+    sp.Rational(11,3)
+)
+
+symbolic_test(
+    "Beta identity bY + b2 + b3 = -10/3",
+    bY_val + b2_val + b3_val,
+    -sp.Rational(10,3)
+)
+
+beta_MR = -sp.Rational(1,2)*g**3*dZ
+
+symbolic_test(
+    "MR beta flow gives one-loop form",
+    beta_MR.subs(dZ, -b/(8*sp.pi**2)),
+    b*g**3/(16*sp.pi**2)
+)
+
+# ============================================================
+# 6. Numerical Scoreboard
+# ============================================================
+
+alpha_inv_obs = 137.035999177
+sin2_obs = 0.23122
+mH_obs = 125.10
+mW_obs = 80.377
+mZ_obs = 91.1876
+v0 = 246.0
+
+Z_w = 0.406789
+N_A = 5
+
+def ztheta(Lambda_theta, nmax=10000):
+    return 2 * sum(np.exp(-((m/Lambda_theta)**3)) for m in range(1, nmax))
+
+# Current compact correction candidate
+Lambda_theta = 5*np.pi*(1 - 4/(5*np.pi**4))
+C_A = (1 + 1/(N_A*np.pi**4))**(1/4)
+
+Z_theta = ztheta(Lambda_theta)
+alpha_inv_MR = 4*np.pi*Z_w*Z_theta*C_A
+alpha_MR = 1/alpha_inv_MR
+Z_A_num = alpha_inv_MR/(4*np.pi)
+
+sin2_MR = 1/(1 + np.pi + 1/(2*np.pi))
+cos2_MR = 1 - sin2_MR
+
+Z2_num = Z_A_num*sin2_MR
+Z1_num = Z_A_num*cos2_MR
+
+g_num = 1/np.sqrt(Z2_num)
+gp_num = 1/np.sqrt(Z1_num)
+
+C_EW = (1 + 1/(2*np.pi**2))**(3/4)
+v_eff = C_EW*v0
+
+mW_MR = 0.5*g_num*v_eff
+mZ_MR = 0.5*v_eff*np.sqrt(g_num**2 + gp_num**2)
+
+lambda_obs = mH_obs**2/(2*v0**2)
+
+I_EWH_obs = lambda_obs*alpha_inv_obs*sin2_obs
+I_EWH_MR = lambda_obs*alpha_inv_MR*sin2_MR
+I_EWH_target = (4*np.pi/3)*(1 + 1/(2*np.pi**2))**(-1/4)
+
+info_row("Lambda_theta current", Lambda_theta)
+info_row("Z_theta current", Z_theta)
+info_row("C_A current", C_A)
+
+numeric_test("alpha_inv MR", alpha_inv_MR, alpha_inv_obs, 0.2)
+numeric_test("sin2 thetaW MR", sin2_MR, sin2_obs, 1.0)
+numeric_test("mW MR", mW_MR, mW_obs, 1.0)
+numeric_test("mZ MR", mZ_MR, mZ_obs, 1.0)
+numeric_test("I_EWH observed vs compact target", I_EWH_obs, I_EWH_target, 2.0)
+numeric_test("I_EWH MR vs compact target", I_EWH_MR, I_EWH_target, 2.0)
+
+# ============================================================
+# 7. Output
+# ============================================================
+
+df = pd.DataFrame(tests)
+
+print("================================================")
+print("MASTER RELATIVITY — SYMBOLIC + NUMERICAL TESTER v1")
+print("================================================")
+print(df.to_string(index=False))
+print("================================================")
+
+print("\nSummary:")
+print(df["passed"].value_counts())
+
+failed = df[df["passed"] == False]
+if len(failed):
+    print("\nFAILED TESTS:")
+    print(failed.to_string(index=False))
+else:
+    print("\nAll tests passed.")
+
+df.to_csv("master_relativity_symbolic_numeric_tester_v1_results.csv", index=False)
+
+print("\nSaved:")
+print("master_relativity_symbolic_numeric_tester_v1_results.csv")
