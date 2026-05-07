@@ -1,0 +1,276 @@
+# ============================================================
+#  ______             __                   __                __        __        _______                                                               __
+# /      \           |  \                 |  \              |  \      |  \      |       \                                                             |  \
+#|  $$$$$$\  _______ | $$____    ______  _| $$_     _______ | $$   __  \$$      | $$$$$$$\  ______    _______   ______    ______    ______    _______ | $$____
+#| $$  | $$ /       \| $$    \  /      \|   $$ \   /       \| $$  /  \|  \      | $$__| $$ /      \  /       \ /      \  |      \  /      \  /       \| $$    \
+#| $$  | $$|  $$$$$$$| $$$$$$$\|  $$$$$$\\$$$$$$  |  $$$$$$$| $$_/  $$| $$      | $$    $$|  $$$$$$\|  $$$$$$$|  $$$$$$\  \$$$$$$\|  $$$$$$\|  $$$$$$$| $$$$$$$\
+#| $$  | $$ \$$    \ | $$  | $$| $$    $$ | $$ __  \$$    \ | $$   $$ | $$      | $$$$$$$\| $$    $$ \$$    \ | $$    $$ /      $$| $$   \$$| $$      | $$  | $$
+#| $$__/ $$ _\$$$$$$\| $$  | $$| $$$$$$$$ | $$|  \ _\$$$$$$\| $$$$$$\ | $$      | $$  | $$| $$$$$$$$ _\$$$$$$\| $$$$$$$$|  $$$$$$$| $$      | $$_____ | $$  | $$
+# \$$    $$|       $$| $$  | $$ \$$     \  \$$  $$|       $$| $$  \$$\| $$      | $$  | $$ \$$     \|       $$ \$$     \ \$$    $$| $$       \$$     \| $$  | $$
+#  \$$$$$$  \$$$$$$$  \$$   \$$  \$$$$$$$   \$$$$  \$$$$$$$  \$$   \$$ \$$       \$$   \$$  \$$$$$$$ \$$$$$$$   \$$$$$$$  \$$$$$$$ \$$        \$$$$$$$ \$$   \$$
+#
+# Dynamic Gravity
+# COMPACT / ELECTROWEAK LOCK TESTER v7
+# Michael Stanislaus Oshetski
+# ORCID# 0009-0007-3623-7586
+# May, 2026
+#
+# PURPOSE:
+#   Validate the reduced-core numerical closure:
+#   - fine-structure compact closure
+#   - weak-angle closure
+#   - W/Z mass closure
+#   - Higgs relation
+#   - compact electroweak correction
+#   - no factor-of-four Higgs drift
+#   - to determine where Jimmy Hoffa's body actually is?
+# ============================================================
+
+import numpy as np
+import pandas as pd
+import sympy as sp
+
+# ============================================================
+# Test Developers
+# ============================================================
+
+tests = []
+
+def symbolic_test(name, lhs, rhs=0, section="symbolic"):
+    diff = sp.simplify(lhs - rhs)
+
+    if isinstance(diff, sp.MatrixBase):
+        passed = diff.equals(sp.zeros(*diff.shape))
+    else:
+        passed = bool(sp.simplify(diff) == 0)
+
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": passed,
+        "detail": str(diff)
+    })
+
+    return passed
+
+
+def numeric_test(name, value, target, tol_pct, section="numeric"):
+    value = float(value)
+    target = float(target)
+
+    err_pct = 100 * (value - target) / target
+    passed = abs(err_pct) <= tol_pct
+
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": passed,
+        "detail": (
+            f"value={value:.12g}, target={target:.12g}, "
+            f"error_pct={err_pct:.6g}, tol_pct={tol_pct}"
+        )
+    })
+
+    return passed
+
+
+def info_row(name, value, section="info"):
+    tests.append({
+        "section": section,
+        "test": name,
+        "passed": True,
+        "detail": str(value)
+    })
+
+
+# ============================================================
+# Observed / reference values
+# ============================================================
+
+alpha_inv_obs = 137.035999177
+sin2_obs = 0.23122
+
+mH_obs = 125.10
+mW_obs = 80.377
+mZ_obs = 91.1876
+v0 = 246.0
+
+# ============================================================
+# MR compact constants
+# ============================================================
+
+Z_w = 0.406789
+N_A = 5
+
+Lambda_theta = 5*np.pi*(1 - 4/(5*np.pi**4))
+
+def Ztheta(Lambda_theta, nmax=10000):
+    return 2 * sum(
+        np.exp(-((m/Lambda_theta)**3))
+        for m in range(1, nmax)
+    )
+
+Z_theta = Ztheta(Lambda_theta)
+
+C_A = (1 + 1/(N_A*np.pi**4))**(1/4)
+
+alpha_inv_MR = 4*np.pi*Z_w*Z_theta*C_A
+alpha_MR = 1/alpha_inv_MR
+
+Z_A = alpha_inv_MR/(4*np.pi)
+
+# ============================================================
+# Electroweak compact closure
+# ============================================================
+
+sin2_MR = 1/(1 + np.pi + 1/(2*np.pi))
+cos2_MR = 1 - sin2_MR
+
+Z_SU2 = Z_A*sin2_MR
+Z_U1 = Z_A*cos2_MR
+
+g_MR = 1/np.sqrt(Z_SU2)
+gp_MR = 1/np.sqrt(Z_U1)
+e_MR = 1/np.sqrt(Z_A)
+
+C_EW = (1 + 1/(2*np.pi**2))**(3/4)
+v_eff = C_EW*v0
+
+mW_MR = 0.5*g_MR*v_eff
+mZ_MR = 0.5*v_eff*np.sqrt(g_MR**2 + gp_MR**2)
+
+lambda_H_obs = mH_obs**2/(2*v0**2)
+
+# Cross-sector invariant
+I_EWH_obs = lambda_H_obs*alpha_inv_obs*sin2_obs
+I_EWH_MR = lambda_H_obs*alpha_inv_MR*sin2_MR
+I_EWH_target = (4*np.pi/3)*(1 + 1/(2*np.pi**2))**(-1/4)
+
+# ============================================================
+# Symbolic Higgs lock checks
+# ============================================================
+
+a2, a4, ZH = sp.symbols("a2 a4 ZH", nonzero=True)
+
+v2_MR = -ZH*a2/a4
+lambda_MR = a4/ZH**2
+mH2_MR = -2*a2/ZH
+
+symbolic_test(
+    "Higgs closure lock: mH^2 = 2 lambda v^2",
+    2*lambda_MR*v2_MR,
+    mH2_MR,
+    section="higgs_lock"
+)
+
+# Old wrong convention should fail relative to current convention
+lambda_old = a4/(4*ZH**2)
+old_relation_diff = sp.simplify(2*lambda_old*v2_MR - mH2_MR)
+
+tests.append({
+    "section": "higgs_lock",
+    "test": "Old lambda=a4/(4ZH^2) is rejected by current convention",
+    "passed": bool(old_relation_diff != 0),
+    "detail": str(old_relation_diff)
+})
+
+# ============================================================
+# Symbolic electroweak identity checks
+# ============================================================
+
+Z2, Z1, ZA_sym, v = sp.symbols("Z2 Z1 ZA v", positive=True)
+
+g_sym = 1/sp.sqrt(Z2)
+gp_sym = 1/sp.sqrt(Z1)
+
+mW2_sym = (sp.Rational(1,2)*g_sym*v)**2
+mZ2_sym = (sp.Rational(1,2)*v*sp.sqrt(g_sym**2 + gp_sym**2))**2
+
+symbolic_test(
+    "W mass identity",
+    mW2_sym,
+    v**2/(4*Z2),
+    section="ew_lock"
+)
+
+symbolic_test(
+    "Z mass identity",
+    sp.simplify(mZ2_sym),
+    v**2/4*(1/Z2 + 1/Z1),
+    section="ew_lock"
+)
+
+symbolic_test(
+    "Weak angle split identity",
+    (Z2/ZA_sym + Z1/ZA_sym).subs(ZA_sym, Z2 + Z1),
+    1,
+    section="ew_lock"
+)
+
+# ============================================================
+# Numerical tests!!!!! Finally we got them!
+# ============================================================
+
+info_row("Lambda_theta", Lambda_theta)
+info_row("Z_theta", Z_theta)
+info_row("C_A", C_A)
+info_row("Z_A", Z_A)
+info_row("C_EW", C_EW)
+info_row("lambda_H_obs", lambda_H_obs)
+
+numeric_test("alpha_inv MR", alpha_inv_MR, alpha_inv_obs, 0.2)
+numeric_test("sin2 thetaW MR", sin2_MR, sin2_obs, 1.0)
+numeric_test("mW MR", mW_MR, mW_obs, 1.0)
+numeric_test("mZ MR", mZ_MR, mZ_obs, 1.0)
+
+numeric_test(
+    "mW/mZ ratio",
+    mW_MR/mZ_MR,
+    np.sqrt(cos2_MR),
+    1e-9
+)
+
+numeric_test(
+    "I_EWH observed vs compact target",
+    I_EWH_obs,
+    I_EWH_target,
+    2.0
+)
+
+numeric_test(
+    "I_EWH MR vs compact target",
+    I_EWH_MR,
+    I_EWH_target,
+    2.0
+)
+
+# ============================================================
+# Output
+# ============================================================
+
+df = pd.DataFrame(tests)
+
+print("================================================")
+print("Dynamic Gravity — COMPACT / ELECTROWEAK LOCK TESTER v7")
+print("================================================")
+print(df.to_string(index=False))
+print("================================================")
+
+print("\nSummary:")
+print(df["passed"].value_counts())
+
+failed = df[df["passed"] == False]
+
+if len(failed):
+    print("\nFAILED TESTS:")
+    print(failed.to_string(index=False))
+else:
+    print("\nALL COMPACT / ELECTROWEAK LOCK TESTS PASSED.")
+
+df.to_csv(
+    "master_relativity_compact_electroweak_lock_tester_v7_results.csv",
+    index=False
+)
+
+print("\nSaved:")
+print("master_relativity_compact_electroweak_lock_tester_v7_results.csv")
