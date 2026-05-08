@@ -23,7 +23,7 @@
 \newcommand{\Kerr}{\mathrm{Kerr}}
 \newcommand{\Schw}{\mathrm{Schw}}
 
-\title{Dynamic Gravity (GR): Core Master Equation Sheet\\Native Spectral-Projection Framework}
+\title{Dynamic Gravity (MR): Core Master Equation Sheet\\Native Spectral-Projection Framework}
 \author{Michael Stanislaus Oshetski \\ \small ORCID: \href{https://orcid.org}{0009-0007-3623-7586}}
 \date{May 2026}
 
@@ -142,7 +142,9 @@ V_\Psi(w)=\frac12a_2w^2+\frac14a_4w^4+\cdots
 \midrule
 \endhead
 $P_g\sim O_G=V_\Psi''(w)$ & Gravity as internal stiffness projection. & D \\
-$P_{\rm rot}$ & Rotation / frame dragging / Kerr exterior. & D/C \\
+$P_{\rm rot}$ & Rotation / frame dragging.
+
+The rotating extension is treated as an axisymmetric projection-space deformation with frame dragging. / Kerr exterior. & D/C \\
 $P_H(w)=w$ & Higgs as displacement projection. & D \\
 $P_A$ and $S^1_\theta$ & Gauge field and compact phase projection. & D \\
 $P_X$ & Strong-field continuum / ringdown response. & D/C \\
@@ -172,20 +174,54 @@ g_{\mu\nu}^{\eff}=\eta_{\mu\nu}+h_{\mu\nu}+O(q^2)
 & Weak-field expansion. & D \\
 
 \begin{equation}
-h_{\mu\nu}=q_{\mu\nu}-\frac14\eta_{\mu\nu}q,
-\qquad q=\eta^{\alpha\beta}q_{\alpha\beta}
+h_{\mu\nu}
+=
+q_{\mu\nu}
+-
+\frac14\eta_{\mu\nu}q,
+\qquad
+q=\eta^{\alpha\beta}q_{\alpha\beta}
 \end{equation}
 & Trace-subtracted perturbation from determinant normalization. & D \\
 
 \begin{equation}
-\rho_P(\mu^2)=\sum_n|\langle u_n|\hat V_g|u_0\rangle|^2\delta(\mu^2-\mu_n^2)
+O_X
+=
+-
+\frac{d^2}{dw^2}
++
+V_X(w)
+\end{equation}
+& Internal projection-manifold operator. & D \\
+
+\begin{equation}
+\rho_P(\mu^2)
+=
+\sum_n
+\left|
+\langle u_n|\hat V_g|u_0\rangle
+\right|^2
+\delta(\mu^2-\mu_n^2)
 \end{equation}
 & Gravity spectral density. & D \\
 
 \begin{equation}
-F(k^2)=\int \dd\mu^2\,\frac{\rho_P(\mu^2)}{k^2-\mu^2+i\epsilon}
+F(k^2)
+=
+\int \dd\mu^2\,\frac{\rho_P(\mu^2)}{k^2-\mu^2+i\epsilon}
 \end{equation}
 & Projection self-energy. & D \\
+
+\begin{equation}
+D^{(P)}_{\mu\nu\rho\sigma}(k)
+=
+\frac{
+P^{(2)}_{\mu\nu\rho\sigma}
+}{
+k^2 - F(k^2) + i\epsilon
+}
+\end{equation}
+& Projection-sector graviton propagator. & D \\
 
 \begin{equation}
 F_{\eff}(k^2)=\chi k^2\tanh\left[\frac{F_{\raw}(k^2)}{\chi k^2}\right],\qquad 0<\chi<1
@@ -445,82 +481,107 @@ m_Z^{\MR}\simeq91.451\,\mathrm{GeV}
 \end{longtable}
 
 \section{MR-Native Kerr and Strong Gravity}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
+
+\begingroup
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{longtable}{
+>{\raggedright\arraybackslash}p{0.46\textwidth}
+>{\raggedright\arraybackslash}p{0.40\textwidth}
+>{\centering\arraybackslash}p{0.06\textwidth}
+}
 \toprule
 \textbf{Equation} & \textbf{Meaning} & \textbf{Tag} \\
 \midrule
 \endhead
 
-\begin{equation}
+\[
 \Psi_{\rm rot}=R(r)\Theta(\theta)u_0(\xi)e^{-i\omega t+im\phi}
-\end{equation}
+\]
 & Rotating MR coherent exterior state. & D/C \\
 
-\begin{equation}
+\[
 Q_{t\phi}\propto -\omega m |R|^2|\Theta|^2
-\end{equation}
+\]
 & Native origin of frame dragging from projection phase winding. & D \\
 
-\begin{equation}
-\frac{1}{R}\frac{\dd}{\dd r}\left[\Delta_r(r)\frac{\dd R}{\dd r}\right]+V_r(r)=-\Lambda,
-\qquad
-\frac{1}{\Theta\sin\theta}\frac{\dd}{\dd\theta}\left[\sin\theta\frac{\dd\Theta}{\dd\theta}\right]+V_\theta(\theta)=\Lambda
-\end{equation}
+\[
+\begin{aligned}
+\frac{1}{R}\frac{\dd}{\dd r}
+\left[\Delta_r(r)\frac{\dd R}{\dd r}\right]+V_r(r)&=-\Lambda,\\
+\frac{1}{\Theta\sin\theta}\frac{\dd}{\dd\theta}
+\left[\sin\theta\frac{\dd\Theta}{\dd\theta}\right]
++V_\theta(\theta)&=\Lambda
+\end{aligned}
+\]
 & Separated MR exterior projection equations. & C/O \\
 
-\begin{equation}
+\[
 \Sigma_{\MR}=r^2+a^2\cos^2\theta
-\end{equation}
+\]
 & Angular Kerr structure from axisymmetry, reflection symmetry, smooth nonrotating limit, and no exterior hair. & D/C \\
 
-\begin{equation}
+\[
 \Delta_{\MR}=r^2-\frac{2G_PM}{c^2}r+a^2
-\end{equation}
+\]
 & Radial Kerr structure from Schwarzschild limit, flat rotating limit, and no extra exterior charge. & D/C \\
 
-\begin{equation}
+\[
 a=\frac{J}{Mc}
-\end{equation}
+\]
 & Kerr spin parameter in physical units. & D \\
 
-\begin{equation}
+{\scriptsize
+\[
 \begin{aligned}
 \dd s^2_{\MR}={}&-
-\left(1-\frac{2G_PMr}{c^2\Sigma_{\MR}}\right)c^2\dd t^2
--
-\frac{4G_PMar\sin^2\theta}{c^3\Sigma_{\MR}}\dd t\dd\phi
-+
-\frac{\Sigma_{\MR}}{\Delta_{\MR}}\dd r^2
-+
-\Sigma_{\MR}\dd\theta^2\\
-&+\left(r^2+a^2+\frac{2G_PMa^2r\sin^2\theta}{c^2\Sigma_{\MR}}\right)\sin^2\theta\dd\phi^2
+\left(1-\frac{2G_PMr}{c^2\Sigma_{\MR}}\right)c^2\dd t^2\\
+&-\frac{4G_PMar\sin^2\theta}{c^3\Sigma_{\MR}}\dd t\dd\phi\\
+&+\frac{\Sigma_{\MR}}{\Delta_{\MR}}\dd r^2
++\Sigma_{\MR}\dd\theta^2\\
+&+\left(
+r^2+a^2+
+\frac{2G_PMa^2r\sin^2\theta}{c^2\Sigma_{\MR}}
+\right)\sin^2\theta\dd\phi^2
 \end{aligned}
-\end{equation}
+\]
+}
 & MR-derived rotating exterior metric; equals Kerr outside the projection core. & D/C \\
 
-\begin{equation}
-r_\pm=\frac{G_PM}{c^2}\pm\sqrt{\left(\frac{G_PM}{c^2}\right)^2-a^2}
-\end{equation}
+\[
+r_\pm=\frac{G_PM}{c^2}
+\pm
+\sqrt{
+\left(\frac{G_PM}{c^2}\right)^2-a^2
+}
+\]
 & Horizon radii of the exterior Kerr branch. & D/C \\
 
-\begin{equation}
+\[
 \Psi^3-\Psi=\frac{\rho}{\rho_*},
 \qquad
 R_{\max}\sim\mu_{\min}^2,
 \qquad
 \rho_*\sim\frac{c^2R_{\max}}{G_P}
-\end{equation}
+\]
 & Nonlinear projection saturation, maximum curvature, and density cutoff. & D/C \\
 
-\begin{equation}
-r_c=\left(\frac{G_PM}{c^2R_{\max}}\right)^{1/3},
+\[
+r_c=
+\left(
+\frac{G_PM}{c^2R_{\max}}
+\right)^{1/3},
 \qquad
 \frac{r_c}{r_s}\propto M^{-2/3}
-\end{equation}
+\]
 & Finite core radius and scaling relative to Schwarzschild radius. & D/C \\
 
 \bottomrule
 \end{longtable}
+
+\endgroup
 
 \section{Gravitational Waves and Ringdown}
 \begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
@@ -601,6 +662,24 @@ K(k)=k^2-F(k^2),
 \bottomrule
 \end{longtable}
 
+\section{Hubble Expansion Sector}
+
+The projection-sector cosmological closure is written in terms of the observable expansion function \(H(z)\):
+
+\begin{equation}
+H(z)^2 =
+H_0^2
+\left[
+\Omega_m(1+z)^3
++
+\Omega_r(1+z)^4
++
+\Omega_\theta(z)
+\right].
+\end{equation}
+
+Here \(\Omega_\theta(z)\) is the protected homogeneous projection-sector contribution. It represents the slow, near-zero projection mode responsible for late-time expansion while remaining decoupled from the fast local gravity, Kerr, Higgs, and spectral-response sectors.
+
 \section{Observable Benchmarks and Test Status}
 \begin{longtable}{>{\raggedright\arraybackslash}p{0.31\textwidth} >{\raggedright\arraybackslash}p{0.39\textwidth} >{\raggedright\arraybackslash}p{0.20\textwidth}}
 \toprule
@@ -636,6 +715,9 @@ Compact/electroweak lock tester v7 & Higgs normalization, fine-structure, weak a
 Lorentz speed closure tester v8.1 & Universal propagation speed from equal temporal/spatial stiffness & \url{master_relativity_lorentz_speed_closure_tester_v8_1_results.csv} \\ \addlinespace
 GW propagation/stability tester v9 & Luminal GW recovery, no ghosts, no extra poles, stable continuum denominator & \url{master_relativity_gw_propagation_stability_tester_v9_results.csv} \\ \addlinespace
 
+\end{longtable}
+\bottomrule
+
 \section{Parameter Audit}
 \begin{longtable}{>{\raggedright\arraybackslash}p{0.22\textwidth} >{\raggedright\arraybackslash}p{0.47\textwidth} >{\centering\arraybackslash}p{0.08\textwidth} >{\raggedright\arraybackslash}p{0.15\textwidth}}
 \toprule
@@ -662,6 +744,7 @@ $C_{EW}$ & Gauge-Higgs normalization & C & compact correction \\
 $\Pi_X$ & GW self-energy & D/C & continuum correction \\
 \bottomrule
 \end{longtable}
+
 
 \section{Current Completion Status}
 \begin{itemize}[leftmargin=*]
