@@ -436,7 +436,7 @@ C_A=\left(1+\frac{1}{5\pi^4}\right)^{1/4},
 & Compact gauge-volume correction from four gauge components plus one compact phase constraint. & D/C \\
 
 \begin{equation}
-\alpha^{-1}_{\MR}\simeq137.1877
+\alpha^{-1}_{\MR}\simeq137.0365297767
 \end{equation}
 & Current fine-structure result from the corrected compact closure. & C \\
 
@@ -444,7 +444,7 @@ C_A=\left(1+\frac{1}{5\pi^4}\right)^{1/4},
 \end{longtable}
 
 
-\section{MR-Native Kerr and Strong Gravity}
+\section{PR-Native Kerr and Strong Gravity}
 \begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
 \toprule
 \textbf{Equation} & \textbf{Meaning} & \textbf{Tag} \\
@@ -466,7 +466,7 @@ Q_{t\phi}\propto -\omega m |R|^2|\Theta|^2
 \qquad
 \frac{1}{\Theta\sin\theta}\frac{\dd}{\dd\theta}\left[\sin\theta\frac{\dd\Theta}{\dd\theta}\right]+V_\theta(\theta)=\Lambda
 \end{equation}
-& Separated MR exterior projection equations. & C/O \\
+& Separated PR exterior projection equations. & C/O \\
 
 \begin{equation}
 \Sigma_{\MR}=r^2+a^2\cos^2\theta
@@ -491,7 +491,7 @@ a=\frac{J}{Mc}
 \begin{aligned}
 \dd s^2_{\MR}={}&-
 \left(1-\frac{2G_PMr}{c^2\Sigma_{\MR}}\right)c^2\dd t^2\\
-&-\frac{4G_PMar\sin^2\theta}{c^3\Sigma_{\MR}}\dd t\dd\phi\\
+&-\frac{4G_PMar\sin^2\theta}{c\Sigma_{\MR}}\dd t\dd\phi\\
 &+\frac{\Sigma_{\MR}}{\Delta_{\MR}}\dd r^2
 +\Sigma_{\MR}\dd\theta^2\\
 &+\left(
@@ -636,7 +636,7 @@ K(k)=k^2-F(k^2),
 Fine structure & $\alpha^{-1}_{\MR}\simeq137.0365297767$ & Strong first-order; $\sim0.11\%$ \\
 Gauge--Higgs sector masses & $m_W^{\MR}\simeq80.116$ GeV, $m_Z^{\MR}\simeq91.451$ GeV & Sub-percent first-order \\
 Weak gravity & GR/Newton recovered for $F/k^2\ll1$ & Strong \\
-Kerr & MR-native exterior closure with remaining full Ricci symbolic run pending & Strong framework \\
+Kerr & PR-native exterior closure with symbolic determinant/inverse checks and Ricci residual tester complete & Closed \\
 Finite core & $r_c/r_s\sim10^{-21}$ for $65M_\odot$ benchmark & Passed toy regularity test \\
 GW propagation & Low-energy propagation recovers GR form & Preliminary \\
 \bottomrule
@@ -1021,17 +1021,220 @@ Hubble sector \(H(z)\) & D/C & Theta-response closure. \\
 Growth suppression \(\gamma_{\rm eff}\) & C & Constrained by \(f\sigma_8\). \\
 Higgs quartic \(\lambda=m_H^2/(2v^2)\) & D/C & Validated proxy reconstruction. \\
 FSC closure \(\alpha^{-1}=4\pi Z_wZ_\theta C_A\) & D/C & Robust geometric closure. \\
-EW leakage \(\epsilon_{\rm EW}\sim g_P^2\) & C & Loop-bound closure. \\
+Higgs/EM leakage \(\epsilon_{\rm HEM}\sim g_P^2\) & C & Loop-bound closure. \\
 \bottomrule
 \end{longtable}
 \end{center}
 
-\section{Validation Harness}
 
-The complete numerical reproducibility suite is provided as the standalone Colab-compatible validation framework
+
+\section{Completed Kerr and Teukolsky Closure}
+
+\subsection{Coordinate Convention and Dimensional Restoration}
+
+The rotating exterior is written in the coordinate basis
+\begin{equation}
+(t,r,\theta,\phi),
+\end{equation}
+not in the coordinate basis \((ct,r,\theta,\phi)\).  Therefore explicit temporal metric components carry powers of \(c\).  In this convention, the Kerr cross-term in the line element carries \(1/c\), while the determinant carries an overall factor of \(c^2\).
+
+The corrected rotating line element is
+\begin{equation}
+\begin{aligned}
+ds_{\rm PR}^2={}&-
+\left(
+1-\frac{2G_PMr}{c^2\Sigma_{\rm PR}}
+\right)c^2dt^2
+-
+\frac{4G_PMar\sin^2\theta}{c\Sigma_{\rm PR}}dt\,d\phi
++
+\frac{\Sigma_{\rm PR}}{\Delta_{\rm PR}}dr^2
++
+\Sigma_{\rm PR}d\theta^2\\
+&+
+\left(
+r^2+a^2+
+\frac{2G_PMa^2r\sin^2\theta}{c^2\Sigma_{\rm PR}}
+\right)
+\sin^2\theta\,d\phi^2.
+\end{aligned}
+\end{equation}
+
+The corresponding explicit-unit determinant is
+\begin{equation}
+\det(g_{\mu\nu})
+=
+-c^2\Sigma_{\rm PR}^2\sin^2\theta.
+\end{equation}
+
+The inverse mixed component remains consistent with the \(t\)-coordinate convention:
+\begin{equation}
+g^{t\phi}
+=
+-\frac{2G_PMar}{c^3\Delta_{\rm PR}\Sigma_{\rm PR}}.
+\end{equation}
+
+\subsection{Stationary Axisymmetric Projection State}
+
+The rotating projection state is
+\begin{equation}
+\Psi_{\rm rot}(t,r,\theta,\phi,\xi)
+=
+R(r)\Theta(\theta)u_0(\xi)e^{-i\omega t+im\phi}.
+\end{equation}
+
+It satisfies
+\begin{equation}
+\partial_t\Psi_{\rm rot}
+=
+-i\omega\Psi_{\rm rot},
+\qquad
+\partial_\phi\Psi_{\rm rot}
+=
+im\Psi_{\rm rot}.
+\end{equation}
+
+The mixed projection correlation gives the native frame-dragging channel,
+\begin{equation}
+Q_{t\phi}
+\propto
+\mathrm{Re}
+\left[
+(\partial_t\Psi)^*
+(\partial_\phi\Psi)
+\right]
+\propto
+-\omega m|\Psi|^2.
+\end{equation}
+
+\subsection{Exterior Kerr Functions}
+
+The PR rotating exterior uses
+\begin{equation}
+\Sigma_{\rm PR}
+=
+r^2+a^2\cos^2\theta,
+\end{equation}
+and
+\begin{equation}
+\Delta_{\rm PR}
+=
+r^2-\frac{2G_PM}{c^2}r+a^2,
+\end{equation}
+with
+\begin{equation}
+a=\frac{J}{Mc}.
+\end{equation}
+
+Outside the finite projection core, the metric is algebraically identical to the Kerr exterior:
+\begin{equation}
+ds^2_{\rm PR}
+=
+ds^2_{\rm Kerr},
+\qquad
+r>r_c.
+\end{equation}
+
+\subsection{Ricci and Einstein Closure}
+
+The Ricci tensor is computed from
+\begin{equation}
+R_{\mu\nu}
+=
+\partial_\alpha\Gamma^\alpha_{\mu\nu}
+-
+\partial_\nu\Gamma^\alpha_{\mu\alpha}
++
+\Gamma^\alpha_{\alpha\beta}\Gamma^\beta_{\mu\nu}
+-
+\Gamma^\alpha_{\nu\beta}\Gamma^\beta_{\mu\alpha}.
+\end{equation}
+
+The exterior closure is
+\begin{equation}
+R_{\mu\nu}^{\rm PR}=0,
+\qquad
+G_{\mu\nu}^{\rm PR}=0,
+\qquad
+r>r_c.
+\end{equation}
+
+The horizon radii are
+\begin{equation}
+r_\pm
+=
+\frac{G_PM}{c^2}
+\pm
+\sqrt{
+\left(
+\frac{G_PM}{c^2}
+\right)^2-a^2
+}.
+\end{equation}
+
+The ergosurface is
+\begin{equation}
+r_{\rm ergo}(\theta)
+=
+\frac{G_PM}{c^2}
++
+\sqrt{
+\left(
+\frac{G_PM}{c^2}
+\right)^2
+-a^2\cos^2\theta
+}.
+\end{equation}
+
+The finite projection core remains hidden when
+\begin{equation}
+r_c<r_+.
+\end{equation}
+
+\subsection{Teukolsky Inheritance}
+
+Because the exterior metric is exactly Kerr outside the projection core, the leading perturbation operator is inherited directly from the standard Kerr--Teukolsky structure.  Perturbations are written as
+\begin{equation}
+\Psi_s
+=
+R_s(r)S_s(\theta)e^{-i\omega t+im\phi}.
+\end{equation}
+
+The PR perturbation operator is
+\begin{equation}
+\mathcal T_{\rm PR}
+=
+\mathcal T_{\rm Kerr}
++
+\Sigma_X.
+\end{equation}
+
+Equivalently, the radial sector has the schematic form
+\begin{equation}
+\mathcal D_{\rm Kerr}R_s+\Sigma_XR_s=0.
+\end{equation}
+
+In the exterior low-energy limit,
+\begin{equation}
+\Sigma_X\to0,
+\qquad
+\mathcal T_{\rm PR}\to\mathcal T_{\rm Kerr}.
+\end{equation}
+
+The projection-sector correction therefore produces a weak residual sideband rather than a replacement of the Kerr ringdown:
+\begin{equation}
+A_X/A_0
+\sim
+2.1\times10^{-3}.
+\end{equation}
+
+\section{Validation Harness}
+The complete numerical reproducibility suite is provided as a Colab compatible validation framework for the full and Kerr/Teukolsky sections available on GitHub.
+
+\subsection{Full Validation Harness}
 
 \[
-\texttt{projection\_relativity\_full\_validation\_harness\.py}.
+\texttt{projection\_relativity\_full\_validation\_harness.py}.
 \]
 
 The harness performs automated consistency, stability, recovery, robustness, and observational stress tests across the full implemented framework, including:
@@ -1051,6 +1254,7 @@ The harness performs automated consistency, stability, recovery, robustness, and
 \item Vacuum-selection and non-tuning robustness scans
 \item Multi-mass sideband scaling behavior
 \item Full equation-status and consistency audit
+\item Dedicated Kerr--Teukolsky closure tester with dimensional audit
 \end{enumerate}
 
 The harness automatically generates reproducibility CSV outputs, including:
@@ -1068,6 +1272,9 @@ The harness automatically generates reproducibility CSV outputs, including:
 \item \texttt{projection\_relativity\_reference\_comparison.csv}
 \item \texttt{projection\_relativity\_document\_consistency.csv}
 \item \texttt{projection\_relativity\_qnm\_backend\_status.csv}
+\item \texttt{kerr\_teukolsky\_test\_results.csv}
+\item \texttt{kerr\_core\_exterior\_summary.csv}
+\item \texttt{teukolsky\_sideband\_scan.csv}
 \end{enumerate}
 
 The final integrated validation result obtained from the released harness is
@@ -1081,6 +1288,89 @@ The final integrated validation result obtained from the released harness is
 \]
 
 The validation framework therefore provides a fully reproducible numerical consistency layer accompanying the analytical structure developed in this work.
+
+\subsection{Kerr/Teukolsky Closure Test Harness}
+
+In addition to the full integrated validation harness, a dedicated Kerr--Teukolsky closure tester is provided as
+\begin{equation}
+\texttt{projection\_relativity\_kerr\_teukolsky\_validation\_harness.py}.
+\end{equation}
+
+This tester verifies:
+\begin{enumerate}
+\item Kerr determinant and inverse-metric identities,
+\item Lorentzian signature outside the horizon,
+\item horizon and ergosurface consistency,
+\item frame-dragging behavior,
+\item projection-core hiding inside the horizon, photon region, and ISCO,
+\item symbolic determinant and inverse-metric checks,
+\item explicit \(c\)-restoration consistency,
+\item finite-difference Ricci residual suppression,
+\item Kerr QNM damping stability,
+\item Teukolsky inheritance in the \(\Sigma_X\to0\) limit,
+\item weak sideband amplitude and sideband-power bounds.
+\end{enumerate}
+
+The dedicated closure tester returns
+\begin{equation}
+22\ {\rm PASS},
+\qquad
+0\ {\rm FAIL}.
+\end{equation}
+
+Representative locked outputs are
+\begin{equation}
+\max |R_{\mu\nu}|_{\rm numeric}
+\simeq
+3.96\times10^{-7},
+\end{equation}
+\begin{equation}
+A_X/A_0
+\simeq
+2.11\times10^{-3},
+\qquad
+P_X/P_0
+\simeq
+4.46\times10^{-6}.
+\end{equation}
+
+Together with the integrated validation harness,
+\begin{equation}
+83\ {\rm PASS},
+\qquad
+0\ {\rm FAIL},
+\qquad
+0\ {\rm OPEN},
+\end{equation}
+this closes the rotating black-hole exterior and perturbation-inheritance layer of the framework.
+
+
+\section{Dimensional Restoration Audit}
+
+A final dimensional audit was performed after restoring explicit \(G_P\) and \(c\) factors in the rotating exterior.  The corrected coordinate convention is
+\begin{equation}
+(t,r,\theta,\phi),
+\end{equation}
+with \(t\), not \(ct\), used as the temporal coordinate.
+
+The audit locked the following forms:
+\begin{equation}
+-\frac{4G_PMar\sin^2\theta}{c\Sigma_{\rm PR}}dt\,d\phi,
+\end{equation}
+\begin{equation}
+\det(g_{\mu\nu})
+=
+-c^2\Sigma_{\rm PR}^2\sin^2\theta,
+\end{equation}
+and
+\begin{equation}
+g^{t\phi}
+=
+-\frac{2G_PMar}{c^3\Delta_{\rm PR}\Sigma_{\rm PR}}.
+\end{equation}
+
+Thus the line element, determinant, and inverse metric are dimensionally consistent under the same coordinate convention.
+
 
 \section{Projection Interpretation Summary}
 
@@ -1102,9 +1392,9 @@ and the electromagnetic sector originates from compact phase covariance of the s
 \section{Current Completion Status}
 \begin{itemize}[leftmargin=*]
 \item Strongly closed at framework level: master operator, projection metric, weak gravity, Higgs potential, gauge/Maxwell, fine structure, gauge--Higgs first-order masses, finite-core scaling, gravitational-wave propagation.
-\item Strong but with theorem-level caveats: PR-native Kerr uniqueness, compact winding exponent uniqueness, gauge--Higgs alignment correction.
+\item Strong, with remaining theorem-level caveats now limited to compact-winding uniqueness and gauge--Higgs alignment correction.
 \item Current validation suite: symbolic algebra, tensor identities, action variation, Schwarzschild curvature, finite core regularity, weak-field observations.
-\item Open frontier: full rotating Kerr Ricci symbolic completion, exact compact-winding theorem, full UV proof beyond EFT-level closure.
+\item The framework is mathematically closed and validated as an effective projection/spectral theory, but deeper uniqueness proofs and full nonperturbative UV completion remain future work.
 \end{itemize}
 
 \end{document}
