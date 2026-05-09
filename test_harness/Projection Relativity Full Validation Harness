@@ -43,18 +43,22 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-try:
-    from scipy.linalg import eigh_tridiagonal
-except Exception as e:
-    raise ImportError("scipy is required for the operator spectral test.") from e
+# Colab setup
+!pip -q install numpy pandas scipy qnm
 
 try:
     import qnm
     QNM_AVAILABLE = True
+    print("qnm available")
 except Exception as e:
     QNM_AVAILABLE = False
     QNM_IMPORT_ERROR = repr(e)
     print("NOTE: qnm package could not be imported. Using analytic Kerr 220 fit fallback.")
+    print(QNM_IMPORT_ERROR)
+
+# $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# Target Data
+# $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 G = 6.67430e-11
 c = 299792458.0
