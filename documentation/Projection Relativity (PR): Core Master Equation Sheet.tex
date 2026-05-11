@@ -1,714 +1,285 @@
+
 \documentclass[11pt]{article}
-\usepackage[margin=0.78in]{geometry}
-\usepackage{amsmath,amssymb,amsfonts,bm}
-\usepackage{longtable,array,booktabs}
-\usepackage{xcolor,hyperref,enumitem}
+\usepackage{orcidlink}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,bm,mathtools}
+\usepackage{booktabs,longtable,array,multirow}
+\usepackage{xcolor}
+\usepackage{hyperref}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage{orcidlink}
+
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.45em}
-\renewcommand{\arraystretch}{1.18}
+\setlength{\parskip}{0.55em}
+\renewcommand{\arraystretch}{1.22}
 
-\newcommand{\MR}{\mathrm{PR}}
+\newcommand{\PR}{\mathrm{PR}}
 \newcommand{\eff}{\mathrm{eff}}
-\newcommand{\vac}{\mathrm{vac}}
-\newcommand{\phys}{\mathrm{phys}}
-\newcommand{\obs}{\mathrm{obs}}
-\newcommand{\raw}{\mathrm{raw}}
-\newcommand{\dd}{\mathrm{d}}
-\newcommand{\TT}{\mathrm{TT}}
-\newcommand{\diag}{\mathrm{diag}}
-\newcommand{\tr}{\mathrm{tr}}
 \newcommand{\Kerr}{\mathrm{Kerr}}
-\newcommand{\Schw}{\mathrm{Schw}}
+\newcommand{\GR}{\mathrm{GR}}
+\newcommand{\obs}{\mathrm{obs}}
+\newcommand{\src}{\mathrm{src}}
+\newcommand{\vac}{\mathrm{vac}}
+\newcommand{\hom}{\mathrm{hom}}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\Teuk}{\mathrm{Teuk}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\diag}{\mathrm{diag}}
 
-\title{Projection Relativity (PR): Core Master Equation Sheet\\Native Spectral-Projection Framework}
-\author{Michael Stanislaus Oshetski \\ \small ORCID: \href{https://orcid.org}{0009-0007-3623-7586}}
+\title{Projection Relativity:\\Complete Master Equation Sheet}
+\author{Michael Stanislaus Oshetski \small \orcidlink{0009-0007-3623-7586} \\ 
+\small Independent Researcher \\ 
+\small ORCID: 0009-0007-3623-7586}\\
 \date{May 2026}
 
 \begin{document}
-
 \maketitle
 
-\section*{Purpose and Status}
-This sheet consolidates the reduced Projection Relativity equation framework into one native  PR form.  The organizing principle is that the validated observable sectors are projections of a single internal spectral system.  This version intentionally focuses on the core gravity, Kerr, finite-core, electromagnetic, Higgs, gravitational-wave, and validation-test equations.
+\section*{Purpose and Scope}
 
+This master equation sheet consolidates the current Projection Relativity (PR) framework into one detailed mathematical reference aligned with the main manuscript. Its purpose is to provide a complete reconstruction map for the theory: the variables, operators, projection sectors, recovery conditions, spectral constraints, geometric closure relations, and observational signatures are collected in one place.
 
-The status labels used below are:
-\begin{center}
-\begin{tabular}{p{0.18\textwidth}p{0.72\textwidth}}
-\toprule
-\textbf{Tag} & \textbf{Meaning} \\
-\midrule
-D & Derived from the field definition, projection geometry, spectral operator, metric map, or prior master equations. \\
-N & Normalized to a measured physical constant or conventional unit definition. \\
-C & Constrained by consistency, numerical validation, known low-energy limits, or observational recovery. \\
-D/C & Derived structurally and constrained numerically or observationally. \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\section{Master Chain}
-\begin{equation}
-\boxed{
-\Psi \rightarrow \hat O_\Psi \rightarrow \{u_n,\mu_n\}
-\rightarrow P_i[\Psi] \rightarrow \mathcal O_i
-}
-\end{equation}
-The universal flow is: master projection field, internal spectral operator, eigenmodes, sector projection, and observable.
-
-\begin{equation}
-\boxed{
-\mathcal O_{\phys}
-=
-\mathcal P\left[\Psi,\hat O_\Psi,\{u_n,\mu_n\}\right]
-}
-\end{equation}
+The organizing principle is that observable physical structure emerges through constrained projections of a deeper internal spectral manifold. Gravity, Higgs structure, electromagnetism, strong-field continuum corrections, and cosmological response are treated as observable sectors of the same projection field.
 
 \begin{equation}
 \boxed{
 \Psi
 \rightarrow
-\hat O_\Psi
-\rightarrow
-\{u_n,\mu_n\}
-\rightarrow
-\{P_g,P_{\rm rot},P_H,P_A,P_X\}
-\rightarrow
-\{g_{\mu\nu},g_{\mu\nu}^{\Kerr},H,A_\mu,\mathcal O_{\rm GW}\}
-}
-\end{equation}
-
-\section{Internal Hilbert Space, Action, and Spectral System}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
-\toprule
-\textbf{Equation} & \textbf{Meaning} & \textbf{Tag} \\
-\midrule
-\endhead
-
-\begin{equation}
-\mathcal H_w=L^2(\mathbb R,\dd w)
-\end{equation}
-& Internal projection coordinate as a Hilbert-space coordinate. & D \\
-
-\begin{equation}
-\langle f|g\rangle=\int_{\mathbb R}\dd w\,f^*(w)g(w)
-\end{equation}
-& Inner product defining normalization and projection overlaps. & D \\
-
-\begin{equation}
-\hat O_\Psi\equiv \hat H_w=-\frac{\dd^2}{\dd w^2}+V_\Psi(w)
-\end{equation}
-& Internal Hamiltonian / spectral operator. & D \\
-
-\begin{equation}
-\hat O_\Psi |u_n\rangle=\mu_n^2|u_n\rangle
-\end{equation}
-& Internal eigenvalue equation. & D \\
-
-\begin{equation}
-\langle u_m|u_n\rangle=\delta_{mn},\qquad
-\sum_n |u_n\rangle\langle u_n|=\mathbf 1
-\end{equation}
-& Orthonormality and completeness. & D \\
-
-\begin{equation}
-S_{\mathrm{PR}}=\int \dd^4x\,\dd\xi\,\sqrt{-g_{\mathrm{eff}}}
-\left[\frac{1}{2}G^{AB}D_A\Psi^\dagger D_B\Psi-V_{\mathrm{PR}}(\Psi,\xi)+\mathcal{L}_{\mathrm{src}}\right]
-\end{equation}
-
-& Master action over spacetime and internal coordinates. & D \\
-
-\begin{equation}
-D_A=\partial_A-iqA_A
-\end{equation}
-& Internal/gauge covariant derivative. & D \\
-
-\begin{equation}
-J(x)\propto T_{\mu\nu}u^\mu u^\nu,
-\qquad J(x)\propto T^{00}(x)\ \text{in the local rest frame}
-\end{equation}
-& Covariant energy-density source rule. & D \\
-
-\begin{equation}
-V_\Psi(w)=\frac12a_2w^2+\frac14a_4w^4+\cdots
-\end{equation}
-& Local internal projection potential expansion. & D/C \\
-
-\begin{equation}
-(a_2,a_4,\ldots)=\operatorname*{arg\,min}E_{\vac}
-\end{equation}
-& Vacuum selection principle replacing arbitrary parameter choice. & C \\
-
-\bottomrule
-\end{longtable}
-
-\section{Projection Operators and Sector Map}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.28\textwidth} >{\raggedright\arraybackslash}p{0.42\textwidth} >{\centering\arraybackslash}p{0.08\textwidth}}
-\toprule
-\textbf{Operator} & \textbf{Physical sector} & \textbf{Tag} \\
-\midrule
-\endhead
-$P_g\sim O_G=V_\Psi''(w)$ & Gravity as internal stiffness projection. & D \\
-$P_{\rm rot}$ & Rotation / frame dragging.
-
-The rotating extension is treated as an axisymmetric projection-space deformation with frame dragging. / Kerr exterior. & D/C \\
-$P_H(w)=w$ & Higgs as displacement projection. & D \\
-$P_A$ and $S^1_\theta$ & Gauge field and compact phase projection. & D \\
-$P_X$ & Strong-field continuum / ringdown response. & D/C \\
-\bottomrule
-\end{longtable}
-
-\section{Emergent Geometry and Weak Gravity}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
-\toprule
-\textbf{Equation} & \textbf{Meaning} & \textbf{Tag} \\
-\midrule
-\endhead
-
-\begin{equation}
-Q_{\mu\nu}=\left\langle\partial_\mu\Psi^A\partial_\nu\Psi^B\right\rangle G_{AB}
-\end{equation}
-& Pre-metric projection correlation kernel. & D \\
-
-\begin{equation}
-g_{\mu\nu}^{\eff}=\frac{Q_{\mu\nu}}{|\det Q|^{1/4}}
-\end{equation}
-& Determinant-normalized emergent metric. & D \\
-
-\begin{equation}
-g_{\mu\nu}^{\eff}=\eta_{\mu\nu}+h_{\mu\nu}+O(q^2)
-\end{equation}
-& Weak-field expansion. & D \\
-
-\begin{equation}
-h_{\mu\nu}
-=
-q_{\mu\nu}
--
-\frac14\eta_{\mu\nu}q,
-\qquad
-q=\eta^{\alpha\beta}q_{\alpha\beta}
-\end{equation}
-& Trace-subtracted perturbation from determinant normalization. & D \\
-
-\begin{equation}
 O_X
-=
--
-\frac{d^2}{dw^2}
-+
-V_X(w)
-\end{equation}
-& Internal projection-manifold operator. & D \\
-
-\begin{equation}
-\rho_P(\mu^2)
-=
-g_P^2
-\sum_n
-\left|
-\langle u_n|\hat V_g|u_0\rangle
-\right|^2
-\delta(\mu^2-\mu_n^2)
-\end{equation}
-& Gravity spectral density including projection-sector coupling normalization. & D/C \\
-
-\multicolumn{3}{p{0.96\textwidth}}{
-
-\(g_P\) denotes the dimensionless projection-sector coupling normalization controlling the observable strength of \rho_P(\mu^2).\
-The factor \(g_P^2\) is the projection-sector coupling normalization.
-It suppresses the observable self-energy at low energy so that \(|F(k^2)/k^2|\ll 1\), preserving GR recovery while retaining finite projection-sector corrections near internal spectral resonances.
-} \\
-
-\begin{equation}
-F(k^2)
-=
-\int \dd\mu^2\,\frac{\rho_P(\mu^2)}{k^2-\mu^2+i\epsilon}
-\end{equation}
-& Projection self-energy. & D \\
-
-\begin{equation}
-D^{(P)}_{\mu\nu\rho\sigma}(k)
-=
-\frac{
-P^{(2)}_{\mu\nu\rho\sigma}
-}{
-k^2 - F(k^2) + i\epsilon
+\rightarrow
+\{u_n,\lambda_n\}
+\rightarrow
+P_i[\Psi]
+\rightarrow
+O_i
 }
 \end{equation}
-& Projection-sector graviton propagator. & D \\
 
-\begin{equation}
-F_{\eff}(k^2)=\chi k^2\tanh\left[\frac{F_{\raw}(k^2)}{\chi k^2}\right],\qquad 0<\chi<1
-\end{equation}
-& Saturated self-energy; linear at low response and bounded at high response. & D/C \\
-
-\begin{equation}
-F_{\eff}(0)=0
-\end{equation}
-& Massless graviton condition. & C \\
-
-\begin{equation}
-D_{\mu\nu\rho\sigma}^{(P)}(k)=\frac{P^{(2)}_{\mu\nu\rho\sigma}}{k^2-F_{\eff}(k^2)+i\epsilon}
-\end{equation}
-& Projection-corrected spin-2 propagator. & D \\
-
-\begin{equation}
-\frac{F_{\eff}(k^2)}{k^2}\ll1,\qquad k^2\rightarrow0
-\end{equation}
-& GR recovery condition. & C \\
-
-\begin{equation}
-G_{\mu\nu}[g_{\eff}]=8\pi G_P T_{\mu\nu}+\Pi_{\mu\nu}^{(P)}
-\end{equation}
-& Projection-corrected Einstein equation. & D \\
-
-\begin{equation}
-\Pi_{\mu\nu}^{(P)}\rightarrow0\quad\Rightarrow\quad G_{\mu\nu}=8\pi G_PT_{\mu\nu}
-\end{equation}
-& Low-energy Einstein limit. & D/C \\
-
-\begin{equation}
-(k^2-F(k^2))\Phi(k)=4\pi G_P\rho(k)
-\end{equation}
-& PR Poisson equation. & D \\
-
-\begin{equation}
-\nabla^2\Phi=4\pi G_P\rho,
-\qquad
-\Phi(r)=-\frac{G_PM}{r}
-\end{equation}
-& Newtonian limit. & D/C \\
-
-\bottomrule
-\end{longtable}
-
-\section{Stability and Quantum/UV Conditions}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
-\toprule
-\textbf{Equation} & \textbf{Meaning} & \textbf{Tag} \\
-\midrule
-\endhead
-
-\begin{equation}
-Z^{-1}(k^2)=1-\frac{\dd F_{\eff}}{\dd k^2}>0
-\end{equation}
-& No-ghost residue condition. & C \\
-
-\begin{equation}
-\mu_n^2>0
-\end{equation}
-& No-tachyon internal spectrum condition, apart from controlled symmetry-breaking curvature. & C \\
-
-\begin{equation}
-D^{-1}(k^2)=k^2-F_{\eff}(k^2)>0,\qquad k^2>0
-\end{equation}
-& No extra finite-$k$ pole condition. & C \\
-
-\begin{equation}
-0\le \frac{F_{\eff}(k^2)}{k^2}<\chi<1\quad\Rightarrow\quad D^{-1}(k^2)>0
-\end{equation}
-& Stability theorem for saturated self-energy. & D/C \\
-
-\begin{equation}
-[\hat\Psi(x,\xi),\hat\Pi_\Psi(y,\xi')]=i\hbar\delta^{(3)}(x-y)\delta(\xi-\xi')
-\end{equation}
-& Canonical quantization of the PR field. & D \\
-
-\begin{equation}
-\hat\Psi(x,\xi)=\sum_n\left[a_n(x)u_n(\xi)+a_n^\dagger(x)u_n^*(\xi)\right]
-\end{equation}
-& Mode expansion of the quantized projection field. & D \\
-
-\begin{equation}
-\rho_P(\mu^2)\ge0,
-\qquad
-\rho_P(\mu^2)\rightarrow0\ \text{sufficiently fast as}\ \mu\rightarrow\infty
-\end{equation}
-& Positivity and UV spectral softening for finite self-energy. & C \\
-
-\bottomrule
-\end{longtable}
-
-\section{Higgs Projection and Gauge--Higgs Closure}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
-\toprule
-\textbf{Equation} & \textbf{Meaning} & \textbf{Tag} \\
-\midrule
-\endhead
-
-\begin{equation}
-P_H(w)=w,
-\qquad H(x)=\langle u_0|P_H|\Psi(x)\rangle
-\end{equation}
-& Higgs as internal displacement projection. & D \\
-
-\begin{equation}
-Z_H=\sum_n\frac{|\langle u_n|w|u_0\rangle|^2}{\mu_n^2}
-\end{equation}
-& Higgs spectral normalization. & D \\
-
-\begin{equation}
-V_\Psi(w)=\frac12a_2w^2+\frac14a_4w^4+\cdots,
-\qquad a_2<0,\quad a_4>0
-\end{equation}
-& Internal projection potential expansion producing symmetry breaking. & D/C \\
-
-\begin{equation}
-w_0^2=-\frac{a_2}{a_4}
-\end{equation}
-& Displaced internal vacuum. & D \\
-
-\begin{equation}
-v_{\phys}=\sqrt{Z_H}\,w_0,
-\qquad v_{\phys}^2=-\frac{Z_Ha_2}{a_4}
-\end{equation}
-& Physical scale from projection displacement. & D/C \\
-
-\begin{equation}
-\lambda_H=\frac{a_4}{Z_H^2}
-\end{equation}
-& Quartic closure in the current tester convention. & D \\
-
-\begin{equation}
-m_H^2=-\frac{2a_2}{Z_H}=2\lambda_H v_{\phys}^2
-\end{equation}
-& Higgs mass as curvature at the displaced projection vacuum. & D/C \\
-
-\begin{equation}
-\ell_P=\lim_{k^2\rightarrow0}\frac{F_{\eff}(k^2)}{\chi k^2}
-\end{equation}
-& Low-energy gravitational projection leakage amplitude. & D/C \\
-
-\begin{equation}
-\mathcal P_{HG}=|\ell_P|^2
-\end{equation}
-& Quadratic projection leakage relation. & D/C \\
-
-\bottomrule
-\end{longtable}
-
-\section{Gauge and Fine Structure}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
-\toprule
-\textbf{Equation} & \textbf{Meaning} & \textbf{Tag} \\
-\midrule
-\endhead
-
-\begin{equation}
-\Psi=\rho e^{iq\theta},\qquad \theta\sim\theta+2\pi
-\end{equation}
-& Compact phase sector generating gauge covariance. & D \\
-
-\begin{equation}
-D_\mu=\partial_\mu-iqA_\mu,
-\qquad A_\mu\rightarrow A_\mu+q^{-1}\partial_\mu\alpha
-\end{equation}
-& Gauge covariance from local compact phase motion. & D \\
-
-\begin{equation}
-F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu,
-\qquad \partial_\mu F^{\mu\nu}=J^\nu
-\end{equation}
-& Maxwell tensor and Maxwell equation. & D \\
-
-\begin{equation}
-\alpha^{-1}_{\mathrm{PR}}=4\pi Z_A,
-\qquad Z_A=Z_wZ_\theta C_A
-\end{equation}
-& Fine-structure constant from compact gauge normalization. & D/C \\
-
-\begin{equation}
-\Lambda_\theta=5\pi\left(1-\frac{4}{5\pi^4}\right)
-\end{equation}
-& Current compact winding scale. & C \\
-
-\begin{equation}
-Z_\theta=2\sum_{m=1}^{\infty}\exp\left[-\left(\frac{m}{\Lambda_\theta}\right)^3\right]
-\end{equation}
-& Compact winding spectrum; factor 2 is sine/cosine quadrature degeneracy. & D/C \\
-
-\begin{equation}
-C_A=\left(1+\frac{1}{5\pi^4}\right)^{1/4},
-\qquad N_A=4+1=5
-\end{equation}
-& Compact gauge-volume correction from four gauge components plus one compact phase constraint. & D/C \\
-
-\begin{equation}
-\alpha^{-1}_{\mathrm{PR}}\simeq137.0365297767
-\end{equation}
-& Current fine-structure result from the corrected compact closure. & C \\
-
-\bottomrule
-\end{longtable}
-
-
-\section{PR-Native Kerr and Strong Gravity}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
-\toprule
-\textbf{Equation} & \textbf{Meaning} & \textbf{Tag} \\
-\midrule
-\endhead
-
-\begin{equation}
-\Psi_{\rm rot}=R(r)\Theta(\theta)u_0(\xi)e^{-i\omega t+im\phi}
-\end{equation}
-& Rotating PR coherent exterior state. & D/C \\
-
-\begin{equation}
-Q_{t\phi}\propto -\omega m |R|^2|\Theta|^2
-\end{equation}
-& Native origin of frame dragging from projection phase winding. & D \\
-
-\begin{equation}
-\frac{1}{R}\frac{\dd}{\dd r}\left[\Delta_r(r)\frac{\dd R}{\dd r}\right]+V_r(r)=-\Lambda,
-\qquad
-\frac{1}{\Theta\sin\theta}\frac{\dd}{\dd\theta}\left[\sin\theta\frac{\dd\Theta}{\dd\theta}\right]+V_\theta(\theta)=\Lambda
-\end{equation}
-& Separated PR exterior projection equations. & C/O \\
-
-\begin{equation}
-\Sigma_{\mathrm{PR}}=r^2+a^2\cos^2\theta
-\end{equation}
-& Angular Kerr structure from axisymmetry, reflection symmetry, smooth nonrotating limit, and no exterior hair. & D/C \\
-
-\begin{equation}
-\Delta_{\mathrm{PR}}=r^2-\frac{2G_PM}{c^2}r+a^2
-\end{equation}
-& Radial Kerr structure from Schwarzschild limit, flat rotating limit, and no extra exterior charge. & D/C \\
-
-\begin{minipage}[t]{\linewidth}
-\begin{equation}
-a=\frac{J}{Mc}
-\end{equation}
-\end{minipage}
-& Kerr spin parameter in physical units. & D \\
-
-\begin{minipage}[t]{\linewidth}
-\scriptsize
-\begin{equation}
-\begin{aligned}
-\dd s^2_{\mathrm{PR}}={}&-
-\left(1-\frac{2G_PMr}{c^2\Sigma_{\mathrm{PR}}}\right)c^2\dd t^2\\
-&-\frac{4G_PMar\sin^2\theta}{c\Sigma_{\mathrm{PR}}}\dd t\dd\phi\\
-&+\frac{\Sigma_{\mathrm{PR}}}{\Delta_{\mathrm{PR}}}\dd r^2
-+\Sigma_{\mathrm{PR}}\dd\theta^2\\
-&+\left(
-r^2+a^2+
-\frac{2G_PMa^2r\sin^2\theta}{c^2\Sigma_{\mathrm{PR}}}
-\right)\sin^2\theta\dd\phi^2
-\end{aligned}
-\end{equation}
-\end{minipage}
-& PR-derived rotating exterior metric; equals Kerr outside the projection core. & D/C \\
-
-\begin{minipage}[t]{\linewidth}
-\small
-\begin{equation}
-r_\pm
-=
-\frac{G_PM}{c^2}
-\pm
-\sqrt{
-\left(
-\frac{G_PM}{c^2}
-\right)^2
--a^2
-}
-\end{equation}
-\end{minipage}
-& Horizon radii of the exterior Kerr branch. & D/C \\
-
-\begin{minipage}[t]{\linewidth}
-\small
-\begin{equation}
-\begin{aligned}
-\Psi^3-\Psi&=\frac{\rho}{\rho_*},\\
-R_{\max}&\sim\mu_{\min}^2,\\
-\rho_*&\sim\frac{c^2R_{\max}}{G_P}
-\end{aligned}
-\end{equation}
-\end{minipage}
-& Nonlinear projection saturation, maximum curvature, and density cutoff. & D/C \\
-
-{\small
+This sheet uses the following status tags:
 \[
-\begin{aligned}
-r_c&=
-\left(
-\frac{G_PM}{c^2R_{\max}}
-\right)^{1/3},\\
-\frac{r_c}{r_s}&\propto M^{-2/3}
-\end{aligned}
+D=\text{derived from the framework},\qquad
+N=\text{normalization or convention},\qquad
+C=\text{constrained by recovery/stability},\qquad
+O=\text{future extension}.
 \]
+
+
+\section{Complete Variable and Parameter Dictionary}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.16\textwidth}
+>{\raggedright\arraybackslash}p{0.24\textwidth}
+>{\raggedright\arraybackslash}p{0.47\textwidth}
+>{\centering\arraybackslash}p{0.06\textwidth}}
+\toprule
+\textbf{Symbol} & \textbf{Name} & \textbf{Meaning in PR} & \textbf{Tag} \\
+\midrule
+\endhead
+
+$\Psi(x,\xi)$ & Master projection field & Underlying spectral field depending on observable spacetime coordinate $x$ and internal coordinate $\xi$. All observable sectors are projections of this field. & D \\
+
+$x^\mu$ & Spacetime coordinate & Effective low-energy coordinates in which projected observables are measured. & N \\
+
+$\xi,w$ & Internal coordinates & Coordinates on the internal spectral manifold. In the reduced one-dimensional validation layer, $w$ is used. & D/N \\
+
+$\mathcal H_P$ & Projection Hilbert space & Internal Hilbert space in which $\Psi$, $O_X$, eigenmodes, and projection operators are defined. & D \\
+
+$O_X$ & Internal spectral operator & Hamiltonian-like internal operator generating the spectral eigenbasis and gap structure. & D \\
+
+$V_X(w)$ & Internal potential & Confining projection potential defining bounded spectral structure and finite-core recovery scale. & C \\
+
+$u_n(w)$ & Eigenmodes & Internal spectral modes satisfying $O_Xu_n=\lambda_nu_n$. & D \\
+
+$\lambda_n$ & Eigenvalues & Internal spectral values associated with $u_n$. & D \\
+
+$\mu_n^2$ & Excitation scales & Spectral gaps relative to the ground state; often $\mu_n^2=\lambda_n-\lambda_0$. & D \\
+
+$\mu_{\min}^2$ & First spectral gap & Minimum internal excitation scale $\lambda_1-\lambda_0$; controls finite-core and propagator suppression. & D/C \\
+
+$P_i[\Psi]$ & Projection operators & Sector-specific maps from the master field to observable structures. & D \\
+
+$O_i$ & Observables & Projected physical observables such as $g_{\mu\nu}$, $H$, $A_\mu$, $\Sigma_X$, and $H_{\eff}$. & D \\
+
+$P_g$ & Gravity projection & Stiffness projection producing metric structure and curvature response. & D \\
+
+$P_H$ & Higgs projection & Displacement projection producing Higgs-sector scalar structure. & D \\
+
+$P_A$ & Electromagnetic projection & Compact phase projection producing gauge-like electromagnetic structure. & D \\
+
+$P_X$ & Strong-field correction projection & Continuum/self-energy projection producing weak strong-field residuals. & D/C \\
+
+$P_\theta$ & Cosmological phase projection & Homogeneous low-energy phase projection associated with expansion response. & D/C \\
+
+$Q_{\mu\nu}$ & Metric seed tensor & Bilinear projection correlation used to construct the effective spacetime metric. & D \\
+
+$g_{\mu\nu}^{\eff}$ & Effective metric & Determinant-normalized observable metric recovered from $Q_{\mu\nu}$. & D \\
+
+$g_{\mu\nu}^{\PR}$ & PR metric & Projection Relativity metric; equals Kerr outside $r_c$ in rotating exterior recovery. & D/C \\
+
+$g_{\mu\nu}^{\Kerr}$ & Kerr metric & Required exterior rotating recovery target. & C \\
+
+$G_P$ & Projection Newton coupling & Low-energy gravitational coupling; constrained by $G_P=G_N$. & C \\
+
+$R_{\max}$ & Maximum curvature scale & Curvature saturation scale linked to spectral cutoff. & D/C \\
+
+$r_c$ & Finite-core radius & Radius of saturated projection core replacing divergent singularity. & D/C \\
+
+$\rho_P(\mu^2)$ & Spectral density & Weighted internal excitation density controlling propagator self-energy. & D \\
+
+$F(k^2)$ & Projection self-energy & Spectral correction kernel in the propagator. & D/C \\
+
+$D_{\mu\nu\rho\sigma}^{(P)}$ & Projection propagator & Effective spin-2 propagator corrected by $F(k^2)$. & D/C \\
+
+$\Sigma_X$ & Strong-field correction & Weak projection self-energy correction to Kerr/Teukolsky response. & D/C \\
+
+$A_X/A_0$ & Sideband amplitude ratio & Relative strength of projection-sector ringdown residual. & C \\
+
+$A(x)$ & Projection amplitude & Amplitude/displacement coordinate in $\Psi=Ae^{i\theta}$; associated with Higgs sector. & D \\
+
+$\theta(x)$ & Compact phase & Internal compact phase coordinate; associated with electromagnetic sector. & D \\
+
+$A_\mu$ & Gauge potential & Electromagnetic phase projection. & D \\
+
+$D_\mu$ & Gauge-covariant derivative & Covariant derivative $\partial_\mu-iqA_\mu$ generated by compact phase structure. & D \\
+
+$F_{\mu\nu}$ & EM field strength & Gauge field tensor $\partial_\mu A_\nu-\partial_\nu A_\mu$. & D \\
+
+$J_\theta^\mu$ & Phase current & Conserved Noether current of compact phase sector. & D \\
+
+$Z_A$ & Compact closure factor & Geometric normalization yielding $\alpha_{\PR}^{-1}=4\pi Z_A$. & D/C \\
+
+$\alpha_{\PR}$ & Geometric fine-structure constant & Emergent compact phase coupling scale. & D/C \\
+
+$Z_H$ & Higgs normalization & Spectral overlap normalization for Higgs displacement sector. & D/C \\
+
+$H(x)$ & Higgs projection observable & Scalar displacement projection $P_H[\Psi]$. & D \\
+
+$H_{\PR}$ & PR Hamiltonian density & Unified projected energy density. & D \\
+
+$S_{\PR}$ & Master action & Variational action over spacetime and internal coordinates. & D \\
+
+$\theta_{\hom}$ & Homogeneous phase mode & Large-scale low-energy mode associated with cosmological expansion. & D/C \\
+
+$H_{\eff}$ & Effective Hubble rate & Expansion response generated by homogeneous phase drift. & D/C \\
+
+$B_{\PR}$ & Residual phase coherence scale & Predicted nanogauss-scale compact phase coherence observable. & C \\
+
+\bottomrule
+\end{longtable}
+
+
+\section{Master Chain and Projection Correspondence}
+
+The universal structure of PR is the projection chain
+\begin{equation}
+\boxed{
+\Psi
+\longrightarrow
+O_X
+\longrightarrow
+\{u_n,\lambda_n\}
+\longrightarrow
+P_i[\Psi]
+\longrightarrow
+O_i
 }
-& Finite core radius and scaling relative to Schwarzschild radius. & D/C \\
-
-\bottomrule
-\end{longtable}
-
-\section{Gravitational Waves and Ringdown}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
-\toprule
-\textbf{Equation} & \textbf{Meaning} & \textbf{Tag} \\
-\midrule
-\endhead
-
-\begin{equation}
-g_{\mu\nu}^{\eff}=\eta_{\mu\nu}+h_{\mu\nu},
-\qquad h_{\mu\nu}=\delta\left(\frac{\langle\partial_\mu\Psi\partial_\nu\Psi\rangle}{|\det Q|^{1/4}}\right)
 \end{equation}
-& Gravitational waves are propagating projection-geometry perturbations. & D \\
 
+The full observable-sector correspondence is
 \begin{equation}
-\left[\Box+\Pi_X(\Box)\right]h_{\mu\nu}^{\TT}=16\pi G_PT_{\mu\nu}^{\TT}
+\boxed{
+\Psi
+\rightarrow
+O_X
+\rightarrow
+\{u_n,\lambda_n\}
+\rightarrow
+\{P_g,P_H,P_A,P_X,P_\theta\}
+\rightarrow
+\{g_{\mu\nu},H,A_\mu,\Sigma_X,H_{\eff}\}.
+}
 \end{equation}
-& Native PR gravitational-wave equation. & D/C \\
 
+Equivalently,
 \begin{equation}
-D_{\mu\nu\rho\sigma}^{\mathrm{PR}}(k)=\frac{P^{(2)}_{\mu\nu\rho\sigma}}{k^2-\Pi_X(k^2)+i\epsilon}
-\end{equation}
-& GW propagator with projection-continuum self-energy. & D \\
-
-\begin{equation}
-\Pi_X/k^2\ll1\quad\Rightarrow\quad c_{GW}=c
-\end{equation}
-& Low-energy propagation is GR-like and luminal. & D/C \\
-
-\begin{equation}
-A(\omega)=A_{\Kerr}(\omega)+A_X(\omega),
-\qquad
-A_X(\omega)=\int\dd\mu\,\frac{\rho_X(\mu)}{\omega-\mu+i\Gamma_X(\mu)}
-\end{equation}
-& Kerr response plus internal projection-continuum response. & D/C \\
-
-\bottomrule
-\end{longtable}
-
-\section{Action Variation and Field-Equation Checks}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth} >{\raggedright\arraybackslash}p{0.52\textwidth} >{\centering\arraybackslash}p{0.06\textwidth}}
-\toprule
-\textbf{Equation} & \textbf{Meaning} & \textbf{Tag} \\
-\midrule
-\endhead
-
-\begin{equation}
-\mathcal L_\Psi=\frac12\partial_\alpha\Psi\partial^\alpha\Psi-V(\Psi)
-\end{equation}
-& Scalar projection Lagrangian. & D \\
-
-\begin{equation}
-\frac{\partial \mathcal L}{\partial \Psi}-\partial_\alpha\left(\frac{\partial\mathcal L}{\partial(\partial_\alpha\Psi)}\right)=0
-\end{equation}
-& Euler--Lagrange equation. & D \\
-
-\begin{equation}
-\Box\Psi+V'(\Psi)=0
-\end{equation}
-& Field equation from the scalar projection action. & D \\
-
-\begin{equation}
-\mathcal L_A=-\frac14Z_AF_{\mu\nu}F^{\mu\nu}+J_\mu A^\mu
-\end{equation}
-& Gauge-field action with projection normalization. & D \\
-
-\begin{equation}
-Z_A\partial_\mu F^{\mu\nu}=J^\nu
-\end{equation}
-& Gauge equation from variation. & D \\
-
-\begin{equation}
-K(k)=k^2-F(k^2),
-\qquad D(k)=K(k)^{-1}
-\end{equation}
-& Quadratic action kernel and propagator inverse relation. & D \\
-
-\bottomrule
-\end{longtable}
-
-\section{Observable Benchmarks}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.31\textwidth} >{\raggedright\arraybackslash}p{0.39\textwidth} >{\raggedright\arraybackslash}p{0.20\textwidth}}
-\toprule
-\textbf{Quantity} & \textbf{Current PR result} & \textbf{Status} \\
-\midrule
-\endhead
-Fine structure & $\alpha^{-1}_{\mathrm{PR}}\simeq137.0365297767$ & Strong first-order; $\sim0.11\%$ \\
-Gauge--Higgs sector masses & $m_W^{\mathrm{PR}}\simeq80.116$ GeV, $m_Z^{\mathrm{PR}}\simeq91.451$ GeV & Sub-percent first-order \\
-Weak gravity & GR/Newton recovered for $F/k^2\ll1$ & Strong \\
-Kerr & PR-native exterior closure with symbolic determinant/inverse checks and Ricci residual tester complete & Closed \\
-Finite core & $r_c/r_s\sim10^{-21}$ for $65M_\odot$ benchmark & Passed toy regularity test \\
-GW propagation & Low-energy propagation recovers GR form & Preliminary \\
-\bottomrule
-\end{longtable}
-
-\section{Parameter Audit}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\textwidth} >{\raggedright\arraybackslash}p{0.47\textwidth} >{\centering\arraybackslash}p{0.08\textwidth} >{\raggedright\arraybackslash}p{0.15\textwidth}}
-\toprule
-\textbf{Parameter} & \textbf{Meaning} & \textbf{Tag} & \textbf{Comment} \\
-\midrule
-\endhead
-$\Psi$ & Master projection field & D & fundamental \\
-$\hat O_\Psi$ & Spectral operator & D & internal Hamiltonian \\
-$V_\Psi$ & Projection potential & C/O & selected by $E_{\vac}$ \\
-$u_n,\mu_n$ & Spectrum & D & eigen-system \\
-$Q_{\mu\nu}$ & Metric seed & D & bilinear correlation \\
-$g_{\mu\nu}^{\eff}$ & Observable metric & D & determinant normalized \\
-$G_P$ & Newton coupling & C & fixed by low-energy gravity \\
-$F(0)=0$ & Massless graviton & C & required for GR recovery \\
-$R_{\max}$ & Maximum curvature & C/O & linked to spectral cutoff \\
-$r_c$ & Finite core radius & D/C & follows from saturation \\
-$\Sigma_{\mathrm{PR}},\Delta_{\mathrm{PR}}$ & Kerr exterior functions & D/C & no-hair/separability assumptions \\
-$Z_H$ & Higgs normalization & D/C & spectral overlap \\
-$a_2,a_4$ & Higgs potential curvature/stiffness & D/C & from internal potential \\
-$Z_w,Z_\theta,C_A$ & Fine-structure factors & D/C & compact gauge geometry \\
-$\Lambda_\theta$ & Compact winding scale & C/O & current corrected compact closure \\
-$\Pi_X$ & GW self-energy & D/C & continuum correction \\
-\bottomrule
-\end{longtable}
-
-\section{Hubble Expansion Sector}
-
-The projection-sector cosmological closure is written in terms of the observable expansion function \(H(z)\):
-
-\begin{equation}
-H(z)^2 =
-H_0^2
-\left[
-\Omega_m(1+z)^3
-+
-\Omega_r(1+z)^4
-+
-\Omega_\theta(z)
+\boxed{
+O_{\phys}
+=
+\mathcal P\!\left[
+\Psi,O_X,\{u_n,\lambda_n\}
 \right].
+}
 \end{equation}
 
-Here \(\Omega_\theta(z)\) is the protected homogeneous projection-sector contribution. It represents the slow, near-zero projection mode responsible for late-time expansion while remaining decoupled from the fast local gravity, Kerr, Higgs, and spectral-response sectors.
+The native interpretation is:
+\[
+\text{gravity}=\text{stiffness projection},\qquad
+\text{Higgs}=\text{displacement projection},\qquad
+\text{electromagnetism}=\text{compact phase projection}.
+\]
 
 
-\clearpage
+\section{Internal Hilbert Space}
 
-
-\clearpage
-\section{Final Fully Closed Master Equation Status}
-
-This section records the final internal closure status of the Projection Relativity framework after the complete validation sequence. The purpose is to distinguish derived quantities, normalized quantities, constrained quantities, and previously open closure terms that have now been closed at the master-equation level.
-
-\subsection{Closed Internal Operator and Spectral Gap}
-
-The internal projection operator is fixed to the symmetry-selected even confining form
-
+The master field belongs to an internal projection Hilbert space:
 \begin{equation}
+\Psi\in\mathcal H_P.
+\end{equation}
+
+The internal inner product is
+\begin{equation}
+\langle f|g\rangle
+=
+\int d\xi\, f^*(\xi)g(\xi).
+\end{equation}
+
+For the reduced one-dimensional internal coordinate:
+\begin{equation}
+\mathcal H_w=L^2(\mathbb R,dw),
+\qquad
+\langle f|g\rangle
+=
+\int_{\mathbb R}dw\,f^*(w)g(w).
+\end{equation}
+
+The spectral basis satisfies
+\begin{equation}
+O_X|u_n\rangle=\lambda_n|u_n\rangle,
+\end{equation}
+\begin{equation}
+\langle u_m|u_n\rangle=\delta_{mn},
+\end{equation}
+and
+\begin{equation}
+\boxed{
+\sum_n|u_n\rangle\langle u_n|=\mathbf 1.
+}
+\end{equation}
+
+The projection field expands as
+\begin{equation}
+\boxed{
+\Psi(x,\xi)
+=
+\sum_n c_n(x)u_n(\xi).
+}
+\end{equation}
+
+
+\section{Master Spectral Operator}
+
+The internal spectral operator is
+\begin{equation}
+\boxed{
 O_X
 =
 -\frac{d^2}{dw^2}
 +
-V_X(w),
+V_X(w).
+}
 \end{equation}
 
-with potential
-
+The validation-layer potential is
 \begin{equation}
 V_X(w)
 =
@@ -717,690 +288,912 @@ V_X(w)
 1+a_2w^2+a_4w^4
 \right),
 \qquad
-a_2>0,
-\qquad
-a_4>0.
+a_2>0,\quad a_4>0.
 \end{equation}
 
-This construction is reflection symmetric, bounded below, and possesses strictly positive curvature,
-
+Its curvature is
 \begin{equation}
 \frac{d^2V_X}{dw^2}
 =
 \Lambda_X^2
 \left(
 2a_2+12a_4w^2
-\right)
->0.
+\right)>0.
+\end{equation}
+
+The eigenvalue equation is
+\begin{equation}
+O_Xu_n(w)=\lambda_nu_n(w).
+\end{equation}
+
+The spectral gaps are
+\begin{equation}
+\Delta\lambda_n=\lambda_{n+1}-\lambda_n.
 \end{equation}
 
 The first spectral gap is
-
 \begin{equation}
-\mu_{\min}^2
-=
-\lambda_1-\lambda_0.
+\boxed{
+\mu_{\min}^2=\lambda_1-\lambda_0.
+}
 \end{equation}
 
-The validation harness gives
-
+The reference validation values are
 \begin{equation}
-\lambda_0
-\simeq
-2.322863529580,
+\lambda_0\simeq2.322863529580,
 \qquad
-\lambda_1
-\simeq
-5.375830272676,
+\lambda_1\simeq5.375830272676,
+\end{equation}
+giving
+\begin{equation}
+\mu_{\min}^2\simeq3.052966743096.
 \end{equation}
 
-and therefore
-
+The spectral gap propagates into the recovery hierarchy:
 \begin{equation}
+\boxed{
 \mu_{\min}^2
-\simeq
-3.052966743096.
-\end{equation}
-
-\subsection{Closed Maximum Curvature and Finite Core}
-
-The maximum curvature scale is tied directly to the internal spectral gap,
-
-\begin{equation}
+\rightarrow
 R_{\max}
-=
-\eta_R\mu_{\min}^2.
+\rightarrow
+r_c
+\rightarrow
+F(k^2).
+}
 \end{equation}
 
-In the dimensionless validation normalization,
 
+\section{Master Action}
+
+The full PR framework is generated by the spectral--projection action
 \begin{equation}
-\eta_R=1,
+\boxed{
+S_{\PR}
+=
+\int d^4x\,d\xi\,
+\sqrt{-g_{\eff}}
+\left[
+\frac12G^{AB}D_A\Psi^\dagger D_B\Psi
+-
+V_{\PR}(\Psi,\xi)
++
+\mathcal L_{\src}
+\right].
+}
+\end{equation}
+
+Here:
+\[
+G^{AB}=\text{internal manifold metric},\qquad
+D_A=\text{projection covariant derivative},
+\]
+\[
+V_{\PR}=\text{internal projection potential},\qquad
+\mathcal L_{\src}=\text{observable source sector}.
+\]
+
+The Euler--Lagrange equation schematically takes the form
+\begin{equation}
+\frac{1}{\sqrt{-g_{\eff}}}
+D_A
+\left(
+\sqrt{-g_{\eff}}\,G^{AB}D_B\Psi
+\right)
++
+\frac{\partial V_{\PR}}{\partial\Psi^\dagger}
+=
+\frac{\partial\mathcal L_{\src}}{\partial\Psi^\dagger}.
+\end{equation}
+
+Thus the spectral structure, projection dynamics, source coupling, propagator response, and emergent metric are all treated as consequences of the same action principle.
+
+
+\section{Emergent Metric and Weak Gravity Recovery}
+
+The metric seed tensor is
+\begin{equation}
+Q_{\mu\nu}
+=
+\left\langle
+\partial_\mu\Psi
+\partial_\nu\Psi
+\right\rangle.
+\end{equation}
+
+A more explicit internal metric form is
+\begin{equation}
+Q_{\mu\nu}
+=
+\left\langle
+\partial_\mu\Psi^A
+\partial_\nu\Psi^B
+\right\rangle
+G_{AB}.
+\end{equation}
+
+The observable metric is determinant normalized:
+\begin{equation}
+\boxed{
+g_{\mu\nu}^{\eff}
+=
+\frac{Q_{\mu\nu}}{|\det Q|^{1/4}}.
+}
+\end{equation}
+
+The weak-field expansion is
+\begin{equation}
+g_{\mu\nu}^{\eff}
+=
+\eta_{\mu\nu}+h_{\mu\nu},
 \qquad
-R_{\max}
-\simeq
-3.052966743096.
+|h_{\mu\nu}|\ll1.
 \end{equation}
 
-The associated density cutoff and finite-core scaling are
-
+The low-energy gravitational recovery condition is
 \begin{equation}
-\rho_*
-=
-\frac{c^2R_{\max}}{G_P},
+G_{\mu\nu}^{\PR}
+\rightarrow
+8\pi G_PT_{\mu\nu},
+\end{equation}
+with
+\begin{equation}
+\boxed{
+G_P=G_N.
+}
 \end{equation}
 
-and
-
+The massless graviton and weak-field recovery constraints are
 \begin{equation}
+\boxed{
+F(0)=0,
+\qquad
+\left|
+\frac{F(k^2)}{k^2}
+\right|
+\ll1
+\quad
+(k^2\ll\mu_{\min}^2).
+}
+\end{equation}
+
+% ============================================================
+\section{Finite-Core Regularization}
+
+Classical singular behavior is replaced by bounded spectral saturation. The finite-core radius is
+\begin{equation}
+\boxed{
 r_c
 =
 \left(
 \frac{G_PM}{c^2R_{\max}}
 \right)^{1/3}.
+}
 \end{equation}
 
-For the fiducial \(65M_\odot\) validation case,
-
+The core hierarchy is
 \begin{equation}
-r_c
-\simeq
-3.156154\times10^1\ {\rm m},
+\mu_{\min}^2
+\rightarrow
+R_{\max}
+\rightarrow
+r_c.
+\end{equation}
+
+The interpretation is:
+\[
+r<r_c:\ \text{saturated projection core},
 \qquad
-\frac{r_c}{r_g}
-\simeq
-3.288224774381\times10^{-4}.
+r>r_c:\ \text{GR/Kerr exterior recovery}.
+\]
+
+The curvature is bounded schematically by
+\begin{equation}
+|R|\lesssim R_{\max}.
 \end{equation}
 
-The projection core therefore remains well inside the exterior Kerr and ringdown regions.
 
-\subsection{Corrected Projection Spectral Density and Propagator}
+\section{Kerr Exterior Recovery}
 
-The physical spectral density includes the projection-sector coupling normalization,
-
+The rotating exterior recovery condition is
 \begin{equation}
-\rho_P(\mu^2)
+\boxed{
+g_{\mu\nu}^{\PR}
 =
-g_P^2\rho_{\rm shape}(\mu^2),
+g_{\mu\nu}^{\Kerr},
+\qquad
+r>r_c.
+}
 \end{equation}
 
-or explicitly,
-
+The Kerr structure functions are
 \begin{equation}
+\Sigma_{\Kerr}
+=
+r^2+a^2\cos^2\theta,
+\end{equation}
+\begin{equation}
+\Delta_{\Kerr}
+=
+r^2-\frac{2G_PM}{c^2}r+a^2.
+\end{equation}
+
+The PR structure functions are
+\begin{equation}
+\Sigma_{\PR}
+=
+\Sigma_{\Kerr}+\delta\Sigma(r),
+\end{equation}
+\begin{equation}
+\Delta_{\PR}
+=
+\Delta_{\Kerr}+\delta_{\core}(r).
+\end{equation}
+
+Exterior recovery requires
+\begin{equation}
+\delta\Sigma(r)\rightarrow0,
+\qquad
+\delta_{\core}(r)\rightarrow0,
+\qquad
+r\gg r_c.
+\end{equation}
+
+
+\section{Projection Propagator and Self-Energy}
+
+The spectral density is
+\begin{equation}
+\boxed{
 \rho_P(\mu^2)
 =
-g_P^2
 \sum_n
 \left|
-\langle u_n|\hat V_g|u_0\rangle
+\left\langle
+u_n
+\middle|
+\hat V
+\middle|
+u_0
+\right\rangle
 \right|^2
 \delta(\mu^2-\mu_n^2).
+}
 \end{equation}
 
-The gravitational self-energy is
-
+Normalization:
 \begin{equation}
+\boxed{
+\int d\mu^2\,\rho_P(\mu^2)=1.
+}
+\end{equation}
+
+The self-energy kernel is
+\begin{equation}
+\boxed{
 F(k^2)
 =
-\int d\mu^2\,
+\int d\mu^2
 \frac{\rho_P(\mu^2)}
 {k^2-\mu^2+i\epsilon}.
+}
 \end{equation}
 
-The corrected projection propagator is
-
+The projection propagator is
 \begin{equation}
-D^{(P)}_{\mu\nu\rho\sigma}(k)
+\boxed{
+D_{\mu\nu\rho\sigma}^{(P)}(k)
 =
 \frac{
-P^{(2)}_{\mu\nu\rho\sigma}
+P_{\mu\nu\rho\sigma}^{(2)}
 }{
 k^2-F(k^2)+i\epsilon
 }.
+}
 \end{equation}
 
-Massless graviton recovery is enforced through the subtraction condition
-
+The stability requirement is
 \begin{equation}
-F_{\rm sub}(0)=0.
+k^2-F(k^2)>0
 \end{equation}
+in the physical low-energy recovery regime.
 
-The validation harness gives
 
+\section{Gravitational Waves and Ringdown}
+
+Projection gravitational waves are perturbations of the emergent metric:
 \begin{equation}
-g_P=10^{-6},
-\qquad
-g_P^2=10^{-12},
-\end{equation}
-
-and
-
-\begin{equation}
-\max\left|F_{\rm sub}/k^2\right|
-\simeq
-8.172472550864\times10^{-13}.
-\end{equation}
-
-The resulting propagator branch exhibits positive residue and no tachyon crossing within the scanned regime.
-
-\subsection{Closed Theta-Mode Cosmology}
-
-The homogeneous cosmological contribution is generated from a protected \(\theta\)-mode response kernel,
-
-\begin{equation}
-H(z)^2
+g_{\mu\nu}^{\eff}
 =
-H_{0,\rm base}^2
+\eta_{\mu\nu}
++
+h_{\mu\nu}.
+\end{equation}
+
+The transverse-traceless propagation equation is
+\begin{equation}
+\boxed{
 \left[
-\Omega_m(1+z)^3
+\Box+\Pi_X(\Box)
+\right]
+h_{\mu\nu}^{\TT}
+=
+16\pi G_PT_{\mu\nu}^{\TT}.
+}
+\end{equation}
+
+The Kerr--Teukolsky inheritance structure is
+\begin{equation}
+\boxed{
+O_{\PR}
+=
+O_{\Teuk}
 +
-\Omega_r(1+z)^4
-+
-\Omega_\Lambda
+\Sigma_X.
+}
+\end{equation}
+
+The weak correction condition is
+\begin{equation}
+|\Sigma_X|\ll|O_{\Teuk}|.
+\end{equation}
+
+The ringdown response may be decomposed as
+\begin{equation}
+A(\omega)
+=
+A_{\Kerr}(\omega)+A_X(\omega),
+\end{equation}
+with
+\begin{equation}
+A_X(\omega)
+=
+\int d\mu\,
+\frac{\rho_X(\mu)}
+{\omega-\mu+i\Gamma_X(\mu)}.
+\end{equation}
+
+The projected sideband amplitude scale is
+\begin{equation}
+\boxed{
+A_X/A_0\sim10^{-3}.
+}
+\end{equation}
+
+
+\section{Higgs Displacement Sector}
+
+The amplitude--phase decomposition is
+\begin{equation}
+\boxed{
+\Psi(x)=A(x)e^{i\theta(x)}.
+}
+\end{equation}
+
+Differentiation gives
+\begin{equation}
+\partial_\mu\Psi
+=
+e^{i\theta}
 \left(
-1+A_\theta R_\theta(z)
+\partial_\mu A+iA\partial_\mu\theta
+\right).
+\end{equation}
+
+The kinetic norm separates:
+\begin{equation}
+\boxed{
+|\partial_\mu\Psi|^2
+=
+(\partial_\mu A)(\partial^\mu A)
++
+A^2(\partial_\mu\theta)(\partial^\mu\theta).
+}
+\end{equation}
+
+The Higgs projection is
+\begin{equation}
+\boxed{
+H(x)=P_H[\Psi]=A(x).
+}
+\end{equation}
+
+The Higgs-sector Lagrangian is
+\begin{equation}
+\mathcal L_H
+=
+\frac12(\partial_\mu A)(\partial^\mu A)
+-
+V(A).
+\end{equation}
+
+The potential is
+\begin{equation}
+V(A)=\alpha_HA^2+\beta_HA^4,
+\qquad
+\beta_H>0.
+\end{equation}
+
+The vacuum condition is
+\begin{equation}
+\frac{dV}{dA}
+=
+2\alpha_HA+4\beta_HA^3=0,
+\end{equation}
+giving
+\begin{equation}
+A_0^2
+=
+-\frac{\alpha_H}{2\beta_H}.
+\end{equation}
+
+The Higgs spectral normalization is
+\begin{equation}
+\boxed{
+Z_H
+=
+\int d\xi\,u_0(\xi)P_H[\Psi].
+}
+\end{equation}
+
+The Higgs mass curvature relation is
+\begin{equation}
+\boxed{
+m_H^2
+=
+\left.
+\frac{d^2V}{dA^2}
+\right|_{A=A_0}
+=
+2\alpha_H+12\beta_HA_0^2.
+}
+\end{equation}
+
+
+\section{Electromagnetic Compact Phase Sector}
+
+The electromagnetic projection is
+\begin{equation}
+\boxed{
+A_\mu=P_A[\Psi]\sim\partial_\mu\theta.
+}
+\end{equation}
+
+The compact phase identification is
+\begin{equation}
+\boxed{
+\theta\sim\theta+2\pi n,
+\qquad
+n\in\mathbb Z.
+}
+\end{equation}
+
+The gauge-covariant derivative is
+\begin{equation}
+\boxed{
+D_\mu=\partial_\mu-iqA_\mu.
+}
+\end{equation}
+
+The compact gauge transformation is
+\begin{equation}
+\boxed{
+A_\mu\rightarrow A_\mu+q^{-1}\partial_\mu\alpha.
+}
+\end{equation}
+
+The electromagnetic field tensor is
+\begin{equation}
+\boxed{
+F_{\mu\nu}
+=
+\partial_\mu A_\nu-\partial_\nu A_\mu.
+}
+\end{equation}
+
+The Maxwell-type Lagrangian is
+\begin{equation}
+\mathcal L_{\EM}
+=
+-\frac14F_{\mu\nu}F^{\mu\nu}
++
+J_\mu A^\mu.
+\end{equation}
+
+The Maxwell recovery equation is
+\begin{equation}
+\boxed{
+\partial_\mu F^{\mu\nu}=J^\nu.
+}
+\end{equation}
+
+The compact phase Lagrangian is
+\begin{equation}
+\mathcal L_A
+=
+\frac12A^2(\partial_\mu\theta)(\partial^\mu\theta).
+\end{equation}
+
+The Noether current is
+\begin{equation}
+\boxed{
+J_\theta^\mu=A^2\partial^\mu\theta.
+}
+\end{equation}
+
+The conservation law is
+\begin{equation}
+\boxed{
+\partial_\mu J_\theta^\mu=0.
+}
+\end{equation}
+
+
+\section{Geometric Fine-Structure Closure}
+
+The fine-structure closure chain is
+\begin{equation}
+\boxed{
+O_X
+\rightarrow
+\{u_n,\lambda_n\}
+\rightarrow
+\mu_{\min}
+\rightarrow
+P_A[\Psi]
+\rightarrow
+Z_A
+\rightarrow
+\alpha_{\PR}^{-1}.
+}
+\end{equation}
+
+The compact closure factor is
+\begin{equation}
+Z_A
+=
+\oint d\theta\,u_0(\theta)P_A[\Psi].
+\end{equation}
+
+The geometric closure relation is
+\begin{equation}
+\boxed{
+\alpha_{\PR}^{-1}=4\pi Z_A.
+}
+\end{equation}
+
+The validated effective value is
+\begin{equation}
+\boxed{
+\alpha_{\PR}^{-1}\simeq137.0365.
+}
+\end{equation}
+
+The stability chain is
+\begin{equation}
+\delta\alpha
+\rightarrow
+\delta F_{\eff}(k^2)
+\rightarrow
+\delta\Sigma_X
+\rightarrow
+\text{loss of spectral regularity}.
+\end{equation}
+
+
+\section{Unified Projection Energy}
+
+The projection-sector Lagrangian is
+\begin{equation}
+\mathcal L_{\PR}
+=
+\frac12(\partial_\mu A)(\partial^\mu A)
++
+\frac12A^2(\partial_\mu\theta)(\partial^\mu\theta)
+-
+V(A)
+-
+\frac12\alpha_gP_g[\Psi]^2.
+\end{equation}
+
+Canonical momenta:
+\begin{equation}
+\Pi_A=\frac{\partial\mathcal L_{\PR}}{\partial\dot A}=\dot A,
+\end{equation}
+\begin{equation}
+\Pi_\theta=\frac{\partial\mathcal L_{\PR}}{\partial\dot\theta}=A^2\dot\theta.
+\end{equation}
+
+The Hamiltonian density is
+\begin{equation}
+H_{\PR}
+=
+\Pi_A\dot A+\Pi_\theta\dot\theta-\mathcal L_{\PR}.
+\end{equation}
+
+Explicitly:
+\begin{equation}
+\boxed{
+H_{\PR}
+=
+\frac12\dot A^2
++
+\frac12(\nabla A)^2
++
+\frac12A^2\dot\theta^2
++
+\frac12A^2(\nabla\theta)^2
++
+V(A)
++
+\frac12\alpha_gP_g[\Psi]^2.
+}
+\end{equation}
+
+The sector decomposition is
+\begin{equation}
+\boxed{
+H_{\PR}=H_g+H_H+H_{\EM}+H_{\vac}.
+}
+\end{equation}
+
+The observable relativistic energy relation is
+\begin{equation}
+\boxed{
+Mc^2
+=
+E_{\PR}
+=
+\int d^3x\,H_{\PR}.
+}
+\end{equation}
+
+
+\section{Projection Unitarity and Information Preservation}
+
+The internal spectral evolution equation is
+\begin{equation}
+i\frac{\partial\Psi}{\partial t}
+=
+\hat H_P\Psi.
+\end{equation}
+
+The projection Hamiltonian is
+\begin{equation}
+\hat H_P=O_X+\hat V_{\int}.
+\end{equation}
+
+The unitary evolution operator is
+\begin{equation}
+U(t)=e^{-i\hat H_Pt}.
+\end{equation}
+
+Unitarity:
+\begin{equation}
+\boxed{
+U^\dagger U=I.
+}
+\end{equation}
+
+Norm conservation:
+\begin{equation}
+\boxed{
+\langle\Psi|\Psi\rangle=1.
+}
+\end{equation}
+
+Collapse is interpreted as
+\begin{equation}
+\boxed{
+\text{collapse}
+\rightarrow
+\text{spectral excitation redistribution}
+\rightarrow
+\text{finite-core saturation}.
+}
+\end{equation}
+
+
+\section{Cosmological Projection Structure}
+
+The cosmological chain is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+\theta_{\hom}
+\rightarrow
+J_{\vac}
+\rightarrow
+H_{\eff}(t).
+}
+\end{equation}
+
+The homogeneous phase Lagrangian is
+\begin{equation}
+\mathcal L_{\hom}
+=
+\frac12f_\theta^2\dot\theta_{\hom}^2
+-
+V(\theta_{\hom}).
+\end{equation}
+
+The homogeneous phase potential is
+\begin{equation}
+V(\theta_{\hom})
+=
+\Lambda_\theta^4
+\left[
+1-\cos\left(
+\frac{\theta_{\hom}}{f_\theta}
 \right)
 \right].
 \end{equation}
 
-The response amplitude is
-
+Small-displacement expansion:
 \begin{equation}
-A_\theta
-=
-\left(
-\frac{H_{0,\rm local}}
-{H_{0,\rm base}}
-\right)^2
--1,
-\end{equation}
-
-with response kernel
-
-\begin{equation}
-R_\theta(z)
-=
-\frac{1}
-{1+(z/z_\theta)^p}.
-\end{equation}
-
-The closure is tied to a protected near-zero homogeneous projection mode satisfying
-
-\begin{equation}
-m_\theta\sim H_0.
-\end{equation}
-
-The validation closure gives
-
-\begin{equation}
-A_\theta
+V(\theta_{\hom})
 \simeq
-1.743613133866\times10^{-1},
+\frac12m_\theta^2\theta_{\hom}^2,
 \qquad
-z_\theta=0.8,
+m_\theta^2=\frac{\Lambda_\theta^4}{f_\theta^2}.
+\end{equation}
+
+The vacuum source rule is
+\begin{equation}
+J_{\vac}\propto\langle T^{00}\rangle_{\hom}.
+\end{equation}
+
+The source selection hierarchy is
+\begin{equation}
+\boxed{
+\langle T^{00}\rangle_{\hom}\rightarrow\theta_{\hom},
 \qquad
-p=4.
+T^{00}-\langle T^{00}\rangle_{\hom}\rightarrow P_g.
+}
 \end{equation}
 
-This produces
-
+The emergent Hubble rate is
 \begin{equation}
-H_0
-\simeq
-71.311030\ {\rm km\,s^{-1}\,Mpc^{-1}},
+\boxed{
+H_{\eff}=A_\theta\dot\theta_{\hom}.
+}
 \end{equation}
 
-with suppression scales
-
+The cosmological response equation is
 \begin{equation}
-\theta_{\rm frac}(z=10)
-\simeq
-1.161010860728\times10^{-8},
-\end{equation}
-
-and
-
-\begin{equation}
-\theta_{\rm frac}(z=1100)
-\simeq
-6.013281785061\times10^{-23}.
-\end{equation}
-
-The low-redshift growth response is written
-
-\begin{equation}
-\gamma_{\rm eff}(z)
-=
-\gamma_{\rm GR}
+\boxed{
+\ddot\theta_{\hom}
 +
-\delta_\gamma
-\frac{1}{1+(z/z_s)^q},
+3H_{\eff}\dot\theta_{\hom}
++
+\frac{dV}{d\theta_{\hom}}
+=
+J_{\vac}.
+}
 \end{equation}
 
-with
-
+The late-time recovery structure is
 \begin{equation}
-\delta_\gamma=0.22,
+H_{\eff}(z)=H_{\GR}(z)+\delta H_{\PR}(z),
 \qquad
-z_s=0.8,
-\qquad
-q=1.
+\left|
+\frac{\delta H_{\PR}}{H_{\GR}}
+\right|\ll1.
 \end{equation}
 
-The corresponding growth closure gives
 
+\section{Observational Structure}
+
+The observational hierarchy is
 \begin{equation}
-f\sigma_8
-\simeq
-0.479998.
+\boxed{
+\mu_{\min}
+\rightarrow
+F(k^2)
+\rightarrow
+\Sigma_X
+\rightarrow
+O_{\obs}.
+}
 \end{equation}
 
-\subsection{Final Equation Status Table}
+Weak-field recovery:
+\begin{equation}
+g_{\mu\nu}^{\PR}=g_{\mu\nu}^{\GR},
+\qquad
+r\gg r_c.
+\end{equation}
 
-\begingroup
-\renewcommand{\arraystretch}{1.4} % Adds vertical space between rows
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.32\textwidth} c >{\raggedright\arraybackslash}p{0.50\textwidth}}
-\caption{Framework Closure and Validation Status} \\
+Kerr recovery:
+\begin{equation}
+g_{\mu\nu}^{\PR}=g_{\mu\nu}^{\Kerr},
+\qquad
+r>r_c.
+\end{equation}
+
+Strong-field condition:
+\begin{equation}
+k^2\sim\mu_{\min}^2.
+\end{equation}
+
+Projection correction amplitude:
+\begin{equation}
+\boxed{
+A_X/A_0\sim10^{-3}.
+}
+\end{equation}
+
+Residual phase-coherence scale:
+\begin{equation}
+\boxed{
+B_{\PR}\sim10^{-12}\,\mathrm T\sim10\,\mathrm{nG}.
+}
+\end{equation}
+
+
+\section{Validation and Completion Status}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.34\textwidth}
+>{\raggedright\arraybackslash}p{0.28\textwidth}
+>{\raggedright\arraybackslash}p{0.28\textwidth}}
 \toprule
-\textbf{Equation / Sector} & \textbf{Tag} & \textbf{Status} \\
+\textbf{Framework Sector} & \textbf{Status} & \textbf{Validation Logic} \\
 \midrule
 \endhead
 
-Projection field \(\Psi(x,\xi)\) & D & Base field definition. \\
-Emergent metric \(g_{\mu\nu}^{\mathrm{eff}}\) & D & Projection bilinear with determinant normalization. \\
-Einstein recovery \(G_{\mu\nu}=8\pi G_P T_{\mu\nu}\) & D/C & Low-energy gravitational limit. \\
-Newtonian limit \(\nabla^2\Phi=4\pi G_P \rho\) & D/C & Weak-field recovery. \\
-Spectral operator \(O_X\) & D/C & Symmetry-selected quartic confining operator. \\
-Spectral density \(\rho_P=g_P^2\rho_{\mathrm{shape}}\) & D/C & Corrected by GR recovery. \\
-Self-energy \(F(k^2)\) & D & Spectral integral. \\
-Projection propagator \(D^{(P)}\) & D & Spin-2 projection propagator. \\
-Massless graviton \(F_{\mathrm{sub}}(0)=0\) & C & Required by low-energy GR. \\
-Low-energy safety \(|F/k^2|\ll 1\) & C & Numerically validated. \\
-Core saturation \(\Psi^3-\Psi=\rho/\rho_*\) & D/C & Nonlinear finite-density response. \\
-Maximum curvature \(R_{\max}=\eta_R\mu_{\min}^2\) & D/C & Derived from spectral gap. \\
-Core radius \(r_c\) & D/C & Derived finite-core scaling. \\
-Kerr exterior \(\Sigma_{\mathrm{PR}},\Delta_{\mathrm{PR}}\) & D/C & Validated exterior Kerr closure. \\
-Full QNM / Teukolsky \(220\) mode & D/C & Full Kerr QNM validation passed. \\
-Hubble sector \(H(z)\) & D/C & Theta-response closure. \\
-Growth suppression \(\gamma_{\mathrm{eff}}\) & C & Constrained by \(f\sigma_8\). \\
-Higgs quartic \(\lambda=m_H^2/(2v^2)\) & D/C & Validated proxy reconstruction. \\
-FSC closure \(\alpha^{-1}=4\pi Z_w Z_\theta C_A\) & D/C & Robust geometric closure. \\
-Higgs/EM leakage \(\epsilon_{\mathrm{HEM}}\sim g_P^2\) & C & Loop-bound closure. \\
+Internal spectral operator & Closed at framework level & Eigenvalue problem and spectral gap define internal scale. \\
+
+Emergent metric & Closed at framework level & Determinant-normalized metric seed recovers weak-field geometry. \\
+
+Weak-field GR recovery & Constrained and validated & Requires $G_P=G_N$, $F(0)=0$, and $|F/k^2|\ll1$. \\
+
+Kerr exterior recovery & Constrained and validated & Requires $g_{\mu\nu}^{\PR}=g_{\mu\nu}^{\Kerr}$ for $r>r_c$. \\
+
+Finite-core structure & Derived/constrained & Spectral gap sets $R_{\max}$ and finite-core radius $r_c$. \\
+
+Projection propagator & Closed at effective level & Spectral self-energy remains suppressed at low energy. \\
+
+Higgs displacement sector & First-order closed & Amplitude projection generates displacement sector and mass curvature. \\
+
+Electromagnetic phase sector & First-order closed & Compact phase projection generates gauge-like sector and Noether current. \\
+
+Fine-structure closure & First-order geometric closure & $\alpha_{\PR}^{-1}=4\pi Z_A$ gives validated closure value. \\
+
+Unitarity/information & Effective-level closed & Hilbert evolution preserves norm and redistributes information spectrally. \\
+
+Cosmological projection & Effective regime & Homogeneous phase drift provides late-time projection response. \\
+
+Strong-field sidebands & Predictive & Weak continuum correction scale $A_X/A_0\sim10^{-3}$. \\
+
+Full matter-sector extension & Future development & Additional projection sectors may extend the framework. \\
+
+Nonperturbative UV completion & Future development & Full high-energy completion remains an extension beyond the current effective architecture. \\
 
 \bottomrule
 \end{longtable}
-\endgroup
 
 
-\section{Completed Kerr and Teukolsky Closure}
+\section{Single-Line Native Definitions}
 
-\subsection{Coordinate Convention and Dimensional Restoration}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}
+>{\raggedright\arraybackslash}p{0.65\textwidth}}
+\toprule
+\textbf{Concept} & \textbf{PR Native Definition} \\
+\midrule
+\endhead
 
-The rotating exterior is written in the coordinate basis
-\begin{equation}
-(t,r,\theta,\phi),
-\end{equation}
-not in the coordinate basis \((ct,r,\theta,\phi)\).  Therefore explicit temporal metric components carry powers of \(c\).  In this convention, the Kerr cross-term in the line element carries \(1/c\), while the determinant carries an overall factor of \(c^2\).
+Spacetime & The low-energy metric projection of the internal spectral manifold. \\
+Gravity & The stiffness projection of the internal manifold. \\
+Higgs structure & The displacement/amplitude projection of the manifold. \\
+Electromagnetism & The compact phase projection of the manifold. \\
+Fine-structure constant & The compact geometric closure scale of the electromagnetic phase sector. \\
+Black-hole interior & A finite saturated projection-core region rather than a divergent singularity. \\
+Kerr exterior & The recovered rotating low-energy exterior limit outside $r_c$. \\
+Ringdown correction & A weak internal continuum response added to the Kerr--Teukolsky structure. \\
+Cosmological expansion & Homogeneous phase drift of the projection manifold. \\
+Energy & The low-energy exterior projection of conserved internal spectral energy. \\
 
-The corrected rotating line element is
-\begin{equation}
-\begin{aligned}
-ds_{\rm PR}^2={}&-
-\left(
-1-\frac{2G_PMr}{c^2\Sigma_{\rm PR}}
-\right)c^2dt^2
--
-\frac{4G_PMar\sin^2\theta}{c\Sigma_{\rm PR}}dt\,d\phi
-+
-\frac{\Sigma_{\rm PR}}{\Delta_{\rm PR}}dr^2
-+
-\Sigma_{\rm PR}d\theta^2\\
-&+
-\left(
-r^2+a^2+
-\frac{2G_PMa^2r\sin^2\theta}{c^2\Sigma_{\rm PR}}
-\right)
-\sin^2\theta\,d\phi^2.
-\end{aligned}
-\end{equation}
-
-The corresponding explicit-unit determinant is
-\begin{equation}
-\det(g_{\mu\nu})
-=
--c^2\Sigma_{\rm PR}^2\sin^2\theta.
-\end{equation}
-
-The inverse mixed component remains consistent with the \(t\)-coordinate convention:
-\begin{equation}
-g^{t\phi}
-=
--\frac{2G_PMar}{c^3\Delta_{\rm PR}\Sigma_{\rm PR}}.
-\end{equation}
-
-\subsection{Stationary Axisymmetric Projection State}
-
-The rotating projection state is
-\begin{equation}
-\Psi_{\rm rot}(t,r,\theta,\phi,\xi)
-=
-R(r)\Theta(\theta)u_0(\xi)e^{-i\omega t+im\phi}.
-\end{equation}
-
-It satisfies
-\begin{equation}
-\partial_t\Psi_{\rm rot}
-=
--i\omega\Psi_{\rm rot},
-\qquad
-\partial_\phi\Psi_{\rm rot}
-=
-im\Psi_{\rm rot}.
-\end{equation}
-
-The mixed projection correlation gives the native frame-dragging channel,
-\begin{equation}
-Q_{t\phi}
-\propto
-\mathrm{Re}
-\left[
-(\partial_t\Psi)^*
-(\partial_\phi\Psi)
-\right]
-\propto
--\omega m|\Psi|^2.
-\end{equation}
-
-\subsection{Exterior Kerr Functions}
-
-The PR rotating exterior uses
-\begin{equation}
-\Sigma_{\rm PR}
-=
-r^2+a^2\cos^2\theta,
-\end{equation}
-and
-\begin{equation}
-\Delta_{\rm PR}
-=
-r^2-\frac{2G_PM}{c^2}r+a^2,
-\end{equation}
-with
-\begin{equation}
-a=\frac{J}{Mc}.
-\end{equation}
-
-Outside the finite projection core, the metric is algebraically identical to the Kerr exterior:
-\begin{equation}
-ds^2_{\rm PR}
-=
-ds^2_{\rm Kerr},
-\qquad
-r>r_c.
-\end{equation}
-
-\subsection{Ricci and Einstein Closure}
-
-The Ricci tensor is computed from
-\begin{equation}
-R_{\mu\nu}
-=
-\partial_\alpha\Gamma^\alpha_{\mu\nu}
--
-\partial_\nu\Gamma^\alpha_{\mu\alpha}
-+
-\Gamma^\alpha_{\alpha\beta}\Gamma^\beta_{\mu\nu}
--
-\Gamma^\alpha_{\nu\beta}\Gamma^\beta_{\mu\alpha}.
-\end{equation}
-
-The exterior closure is
-\begin{equation}
-R_{\mu\nu}^{\rm PR}=0,
-\qquad
-G_{\mu\nu}^{\rm PR}=0,
-\qquad
-r>r_c.
-\end{equation}
-
-The horizon radii are
-\begin{equation}
-r_\pm
-=
-\frac{G_PM}{c^2}
-\pm
-\sqrt{
-\left(
-\frac{G_PM}{c^2}
-\right)^2-a^2
-}.
-\end{equation}
-
-The ergosurface is
-\begin{equation}
-r_{\rm ergo}(\theta)
-=
-\frac{G_PM}{c^2}
-+
-\sqrt{
-\left(
-\frac{G_PM}{c^2}
-\right)^2
--a^2\cos^2\theta
-}.
-\end{equation}
-
-The finite projection core remains hidden when
-\begin{equation}
-r_c<r_+.
-\end{equation}
-
-\subsection{Teukolsky Inheritance}
-
-Because the exterior metric is exactly Kerr outside the projection core, the leading perturbation operator is inherited directly from the standard Kerr--Teukolsky structure.  Perturbations are written as
-\begin{equation}
-\Psi_s
-=
-R_s(r)S_s(\theta)e^{-i\omega t+im\phi}.
-\end{equation}
-
-The PR perturbation operator is
-\begin{equation}
-\mathcal T_{\rm PR}
-=
-\mathcal T_{\rm Kerr}
-+
-\Sigma_X.
-\end{equation}
-
-Equivalently, the radial sector has the schematic form
-\begin{equation}
-\mathcal D_{\rm Kerr}R_s+\Sigma_XR_s=0.
-\end{equation}
-
-In the exterior low-energy limit,
-\begin{equation}
-\Sigma_X\to0,
-\qquad
-\mathcal T_{\rm PR}\to\mathcal T_{\rm Kerr}.
-\end{equation}
-
-The projection-sector correction therefore produces a weak residual sideband rather than a replacement of the Kerr ringdown:
-\begin{equation}
-A_X/A_0
-\sim
-2.1\times10^{-3}.
-\end{equation}
-
-\section{Validation Harness}
-The complete numerical reproducibility suite is provided as a Colab compatible validation framework for the full and Kerr/Teukolsky sections available on GitHub.
-
-\subsection{Full Validation Harness}
-
-\[
-\texttt{projection\_relativity\_full\_validation\_harness.py}.
-\]
-
-The harness performs automated consistency, stability, recovery, robustness, and observational stress tests across the full implemented framework, including:
-
-\begin{enumerate}
-\item Internal spectral-operator stability and spectral-gap closure
-\item Finite-core scaling and \(R_{\max}\) derivation
-\item Projection spectral-density and propagator consistency
-\item Weak-field General Relativity recovery
-\item Kerr exterior geometry validation
-\item Kerr ringdown / QNM validation
-\item Projection-sideband amplitude and leakage constraints
-\item Cosmological \(H(z)\) and growth-suppression closure
-\item Fine-structure-constant geometric closure
-\item Higgs/EM loop-safety bounds
-\item Solar-system residual and orbital recovery tests
-\item Vacuum-selection and non-tuning robustness scans
-\item Multi-mass sideband scaling behavior
-\item Full equation-status and consistency audit
-\item Dedicated Kerr--Teukolsky closure tester with dimensional audit
-\end{enumerate}
-
-The harness automatically generates reproducibility CSV outputs, including:
-
-\begin{enumerate}
-\item \texttt{projection\_relativity\_full\_validation\_results.csv}
-\item \texttt{projection\_relativity\_equation\_status\_table.csv}
-\item \texttt{projection\_relativity\_operator\_rmax\_scan.csv}
-\item \texttt{projection\_relativity\_kerr\_exterior\_summary.csv}
-\item \texttt{projection\_relativity\_full\_teukolsky\_qnm\_results.csv}
-\item \texttt{projection\_relativity\_vacuum\_selection\_scan.csv}
-\item \texttt{projection\_relativity\_sideband\_mass\_scaling.csv}
-\item \texttt{projection\_relativity\_solar\_system\_summary.csv}
-\item \texttt{projection\_relativity\_solar\_system\_sweep.csv}
-\item \texttt{projection\_relativity\_reference\_comparison.csv}
-\item \texttt{projection\_relativity\_document\_consistency.csv}
-\item \texttt{projection\_relativity\_qnm\_backend\_status.csv}
-\item \texttt{kerr\_teukolsky\_test\_results.csv}
-\item \texttt{kerr\_core\_exterior\_summary.csv}
-\item \texttt{teukolsky\_sideband\_scan.csv}
-\end{enumerate}
-
-The final integrated validation result obtained from the released harness is
-
-\[
-83\ {\rm PASS},
-\qquad
-0\ {\rm FAIL},
-\qquad
-0\ {\rm OPEN}.
-\]
-
-The validation framework therefore provides a fully reproducible numerical consistency layer accompanying the analytical structure developed in this work.
-
-\subsection{Kerr/Teukolsky Closure Test Harness}
-
-In addition to the full integrated validation harness, a dedicated Kerr--Teukolsky closure tester is provided as
-\begin{equation}
-\texttt{projection\_relativity\_kerr\_teukolsky\_validation\_harness.py}.
-\end{equation}
-
-This tester verifies:
-\begin{enumerate}
-\item Kerr determinant and inverse-metric identities,
-\item Lorentzian signature outside the horizon,
-\item horizon and ergosurface consistency,
-\item frame-dragging behavior,
-\item projection-core hiding inside the horizon, photon region, and ISCO,
-\item symbolic determinant and inverse-metric checks,
-\item explicit \(c\)-restoration consistency,
-\item finite-difference Ricci residual suppression,
-\item Kerr QNM damping stability,
-\item Teukolsky inheritance in the \(\Sigma_X\to0\) limit,
-\item weak sideband amplitude and sideband-power bounds.
-\end{enumerate}
-
-The dedicated closure tester returns
-\begin{equation}
-22\ {\rm PASS},
-\qquad
-0\ {\rm FAIL}.
-\end{equation}
-
-Representative locked outputs are
-\begin{equation}
-\max |R_{\mu\nu}|_{\rm numeric}
-\simeq
-3.96\times10^{-7},
-\end{equation}
-\begin{equation}
-A_X/A_0
-\simeq
-2.11\times10^{-3},
-\qquad
-P_X/P_0
-\simeq
-4.46\times10^{-6}.
-\end{equation}
-
-Together with the integrated validation harness,
-\begin{equation}
-83\ {\rm PASS},
-\qquad
-0\ {\rm FAIL},
-\qquad
-0\ {\rm OPEN},
-\end{equation}
-this closes the rotating black-hole exterior and perturbation-inheritance layer of the framework.
-
-
-\section{Dimensional Restoration Audit}
-
-A final dimensional audit was performed after restoring explicit \(G_P\) and \(c\) factors in the rotating exterior.  The corrected coordinate convention is
-\begin{equation}
-(t,r,\theta,\phi),
-\end{equation}
-with \(t\), not \(ct\), used as the temporal coordinate.
-
-The audit locked the following forms:
-\begin{equation}
--\frac{4G_PMar\sin^2\theta}{c\Sigma_{\rm PR}}dt\,d\phi,
-\end{equation}
-\begin{equation}
-\det(g_{\mu\nu})
-=
--c^2\Sigma_{\rm PR}^2\sin^2\theta,
-\end{equation}
-and
-\begin{equation}
-g^{t\phi}
-=
--\frac{2G_PMar}{c^3\Delta_{\rm PR}\Sigma_{\rm PR}}.
-\end{equation}
-
-Thus the line element, determinant, and inverse metric are dimensionally consistent under the same coordinate convention.
-
-
-\section{Projection Interpretation Summary}
-
-Within the PR framework, the observable sectors arise as different projections of the same internal spectral structure:
-
-\begin{equation}
-\begin{aligned}
-\text{gravity} &\sim \text{stiffness projection} \\
-\text{Higgs} &\sim \text{displacement projection} \\
-\text{electromagnetism} &\sim \text{compact phase projection}
-\end{aligned}
-\end{equation}
-
-
-
-The emergent metric originates from projection correlations of the master field,
-the Higgs sector originates from displaced internal vacuum structure,
-and the electromagnetic sector originates from compact phase covariance of the same underlying projection system. The framework therefore interprets gravity, Higgs structure, and electromagnetic gauge behavior as different observable projections of a common spectral manifold.
-
-\section{Current Completion Status}
-\begin{itemize}[leftmargin=*]
-\item Strongly closed at framework level: master operator, projection metric, weak gravity, Higgs potential, gauge/Maxwell, fine structure, gauge--Higgs first-order masses, finite-core scaling, gravitational-wave propagation.
-\item Strong, with remaining theorem-level caveats now limited to compact-winding uniqueness and gauge--Higgs alignment correction.
-\item Current validation suite: symbolic algebra, tensor identities, action variation, Schwarzschild curvature, finite core regularity, weak-field observations.
-\item The framework is mathematically closed and validated as an effective projection/spectral theory, but deeper uniqueness proofs and full nonperturbative UV completion remain future work.
-\end{itemize}
+\bottomrule
+\end{longtable}
 
 \end{document}
-
