@@ -1,7 +1,7 @@
 # Projection Relativity
 
 *A Spectral–Projection Framework for Emergent Gravity, Higgs Structure, and Electromagnetism*
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/oshetskiresearch/Projection_Relativity/blob/main/Validation_Harness.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/oshetskiresearch/Projection_Relativity/blob/main/test_harness/Validation_Harness.ipynb)
 ---
 
 ## Overview
