@@ -71,8 +71,8 @@ ProjectionRelativity/
 │   └── teukolsky_sideband_scan.csv
 │
 ├── graphs/
-│   ├── operator_spectrum.png
-│   ├── propagator_recovery.png
+│   ├── Internal Spectral Potential and Quantized Projection Modes.png
+│   ├── pEmergent Metric Recovery and Finite-Core Regularization.png
 │   ├── sideband_scaling.png
 │   ├── cosmology_response.png
 │   ├── vacuum_selection_scan.png
