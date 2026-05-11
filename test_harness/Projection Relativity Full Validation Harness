@@ -39,7 +39,7 @@ import sys
 import subprocess
 import importlib.util
 from pathlib import Path
-
+from scipy.linalg import eigh_tridiagonal
 import numpy as np
 import pandas as pd
 
