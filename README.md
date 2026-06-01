@@ -329,7 +329,7 @@ Keep manuscript claims tied to explicit derivations, code, outputs, and interpre
 ```text
 Projection-Relativity/
 │
-├── paper/
+├── manuscript/
 │   ├── /Oshetski_Projection_Relativity_Main.tex
 │   ├── /Oshetski_Projection_Relativity_Supplement.tex
 │   ├── /Oshetski_Projection_Relativity_References.tex   
@@ -337,7 +337,7 @@ Projection-Relativity/
 │   ├── /Oshetski_Projection_Relativity_Supplement.pdf
 │   ├── /Oshetski_Projection_Relativity_References.pdf  
 │
-├── code/
+├── test_harness/
 │   ├── radial_spectral_gap/
 │   ├── compact_phase_closure/
 │   ├── propagator_tests/
@@ -351,32 +351,12 @@ Projection-Relativity/
 │   ├── processed/
 │   └── ...
 │
-├── results/
+├── plots/
 │   ├── RESULTS_INDEX.md
 │   ├── pr_lotss_magnetic_field/
 │   └── ...
 │
-├── notes/
-│   ├── README.md
-│   └── ...
-│
-├── tests/
-│   ├── README.md
-│   └── ...
-│
-├── finds/
-│   ├── README.md
-│   └── ...
-│
-├── notebooks/
-│   ├── README.md
-│   └── ...
-│
-├── docs/
-│   ├── theory_notes/
-│   ├── audit_logs/
-│   ├── failed_paths/
-│   └── ...
+├── LI
 │
 └── README.md
 ```
