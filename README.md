@@ -335,15 +335,15 @@ Projection-Relativity/
 │   ├── /Oshetski_Projection_Relativity_References.tex   
 │   ├── /Oshetski_Projection_Relativity_Main.pdf
 │   ├── /Oshetski_Projection_Relativity_Supplement.pdf
-│   ├── /Oshetski_Projection_Relativity_References.pdf  
+│   └── /Oshetski_Projection_Relativity_References.pdf  
 │
 ├── test_harness/
-│   ├── radial_spectral_gap/
-│   ├── compact_phase_closure/
-│   ├── propagator_tests/
-│   ├── finite_core/
-│   ├── observational_audits/
-│   ├── pr_magnetic_field_results/
+│   ├── 
+│   ├── 
+│   ├── 
+│   ├── 
+│   ├── 
+│   ├── 
 │   └── ...
 │
 ├── data/
@@ -356,7 +356,7 @@ Projection-Relativity/
 │   ├── pr_lotss_magnetic_field/
 │   └── ...
 │
-├── LI
+├── LICENSE
 │
 └── README.md
 ```
@@ -364,15 +364,10 @@ Projection-Relativity/
 **Directory Guide**
 
 Path	Purpose
-`paper/`	Main manuscript and older drafts.
-`code/`	Reproducible scripts for theory tests, observational audits, and result generation.
-`data/`	Data policy, metadata, processed subsets, and reproducible download instructions. Raw large datasets are not stored here.
-`results/`	Result summaries, generated tables, interpretation files, plots, and audit outputs.
-`notes/`	Working notes, derivation notes, branch summaries, and manuscript-planning notes.
-`tests/`	Test notes, validation records, pass/fail summaries, and reproducibility checks.
-`finds/`	Study findings, concise result interpretations, and claim-status notes.
-`notebooks/`	Exploratory notebooks for inspection, visualization, or prototyping.
-`docs/`	Theory notes, audit logs, failed-path records, and supporting explanations.
+`manuscript/`	Main manuscript and older drafts.
+`test_harness/`	Reproducible scripts for theory tests, observational audits, and result generation.
+`data/`	        Data policy, metadata, processed subsets, and reproducible download instructions. Raw large datasets are not stored here.
+`plots/`	Generation code and plot outputs.
 
 ---
 **Data Policy**
@@ -421,7 +416,7 @@ Label	Meaning
 
 The main working manuscript is:
 ```text
-paper/Projection_Relativity_Manuscript05232026.tex
+manuscript/Oshetski_Projection_Relativity.tex
 ```
 Working title:
 ```text
@@ -433,7 +428,7 @@ The manuscript develops the PR architecture from a master projection field and i
 ---
 **Development Workflow**
 
-Recommended workflow:
+Workflow:
 ```bash
 git checkout main
 git pull
@@ -451,25 +446,6 @@ git push -u origin docs/or-code-branch-name
 ```
 Then open a pull request into `main`.
 
----
-**Editing Guidelines**
-
-For Codex editing:
-Create a branch.
-Make the smallest coherent change.
-Do not modify `main` directly.
-Do not add raw data.
-Do not add secrets or credentials.
-Include a pull-request summary and checklist.
-Report what was tested.
-Report what remains uncertain.
-Recommended branch naming examples:
-```text
-docs/root-readme-overview
-docs/section11-lotss-notes
-code/radial-gap-test-update
-results/compact-phase-closure-audit
-```
 ---
 **Claim Discipline**
 
@@ -502,7 +478,7 @@ A Spectral-Projection Architecture for Emergent Relativity
 ```
 Repository:
 ```text
-oshetskiresearch/Projection-Relativity_Sandbox
+oshetskiresearch/Projection-Relativity
 ```
 A formal citation file may be added later as:
 ```text
@@ -511,8 +487,7 @@ CITATION.cff
 ---
 **License**
 
-License status should be confirmed before reuse or redistribution.
-If a formal license is added, place it at:
+License status is included in this repo.
 ```text
 LICENSE
 ```
