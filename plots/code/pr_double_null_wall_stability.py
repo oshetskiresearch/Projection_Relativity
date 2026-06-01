@@ -80,7 +80,7 @@ C_LIGHT = 1.0                # normalized units
 
 CRITICAL_KAPPA = MU2_MIN / 2.0
 
-OUTDIR = Path("/content/pr_double_null_wall_stability_v11")
+OUTDIR = Path("/content/pr_double_null_wall_stability")
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 REPO_RESULTS = Path("/content/Projection-Relativity_Sandbox/results/double_null_wall_stability")
@@ -300,7 +300,7 @@ def simulate_double_null_case(
     )
 
     result = {
-        "tester": "Projection Relativity double-null wall stability tester v11",
+        "tester": "Projection Relativity double-null wall stability tester",
         "model": "2D effective double-null counter-streaming wall collision harness",
         "kappa": float(kappa),
         "flux_amp": float(flux_amp),
