@@ -6,9 +6,9 @@ This directory contains the complete source files for the primary manuscript: **
 This manuscript was developed and typeset using **LaTeX** via the **Overleaf** platform for professional scientific document management. This ensures standardized formatting, precise rendering of the geometric proofs, and rigorous structural organization of the equations.
 
 ## Directory Structure
-* `main.tex`: The primary LaTeX source document containing the core text, derivations, and structure.
-* `references.bib`: The BibTeX file containing all formal citations and astrophysical data references.
-* `/figures`: Contains the high-resolution plots, projection diagrams, and observational charts used in the manuscript.
+* `Oshetski_Projection_Relativity_Main.tex`: The primary LaTeX source document containing the core text, derivations, and structure.
+* `Oshetski_Projection_Relativity_Main_References.bib`: The BibTeX file containing all formal citations and astrophysical data references.
+* `/plots`: Contains the high-resolution plots, projection diagrams, and observational charts used in the manuscript.
 
 ## How to Compile
 If you wish to compile the PDF locally from the source files, you will need a standard TeX distribution (such as TeX Live, MiKTeX, or MacTeX). 
@@ -16,7 +16,9 @@ If you wish to compile the PDF locally from the source files, you will need a st
 You can compile the document using standard `pdflatex` or `latexmk`. From your terminal in this directory, run:
 
 ```bash
-pdflatex main.tex
-bibtex main
-pdflatex main.tex
-pdflatex main.tex
+pdflatex Oshetski_Projection_Relativity_Main.tex
+bibtex Oshetski_Projection_Relativity_Main
+pdflatex Oshetski_Projection_Relativity_Main.tex
+pdflatex Oshetski_Projection_Relativity_Main.tex
+
+
