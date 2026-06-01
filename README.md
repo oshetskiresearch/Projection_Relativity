@@ -1,9 +1,11 @@
 # Projection Relativity Sandbox
 
 **Project:** Projection Relativity  
-**Primary manuscript:** `paper/Oshetski_Projection_Relativity_Main.tex`   
-**Manuscript Supplement:** `paper/Oshetski_Projection_Relativity_Supplement.tex`   
-**Manuscript References:** `paper/Oshetski_Projection_Relativity_References.tex`   
+**Primary manuscript:**    `paper/Oshetski_Projection_Relativity_Main.tex`   
+**Manuscript Supplement:** `paper/Oshetski_Projection_Relativity_Supplement.tex`  
+**Manuscript References:** `paper/Oshetski_Projection_Relativity_References.bib`    
+**Primary manuscript:**    `paper/Oshetski_Projection_Relativity_Main.pdf`   
+**Manuscript Supplement:** `paper/Oshetski_Projection_Relativity_Supplement.pdf`     
 **Author:** Michael Stanislaus Oshetski  
 **ORCID:** [0009-0007-3623-7586](https://orcid.org/0009-0007-3623-7586)   
 **Repository:** `oshetskiresearch/Projection-Relativity`  
