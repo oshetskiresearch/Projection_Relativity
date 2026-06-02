@@ -452,7 +452,7 @@ git push -u origin docs/or-code-branch-name
 Then open a pull request into `main`.
 
 ---
-**Claim Discipline**
+** Our Claim Discipline**
 
 Projection Relativity is an active theoretical and computational research program. Repository language should clearly distinguish between:
 derivation,
@@ -461,9 +461,6 @@ observational consistency,
 preliminary evidence,
 failed tests,
 and open conjecture.
-Do not describe preliminary observational audits as detections unless the required controls have been satisfied.
-For example, the LoTSS residual-RM magnetic-field audit should be described as a projected compact-phase area constraint under plasma/window assumptions, not as a standalone cosmological magnetic-field detection or a universal fixed-field prediction.
-
 ---
 **Citation / Attribution**
 
@@ -516,12 +513,15 @@ SOFTWARE.
 **Maintainer Notes**
 
 This repository is intended to remain transparent, auditable, and conservative in interpretation.
-Preferred result workflow:
+Our workflow was:
 ```text
-derive
+→ define solution
+→ derive
 → test
-→ record
+→ analysis
 → interpret
-→ label status
+→ test code
+→ confirm results/audit test code 
+→ release
 ```
 Every result should be easy to trace from manuscript claim to code, output, and interpretation note.
