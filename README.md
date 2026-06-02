@@ -340,17 +340,20 @@ Projection-Relativity/
 │   └── /Oshetski_Projection_Relativity_References.pdf  
 │
 ├── test_harness/
-│   ├── 
-│   ├── 
-│   ├── 
-│   ├── 
-│   ├── 
-│   ├── 
-│   └── ...
+│   ├── numerical
+│           ├──code
+│                   ├──projection_relativity_numerical_validation_harness.py
+│           ├── projection_relativity_numerical_validation_harness.ipynb
+│           └── RESULTS.md
+│   ├── symbolic
+│           ├──code
+│                   ├──projection_relativity_numerical_validation_harness.py
+│           ├── projection_relativity_numerical_validation_harness.ipynb
+│           └── RESULTS.md
 │
 ├── data/
 │   ├── README.md
-│   ├── processed/
+│   ├── 
 │   └── ...
 │
 ├── plots/
