@@ -78,10 +78,19 @@ PR_source_repo := "oshetskiresearch/Projection_Relativity":
 PR_source_branch := "main":
 PR_source_path := "manuscript/Oshetski_Projection_Relativity_Main.tex":
 PR_supplement_path := "manuscript/Oshetski_Projection_Relativity_Supplement.tex":
+PR_require_source_text := true:
 ```
 
 When the checker is run from `test_harness/`, it finds the manuscript through
 the fallback path `../manuscript/...`.
+
+The checker does not download files from GitHub. It intentionally verifies the
+repo-local LaTeX files in the current checkout. To check the latest public
+version, update the repository first, then run Maple:
+
+```bash
+git pull
+```
 
 ## Prerequisites
 
@@ -294,9 +303,26 @@ It expects:
 
 when running from `test_harness/`.
 
-If the source files are not found, Maple records a `NOTE` saying the source-text
-scan was skipped. That is acceptable for a standalone copied harness, but not
-for a final public-repo release check.
+By default, source-text coverage is required:
+
+```maple
+PR_require_source_text := true:
+```
+
+If either LaTeX file is missing, Maple stops with a clear error. This prevents a
+release run from silently checking only the algebra while skipping the paper
+source.
+
+For a standalone algebra-only smoke check, you may explicitly relax this after
+loading the harness:
+
+```maple
+read "ProjectionRelativityAppendixVerify.mpl":
+PR_require_source_text := false:
+PR_RunAll();
+```
+
+Do not use relaxed mode for a release check.
 
 For release:
 
@@ -349,7 +375,10 @@ harness file.
 
 ### Source-text scan skipped
 
-Cause: Maple cannot find `manuscript/...` from the current working directory.
+Cause: `PR_require_source_text` was explicitly set to `false` and Maple could
+not find `manuscript/...` from the current working directory.
+
+In normal release mode, this condition is an error rather than a skipped note.
 
 Fix: run from:
 
@@ -362,6 +391,12 @@ and make sure the paper files exist at:
 ```text
 Projection_Relativity/manuscript/Oshetski_Projection_Relativity_Main.tex
 Projection_Relativity/manuscript/Oshetski_Projection_Relativity_Supplement.tex
+```
+
+If you want the newest GitHub version, update the repository first:
+
+```bash
+git pull
 ```
 
 ### A numeric check fails by a tiny amount
