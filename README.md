@@ -1,4 +1,4 @@
-# Projection Relativity Sandbox
+# Projection Relativity Overview
 
 **Project:** Projection Relativity  
 **Primary manuscript:**    `manuscript/Oshetski_Projection_Relativity_Main.tex`   
