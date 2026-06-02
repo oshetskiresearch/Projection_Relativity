@@ -1,0 +1,6049 @@
+\documentclass[11pt]{article}
+\usepackage{orcidlink}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,bm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{booktabs,longtable,array,multirow}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{needspace}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf]{caption}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\renewcommand{\arraystretch}{1.22}
+
+\newcommand{\PR}{\mathrm{PR}}
+\newcommand{\eff}{\mathrm{eff}}
+\newcommand{\Kerr}{\mathrm{Kerr}}
+\newcommand{\GR}{\mathrm{GR}}
+\newcommand{\obs}{\mathrm{obs}}
+\newcommand{\src}{\mathrm{src}}
+\newcommand{\vac}{\mathrm{vac}}
+\newcommand{\homPR}{\mathrm{hom}}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\Teuk}{\mathrm{Teuk}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\diag}{\mathrm{diag}}
+\renewcommand{\arraystretch}{1.4}
+
+\title{Supplementary Material: \\ 
+\Large Extended Derivations and Automated Verification \\ 
+\textit{The Foundation of Projection Relativity}}
+
+\author{Michael Stanislaus Oshetski \orcidlink{0009-0007-3623-7586} \\[-6pt]
+\small \email{michael.oshetski@micatu.com}\\[-3pt]
+\small Founder and Chief Technology Officer \\[-6pt]
+\small Advanced Photonics Laboratory (APL)\\[-6pt]
+\small Micatu, Inc. \\[-6pt]
+\small Horseheads, New York, USA \\[-6pt]
+\small ORCID: 0009-0007-3623-7586}
+\date{May 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introduction to the Supplemental Material}
+
+This supplementary document aggregates the foundational equations of Projection Relativity, integrating them with the complete automated verification logs. It provides the exhaustive, step-by-step mathematical derivations that support the core framework, serving both as a detailed analytical expansion of the main manuscript and a formal repository for the computational test harness results.
+
+The formalisms and algorithmic outputs presented herein detail the internal metric tensor, spectral operators, modal expansions, projection maps, compact boundary closure conditions, and the derived-status matrix. Crucially, the appended symbolic regression transcripts and numerical testing suites establish rigorous computational validation for the spectral gaps, topological invariants, and macroscopic boundary conditions derived in the text.
+
+\renewcommand{\contentsname}{Table of Contents} % Optional: Renames "Table of Contents" to "List of Sections"
+\tableofcontents
+\clearpage % Pushes the actual math content to the next page
+
+
+\section{Master Equation Set}
+\label{app:how-to-use}
+
+This section collects the core equations of Projection Relativity in one place. It is a reference map for the main derivations, not a separate derivation chain. The equations below summarize the internal metric, spectral operators, mode expansions, projection maps, compact boundary closure, and derived-status table used throughout the paper.
+
+The organizing structre is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+O_{\rm int}
+\rightarrow
+\{U_{n,m},\Lambda_{n,m}\}
+\rightarrow
+\{P_g,P_{\rm disp},P_A,P_X,P_\theta\}
+\rightarrow
+\text{observable projection sectors}.
+}
+\end{equation}
+The detailed sector derivations are given in the main text and in the later appendices. This reference sheet keeps the master structure visible.
+
+\subsection{Master Equation Matrix Expansion}
+\label{app:matrix-expansion}
+
+This subsection gives the full Projection Relativity matrix expansion used for visualization, bookkeeping, and linear analysis of the framework constructed in Section~\ref{sec:foundational_mathematical_structures}.
+
+\subsubsection{Internal Metric, Measure, and Hilbert Space}
+\label{app:internal-metric}
+
+The internal manifold is
+\begin{equation}
+\boxed{
+\mathcal M_{\rm int}
+=
+\mathbb R_w\times S^1_\theta,
+\qquad
+\xi^A=(w,\theta).
+}
+\end{equation}
+The minimal internal metric is
+\begin{equation}
+\boxed{
+G_{AB}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & R_A^2
+\end{pmatrix}.
+}
+\end{equation}
+The inverse metric is
+\begin{equation}
+\boxed{
+G^{AB}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & R_A^{-2}
+\end{pmatrix}.
+}
+\end{equation}
+The determinant is
+\begin{equation}
+\boxed{
+\det(G_{AB})=R_A^2.
+}
+\end{equation}
+The invariant internal measure is
+\begin{equation}
+\boxed{
+d\mu_{\rm int}
+=
+\sqrt{\det(G_{AB})}\,dw\,d\theta
+=
+R_A\,dw\,d\theta.
+}
+\end{equation}
+The projection Hilbert space is
+\begin{equation}
+\boxed{
+\mathcal H_P
+=
+L^2(\mathcal M_{\rm int},d\mu_{\rm int}).
+}
+\end{equation}
+The corresponding inner product is
+\begin{equation}
+\boxed{
+\langle f|g\rangle_P
+=
+\int_{\mathcal M_{\rm int}}
+d\mu_{\rm int}\,
+f^*(\xi)g(\xi).
+}
+\end{equation}
+
+\subsubsection{Laplace--Beltrami Operator}
+\label{app:laplace-beltrami}
+
+The scalar Laplace--Beltrami operator on the internal manifold is
+\begin{equation}
+\boxed{
+\Delta_G
+=
+\frac{1}{\sqrt{\det(G)}}
+\partial_A
+\left(
+\sqrt{\det(G)}
+G^{AB}
+\partial_B
+\right).
+}
+\end{equation}
+For stationary compact radius,
+\begin{equation}
+\boxed{
+\partial_wR_A=0,
+\qquad
+\partial_\theta R_A=0,
+}
+\end{equation}
+this reduces to
+\begin{equation}
+\boxed{
+\Delta_G
+=
+\partial_w^2
++
+R_A^{-2}\partial_\theta^2.
+}
+\end{equation}
+
+\subsubsection{Radial Spectral Operator}
+\label{app:radial-operator}
+
+The radial spectral operator is
+\begin{equation}
+\boxed{
+O_X
+=
+-\frac{d^2}{dw^2}
++
+V_X(w).
+}
+\end{equation}
+The positive quartic family is
+\begin{equation}
+\boxed{
+V_X(w)
+=
+\Lambda_X^2
+\left(
+1+a_2w^2+a_4w^4
+\right).
+}
+\end{equation}
+The Projection Relativity trace-selected radial branch is
+\begin{equation}
+\boxed{
+V_{X,\star}(w)
+=
+\Lambda_X^2
+\left(
+1+w^2+\frac{3}{4}w^4
+\right).
+}
+\end{equation}
+In the reference normalization \(\Lambda_X^2=1\), this is
+\begin{equation}
+\boxed{
+V_{X,\star}(w)
+=
+1+w^2+\frac{3}{4}w^4.
+}
+\end{equation}
+The radial eigenvalue equation is
+\begin{equation}
+\boxed{
+O_Xu_n
+=
+\lambda_nu_n.
+}
+\end{equation}
+
+\subsubsection{Compact Phase Operator}
+\label{app:compact-phase-operator}
+
+The compact phase operator is
+\begin{equation}
+\boxed{
+O_\theta
+=
+-\frac{1}{R_A^2}
+\frac{d^2}{d\theta^2}.
+}
+\end{equation}
+The normalized compact eigenmodes are
+\begin{equation}
+\boxed{
+v_m(\theta)
+=
+\frac{1}{\sqrt{2\pi R_A}}
+e^{im\theta},
+\qquad
+m\in\mathbb Z.
+}
+\end{equation}
+The compact eigenvalues are
+\begin{equation}
+\boxed{
+\lambda_m^{(\theta)}
+=
+\frac{m^2}{R_A^2}.
+}
+\end{equation}
+
+\subsubsection{Full Internal Spectral Operator}
+\label{app:internal-spectral-operator}
+
+The full internal operator is separable:
+\begin{equation}
+\boxed{
+O_{\rm int}
+=
+O_X+O_\theta.
+}
+\end{equation}
+In expanded form,
+\begin{equation}
+\boxed{
+O_{\rm int}
+=
+-\frac{d^2}{dw^2}
+-
+\frac{1}{R_A^2}
+\frac{d^2}{d\theta^2}
++
+V_X(w).
+}
+\end{equation}
+The internal eigenmodes factorize as
+\begin{equation}
+\boxed{
+U_{n,m}(w,\theta)
+=
+u_n(w)
+\frac{e^{im\theta}}{\sqrt{2\pi R_A}}.
+}
+\end{equation}
+The corresponding eigenvalues are
+\begin{equation}
+\boxed{
+\Lambda_{n,m}
+=
+\lambda_n
++
+\frac{m^2}{R_A^2}.
+}
+\end{equation}
+A schematic matrix representation is
+\begin{equation}
+\boxed{
+O_{\rm int}
+=
+\begin{pmatrix}
+\Lambda_{0,0} & 0 & 0 & \cdots \\
+0 & \Lambda_{0,1} & 0 & \cdots \\
+0 & 0 & \Lambda_{1,0} & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{pmatrix}.
+}
+\end{equation}
+
+\subsubsection{Master Field Expansion}
+\label{app:master-field-expansion}
+
+The master field expands in the internal spectral basis as
+\begin{equation}
+\boxed{
+\Psi(x,w,\theta)
+=
+\sum_{n,m}
+c_{n,m}(x)
+U_{n,m}(w,\theta).
+}
+\end{equation}
+Equivalently, in schematic coefficient-vector form,
+\begin{equation}
+\boxed{
+\Psi
+=
+\begin{pmatrix}
+\vdots \\
+c_{0,0}(x)U_{0,0} \\
+c_{0,1}(x)U_{0,1} \\
+c_{1,0}(x)U_{1,0} \\
+c_{1,1}(x)U_{1,1} \\
+\vdots
+\end{pmatrix}.
+}
+\end{equation}
+
+\subsubsection{Master Action}
+\label{app:master-action}
+
+Using the mostly-plus convention used in the main text, the master action is
+\begin{equation}
+\boxed{
+S_{\rm PR}
+=
+\int d^4x\,d\mu_{\rm int}
+\sqrt{-g_{\rm eff}}
+\left[
+-\frac12
+g_{\rm eff}^{\mu\nu}
+D_\mu\Psi^\dagger
+D_\nu\Psi
+-
+\frac12
+G^{AB}
+D_A\Psi^\dagger
+D_B\Psi
+-
+V_{\rm PR}
++
+\mathcal L_{\rm src}
+\right].
+}
+\end{equation}
+The internal kinetic structure is
+\begin{equation}
+\boxed{
+G^{AB}
+D_A\Psi^\dagger D_B\Psi
+=
+D_w\Psi^\dagger D_w\Psi
++
+R_A^{-2}
+D_\theta\Psi^\dagger D_\theta\Psi.
+}
+\end{equation}
+
+\subsubsection{Euler--Lagrange Spectral Equation}
+\label{app:euler}
+
+In the quadratic spectral regime, the master equation is
+\begin{equation}
+\boxed{
+(\square+O_{\rm int})\Psi=0.
+}
+\end{equation}
+The internal spectral equation is
+\begin{equation}
+\boxed{
+O_{\rm int}U_{n,m}
+=
+\Lambda_{n,m}U_{n,m}.
+}
+\end{equation}
+Substituting the mode expansion gives
+\begin{equation}
+\boxed{
+\sum_{n,m}
+\left[
+(\square c_{n,m})
++
+\Lambda_{n,m}c_{n,m}
+\right]
+U_{n,m}
+=
+0.
+}
+\end{equation}
+Projecting onto each orthonormal internal mode gives the observable spacetime equation
+\begin{equation}
+\boxed{
+(\square+\Lambda_{n,m})c_{n,m}(x)=0.
+}
+\end{equation}
+
+\subsubsection{Projection-Sector Dictionary}
+\label{app:projection-dictionary}
+
+The principal projection-sector maps are
+\begin{align}
+P_g[\Psi]
+&\rightarrow
+g_{\mu\nu}^{\rm eff},
+\\
+P_{\rm disp}[\Psi]
+&\rightarrow
+\Phi_{\rm disp}(x)
+\rightarrow
+A(x)
+\rightarrow
+A_{\rm phys}(x),
+\\
+P_A[\Psi]
+&\rightarrow
+\theta(x)
+\rightarrow
+\mathcal A_\mu(x),
+\\
+P_X[\Psi]
+&\rightarrow
+\Sigma_X,
+\\
+P_\theta[\Psi]
+&\rightarrow
+H_{\rm eff}(t).
+\end{align}
+
+\subsubsection{Spectral Gap Structure}
+\label{app:spectral-gap}
+
+The first radial spectral gap is
+\begin{equation}
+\boxed{
+\mu_{\min}^2
+=
+\lambda_1-\lambda_0.
+}
+\end{equation}
+In the reference radial branch,
+\begin{equation}
+\boxed{
+\lambda_0
+=
+2.322863529580,
+}
+\end{equation}
+\begin{equation}
+\boxed{
+\lambda_1
+=
+5.375830272676,
+}
+\end{equation}
+and
+\begin{equation}
+\boxed{
+\mu_{\min}^2
+=
+3.052966743096.
+}
+\end{equation}
+The corresponding positive gap scale is
+\begin{equation}
+\boxed{
+\mu_{\min}
+=
+1.747274089288.
+}
+\end{equation}
+The fourth-power suppression scale is
+\begin{equation}
+\boxed{
+\mu_{\min}^4
+=
+9.320605934450.
+}
+\end{equation}
+
+\subsubsection{Compact Boundary-Orientation Fine-Structure Closure}
+\label{app:compact-boundary-closure}
+
+This subsection gives the reference form of the boundary-resolved compact phase closure used in Section~\ref{sec:compact_phase_closure_alpha}. The compact boundary cofactor is not a calibrated correction. It is the terminal-word cofactor of the finite-rank compact return map.
+
+\subsubsection{Trace alphabet}
+\label{app:trace-alphabet}
+
+The compact and spatial trace fractions are
+\begin{equation}
+\boxed{
+T_A=\frac14,
+\qquad
+T_X=\frac34.
+}
+\end{equation}
+Compact returns are written as words in the symbol \(A\), weighted by powers of \(T_A\). Finite-rank boundary crossings are written as words containing one symbol \(X\), weighted by \(T_X\). The finite-rank slice is
+\begin{equation}
+\boxed{
+\Pi_{13}
+=
+|\phi_1\rangle\langle\phi_1|
++
+|\phi_3\rangle\langle\phi_3|.
+}
+\end{equation}
+
+\subsubsection{Interior compact recurrence.}
+\label{app:compact-recurrence}
+
+The compact interior has two primitive return loops, \(A^3\) and \(A^4\). The corresponding transfer matrix is
+\begin{equation}
+\boxed{
+M_A
+=
+\begin{pmatrix}
+T_A^3&T_A^4\\
+1&0
+\end{pmatrix}.
+}
+\end{equation}
+The Fredholm determinant is
+\begin{equation}
+\boxed{
+D_A
+=
+\det(I-M_A)
+=
+1-T_A^3-T_A^4.
+}
+\end{equation}
+For \(T_A=1/4\),
+\begin{equation}
+\boxed{
+D_A
+=
+1-\frac1{64}-\frac1{256}
+=
+\frac{251}{256}.
+}
+\end{equation}
+The inverse determinant \(D_A^{-1}\) resums recurrent compact interior paths. Terminal boundary words cannot include words already generated by this recurrent interior inverse.
+
+\subsubsection{Admissible terminal words.}
+\label{app:terminal-words}
+
+The finite-rank boundary admits the signed terminal words
+\begin{equation}
+\boxed{
+\operatorname{Adm}_{\Pi_{13}}
+=
+\{\epsilon,\ A^3,\ A^4,\ XA^5,\ -XA^8\}.
+}
+\end{equation}
+Their weights are
+\begin{equation}
+\boxed{
+1,
+\qquad
+T_A^3,
+\qquad
+T_A^4,
+\qquad
+T_XT_A^5,
+\qquad
+-T_XT_A^8.
+}
+\end{equation}
+The terms have the following roles:
+\begin{itemize}
+\item \(\epsilon\) is direct boundary passage.
+\item \(A^3\) is the primitive spatial-trace compact return.
+\item \(A^4\) is the primitive full-trace compact return.
+\item \(XA^5=XA^{2+3}\) is the first compact leave--return pair \(A^2\) followed by the spatial primitive return \(A^3\), weighted by \(X\).
+\item \(-XA^8=-XA^{4+4}\) is the finite-rank exclusion of double full-trace recirculation outside the \(\Pi_{13}\) slice.
+\end{itemize}
+
+\subsubsection{Uniqueness of the terminal cofactor.}
+\label{app:terminal-cofactor-uniqueness}
+
+The admissible set is unique within the tested finite-rank compact return class under compact closure, finite-rank terminality, parity/orientation, and inclusion--exclusion:
+\begin{itemize}
+\item \(X\), \(XA\), and \(XA^2\) are not compactly closed returns.
+\item \(XA^3\) and \(XA^4\) are not new boundary leakage terms; their compact parts are already primitive cofactor residues.
+\item \(XA^6=XA^{2+4}\) is an orientation-neutral full-trace boundary pairing and is absorbed into the recurrent Fredholm denominator.
+\item \(XA^7=XA^{3+4}\) factors into primitive interior returns and is determinant-resummed.
+\item \(XA^9, XA^{10},\ldots\) factor through recurrent compact interior paths or higher boundary recirculations and belong to \(D_A^{-1}\), not to the terminal cofactor.
+\end{itemize}
+
+\subsubsection{Terminal cofactor.}
+\label{app:terminal-cofactor}
+
+The terminal cofactor is
+\begin{equation}
+\boxed{
+N_{\rm bc}
+=
+1+T_A^3+T_A^4+T_X(T_A^5-T_A^8).
+}
+\end{equation}
+For \(T_A=1/4\) and \(T_X=3/4\),
+\begin{equation}
+\boxed{
+N_{\rm bc}
+=
+1+\frac1{64}+\frac1{256}
++
+\frac34\left(\frac1{1024}-\frac1{65536}\right)
+=
+\frac{267453}{262144}.
+}
+\end{equation}
+
+\subsubsection{Boundary-resolved compact return.}
+\label{app:boundary-return}
+
+The compact boundary return is the cofactor divided by the Fredholm determinant:
+\begin{equation}
+\boxed{
+R_{\rm bc}
+=
+\frac{N_{\rm bc}}{D_A}
+=
+\frac{
+1+T_A^3+T_A^4+T_X(T_A^5-T_A^8)
+}{
+1-T_A^3-T_A^4
+}.
+}
+\end{equation}
+The compact boundary constant entering the finite-rank spatial projection is
+\begin{equation}
+\boxed{
+c_{\rm bc}
+=
+T_X
+\left[
+1+T_A^2
+-
+T_A^6R_{\rm bc}
+\right].
+}
+\end{equation}
+Equivalently,
+\begin{equation}
+\boxed{
+c_{\rm bc}
+=
+T_X
+\left[
+1+T_A^2
+-
+T_A^6
+\frac{
+1+T_A^3+T_A^4+T_X(T_A^5-T_A^8)
+}{
+1-T_A^3-T_A^4
+}
+\right].
+}
+\end{equation}
+Substitution gives
+\begin{equation}
+\boxed{
+c_{\rm bc}
+=
+\frac{3354902985}{4211081216}
+=
+0.7966844648478991.
+}
+\end{equation}
+
+\subsubsection{Finite-rank projection and leakage.}
+\label{app:finite-rank-leakage}
+
+The boundary-resolved projection operator is
+\begin{equation}
+\boxed{
+P_{\rm geom}^{\rm bc}
+=
+\Pi_{13}K_X^2
+\left(
+c_{\rm bc}+w^2+\frac34w^4
+\right)
+K_X^2\Pi_{13}.
+}
+\end{equation}
+The normalized stiffness operator is
+\begin{equation}
+\boxed{
+K_X
+=
+\frac{O_X-\lambda_0}{\lambda_1-\lambda_0}.
+}
+\end{equation}
+The finite-rank leakage probabilities are
+\begin{equation}
+\boxed{
+p_1=7.6528903366\times10^{-4},
+\qquad
+p_3=1-p_1.
+}
+\end{equation}
+The compact closure requires the finite-rank radial datum
+\begin{equation}
+\boxed{
+\lambda_3
+=
+13.23388439508096.
+}
+\end{equation}
+With
+\begin{equation}
+\boxed{
+q_1=\lambda_1-\lambda_0,
+\qquad
+q_3=\lambda_3-\lambda_0,
+}
+\end{equation}
+the effective compact stiffness is
+\begin{equation}
+\boxed{
+q_{\rm bc}
+=
+R_{A,\star}^{-2}
+=
+p_1q_1+(1-p_1)q_3.
+}
+\end{equation}
+Numerically,
+\begin{equation}
+\boxed{
+q_{\rm bc}
+=
+10.905007182855176.
+}
+\end{equation}
+The boundary-resolved compact normalization is
+\begin{equation}
+\boxed{
+\alpha_{{\rm PR},bc}^{-1}
+=
+4\pi q_{\rm bc}
+=
+137.036361812007.
+}
+\end{equation}
+This value is an output of the boundary-resolved compact projection chain. It is not used to choose \(c_{\rm bc}\), \(p_1\), \(R_A\), or \(C_A\).
+
+\subsubsection{Full Master Chain}
+\label{app:full-master-chain}
+
+The complete reference chain is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+O_{\rm int}
+\rightarrow
+\{U_{n,m},\Lambda_{n,m}\}
+\rightarrow
+\{P_g,P_{\rm disp},P_A,P_X,P_\theta\}
+\rightarrow
+\{g_{\mu\nu}^{\rm eff},A_{\rm phys},\mathcal A_\mu,\Sigma_X,H_{\rm eff}\}.
+}
+\end{equation}
+
+\subsection{Status of Assumptions and Derived Quantities}
+\label{app:status}
+
+The assumptions, constraints, projection maps, and derived quantities introduced in Sections~\ref{sec:master_projection_field_foundational_postulates} and~\ref{sec:foundational_mathematical_structures} are summarized below. Quantities labeled ``Postulated'' are part of the minimal PR foundation. Quantities labeled ``Derived'' follow from the internal geometry, projection Hilbert space, projection trace, compact boundary map, or spectral operator structure. Quantities labeled ``Numerically derived'' or ``Numerically evaluated derived output'' are obtained by evaluating the corresponding derived operator without fitting the target observable.
+
+\providecommand{\tblcell}[1]{\begin{minipage}[t]{\linewidth}\raggedright #1\end{minipage}}
+
+\begingroup
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.28}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.57\textwidth}@{}}
+\caption{Status of assumptions and derived quantities in the PR master-equation architecture.}
+\label{tab:status-assumptions-derived}
+\\
+\toprule
+\textbf{Quantity} & \textbf{Status} & \textbf{PR-native origin} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Quantity} & \textbf{Status} & \textbf{PR-native origin} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{3}{r}{\emph{continued on next page}}\\
+\midrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+\(\Psi(x,\xi)\) &
+Postulated &
+\tblcell{Master projection field defined over observable spacetime and the internal spectral manifold.} \\
+
+\(\xi^A=(w,\theta)\) &
+Postulated coordinates &
+\tblcell{Internal coordinates consisting of radial spectral coordinate \(w\) and compact phase coordinate \(\theta\).} \\
+
+\(\mathcal M_{\rm int}\) &
+Postulated topology &
+\tblcell{Minimal internal projection manifold supplying radial stiffness and compact phase winding:
+\[
+\mathcal M_{\rm int}=\mathbb R_w\times S^1_\theta .
+\]} \\
+
+\(\theta\sim\theta+2\pi n\) &
+Topological constraint &
+\tblcell{Compact phase identification defining the \(S^1_\theta\) projection fiber, with \(n\in\mathbb Z\).} \\
+
+\(G_{AB}\) &
+Derived geometry &
+\tblcell{Internal metric tensor obtained from the separable cylindrical line element:
+\[
+G_{AB}=\mathrm{diag}(1,R_A^2),
+\qquad
+ds_{\rm int}^2=dw^2+R_A^2d\theta^2 .
+\]} \\
+
+\(G^{AB}\) &
+Derived geometry &
+\tblcell{Inverse internal metric used in the internal Laplace--Beltrami operator:
+\[
+G^{AB}=\mathrm{diag}(1,R_A^{-2}).
+\]} \\
+
+\(d\mu_{\rm int}\) &
+Derived geometry &
+\tblcell{Invariant internal measure derived from \(\sqrt{\det(G_{AB})}\):
+\[
+d\mu_{\rm int}=R_A\,dw\,d\theta .
+\]} \\
+
+\(\mathcal H_P\) &
+Derived Hilbert structure &
+\tblcell{Projection Hilbert space used for internal normalization, overlap, and spectral expansion:
+\[
+\mathcal H_P=L^2(\mathcal M_{\rm int},d\mu_{\rm int}).
+\]} \\
+
+\(\langle f|g\rangle_P\) &
+Derived Hilbert structure &
+\tblcell{Internal inner product fixed by the invariant measure:
+\[
+\langle f|g\rangle_P
+=
+\int_{\mathcal M_{\rm int}}d\mu_{\rm int}\,f^*(\xi)g(\xi).
+\]} \\
+
+\(O_X\) &
+Postulated radial operator &
+\tblcell{Minimal radial spectral operator defining internal stiffness and confinement:
+\[
+O_X=-\frac{d^2}{dw^2}+V_X(w).
+\]} \\
+
+\(V_{X,\star}(w)\) &
+Derived projection-trace branch &
+\tblcell{Projection-trace radial branch:
+\[
+V_{X,\star}(w)
+=
+\Lambda_X^2\left(1+w^2+\frac34w^4\right).
+\]
+The quadratic coefficient \(a_2=1\) follows from unit local radial stiffness; the quartic coefficient \(a_4=3/4\) follows from the \(3+1\) projection trace. They are derived branch coefficients, not selected fit parameters.} \\
+
+\(a_2=1\) &
+Derived coefficient &
+\tblcell{Unit local radial stiffness of the projection-trace radial branch.} \\
+
+\(a_4=3/4\) &
+Derived coefficient &
+\tblcell{Projection-trace coefficient from the observable spatial trace relative to the full \(3+1\) trace.} \\
+
+\(O_\theta\) &
+Derived compact operator &
+\tblcell{Compact phase operator obtained from the \(S^1_\theta\) Laplace--Beltrami sector:
+\[
+O_\theta=-\frac{1}{R_A^2}\frac{d^2}{d\theta^2}.
+\]} \\
+
+\(O_{\rm int}\) &
+Derived internal operator &
+\tblcell{Separable internal spectral operator combining radial stiffness and compact phase winding:
+\[
+O_{\rm int}=O_X+O_\theta .
+\]} \\
+
+\(u_n(w)\) &
+Derived spectral mode &
+\tblcell{Radial eigenmodes satisfying \(O_Xu_n=\lambda_nu_n\).} \\
+
+\(v_m(\theta)\) &
+Derived analytic mode &
+\tblcell{Compact phase eigenmodes satisfying periodicity on \(S^1_\theta\):
+\[
+v_m(\theta)=\frac{1}{\sqrt{2\pi R_A}}e^{im\theta}.
+\]} \\
+
+\(\lambda_m^{(\theta)}\) &
+Derived analytic eigenvalue &
+\tblcell{Compact phase winding eigenvalues obtained from \(O_\theta v_m=\lambda_m^{(\theta)}v_m\):
+\[
+\lambda_m^{(\theta)}=\frac{m^2}{R_A^2}.
+\]} \\
+
+\(U_{n,m}\) &
+Derived spectral basis &
+\tblcell{Full separable internal spectral basis built from radial and compact eigenmodes:
+\[
+U_{n,m}(w,\theta)=u_n(w)v_m(\theta).
+\]} \\
+
+\(\Lambda_{n,m}\) &
+Derived spectral eigenvalue &
+\tblcell{Full internal eigenvalue obtained from separability of \(O_{\rm int}\):
+\[
+\Lambda_{n,m}=\lambda_n+\frac{m^2}{R_A^2}.
+\]} \\
+
+\(\lambda_0\) &
+Numerically derived &
+\tblcell{Ground-state radial eigenvalue from the stationary radial spectral operator:
+\[
+\lambda_0=2.322863529580.
+\]} \\
+
+\(\lambda_1\) &
+Numerically derived &
+\tblcell{First excited radial eigenvalue from the stationary radial spectral operator:
+\[
+\lambda_1=5.375830272676.
+\]} \\
+
+\(\lambda_3\) &
+Numerically evaluated derived output &
+\tblcell{Finite-rank radial spectral datum required by the compact boundary-resolved closure:
+\[
+\lambda_3=13.23388439508096.
+\]
+Together with \(p_1\), \(\lambda_0\), and \(\lambda_1\), this gives
+\[
+q_{\rm bc}
+=
+p_1(\lambda_1-\lambda_0)
++
+(1-p_1)(\lambda_3-\lambda_0)
+=
+10.905007182855176.
+\]} \\
+
+\(\mu_{\min}^2\) &
+Numerically derived &
+\tblcell{First radial spectral gap; universal PR stiffness scale for finite-core regularization and low-energy suppression:
+\[
+\mu_{\min}^2=\lambda_1-\lambda_0=3.052966743096.
+\]} \\
+
+\(R_{\max}\) &
+Derived hierarchy scale &
+\tblcell{Maximum projection-curvature scale induced by the radial spectral stiffness scale \(\mu_{\min}^2\).} \\
+
+\(r_c\) &
+Derived hierarchy scale &
+\tblcell{Finite-core saturation radius obtained from the hierarchy \(\mu_{\min}^2\rightarrow R_{\max}\rightarrow r_c\):
+\[
+r_c=\left(\frac{G_NM}{c^2R_{\max}}\right)^{1/3}.
+\]} \\
+
+\(\{P_i\}\) &
+Defined projection maps &
+\tblcell{Observable sector projections acting on the single master field:
+\[
+\{P_i\}=\{P_g,P_{\rm disp},P_A,P_X,P_\theta\}.
+\]} \\
+
+\(P_g[\Psi]\) &
+Derived projection sector &
+\tblcell{Gravitational stiffness projection generating the effective spacetime metric:
+\[
+P_g[\Psi]\rightarrow g_{\mu\nu}^{\rm eff}.
+\]} \\
+
+\(P_{\rm disp}[\Psi]\) &
+Derived projection sector &
+\tblcell{Complex displacement projection amplitude extracted from the master field:
+\[
+P_{\rm disp}[\Psi]\rightarrow\Phi_{\rm disp}(x).
+\]} \\
+
+\(\Phi_{\rm disp}(x)\) &
+Derived projection structure &
+\tblcell{Amplitude--phase decomposition of the displacement-projected field:
+\[
+\Phi_{\rm disp}(x)=A(x)e^{i\theta(x)}.
+\]} \\
+
+\(A(x)\) &
+Derived displacement amplitude &
+\tblcell{Raw scalar displacement amplitude obtained from the modulus of the displacement projection:
+\[
+A(x)=|\Phi_{\rm disp}(x)|.
+\]} \\
+
+\(Z_{\rm disp}\) &
+Derived normalization &
+\tblcell{Spectral normalization of the internal displacement profile:
+\[
+Z_{\rm disp}=\langle\Xi_{\rm disp}|\Xi_{\rm disp}\rangle_P.
+\]} \\
+
+\(A_{\rm phys}(x)\) &
+Derived physical field &
+\tblcell{Canonically normalized observable displacement amplitude:
+\[
+A_{\rm phys}(x)=\sqrt{Z_{\rm disp}}\,A(x).
+\]} \\
+
+\(A_0^2\) &
+Derived vacuum quantity &
+\tblcell{Stable nonzero displacement vacuum from the bounded displacement potential \(V_{\rm disp}(A)=V_0+\alpha_AA^2+\beta_AA^4\):
+\[
+A_0^2=-\frac{\alpha_A}{2\beta_A}.
+\]} \\
+
+\(v_A\) &
+Derived vacuum quantity &
+\tblcell{Canonically normalized displacement vacuum:
+\[
+v_A=\sqrt{Z_{\rm disp}}A_0.
+\]} \\
+
+\(m_A^2\) &
+Derived curvature mode &
+\tblcell{Positive displacement-curvature scale about the stable nonzero displacement vacuum:
+\[
+m_A^2=
+\left.\frac{d^2V_{\rm disp}}{dA^2}\right|_{A_0}
+=-4\alpha_A=8\beta_AA_0^2.
+\]} \\
+
+\(\mathcal M_{\rm eff}\) &
+Derived inertia scale &
+\tblcell{Effective matter inertia generated by displacement vacuum weighted by internal matter--displacement overlap:
+\[
+\mathcal M_{\rm eff}=g_0\mathcal I_AA_0.
+\]} \\
+
+\(T_{\mu\nu}^{({\rm disp})}\) &
+Derived source tensor &
+\tblcell{Displacement-sector stress-energy contribution sourcing the gravitational stiffness projection.} \\
+
+\(P_A[\Psi]\) &
+Derived projection sector &
+\tblcell{Compact phase projection generating the observable electromagnetic gauge connection:
+\[
+P_A[\Psi]\rightarrow\theta(x)\rightarrow\mathcal A_\mu(x).
+\]} \\
+
+\(X_\mu\) &
+Derived gauge-invariant structure &
+\tblcell{Compact phase-gradient combination invariant under local phase reparameterization:
+\[
+X_\mu=\partial_\mu\theta-q\mathcal A_\mu.
+\]} \\
+
+\(F_{\mu\nu}\) &
+Derived low-energy field strength &
+\tblcell{Observable electromagnetic field strength emerging in the low-energy compact phase limit:
+\[
+F_{\mu\nu}=\partial_\mu\mathcal A_\nu-\partial_\nu\mathcal A_\mu.
+\]} \\
+
+\(T_A,\,T_X\) &
+Derived trace split &
+\tblcell{Compact/spatial trace fractions of the \(3+1\) projection:
+\[
+T_A=\frac14,
+\qquad
+T_X=\frac34.
+\]
+These are fixed by the projection trace, not by calibration.} \\
+
+\(\Pi_{13}\) &
+Derived finite-rank slice &
+\tblcell{Finite odd spatial-trace slice selected by the fundamental compact electromagnetic winding:
+\[
+\Pi_{13}=|\phi_1\rangle\langle\phi_1|+|\phi_3\rangle\langle\phi_3|.
+\]
+The \(n=3\) channel is the dominant spatial-trace radial lock; the \(n=1\) channel is the parity-compatible coherence tail.} \\
+
+\(K_X\) &
+Derived normalized stiffness operator &
+\tblcell{Dimensionless radial stiffness operator normalized by the first radial spectral gap:
+\[
+K_X=\frac{O_X-\lambda_0}{\lambda_1-\lambda_0},
+\qquad
+\mu_{\min}^2=\lambda_1-\lambda_0.
+\]} \\
+
+\(M_A\) &
+Derived compact-return matrix &
+\tblcell{Finite compact-return transfer matrix generated by the primitive compact trace returns \(A^3\) and \(A^4\):
+\[
+M_A=
+\begin{pmatrix}
+T_A^3&T_A^4\\
+1&0
+\end{pmatrix}.
+\]} \\
+
+\(D_A\) &
+Derived Fredholm determinant &
+\tblcell{Compact-return Fredholm determinant resumming recurrent interior compact paths:
+\[
+D_A=\det(I-M_A)=1-T_A^3-T_A^4.
+\]
+For \(T_A=1/4\), \(D_A=251/256\).} \\
+
+\(\operatorname{Adm}_{\Pi_{13}}\) &
+Derived admissible boundary words &
+\tblcell{Finite-rank terminal word set of the compact boundary map:
+\[
+\operatorname{Adm}_{\Pi_{13}}
+=
+\{\epsilon,\ A^3,\ A^4,\ XA^5,\ -XA^8\}.
+\]
+The terms represent direct passage, primitive compact returns, spatially weighted boundary leakage, and double full-trace exclusion required by finite-rank projection consistency.} \\
+
+\(N_{\rm bc}\) &
+Derived boundary cofactor &
+\tblcell{Boundary-orientation cofactor obtained from the admissible terminal word set:
+\[
+N_{\rm bc}=1+T_A^3+T_A^4+T_X(T_A^5-T_A^8).
+\]
+This is not a fitted correction; it is the signed boundary cofactor of the finite-rank compact return map.} \\
+
+\(c_{\rm bc}\) &
+Derived compact boundary constant &
+\tblcell{Compact boundary constant produced by the finite-rank Fredholm determinant and boundary cofactor:
+\[
+\begin{aligned}
+c_{\rm bc}
+&=
+T_X\left[
+1+T_A^2
+-
+T_A^6\frac{N_{\rm bc}}{D_A}
+\right],\\
+c_{\rm bc}
+&=
+\frac{3354902985}{4211081216}
+=
+0.7966844648478991.
+\end{aligned}
+\]} \\
+
+\(P_{\rm geom}^{\rm bc}\) &
+Derived finite-rank projection operator &
+\tblcell{Compact boundary-orientation projection operator acting on the finite odd spatial slice:
+\[
+P_{\rm geom}^{\rm bc}
+=
+\Pi_{13}K_X^2
+\left(
+c_{\rm bc}+w^2+\frac34w^4
+\right)
+K_X^2\Pi_{13}.
+\]
+This replaces scalar-kernel treatments of the compact projection and preserves the finite-rank orthogonal-slice structure.} \\
+
+\(p_1^{\rm bc}\) &
+Numerically evaluated derived output &
+\tblcell{Parity-compatible coherence-tail probability produced by \(P_{\rm geom}^{\rm bc}\):
+\[
+p_1^{\rm bc}=7.6528903366\times10^{-4}.
+\]
+This lowers the dominant \(n=3\) radial lock to the compact boundary-resolved value.} \\
+
+\(R_{A,\star}^{-2}=Z_A\) &
+Derived compact stiffness &
+\tblcell{Stationary compact phase stiffness generated by the finite-rank compact boundary map. This is the compact electromagnetic normalization entering \(\alpha_{\rm PR}^{-1}=4\pi Z_A\).} \\
+
+\(C_A\) &
+Derived compact/radial closure ratio &
+\tblcell{Macroscopic compact-to-radial closure ratio fixed by compact/radial stationarity:
+\[
+C_A=\frac{R_{A,\star}^{-2}}{\mu_{\min}^2}.
+\]
+It is not independent of the compact coherence expectation.} \\
+
+\(\kappa_{\rm eff}\) &
+Derived under boundary-orientation closure &
+\tblcell{Microscopic compact coherence expectation explaining the macroscopic closure ratio:
+\[
+\kappa_{\rm eff}
+=
+\langle\Omega_A|\widehat{\kappa}_A|\Omega_A\rangle_P
+=
+C_A.
+\]
+Under the finite-rank boundary-orientation lemma, stationarity locks \(\kappa_{\rm eff}=C_A\).} \\
+
+\(\alpha_{{\rm PR},bc}^{-1}\) &
+Derived compact-boundary output &
+\tblcell{Fine-structure normalization produced by the compact boundary map. The low-energy laboratory value is not used as an input:
+\[
+\alpha_{{\rm PR},bc}^{-1}
+=
+4\pi R_{A,\star}^{-2}
+=
+137.036361812007,
+\]
+at current nonperturbative precision.} \\
+
+\(P_X[\Psi]\) &
+Derived response sector &
+\tblcell{Projection response sector encoding internal spectral self-energy corrections:
+\[
+P_X[\Psi]\rightarrow\Sigma_X.
+\]} \\
+
+\(\rho_X(\mu^2)\) &
+Derived spectral density &
+\tblcell{Internal excitation density with support only above the radial gap \(\mu_{\min}^2\).} \\
+
+\(F(k^2)\) &
+Derived response kernel &
+\tblcell{Subtracted projection self-energy kernel satisfying \(F(0)=0\), preserving the massless low-energy spin--2 pole.} \\
+
+\(F_E(k^2)\) &
+Derived residual kernel &
+\tblcell{Newton-normalized residual projection kernel obeying
+\[
+F_E(k^2)=O(k^4)
+\]
+in the low-energy exterior limit.} \\
+
+\(\widehat{\Sigma}_{X}^{\rm GW}\) &
+Derived GW response &
+\tblcell{Projection self-energy correction acting on the Kerr/Teukolsky gravitational-wave operator:
+\[
+\widehat{\Sigma}_{X}^{\rm GW}
+=
+-F_E(O_{\rm Teuk}^{(s)}).
+\]} \\
+
+\(P_\theta[\Psi]\) &
+Derived homogeneous response &
+\tblcell{Homogeneous compact phase response sector used for large-scale projection-energy bookkeeping:
+\[
+P_\theta[\Psi]\rightarrow H_{\rm eff}(t).
+\]} \\
+
+\end{longtable}
+
+\endgroup
+
+\section{Gravitational Projection Chain}
+\label{sec:gravitational_projection_chain}
+
+The gravitational sector is the stiffness projection of the master field. This
+appendix collects the chain by which the internal spectral amplitudes generate
+the metric seed tensor, the determinant-normalized effective metric, the
+trace-free weak-field Einstein equation, the finite-core saturation scale, and
+the Kerr exterior recovery. The purpose is to provide the derivation ledger for
+the gravitational equations used in the main text, not to introduce an
+independent gravitational postulate.
+
+\subsection{Internal Mode Amplitudes}
+
+The master projection field is defined over observable spacetime and the
+internal spectral manifold,
+\begin{equation}
+\Psi=\Psi(x,\xi).
+\end{equation}
+Using the internal spectral basis, the field expands as
+\begin{equation}
+\boxed{
+\Psi(x,\xi)
+=
+\sum_{n,m}
+c_{n,m}(x)U_{n,m}(\xi).
+}
+\end{equation}
+The internal modes satisfy
+\begin{equation}
+\boxed{
+O_{\rm int}U_{n,m}
+=
+\Lambda_{n,m}U_{n,m},
+}
+\end{equation}
+with orthonormality
+\begin{equation}
+\boxed{
+\int_{\mathcal M_{\rm int}}
+d\mu_{\rm int}\,
+U_{j,k}^{*}(\xi)U_{n,m}(\xi)
+=
+\delta_{jn}\delta_{km}.
+}
+\end{equation}
+The observable spacetime dependence is carried by the coefficients
+\(c_{n,m}(x)\), while the internal stiffness data are carried by
+\(\Lambda_{n,m}\).
+
+\subsection{Metric Seed Tensor}
+
+The gravitational projection begins with the symmetric bilinear seed tensor
+\begin{equation}
+\boxed{
+Q_{\mu\nu}(x)
+=
+\int_{\mathcal M_{\rm int}}
+d\mu_{\rm int}
+\left[
+\partial_\mu\Psi^\dagger
+\partial_\nu\Psi
++
+\partial_\nu\Psi^\dagger
+\partial_\mu\Psi
+\right].
+}
+\end{equation}
+This tensor is manifestly symmetric:
+\begin{equation}
+\boxed{
+Q_{\mu\nu}=Q_{\nu\mu}.
+}
+\end{equation}
+
+Substituting the spectral expansion gives
+\begin{equation}
+\partial_\mu\Psi
+=
+\sum_{n,m}
+(\partial_\mu c_{n,m})U_{n,m},
+\qquad
+\partial_\mu U_{n,m}(\xi)=0.
+\end{equation}
+The conjugate derivative is
+\begin{equation}
+\partial_\mu\Psi^\dagger
+=
+\sum_{j,k}
+(\partial_\mu c_{j,k}^{*})U_{j,k}^{*}.
+\end{equation}
+Using the orthonormality relation, the internal integral collapses:
+\begin{equation}
+\int d\mu_{\rm int}\,
+\partial_\mu\Psi^\dagger\partial_\nu\Psi
+=
+\sum_{n,m}
+(\partial_\mu c_{n,m}^{*})
+(\partial_\nu c_{n,m}).
+\end{equation}
+The seed tensor is therefore
+\begin{equation}
+\boxed{
+Q_{\mu\nu}
+=
+\sum_{n,m}
+\left[
+\partial_\mu c_{n,m}^{*}
+\partial_\nu c_{n,m}
++
+\partial_\nu c_{n,m}^{*}
+\partial_\mu c_{n,m}
+\right]
+=
+2\,{\rm Re}
+\left[
+\sum_{n,m}
+\partial_\mu c_{n,m}^{*}
+\partial_\nu c_{n,m}
+\right].
+}
+\end{equation}
+This is the observable stiffness tensor of the projected spectral amplitudes.
+
+\subsection{Determinant-Normalized Effective Metric}
+
+The seed tensor still contains an arbitrary conformal scale. The projected
+metric removes that scale by determinant normalization:
+\begin{equation}
+\boxed{
+g_{\mu\nu}^{\rm eff}
+=
+\frac{Q_{\mu\nu}}{|\det Q|^{1/4}}.
+}
+\end{equation}
+The exponent \(1/4\) is fixed by the four observable spacetime dimensions. If
+\(Q_{\mu\nu}\rightarrow sQ_{\mu\nu}\), then:
+\begin{equation}
+\det(sQ)=s^4\det Q,
+\qquad
+|\det(sQ)|^{1/4}=s|\det Q|^{1/4},
+\end{equation}
+so the normalized metric is invariant:
+\begin{equation}
+\boxed{
+Q_{\mu\nu}\rightarrow sQ_{\mu\nu}
+\quad
+\Longrightarrow
+\quad
+g_{\mu\nu}^{\rm eff}\rightarrow g_{\mu\nu}^{\rm eff}.
+}
+\end{equation}
+Its determinant is
+\begin{equation}
+\det(g_{\mu\nu}^{\rm eff})
+=
+\frac{\det Q}{|\det Q|}
+=
+{\rm sgn}(\det Q).
+\end{equation}
+For Lorentzian signature,
+\begin{equation}
+\boxed{
+\det(g_{\mu\nu}^{\rm eff})=-1.
+}
+\end{equation}
+The determinant-normalized projection therefore removes the local volume-scale
+degree of freedom while preserving the Lorentzian causal structure.
+
+\subsection{Trace-Free Weak-Field Limit}
+
+In the weak-field regime, write
+\begin{equation}
+Q_{\mu\nu}
+=
+\eta_{\mu\nu}+q_{\mu\nu},
+\qquad
+|q_{\mu\nu}|\ll1,
+\end{equation}
+and define
+\begin{equation}
+q=\eta^{\mu\nu}q_{\mu\nu}.
+\end{equation}
+To first order,
+\begin{equation}
+|\det Q|^{-1/4}
+=
+1-\frac14 q+O(q^2).
+\end{equation}
+The determinant-normalized metric becomes
+\begin{equation}
+g_{\mu\nu}^{\rm eff}
+=
+\eta_{\mu\nu}
++
+q_{\mu\nu}
+-
+\frac14\eta_{\mu\nu}q
++
+O(q^2).
+\end{equation}
+Thus the physical perturbation is
+\begin{equation}
+\boxed{
+h_{\mu\nu}
+=
+q_{\mu\nu}
+-
+\frac14\eta_{\mu\nu}q.
+}
+\end{equation}
+Taking the trace gives
+\begin{equation}
+\boxed{
+h=\eta^{\mu\nu}h_{\mu\nu}=0.
+}
+\end{equation}
+
+In Lorenz gauge,
+\begin{equation}
+\partial^\mu h_{\mu\nu}=0,
+\end{equation}
+the linearized Ricci tensor reduces to
+\begin{equation}
+R_{\mu\nu}^{(1)}
+=
+-\frac12\Box h_{\mu\nu}.
+\end{equation}
+Because the determinant-normalized perturbation is trace-free, the directly
+projected weak-field equation couples to the trace-free source combination:
+\begin{equation}
+\boxed{
+R_{\mu\nu}^{(1)}
+-
+\frac14\eta_{\mu\nu}R^{(1)}
+=
+\frac{8\pi G_N}{c^4}
+\left(
+T_{\mu\nu}
+-
+\frac14\eta_{\mu\nu}T
+\right).
+}
+\end{equation}
+In trace-free Lorenz gauge this becomes
+\begin{equation}
+\boxed{
+-\frac12\Box h_{\mu\nu}
+=
+\frac{8\pi G_N}{c^4}
+\left(
+T_{\mu\nu}
+-
+\frac14\eta_{\mu\nu}T
+\right).
+}
+\end{equation}
+Both sides are trace-free. Stress-energy conservation and the contracted Bianchi
+identity restore the standard Einstein equation up to the usual cosmological
+integration constant:
+\begin{equation}
+\boxed{
+G_{\mu\nu}
++
+\Lambda g_{\mu\nu}
+=
+\frac{8\pi G_N}{c^4}T_{\mu\nu}.
+}
+\end{equation}
+The determinant-normalized gravitational projection therefore recovers the
+Einstein limit through the unimodular trace-free form.
+
+\subsection{Finite-Core Saturation}
+
+The radial projection branch has a nonzero first spectral gap,
+\begin{equation}
+\boxed{
+\mu_{\min}^2
+=
+\lambda_1-\lambda_0
+=
+3.052966743096.
+}
+\end{equation}
+This gap sets a finite curvature ceiling,
+\begin{equation}
+\boxed{
+R_{\max}
+=
+\chi_R\Lambda_X^2\mu_{\min}^2
+<
+\infty,
+}
+\end{equation}
+where \(\chi_R\) is the fixed projection conversion from internal stiffness units
+to macroscopic curvature units.
+
+Matching the exterior Schwarzschild curvature scale to the projection ceiling,
+\begin{equation}
+R_{\rm GR}(r)
+=
+\frac{G_NM}{c^2r^3}
+=
+R_{\max},
+\end{equation}
+gives the finite-core radius
+\begin{equation}
+\boxed{
+r_c(M)
+=
+\left(
+\frac{G_NM}{c^2R_{\max}}
+\right)^{1/3}.
+}
+\end{equation}
+Since \(R_{\max}<\infty\), the core radius is strictly positive:
+\begin{equation}
+\boxed{
+r_c>0.
+}
+\end{equation}
+
+A minimal regularized mass profile satisfying exterior recovery and central
+volume scaling is
+\begin{equation}
+\boxed{
+m_{\rm PR}(r)
+=
+M
+\frac{r^3}{r^3+r_c^3}.
+}
+\end{equation}
+The central density is finite:
+\begin{equation}
+\boxed{
+\rho_{\rm eff}(0)
+=
+\frac{3M}{4\pi r_c^3}
+=
+\frac{3c^2R_{\max}}{4\pi G_N}
+\equiv
+\rho_{\max}
+<
+\infty.
+}
+\end{equation}
+The corresponding core curvature invariant is bounded:
+\begin{equation}
+\boxed{
+K_{\rm core}
+=
+96R_{\max}^2
+<
+\infty.
+}
+\end{equation}
+The finite-core regularization chain is
+\begin{equation}
+\boxed{
+\mu_{\min}^2>0
+\quad\Longrightarrow\quad
+R_{\max}<\infty
+\quad\Longrightarrow\quad
+r_c>0
+\quad\Longrightarrow\quad
+\rho_{\max}<\infty
+\quad\Longrightarrow\quad
+K_{\rm PR}(0)<\infty.
+}
+\end{equation}
+
+\subsection{Exterior Kerr Recovery}
+
+Outside the finite projection core,
+\begin{equation}
+r>r_c,
+\end{equation}
+the ordinary matter source vanishes in the exterior vacuum region:
+\begin{equation}
+T_{\mu\nu}=0.
+\end{equation}
+The projection correction is also suppressed in the low-energy exterior:
+\begin{equation}
+\Delta_{\mu\nu}^{(P)}\rightarrow0.
+\end{equation}
+The exterior field equation reduces to
+\begin{equation}
+G_{\mu\nu}[g^{\rm eff}]=0.
+\end{equation}
+Taking the trace gives
+\begin{equation}
+R=0,
+\end{equation}
+and substituting back gives
+\begin{equation}
+\boxed{
+R_{\mu\nu}=0,
+\qquad
+r>r_c.
+}
+\end{equation}
+
+For stationary, axisymmetric, asymptotically flat exterior boundary conditions
+with mass \(M\) and angular momentum \(J\), the vacuum solution is Kerr. Define
+\begin{equation}
+\mathcal M
+=
+\frac{G_NM}{c^2},
+\qquad
+a
+=
+\frac{J}{Mc}.
+\end{equation}
+The Kerr structure functions are
+\begin{equation}
+\Sigma_K
+=
+r^2+a^2\cos^2\theta,
+\qquad
+\Delta_K
+=
+r^2-2\mathcal M r+a^2.
+\end{equation}
+Projection Relativity allows finite-core corrections only in the interior:
+\begin{equation}
+\Sigma_{\rm PR}
+=
+\Sigma_K+\delta\Sigma,
+\qquad
+\Delta_{\rm PR}
+=
+\Delta_K+\delta\Delta.
+\end{equation}
+Exterior recovery imposes
+\begin{equation}
+\boxed{
+\delta\Sigma=0,
+\qquad
+\delta\Delta=0,
+\qquad
+r>r_c.
+}
+\end{equation}
+Therefore,
+\begin{equation}
+\boxed{
+g_{\mu\nu}^{\rm PR}
+=
+g_{\mu\nu}^{\rm Kerr},
+\qquad
+r>r_c.
+}
+\end{equation}
+
+\subsection{Closed Gravitational Projection Sequence}
+
+The gravitational projection chain is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+\{c_{n,m},U_{n,m}\}
+\rightarrow
+Q_{\mu\nu}
+\rightarrow
+g_{\mu\nu}^{\rm eff}
+\rightarrow
+\left[
+R_{\mu\nu}^{(1)}
+-
+\frac14\eta_{\mu\nu}R^{(1)}
+=
+\frac{8\pi G_N}{c^4}
+\left(
+T_{\mu\nu}
+-
+\frac14\eta_{\mu\nu}T
+\right)
+\right].
+}
+\end{equation}
+The Bianchi-completed macroscopic Einstein limit is
+\begin{equation}
+\boxed{
+G_{\mu\nu}
++
+\Lambda g_{\mu\nu}
+=
+\frac{8\pi G_N}{c^4}T_{\mu\nu}.
+}
+\end{equation}
+The finite-core chain is
+\begin{equation}
+\boxed{
+\mu_{\min}^2
+\rightarrow
+R_{\max}
+\rightarrow
+r_c(M)
+=
+\left(
+\frac{G_NM}{c^2R_{\max}}
+\right)^{1/3}
+\rightarrow
+K_{\rm PR}(0)<\infty.
+}
+\end{equation}
+The exterior recovery chain is
+\begin{equation}
+\boxed{
+r>r_c
+\rightarrow
+T_{\mu\nu}=0
+\rightarrow
+\Delta_{\mu\nu}^{(P)}\rightarrow0
+\rightarrow
+R_{\mu\nu}=0
+\rightarrow
+g_{\mu\nu}^{\rm PR}
+=
+g_{\mu\nu}^{\rm Kerr}.
+}
+\end{equation}
+
+This completes the gravitational projection chain. The same master-field
+stiffness projection recovers the weak-field Einstein limit, replaces the
+classical singular endpoint with a finite core, and preserves the Kerr exterior
+outside the projection-saturated region.
+
+\section{Displacement Projection Chain}
+\label{sec:displacement_projection_chain}
+
+The displacement sector is the scalar-amplitude projection of the master field.
+This appendix collects the chain by which the master projection state generates
+an observable displacement amplitude, a stable nonzero displacement vacuum, a
+positive displacement-curvature mode, and an effective matter inertia scale. The
+purpose is to record the derivation ledger for the displacement equations used
+in the main text, not to introduce an independent scalar sector.
+
+\subsection{Master-Field Projection}
+
+At a fixed observable spacetime point \(x\), the master field is written in the
+internal spectral basis as
+\begin{equation}
+\boxed{
+|\Psi_x\rangle
+=
+\sum_{n,m}
+c_{n,m}(x)|U_{n,m}\rangle .
+}
+\end{equation}
+Equivalently, in coordinate form,
+\begin{equation}
+\boxed{
+\Psi(x,\xi)
+=
+\sum_{n,m}
+c_{n,m}(x)U_{n,m}(\xi).
+}
+\end{equation}
+The internal basis is orthonormal:
+\begin{equation}
+\boxed{
+\langle U_{j,k}|U_{n,m}\rangle_P
+=
+\delta_{jn}\delta_{km}.
+}
+\end{equation}
+
+Let \(U_{\rm disp}(\xi)\) denote the normalized internal displacement direction,
+\begin{equation}
+\boxed{
+\langle U_{\rm disp}|U_{\rm disp}\rangle_P=1.
+}
+\end{equation}
+The complex displacement projection is
+\begin{equation}
+\boxed{
+\Phi_{\rm disp}(x)
+=
+\langle U_{\rm disp}|\Psi_x\rangle_P.
+}
+\end{equation}
+In integral form,
+\begin{equation}
+\boxed{
+\Phi_{\rm disp}(x)
+=
+\int_{\mathcal M_{\rm int}}
+d\mu_{\rm int}\,
+U_{\rm disp}^{*}(\xi)\Psi(x,\xi).
+}
+\end{equation}
+Substituting the spectral expansion gives
+\begin{equation}
+\boxed{
+\Phi_{\rm disp}(x)
+=
+\sum_{n,m}
+d_{n,m}^{({\rm disp})}c_{n,m}(x),
+\qquad
+d_{n,m}^{({\rm disp})}
+=
+\langle U_{\rm disp}|U_{n,m}\rangle_P.
+}
+\end{equation}
+The observable displacement amplitude is the modulus of this projected field:
+\begin{equation}
+\boxed{
+A(x)
+=
+|\Phi_{\rm disp}(x)|,
+\qquad
+A^2(x)=\Phi_{\rm disp}^{\dagger}(x)\Phi_{\rm disp}(x).
+}
+\end{equation}
+Thus the displacement projection is
+\begin{equation}
+\boxed{
+P_{\rm disp}[\Psi](x)=A(x).
+}
+\end{equation}
+
+\subsection{Rank-One Projection Form}
+
+The same projection can be written as a rank-one internal projector,
+\begin{equation}
+\boxed{
+\widehat{\Pi}_{\rm disp}
+=
+|U_{\rm disp}\rangle\langle U_{\rm disp}|.
+}
+\end{equation}
+Acting on the master state,
+\begin{equation}
+\widehat{\Pi}_{\rm disp}|\Psi_x\rangle
+=
+|U_{\rm disp}\rangle
+\langle U_{\rm disp}|\Psi_x\rangle_P
+=
+\Phi_{\rm disp}(x)|U_{\rm disp}\rangle .
+\end{equation}
+Its internal norm is
+\begin{equation}
+\left\|
+\widehat{\Pi}_{\rm disp}|\Psi_x\rangle
+\right\|_P^2
+=
+\Phi_{\rm disp}^{\dagger}(x)\Phi_{\rm disp}(x)
+\langle U_{\rm disp}|U_{\rm disp}\rangle_P
+=
+A^2(x).
+\end{equation}
+Therefore,
+\begin{equation}
+\boxed{
+A(x)
+=
+\left\|
+\widehat{\Pi}_{\rm disp}|\Psi_x\rangle
+\right\|_P.
+}
+\end{equation}
+This form makes explicit that the displacement amplitude is a projection norm,
+not an independent inserted scalar field.
+
+\subsection{Amplitude--Phase Decomposition}
+
+For nonzero projected displacement field, write
+\begin{equation}
+\boxed{
+\Phi_{\rm disp}(x)
+=
+A(x)e^{i\theta(x)}.
+}
+\end{equation}
+The compact phase obeys the same winding identification used in the compact
+electromagnetic sector:
+\begin{equation}
+\boxed{
+\theta\sim\theta+2\pi n,
+\qquad
+n\in\mathbb Z.
+}
+\end{equation}
+
+The ordinary derivative gives
+\begin{equation}
+\partial_\mu\Phi_{\rm disp}
+=
+e^{i\theta}
+\left(
+\partial_\mu A
++
+iA\partial_\mu\theta
+\right),
+\end{equation}
+and
+\begin{equation}
+\partial_\mu\Phi_{\rm disp}^{\dagger}
+=
+e^{-i\theta}
+\left(
+\partial_\mu A
+-
+iA\partial_\mu\theta
+\right).
+\end{equation}
+The kinetic bilinear separates as
+\begin{align}
+\partial_\mu\Phi_{\rm disp}^{\dagger}
+\partial^\mu\Phi_{\rm disp}
+&=
+(\partial_\mu A)(\partial^\mu A)
++
+iA(\partial_\mu A)(\partial^\mu\theta)
+-
+iA(\partial_\mu\theta)(\partial^\mu A)
++
+A^2(\partial_\mu\theta)(\partial^\mu\theta)
+\\
+&=
+(\partial_\mu A)(\partial^\mu A)
++
+A^2(\partial_\mu\theta)(\partial^\mu\theta).
+\end{align}
+Thus,
+\begin{equation}
+\boxed{
+\partial_\mu\Phi_{\rm disp}^{\dagger}
+\partial^\mu\Phi_{\rm disp}
+=
+(\partial_\mu A)(\partial^\mu A)
++
+A^2(\partial_\mu\theta)(\partial^\mu\theta).
+}
+\end{equation}
+The first term is the displacement-amplitude kinetic term. The second is the
+compact phase kinetic term weighted by the displacement amplitude.
+
+With the compact gauge connection included, define the gauge-invariant phase
+gradient
+\begin{equation}
+\boxed{
+X_\mu
+=
+\partial_\mu\theta-q\mathcal A_\mu.
+}
+\end{equation}
+The covariant amplitude--phase split becomes
+\begin{equation}
+\boxed{
+g_{\rm eff}^{\mu\nu}
+\left(D_\mu\Phi_{\rm disp}\right)^\dagger
+D_\nu\Phi_{\rm disp}
+=
+(\partial_\mu A)(\partial^\mu A)
++
+A^2X_\mu X^\mu .
+}
+\end{equation}
+
+\subsection{Displacement-Sector Action}
+
+After projecting the master action onto the displacement amplitude, the
+displacement-sector action is
+\begin{equation}
+\boxed{
+S_{\rm disp}
+=
+\int d^4x\sqrt{-g_{\rm eff}}\,
+Z_{\rm disp}
+\left[
+-\frac12
+(\partial_\mu A)(\partial^\mu A)
+-
+V_{\rm disp}(A)
+\right].
+}
+\end{equation}
+The minimal bounded displacement potential is
+\begin{equation}
+\boxed{
+V_{\rm disp}(A)
+=
+V_0+\alpha_AA^2+\beta_AA^4,
+\qquad
+\beta_A>0.
+}
+\end{equation}
+The displacement equation of motion is
+\begin{equation}
+\boxed{
+\Box A
+-
+2\alpha_AA
+-
+4\beta_AA^3
+=
+0.
+}
+\end{equation}
+
+\subsection{Stable Nonzero Displacement Vacuum}
+
+Stationarity of the displacement potential gives
+\begin{equation}
+\frac{dV_{\rm disp}}{dA}
+=
+2\alpha_AA+4\beta_AA^3
+=
+2A
+\left(
+\alpha_A+2\beta_AA^2
+\right).
+\end{equation}
+The nonzero branch satisfies
+\begin{equation}
+\boxed{
+A_0^2
+=
+-\frac{\alpha_A}{2\beta_A}.
+}
+\end{equation}
+A real stable nonzero displacement vacuum requires
+\begin{equation}
+\boxed{
+\alpha_A<0,
+\qquad
+\beta_A>0.
+}
+\end{equation}
+Then
+\begin{equation}
+\boxed{
+A_0
+=
+\sqrt{
+-\frac{\alpha_A}{2\beta_A}
+}.
+}
+\end{equation}
+The canonically normalized displacement vacuum is
+\begin{equation}
+\boxed{
+v_A
+=
+\sqrt{Z_{\rm disp}}\,A_0.
+}
+\end{equation}
+
+\subsection{Displacement Fluctuation and Curvature Scale}
+
+Let
+\begin{equation}
+\boxed{
+A(x)=A_0+\eta_A(x).
+}
+\end{equation}
+The displacement-curvature scale is
+\begin{equation}
+m_A^2
+=
+\left.
+\frac{d^2V_{\rm disp}}{dA^2}
+\right|_{A_0}.
+\end{equation}
+Since
+\begin{equation}
+\frac{d^2V_{\rm disp}}{dA^2}
+=
+2\alpha_A+12\beta_AA^2,
+\end{equation}
+substitution of \(A_0^2=-\alpha_A/(2\beta_A)\) gives
+\begin{equation}
+\boxed{
+m_A^2
+=
+-4\alpha_A
+=
+8\beta_AA_0^2.
+}
+\end{equation}
+Because \(\alpha_A<0\),
+\begin{equation}
+\boxed{
+m_A^2>0.
+}
+\end{equation}
+The quadratic displacement fluctuation Lagrangian is
+\begin{equation}
+\boxed{
+\mathcal L_{\rm disp}^{(2)}
+=
+-\frac12
+(\partial_\mu\eta_A)(\partial^\mu\eta_A)
+-
+\frac12m_A^2\eta_A^2.
+}
+\end{equation}
+The corresponding fluctuation equation is
+\begin{equation}
+\boxed{
+(\Box-m_A^2)\eta_A=0.
+}
+\end{equation}
+
+\subsection{Spectral Normalization}
+
+The internal displacement profile has spectral normalization
+\begin{equation}
+\boxed{
+Z_{\rm disp}
+=
+\int_{\mathcal M_{\rm int}}
+d\mu_{\rm int}
+|\Xi_{\rm disp}(\xi)|^2
+=
+\sum_{n,m}
+|\zeta_{n,m}^{({\rm disp})}|^2.
+}
+\end{equation}
+The canonically normalized displacement amplitude is
+\begin{equation}
+\boxed{
+A_{\rm phys}(x)
+=
+\sqrt{Z_{\rm disp}}\,A(x).
+}
+\end{equation}
+The canonically normalized displacement vacuum is
+\begin{equation}
+\boxed{
+v_A
+=
+\sqrt{Z_{\rm disp}}\,A_0.
+}
+\end{equation}
+The canonical fluctuation is
+\begin{equation}
+\boxed{
+a_{\rm phys}(x)
+=
+\sqrt{Z_{\rm disp}}\,\eta_A(x).
+}
+\end{equation}
+Therefore,
+\begin{equation}
+\boxed{
+A_{\rm phys}(x)
+=
+v_A+a_{\rm phys}(x).
+}
+\end{equation}
+
+\subsection{Effective Matter Inertia}
+
+Matter inertia is generated through the matter--displacement overlap interaction,
+written schematically as
+\begin{equation}
+\boxed{
+\mathcal L_{\rm ov}
+=
+-g_{\rm eff}\mathcal O_MA_{\rm phys}.
+}
+\end{equation}
+Using
+\begin{equation}
+A_{\rm phys}=v_A+a_{\rm phys},
+\end{equation}
+the overlap interaction becomes
+\begin{equation}
+\mathcal L_{\rm ov}
+=
+-g_{\rm eff}v_A\mathcal O_M
+-
+g_{\rm eff}a_{\rm phys}\mathcal O_M.
+\end{equation}
+The first term is the effective matter-inertia term. Hence
+\begin{equation}
+\boxed{
+\mathcal M_{\rm eff}
+=
+g_{\rm eff}v_A.
+}
+\end{equation}
+
+The effective overlap coefficient is determined by the internal displacement
+overlap,
+\begin{equation}
+\boxed{
+g_{\rm eff}
+=
+\frac{g_0\mathcal I_A}{\sqrt{Z_{\rm disp}}}.
+}
+\end{equation}
+Therefore,
+\begin{equation}
+\boxed{
+\mathcal M_{\rm eff}
+=
+g_{\rm eff}v_A
+=
+\frac{g_0\mathcal I_A}{\sqrt{Z_{\rm disp}}}
+\left(
+\sqrt{Z_{\rm disp}}A_0
+\right)
+=
+g_0\mathcal I_AA_0.
+}
+\end{equation}
+The physical effective inertia is independent of an arbitrary normalization of
+the internal displacement profile. For multiple matter projection profiles, the overlap generalizes to the matrix
+form
+\begin{equation}
+\boxed{
+g_{ab}^{\rm eff}
+=
+\frac{g_0I_{ab}^{(A)}}{\sqrt{Z_{\rm disp}}},
+\qquad
+\mathcal M_{ab}^{\rm eff}
+=
+g_{ab}^{\rm eff}v_A
+=
+g_0I_{ab}^{(A)}A_0.
+}
+\end{equation}
+
+\subsection{Displacement Stress-Energy and Gravitational Source Response}
+
+The displacement stress-energy tensor follows from the displacement-sector
+action:
+\begin{equation}
+\boxed{
+T_{\mu\nu}^{({\rm disp})}
+=
+Z_{\rm disp}
+\left[
+\partial_\mu A\,\partial_\nu A
+-
+g_{\mu\nu}^{\rm eff}
+\left(
+\frac12
+(\partial_\alpha A)(\partial^\alpha A)
++
+V_{\rm disp}(A)
+\right)
+\right].
+}
+\end{equation}
+The displacement vacuum contributes to the physical matter source through the
+effective inertia scale \(\mathcal M_{\rm eff}\). In the determinant-normalized
+weak-field limit, this source enters the gravitational stiffness projection
+through the trace-free unimodular combination
+\begin{equation}
+\boxed{
+T_{\mu\nu}^{({\rm disp})}
+-
+\frac14
+g_{\mu\nu}^{\rm eff}
+T^{({\rm disp})}.
+}
+\end{equation}
+Stress-energy conservation and the contracted Bianchi identity restore the scalar
+trace through the usual cosmological integration constant, yielding the standard
+Einstein source equation in the macroscopic low-energy limit. The displacement
+sector therefore supplies gravitational source response consistently with the
+trace-free weak-field recovery derived in the gravitational projection chain.
+
+\subsection{Displacement--Phase Consistency}
+
+The covariant compact phase contribution generated by the displacement field is
+\begin{equation}
+\boxed{
+A^2X_\mu X^\mu.
+}
+\end{equation}
+Expanding about the displacement vacuum,
+\begin{equation}
+A=A_0+\eta_A,
+\end{equation}
+gives
+\begin{equation}
+\boxed{
+A^2X_\mu X^\mu
+=
+A_0^2X_\mu X^\mu
++
+2A_0\eta_A X_\mu X^\mu
++
+\eta_A^2X_\mu X^\mu.
+}
+\end{equation}
+The compact phase current is
+\begin{equation}
+\boxed{
+J_\theta^\mu
+=
+A^2X^\mu.
+}
+\end{equation}
+In the coherent compact-phase vacuum,
+\begin{equation}
+\boxed{
+X_\mu^{\rm vac}=0,
+}
+\end{equation}
+so
+\begin{equation}
+\boxed{
+J_\theta^{\mu,{\rm vac}}=0.
+}
+\end{equation}
+The compact electromagnetic gauge normalization and boundary-resolved closure
+are derived in the compact phase projection chain.
+
+\subsection{Stability Closure}
+
+The displacement sector is stable when
+\begin{equation}
+\boxed{
+\beta_A>0,
+\qquad
+\alpha_A<0,
+\qquad
+Z_{\rm disp}>0,
+\qquad
+\mu_{\min}^2>0,
+\qquad
+X_\mu^{\rm vac}=0.
+}
+\end{equation}
+These conditions imply
+\begin{equation}
+\boxed{
+V_{\rm disp}(A)\ \text{is bounded below},
+\qquad
+m_A^2>0,
+\qquad
+Z_{\rm disp}<\infty,
+\qquad
+J_\theta^{\mu,{\rm vac}}=0.
+}
+\end{equation}
+
+\subsection{Closed Displacement Projection Sequence}
+
+The displacement projection chain is
+\begin{equation}
+\boxed{
+|\Psi_x\rangle
+\rightarrow
+\widehat{\Pi}_{\rm disp}|\Psi_x\rangle
+\rightarrow
+\Phi_{\rm disp}(x)
+=
+\langle U_{\rm disp}|\Psi_x\rangle_P
+\rightarrow
+A(x)
+=
+|\Phi_{\rm disp}(x)|.
+}
+\end{equation}
+The displacement-vacuum chain is
+\begin{equation}
+\boxed{
+A(x)
+\rightarrow
+V_{\rm disp}(A)
+=
+V_0+\alpha_AA^2+\beta_AA^4
+\rightarrow
+A_0^2
+=
+-\frac{\alpha_A}{2\beta_A}
+\rightarrow
+A(x)=A_0+\eta_A(x).
+}
+\end{equation}
+The displacement-curvature chain is
+\begin{equation}
+\boxed{
+m_A^2
+=
+\left.
+\frac{d^2V_{\rm disp}}{dA^2}
+\right|_{A_0}
+=
+-4\alpha_A
+=
+8\beta_AA_0^2.
+}
+\end{equation}
+The spectral-normalization chain is
+\begin{equation}
+\boxed{
+Z_{\rm disp}
+=
+\int_{\mathcal M_{\rm int}}
+d\mu_{\rm int}
+|\Xi_{\rm disp}(\xi)|^2,
+\qquad
+A_{\rm phys}
+=
+\sqrt{Z_{\rm disp}}\,A,
+\qquad
+v_A
+=
+\sqrt{Z_{\rm disp}}\,A_0.
+}
+\end{equation}
+The effective-inertia chain is
+\begin{equation}
+\boxed{
+\mathcal M_{\rm eff}
+=
+g_{\rm eff}v_A
+=
+g_0\mathcal I_AA_0.
+}
+\end{equation}
+The displacement--gravity chain is
+\begin{equation}
+\boxed{
+A_0
+\rightarrow
+\mathcal M_{\rm eff}
+\rightarrow
+T_{\mu\nu}^{({\rm disp})}
+\rightarrow
+T_{\mu\nu}^{({\rm disp})}
+-
+\frac14
+g_{\mu\nu}^{\rm eff}
+T^{({\rm disp})}
+\rightarrow
+g_{\mu\nu}^{\rm eff}.
+}
+\end{equation}
+The displacement--phase consistency chain is
+\begin{equation}
+\boxed{
+\Phi_{\rm disp}=Ae^{i\theta}
+\rightarrow
+g_{\rm eff}^{\mu\nu}
+(D_\mu\Phi_{\rm disp})^\dagger D_\nu\Phi_{\rm disp}
+=
+(\partial_\mu A)(\partial^\mu A)
++
+A^2X_\mu X^\mu,
+\qquad
+X_\mu=\partial_\mu\theta-q\mathcal A_\mu.
+}
+\end{equation}
+The full displacement-sector closure is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+P_{\rm disp}[\Psi]
+\rightarrow
+\Phi_{\rm disp}(x)
+\rightarrow
+A(x)
+\rightarrow
+A_0
+\rightarrow
+\eta_A
+\rightarrow
+m_A
+\rightarrow
+A_{\rm phys}
+\rightarrow
+\mathcal M_{\rm eff}
+\rightarrow
+T_{\mu\nu}^{({\rm disp})}
+\rightarrow
+g_{\mu\nu}^{\rm eff}.
+}
+\end{equation}
+
+This completes the displacement projection chain. The displacement sector is not
+an independent external scalar field. It is the scalar-amplitude projection of
+the master field. Its stable nonzero vacuum generates displacement curvature,
+effective matter inertia, gravitational source response, and consistent coupling
+to the compact phase sector.
+
+\section{Electromagnetic Projection Chain}
+\label{sec:electromagnetic_projection_chain}
+
+The electromagnetic sector is the compact-phase projection of the master field.
+It is not introduced as an independent external \(U(1)\) gauge bundle. It is
+generated by the compact coordinate \(\theta\) of the same internal
+radial--compact manifold used by the gravitational and displacement sectors.
+This appendix collects the compact phase chain: the compact operator, winding
+basis, gauge-invariant phase gradient, field-strength curvature, kinetic
+normalization, compact boundary closure, and magnetic area-law interpretation.
+
+\subsection{Compact Phase Geometry}
+
+The minimal internal manifold is
+\begin{equation}
+\boxed{
+\mathcal M_{\rm int}
+=
+\mathbb R_w\times S^1_\theta,
+\qquad
+\theta\sim\theta+2\pi n,
+\qquad
+n\in\mathbb Z.
+}
+\end{equation}
+The compact coordinate is represented by \(e^{i\theta}\), so the physical
+projection is unchanged under
+\begin{equation}
+\boxed{
+e^{i(\theta+2\pi n)}
+=
+e^{i\theta}.
+}
+\end{equation}
+
+The internal line element is
+\begin{equation}
+\boxed{
+ds_{\rm int}^2
+=
+dw^2+R_A^2d\theta^2.
+}
+\end{equation}
+The compact phase measure is
+\begin{equation}
+\boxed{
+d\mu_\theta
+=
+R_A\,d\theta.
+}
+\end{equation}
+
+The compact phase Hilbert space is
+\begin{equation}
+\boxed{
+\mathcal H_\theta
+=
+L^2(S^1_\theta,R_A\,d\theta),
+}
+\end{equation}
+with inner product
+\begin{equation}
+\boxed{
+\langle f|g\rangle_\theta
+=
+\int_0^{2\pi}
+R_A\,d\theta\,
+f^*(\theta)g(\theta).
+}
+\end{equation}
+
+\subsection{Compact Phase Operator and Winding Modes}
+
+The compact phase operator is
+\begin{equation}
+\boxed{
+O_\theta
+=
+-\frac{1}{R_A^2}
+\frac{d^2}{d\theta^2}.
+}
+\end{equation}
+The operator acts on periodic functions,
+\begin{equation}
+\boxed{
+v_m(\theta+2\pi)=v_m(\theta).
+}
+\end{equation}
+
+Integration by parts on the compact circle gives no boundary contribution, so
+\(O_\theta\) is self-adjoint on the periodic domain:
+\begin{equation}
+\boxed{
+\langle f|O_\theta g\rangle_\theta
+=
+\langle O_\theta f|g\rangle_\theta.
+}
+\end{equation}
+
+The normalized winding modes are
+\begin{equation}
+\boxed{
+v_m(\theta)
+=
+\frac{1}{\sqrt{2\pi R_A}}
+e^{im\theta},
+\qquad
+m\in\mathbb Z.
+}
+\end{equation}
+They satisfy
+\begin{equation}
+\boxed{
+\langle v_m|v_n\rangle_\theta
+=
+\delta_{mn}.
+}
+\end{equation}
+
+Acting with \(O_\theta\) gives
+\begin{equation}
+O_\theta v_m
+=
+-\frac{1}{R_A^2}
+\frac{d^2}{d\theta^2}
+\left(
+\frac{e^{im\theta}}{\sqrt{2\pi R_A}}
+\right)
+=
+\frac{m^2}{R_A^2}
+v_m.
+\end{equation}
+Hence
+\begin{equation}
+\boxed{
+O_\theta v_m
+=
+\lambda_m^{(\theta)}v_m,
+\qquad
+\lambda_m^{(\theta)}
+=
+\frac{m^2}{R_A^2}.
+}
+\end{equation}
+
+The fundamental electromagnetic winding is \(m=1\). The compact phase stiffness
+is therefore
+\begin{equation}
+\boxed{
+Z_A
+=
+\lambda_1^{(\theta)}
+=
+R_A^{-2}.
+}
+\end{equation}
+
+\subsection{Compact Phase Projection}
+
+Let \(U_A(\xi)\) denote the normalized internal compact-phase projection
+direction. The compact electromagnetic projection of the master field is
+\begin{equation}
+\boxed{
+\Phi_A(x)
+=
+\langle U_A|\Psi_x\rangle_P.
+}
+\end{equation}
+In integral form,
+\begin{equation}
+\boxed{
+\Phi_A(x)
+=
+\int_{\mathcal M_{\rm int}}
+d\mu_{\rm int}\,
+U_A^*(\xi)\Psi(x,\xi).
+}
+\end{equation}
+
+The projected compact field is written in amplitude--phase form:
+\begin{equation}
+\boxed{
+\Phi_A(x)
+=
+A_\theta(x)e^{i\theta(x)}.
+}
+\end{equation}
+Here \(A_\theta(x)=|\Phi_A(x)|\) is the compact projection amplitude, while
+\(\theta(x)\) is the observable compact phase.
+
+The compact electromagnetic projection is
+\begin{equation}
+\boxed{
+P_A[\Psi]
+\rightarrow
+\theta(x)
+\rightarrow
+\mathcal A_\mu(x).
+}
+\end{equation}
+The gauge connection \(\mathcal A_\mu\) is the observable connection associated
+with local compact phase transport.
+
+\subsection{Gauge-Invariant Compact Phase Gradient}
+
+The covariant derivative acting on the compact projected field is
+\begin{equation}
+\boxed{
+D_\mu
+=
+\partial_\mu-iq\mathcal A_\mu.
+}
+\end{equation}
+Acting on \(\Phi_A=A_\theta e^{i\theta}\),
+\begin{align}
+D_\mu\Phi_A
+&=
+(\partial_\mu-iq\mathcal A_\mu)
+\left(
+A_\theta e^{i\theta}
+\right)
+\\
+&=
+e^{i\theta}
+\left[
+\partial_\mu A_\theta
++
+iA_\theta
+\left(
+\partial_\mu\theta-q\mathcal A_\mu
+\right)
+\right].
+\end{align}
+
+Define the compact phase gradient
+\begin{equation}
+\boxed{
+X_\mu
+=
+\partial_\mu\theta-q\mathcal A_\mu.
+}
+\end{equation}
+Then
+\begin{equation}
+\boxed{
+D_\mu\Phi_A
+=
+e^{i\theta}
+\left(
+\partial_\mu A_\theta+iA_\theta X_\mu
+\right).
+}
+\end{equation}
+
+Under a local compact phase rotation,
+\begin{equation}
+\boxed{
+\theta'
+=
+\theta+\alpha,
+\qquad
+\mathcal A_\mu'
+=
+\mathcal A_\mu
++
+q^{-1}\partial_\mu\alpha.
+}
+\end{equation}
+The phase gradient transforms as
+\begin{align}
+X_\mu'
+&=
+\partial_\mu\theta'
+-
+q\mathcal A_\mu'
+\\
+&=
+\partial_\mu(\theta+\alpha)
+-
+q
+\left(
+\mathcal A_\mu+q^{-1}\partial_\mu\alpha
+\right)
+\\
+&=
+\partial_\mu\theta-q\mathcal A_\mu
+=
+X_\mu.
+\end{align}
+Thus
+\begin{equation}
+\boxed{
+X_\mu'=X_\mu.
+}
+\end{equation}
+The compact phase gradient is gauge invariant.
+
+\subsection{Compact Phase Kinetic Split}
+
+The conjugate covariant derivative is
+\begin{equation}
+\boxed{
+(D_\mu\Phi_A)^\dagger
+=
+e^{-i\theta}
+\left(
+\partial_\mu A_\theta-iA_\theta X_\mu
+\right).
+}
+\end{equation}
+The covariant kinetic bilinear is
+\begin{align}
+g_{\rm eff}^{\mu\nu}
+(D_\mu\Phi_A)^\dagger D_\nu\Phi_A
+&=
+g_{\rm eff}^{\mu\nu}
+\left(
+\partial_\mu A_\theta-iA_\theta X_\mu
+\right)
+\left(
+\partial_\nu A_\theta+iA_\theta X_\nu
+\right)
+\\
+&=
+(\partial_\mu A_\theta)(\partial^\mu A_\theta)
++
+A_\theta^2X_\mu X^\mu.
+\end{align}
+The imaginary cross terms cancel. Hence
+\begin{equation}
+\boxed{
+g_{\rm eff}^{\mu\nu}
+(D_\mu\Phi_A)^\dagger D_\nu\Phi_A
+=
+(\partial_\mu A_\theta)(\partial^\mu A_\theta)
++
+A_\theta^2X_\mu X^\mu.
+}
+\end{equation}
+
+The first term belongs to the compact projection amplitude. The second term is
+the electromagnetic compact phase contribution:
+\begin{equation}
+\boxed{
+P_A[\Psi]
+\rightarrow
+A_\theta^2X_\mu X^\mu.
+}
+\end{equation}
+
+The compact phase current is
+\begin{equation}
+\boxed{
+J_\theta^\mu
+=
+A_\theta^2X^\mu.
+}
+\end{equation}
+The coherent compact phase vacuum satisfies
+\begin{equation}
+\boxed{
+X_\mu^{\rm vac}=0.
+}
+\end{equation}
+Therefore,
+\begin{equation}
+\boxed{
+J_\theta^{\mu,{\rm vac}}=0.
+}
+\end{equation}
+The compact phase vacuum is a zero-current coherent ground state.
+
+\subsection{Gauge Curvature and Field-Strength Invariance}
+
+The electromagnetic field strength is the curvature of the observable compact
+phase connection:
+\begin{equation}
+\boxed{
+F_{\mu\nu}
+=
+\partial_\mu\mathcal A_\nu
+-
+\partial_\nu\mathcal A_\mu.
+}
+\end{equation}
+Under
+\begin{equation}
+\mathcal A_\mu'
+=
+\mathcal A_\mu+q^{-1}\partial_\mu\alpha,
+\end{equation}
+the curvature becomes
+\begin{align}
+F_{\mu\nu}'
+&=
+\partial_\mu\mathcal A_\nu'
+-
+\partial_\nu\mathcal A_\mu'
+\\
+&=
+\partial_\mu\mathcal A_\nu
+-
+\partial_\nu\mathcal A_\mu
++
+q^{-1}
+\left(
+\partial_\mu\partial_\nu\alpha
+-
+\partial_\nu\partial_\mu\alpha
+\right)
+\\
+&=
+F_{\mu\nu}.
+\end{align}
+Thus
+\begin{equation}
+\boxed{
+F_{\mu\nu}'=F_{\mu\nu}.
+}
+\end{equation}
+
+The Bianchi identity follows from the definition:
+\begin{equation}
+\boxed{
+\nabla_{[\lambda}F_{\mu\nu]}=0.
+}
+\end{equation}
+
+\subsection{Compact Winding Stiffness and Gauge Kinetic Normalization}
+
+The compact part of the internal kinetic sector is
+\begin{equation}
+\boxed{
+\mathcal L_{\rm int}^{(\theta)}
+=
+-\frac12
+G^{\theta\theta}
+D_\theta\Psi^\dagger D_\theta\Psi.
+}
+\end{equation}
+Since
+\begin{equation}
+\boxed{
+G^{\theta\theta}
+=
+R_A^{-2},
+}
+\end{equation}
+the compact kinetic term is
+\begin{equation}
+\boxed{
+\mathcal L_{\rm int}^{(\theta)}
+=
+-\frac{1}{2R_A^2}
+D_\theta\Psi^\dagger D_\theta\Psi.
+}
+\end{equation}
+For the internal compact eigenproblem,
+\begin{equation}
+D_\theta\rightarrow\partial_\theta,
+\end{equation}
+so
+\begin{equation}
+\boxed{
+\mathcal L_{\rm int}^{(\theta)}
+=
+-\frac{1}{2R_A^2}
+\partial_\theta\Psi^\dagger\partial_\theta\Psi.
+}
+\end{equation}
+
+Projection into observable spacetime maps the compact winding stiffness
+\(R_A^{-2}\) into the gauge kinetic normalization. In the normalization used
+throughout the paper,
+\begin{equation}
+\boxed{
+\alpha_{\rm PR}^{-1}
+=
+4\pi Z_A,
+\qquad
+Z_A=R_A^{-2}.
+}
+\end{equation}
+Equivalently,
+\begin{equation}
+\boxed{
+\alpha_{\rm PR}^{-1}
+=
+4\pi R_A^{-2}.
+}
+\end{equation}
+
+This relation fixes the electromagnetic normalization once the compact radius
+has been geometrically closed. It does not by itself determine \(R_A\). The
+stationary compact radius is fixed by compact/radial coherence and the
+finite-rank compact boundary map.
+
+\subsection{Compact/Radial Stationarity}
+
+Let
+\begin{equation}
+\boxed{
+\mu_{\min}^2
+=
+\lambda_1-\lambda_0
+}
+\end{equation}
+be the radial spectral gap of the projection-trace radial operator. The
+macroscopic compact/radial closure ratio is
+\begin{equation}
+\boxed{
+C_A
+=
+\frac{R_{A,\star}^{-2}}{\mu_{\min}^2}.
+}
+\end{equation}
+The corresponding microscopic compact coherence ratio is
+\begin{equation}
+\boxed{
+\kappa_{\rm eff}
+=
+\frac{
+\langle\Omega_A|\widehat K_X^{(c)}|\Omega_A\rangle_P
+}{
+\langle\Omega_A|\widehat W_A^{(c)}|\Omega_A\rangle_P
+}.
+}
+\end{equation}
+Compact/radial stationarity imposes
+\begin{equation}
+\boxed{
+C_A
+=
+\kappa_{\rm eff}.
+}
+\end{equation}
+The compact radius is therefore locked by the internal projection geometry:
+\begin{equation}
+\boxed{
+R_{A,\star}^{-2}
+=
+C_A\mu_{\min}^2.
+}
+\end{equation}
+
+\subsection{Finite-Rank Compact Boundary Closure}
+
+The compact trace fraction is
+\begin{equation}
+\boxed{
+T_A=\frac14,
+}
+\end{equation}
+and the observable spatial trace fraction is
+\begin{equation}
+\boxed{
+T_X=\frac34.
+}
+\end{equation}
+The interior compact return has primitive words \(A^3\) and \(A^4\), giving
+the transfer determinant
+\begin{equation}
+\boxed{
+D_A
+=
+1-T_A^3-T_A^4.
+}
+\end{equation}
+
+The finite-rank boundary admits the terminal oriented word set
+\begin{equation}
+\boxed{
+{\rm Adm}_{\Pi_{13}}
+=
+\{\epsilon,A^3,A^4,XA^5,-XA^8\}.
+}
+\end{equation}
+The boundary cofactor is
+\begin{equation}
+\boxed{
+N_{\rm bc}
+=
+1+T_A^3+T_A^4+T_X(T_A^5-T_A^8).
+}
+\end{equation}
+The boundary-resolved compact return is
+\begin{equation}
+\boxed{
+R_{\rm bc}
+=
+\frac{N_{\rm bc}}{D_A}.
+}
+\end{equation}
+The compact boundary constant is
+\begin{equation}
+\boxed{
+c_{\rm bc}
+=
+T_X
+\left[
+1+T_A^2-T_A^6R_{\rm bc}
+\right].
+}
+\end{equation}
+Equivalently,
+\begin{equation}
+\boxed{
+c_{\rm bc}
+=
+T_X
+\left[
+1+T_A^2
+-
+T_A^6
+\frac{
+1+T_A^3+T_A^4+T_X(T_A^5-T_A^8)
+}{
+1-T_A^3-T_A^4
+}
+\right].
+}
+\end{equation}
+Substitution of
+\begin{equation}
+T_A=\frac14,
+\qquad
+T_X=\frac34,
+\end{equation}
+gives
+\begin{equation}
+\boxed{
+c_{\rm bc}
+=
+\frac{3354902985}{4211081216}
+=
+0.7966844648478991.
+}
+\end{equation}
+The compact boundary constant is a terminal-word cofactor of the finite-rank
+return map. It is not a fitted correction.
+
+\subsection{Boundary-Resolved Compact Electromagnetic Normalization}
+
+The finite-rank compact projection operator is
+\begin{equation}
+\boxed{
+P_{\rm geom}^{\rm bc}
+=
+\Pi_{13}K_X^2
+\left(
+c_{\rm bc}
++
+w^2
++
+\frac34w^4
+\right)
+K_X^2\Pi_{13}.
+}
+\end{equation}
+This operator preserves the finite odd spatial slice and keeps compact winding
+locked to the radial projection branch.
+
+Define
+\begin{equation}
+\boxed{
+q_1=\lambda_1-\lambda_0,
+\qquad
+q_3=\lambda_3-\lambda_0.
+}
+\end{equation}
+The finite-rank radial datum is
+\begin{equation}
+\boxed{
+\lambda_3
+=
+13.23388439508096.
+}
+\end{equation}
+The parity-compatible leakage probability is
+\begin{equation}
+\boxed{
+p_1
+=
+7.6528903366\times10^{-4},
+\qquad
+p_3=1-p_1.
+}
+\end{equation}
+The boundary-resolved compact stiffness is
+\begin{equation}
+\boxed{
+R_{A,\star}^{-2}
+=
+q_{\rm bc}
+=
+p_1q_1+(1-p_1)q_3.
+}
+\end{equation}
+Using
+\begin{equation}
+\boxed{
+\lambda_0=2.322863529580,
+\qquad
+\lambda_1=5.375830272676,
+\qquad
+\lambda_3=13.23388439508096,
+}
+\end{equation}
+gives
+\begin{equation}
+\boxed{
+q_{\rm bc}
+=
+10.905007182855176.
+}
+\end{equation}
+The compact electromagnetic normalization is
+\begin{equation}
+\boxed{
+\alpha_{\rm PR,bc}^{-1}
+=
+4\pi q_{\rm bc}
+=
+137.036361812007.
+}
+\end{equation}
+
+The deterministic compact closure chain is
+\begin{equation}
+\boxed{
+(T_A,T_X)
+\rightarrow
+(D_A,N_{\rm bc})
+\rightarrow
+c_{\rm bc}
+\rightarrow
+P_{\rm geom}^{\rm bc}
+\rightarrow
+p_1
+\rightarrow
+R_{A,\star}^{-2}
+\rightarrow
+\alpha_{\rm PR,bc}^{-1}.
+}
+\end{equation}
+The electromagnetic normalization is an internal output of the compact boundary
+map, not an experimental input.
+
+\subsection{Magnetic Flux and Area-Law Diagnostic}
+
+The compact phase flux normalization is
+\begin{equation}
+\boxed{
+\Phi_\theta^{\rm PR}
+=
+\frac{\hbar}{e}
+\frac{Z_A}{c_{\rm bc}}.
+}
+\end{equation}
+With
+\begin{equation}
+Z_A=q_{\rm bc},
+\end{equation}
+this gives the numerical compact flux
+\begin{equation}
+\boxed{
+\Phi_\theta^{\rm PR}
+=
+9.009597185\times10^{-15}\ {\rm Wb}.
+}
+\end{equation}
+Equivalently,
+\begin{equation}
+\boxed{
+\Phi_\theta^{\rm PR}
+=
+0.09009597185\ {\rm nG\,m^2}.
+}
+\end{equation}
+
+For a realized projected compact magnetic domain, the field is determined by
+the projected area:
+\begin{equation}
+\boxed{
+B_{\rm geo}^{\rm PR}
+=
+\frac{
+\Phi_\theta^{\rm PR}
+}{
+A_{\rm proj}^{(\theta)}
+}.
+}
+\end{equation}
+In nanogauss units,
+\begin{equation}
+\boxed{
+B_{\rm geo}^{\rm PR}[{\rm nG}]
+=
+\frac{
+0.09009597185
+}{
+A_{\rm proj}^{(\theta)}[{\rm m}^2]
+}.
+}
+\end{equation}
+This is an area law. The compact phase sector fixes the flux normalization, while
+the realized projected compact area determines the magnetic amplitude. The theory
+does not predict a universal fixed primordial magnetic-field amplitude.
+
+\subsection{Closed Electromagnetic Projection Sequence}
+
+The compact phase operator chain is
+\begin{equation}
+\boxed{
+S^1_\theta
+\rightarrow
+O_\theta
+=
+-\frac{1}{R_A^2}
+\frac{d^2}{d\theta^2}
+\rightarrow
+v_m(\theta)
+=
+\frac{e^{im\theta}}{\sqrt{2\pi R_A}}
+\rightarrow
+\lambda_m^{(\theta)}
+=
+\frac{m^2}{R_A^2}.
+}
+\end{equation}
+The compact projection chain is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+P_A[\Psi]
+\rightarrow
+\Phi_A(x)
+=
+A_\theta(x)e^{i\theta(x)}
+\rightarrow
+X_\mu
+=
+\partial_\mu\theta-q\mathcal A_\mu.
+}
+\end{equation}
+The gauge curvature chain is
+\begin{equation}
+\boxed{
+\mathcal A_\mu
+\rightarrow
+F_{\mu\nu}
+=
+\partial_\mu\mathcal A_\nu
+-
+\partial_\nu\mathcal A_\mu,
+\qquad
+F_{\mu\nu}'=F_{\mu\nu}.
+}
+\end{equation}
+The compact kinetic chain is
+\begin{equation}
+\boxed{
+G^{\theta\theta}=R_A^{-2}
+\rightarrow
+Z_A=R_A^{-2}
+\rightarrow
+\alpha_{\rm PR}^{-1}
+=
+4\pi Z_A.
+}
+\end{equation}
+The boundary-resolved compact normalization chain is
+\begin{equation}
+\boxed{
+(T_A,T_X)
+\rightarrow
+(D_A,N_{\rm bc})
+\rightarrow
+c_{\rm bc}
+\rightarrow
+P_{\rm geom}^{\rm bc}
+\rightarrow
+p_1
+\rightarrow
+R_{A,\star}^{-2}
+\rightarrow
+\alpha_{\rm PR,bc}^{-1}.
+}
+\end{equation}
+The magnetic area-law chain is
+\begin{equation}
+\boxed{
+\alpha_{\rm PR,bc}^{-1}
+\rightarrow
+Z_A
+\rightarrow
+\Phi_\theta^{\rm PR}
+\rightarrow
+B_{\rm geo}^{\rm PR}
+=
+\frac{\Phi_\theta^{\rm PR}}
+     {A_{\rm proj}^{(\theta)}}.
+}
+\end{equation}
+
+This completes the electromagnetic projection chain. The compact phase sector
+generates the observable gauge connection, preserves local compact phase
+covariance through \(X_\mu\), produces the gauge curvature \(F_{\mu\nu}\), fixes
+the compact electromagnetic normalization through the boundary-resolved finite
+rank map, and supplies the flux normalization used in the magnetic area-law
+diagnostic.
+
+\subsubsection{Compact-Phase Magnetic Area Law}
+
+The compact phase closure fixes the electromagnetic winding stiffness and
+therefore the compact flux normalization:
+\[
+\Phi_\theta^{\rm PR}
+=
+\frac{\hbar}{e}\frac{Z_A}{c_{bc}}.
+\]
+Numerically,
+\[
+\Phi_\theta^{\rm PR}
+=
+9.009597185\times10^{-15}\ {\rm Wb}.
+\]
+For a realized projected compact-phase magnetic domain with area
+\(A_{\rm proj}^{(\theta)}\), the magnetic field is
+\[
+B_{\rm geo}^{\rm PR}
+=
+\frac{\Phi_\theta^{\rm PR}}
+{A_{\rm proj}^{(\theta)}}.
+\]
+Equivalently,
+\[
+B_{\rm geo}^{\rm PR}[{\rm nG}]
+=
+\frac{0.09009597185}
+{A_{\rm proj}^{(\theta)}[{\rm m^2}]}.
+\]
+The projected area is a physical property of the realized magnetic domain,
+not an additional compact-sector parameter.
+
+\subsubsection{Step 13: Electromagnetic Projection Summary}
+
+The electromagnetic phase projection begins with the compact phase of the
+master field:
+\begin{equation}
+\boxed{
+P_A[\Psi](x)
+=
+\theta(x)
+=
+\arg
+\left[
+\langle U_A|\Psi_x\rangle_{\rm int}
+\right].
+}
+\end{equation}
+
+The observable compact phase gradient is
+\begin{equation}
+\boxed{
+P_A[\Psi]_\mu
+=
+\partial_\mu\theta.
+}
+\end{equation}
+
+Local compact phase coherence requires the gauge connection \(\mathcal A_\mu\):
+\begin{equation}
+\boxed{
+X_\mu
+=
+\partial_\mu\theta
+-
+q\mathcal A_\mu.
+}
+\end{equation}
+
+The electromagnetic field strength is
+\begin{equation}
+\boxed{
+F_{\mu\nu}
+=
+\partial_\mu\mathcal A_\nu
+-
+\partial_\nu\mathcal A_\mu.
+}
+\end{equation}
+
+The compact phase current is
+\begin{equation}
+\boxed{
+J_\theta^\mu
+=
+A^2X^\mu.
+}
+\end{equation}
+
+The current conservation law is
+\begin{equation}
+\boxed{
+\nabla_\mu J_\theta^\mu
+=
+\nabla_\mu(A^2X^\mu)
+=
+0.
+}
+\end{equation}
+
+The electromagnetic projection current is
+\begin{equation}
+\boxed{
+J_{\rm EM}^\mu
+=
+-g_A^2qJ_\theta^\mu.
+}
+\end{equation}
+
+The electromagnetic field equation is
+\begin{equation}
+\boxed{
+\nabla_\mu F^{\mu\nu}
+=
+J_{\rm EM}^\nu.
+}
+\end{equation}
+
+The compact gauge normalization is
+\begin{equation}
+\boxed{
+g_A^{-2}
+=
+R_A^{-2}.
+}
+\end{equation}
+
+The pre-boundary compact winding relation is
+\begin{equation}
+\boxed{
+\alpha_{\rm PR}^{-1}
+=
+4\pi R_A^{-2}.
+}
+\end{equation}
+
+The boundary-resolved fine-structure closure is
+\begin{equation}
+\boxed{
+\alpha_{{\rm PR},bc}^{-1}
+=
+4\pi R_{A,\star}^{-2}
+=
+137.036361812007.
+}
+\end{equation}
+
+Therefore, the complete electromagnetic projection chain is
+\begin{equation}
+\boxed{
+\begin{aligned}
+\Psi
+&\rightarrow
+P_A[\Psi]
+\rightarrow
+\theta(x)
+\rightarrow
+X_\mu
+=
+\partial_\mu\theta
+-
+q\mathcal A_\mu
+\rightarrow
+F_{\mu\nu}
+\rightarrow
+J^\mu_{\rm EM}
+\\
+&\rightarrow
+g_A^{-2}=R_A^{-2}
+\rightarrow
+P_{\rm geom}^{\rm bc}
+\rightarrow
+R_{A,\star}^{-2}
+\rightarrow
+\alpha_{{\rm PR},bc}^{-1}.
+\end{aligned}
+}
+\end{equation}
+
+The intermediate compact stationarity reference is
+\begin{equation}
+\boxed{
+\alpha_{\rm PR,geom}^{-1}
+=
+137.036361812010,
+}
+\end{equation}
+while the boundary-resolved finite-rank closure gives
+\begin{equation}
+\boxed{
+\alpha_{{\rm PR},bc}^{-1}
+=
+137.036361812007.
+}
+\end{equation}
+
+The operational value used by the electromagnetic chain is the
+boundary-resolved compact closure value.  No separate laboratory-reference
+closure is introduced.  The electromagnetic sector is not introduced as an
+independent gauge theory.  It is generated as the compact phase projection of
+the master field, with its gauge connection, conserved phase current, Maxwell
+equation, gauge kinetic normalization, and fine-structure normalization all
+inherited from the internal compact phase geometry and its finite-rank
+boundary-orientation closure.
+
+\section{Projection Propagator and Spectral Self-Energy Chain}
+\label{sec:projection_propagator_chain}
+
+The projection propagator describes how residual internal spectral excitations
+modify macroscopic propagation while preserving the massless low-energy pole.
+This appendix records the derivation ledger for the subtracted self-energy
+kernel, the corrected spin--2 propagator, the massless-pole residue, Newton
+normalization, and the low-energy decoupling of projection-sector corrections.
+
+The purpose of this chain is not to introduce an additional massive graviton.
+The internal spectral response modifies the denominator through a gap-protected
+self-energy. After the zero-momentum subtraction and Newton normalization, the
+observable low-energy propagation remains massless, ghost-free, and luminal.
+
+\subsection{Bare Massless Spin--2 Propagator}
+
+In the transverse-traceless sector, the bare massless spin--2 propagator is
+written as
+\begin{equation}
+\boxed{
+D_{\mu\nu\rho\sigma}^{(0)}(k)
+=
+\frac{
+P_{\mu\nu\rho\sigma}^{(2)}
+}{
+k^2+i\epsilon
+}.
+}
+\end{equation}
+Here \(P_{\mu\nu\rho\sigma}^{(2)}\) is the transverse-traceless spin--2
+projector. The corresponding bare denominator is
+\begin{equation}
+\boxed{
+P_0(k^2)=k^2.
+}
+\end{equation}
+
+For compact notation, define
+\begin{equation}
+\boxed{
+z=k^2.
+}
+\end{equation}
+
+\subsection{Internal Spectral Density}
+
+The macroscopic gravitational projection couples to excited internal modes above
+the projection ground state. Let
+\begin{equation}
+\boxed{
+\mu_a^2
+=
+\Lambda_a-\Lambda_0
+}
+\end{equation}
+denote the shifted stiffness of the internal excitation labelled by \(a\), and let
+\(g_a\) denote its coupling to the macroscopic projection channel. The internal
+response density is
+\begin{equation}
+\boxed{
+\rho_X(\mu^2)
+=
+\sum_{a\neq0}
+|g_a|^2
+\delta(\mu^2-\mu_a^2).
+}
+\end{equation}
+
+The radial projection branch is gap protected:
+\begin{equation}
+\boxed{
+\rho_X(\mu^2)=0,
+\qquad
+0\leq\mu^2<\mu_{\min}^2.
+}
+\end{equation}
+The first radial gap is
+\begin{equation}
+\boxed{
+\mu_{\min}^2
+=
+3.052966743096.
+}
+\end{equation}
+Thus no arbitrarily soft internal excitation is available to modify the
+low-energy massless pole.
+
+\subsection{Bare Self-Energy Kernel}
+
+The unrenormalized internal response contributes the bare self-energy
+\begin{equation}
+\boxed{
+F_{\rm bare}(z)
+=
+\int_{\mu_{\min}^2}^{\infty}
+d\mu^2\,
+\frac{
+\rho_X(\mu^2)
+}{
+z-\mu^2+i\epsilon
+}.
+}
+\end{equation}
+At zero external momentum,
+\begin{equation}
+F_{\rm bare}(0)
+=
+-\int_{\mu_{\min}^2}^{\infty}
+d\mu^2\,
+\frac{\rho_X(\mu^2)}{\mu^2}.
+\end{equation}
+For positive spectral weight, this is nonzero and negative:
+\begin{equation}
+\boxed{
+\rho_X(\mu^2)\geq0
+\quad\Longrightarrow\quad
+F_{\rm bare}(0)<0.
+}
+\end{equation}
+A direct use of \(F_{\rm bare}\) would shift the massless pole. The physical
+kernel must therefore be subtracted at zero momentum.
+
+\subsection{Massless-Pole Subtraction}
+
+The physical self-energy is defined by subtracting the zero-momentum contribution:
+\begin{equation}
+\boxed{
+F(z)
+=
+\int_{\mu_{\min}^2}^{\infty}
+d\mu^2\,
+\rho_X(\mu^2)
+\left[
+\frac{1}{z-\mu^2+i\epsilon}
++
+\frac{1}{\mu^2}
+\right].
+}
+\end{equation}
+The bracket satisfies
+\begin{equation}
+\boxed{
+\left[
+\frac{1}{z-\mu^2}
++
+\frac{1}{\mu^2}
+\right]
+=
+\frac{z}{\mu^2(z-\mu^2)}.
+}
+\end{equation}
+At \(z=0\),
+\begin{equation}
+\boxed{
+F(0)=0.
+}
+\end{equation}
+The subtraction therefore preserves the massless pole.
+
+\subsection{Low-Energy Expansion}
+
+For \(|z|\ll\mu_{\min}^2\), expand
+\begin{equation}
+\frac{1}{z-\mu^2}
+=
+-\frac{1}{\mu^2}
+\left(
+1+\frac{z}{\mu^2}
++
+\frac{z^2}{\mu^4}
++
+\cdots
+\right).
+\end{equation}
+The subtracted bracket becomes
+\begin{equation}
+\frac{1}{z-\mu^2}
++
+\frac{1}{\mu^2}
+=
+-\frac{z}{\mu^4}
+-\frac{z^2}{\mu^6}
+-\frac{z^3}{\mu^8}
+-\cdots .
+\end{equation}
+
+Define the positive spectral moments
+\begin{equation}
+\boxed{
+M_2
+=
+\int_{\mu_{\min}^2}^{\infty}
+d\mu^2\,
+\frac{\rho_X(\mu^2)}{\mu^4},
+\qquad
+M_3
+=
+\int_{\mu_{\min}^2}^{\infty}
+d\mu^2\,
+\frac{\rho_X(\mu^2)}{\mu^6},
+\qquad
+M_4
+=
+\int_{\mu_{\min}^2}^{\infty}
+d\mu^2\,
+\frac{\rho_X(\mu^2)}{\mu^8}.
+}
+\end{equation}
+Then
+\begin{equation}
+\boxed{
+F(z)
+=
+-zM_2
+-z^2M_3
+-z^3M_4
++O(z^4).
+}
+\end{equation}
+
+\subsection{Corrected Propagator}
+
+The corrected spin--2 propagator is
+\begin{equation}
+\boxed{
+D_{\mu\nu\rho\sigma}^{(P)}(k)
+=
+\frac{
+P_{\mu\nu\rho\sigma}^{(2)}
+}{
+k^2-F(k^2)+i\epsilon
+}.
+}
+\end{equation}
+Using \(z=k^2\), the corrected denominator is
+\begin{equation}
+P(z)
+=
+z-F(z).
+\end{equation}
+The low-energy expansion gives
+\begin{equation}
+P(z)
+=
+z
++
+zM_2
++
+z^2M_3
++
+z^3M_4
++
+O(z^4),
+\end{equation}
+or
+\begin{equation}
+\boxed{
+P(z)
+=
+z
+\left[
+1+M_2+zM_3+z^2M_4+O(z^3)
+\right].
+}
+\end{equation}
+
+At the pole,
+\begin{equation}
+\boxed{
+P(0)=0.
+}
+\end{equation}
+The derivative at the pole is
+\begin{equation}
+\boxed{
+P'(0)=1+M_2.
+}
+\end{equation}
+Since \(M_2>0\),
+\begin{equation}
+\boxed{
+P'(0)>0.
+}
+\end{equation}
+
+\subsection{Massless-Pole Residue and Ghost Freedom}
+
+The residue of the massless pole is
+\begin{equation}
+\boxed{
+Z_{\rm pole}
+=
+\frac{1}{P'(0)}
+=
+\frac{1}{1+M_2}.
+}
+\end{equation}
+Since \(M_2>0\),
+\begin{equation}
+\boxed{
+0<Z_{\rm pole}<1.
+}
+\end{equation}
+The massless pole remains present and has positive residue. The projection-sector
+self-energy therefore does not introduce a ghost at the macroscopic massless
+spin--2 pole.
+
+\subsection{Newton Normalization}
+
+The pole residue rescales the bare projection coupling \(G_P\). Matching the
+observed Newton coupling gives
+\begin{equation}
+\boxed{
+G_N
+=
+G_PZ_{\rm pole}
+=
+\frac{G_P}{1+M_2}.
+}
+\end{equation}
+Equivalently,
+\begin{equation}
+\boxed{
+G_P
+=
+(1+M_2)G_N.
+}
+\end{equation}
+After this normalization, the constant pole-residue correction is absorbed into
+the measured gravitational coupling. The remaining projection-sector correction
+begins at higher order.
+
+\subsection{Newton-Normalized Residual Kernel}
+
+Define the Newton-normalized denominator by
+\begin{equation}
+\boxed{
+z-F_E(z)
+=
+\frac{z-F(z)}{1+M_2}.
+}
+\end{equation}
+Using the expansion of \(F(z)\),
+\begin{equation}
+z-F_E(z)
+=
+z
++
+\frac{M_3}{1+M_2}z^2
++
+\frac{M_4}{1+M_2}z^3
++
+O(z^4).
+\end{equation}
+Hence
+\begin{equation}
+\boxed{
+F_E(z)
+=
+-\frac{M_3}{1+M_2}z^2
+-
+\frac{M_4}{1+M_2}z^3
++
+O(z^4).
+}
+\end{equation}
+Therefore,
+\begin{equation}
+\boxed{
+F_E(z)=O(z^2),
+\qquad
+\frac{F_E(z)}{z}\rightarrow0
+\quad
+(z\rightarrow0).
+}
+\end{equation}
+In terms of \(k^2\),
+\begin{equation}
+\boxed{
+F_E(k^2)=O(k^4),
+\qquad
+\frac{F_E(k^2)}{k^2}\rightarrow0
+\quad
+(k^2\rightarrow0).
+}
+\end{equation}
+
+\subsection{Relative Projection Correction}
+
+The relative projection-sector correction is
+\begin{equation}
+\boxed{
+R_X(z)
+=
+\frac{F_E(z)}{z}.
+}
+\end{equation}
+Because \(F_E(z)=O(z^2)\),
+\begin{equation}
+\boxed{
+R_X(z)\rightarrow0
+\qquad
+(z\rightarrow0).
+}
+\end{equation}
+
+The observable denominator correction may be written as
+\begin{equation}
+\boxed{
+\Sigma_X(z)
+=
+\frac{F_E(z)}{z-F_E(z)}
+=
+\frac{R_X(z)}{1-R_X(z)}.
+}
+\end{equation}
+If
+\begin{equation}
+\boxed{
+|R_X(z)|\leq\delta_X<1,
+}
+\end{equation}
+then
+\begin{equation}
+\boxed{
+|\Sigma_X(z)|
+\leq
+\frac{\delta_X}{1-\delta_X}.
+}
+\end{equation}
+In the weak projection regime,
+\begin{equation}
+\boxed{
+\delta_X\ll1
+\quad\Longrightarrow\quad
+|\Sigma_X(z)|\ll1.
+}
+\end{equation}
+
+\subsection{Euclidean Stability Check}
+
+For spacelike Euclidean momentum, write
+\begin{equation}
+z=-Q^2,
+\qquad
+Q^2>0.
+\end{equation}
+The subtracted bracket becomes
+\begin{equation}
+\frac{1}{-Q^2-\mu^2}
++
+\frac{1}{\mu^2}
+=
+\frac{Q^2}{\mu^2(Q^2+\mu^2)}.
+\end{equation}
+Thus
+\begin{equation}
+\boxed{
+Q^2>0,
+\qquad
+\mu^2>0
+\quad\Longrightarrow\quad
+\frac{1}{-Q^2-\mu^2}
++
+\frac{1}{\mu^2}
+\geq0.
+}
+\end{equation}
+For positive spectral density,
+\begin{equation}
+\boxed{
+F(-Q^2)\geq0.
+}
+\end{equation}
+The Euclidean response is bounded by the gap and does not create an unregulated
+low-energy instability.
+
+\subsection{Low-Energy Exterior Recovery}
+
+The Newton-normalized propagator is
+\begin{equation}
+\boxed{
+D_{\mu\nu\rho\sigma}^{(N)}(k)
+=
+\frac{
+G_NP_{\mu\nu\rho\sigma}^{(2)}
+}{
+k^2-F_E(k^2)+i\epsilon
+}.
+}
+\end{equation}
+Since
+\begin{equation}
+\frac{F_E(k^2)}{k^2}\rightarrow0
+\qquad
+(k^2\rightarrow0),
+\end{equation}
+the low-energy propagator reduces to
+\begin{equation}
+\boxed{
+D_{\mu\nu\rho\sigma}^{(N)}(k)
+\rightarrow
+\frac{
+G_NP_{\mu\nu\rho\sigma}^{(2)}
+}{
+k^2+i\epsilon
+}.
+}
+\end{equation}
+The projection correction tensor satisfies
+\begin{equation}
+\boxed{
+\Delta_{\mu\nu}^{(P)}
+\rightarrow0
+}
+\end{equation}
+in the low-energy exterior regime. The standard massless gravitational
+propagation channel is recovered.
+
+\subsection{Closed Propagator Stability Sequence}
+
+The spectral-response chain is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+P_X[\Psi]
+\rightarrow
+\rho_X(\mu^2)
+=
+\sum_{a\neq0}
+|g_a|^2
+\delta(\mu^2-\mu_a^2).
+}
+\end{equation}
+The gap-protection chain is
+\begin{equation}
+\boxed{
+\mu_{\min}^2>0
+\rightarrow
+\rho_X(\mu^2)=0
+\quad
+(0\leq\mu^2<\mu_{\min}^2).
+}
+\end{equation}
+The subtraction chain is
+\begin{equation}
+\boxed{
+F_{\rm bare}(z)
+=
+\int_{\mu_{\min}^2}^{\infty}
+d\mu^2
+\frac{\rho_X(\mu^2)}{z-\mu^2+i\epsilon}
+\rightarrow
+F(z)
+=
+\int_{\mu_{\min}^2}^{\infty}
+d\mu^2\,
+\rho_X(\mu^2)
+\left[
+\frac{1}{z-\mu^2+i\epsilon}
++
+\frac{1}{\mu^2}
+\right].
+}
+\end{equation}
+The massless-pole chain is
+\begin{equation}
+\boxed{
+F(0)=0
+\rightarrow
+P(0)=0
+\rightarrow
+Z_{\rm pole}
+=
+\frac{1}{1+M_2}
+>
+0.
+}
+\end{equation}
+The Newton-normalization chain is
+\begin{equation}
+\boxed{
+G_N
+=
+G_PZ_{\rm pole}
+=
+\frac{G_P}{1+M_2},
+\qquad
+F_E(z)=O(z^2),
+\qquad
+\frac{F_E(z)}{z}\rightarrow0.
+}
+\end{equation}
+The exterior recovery chain is
+\begin{equation}
+\boxed{
+z\ll\mu_{\min}^2
+\rightarrow
+\frac{F_E(z)}{z}\rightarrow0
+\rightarrow
+D_{\mu\nu\rho\sigma}^{(N)}(k)
+\rightarrow
+\frac{
+G_NP_{\mu\nu\rho\sigma}^{(2)}
+}{
+k^2+i\epsilon
+}
+\rightarrow
+\Delta_{\mu\nu}^{(P)}\rightarrow0.
+}
+\end{equation}
+
+This completes the projection propagator chain. The internal spectral sector can
+modify high-energy propagation through a gap-protected self-energy, but the
+zero-momentum subtraction and Newton normalization preserve the massless
+spin--2 pole, give a positive pole residue, remove ghost instabilities at low
+energy, and recover ordinary gravitational propagation in the exterior
+macroscopic limit.
+
+\section{Gravitational-Wave Projection Chain}
+\label{sec:gravitational_wave_projection_chain}
+
+The gravitational-wave sector is the radiative projection of the determinant-normalized metric. This appendix records the chain by which the master-field stiffness projection produces Kerr exterior perturbations, inherits the Teukolsky operator in the exterior regime, and suppresses projection-sector residuals through the same gap-protected self-energy developed in the projection propagator chain.
+
+The purpose of this section is not to introduce a new gravitational-wave mode hierarchy. In the exterior low-energy regime, Projection Relativity preserves the Kerr quasi-normal-mode hierarchy. The projection-sector contribution appears only as a gap-suppressed residual after Kerr subtraction.
+
+\subsection{Metric Perturbation and Radiative Projection}
+
+The gravitational projection produces the determinant-normalized effective metric
+\begin{equation}
+\boxed{
+g_{\mu\nu}^{\rm eff}
+=
+\frac{Q_{\mu\nu}}{|\det Q|^{1/4}}.
+}
+\end{equation}
+In a radiative exterior region, write the projected metric as a stationary background plus perturbation:
+\begin{equation}
+\boxed{
+g_{\mu\nu}^{\rm eff}
+=
+\bar g_{\mu\nu}
++
+h_{\mu\nu}.
+}
+\end{equation}
+The gravitational-wave component is the transverse--traceless spin--2 projection of the perturbation:
+\begin{equation}
+\boxed{
+h_{\mu\nu}^{\rm TT}
+=
+P_{\mu\nu}^{(2)\,\rho\sigma}
+h_{\rho\sigma}.
+}
+\end{equation}
+Here \(P^{(2)}\) denotes the spin--2 radiative projector. This isolates the propagating tensor response from gauge and non-radiative components.
+
+\subsection{Exterior Kerr Inheritance}
+
+Outside the finite projection core,
+\begin{equation}
+\boxed{
+r>r_c,
+}
+\end{equation}
+the exterior projection correction vanishes in the low-energy vacuum limit:
+\begin{equation}
+\boxed{
+\Delta_{\mu\nu}^{(P)}
+\rightarrow0.
+}
+\end{equation}
+The exterior metric therefore reduces to Kerr:
+\begin{equation}
+\boxed{
+\bar g_{\mu\nu}
+=
+g_{\mu\nu}^{\rm Kerr},
+\qquad
+r>r_c.
+}
+\end{equation}
+Consequently, the leading perturbation operator is the ordinary spin-weighted Teukolsky operator,
+\begin{equation}
+\boxed{
+O_{\rm Kerr}^{(s)}
+=
+O_{\rm Teuk}^{(s)}.
+}
+\end{equation}
+The spin label \(s\) denotes the spin weight of the perturbation variable. Projection Relativity therefore inherits the Kerr perturbation hierarchy in the exterior regime rather than replacing it.
+
+\subsection{Projection-Corrected Exterior Wave Operator}
+
+The internal response sector adds a residual self-energy correction to the exterior wave operator. The corrected operator is
+\begin{equation}
+\boxed{
+O_{\rm PR}^{(s)}
+=
+O_{\rm Teuk}^{(s)}
++
+\widehat{\Sigma}_{X}^{\rm GW}.
+}
+\end{equation}
+The gravitational-wave self-energy is the Newton-normalized projection residual evaluated on the Kerr operator:
+\begin{equation}
+\boxed{
+\widehat{\Sigma}_{X}^{\rm GW}
+=
+-F_E\!\left(O_{\rm Teuk}^{(s)}\right).
+}
+\end{equation}
+We find that
+\begin{equation}
+\boxed{
+O_{\rm PR}^{(s)}
+=
+O_{\rm Teuk}^{(s)}
+-
+F_E\!\left(O_{\rm Teuk}^{(s)}\right).
+}
+\end{equation}
+
+In a local wave patch, let
+\begin{equation}
+\boxed{
+z
+=
+k^2.
+}
+\end{equation}
+Then the corrected operator reduces locally to
+\begin{equation}
+\boxed{
+O_{\rm PR}^{(s)}
+\rightarrow
+z-F_E(z).
+}
+\end{equation}
+
+\subsection{Gap-Protected Low-Energy Recovery}
+
+From the projection propagator chain, the internal spectral density is gap protected:
+\begin{equation}
+\boxed{
+\rho_X(\mu^2)=0,
+\qquad
+0\leq\mu^2<\mu_{\min}^2.
+}
+\end{equation}
+The radial spectral gap is
+\begin{equation}
+\boxed{
+\mu_{\min}^2
+=
+3.052966743096.
+}
+\end{equation}
+After zero-momentum subtraction and Newton normalization, the residual kernel satisfies
+\begin{equation}
+\boxed{
+F_E(z)=O(z^2),
+\qquad
+\frac{F_E(z)}{z}\rightarrow0
+\quad
+(z\rightarrow0).
+}
+\end{equation}
+Therefore,
+\begin{equation}
+\boxed{
+O_{\rm PR}^{(s)}
+\rightarrow
+O_{\rm Teuk}^{(s)}
+\qquad
+(|z|\ll\mu_{\min}^2).
+}
+\end{equation}
+This is the Kerr-recovery limit. The exterior low-energy operator remains the Kerr/Teukolsky operator, with projection-sector corrections suppressed by the internal spectral gap.
+
+\subsection{Luminal Low-Energy Propagation}
+
+The local dispersion denominator is
+\begin{equation}
+\boxed{
+z-F_E(z).
+}
+\end{equation}
+Since \(F_E(z)=O(z^2)\), the low-energy root remains
+\begin{equation}
+\boxed{
+z=0.
+}
+\end{equation}
+Thus the low-energy gravitational-wave dispersion relation is
+\begin{equation}
+\boxed{
+\omega=c|k|.
+}
+\end{equation}
+The projection-sector residual is not a massive-graviton contribution and does not introduce a low-energy gravitational-wave mass term.
+
+\subsection{Response Function Expansion}
+
+Let the sourced spin-weighted perturbation equation be
+\begin{equation}
+\boxed{
+O_{\rm PR}^{(s)}\psi_{\rm PR}^{(s)}
+=
+S^{(s)}.
+}
+\end{equation}
+The corresponding retarded Green operator is
+\begin{equation}
+\boxed{
+G_{\rm PR}^{(s)}
+=
+\left[
+O_{\rm Teuk}^{(s)}
++
+\widehat{\Sigma}_{X}^{\rm GW}
+\right]^{-1}.
+}
+\end{equation}
+Define the Kerr Green operator by
+\begin{equation}
+\boxed{
+G_{\rm Kerr}^{(s)}
+=
+\left[
+O_{\rm Teuk}^{(s)}
+\right]^{-1}.
+}
+\end{equation}
+For a weak exterior projection correction,
+\begin{equation}
+\boxed{
+\left\|
+G_{\rm Kerr}^{(s)}
+\widehat{\Sigma}_{X}^{\rm GW}
+\right\|
+\ll1,
+}
+\end{equation}
+the Neumann expansion gives
+\begin{equation}
+\boxed{
+G_{\rm PR}^{(s)}
+=
+G_{\rm Kerr}^{(s)}
+-
+G_{\rm Kerr}^{(s)}
+\widehat{\Sigma}_{X}^{\rm GW}
+G_{\rm Kerr}^{(s)}
++
+O\!\left[
+\left(
+\widehat{\Sigma}_{X}^{\rm GW}
+\right)^2
+\right].
+}
+\end{equation}
+Acting on the source,
+\begin{equation}
+\boxed{
+\psi_{\rm PR}^{(s)}
+=
+\psi_{\rm Kerr}^{(s)}
++
+\delta\psi_X^{(s)}
++
+O\!\left[
+\left(
+\widehat{\Sigma}_{X}^{\rm GW}
+\right)^2
+\right],
+}
+\end{equation}
+where
+\begin{equation}
+\boxed{
+\delta\psi_X^{(s)}
+=
+-
+G_{\rm Kerr}^{(s)}
+\widehat{\Sigma}_{X}^{\rm GW}
+\psi_{\rm Kerr}^{(s)}.
+}
+\end{equation}
+
+\subsection{Observable Ringdown Decomposition}
+
+For outgoing radiation, define the complex detector strain by
+\begin{equation}
+\boxed{
+H(t)
+=
+h_+(t)-ih_\times(t).
+}
+\end{equation}
+In frequency space, the radiative curvature perturbation induces a strain decomposition of the same form:
+\begin{equation}
+\boxed{
+H_{\rm PR}(\omega)
+=
+H_{\rm Kerr}(\omega)
++
+H_X(\omega).
+}
+\end{equation}
+At the level of response amplitudes,
+\begin{equation}
+\boxed{
+A_{\rm obs}(\omega)
+=
+A_{\rm Kerr}(\omega)
++
+A_X(\omega).
+}
+\end{equation}
+Here \(A_{\rm Kerr}\) is the ordinary Kerr ringdown response, including the Kerr mode hierarchy and any Kerr overtones used in the subtraction model. The term \(A_X\) is the residual projection-sector response. It is not a shifted Kerr fundamental mode and not a new low-energy pole.
+
+The time-domain residual target is
+\begin{equation}
+\boxed{
+h_X(t)
+=
+h_{\rm obs}(t)
+-
+h_{\rm Kerr}^{\rm full}(t),
+}
+\end{equation}
+where \(h_{\rm Kerr}^{\rm full}\) denotes the full Kerr subtraction model used in the data analysis.
+
+\subsection{Residual Suppression Bound}
+
+The relative residual is controlled by the Newton-normalized self-energy ratio:
+\begin{equation}
+\boxed{
+R_X(z)
+=
+\frac{F_E(z)}{z}.
+}
+\end{equation}
+Since
+\begin{equation}
+\boxed{
+R_X(z)\rightarrow0
+\qquad
+(z\rightarrow0),
+}
+\end{equation}
+the projection-sector residual is suppressed in the low-energy exterior regime. The amplitude bound used in the main text is
+\begin{equation}
+\boxed{
+\frac{\|A_X\|}{\|A_{\rm Kerr}\|}
+\lesssim
+C_{\rm Kerr}
+\frac{\eta}{(1+M_2)(1-\eta)}
+\epsilon_X^{\rm GW},
+\qquad
+\eta
+=
+\frac{|z|}{\mu_{\min}^2}.
+}
+\end{equation}
+Where,
+\begin{equation}
+\boxed{
+\eta\ll1
+\quad\Longrightarrow\quad
+\|A_X\|\ll\|A_{\rm Kerr}\|.
+}
+\end{equation}
+This is the gravitational-wave consistency condition. The dominant exterior ringdown remains Kerr-like, and the projection-sector contribution is a suppressed residual channel.
+
+\subsection{Finite-Core Restoration Interpretation}
+
+The projection-sector residual is most naturally interpreted as a finite-core restoration response. The same radial operator that sets the finite-core spectral gap also sets the internal restoration spectrum:
+\begin{equation}
+\boxed{
+O_X
+=
+-\frac{d^2}{dw^2}
++
+1+w^2+\frac34w^4,
+\qquad
+\mathcal H_X
+=
+O_X-\lambda_0.
+}
+\end{equation}
+The radial restoration gaps are
+\begin{equation}
+\boxed{
+\mu_n^2
+=
+\lambda_n-\lambda_0.
+}
+\end{equation}
+A general dissipative restoration operator can be written as
+\begin{equation}
+\boxed{
+\widehat{\Gamma}_X
+=
+\left(
+\mathcal C_X^{\rm eff}
+\right)^{-1}
+\mathcal H_X.
+}
+\end{equation}
+The effective continuum/friction operator is determined by the imaginary part of the retarded internal self-energy:
+\begin{equation}
+\boxed{
+\mathcal C_X^{\rm eff}(\omega_\ast)
+=
+-
+\left.
+\partial_\omega
+{\rm Im}\,\Sigma_X^R(\omega)
+\right|_{\omega=\omega_\ast}.
+}
+\end{equation}
+In the first common-scale observational template,
+\begin{equation}
+\boxed{
+\mathcal C_X^{\rm eff}=c_0I,
+\qquad
+\Gamma_n
+=
+\frac{\mu_n^2}{c_0}.
+}
+\end{equation}
+This restoration interpretation does not replace Kerr. It gives a controlled way to parameterize a future high-signal-to-noise residual search after full Kerr subtraction.
+
+\subsection{Current Observational Status}
+
+The present manuscript does not claim a gravitational-wave detection of the projection-sector residual. Public-data screening with the fixed PR restoration template did not produce a statistically robust residual after comparison with generic drift and decay controls. The gravitational-wave channel is therefore a Kerr-consistency and future residual-stack channel in the present work.
+
+\subsection{Closed Gravitational-Wave Projection Sequence}
+
+The gravitational-wave projection chain is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+\{U_{n,m},\Lambda_{n,m}\}
+\rightarrow
+P_g[\Psi]
+\rightarrow
+g_{\mu\nu}^{\rm eff}
+\rightarrow
+h_{\mu\nu}^{\rm TT}
+\rightarrow
+O_{\rm Teuk}^{(s)}
+\rightarrow
+O_{\rm PR}^{(s)}
+=
+O_{\rm Teuk}^{(s)}
++
+\widehat{\Sigma}_{X}^{\rm GW}.
+}
+\end{equation}
+The residual self-energy chain is
+\begin{equation}
+\boxed{
+F_E(z)=O(z^2)
+\rightarrow
+\frac{F_E(z)}{z}\rightarrow0
+\rightarrow
+\widehat{\Sigma}_{X}^{\rm GW}
+=
+-F_E\!\left(O_{\rm Teuk}^{(s)}\right)
+\rightarrow
+O_{\rm PR}^{(s)}
+\rightarrow
+O_{\rm Teuk}^{(s)}.
+}
+\end{equation}
+The response chain is
+\begin{equation}
+\boxed{
+G_{\rm PR}^{(s)}
+=
+\left[
+O_{\rm Teuk}^{(s)}
++
+\widehat{\Sigma}_{X}^{\rm GW}
+\right]^{-1}
+\rightarrow
+G_{\rm Kerr}^{(s)}
+-
+G_{\rm Kerr}^{(s)}
+\widehat{\Sigma}_{X}^{\rm GW}
+G_{\rm Kerr}^{(s)}
+\rightarrow
+A_{\rm obs}
+=
+A_{\rm Kerr}
++
+A_X.
+}
+\end{equation}
+The suppression chain is
+\begin{equation}
+\boxed{
+\rho_X(\mu^2)=0
+\quad
+(0\leq\mu^2<\mu_{\min}^2)
+\rightarrow
+F_E(z)=O(z^2)
+\rightarrow
+\frac{\|A_X\|}{\|A_{\rm Kerr}\|}
+\lesssim
+C_{\rm Kerr}
+\frac{\eta}{(1+M_2)(1-\eta)}
+\epsilon_X^{\rm GW}
+\rightarrow
+\|A_X\|\ll\|A_{\rm Kerr}\|.
+}
+\end{equation}
+The observational chain is
+\begin{equation}
+\boxed{
+h_{\rm obs}
+\rightarrow
+h_{\rm Kerr}^{\rm full}
+\rightarrow
+h_X
+=
+h_{\rm obs}
+-
+h_{\rm Kerr}^{\rm full}
+\rightarrow
+\text{future high-SNR residual-stack test}.
+}
+\end{equation}
+
+This completes the gravitational-wave projection chain. Projection Relativity inherits the Kerr exterior ringdown hierarchy, preserves luminal low-energy gravitational-wave propagation, and suppresses projection-sector residuals through the internal radial gap. The present work treats this sector as a consistency and constraint channel, not as a positive residual-detection channel.
+
+\section{Unified Projection Energy Chain}
+\label{sec:unified_projection_energy_chain}
+
+The gravitational, displacement, compact electromagnetic, projection-response,
+and homogeneous phase sectors are not energetically independent systems. They
+are sector-resolved projections of the same master-field action. This appendix
+collects the unified energy chain: the internal spectral expansion, the
+four-dimensional effective Lagrangian, the sector decomposition, the projection
+Hamiltonian, isolated energy conservation, and low-energy relativistic
+kinematic recovery.
+
+The purpose of this section is to show how the separately derived projection
+channels recombine into one conserved master-field energy. Energy may be
+redistributed among projection sectors, but the isolated total projection energy
+is conserved.
+
+\subsection{Master-Field Input}
+
+The master field expands in the internal spectral basis as
+\begin{equation}
+\boxed{
+\Psi(x,w,\theta)
+=
+\sum_{n,m}
+c_{n,m}(x)U_{n,m}(w,\theta).
+}
+\end{equation}
+The internal modes satisfy
+\begin{equation}
+\boxed{
+O_{\rm int}U_{n,m}
+=
+\Lambda_{n,m}U_{n,m}.
+}
+\end{equation}
+The internal spectral data provide the stiffness, compact winding, and response
+scales used by the macroscopic projection sectors. The full projection action is
+\begin{equation}
+\boxed{
+S_{\rm PR}
+=
+\int d^4x\,d\mu_{\rm int}\,
+\sqrt{-g_{\rm eff}}\,
+\mathcal L_{\rm PR}(x,\xi).
+}
+\end{equation}
+The internal measure is
+\begin{equation}
+\boxed{
+d\mu_{\rm int}
+=
+R_A\,dw\,d\theta .
+}
+\end{equation}
+
+\subsection{Four-Dimensional Effective Lagrangian}
+
+Macroscopic observers do not resolve the internal coordinates directly. The
+observable four-dimensional effective Lagrangian density is obtained by
+integrating over the internal manifold:
+\begin{equation}
+\boxed{
+\mathcal L_{\rm PR}^{(4)}(x)
+=
+\int_{\mathcal M_{\rm int}}
+d\mu_{\rm int}\,
+\mathcal L_{\rm PR}(x,\xi).
+}
+\end{equation}
+
+Projection onto the sector profiles gives the sector decomposition
+\begin{equation}
+\boxed{
+\mathcal L_{\rm PR}^{(4)}
+=
+\mathcal L_g
++
+\mathcal L_{\rm disp}
++
+\mathcal L_A
++
+\mathcal L_X
++
+\mathcal L_\theta
++
+\mathcal L_{\rm mix}.
+}
+\end{equation}
+Here \(\mathcal L_g\) is the gravitational stiffness sector,
+\(\mathcal L_{\rm disp}\) is the displacement-amplitude sector,
+\(\mathcal L_A\) is the compact electromagnetic phase sector,
+\(\mathcal L_X\) is the projection-response sector, \(\mathcal L_\theta\) is
+the homogeneous compact-phase sector, and \(\mathcal L_{\rm mix}\) contains
+allowed cross-sector coherence terms.
+
+This decomposition does not introduce independent energies by hand. It is the
+sector-resolved form of the same internally integrated master Lagrangian.
+
+\subsection{Canonical Momentum and Hamiltonian Density}
+
+Let \(q_I\) denote the macroscopic projected degrees of freedom appearing in
+\(\mathcal L_{\rm PR}^{(4)}\). Their canonical momenta are
+\begin{equation}
+\boxed{
+\Pi_I
+=
+\frac{\partial\mathcal L_{\rm PR}^{(4)}}{\partial\dot q_I}.
+}
+\end{equation}
+For the master field notation, the canonical momentum conjugate to \(\Psi\) is
+\begin{equation}
+\boxed{
+\Pi_\Psi
+=
+\frac{\partial\mathcal L_{\rm PR}^{(4)}}{\partial(\partial_0\Psi)}.
+}
+\end{equation}
+
+The unified projection Hamiltonian density is the Legendre transform
+\begin{equation}
+\boxed{
+\mathcal H_{\rm PR}
+=
+\sum_I
+\Pi_I\dot q_I
+-
+\mathcal L_{\rm PR}^{(4)}.
+}
+\end{equation}
+Equivalently, in master-field shorthand,
+\begin{equation}
+\boxed{
+\mathcal H_{\rm PR}
+=
+\Pi_\Psi\partial_0\Psi
+-
+\mathcal L_{\rm PR}^{(4)}.
+}
+\end{equation}
+
+The sector decomposition induces the Hamiltonian split
+\begin{equation}
+\boxed{
+\mathcal H_{\rm PR}
+=
+\mathcal H_g
++
+\mathcal H_{\rm disp}
++
+\mathcal H_A
++
+\mathcal H_X
++
+\mathcal H_\theta
++
+\mathcal H_{\rm mix}.
+}
+\end{equation}
+The terms are not separate conserved universes. They are sector components of
+one master Hamiltonian.
+
+\subsection{Total Projection Energy}
+
+The total projection energy on a spatial hypersurface \(\Sigma_t\) is
+\begin{equation}
+\boxed{
+E_{\rm PR}(t)
+=
+\int_{\Sigma_t}
+d^3x\,
+\mathcal H_{\rm PR}.
+}
+\end{equation}
+Using the sector Hamiltonian split,
+\begin{equation}
+\boxed{
+E_{\rm PR}
+=
+E_g
++
+E_{\rm disp}
++
+E_A
++
+E_X
++
+E_\theta
++
+E_{\rm mix}.
+}
+\end{equation}
+Each term represents the energy carried by a projection sector or by coherent
+cross-sector exchange. Only the total isolated energy is required to be
+conserved.
+
+\subsection{Noether Conservation}
+
+When the internal geometric boundary data are fixed,
+\begin{equation}
+\boxed{
+\partial_0R_A=0,
+\qquad
+\partial_0\mu_{\min}^2=0,
+}
+\end{equation}
+and no external flux crosses the boundary of the system, the effective
+four-dimensional Lagrangian has continuous time-translation symmetry. Noether
+conservation gives
+\begin{equation}
+\boxed{
+\frac{dE_{\rm PR}}{dt}
+=
+-\Phi_E,
+}
+\end{equation}
+where \(\Phi_E\) is the net energy flux through the boundary of the chosen
+spatial domain.
+
+For an isolated projection system,
+\begin{equation}
+\boxed{
+\Phi_E=0,
+}
+\end{equation}
+so
+\begin{equation}
+\boxed{
+\frac{dE_{\rm PR}}{dt}=0.
+}
+\end{equation}
+Projection-sector exchange can redistribute energy among
+\(\mathcal H_g,\mathcal H_{\rm disp},\mathcal H_A,\mathcal H_X,\mathcal H_\theta\),
+and \(\mathcal H_{\rm mix}\), but the isolated master-field energy remains
+constant.
+
+\subsection{Low-Energy Sector Decoupling}
+
+In the macroscopic exterior regime,
+\begin{equation}
+\boxed{
+r>r_c,
+\qquad
+|k^2|\ll\mu_{\min}^2,
+}
+\end{equation}
+the projection-response kernel obeys
+\begin{equation}
+\boxed{
+\frac{F_E(k^2)}{k^2}\rightarrow0.
+}
+\end{equation}
+The cross-sector coherence terms are then suppressed:
+\begin{equation}
+\boxed{
+\mathcal L_{\rm mix}\rightarrow0
+\qquad
+(|k^2|\ll\mu_{\min}^2).
+}
+\end{equation}
+The localized projection modes reduce to their canonical low-energy free-field
+forms, with effective inertia supplied by the displacement vacuum:
+\begin{equation}
+\boxed{
+\mathcal M_{\rm eff}
+=
+g_0\mathcal I_AA_0.
+}
+\end{equation}
+
+\subsection{Projection-Mode Mass Scale}
+
+Restoring physical units, a projected mode eigenvalue
+\(\Lambda_{n,m}^{\rm phys}\) has dimensions
+\begin{equation}
+\boxed{
+[\Lambda_{n,m}^{\rm phys}]
+=
+L^{-2}.
+}
+\end{equation}
+The associated geometric mode mass scale is
+\begin{equation}
+\boxed{
+\mathcal M_{n,m}^{\rm geom}
+=
+\frac{\hbar}{c}
+\sqrt{\Lambda_{n,m}^{\rm phys}}.
+}
+\end{equation}
+The physical projected mode equation is
+\begin{equation}
+\boxed{
+\left(
+\Box-\Lambda_{n,m}^{\rm phys}
+\right)c_{n,m}(x)
+=
+0.
+}
+\end{equation}
+Applying the standard quantum operators,
+\begin{equation}
+\boxed{
+E\rightarrow i\hbar\partial_t,
+\qquad
+p\rightarrow -i\hbar\nabla,
+}
+\end{equation}
+gives
+\begin{equation}
+\boxed{
+E_{n,m}^2
+=
+|p|^2c^2
++
+\hbar^2c^2\Lambda_{n,m}^{\rm phys}
+=
+|p|^2c^2
++
+\left(
+\mathcal M_{n,m}^{\rm geom}
+\right)^2c^4.
+}
+\end{equation}
+
+This identifies the geometric mass scale associated with a projected mode. The
+matter-sector inertia used in macroscopic source terms is then obtained through
+the displacement-overlap chain.
+
+\subsection{Relativistic Kinematic Recovery}
+
+For an isolated low-energy projection configuration, define the total
+macroscopic momentum by
+\begin{equation}
+\boxed{
+\mathbf P_{\rm PR}
+=
+\int_{\Sigma_t}
+d^3x\,\boldsymbol{\mathcal P}_{\rm PR}.
+}
+\end{equation}
+The corresponding invariant energy relation is
+\begin{equation}
+\boxed{
+E_{\rm PR}^2
+=
+|\mathbf P_{\rm PR}|^2c^2
++
+M_{\rm PR}^2c^4.
+}
+\end{equation}
+In the rest frame,
+\begin{equation}
+\boxed{
+\mathbf P_{\rm PR}=0,
+\qquad
+E_{\rm PR}^{(0)}
+=
+M_{\rm PR}c^2.
+}
+\end{equation}
+
+Thus the unified projection Hamiltonian recovers the ordinary special-relativistic
+kinematic invariant in the low-energy exterior limit.
+
+\subsection{Closed Unified Energy Sequence}
+
+The unified Lagrangian chain is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+O_{\rm int}
+\rightarrow
+\{U_{n,m},\Lambda_{n,m}\}
+\rightarrow
+\mathcal L_{\rm PR}
+\rightarrow
+\mathcal L_{\rm PR}^{(4)}
+=
+\int_{\mathcal M_{\rm int}}
+d\mu_{\rm int}\,
+\mathcal L_{\rm PR}.
+}
+\end{equation}
+
+The sector decomposition chain is
+\begin{equation}
+\boxed{
+\mathcal L_{\rm PR}^{(4)}
+\rightarrow
+\mathcal L_g
++
+\mathcal L_{\rm disp}
++
+\mathcal L_A
++
+\mathcal L_X
++
+\mathcal L_\theta
++
+\mathcal L_{\rm mix}.
+}
+\end{equation}
+
+The Hamiltonian chain is
+\begin{equation}
+\boxed{
+\mathcal L_{\rm PR}^{(4)}
+\rightarrow
+\Pi_I
+=
+\frac{\partial\mathcal L_{\rm PR}^{(4)}}{\partial\dot q_I}
+\rightarrow
+\mathcal H_{\rm PR}
+=
+\sum_I\Pi_I\dot q_I-\mathcal L_{\rm PR}^{(4)}
+\rightarrow
+E_{\rm PR}
+=
+\int_{\Sigma_t}
+d^3x\,\mathcal H_{\rm PR}.
+}
+\end{equation}
+
+The conservation chain is
+\begin{equation}
+\boxed{
+\partial_0R_A=0,
+\qquad
+\partial_0\mu_{\min}^2=0,
+\qquad
+\Phi_E=0
+\quad
+\Longrightarrow
+\quad
+\frac{dE_{\rm PR}}{dt}=0.
+}
+\end{equation}
+
+The low-energy kinematic chain is
+\begin{equation}
+\boxed{
+|k^2|\ll\mu_{\min}^2
+\rightarrow
+\mathcal L_{\rm mix}\rightarrow0
+\rightarrow
+E_{\rm PR}^2
+=
+|\mathbf P_{\rm PR}|^2c^2
++
+M_{\rm PR}^2c^4.
+}
+\end{equation}
+
+The complete unified projection-energy sequence is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+\{P_g,P_{\rm disp},P_A,P_X,P_\theta\}
+\rightarrow
+\mathcal L_{\rm PR}^{(4)}
+\rightarrow
+\mathcal H_{\rm PR}
+\rightarrow
+E_{\rm PR}
+\rightarrow
+\frac{dE_{\rm PR}}{dt}=0
+\rightarrow
+E_{\rm PR}^2
+=
+|\mathbf P_{\rm PR}|^2c^2
++
+M_{\rm PR}^2c^4.
+}
+\end{equation}
+
+This completes the unified projection energy chain. The gravitational stiffness,
+displacement, compact electromagnetic phase, projection-response, and homogeneous
+phase sectors are sector-resolved contributions to a single conserved
+master-field energy. In the low-energy exterior regime, the sector coupling terms
+decouple and the standard relativistic energy relation is recovered.
+
+\section{Information-Preservation Chain}
+\label{sec:information_preservation_chain}
+
+The finite-core replacement of the classical singularity must preserve the
+master-field information ledger while remaining compatible with the exterior
+area-entropy bound. The purpose of this appendix section is to make that
+distinction explicit. Projection Relativity does not claim that an exterior
+observer has access to an unlimited hidden volume of states inside the core.
+Instead, the full master-field state evolves unitarily in the projection Hilbert
+space, while an exterior observer accesses only a boundary-projected,
+coarse-grained image of that state.
+
+The information-preservation chain therefore has two layers. The first layer is
+the full internal spectral state, which remains norm-preserving and unitary. The
+second layer is the exterior observational image, which is projected onto
+horizon boundary data and is therefore area-bounded.
+
+\subsection{Projection Hilbert Space and Master State}
+
+The master field belongs to the projection Hilbert space
+\begin{equation}
+\boxed{
+\mathcal H_P
+=
+L^2(\mathcal M_{\rm int},d\mu_{\rm int}).
+}
+\end{equation}
+This is the space in which the full internal spectral ledger is defined. It is
+larger than the data directly accessible to an exterior observer because it
+contains the internal mode amplitudes of the master field.
+
+Using the internal spectral basis, the state may be expanded as
+\begin{equation}
+\boxed{
+|\Psi(t)\rangle
+=
+\sum_{n,m}
+c_{n,m}(t)|U_{n,m}\rangle .
+}
+\end{equation}
+The coefficients \(c_{n,m}(t)\) are the time-dependent entries of the internal
+projection ledger. The basis states satisfy
+\begin{equation}
+\boxed{
+\langle U_{j,k}|U_{n,m}\rangle_P
+=
+\delta_{jn}\delta_{km}.
+}
+\end{equation}
+With this normalization, the full projection norm is
+\begin{equation}
+\boxed{
+\|\Psi(t)\|_P^2
+=
+\langle\Psi(t)|\Psi(t)\rangle_P
+=
+\sum_{n,m}
+|c_{n,m}(t)|^2.
+}
+\end{equation}
+Preserving this norm is the basic information-preservation requirement for the
+full master-field state.
+
+\subsection{Hermitian Projection Hamiltonian}
+
+For an isolated projection system, the master-field state evolves according to
+\begin{equation}
+\boxed{
+i\hbar\frac{d}{dt}|\Psi(t)\rangle
+=
+\widehat H_P|\Psi(t)\rangle .
+}
+\end{equation}
+The projection Hamiltonian is Hermitian:
+\begin{equation}
+\boxed{
+\widehat H_P^\dagger
+=
+\widehat H_P.
+}
+\end{equation}
+This condition is the mathematical statement that the full internal projection
+ledger evolves without loss or gain of total probability.
+
+The corresponding time-evolution operator is defined by
+\begin{equation}
+\boxed{
+|\Psi(t)\rangle
+=
+\widehat U_P(t,t_0)|\Psi(t_0)\rangle .
+}
+\end{equation}
+Hermiticity of \(\widehat H_P\) implies that \(\widehat U_P\) is unitary:
+\begin{equation}
+\boxed{
+\widehat U_P^\dagger(t,t_0)
+\widehat U_P(t,t_0)
+=
+I.
+}
+\end{equation}
+This is the core information-preservation statement. The full state may be
+redistributed among spectral modes, but it is not destroyed.
+
+\subsection{Norm Conservation}
+
+The norm of the master state is
+\begin{equation}
+\langle\Psi|\Psi\rangle_P.
+\end{equation}
+Taking its time derivative gives
+\begin{align}
+\frac{d}{dt}\langle\Psi|\Psi\rangle_P
+&=
+\langle\dot\Psi|\Psi\rangle_P
++
+\langle\Psi|\dot\Psi\rangle_P .
+\end{align}
+Using the Schrödinger-type evolution equation,
+\begin{equation}
+|\dot\Psi\rangle
+=
+-\frac{i}{\hbar}
+\widehat H_P|\Psi\rangle,
+\qquad
+\langle\dot\Psi|
+=
+\frac{i}{\hbar}
+\langle\Psi|\widehat H_P ,
+\end{equation}
+the two terms cancel:
+\begin{align}
+\frac{d}{dt}\langle\Psi|\Psi\rangle_P
+&=
+\frac{i}{\hbar}
+\langle\Psi|\widehat H_P|\Psi\rangle_P
+-
+\frac{i}{\hbar}
+\langle\Psi|\widehat H_P|\Psi\rangle_P
+\\
+&=
+0.
+\end{align}
+Therefore,
+\begin{equation}
+\boxed{
+\frac{d}{dt}\|\Psi(t)\|_P^2=0.
+}
+\end{equation}
+Equivalently,
+\begin{equation}
+\boxed{
+\sum_{n,m}|c_{n,m}(t)|^2
+=
+\sum_{n,m}|c_{n,m}(t_0)|^2.
+}
+\end{equation}
+The spectral coefficients may move between modes, but the total ledger norm is
+fixed.
+
+\subsection{Density-Matrix Evolution}
+
+The same conclusion can be stated in density-matrix language. For a pure
+master-field state,
+\begin{equation}
+\boxed{
+\rho(t)
+=
+|\Psi(t)\rangle\langle\Psi(t)|.
+}
+\end{equation}
+Under unitary projection evolution,
+\begin{equation}
+\boxed{
+\rho(t)
+=
+\widehat U_P(t,t_0)
+\rho(t_0)
+\widehat U_P^\dagger(t,t_0).
+}
+\end{equation}
+The trace of the density matrix is preserved because cyclicity of the trace and
+unitarity give
+\begin{align}
+{\rm Tr}\,\rho(t)
+&=
+{\rm Tr}
+\left[
+\widehat U_P\rho(t_0)\widehat U_P^\dagger
+\right]
+\\
+&=
+{\rm Tr}
+\left[
+\rho(t_0)\widehat U_P^\dagger\widehat U_P
+\right]
+\\
+&=
+{\rm Tr}\,\rho(t_0).
+\end{align}
+Hence
+\begin{equation}
+\boxed{
+{\rm Tr}\,\rho(t)
+=
+{\rm Tr}\,\rho(t_0).
+}
+\end{equation}
+
+Purity is also preserved under the full master-field evolution:
+\begin{align}
+{\rm Tr}\,\rho^2(t)
+&=
+{\rm Tr}
+\left[
+\widehat U_P\rho(t_0)\widehat U_P^\dagger
+\widehat U_P\rho(t_0)\widehat U_P^\dagger
+\right]
+\\
+&=
+{\rm Tr}
+\left[
+\widehat U_P\rho^2(t_0)\widehat U_P^\dagger
+\right]
+\\
+&=
+{\rm Tr}\,\rho^2(t_0).
+\end{align}
+Therefore,
+\begin{equation}
+\boxed{
+{\rm Tr}\,\rho^2(t)
+=
+{\rm Tr}\,\rho^2(t_0).
+}
+\end{equation}
+A pure full state remains pure under the complete projection evolution. Any
+apparent loss of purity must therefore arise from projection, coarse graining, or
+restriction to an observer-accessible subsystem.
+
+\subsection{Projection-Sector Coarse Graining}
+
+An observer rarely has access to the full internal projection ledger. Instead,
+the observer interacts with a restricted set of projection sectors. Let
+\(\{\Pi_A\}\) be a complete orthogonal set of sector projectors:
+\begin{equation}
+\boxed{
+\Pi_A\Pi_B
+=
+\delta_{AB}\Pi_A,
+\qquad
+\sum_A\Pi_A=I.
+}
+\end{equation}
+The sector-resolved coarse-grained state is
+\begin{equation}
+\boxed{
+\rho_{\rm cg}
+=
+\sum_A
+\Pi_A\rho\Pi_A.
+}
+\end{equation}
+This operation removes coherence between distinct projection sectors while
+retaining the total probability assigned to the sectors.
+
+The discarded off-sector coherence is
+\begin{equation}
+\boxed{
+\rho_{\rm coh}
+=
+\rho-\rho_{\rm cg}
+=
+\sum_{A\neq B}
+\Pi_A\rho\Pi_B.
+}
+\end{equation}
+The trace of the coarse-grained state remains equal to the trace of the full
+state:
+\begin{align}
+{\rm Tr}\,\rho_{\rm cg}
+&=
+{\rm Tr}
+\left[
+\sum_A
+\Pi_A\rho\Pi_A
+\right]
+\\
+&=
+\sum_A
+{\rm Tr}
+\left[
+\Pi_A\rho\Pi_A
+\right]
+\\
+&=
+\sum_A
+{\rm Tr}
+\left[
+\rho\Pi_A^2
+\right]
+\\
+&=
+\sum_A
+{\rm Tr}
+\left[
+\rho\Pi_A
+\right]
+\\
+&=
+{\rm Tr}
+\left[
+\rho
+\sum_A\Pi_A
+\right]
+\\
+&=
+{\rm Tr}\,\rho.
+\end{align}
+Thus,
+\begin{equation}
+\boxed{
+{\rm Tr}\,\rho_{\rm cg}
+=
+{\rm Tr}\,\rho.
+}
+\end{equation}
+The observer has not lost total probability. What is lost is access to the
+off-sector coherence.
+
+For a positive density matrix, projection-sector coarse graining cannot increase
+purity:
+\begin{equation}
+\boxed{
+{\rm Tr}\,\rho_{\rm cg}^2
+\leq
+{\rm Tr}\,\rho^2.
+}
+\end{equation}
+A strict inequality,
+\begin{equation}
+\boxed{
+{\rm Tr}\,\rho_{\rm cg}^2
+<
+{\rm Tr}\,\rho^2,
+}
+\end{equation}
+means that the restricted observer sees decoherence even though the full
+master-field evolution remains unitary. This is the distinction needed for the
+black-hole information problem: exterior decoherence does not imply fundamental
+information loss.
+
+\subsection{Finite-Core Spectral Redistribution}
+
+The finite core appears when the classical collapse channel reaches the radial
+projection ceiling:
+\begin{equation}
+\boxed{
+\mu_{\min}^2>0
+\quad\Longrightarrow\quad
+R_{\max}<\infty
+\quad\Longrightarrow\quad
+r_c>0.
+}
+\end{equation}
+The classical endpoint \(r=0\) is not part of the PR geometric domain. It is
+replaced by a finite spectral core:
+\begin{equation}
+\boxed{
+r\rightarrow r_c.
+}
+\end{equation}
+At this point, the collapsing exterior description is replaced by spectral
+redistribution inside the projection Hilbert space:
+\begin{equation}
+\boxed{
+\{c_{n,m}(t_0)\}
+\rightarrow
+\{c_{a}^{(c)}(t_c),c_{b}^{({\rm ext})}(t_c)\}.
+}
+\end{equation}
+The superscript \((c)\) labels finite-core spectral coefficients, while
+\(({\rm ext})\) labels coefficients still represented in the exterior
+projection channel.
+
+The total spectral norm is preserved:
+\begin{equation}
+\boxed{
+\sum_{n,m}
+|c_{n,m}(t_0)|^2
+=
+\sum_a
+|c_a^{(c)}(t_c)|^2
++
+\sum_b
+|c_b^{({\rm ext})}(t_c)|^2.
+}
+\end{equation}
+Collapse is therefore not modeled as destruction of coefficients. It is modeled
+as redistribution of the same master-field ledger between finite-core and
+exterior projection sectors.
+
+The finite-core spectral ledger is denoted
+\begin{equation}
+\boxed{
+\mathcal B_c
+=
+\left\{
+c_a^{(c)},\mu_a^2,\Pi_a^{(c)}
+\right\}.
+}
+\end{equation}
+This ledger records the bounded internal state after the curvature ceiling is
+reached. Since the evolution operator is unitary, the initial state can be
+reconstructed from the full final master-field state:
+\begin{equation}
+\boxed{
+|\Psi(t_0)\rangle
+=
+\widehat U_P^\dagger(t_c,t_0)
+|\Psi(t_c)\rangle.
+}
+\end{equation}
+In density-matrix form,
+\begin{equation}
+\boxed{
+\rho(t_0)
+=
+\widehat U_P^\dagger(t_c,t_0)
+\rho(t_c)
+\widehat U_P(t_c,t_0).
+}
+\end{equation}
+The finite core therefore stores information in the internal spectral ledger
+rather than erasing it at a classical singular endpoint.
+
+\subsection{Core Ledger and Energy Split}
+
+The finite core carries a bounded share of the projection energy. Its energy is
+\begin{equation}
+\boxed{
+E_{\rm PR}^{(c)}
+=
+\int_{r\leq r_c}
+d^3x\,
+\mathcal H_{\rm PR}.
+}
+\end{equation}
+The exterior projection channel carries
+\begin{equation}
+\boxed{
+E_{\rm PR}^{({\rm ext})}
+=
+\int_{r>r_c}
+d^3x\,
+\mathcal H_{\rm PR}.
+}
+\end{equation}
+The total isolated projection energy decomposes as
+\begin{equation}
+\boxed{
+E_{\rm PR}
+=
+E_{\rm PR}^{(c)}
++
+E_{\rm PR}^{({\rm ext})}.
+}
+\end{equation}
+For an isolated system,
+\begin{equation}
+\boxed{
+\frac{dE_{\rm PR}}{dt}=0.
+}
+\end{equation}
+This gives
+\begin{equation}
+\boxed{
+\frac{d}{dt}
+\left[
+E_{\rm PR}^{(c)}
++
+E_{\rm PR}^{({\rm ext})}
+\right]
+=
+0.
+}
+\end{equation}
+Energy may move between the exterior projection and the finite-core ledger, but
+the isolated total is conserved. The finite core stores energy in bounded
+spectral form; it does not require divergent curvature or divergent density.
+
+\subsection{Exterior Horizon Projection}
+
+The finite core is not an additional exterior entropy volume. The full spectral
+ledger belongs to the master-field Hilbert space, while an exterior observer
+sees only a boundary-projected image of that ledger.
+
+The horizon projection channel is
+\begin{equation}
+\boxed{
+\mathcal E_H:
+\mathcal B_c
+\longrightarrow
+\mathcal H_\partial.
+}
+\end{equation}
+Here \(\mathcal B_c\) is the finite-core spectral ledger and
+\(\mathcal H_\partial\) is the horizon boundary data. This map expresses that
+the exterior image of the core is encoded on the boundary, not as an externally
+accessible bulk volume.
+
+The exterior entropy is bounded by the horizon area:
+\begin{equation}
+\boxed{
+S_{\rm ext}
+\leq
+\frac{k_BA_H}{4\ell_P^2}.
+}
+\end{equation}
+This is a statement about the coarse-grained exterior channel. It does not
+replace the full internal unitary ledger. The area bound constrains what the
+exterior observer can access, while the full state remains encoded in
+\(\mathcal H_P\).
+
+\subsection{Information Preservation and Exterior Coarse Graining}
+
+Let \(\rho_c\) be the finite-core density matrix. The exterior boundary state is
+the projected image
+\begin{equation}
+\boxed{
+\rho_{\partial}
+=
+\mathcal E_H(\rho_c).
+}
+\end{equation}
+The exterior entropy is
+\begin{equation}
+\boxed{
+S_{\rm ext}
+=
+-k_B{\rm Tr}
+\left(
+\rho_{\partial}\ln\rho_{\partial}
+\right).
+}
+\end{equation}
+This entropy is the entropy of the boundary-projected image, not the entropy of
+the complete master-field state. A full state may remain pure while its exterior
+projection appears mixed.
+
+The full master-field evolution preserves
+\begin{equation}
+\boxed{
+\|\Psi(t)\|_P^2,
+\qquad
+{\rm Tr}\,\rho(t),
+\qquad
+{\rm Tr}\,\rho^2(t).
+}
+\end{equation}
+An exterior observer generally accesses only
+\begin{equation}
+\boxed{
+\rho_{\partial}
+\neq
+\rho.
+}
+\end{equation}
+The difference between these two states is the difference between full
+projection information and exterior coarse-grained information.
+
+\subsection{Closed Information-Preservation Sequence}
+
+The unitary evolution chain is
+\begin{equation}
+\boxed{
+\widehat H_P^\dagger=\widehat H_P
+\rightarrow
+\widehat U_P^\dagger\widehat U_P=I
+\rightarrow
+\frac{d}{dt}\|\Psi\|_P^2=0
+\rightarrow
+\sum_{n,m}|c_{n,m}(t)|^2
+=
+{\rm constant}.
+}
+\end{equation}
+This chain states that the master-field ledger is preserved at the level of the
+full internal spectral state.
+
+The density-matrix chain is
+\begin{equation}
+\boxed{
+\rho(t)
+=
+\widehat U_P\rho(t_0)\widehat U_P^\dagger
+\rightarrow
+{\rm Tr}\,\rho(t)
+=
+{\rm Tr}\,\rho(t_0)
+\rightarrow
+{\rm Tr}\,\rho^2(t)
+=
+{\rm Tr}\,\rho^2(t_0).
+}
+\end{equation}
+This is the density-matrix version of the same unitary preservation statement.
+
+The projection-sector coarse-graining chain is
+\begin{equation}
+\boxed{
+\rho
+\rightarrow
+\rho_{\rm cg}
+=
+\sum_A
+\Pi_A\rho\Pi_A
+\rightarrow
+{\rm Tr}\,\rho_{\rm cg}
+=
+{\rm Tr}\,\rho,
+\qquad
+{\rm Tr}\,\rho_{\rm cg}^2
+\leq
+{\rm Tr}\,\rho^2.
+}
+\end{equation}
+The trace is preserved under coarse graining, while purity can decrease because
+sector coherence is no longer visible. The finite-core redistribution chain is
+\begin{equation}
+\boxed{
+\begin{aligned}
+\mu_{\min}^2 > 0 &\implies R_{\max} < \infty \implies r_c > 0 \\
+&\implies \text{spectral redistribution as } r \to r_c \\
+&\implies \|\Psi(t_c)\|_P^2 = \|\Psi(t_0)\|_P^2
+\end{aligned}
+}
+\end{equation}
+This replaces singular information loss with finite spectral redistribution. The exterior entropy chain is
+\begin{equation}
+\boxed{
+\mathcal B_c
+\rightarrow
+\mathcal E_H(\mathcal B_c)
+=
+\mathcal H_\partial
+\rightarrow
+S_{\rm ext}
+\leq
+\frac{k_BA_H}{4\ell_P^2}.
+}
+\end{equation}
+The exterior observer receives an area-bounded boundary image of the finite-core
+ledger. The complete information-preservation chain is
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+\widehat H_P
+\rightarrow
+\widehat U_P
+\rightarrow
+\rho(t)
+=
+\widehat U_P\rho(t_0)\widehat U_P^\dagger
+\rightarrow
+{\rm Tr}\,\rho
+=
+{\rm constant}
+\rightarrow
+{\rm Tr}\,\rho^2
+=
+{\rm constant}
+\rightarrow
+\mathcal B_c
+\rightarrow
+\mathcal H_\partial.
+}
+\end{equation}
+Including finite-core saturation, the final chain is
+\begin{equation}
+\boxed{
+\mu_{\min}^2>0
+\rightarrow
+R_{\max}<\infty
+\rightarrow
+r_c>0
+\rightarrow
+\text{collapse as finite spectral redistribution}
+\rightarrow
+\|\Psi(t)\|_P^2
+=
+\|\Psi(t_0)\|_P^2.
+}
+\end{equation}
+
+This completes the information-preservation chain. Projection Relativity
+replaces the classical singular endpoint with a finite-core spectral state whose
+full master-field evolution remains unitary. The exterior observer sees only an
+area-bounded, coarse-grained boundary image of that unitary ledger.
+
+\end{document}
