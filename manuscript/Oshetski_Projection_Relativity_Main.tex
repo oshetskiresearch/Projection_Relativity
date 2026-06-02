@@ -1,0 +1,3965 @@
+\documentclass[11pt]{article}
+\usepackage{orcidlink}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,bm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{booktabs,longtable,array,multirow}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[most]{tcolorbox}
+\usepackage{soul}
+\usepackage{needspace}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf]{caption}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\renewcommand{\arraystretch}{1.22}
+
+\newcommand{\PR}{\mathrm{PR}}
+\newcommand{\eff}{\mathrm{eff}}
+\newcommand{\Kerr}{\mathrm{Kerr}}
+\newcommand{\GR}{\mathrm{GR}}
+\newcommand{\obs}{\mathrm{obs}}
+\newcommand{\src}{\mathrm{src}}
+\newcommand{\vac}{\mathrm{vac}}
+\newcommand{\homPR}{\mathrm{hom}}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\Teuk}{\mathrm{Teuk}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\diag}{\mathrm{diag}}
+\renewcommand{\arraystretch}{1.4}
+
+\title{The Foundation of Projection Relativity \\[0.3em] 
+\Large \textit A Spectral-Projection Architecture for Emergent Relativity}
+
+\author{Michael Stanislaus Oshetski \orcidlink{0009-0007-3623-7586} \\[-6pt]
+\small \email{michael.oshetski@micatu.com}\\[-3pt]
+\small Founder and Chief Technology Officer \\[-6pt]
+\small Advanced Photonics Laboratory (APL)\\[-6pt]
+\small Micatu, Inc. \\[-6pt]
+\small Horseheads, New York, USA \\[-6pt]
+\small ORCID: 0009-0007-3623-7586}
+\date{May 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We present Projection Relativity (PR), a spectral--projection framework in
+which gravitational stiffness, displacement-generated inertia, compact
+electromagnetic phase, and projection-response effects arise as observable
+sectors of a single master projection field \(\Psi(x,\xi)\) over an internal
+spectral manifold. The framework is built from a minimal radial--compact internal geometry,$\mathcal M_{\rm int}=\mathbb R_w\times S^1_\theta,$ whose radial spectral gap supplies a finite coercive scale and whose compact
+phase coordinate supplies the electromagnetic projection sector.
+
+The projected metric recovers the Einstein field
+equations in the low-energy limit and reduces to the Kerr exterior outside the
+finite projection core. The same nonzero radial spectral gap replaces the
+classical \(r=0\) singular endpoint with a bounded finite-core geometry, while
+preserving standard exterior black-hole phenomenology. In the dynamical ringdown sector, PR inherits the Kerr quasi-normal-mode hierarchy in the exterior limit. 
+Projection-sector corrections are gap-suppressed, so current gravitational-wave observations primarily test the Kerr-recovery limit rather than providing a positive residual detection.
+
+We find a luminosity-linked negative velocity residual in the quasar sample.
+Across the primary warning-clean estimators, the predicted sign appears in
+\(140/144\), \(134/144\), \(136/144\), and \(133/144\) matched bins for DR16Q,
+PIPE, PCA, and MgII, respectively. We also map the foreground-cleaned LoTSS
+residual, $|{\rm RRM}_{2022}|=1.254538\,{\rm rad\,m^{-2}}$, through the compact-phase magnetic area law, turning the observed
+Faraday-rotation residual into a projected compact-domain constraint rather
+than a fixed primordial field amplitude. 
+
+The resulting architecture provides a compact, testable projection framework
+for finite-core black holes, Kerr-consistent ringdown phenomenology,
+magnetically constrained compact phase structure, and luminosity-linked quasar
+velocity residuals. The complete derivation ledger, symbolic audits, numerical
+validation scripts, and figure-generation workflows are provided in the
+companion supplementary material and public repository. The scope of this
+manuscript is the minimal bosonic projection chain: gravitational stiffness,
+displacement-generated inertia, compact electromagnetic phase, projection
+response, and their first observational consequences.
+\end{abstract}
+
+\end{abstract}
+
+\section{Introduction: Architectural Logic and Geometric Closure}
+
+Projection Relativity (PR) is developed through a rigorous Geometric Closure Protocol \cite{cvitanovic2005}, utilizing a ``Master Chain'' of action as the fundamental architectural basis of the theory. This methodology establishes a strictly parameter-free framework, deriving physical observables through internal geometric necessity rather than empirical insertion \cite{penrose_2016}. By establishing an unbroken logical and mathematical sequence, the framework translates a master field within a Hilbert space \cite{hilbert1912} through a projection manifold, yielding the observable constraints of the physical universe. Accordingly, this work closes the minimal bosonic projection chain: gravitational stiffness \cite{einstein1916}, displacement-generated inertia, and compact electromagnetic phase \cite{maxwell1865} are derived as mutually constrained projections of the same master field.
+
+In this high-level logical overview, we define the governing concepts by which a unified projection manifold reproduces both weak-field and strong-field energy regimes across the relativistic scale. The observable universe is represented as a sequence of projection sectors generated from a single master field, with the internal manifold assigned the cylindrical topology \cite{Kaluza1921} $\mathcal M_{\rm int}=\mathbb R_w\times S^1_\theta$. Within this minimal projection geometry, the three governing characteristics of the manifold are stiffness, displacement, and phase. These are not independent additions to the theory; they are the three primary observable projections of the same internal spectral structure. Stiffness maps to the gravitational sector, displacement maps to effective inertia and mass generation, and compact phase maps to the electromagnetic sector in four-dimensional observable reality.
+
+Throughout this manuscript, we use a spring analogy as an intuitive guide to the projection architecture. The analogy is not a substitute for the mathematical derivation; it is a conceptual bridge. The internal projection manifold behaves like a constrained geometric spring whose three primary observable characteristics are stiffness, displacement, and phase. These correspond respectively to the gravitational sector, the mass/inertia sector, and the electromagnetic sector.
+
+\subsection{Stiffness (The Gravitational Sector)}
+
+We refer to the radial spectral energy of the internal manifold as ``stiffness.'' This sector is governed by the radial coordinate \(w\), the radial spectral operator \(O_X\), and the first radial spectral gap \(\mu_{\min}^2\). The spectral gap establishes the zero-point projection state and separates it from higher radial excitation states of the internal potential. In the spring analogy, \(\mu_{\min}^2\) plays the role of the fundamental geometric spring constant: it is the stiffness floor that prevents the projection manifold from becoming arbitrarily soft.
+
+In observable spacetime, this radial stiffness manifests as the gravitational metric \(g_{\mu\nu}^{\rm eff}\). The same stiffness that permits weak-field Einstein recovery also enforces strong-field saturation. As the classical singularity limit is approached, the projection-trace radial branch does not allow unlimited curvature growth. Instead, the geometric projection saturates at a finite curvature scale \(R_{\max}\), producing a finite core radius \(r_c>0\). Accordingly, the classical point-singular endpoint is replaced by a saturated geometric core. The observable classical geometry reaches its projection limit, but the underlying master-field information is preserved in the finite-core spectral ledger.
+
+\subsection{Displacement (The Mass Sector)}
+
+In the Projection Relativity framework, displacement is the magnitude of deviation, or ``stretching,'' from the zero-point vacuum state established by the spectral gap \(\mu_{\min}^2\). This sector is governed by the scalar-amplitude projection of the master field and the corresponding projection operator \(P_{\rm disp}\). By mapping the internal spectral offset from the manifold baseline to a stable nonzero displacement vacuum, this sector generates effective inertia \(\mathcal M_{\rm eff}\) within the observable universe.
+
+A useful mental model is a displaced spring. Just as stretching a mechanical spring creates tension, displacement of the master projection field creates geometric tension when the displacement projection offsets the field from its internal baseline. This displacement appears macroscopically as particle inertia. In this way, observable mass is linked to the internal Hilbert-space amplitude through its overlap with the underlying stiffness of the manifold.
+
+This displacement is fundamentally and inseparably linked to stiffness, or gravity. In the spring analogy, stiffness is the spring constant and displacement is the stretch. Neither exists as an independent physical addition; they are two projections of the same internal structure. This is the basis of Projection Relativity's equivalence principle \cite{Einstein1911}: the projection structure that generates inertial response is the same structure that sources gravitational stiffness.
+
+\subsection{Phase (The Electromagnetic Sector)}
+
+To complete the spring analogy, phase can be understood as the angular offset, or torsional winding, of the projection spring. This sector is governed by the compact operator \(O_\theta\), the compact internal radius \(R_A\), and the phase coordinate \(\theta\in S^1\). While stiffness describes radial resistance and displacement describes stretch, phase describes compact winding. The compact phase is not chosen independently of the radial stiffness. It is constrained by coherence with the stiffness and displacement sectors. As with twisting a mechanical spring, compact phase winding stores geometric resistance in the internal manifold. In observable spacetime, that winding manifests as the electromagnetic \(U(1)\) phase sector. Expanding this analogy into the physical construction, compact phase winding of the internal projection manifold determines the observable \(U(1)\) phase rotation. By consequence, the electromagnetic coupling is an output of compact phase geometry and finite-rank boundary orientation. It is not inserted as a low-energy calibration.
+
+\subsection{Objective and Methodology}
+Grounded in this internal stiffness architecture, Projection Relativity provides a unified model where gravity, displacement, electromagnetism, and cosmology emerge without independent parameters as projections of a single master field. Regulated by a Geometric Closure Protocol, each sector ensures strict internal consistency and classical low-energy recovery. The framework is regularized by the radial spectral gap ($\mu_{\min}^2$), providing the finite coercive scale needed to resolve classical singularities while preserving verified relativistic successes. Ultimately, Projection Relativity does not replace the local gauge interactions of the Standard Model or QED; rather, it establishes the macroscopic, deterministic geometric architecture upon which those quantum fields operate.
+
+\subsection{Test-Driven Theoretical Physics Approach}
+Projection Relativity utilizes a Test-Driven Theoretical Physics methodology, adapting software engineering continuous integration (CI) and regression testing directly to fundamental differential geometry. To ensure structural consistency and eliminate theoretical drift, every equation, tensor relation, and boundary condition in this manuscript is strictly coupled to an automated symbolic engine driven by Maplesoft. The complete test suite and a cloud-executable Python numerical harness are publicly available at \url{https://github.com/oshetskiresearch/Projection_Relativity} for independent verification. Requiring this geometric architecture to successfully compile within an automated pipeline ensures that the framework's macroscopic predictions emerge as the rigid consequences of the mathematical structure.
+
+\subsection{Structure of the Presentation} The remainder of this manuscript is organized to strictly separate geometric construction from phenomenological consequence. Sections 2 and 3 establish the foundational postulates and internal spectral machinery of the framework. Sections 4 through 8 sequentially construct the macroscopic projection sectors: gravitational stiffness, displacement-generated inertia, compact electromagnetic phase, and the corrected wave operator. Section 9 unites these independent channels into a conserved global effective action. Finally, we present the physical consequences of the architecture: Section 10 proves the geometric closure of the framework by deriving the fundamental macroscopic scales without empirical calibration, while Section 11 subjects the theory to falsifiable astrophysical tests, including
+Kerr-consistent gravitational-wave recovery, compact-phase magnetic area-law constraints, and luminosity-linked quasar velocity residuals.
+
+\subsection{Scope Of Research}
+The architectural objective of Projection Relativity is the
+regularization of classical gravitational singularities  \cite{Bardeen1968,Hayward2006} through the radial spectral gap of the internal projection manifold. The compact electromagnetic phase sector, including the boundary-resolved geometric derivation of its effective coupling., is not introduced as an independent theoretical target. Rather, it emerges as a rigid mathematical consequence of the same \(3+1\) projection trace structure required to stabilize the gravitational
+sector. Accordingly, this manuscript develops the initial bosonic projection
+architecture: gravitational stiffness, displacement structure, compact
+electromagnetic phase, projection response, and their macroscopic observational signatures. The topological enlargement required to incorporate non-Abelian gauge sectors, fermionic matter families, and full particle-sector completion is outside the scope of this first construction and is deferred to possible future research.
+
+
+\section{Foundational Postulates}
+\label{sec:master_projection_field_foundational_postulates}
+
+The Projection Relativity (PR) framework is defined by a single master projection field $\Psi(x, \xi)$, spanning the product space of observable spacetime and an internal spectral manifold. By strictly constraining the system to a minimal geometric set, we have eliminated the need for independent, arbitrary physical sectors. Instead, gravitation, displacement structure, and electromagnetic phase emerge as unified projections of the internal spectral manifold. This section defines the structural constraints along with the geometric closure conditions—that govern the theory. The complete derivations and explicit eigenvalue solutions are detailed in Section~\ref{sec:foundational_mathematical_structures}.
+
+\subsection{Postulate 1: The Master Field Defines the Universal Projection State}
+\label{sec:postulate_master_field_universal_projection_state}
+
+There exists a master projection field from which all observable sectors are generated. This field depends on observable spacetime coordinates \(x^\mu=(ct,x^1,x^2,x^3)\) and internal spectral coordinates \(\xi^A\in\mathcal M_{\rm int}\). Where \(\Psi\) is not merely a four-dimensional spacetime field; it is a field over the product of observable spacetime and the internal projection manifold \cite{Steenrod1951, KobayashiNomizu1963}. In the low-energy observable limit, \(\mathcal M_{\rm spacetime}=\mathbb R^{1,3}\), and the master field is the universal projection state
+\begin{equation}
+\boxed{
+\Psi:
+\mathbb R^{1,3}
+\times
+\mathcal M_{\rm int}
+\rightarrow
+\mathbb C,
+\qquad
+\Psi=\Psi(x,\xi).
+}
+\end{equation}
+
+All observable phenomena of gravitational stiffness, displacement projection, electromagnetic phase, and their dynamic responses emerge strictly as geometric projections of this unified \(\Psi\) internal structure.
+
+\subsection{Postulate 2: The Internal Manifold Supplies Radial Stiffness and Compact Phase}
+\label{sec:postulate_internal_manifold_radial_stiffness_compact_phase}
+
+The minimal internal manifold contains one non-compact radial spectral coordinate \(w\in(-\infty,\infty)\) and one compact electromagnetic phase coordinate \(\theta\in[0,2\pi)\). The radial coordinate supplies the stiffness direction responsible for finite-core regularization and propagator suppression, while the compact coordinate supplies the phase direction associated with electromagnetic winding. We define the internal topology as
+\begin{equation}
+\boxed{
+\mathcal M_{\rm int}
+=
+\mathbb R_w
+\times
+S^1_\theta,
+\qquad
+\theta\sim\theta+2\pi n,
+\qquad
+n\in\mathbb Z.
+}
+\end{equation}
+
+The compact phase is represented by \(e^{i\theta}\), so that \(e^{i(\theta+2\pi n)}=e^{i\theta}\). So that the internal space has cylindrical topology, \(\mathcal M_{\rm int}\simeq\mathbb R\times S^1.
+\)
+
+\subsection{Postulate 3: The Internal Metric Fixes the Measure and Laplace--Beltrami Operator}
+\label{sec:postulate_internal_metric_measure_laplacian}
+
+The internal manifold is assigned a separable metric. The coordinate \(w\) is treated as a non-compact unwrapped spectral coordinate rather than a polar radial coordinate, so no \(1/w\)-type polar curvature term appears. The compact electromagnetic radius \(R_A\) is treated as stationary in the effective model:
+\begin{equation}
+ \partial_wR_A=0,
+\qquad
+\partial_\theta R_A=0.
+\end{equation}
+
+The minimal internal line element is
+\begin{equation}
+ds_{\rm int}^2
+=
+dw^2
++
+R_A^2d\theta^2.
+\end{equation}
+
+With \(\xi^A=(w,\theta)\), the metric data are
+\begin{align}
+G_{AB}
+&=
+\mathrm{diag}(1,R_A^2),
+&
+G^{AB}
+&=
+\mathrm{diag}(1,R_A^{-2}),
+&
+\det(G_{AB})
+&=
+R_A^2.
+\end{align}
+
+This fixes the invariant internal measure:
+\begin{equation}
+\boxed{
+d\mu_{\rm int}
+=
+\sqrt{\det(G_{AB})}\,dw\,d\theta
+=
+R_A\,dw\,d\theta.
+}
+\end{equation}
+
+The scalar Laplace--Beltrami \cite{Beltrami1868} operator is
+\begin{equation}
+\Delta_G
+=
+\frac{1}{\sqrt{\det G}}
+\partial_A
+\left(
+\sqrt{\det G}\,
+G^{AB}
+\partial_B
+\right).
+\end{equation}
+
+Using the stationary-radius conditions, this reduces to
+\begin{equation}
+\boxed{
+\Delta_G
+=
+\partial_w^2
++
+R_A^{-2}\partial_\theta^2.
+}
+\end{equation}
+
+The internal metric function fixes both the measure used for projection overlaps and the differential operator used to construct the internal spectrum.
+
+\subsection{Postulate 4: The Projection Hilbert Space Defines Normalization and Overlap}
+\label{sec:postulate_projection_hilbert_space_normalization_overlap}
+
+The master projection field belongs to an internal Hilbert space built from the invariant measure. This Hilbert space defines normalization, orthogonality, spectral coefficients, and projection overlaps.
+
+\begin{equation}
+\boxed{
+\mathcal H_P
+=
+L^2
+\left(
+\mathbb R_w\times S^1_\theta,
+d\mu_{\rm int}
+\right),
+\qquad
+d\mu_{\rm int}=R_A\,dw\,d\theta.
+}
+\end{equation}
+
+The corresponding internal inner product is
+\begin{equation}
+\boxed{
+\langle f|g\rangle_P
+=
+\int_{\mathcal M_{\rm int}}
+d\mu_{\rm int}\,
+f^*(\xi)g(\xi)
+=
+\int_{-\infty}^{\infty}dw
+\int_0^{2\pi}
+R_A\,d\theta\,
+f^*(w,\theta)g(w,\theta).
+}
+\end{equation}
+
+This is the inner product used later for internal mode normalization, spectral expansion, and sector projection amplitudes.
+
+\subsection{Postulate 5: The Internal Spectral Operator Generates the Projection Spectrum}
+\label{sec:postulate_internal_operator_projection_spectrum}
+
+The internal spectral operator is the operator that generates the internal eigenmodes and stiffness eigenvalues of the projection manifold. In the minimal separable model, it decomposes into a radial spectral \cite{BenderWu1969} part and a compact phase part:
+\begin{equation}
+O_{\rm int}=O_X+O_\theta.
+\end{equation}
+The radial and compact operators are
+\begin{align}
+O_X
+&=
+-\frac{d^2}{dw^2}
++
+V_X(w),
+&
+O_\theta
+&=
+-\frac{1}{R_A^2}
+\frac{d^2}{d\theta^2}.
+\end{align}
+
+Combined,
+\begin{equation}
+\boxed{
+O_{\rm int}
+=
+-\frac{d^2}{dw^2}
+-
+\frac{1}{R_A^2}
+\frac{d^2}{d\theta^2}
++
+V_X(w).
+}
+\end{equation}
+
+The eigenmodes and eigenvalues of this operator define the internal projection spectrum used throughout the framework.
+
+\subsection{Postulate 6: The Projection-Trace Radial Branch Produces a Discrete Stable Spectrum}
+\label{sec:postulate_radial_confinement_discrete_stable_spectrum}
+\label{sec:postulate_projection_trace_radial_branch}
+
+The radial sector is stabilized by a confining potential \cite{Simon1970}. Rather than selecting a generic positive quartic, Projection Relativity fixes the radial confinement branch through three explicit geometric requirements:
+
+\begin{tcolorbox}[colback=black!2!white, colframe=black!75!white, title=\textbf{Projection Baseline Constraints}]
+\begin{enumerate}
+    \item Unit local radial stiffness at the projection baseline.
+    \item Even radial symmetry under \(w \rightarrow -w\).
+    \item The \(3+1\) projection trace from the pre-projection spacetime structure into the observable spatial boundary sector.
+\end{enumerate}
+\end{tcolorbox}
+
+Subject to even radial symmetry, the general quartic radial operator and potential take the form
+\begin{equation}
+    \boxed{ O_X = -\frac{d^2}{dw^2} + V_X(w), } \qquad V_X(w) = \Lambda_X^2 \left( 1 + a_2w^2 + a_4w^4 \right),
+\end{equation}
+with \(a_2, a_4 > 0\). 
+
+The quadratic coefficient \(a_2\) is strictly determined by the local radial stiffness normalization condition at the projection baseline (\(w=0\)):
+\begin{equation}
+    \boxed{ \left. \frac{1}{2\Lambda_X^2} \frac{d^2V_X}{dw^2} \right|_{w=0} = 1 \quad \implies \quad a_2 = 1. }
+\end{equation}
+
+The quartic coefficient \(a_4\) is fixed by the projection trace. Before the observable \(3+1\) split, the quartic boundary term is distributed over the four pre-projection spacetime directions. Let \(I_{3+1}\) denote the identity over these four directions, and \(P_{\rm space} = \operatorname{diag}(0,1,1,1)\) denote the observable spatial projector \cite{ADM1962}. Evaluating the degree-of-freedom trace yields the inherited quartic boundary weight for the observable spatial radial sector:
+\begin{equation}
+    \boxed{ a_4 = \frac{\operatorname{Tr}_{\rm dof}(P_{\rm space})}{\operatorname{Tr}_{\rm dof}(I_{3+1})} = \frac{3}{4}. }
+\end{equation}
+
+This uniquely isolates the PR radial confinement branch from the space of generic positive quartics:
+\begin{equation}
+    \boxed{ V_{X,\star}(w) = \Lambda_X^2 \left( 1 + w^2 + \frac{3}{4}w^4 \right). }
+\end{equation}
+
+The resulting projection-trace radial operator is therefore
+\begin{equation}
+    \boxed{ O_{X,\star} = -\frac{d^2}{dw^2} + \Lambda_X^2 \left( 1 + w^2 + \frac{3}{4}w^4 \right). }
+\end{equation}
+
+Assuming \(\Lambda_X^2 > 0\), this potential is inherently compatible with the un-oriented radial stiffness coordinate and is strictly convex, as \(\frac{d^2V_{X,\star}}{dw^2} = \Lambda_X^2(2+9w^2) > 0\). Furthermore, the quartic dominance guarantees strong confinement at large radial displacements:
+\begin{equation}
+    \boxed{ \lim_{|w|\rightarrow\infty} V_{X,\star}(w) = +\infty. }
+\end{equation}
+
+Because \(O_{X,\star}\) is a strictly convex, confining Schrödinger-type operator \cite{schrodinger1926}, it produces a lower-bounded, purely discrete spectrum:
+\begin{equation}
+    \boxed{ O_{X,\star}u_n(w) = \lambda_n u_n(w), \qquad \lambda_0 < \lambda_1 < \lambda_2 < \cdots }
+\end{equation}
+
+This guarantees a strictly positive first radial spectral gap:
+\begin{equation}
+    \boxed{ \mu_{\min}^2 = \lambda_1 - \lambda_0 > 0. }
+\end{equation}
+This fundamental gap supplies the radial coercivity scale necessary for the subsequent gravitational, propagator, and compact electromagnetic closure constructions. While alternative positive quartics mathematically represent stable confining operators, they fail to satisfy the PR projection branch conditions. For instance, a full-trace quartic (\(a_4=1\)) retains all four pre-projection quartic directions in the observable spatial boundary term, violating the \(3+1\) projection trace. Similarly, potentials like \(1+2w^2+w^4\) violate unit local radial stiffness, and higher-order even expansions (e.g., \(w^6\)) introduce extraneous nonlinear confinement scales beyond the minimal projection-trace requirements. The complete PR projection-trace branch condition is then summarized as:
+
+\begin{equation}
+\boxed{
+\begin{gathered}
+\text{unit radial stiffness} + \text{(3+1\) projection trace} 
+{}+ \text{minimal even nonlinear confinement} \\
+\Downarrow \\
+V_{X,\star}(w) = \Lambda_X^2 \left( 1+w^2+\frac{3}{4}w^4 \right)
+\end{gathered}}
+\end{equation}
+
+
+
+The explicit radial eigenproblem, numerical spectral gap evaluation, and numerical branch-verification are derived in Section~\ref{sec:internal_spectral_eigenproblem} and Section~\ref{sec:radial_spectral_gap}.
+
+\subsection{Postulate 7: Projection Operators Map the Master Field to Observable Sectors}
+\label{sec:postulate_projection_operators_observable_sectors}
+
+Observable fields are not introduced as independent fundamental variables. They arise through projection operators \cite{vonneumann1932, GelfandNaimark1943, Segal1947} acting on the same master field:
+\begin{equation}
+\mathcal O_i=P_i[\Psi].
+\end{equation}
+
+The principal projection sectors are
+\begin{equation}
+\{P_i\}
+=
+\{P_g,P_{\rm disp},P_A,P_X,P_\theta\}.
+\end{equation}
+
+Their observable outputs are summarized by
+\begin{align}
+P_g[\Psi]
+&\rightarrow
+g_{\mu\nu}^{\rm eff}
+&&
+\text{(gravitational stiffness)},\\
+P_{\rm disp}[\Psi]
+&\rightarrow
+\Phi_{\rm disp}(x)
+\rightarrow
+A(x)
+\rightarrow
+A_{\rm phys}(x)
+&&
+\text{(displacement amplitude)},\\
+P_A[\Psi]
+&\rightarrow
+\theta(x)
+\rightarrow
+\mathcal A_\mu(x)
+&&
+\text{(compact electromagnetic phase)},\\
+P_X[\Psi]
+&\rightarrow
+\Sigma_X
+&&
+\text{(projection response)},\\
+P_\theta[\Psi]
+&\rightarrow
+H_{\rm eff}(t)
+&&
+\text{(homogeneous phase response)}.
+\end{align}
+
+The organizing correspondence of the framework is defined as
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+O_{\rm int}
+\rightarrow
+\{U_{n,m},\Lambda_{n,m}\}
+\rightarrow
+\{P_g,P_{\rm disp},P_A,P_X,P_\theta\}
+\rightarrow
+\{g_{\mu\nu}^{\rm eff},A_{\rm phys},\mathcal A_\mu,\Sigma_X,H_{\rm eff}\}.
+}
+\end{equation}
+
+\section{Foundational Mathematical Structures}
+\label{sec:foundational_mathematical_structures}
+
+Section 2 established the foundational postulates of Projection Relativity: the master field $\Psi(x, \xi)$, the internal cylindrical manifold $\mathcal{M}_{\rm int} = \mathbb{R}_w \times S^1_\theta$, the projection Hilbert space, and the projection-sector dictionary. 
+
+This section derives the spectral machinery that strictly follows from those geometric postulates. We construct the full internal spectral basis, derive the spacetime mode equations from the master action, and establish the fundamental radial spectral gap that serves as the universal regularization scale for the subsequent gravitational stiffness sector and displacement sector.
+
+\subsection{The Internal Spectral Eigenproblem}
+\label{sec:internal_spectral_eigenproblem}
+
+The separable internal operator defined in Section 2 is \(O_{\rm int}=O_{X,\star}+O_\theta\). Because the radial operator acts strictly on \(w\) and the compact operator acts strictly on \(\theta\), the full internal eigenmodes factorize as \(U_{n,m}(w,\theta)=u_n(w)v_m(\theta)\). The radial component is governed by the projection-trace confinement branch
+\begin{equation}
+V_{X,\star}(w)
+=
+\Lambda_X^2
+\left(
+1+w^2+\frac{3}{4}w^4
+\right).
+\end{equation}
+The coefficient \(3/4\) is not a numerical fitting choice. It is the geometric trace weight inherited by the observable spatial radial sector under the \(3+1\) projection:
+\begin{equation}
+\frac{3}{4}
+=
+\frac{
+\operatorname{Tr}_{\rm dof}(P_{\rm space})
+}{
+\operatorname{Tr}_{\rm dof}(I_{3+1})
+}.
+\end{equation}
+Here \(I_{3+1}\) is the four-direction pre-projection identity and \(P_{\rm space}\) is the rank-three observable spatial projector. Hereby the quartic wall is the spatially projected part of the four-direction pre-projection confinement term. The radial spectral eigenproblem is therefore:
+\begin{equation}
+O_{X,\star}u_n(w)
+=
+\left[
+-\frac{d^2}{dw^2}
++
+V_{X,\star}(w)
+\right]
+u_n(w)
+=
+\lambda_nu_n(w).
+\end{equation}
+
+The compact phase component obeys the periodic cylindrical boundary condition \(v_m(\theta+2\pi)=v_m(\theta)\). Applying the compact operator \(O_\theta=-R_A^{-2}\partial_\theta^2\) yields the harmonic winding modes \cite{Appelquist1987} and their geometric energy eigenvalues:
+\begin{equation}
+v_m(\theta)
+=
+\frac{1}{\sqrt{2\pi R_A}}
+e^{im\theta},
+\qquad
+\lambda_m^{(\theta)}
+=
+\frac{m^2}{R_A^2},
+\qquad
+m\in\mathbb Z.
+\end{equation}
+
+Combining the separable channels, the full internal spectral equation is \(O_{\rm int}U_{n,m}=\Lambda_{n,m}U_{n,m}\), where the total geometric eigenvalue is strictly the sum of radial stiffness and compact phase winding:
+\begin{equation}
+\boxed{
+\Lambda_{n,m}
+=
+\lambda_n
++
+\frac{m^2}{R_A^2}
+}
+\end{equation}
+
+These factorized modes form a complete, orthonormal spectral basis over the invariant internal measure \((d\mu_{\rm int}=R_A\,dw\,d\theta)\), permitting the master field to be expanded into observable spacetime amplitudes:
+\begin{equation}
+\Psi(x,w,\theta)
+=
+\sum_{n,m}
+c_{n,m}(x)U_{n,m}(w,\theta).
+\end{equation}
+
+The projection-trace derivation of \(V_{X,\star}\) and the numerical branch-verification are provided in the supplementary material.
+
+\subsection{The Master Action and Projected Spacetime Dynamics}
+\label{sec:master_action_and_dynamics}
+
+The dynamics of Projection Relativity are generated by a unified spectral–projection action \cite{GellMannLevy1960,  peskin1995introduction} over both observable spacetime and the internal projection manifold:
+\begin{equation}
+S_{\rm PR} = \int d^4x \, d\mu_{\rm int} \sqrt{-g_{\rm eff}} \left[ -\frac{1}{2} g_{\rm eff}^{\mu\nu} \partial_\mu \Psi^\dagger \partial_\nu \Psi - \frac{1}{2} G^{AB} \partial_A \Psi^\dagger \partial_B \Psi - V_{\rm PR}(\Psi, \xi) + \mathcal{L}_{\rm src} \right].
+\end{equation}
+
+The internal kinetic term naturally separates the two principal stiffness channels: radial spectral stiffness ($\partial_w \Psi^\dagger \partial_w \Psi$) which generates the gravitational sector, and compact phase stiffness ($R_A^{-2} \partial_\theta \Psi^\dagger \partial_\theta \Psi$) which generates the electromagnetic sector.
+
+Varying the master action with respect to $\Psi^\dagger$ yields the Euler–Lagrange \cite{lagrange1788mecanique} equations. In the weak observable-spacetime sector, restricting the projection potential to its quadratic spectral regime ($V_{\rm PR} \simeq U^\dagger V_b U$), the linearized master equation \cite{Gordon1926, Klein1926} reduces to:
+\begin{equation}
+(\Box + O_{\rm int})\Psi = 0,
+\end{equation}
+where $\Box = g_{\rm eff}^{\mu\nu} \nabla_\mu \nabla_\nu$. Substituting the spectral expansion and projecting onto the orthonormal basis $U_{j,k}$ isolates the dynamic equations for the observable macroscopic modes:
+\begin{equation}
+\boxed{\left(
+\Box
+-
+\Lambda_{n,m}^{\rm phys}
+\right)c_{n,m}(x)=0.
+}
+\end{equation}
+This is a critical mathematical bridge for the framework. It demonstrates how the purely internal geometric eigenvalues $\Lambda_{n,m}$ emerge natively as effective macroscopic mass and stiffness scales for the observable spacetime amplitudes. 
+
+\subsection{The Radial Spectral Gap (Numerical Coercivity Bound)}
+\label{sec:radial_spectral_gap}
+
+The absolute geometric limit of the framework is governed by the lowest non-trivial excitation energy of the radial operator, defined as the first radial spectral gap $\mu_{\min}^2=\lambda_1-\lambda_0.$ As established in Postulate~\ref{sec:postulate_projection_trace_radial_branch} and Section~\ref{sec:internal_spectral_eigenproblem}, the radial operator used in this framework is not an arbitrary positive quartic. It is the projection-trace radial branch
+\begin{equation}
+V_{X,\star}(w)
+=
+\Lambda_X^2
+\left(
+1+w^2+\frac{3}{4}w^4
+\right),
+\end{equation}
+where the quadratic term is fixed by unit radial stiffness and the quartic coefficient \(3/4\) is fixed by the \(3+1\) projection trace. For that reason, the numerical spectrum below is calculated from the geometric projection-trace law, not selected by fitting the eigenvalues. Because \(V_{X,\star}(w)\) is bounded from below and strictly confining, the spectrum is entirely discrete and the ground state is isolated from the first excited state. In the reference normalization used for the radial branch, numerical evaluation \cite{Trefethen2000, Harris2020} of the lowest eigenvalues gives:
+\begin{align}
+\lambda_0
+&\simeq
+2.322863529580,
+\\
+\lambda_1
+&\simeq
+5.375830272676.
+\end{align}
+
+Therefore, the fundamental radial spectral gap is strictly non-zero:
+\begin{equation}
+\boxed{
+\mu_{\min}^2
+=
+\lambda_1-\lambda_0
+\simeq
+3.052966743096.
+}
+\end{equation}
+
+This spectral gap \((\mu_{\min}^2>0)\) establishes a strict coercivity bound on the internal manifold. It mathematically guarantees that the geometric engine possesses a finite maximum flexibility. This branch-specific hard numerical bound is the foundational geometric scale that prevents singular collapse, setting up the derivation of the finite-core radius \((r_c)\) in the subsequent gravitational stiffness projection.
+
+Generic positive quartics remain stable confining operators, but they do not represent the same PR projection branch. The detailed projection-trace derivation and numerical branch-verification showing that \((a_2,a_4)=(1,3/4)\) uniquely closes the PR reference spectral vector are provided in section ~\ref{sec:radial_branch_selection_verification}.
+
+\subsection{Compact Boundary Closure Preview}
+
+The same projection-trace split that fixes the radial branch also constrains
+the compact phase sector. The compact trace fraction \(T_A=1/4\) and the
+spatial trace fraction \(T_X=3/4\) later determine the finite-rank compact
+boundary map used to fix the electromagnetic normalization. The full compact
+boundary closure is derived in Section~\ref{sec:compact_phase_closure_alpha}.
+
+\section{Stiffness: The Gravitational Sector Metric}
+\label{sec:stiffness_gravitational_sector}
+
+\subsection{Gravitational Projection Objective}
+\label{sec:gravitational_projection_objective}
+
+The gravitational sector of Projection Relativity is defined as the macroscopic stiffness projection of the master field. In this framework, gravitational structure is not introduced as an independent background manifold; rather, it is the observable spacetime manifestation of internal radial spectral stiffness. 
+
+The purpose of this section is to rigorously demonstrate how the observable 4D metric $g_{\mu\nu}^{\rm eff}$ emerges strictly from the observable-coordinate gradients of the internal spectral states. Using the internal spectral basis constructed in Section 3.3, the master field expands as:
+\begin{equation}
+\Psi(x, \xi) = \sum_{n,m} c_{n,m}(x)U_{n,m}(\xi).
+\end{equation}
+From this fundamental expansion, we construct a symmetric seed tensor, apply a unimodular determinant normalization to recover an effective metric, and subsequently extract the classical Einstein limit and the finite-core regularization scale.
+
+\subsection{The Metric Seed Tensor and Determinant Normalization}
+\label{sec:metric_seed_and_normalization}
+
+The first step in the gravitational projection is the construction of a symmetric spacetime seed tensor containing the local stiffness information of the projected master field. The unnormalized gravitational seed tensor, $Q_{\mu\nu}(x)$, is defined as the symmetrized internal expectation value of the spacetime-gradient bilinear:
+\begin{equation}
+Q_{\mu\nu}(x) = \langle \partial_\mu \Psi^\dagger \partial_\nu \Psi + \partial_\nu \Psi^\dagger \partial_\mu \Psi \rangle_{\rm int} = \int_{\mathcal{M}_{\rm int}} d\mu_{\rm int} \left[ \partial_\mu \Psi^\dagger \partial_\nu \Psi + \partial_\nu \Psi^\dagger \partial_\mu \Psi \right].
+\end{equation}
+
+Inserting the spectral mode expansion into the seed tensor, the spacetime derivatives act exclusively on the observable amplitudes $c_{n,m}(x)$. Because the internal basis functions $U_{n,m}(\xi)$ are orthonormal with respect to the invariant internal measure, the double summation cleanly collapses. The resulting seed tensor is purely a function of the observable amplitude gradients:
+\begin{equation}
+Q_{\mu\nu}(x) = \sum_{n,m} \left[ (\partial_\mu c^*_{n,m})(\partial_\nu c_{n,m}) + (\partial_\nu c^*_{n,m})(\partial_\mu c_{n,m}) \right] = 2 \operatorname{Re} \sum_{n,m} (\partial_\mu c^*_{n,m})(\partial_\nu c_{n,m}).
+\end{equation}
+
+By construction, $Q_{\mu\nu}$ is manifestly real and symmetric ($Q_{\mu\nu} = Q_{\nu\mu}$). However, this seed tensor contains an arbitrary conformal scale \cite{Sakharov1967}. To elevate $Q_{\mu\nu}$ into a valid effective spacetime metric, we must isolate its pure geometric structure via determinant normalization. 
+
+Let $\det(Q)$ denote the determinant of the $4 \times 4$ seed matrix. We define the conformal normalization factor $\Omega_Q = |\det Q|^{1/4}$. The effective Projection Relativity metric is hereby defined by:
+\begin{equation}
+\boxed{ g_{\mu\nu}^{\rm eff}(x) = \frac{Q_{\mu\nu}(x)}{|\det Q|^{1/4}} }
+\end{equation}
+
+This represents the complete gravitational projection: $P_g[\Psi] = g_{\mu\nu}^{\rm eff}$. Because observable spacetime is four-dimensional, this specific normalization \cite{Einstein1919} mathematically guarantees that the determinant of the effective metric is fixed:
+\begin{equation}
+\det(g_{\mu\nu}^{\rm eff}) = \operatorname{sgn}(\det Q) = -1,
+\end{equation}
+yielding a strictly unimodular effective geometry in the preferred projection coordinates. This metric $g_{\mu\nu}^{\rm eff}$ now serves as the geometric arena for all macroscopic kinematic observations.
+
+\subsection{Weak-Field Recovery and the Einstein Limit}
+\label{sec:weak_field_expansion}
+
+To demonstrate that Projection Relativity natively recovers standard classical gravitation, we expand the determinant-normalized metric around a flat Lorentzian \cite{carroll2004spacetime, misner1973gravitation} background: $Q_{\mu\nu} = \eta_{\mu\nu} + q_{\mu\nu}$, with $|q_{\mu\nu}| \ll 1$. Applying the inverse conformal weight $| \det Q |^{-1/4}$ to the first-order binomial expansion of the seed tensor immediately generates the physical metric perturbation $g_{\mu\nu}^{\rm eff} = \eta_{\mu\nu} + h_{\mu\nu}$, where:
+\begin{equation}
+h_{\mu\nu} = q_{\mu\nu} - \frac{1}{4}\eta_{\mu\nu}q.
+\end{equation}
+
+Taking the trace $h = \eta^{\mu\nu}h_{\mu\nu}$, the $1/4$ factor in four spacetime dimensions perfectly cancels the trace of the seed tensor ($q = \eta^{\mu\nu}q_{\mu\nu}$). Therefore, the unimodular determinant normalization mathematically guarantees that the first-order metric perturbation is strictly trace-free ($h=0$). Imposing the standard Lorenz gauge ($\partial^\mu h_{\mu\nu} = 0$), the linearized Ricci \cite{Ricci1900} tensor reduces strictly to the d'Alembertian \cite{courant1962methods,   dalembert1747recherches}, $R_{\mu\nu}^{(1)} = -\frac{1}{2}\Box h_{\mu\nu}$. Because the perturbation is trace-free, the Ricci scalar vanishes ($R^{(1)} = 0$), and the linearized Einstein tensor equates directly to the Ricci tensor. Equating this determinant-normalized geometric projection to the trace-free part of the physical stress-energy distribution gives the weak-field unimodular Einstein equation:
+\begin{equation}
+\boxed{-\frac12\Box h_{\mu\nu}= \frac{8\pi G_N}{c^4}
+\left(T_{\mu\nu}-\frac14\eta_{\mu\nu}T\right).}
+\end{equation}
+Together with stress-energy conservation and the contracted Bianchi identity, this trace-free weak-field equation is equivalent to the standard Einstein equation up to the usual cosmological integration constant. We find in the low-energy regime, the determinant-normalized projection recovers the Einstein limit without inconsistently coupling a trace-free perturbation to a traceful source.
+
+\subsection{Finite-Core Regularization of Singularities}
+\label{sec:finite_core_regularization}
+
+While Projection Relativity perfectly recovers classical gravity in the weak-field limit, its primary structural advantage emerges in the extreme strong-field regime. In classical General Relativity, the point-mass limit results in an infinite collapse \cite{penrose1965} sequence where curvature invariants diverge ($K_{\rm GR} \to \infty$ as $r \to 0$). 
+
+In Projection Relativity, infinite macroscopic curvature requires an infinitely ``soft'' underlying manifold. However, as established in Postulate 6, the radial confinement law is not a freely chosen quartic. It is the projection-trace branch
+\begin{equation}
+\boxed{
+V_{X,\star}(w)
+=
+\Lambda_X^2\left(1+w^2+\frac{3}{4}w^4\right),
+}
+\end{equation}
+and its finite branch gap is
+\begin{equation}
+\boxed{
+\mu_{\star,\min}^2
+=
+\lambda_1[V_{X,\star}]-\lambda_0[V_{X,\star}]
+=
+3.052966743096.
+}
+\end{equation}
+This gap establishes a branch-tied coercivity bound: no internal excitation on the PR projection-trace branch can occur with stiffness energy below $\mu_{\star,\min}^2$. The observable curvature ceiling is therefore not a separately selected cutoff; it is tied to the selected geometric branch by
+\begin{equation}
+\boxed{
+R_{\rm max}
+=
+\chi_R\,\Lambda_X^2\,\mu_{\star,\min}^2
+<
+\infty,
+}
+\end{equation}
+where $\chi_R$ is the fixed projection conversion from internal stiffness units to macroscopic curvature units. By equating the classical exterior curvature scale of a Schwarzschild~\cite{Schwarzschild2003Trans} mass,
+\(R_{\rm GR}(r)=GM/(c^2r^3)\), to the branch-tied projection limit \(R_{\max}\), we determine the finite-core saturation \cite{Hossenfelder2013} radius:
+\begin{equation}
+\boxed{
+r_c=
+\left(
+\frac{GM}{c^2R_{\max}}
+\right)^{1/3}.\label{eq:rc_radius}
+}
+\end{equation}
+
+Because \(R_{\max}\) is rendered finite by the projection-trace radial branch gap, the saturation radius is strictly positive, $r_c>0$. The resulting regularized Kruskal--Szekeres \cite{kruskal1960maximal, szekeres1960on} spacetime diagram is shown in Figure~\ref{fig:regularized_kruskal_pr}.
+
+\begin{figure}[H]
+\centering
+\captionsetup{font=footnotesize}
+\includegraphics[width=0.7\textwidth]{paper/plots/pr_regularized_kruskal_szekeres_spacetime.pdf}
+\caption{
+\textbf{Regularized Kruskal--Szekeres schematic in Projection Relativity.} The radial spectral gap \(\mu_{\min}^2>0\) enforces \(R_{\max}<\infty\), replacing the classical \(r=0\) singular boundary with a finite saturated core \(r=r_c\) and bounded curvature \(K_{\rm PR}<\infty\). The \(r=2M\) horizons preserve the exterior Schwarzschild causal structure; the lower saturation curve is the time-reversed branch of the maximal extension.
+}
+\label{fig:regularized_kruskal_pr}
+\end{figure}
+
+
+Spacetime geometry physically cannot collapse past this saturation limit. To smoothly bridge the exterior Kerr/Schwarzschild geometry to this saturated internal core, the projection demands a regularized mass distribution profile. The minimal algebraic profile satisfying \cite{Hayward2006} both exterior mass recovery ($m(r) \to M$ as $r \to \infty$) and the central volume-scaling constraint is:
+\begin{equation}
+\boxed{ m_{\rm PR}(r) = M \frac{r^3}{r^3 + r_c^3} }
+\end{equation}
+
+Differentiating this saturated profile yields the effective physical matter density. At the origin \((r\to0)\), the macroscopic geometric density naturally halts at a finite limit:
+\begin{equation}
+\boxed{
+\rho_{\rm eff}(0)
+=
+\frac{3M}{4\pi r_c^3}
+=
+\frac{3c^2R_{\max}}{4\pi G_N}
+\equiv
+\rho_{\max}
+<
+\infty .
+}
+\label{eq:rho_max_core}
+\end{equation}
+
+This completes the geometric regularization protocol. In Projection Relativity, singular black holes mathematically cannot exist; as the projection-trace radial branch gap enforces \(R_{\max}<\infty\), fixes \(r_c>0\), and universally replaces the classical point-singular endpoint with a saturated geometric core. We find that, \(\rho_{\max}\) is independent of the total mass \(M\). \noindent Micro-physically, this bounded de Sitter-like core is characterized by a macroscopic coherent phase condensate of the master field $\langle \Psi \rangle$, wherein extreme configuration back-pressure forces all localized modes into the ground-state eigenvalue $\lambda_0$. This state suppresses thermal particle excitations below the gap threshold $\mu_{\min}^2$, preventing standard singularity evolution. Additional mass increases the saturation volume \(r_c(M)\), not the maximum density. The dynamical stability and mass-inflation domain of this finite-core geometry
+are analyzed in Section~\ref{sec:dynamic_core_stability}.
+
+\section{Displacement Sector}
+\label{sec:displacement_sector}
+\label{sec:displacement_higgs_sector}
+
+\subsection{Purpose of the Displacement Projection}
+\label{sec:purpose_displacement_projection}
+
+The displacement sector of Projection Relativity is the scalar-amplitude projection of the master field. Its purpose is to demonstrate how an observable displacement amplitude emerges from the same internal spectral manifold that generates gravitational stiffness and compact electromagnetic phase structure.
+
+The foundational objects used in this section have already been established in Sections ~\ref{sec:master_projection_field_foundational_postulates}, ~\ref{sec:foundational_mathematical_structures}, and ~\ref{sec:stiffness_gravitational_sector}, are used here as inputs. Using the internal spectral expansion, the master field is written as:
+\begin{equation}
+\Psi(x, \xi) = \sum_{n,m} c_{n,m}(x) U_{n,m}(\xi).
+\end{equation}
+
+This expansion is the common spectral input for the observable projection sectors. The displacement projection extracts a scalar amplitude from the master field, $P_{\rm disp}[\Psi] \rightarrow \Phi_{\rm disp}(x)$, which is then normalized to a physical vacuum state $v_A$ to extract the effective scalar curvature $m_A$. 
+
+Fundamentally, the displacement sector produces an effective scalar curvature mode $m_A$ not by inserting an independent external scalar sector, but by projecting the master field onto its internal displacement profile. Matter inertia is generated dynamically through internal matter–displacement overlap. The effective inertia matrix takes the schematic form $M_{ab}^{\rm eff} = g_0 I_{ab} A_0$. 
+
+The master Projection Relativity equivalence statement for this sector is therefore:
+\begin{equation}
+\boxed{ A_0 \longrightarrow \mathcal M_{\rm eff} \longrightarrow T_{\mu\nu} \longrightarrow g_{\mu\nu}^{\rm eff} }
+\end{equation}
+The identical projection-generated effective inertia that appears in matter dynamics acts as the mass-energy source seen by the gravitational stiffness projection.
+
+\subsection{Amplitude–Phase Decomposition}
+\label{sec:amplitude_phase_decomposition}
+
+The displacement sector begins with the complex projected field $\Phi_{\rm disp}(x)$. For any nonzero projected field, we define the observable scalar displacement amplitude $A(x)$ and the compact phase $\theta(x)$ via the decomposition:
+\begin{equation}
+\Phi_{\rm disp}(x) = A(x)e^{i\theta(x)},
+\end{equation}
+where the compact phase identification $\theta \sim \theta + 2\pi n$ operates as established in Section ~\ref{sec:master_projection_field_foundational_postulates}.
+
+To construct the kinetic term, we differentiate the displacement-projected field and its conjugate with respect to observable spacetime coordinates. Applying the product rule yields:
+\begin{align}
+\partial_\mu \Phi_{\rm disp} &= e^{i\theta}(\partial_\mu A + iA\partial_\mu \theta), \\
+\partial_\mu \Phi_{\rm disp}^\dagger &= e^{-i\theta}(\partial_\mu A - iA\partial_\mu \theta).
+\end{align}
+
+The kinetic bilinear is constructed from the product of these derivatives. Because $e^{-i\theta}e^{i\theta} = 1$, the phase exponential factors out cleanly:
+\begin{align}
+|\partial_\mu \Phi_{\rm disp}|^2 &= (\partial_\mu A - iA\partial_\mu \theta)(\partial^\mu A + iA\partial^\mu \theta) \nonumber \\
+&= (\partial_\mu A)(\partial^\mu A) + iA(\partial_\mu A)(\partial^\mu \theta) - iA(\partial_\mu \theta)(\partial^\mu A) + A^2(\partial_\mu \theta)(\partial^\mu \theta).
+\end{align}
+
+Because the partial derivatives commute, the imaginary cross-terms explicitly cancel, leaving the Projection Relativity amplitude–phase split:
+\begin{equation}
+\boxed{ |\partial_\mu \Phi_{\rm disp}|^2 = (\partial_\mu A)(\partial^\mu A) + A^2(\partial_\mu \theta)(\partial^\mu \theta) }
+\end{equation}
+
+The first term is the purely scalar displacement contribution, while the second term is the compact phase contribution weighted by the displacement amplitude. For consistency with the electromagnetic phase projection, we promote the ordinary phase derivative to the gauge-invariant compact phase gradient \cite{weyl1927, YangMills1954}, $X_\mu = \partial_\mu \theta - q\mathcal A_\mu$. Using a mostly-plus metric signature, the unified Lagrangian contribution for the displacement and compact phase sectors is explicitly:
+\begin{equation}
+\boxed{ L_{\rm amp-phase} = -\frac{1}{2}(\partial_\mu A)(\partial^\mu A) - \frac{1}{2}A^2 X_\mu X^\mu - V_{\rm disp}(A) }
+\end{equation}
+
+This derivation demonstrates that the displacement and compact phase sectors are not separate additions; they are the amplitude and phase projections of the same complex displacement field.
+
+\subsection{The Displacement Projection and Spectral Normalization}
+\label{sec:displacement_projection_operator}
+
+At each observable spacetime point $x$, the master field defines an internal state $|\Psi_x\rangle \in \mathcal{H}_P$. Let $U_{\rm disp}(\xi)$ denote a normalized internal displacement test mode. The observable complex displacement amplitude is defined by the direct projection functional:
+\begin{equation}
+\Phi_{\rm disp}(x) = \langle U_{\rm disp} | \Psi_x \rangle_P = \int_{\mathcal{M}_{\rm int}} d\mu_{\rm int} \, U_{\rm disp}^*(\xi)\Psi(x, \xi).
+\end{equation}
+
+Inserting the internal spectral expansion $\Psi = \sum c_{n,m} U_{n,m}$ demonstrates that the observable amplitude is a linear projection of the fundamental master-field modes:
+\begin{equation}
+\Phi_{\rm disp}(x) = \sum_{n,m} d_{n,m}^{\rm (disp)} c_{n,m}(x), \qquad \text{where} \quad d_{n,m}^{\rm (disp)} = \langle U_{\rm disp} | U_{n,m} \rangle_P.
+\end{equation}
+
+To relate this raw projection to a canonically normalized observable spacetime field, we isolate the internal displacement profile $\Xi_{\rm disp}(\xi)$ such that $\Psi_{\rm disp} = A(x)\Xi_{\rm disp}(\xi)$. 
+Integrating the spacetime kinetic action over the internal measure isolates the spectral normalization constant \cite{peskin1995introduction, Itzykson1980} $Z_{\rm disp}$:
+\begin{equation}
+Z_{\rm disp} = \langle \Xi_{\rm disp} | \Xi_{\rm disp} \rangle_P = \sum_{n,m} \left| \zeta_{n,m}^{\rm (disp)} \right|^2.
+\end{equation}
+
+We find that, the canonical positive-energy kinetic term for the observable amplitude governs the physical field normalization:
+\begin{equation}
+\boxed{ A_{\rm phys}(x) = \sqrt{Z_{\rm disp}} A(x) }
+\end{equation}
+This confirms that the effective macroscopic field strength is fundamentally determined by the sum of its spectral overlap weights in the internal Hilbert space.
+
+\subsection{Displacement-Sector Potential and Stable Nonzero Vacuum}
+\label{sec:displacement_lagrangian_and_vacuum}
+\label{sec:higgs_lagrangian_and_vacuum}
+
+Having isolated the scalar displacement kinetic contribution, we define the effective displacement potential \cite{higgs1964,  Goldstone1961} \(V_{\rm disp}(A)\). Using the mostly-plus convention, the displacement-sector Lagrangian and stress-energy tensor are
+\begin{align}
+\mathcal L_{\rm disp}
+&=
+-\frac{1}{2}
+(\partial_\mu A)(\partial^\mu A)
+-
+V_{\rm disp}(A),
+\\
+T_{\mu\nu}^{(\rm disp)}
+&=
+\partial_\mu A\,\partial_\nu A
+-
+g_{\mu\nu}^{\rm eff}
+\left[
+\frac{1}{2}
+(\partial_\alpha A)(\partial^\alpha A)
++
+V_{\rm disp}(A)
+\right].
+\end{align}
+
+The minimal bounded displacement potential is
+\begin{equation}
+\boxed{
+V_{\rm disp}(A)
+=
+V_0+\alpha_AA^2+\beta_AA^4,
+\qquad
+\beta_A>0.
+}
+\end{equation}
+
+For
+\begin{equation}
+\alpha_A<0,
+\end{equation}
+the zero-displacement point is a negative-curvature point, and the stable nonzero displacement vacuum is obtained by minimizing \(V_{\rm disp}\):
+\begin{equation}
+\boxed{
+A_0
+=
+\sqrt{
+-\frac{\alpha_A}{2\beta_A}
+}.
+}
+\end{equation}
+
+Applying the spectral normalization derived above, the canonically normalized displacement vacuum is
+\begin{equation}
+\boxed{
+v_A
+=
+\sqrt{Z_{\rm disp}}\,A_0
+=
+\sqrt{
+-Z_{\rm disp}\frac{\alpha_A}{2\beta_A}
+}.
+}
+\end{equation}
+
+By shifting the potential baseline such that
+\begin{equation}
+V_{\rm disp}(A_0)=0,
+\end{equation}
+the displacement vacuum stabilizes as the fundamental energy floor of the observable displacement sector, supplying the effective inertia \(\mathcal M_{\rm eff}\) to the gravitational stiffness projection.
+
+\subsection{Displacement Fluctuations and Effective Inertia}
+\label{sec:displacement_fluctuations_inertia}
+
+Having established the stable nonzero displacement vacuum $A_0$, we expand the physical amplitude to isolate its dynamic fluctuation: $A(x) = A_0 + \eta_A(x)$. The effective displacement-curvature scale is strictly determined by the curvature of the displacement potential evaluated at the vacuum:
+\begin{equation}
+m_A^2 = \left. \frac{d^2 V_{\rm disp}}{dA^2} \right|_{A_0} = -4\alpha_A = 8\beta_A A_0^2.
+\end{equation}
+
+Because the stability condition requires $\alpha_A < 0$, the displacement-curvature mode is strictly positive ($m_A^2 > 0$). The canonically normalized displacement fluctuation becomes $a_{\rm phys}(x) = \sqrt{Z_{\rm disp}} \eta_A(x)$, allowing the physical field to decompose smoothly as $A_{\rm phys}(x) = v_A + a_{\rm phys}(x)$.
+
+Notably, macroscopic matter inertia is not introduced as an independent parameter. Effective inertia emerges dynamically through the internal spectral overlap between the displacement sector and the matter projection structure. Parameterized by an effective coupling $g_{\rm eff} = g_0 I_A / \sqrt{Z_{\rm disp}}$, the interaction Lagrangian $\mathcal{L}_{\rm ov} = -g_{\rm eff} \mathcal{O}_M A_{\rm phys}$ yields effective inertia from the stable displacement vacuum:
+\begin{equation}
+\boxed{ \mathcal M_{\rm eff} = g_{\rm eff} v_A = g_0 I_A A_0 }
+\end{equation}
+
+As a consequence, mass is strictly a derived property. Effective matter inertia is generated exclusively by the stable displacement vacuum weighted by the internal spectral overlap $I_A$. 
+
+\subsection{Phase Consistency and Equivalence Closure}
+\label{sec:phase_consistency_equivalence}
+
+Because the displacement and compact phase sectors originate from the same complex projected field $\Phi_{\rm disp}(x) = A(x)e^{i\theta(x)}$, their kinetic structures are inherently coupled. The covariant amplitude–phase kinetic term expands as:
+\begin{equation}
+g_{\rm eff}^{\mu\nu}
+\left(D_\mu\Phi_{\rm disp}\right)^\dagger
+D_\nu\Phi_{\rm disp}
+=
+(\partial_\mu A)(\partial^\mu A)
++
+A^2X_\mu X^\mu,
+\qquad
+X_\mu=\partial_\mu\theta-q\mathcal A_\mu .
+\end{equation}
+where $X_\mu = \partial_\mu \theta - q\mathcal A_\mu$ represents the gauge-invariant compact phase structure. In the stable nonzero displacement vacuum, the displacement vacuum $A_0$ heavily weights the compact phase current, $J^\mu_\theta = A^2 X^\mu$. To preserve a coherent compact-phase vacuum, the internal geometry demands $X_\mu^{\rm vac} = 0$, ensuring a strictly stable, zero-current ground state ($J^\mu_{\theta, \rm vac} = 0$).
+
+This geometric coupling ensures consistency across the physical sectors. 
+When the displacement potential parameters satisfy the strict stability bounds 
+\(\alpha_A<0\), \(\beta_A>0\), and \(Z_{\rm disp}>0\), the framework 
+mathematically guarantees finite positive displacement curvature and a 
+positive-definite Hamiltonian.  The resulting displacement stress-energy tensor \(T^{\rm disp}_{\mu\nu}\), 
+including the dynamically generated effective inertia \(\mathcal M_{\rm eff}\), 
+supplies the physical matter source for the gravitational stiffness projection. 
+In the determinant-normalized weak-field limit, this source enters first through 
+the trace-free unimodular combination,
+\begin{equation}
+T^{\rm disp}_{\mu\nu}-\frac14 g^{\rm eff}_{\mu\nu}T^{\rm disp}.
+\end{equation}
+Together with stress-energy conservation and the contracted Bianchi identity, 
+the scalar trace is restored through the usual cosmological integration constant, 
+yielding the standard Einstein source equation in the macroscopic low-energy limit. This establishes the PR equivalence closure, where the internal geometric structure 
+that generates inertial response is the same projection structure that supplies 
+gravitational source response, with the determinant-normalized gravitational 
+projection coupling consistently through the trace-free weak-field channel.
+
+\section{Phase: The Electromagnetic Sector}
+\label{sec:phase_electromagnetic_sector}
+
+The electromagnetic sector of Projection Relativity is not introduced via an independent, external $U(1)$ gauge bundle. Instead, it is generated natively by the compact phase coordinate ($\theta$) of the internal projection manifold. The purpose of this section is to construct the compact phase manifold, solve its spectral eigenproblem, and rigorously demonstrate how its fundamental geometric winding stiffness determines the emergence of the electromagnetic gauge connection and its kinetic normalization.
+
+\subsection{The Compact Phase Manifold and Operator}
+\label{sec:compact_phase_manifold}
+
+The full internal manifold in the minimal gravitational-electromagnetic model \cite{Kaluza1921} is the cylinder $\mathcal{M}_{\rm int} = \mathbb{R}_w \times S^1_\theta$. The compact electromagnetic phase coordinate obeys the standard topological equivalence relation $\theta \sim \theta + 2\pi n$, parametrizing a unit circle $S^1$. 
+
+Assigned a stationary geometric radius $R_A$, the proper length element along the compact phase direction establishes the internal metric components $G_{ww} = 1$ and $G_{\theta\theta} = R_A^2$. This strictly fixes the invariant compact phase measure as $d\mu_\theta = R_A d\theta$.  The corresponding Laplace–Beltrami operator on the compact domain reduces to the positive Schrödinger-type operator \cite{dirac1931, Messiah1961}:
+\begin{equation}
+O_\theta = -\frac{1}{R_A^2} \frac{d^2}{d\theta^2}.
+\end{equation}
+
+Because the differential operator must be self-adjoint on the compact domain, the eigenmodes must satisfy strictly periodic boundary conditions, $v_m(\theta + 2\pi) = v_m(\theta)$. Solving the eigenvalue equation $O_\theta v_m = \lambda_m^{(\theta)} v_m$ and imposing normalization over the compact measure ($\langle v_m | v_n \rangle_\theta = \delta_{mn}$) immediately yields the quantized harmonic winding states:
+\begin{equation}
+\boxed{ v_m(\theta) = \frac{1}{\sqrt{2\pi R_A}} e^{im\theta}, \qquad \lambda_m^{(\theta)} = \frac{m^2}{R_A^2}, \qquad m \in \mathbb{Z} }
+\end{equation}
+
+These geometric winding states dictate that the internal manifold possesses a fundamental compact phase stiffness. The lowest non-trivial winding excitation ($m=1$) requires a geometric energy of $\lambda_1^{(\theta)} = R_A^{-2}$, establishing the absolute internal geometric scale for observable electromagnetic action. The full proof of operator self-adjointness and basis completeness on \(S^1\) is provided in the supplementary material.
+
+\subsection{Electromagnetic Projection and the Gauge Connection}
+\label{sec:electromagnetic_projection}
+
+The compact phase projection operator $P_A[\Psi]$ maps the $\theta$-dependent phase structure of the internal master field onto an observable macroscopic 4D connection. The observable electromagnetic gauge structure is therefore directly identified with the projection of the internal phase gradient:
+\begin{equation}
+P_A[\Psi] \rightarrow \theta(x) \longrightarrow\mathcal A_\mu(x).
+\end{equation}
+
+To preserve covariance under local phase rotations in spacetime, the ordinary phase derivative is elevated to the gauge-invariant compact phase gradient:
+\begin{equation}
+\boxed{ X_\mu = \partial_\mu \theta - q\mathcal A_\mu }
+\end{equation}
+To uniquely invert the macroscopic propagation equations for the connection $\mathcal{A}_{\mu}$ across the global effective action, we strictly choose the unitary gauge condition $\theta(x) = 0$ within the coherent vacuum domain. This choice rotates the internal compact phase coordinate entirely into the vector connection, reducing the gauge-invariant compact gradient to the simplified form $X_{\mu} = -q\mathcal{A}_{\mu}$. In the coherent compact phase vacuum, local phase gradients must be perfectly compensated by the background gauge connection ($X_\mu^{\rm vac} = 0$, implying $\partial_\mu \theta_{\rm vac} = q\mathcal A_\mu^{\rm vac}$). Physical macroscopic electromagnetism emerges exclusively from dynamic deviations from this compact phase coherence ($X_\mu \neq 0$). Consequently, $U(1)$ gauge transformations are not abstract internal symmetries \cite{Trautman1970, WuYang1975}; they are physically equivalent to local coordinate diffeomorphisms restricted to the compact $S^1$ subspace of the internal manifold.
+
+\section{Projection Propagator and Spectral Self-Energy}
+\label{sec:projection_propagator}
+
+The projection propagator governs how residual excitations of the internal spectral manifold modify macroscopic spacetime propagation. In standard linearized gravity, the effective metric perturbation $h_{\mu\nu}^{\rm TT}$ propagates in isolation. In Projection Relativity, the observable metric is a projection of the master field, meaning it natively couples to the internal spectral excitations of the hidden geometry. 
+
+The purpose of this section is to derive the corrected spin-2 propagator, demonstrate that the internal spectral gap strictly suppresses low-energy corrections, and prove that the framework recovers, ghost-free Einsteinian propagation at macroscopic scales.
+
+\subsection{Spectral Density and the Bare Propagator}
+\label{sec:spectral_density}
+
+In the transverse-traceless sector, the standard bare massless spin-2 propagator\cite{tHooft1974} is defined strictly by the momentum invariant:
+\begin{equation}
+D^{(0)}_{\mu\nu\rho\sigma}(k) = \frac{P_{\mu\nu\rho\sigma}^{(2)}}{k^2 + i\epsilon},
+\end{equation}
+where $P^{(2)}$ is the transverse-traceless projection operator. However, the macroscopic gravitational projection is coupled to a discrete set of internal excited modes (labeled $a$), each possessing a shifted excitation stiffness $\mu_a^2 = \Lambda_a - \Lambda_0$. This coupling is captured by the internal spectral density $\rho_X(\mu^2) = \sum_{a \neq 0} |g_a|^2 \delta(\mu^2 - \mu_a^2)$. 
+
+As derived in Section ~\ref{sec:foundational_mathematical_structures}, the internal geometry enforces a strict numerical coercivity bound. There are no internal states between the ground state and the first radial excitation. Therefore, the spectral density\cite{Kallen1952} is strictly zero below the radial spectral gap:
+\begin{equation}
+\rho_X(\mu^2) = 0 \quad \text{for} \quad 0 \le \mu^2 < \mu_{\min}^2.
+\end{equation}
+This gap ($\mu_{\min}^2 \simeq 3.052$) guarantees that the internal manifold cannot be excited by arbitrarily low-energy macroscopic momenta.
+
+\subsection{The Subtracted Self-Energy Kernel}
+\label{sec:subtracted_self_energy}
+
+The coupling to internal modes acts as a geometric self-energy that modifies the graviton denominator. Summing over all internal excitations yields the bare self-energy kernel:
+\begin{equation}
+F_{\rm bare}(k^2) = \int_{\mu_{\min}^2}^\infty d\mu^2 \frac{\rho_X(\mu^2)}{k^2 - \mu^2 + i\epsilon}.
+\end{equation}
+
+To guarantee that the observable low-energy graviton remains massless, the physical propagation denominator $k^2 - F(k^2)$ must vanish at $k^2 = 0$. This imposes the strict renormalization condition $F(0) = 0$. Subtracting the zero-momentum vacuum polarization defines the physical subtracted kernel:
+\begin{equation}
+\boxed{ F(k^2) = \int_{\mu_{\min}^2}^\infty d\mu^2 \rho_X(\mu^2) \left[ \frac{1}{k^2 - \mu^2 + i\epsilon} + \frac{1}{\mu^2} \right] }
+\end{equation}
+This integral formulation explicitly guarantees massless-pole recovery while encoding the total geometric resistance of the internal manifold against macroscopic curvature.
+
+\subsection{The Corrected Propagator and Einstein Recovery}
+\label{sec:corrected_propagator}
+
+Applying the self-energy correction, the full physical spin-2 propagator becomes:
+\begin{equation}
+\boxed{ D_{\mu\nu\rho\sigma}^{(P)}(k) = \frac{P_{\mu\nu\rho\sigma}^{(2)}}{k^2 - F(k^2) + i\epsilon} }
+\end{equation}
+
+Because the spectral density is bounded by the massive gap ($\mu_{\min}^2$), the low-energy expansion of the kernel ($k^2 \ll \mu_{\min}^2$) is heavily suppressed: $F(k^2) = -k^2 M_2 + \mathcal{O}(k^4)$, where $M_2 = \int \rho_X(\mu^2) \mu^{-4} d\mu^2 > 0$. Near the massless pole, the propagation denominator reduces to $(1 + M_2)k^2$. The strictly positive residue $Z_{\rm pole} = (1 + M_2)^{-1} > 0$ mathematically guarantees that the massless pole is not a ghost \cite{Stelle1977}. This constant residue simply rescales the bare projection coupling $G_P$ to match the macroscopic observable Newton \cite{newton1687} constant:
+\begin{equation}
+G_N = G_P Z_{\rm pole} = \frac{G_P}{1 + M_2}.
+\end{equation}
+
+After Newton normalization, the residual kernel satisfies
+\begin{equation}
+F_E(k^2)=\mathcal O(k^4),
+\qquad
+\frac{F_E(k^2)}{k^2}\rightarrow0
+\quad
+(k^2\rightarrow0).
+\end{equation}
+Whereas the projection correction tensor satisfies
+\begin{equation}
+\Delta_{\mu\nu}^{(P)}\rightarrow0
+\end{equation}
+in the low-energy exterior limit. As a result, the framework mathematically proves its own macroscopic reduction:
+\begin{equation}
+\lim_{k^2 \to 0} \left( G_{\mu\nu}[g_{\rm eff}] + \Delta_{\mu\nu}^{(P)} \right) = \frac{8\pi G_N}{c^4} T_{\mu\nu}
+\end{equation}
+This confirms that at standard astrophysical distances, Projection Relativity recovers the Einstein field equations natively, with no ghost pole, no negative-stiffness pole, and no unsuppressed low-energy sideband channel \cite{Donoghue1994}. The complete algebraic evaluation of the contour integrals, trace-free verifications, and rigorous no-ghost/no-negative-stiffness pole stability proofs are provided in the supplementary material.
+
+\section{Gravitational-Wave Propagation and Gap-Suppressed Residuals}
+\label{sec:gravitational_wave_propagation}
+
+The gravitational-wave sector of Projection Relativity determines how dynamic, transient perturbations of the effective metric propagate through observable spacetime. The framework does not abandon standard Kerr black hole perturbation theory; rather, it inherits the classical Kerr background in the exterior limit and rigorously subjects it to the geometric self-energy corrections of the internal manifold. The purpose of this section is to define the corrected wave operator, extract the resulting ringdown sidebands, and demonstrate how the internal spectral gap natively suppresses low-energy deviations to match classical observations.
+
+\subsection{Teukolsky Inheritance and the Corrected Wave Operator}
+\label{sec:teukolsky_inheritance}
+
+To model gravitational-wave propagation, the effective metric is decomposed into a stationary background and a dynamic perturbation: $g_{\mu\nu}^{\rm eff} = \bar{g}_{\mu\nu} + h_{\mu\nu}$. As established in Section 4, the low-energy exterior geometry ($r > r_c$) is the classical Kerr metric \cite{kerr1963} ($\bar{g}_{\mu\nu} = g_{\mu\nu}^{\rm Kerr}$). 
+
+Consequently, the bare wave operator governing the perturbation $h_{\mu\nu}$ is the standard Teukolsky \cite{teukolsky1973} operator, $\mathcal{O}_{\rm Teuk}^{(s)}$, where $s$ denotes the spin-weight of the perturbation. However, in Projection Relativity, the observable macroscopic metric is continuously coupled to the internal manifold. The wave operator must therefore inherit the macroscopic self-energy correction $\widehat{\Sigma}_X^{\rm GW}$.
+
+The full, projection-corrected gravitational-wave operator is defined as:
+\begin{equation}
+\boxed{ \mathcal{O}_{\rm PR}^{(s)} = \mathcal{O}_{\rm Teuk}^{(s)} + \widehat{\Sigma}_X^{\rm GW} }
+\end{equation}
+where the projection correction operator acts strictly as the residual self-energy kernel evaluated on the Kerr background: $\widehat{\Sigma}_X^{\rm GW} = -F_E(\mathcal{O}_{\rm Teuk}^{(s)})$. 
+
+\subsection{The Ringdown Response Function}
+\label{sec:ringdown_response_function}
+
+To calculate the observable ringdown response to a transient merger source $S_s$, we invert the corrected wave operator to construct the retarded Green \cite{friedlander1975wave, Poisson2011} function $G_{\rm PR}^{(s)}$. 
+
+Because the projection self-energy $\widehat{\Sigma}_X^{\rm GW}$ is a weak perturbative correction in the exterior regime, the full Green function is resolved via a standard Neumann \cite{reed1980functional} operator expansion. Factoring out the bare Kerr response yields:
+\begin{equation}
+G_{\rm PR}^{(s)} = \left[ \mathcal{O}_{\rm Teuk}^{(s)} + \widehat{\Sigma}_X^{\rm GW} \right]^{-1} = G_{\rm Kerr}^{(s)} - G_{\rm Kerr}^{(s)} \widehat{\Sigma}_X^{\rm GW} G_{\rm Kerr}^{(s)} + \mathcal{O}\big((\widehat{\Sigma}_X^{\rm GW})^2\big).
+\end{equation}
+
+Acting this operator expansion on the transient source $S_s$ demonstrates that the observable gravitational-wave signal $A_{\rm obs}(\omega)$ decomposes linearly into the classical Kerr ringdown and a projection-sector residual:
+\begin{equation}
+\boxed{ A_{\rm obs}(\omega) = A_{\rm Kerr}(\omega) + A_X(\omega) }
+\end{equation}
+The term $A_X(\omega)$ represents physical ringdown sidebands generated exclusively by the dynamic geometric resistance of the internal projection manifold. 
+
+\subsection{Luminal Propagation and Stability}
+\label{sec:luminal_propagation}
+
+Finally, analyzing the physical dispersion relation from the projection-corrected wave operator yields the characteristic equation $k^2 - F_E(k^2) = 0$. Because the Newton-normalized residual kernel scales strictly as $F_E(k^2) = \mathcal{O}(k^4)$, the low-energy kinematic limit mandates $k^2 = 0$. Consequently, the phase velocity remains strictly luminal:
+\begin{equation}
+\omega = c|\mathbf{k}|.
+\end{equation}
+Gravitational waves in Projection Relativity propagate at the speed of light. The framework introduces no negative-stiffness instabilities, no uncontrolled geometric decay, and no massive-graviton dispersion \cite{Abbott2017_Speed, deRham2011}. The complete explicit operator expansions, Green function inversions, and rigorous norm inequality proofs governing this section are provided in the supplementary material.
+
+\section{Unified Projection Energy and Conservation}
+\label{sec:unified_projection_energy}
+
+The preceding sections successfully derived gravitational stiffness, displacement projection, and electromagnetic phase as independent projections of the same underlying master field. However, in Projection Relativity, these physical sectors are not energetically isolated. The purpose of this section is to integrate the macroscopic projection channels back into a single, unified 4D effective action, derive the complete projection Hamiltonian, and prove that the internal geometry natively enforces global energy conservation and classical relativistic kinematics.
+
+\subsection{The 4D Effective Lagrangian and Sector Decomposition}
+\label{sec:effective_lagrangian_decomposition}
+
+The global dynamics of the framework are governed by the unified master action integrated over both macroscopic spacetime and the internal invariant measure ($d\mu_{\rm int} = R_A \, dw \, d\theta$). Because internal geometric variables are not independently resolved in macroscopic 4D observations, the total energetic response is evaluated via the four-dimensional effective Lagrangian density:
+\begin{equation}
+\mathcal{L}_{\rm PR}^{(4)}(x) = \int_{\mathcal{M}_{\rm int}} d\mu_{\rm int} \mathcal{L}_{\rm PR}(x, \xi).
+\end{equation}
+
+By expanding the master field into its constituent internal spectral profiles, this effective Lagrangian dynamically shatters into the precise observable sectors derived in Sections ~\ref{sec:stiffness_gravitational_sector} through ~\ref{sec:gravitational_wave_propagation}:
+\begin{equation}
+\boxed{
+\mathcal L_{\rm PR}^{(4)}
+=
+\mathcal L_g
++
+\mathcal L_{\rm disp}
++
+\mathcal L_A
++
+\mathcal L_X
++
+\mathcal L_\theta
++
+\mathcal L_{\rm mix}.
+}
+\end{equation}
+
+\subsection{The Projection Hamiltonian and Noether Conservation}
+\label{sec:projection_hamiltonian}
+
+Applying the standard Legendre transformation \cite{goldstein2002} with respect to the master field's canonical conjugate momentum ($\Pi_\Psi$), the unified projection Hamiltonian density \cite{peskin1995} is established strictly as:
+\begin{equation}
+\mathcal{H}_{\rm PR} = \Pi_\Psi \partial_0 \Psi - \mathcal{L}_{\rm PR}^{(4)}.
+\end{equation}
+Integrating this density over the spatial hypersurface yields the total unified projection energy of the system, $E_{\rm PR} = \int_{\Sigma_t} d^3x \mathcal{H}_{\rm PR}$. Because the internal geometric boundaries (the compact radius $R_A$ and the radial spectral gap $\mu_{\min}^2$) are strictly locked in the stable framework, the effective master Lagrangian possesses continuous time-translation symmetry. Consequently, standard Noether conservation \cite{noether1918} rigorously applies to the total projection system:
+\begin{equation}
+\boxed{ \frac{d E_{\rm PR}}{dt} = 0 }
+\end{equation}
+This mathematically guarantees that while energy may dynamically oscillate between the internal geometry and macroscopic phenomena (such as high-frequency sideband leakage via $\mathcal{L}_X$), the total projection energy of the universe remains conserved.
+
+\subsection{Low-Energy Relativistic Kinematic Recovery}
+\label{sec:relativistic_kinematic_recovery}
+
+The ultimate test of a unified geometric framework is its ability to recover standard kinematic physics in the low-energy limit. In the macroscopic exterior regime ($r > r_c$ and $|k^2| \ll \mu_{\min}^2$), the cross-sector coherence terms ($\mathcal{L}_{\rm mix}$) rapidly decouple. The localized projection modes return to their canonical free-field Hamiltonian structures, populated by the effective inertial masses ($\mathcal M_{\rm eff}$) derived directly from the displacement vacuum overlaps.
+
+For an isolated, low-energy projection configuration in its own rest frame ($P_{\rm PR} = 0$), the total geometric energy collapses preserve to the classical rest-mass invariant:
+\begin{equation}
+E_{\rm PR}^{(0)} = M_{\rm PR} c^2.
+\end{equation}
+
+Applying a macroscopic Lorentz boost to the unified Hamiltonian, the invariant momentum generators strictly recover the fundamental dispersion relation of special relativity \cite{Einstein1905}:
+\begin{equation}
+\boxed{ E_{\rm PR}^2 = |\mathbf{p}|^2 c^2 + M_{\rm PR}^2 c^4 }
+\end{equation}
+
+This confirms full theoretical closure. The framework mathematically guarantees that all emergent geometric projections from the finite core radius of black holes to the geometric origin of boundary-resolved electromagnetic normalization preserve both special and general relativistic conservation laws \cite{Wald1984} at macroscopic scales. The complete integration-by-parts calculus, canonical momentum variations, and covariant Hamiltonian derivations for this section are provided in the supplementary material.
+
+\section{Geometric Closure of Derived Projection Scales}
+\label{sec:geometric_closure_projection_scales}
+The preceding sections established the foundational architecture of Projection Relativity, detailing the internal spectral manifold, the displacement vacuum, and the unified response ledger. This section translates that architecture into observable physics. Its purpose is not to introduce new empirical parameters. Instead, it demonstrates how the macroscopic quantities driving all subsequent astrophysical tests emerge strictly as derived scales of the internal geometric closure. The deterministic sequence proceeds as follows:
+
+\begin{equation}
+\text{internal geometry}
+\rightarrow
+\text{projection constraint}
+\rightarrow
+\text{derived scale or stability bound}.
+\end{equation}
+
+
+\begin{table}[htbp]
+\small
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{@{} p{0.5\textwidth} p{0.45\textwidth} @{}}
+        \toprule
+        \textbf{Section Name} & \textbf{Purpose} \\
+        \midrule
+        \textbf{~\ref{sec:radial_branch_selection_verification}   Radial Branch Verification} & Checks the projection-trace radial branch against competing positive quartic branches and verifies the spectral gap used throughout the theory. \\
+        
+        \textbf{~\ref{sec:compact_phase_closure_alpha}     Compact Phase Closure} & Closes the compact phase sector and derives the boundary-resolved electromagnetic normalization. \\
+        
+        \textbf{~\ref{sec:pole_normalized_gravitational_coupling}     Pole-Normalized Gravitational Coupling} & Shows how the observed Newtonian coupling arises from pole normalization of the spin--2 propagator. \\
+        
+        \textbf{~\ref{sec:displacement_generated_effective_inertia}     Displacement-Generated Effective Inertia} & Connects the stable displacement vacuum to effective inertia and gravitational source response. \\
+        
+        \textbf{~\ref{sec:compact_object_consequence}    Compact-Object Consequences} & Collects the finite-core, mass-inflation, boundedness, and information-ledger consistency checks. \\
+        
+        \textbf{~\ref{sec:kerr_recovery_and_suppression}    Kerr Recovery and Suppression Bound} & Shows why the Kerr hierarchy remains dominant and why projection-sector ringdown effects are residual. \\
+        
+        \textbf{~\ref{sec:unified_derived_scale_closure}    Unified Derived-Scale Closure} & Summarizes the resulting derived-scale chain. \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:closure_sequence_names}
+%\end{footnotesize}
+\end{table}
+
+\noindent\textit{Note:} The outputs of this section are fixed theoretical inputs for Section~\ref{sec:astrophysical_projections_phenomenological_signature}. They are not fitted to the observational tests, nor are any free parameters used for the results.
+
+
+\subsection{Radial Branch-Selection Verification}
+\label{sec:radial_branch_selection_verification}
+
+The projection-trace radial branch derived above is not selected by numerical fitting. It is fixed by unit radial stiffness and the \(3+1\) projection trace, as demonstrated in figure ~\ref{fig:radial_branch_residual_landscape}. Nevertheless, the branch can be checked numerically against the radial spectral closure vector
+\begin{equation}
+\mathcal C_X
+=
+\left(
+\lambda_0,
+\lambda_1,
+\mu_{\min}^2
+\right).
+\end{equation}
+
+To verify branch selection, we scan the positive quartic family
+\begin{equation}
+V_X(w)
+=
+1+a_2w^2+a_4w^4,
+\qquad
+a_2>0,
+\qquad
+a_4>0,
+\end{equation}
+and compute the lowest two eigenvalues of
+\begin{equation}
+O_X
+=
+-\frac{d^2}{dw^2}
++
+V_X(w).
+\end{equation}
+
+The closure residual is defined by
+\begin{equation}
+\mathcal R_X(a_2,a_4)
+=
+\left[
+\frac{
+\lambda_0(a_2,a_4)-\lambda_0^{\star}
+}{
+\lambda_0^{\star}
+}
+\right]^2
++
+\left[
+\frac{
+\lambda_1(a_2,a_4)-\lambda_1^{\star}
+}{
+\lambda_1^{\star}
+}
+\right]^2,
+\end{equation}
+where
+\begin{equation}
+\lambda_0^{\star}
+=
+2.322863529580,
+\qquad
+\lambda_1^{\star}
+=
+5.375830272676.
+\end{equation}
+
+The numerical scan verifies the analytic projection-trace closure branch
+\begin{equation}
+\boxed{
+(a_2,a_4)
+=
+\left(
+1,\frac{3}{4}
+\right).
+}
+\end{equation}
+
+This verifies that the projection-trace branch
+\begin{equation}
+\boxed{
+V_{X,\star}(w)
+=
+1+w^2+\frac{3}{4}w^4
+}
+\end{equation}
+is the branch that closes the PR radial spectrum. Other positive quartics remain stable confining operators, but they do not reproduce the PR closure vector and therefore describe different radial spectral branches.
+
+\begin{figure}[h]
+\centering
+\captionsetup{font=footnotesize}
+\includegraphics[width=0.82\textwidth]{plots/pr_radial_branch_residual_heatmap_smooth.pdf}
+\caption{
+\label{fig:radial_branch_residual_landscape}
+\textbf{Radial branch-selection residual landscape.}
+The positive quartic family \(V_X(w)=1+a_2w^2+a_4w^4\) was scanned against the PR radial closure vector. The raw residual minimum occurs at \((a_2,a_4)=(1,3/4)\), matching the projection-trace radial branch. The smooth color field is used only for visual interpolation of the sampled grid; branch selection is fixed analytically by unit radial stiffness and the \(3+1\) projection trace.
+}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\captionsetup{font=footnotesize}
+\caption{
+\label{tab:competing_radial_branches}
+\textbf{Competing radial branch check.}
+Positive quartic alternatives remain mathematically stable, but they do not reproduce the PR radial closure vector. The projection-trace branch is \(V_{X,\star}(w)=1+w^2+\frac{3}{4}w^4\), which is fixed by unit radial stiffness and the \(3+1\) projection trace. The detailed finite-difference construction and grid scan are provided in the supplementary material.
+}
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{tabular}{l c c c c}
+\toprule
+\textbf{Radial branch} &
+\(\bm{\lambda_0}\) &
+\(\bm{\lambda_1}\) &
+\(\bm{\mu_{\min}^2}\) &
+\textbf{Closure status} \\
+\midrule
+
+\(1+w^2+\frac{3}{4}w^4\) &
+\(2.3228635\) &
+\(5.3758302\) &
+\(3.0529667\) &
+closes PR branch \\
+
+Full-trace quartic branch \((a_2=1,\ a_4=1)\) &
+\(2.3923006\) &
+\(5.6484750\) &
+\(3.2561744\) &
+stable, fails closure \\
+
+\(1+w^2+\frac{1}{2}w^4\) &
+\(2.2418162\) &
+\(5.0516920\) &
+\(2.8098757\) &
+stable, fails closure \\
+
+\(1+2w^2+w^4\) &
+\(2.6777598\) &
+\(6.4094145\) &
+\(3.7316547\) &
+fails stiffness branch \\
+
+\(1+\frac{1}{2}w^2+w^4\) &
+\(2.2333032\) &
+\(5.2364587\) &
+\(3.0031555\) &
+stable, fails closure \\
+
+\(1+w^2+w^6\) &
+\(2.4355589\) &
+\(6.0329042\) &
+\(3.5973453\) &
+non-minimal branch \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+The numerical check should therefore be interpreted as verification of the analytic projection-trace law, not as the origin of the \(3/4\) coefficient. The coefficient is fixed geometrically by
+\begin{equation}
+\frac{
+\operatorname{Tr}_{\rm dof}(P_{\rm space})
+}{
+\operatorname{Tr}_{\rm dof}(I_{3+1})
+}
+=
+\frac{3}{4}.
+\end{equation}
+The scan confirms that this forced geometric branch is also the branch that reproduces the radial spectral closure used throughout the gravitational, propagator, and compact phase sectors.
+
+This verified radial branch supplies the spectral gap and trace structure used by the compact boundary closure in the next subsection.
+
+\subsection{Compact Phase Closure and Boundary-Resolved Electromagnetic Normalization}
+\label{sec:compact_phase_closure_alpha}
+
+The electromagnetic sector of Projection Relativity is generated by the compact
+phase coordinate of the internal projection manifold. This compact coordinate is
+not an independent gauge insertion; it is the \(S^1_\theta\) factor of the same
+radial--compact internal geometry used throughout the framework. The purpose of
+this subsection is to close the compact phase radius \(R_A\) against the radial
+projection spectrum and extract the corresponding electromagnetic normalization.
+
+The compact phase closure follows the deterministic sequence
+\begin{equation}
+\boxed{
+S^1_\theta
+\rightarrow
+Z_A=R_A^{-2}
+\rightarrow
+\text{compact/radial stationarity}
+\rightarrow
+\text{finite-rank boundary map}
+\rightarrow
+R_{A,\star}^{-2}
+\rightarrow
+\alpha_{{\rm PR},bc}^{-1}.
+}
+\end{equation}
+The resulting electromagnetic normalization is not used as an empirical
+calibration input. It is evaluated only after the compact boundary map has been
+fixed by the projection-trace fractions and the finite-rank boundary orientation.
+
+\subsubsection{Compact Winding and Compact/Radial Stationarity}
+\label{sec:compact_winding_stationarity}
+
+The first step in the compact closure sequence is establishing the precise mathematical link between the internal phase geometry and the macroscopic gauge coupling. This subsection defines the compact winding modes, demonstrates how internal phase stiffness natively generates the fine-structure normalization, and introduces the geometric stationarity condition that rigidly locks the compact phase radius to the radial spectral gap. The compact phase coordinate belongs to
+\begin{equation}
+\mathcal M_{\rm int}
+=
+\mathbb R_w\times S^1_\theta,
+\qquad
+\theta\sim\theta+2\pi n,
+\qquad
+n\in\mathbb Z.
+\end{equation}
+The compact phase operator is
+\begin{equation}
+O_\theta
+=
+-\frac{1}{R_A^2}
+\frac{d^2}{d\theta^2}.
+\end{equation}
+The normalized winding modes are
+\begin{equation}
+v_m(\theta)
+=
+\frac{1}{\sqrt{2\pi R_A}}
+e^{im\theta},
+\qquad
+m\in\mathbb Z,
+\end{equation}
+and satisfy
+\begin{equation}
+O_\theta v_m
+=
+\frac{m^2}{R_A^2}v_m.
+\end{equation}
+The fundamental electromagnetic winding is \(m=1\), so the compact phase
+stiffness is
+\begin{equation}
+Z_A
+=
+R_A^{-2}.
+\end{equation}
+The gauge kinetic normalization then gives
+\begin{equation}
+\boxed{
+\alpha_{\rm PR}^{-1}
+=
+4\pi Z_A
+=
+4\pi R_A^{-2}.
+}
+\end{equation}
+
+The same result appears directly from the compact kinetic sector of the master
+action. The internal kinetic sector incorporates compact phase geometric
+stiffness through the internal metric structure:
+\begin{equation}
+\mathcal L_{\rm int}^{(\theta)}
+=
+-\frac12
+G^{\theta\theta}
+D_\theta\Psi^\dagger D_\theta\Psi.
+\end{equation}
+For the internal compact eigenproblem, \(D_\theta\) reduces to the compact
+coordinate derivative \(\partial_\theta\). Therefore,
+\begin{equation}
+\mathcal L_{\rm int}^{(\theta)}
+=
+-\frac{1}{2R_A^2}
+\partial_\theta\Psi^\dagger
+\partial_\theta\Psi.
+\end{equation}
+Upon projecting this term into macroscopic observable space, the internal
+geometric resistance against phase winding, \(R_A^{-2}\), maps directly to the
+kinetic normalization factor of the four-dimensional electromagnetic field
+tensor \(F_{\mu\nu}F^{\mu\nu}\). This mapping confirms that the internal phase
+winding carries physical significance analogous to the non-integrable phase
+factors established in the study of topological electromagnetic effects. The
+macroscopic light-matter coupling strength is not introduced as an arbitrary
+free parameter. Instead, the inverse electromagnetic normalization is tied to
+the compact electromagnetic winding stiffness.
+
+While this relation links the compact radius to the electromagnetic coupling, it
+does not independently determine the stationary value of \(R_A\). The remaining
+question is not winding quantization itself. The remaining question is why the
+compact phase radius \(R_A\) is locked to the radial projection spectrum. In PR,
+this lock is imposed by compact/radial stationarity.
+
+Let
+\begin{equation}
+\mu_{\min}^2
+=
+\lambda_1-\lambda_0
+\end{equation}
+be the radial spectral gap of the projection-trace radial operator. Define
+\begin{equation}
+C_A
+=
+\frac{R_{A,\star}^{-2}}{\mu_{\min}^2}.
+\end{equation}
+The microscopic compact/radial vacuum ratio is
+\begin{equation}
+\kappa_{\rm eff}
+=
+\frac{
+\langle\Omega_A|\widehat K_X|\Omega_A\rangle_P
+}{
+\langle\Omega_A|\widehat W_A|\Omega_A\rangle_P
+}.
+\end{equation}
+Compact/radial scale stationarity gives
+\begin{equation}
+\boxed{
+C_A=\kappa_{\rm eff}.
+}
+\end{equation}
+Accordingly, \(C_A\) is not a tunable quantity. It functions as the macroscopic
+realization of the vacuum locking ratio, strictly constrained by the framework's
+internal spectral coherence.
+
+\subsubsection{Finite-Rank Compact Boundary Map}
+\label{sec:finite_rank_compact_boundary_map}
+Now that we have established the compact stationarity requirement, this subsection executes the specific mathematical mechanism required to resolve it. By applying the \(3+1\) projection trace fractions to a finite spatial slice, we evaluate the boundary resolved compact return. Through the construction of a finite-rank Fredholm determinant and its terminal-word cofactor, this sequence geometrically locks the manifold and derives the boundary constant \(c_{\rm bc}\) entirely parameter-free. The projection-trace split is
+\begin{equation}
+T_A=\frac14,
+\qquad
+T_X=\frac34.
+\end{equation}
+The radial branch is fixed geometrically by the same split,
+\begin{equation}
+V_{X,\star}(w)
+=
+1+w^2+\frac34w^4.
+\end{equation}
+Let \(\phi_n\) be the corresponding radial eigenfunctions and define the finite
+odd spatial slice
+\begin{equation}
+\Pi_{13}
+=
+|\phi_1\rangle\langle\phi_1|
++
+|\phi_3\rangle\langle\phi_3|.
+\end{equation}
+The normalized radial stiffness operator is
+\begin{equation}
+K_X|\phi_n\rangle
+=
+\frac{\lambda_n-\lambda_0}{\lambda_1-\lambda_0}
+|\phi_n\rangle.
+\end{equation}
+
+The compact interior has primitive return words \(A^3\) and \(A^4\), represented
+by the finite-rank return matrix
+\begin{equation}
+M_A
+=
+\begin{pmatrix}
+T_A^3&T_A^4\\
+1&0
+\end{pmatrix}.
+\end{equation}
+The Fredholm determinant is
+\begin{equation}
+D_A
+=
+\det(I-M_A)
+=
+1-T_A^3-T_A^4.
+\end{equation}
+For \(T_A=1/4\),
+\begin{equation}
+D_A
+=
+1-\frac1{64}-\frac1{256}
+=
+\frac{251}{256}.
+\end{equation}
+
+The finite-rank boundary admits the terminal oriented word set
+\begin{equation}
+\boxed{
+\operatorname{Adm}_{\Pi_{13}}
+=
+\{\epsilon,\ A^3,\ A^4,\ XA^5,\ -XA^8\}.
+}
+\end{equation}
+The corresponding boundary cofactor is
+\begin{equation}
+N_{\rm bc}
+=
+1+T_A^3+T_A^4+T_X(T_A^5-T_A^8).
+\end{equation}
+The terms have the following roles. The word \(\epsilon\) is direct passage. The
+words \(A^3\) and \(A^4\) are the primitive compact interior returns. The word
+\begin{equation}
+XA^5=XA^{2+3}
+\end{equation}
+is the first spatially weighted compact boundary return: one compact
+leave--return pair \(A^2\) followed by the spatial primitive return \(A^3\). The
+word
+\begin{equation}
+-XA^8=-XA^{4+4}
+\end{equation}
+is the finite-rank exclusion of double full-trace recirculation outside the
+\(\Pi_{13}\) slice. This term supplies the boundary back-pressure required to
+keep the projected compact return norm finite and to avoid double-counting the
+full-trace loop outside the finite odd spatial channel.
+
+The boundary-resolved compact return is
+\begin{equation}
+R_{\rm bc}
+=
+\frac{N_{\rm bc}}{D_A}
+=
+\frac{
+1+T_A^3+T_A^4+T_X(T_A^5-T_A^8)
+}{
+1-T_A^3-T_A^4
+}.
+\end{equation}
+The resulting compact boundary constant is
+\begin{equation}
+c_{\rm bc}
+=
+T_X
+\left[
+1+T_A^2
+-
+T_A^6R_{\rm bc}
+\right].
+\end{equation}
+Equivalently,
+\begin{equation}
+c_{\rm bc}
+=
+T_X
+\left[
+1+T_A^2
+-
+T_A^6
+\frac{
+1+T_A^3+T_A^4+T_X(T_A^5-T_A^8)
+}{
+1-T_A^3-T_A^4
+}
+\right].
+\end{equation}
+Substituting only the projection-trace fractions \(T_A=1/4\) and \(T_X=3/4\)
+gives
+\begin{equation}
+\boxed{
+c_{\rm bc}
+=
+\frac{3354902985}{4211081216}
+=
+0.7966844648478991.
+}
+\end{equation}
+The compact boundary constant is not a calibrated correction. It is the
+terminal-word cofactor of the finite-rank compact return map.
+
+\subsubsection{Boundary-Resolved Projection Operator and Normalization}
+\label{sec:boundary_resolved_projection_operator_normalization}
+
+With the boundary constant \(c_{\rm bc}\) rigidly fixed, we now apply it to the finite-rank projection operator to resolve the final compact phase stiffness. It noted that deriving the compact electromagnetic coupling was not the original architectural objective of Projection Relativity, which was designed strictly to regularize gravitational singularities. However, as this deterministic chain reaches its conclusion, the compact electromagnetic normalization emerges as a derived consequence of the manifold's compact boundary closure. The finite-rank compact projection operator is
+\begin{equation}
+\boxed{
+P_{\rm geom}^{\rm bc}
+=
+\Pi_{13}K_X^2
+\left(
+c_{\rm bc}+w^2+\frac34w^4
+\right)
+K_X^2\Pi_{13}.
+}
+\end{equation}
+This operator preserves the finite odd spatial slice and keeps the compact
+electromagnetic winding locked to the radial projection branch.
+
+Let
+\begin{equation}
+q_1=\lambda_1-\lambda_0,
+\qquad
+q_3=\lambda_3-\lambda_0.
+\end{equation}
+For numerical reproducibility, the finite-rank radial datum used in this
+closure is
+\begin{equation}
+\lambda_3
+=
+13.23388439508096.
+\end{equation}
+The finite-rank projection produces a parity-compatible leakage probability
+\begin{equation}
+p_1
+=
+7.6528903366\times10^{-4},
+\qquad
+p_3=1-p_1.
+\end{equation}
+The compact phase stiffness is then
+\begin{equation}
+R_{A,\star}^{-2}
+=
+q_{\rm bc}
+=
+p_1q_1+(1-p_1)q_3.
+\end{equation}
+Using
+\begin{equation}
+\lambda_0=2.322863529580,
+\qquad
+\lambda_1=5.375830272676,
+\qquad
+\lambda_3=13.23388439508096,
+\end{equation}
+the compact boundary-resolved stiffness is
+\begin{equation}
+\boxed{
+q_{\rm bc}
+=
+10.905007182855176.
+}
+\end{equation}
+The boundary-resolved electromagnetic normalization follows as
+\begin{equation}
+\boxed{
+\alpha_{{\rm PR},bc}^{-1}
+=
+4\pi q_{\rm bc}
+=
+137.036361812007.
+}
+\end{equation}
+The resulting deterministic closure chain is
+\begin{equation}
+\boxed{
+(T_A,T_X)
+\rightarrow
+(D_A,N_{\rm bc})
+\rightarrow
+c_{\rm bc}
+\rightarrow
+P_{\rm geom}^{\rm bc}
+\rightarrow
+p_1
+\rightarrow
+R_{A,\star}^{-2}
+\rightarrow
+\alpha_{{\rm PR},bc}^{-1}.
+}
+\end{equation}
+Consequently, the electromagnetic coupling is an internal output of the compact
+boundary map, rather than an experimental input. This geometric normalization
+also fixes the relationship between Projection Relativity and local Quantum
+Electrodynamics. QED governs the local, dynamical kinematics of particle
+interactions; the PR compact phase projection supplies the global geometric
+boundary normalization within which those local fields operate.
+
+\subsubsection{Boundary-Map Failure-Mode and Uniqueness Check}
+\label{sec:boundary_map_failure_mode_uniqueness}
+
+The compact boundary-orientation rule is not an empirical adjustment. Within
+the finite-rank PR-native projection class, it is the closure that satisfies the
+compact closure, parity, trace, and boundedness requirements without introducing
+auxiliary parameters. An admissible compact closure must satisfy seven
+structural requirements:
+
+\begin{tcolorbox}[colback=white, colframe=gray, colbacktitle=gray, title=\textbf{Compact closure requirements}]
+\footnotesize
+\begin{enumerate}
+\item \textbf{Fractional Trace Consistency:} it must use only the projection-trace fractions
+\begin{equation}
+T_A=\frac14,
+\qquad
+T_X=\frac34.
+\end{equation}
+
+\item \textbf{Radial Branch Preservation:} it must preserve the projection-trace radial branch
+\begin{equation}
+V_{X,\star}(w)=1+w^2+\frac34w^4,
+\end{equation}
+with \(a_2=1\) fixed by unit local radial stiffness and \(a_4=3/4\) fixed by
+the \(3+1\) projection trace.
+
+\item \textbf{Finite-Rank Spatial Slice:} it must act on the finite odd spatial slice
+\begin{equation}
+\Pi_{13}
+=
+|\phi_1\rangle\langle\phi_1|
++
+|\phi_3\rangle\langle\phi_3|,
+\end{equation}
+selected by the fundamental compact electromagnetic winding.
+
+\item \textbf{Parity Symmetry:} it must preserve parity. Since both \(\phi_1\)
+and \(\phi_3\) belong to the odd radial branch, the effective boundary operator
+mixing them must be even under \(w\rightarrow-w\).
+
+\item \textbf{Parameter-Free Requirement:} it must not add a new adjustable
+compact coupling, exponent, radius, or empirical calibration.
+
+\item \textbf{Path Non-Redundancy:} it must not double-count recurrent compact
+paths already resummed by the Fredholm determinant \(D_A^{-1}\).
+
+\item \textbf{Spectral Lock Integrity:} it must produce a finite-rank leakage
+\(p_1\) that lowers the dominant \(n=3\) radial lock without exciting the
+unrestricted odd radial tower.
+\end{enumerate}
+\end{tcolorbox}
+
+The failure-mode check shows why the terminal-word cofactor is not merely a
+numerical list chosen after the fact. The determinant
+\begin{equation}
+D_A=1-T_A^3-T_A^4
+\end{equation}
+already resums recurrent interior compact paths generated by the primitive
+returns \(A^3\) and \(A^4\). The boundary cofactor may therefore contain only
+terminal words: words that touch the finite-rank boundary once and are not
+already generated by the recurrent compact interior.
+
+This explains the exclusion pattern. The words \(X\), \(XA\), and \(XA^2\) do
+not close a compact return. The words \(XA^3\) and \(XA^4\) are not independent
+boundary leakage terms because their compact parts are already primitive
+interior residues. The word \(XA^6=XA^{2+4}\) is an orientation-neutral
+full-trace boundary pairing and is absorbed into the recurrent determinant. The
+word \(XA^7=XA^{3+4}\) factors through the product of the primitive interior
+returns and is likewise determinant-resummed. Higher words
+\(XA^9,XA^{10},\ldots\) factor through recurrent compact paths and belong to
+\(D_A^{-1}\), not to the terminal cofactor. Several natural alternatives fail one or more of these requirements. The
+failure modes are summarized in Table~\ref{tab:compact_boundary_failure_modes}.
+
+\begin{table}[h]
+\centering
+\scriptsize
+\caption{
+Compact boundary-map failure-mode check. Several natural compact closure
+candidates either fail to produce a finite stationary compact radius, introduce
+a new continuous parameter, violate parity, overcount recurrent compact paths,
+or destabilize the finite-rank projection. The boundary-oriented cofactor is
+the PR-native finite-rank compact return rule that satisfies the stated
+structural constraints and closes the compact electromagnetic normalization.
+}
+
+\renewcommand{\arraystretch}{1.22}
+\begin{tabular}{p{0.22\textwidth}p{0.30\textwidth}p{0.40\textwidth}}
+\hline
+\textbf{Candidate closure} & \textbf{Tested structure} & \textbf{Failure mode} \\
+\hline
+
+Determinant-only compact action
+&
+\(\Gamma_A(R_A)=
+{\rm Tr}_P\log\left(O_{X,\star}-R_A^{-2}\partial_\theta^2\right)_{\rm ren}\)
+&
+The determinant is monotonic in \(R_A^{-2}\) under the natural renormalizations
+tested. It does not generate a finite stationary compact radius by itself.
+\\
+
+Harmonic compact confinement
+&
+\(E_{\rm int}(R_A)=R_A^{-2}+\lambda R_A^2\)
+&
+Produces a stable radius, but only by introducing a new coupling \(\lambda\).
+This trades \(C_A\) for another parameter and is not a zero-parameter closure.
+\\
+
+Raw scalar projection kernel
+&
+\(J(w)=w^2+\frac34w^4\)
+&
+Acts as a passive multiplier rather than a constrained projection operator. It
+gives an \(n=1\) leakage of order \(10^{-1}\), far larger than the required
+finite-rank coherence tail \(p_1\simeq7.65\times10^{-4}\).
+\\
+
+Full odd-branch projection
+&
+\(\Pi_{\rm odd}=|\phi_1\rangle\langle\phi_1|
++|\phi_3\rangle\langle\phi_3|
++|\phi_5\rangle\langle\phi_5|+\cdots\)
+&
+Overcounts the odd radial tower. Higher odd modes destabilize the compact
+closure and drive the predicted normalization away from the compact reservoir
+value. The electromagnetic winding must project onto the finite \(\Pi_{13}\)
+slice, not the unrestricted odd sector.
+\\
+
+Odd cubic generator
+&
+\(Q_\eta(w)=w^3-\eta w\)
+&
+A direct odd-state overlap \(\langle\phi_1|Q_\eta|\phi_3\rangle\) is
+parity-forbidden on the symmetric radial domain. Tuned \(\eta\)-values can mimic
+the target leakage, but they are not fixed by the compact boundary trace.
+\\
+
+First compact-return approximation
+&
+\(c=\frac34\left[1+\left(\frac14\right)^2\right]=\frac{51}{64}\)
+&
+Correctly identifies the second-order compact return, but leaves a stable
+residual at the level \(\Delta\alpha^{-1}\sim5\times10^{-6}\).
+\\
+
+Uncorrected Fredholm cofactor
+&
+\(N_0=1+T_A^3+T_A^4\)
+&
+Correctly captures the primitive compact interior returns, but omits finite-rank
+boundary orientation. The residual improves to the \(10^{-9}\) level but does
+not close the finite-rank boundary map.
+\\
+
+Boundary-oriented cofactor
+&
+\(\boxed{N_{\rm bc}=1+T_A^3+T_A^4+T_X(T_A^5-T_A^8)}\)
+&
+Satisfies compact closure, finite-rank terminality, parity, trace orientation,
+and Fredholm inclusion--exclusion. It yields
+\(\alpha_{{\rm PR},bc}^{-1}=137.036361812007\) at current nonperturbative
+precision without introducing a fitted parameter.
+\\
+
+\hline
+\end{tabular}
+\label{tab:compact_boundary_failure_modes}
+\end{table}
+
+The accepted boundary-oriented cofactor is not selected by fitting the
+electromagnetic normalization. It is selected because it is compatible with
+compact closure, finite-rank terminality, parity, trace orientation, and
+Fredholm inclusion--exclusion. This logic mirrors the verification of the radial
+branch selection: mathematical stability alone is insufficient if the candidate
+fails to close the framework. Alternative compact boundary rules can be
+constructed, but the tested alternatives either introduce ad-hoc parameters,
+violate finite-rank projection limits, or overcount recurrent compact paths
+already resummed by the compact Fredholm determinant.
+
+\subsubsection{Compact-Radius Stability}
+\label{sec:compact_radius_stability}
+
+A common vulnerability in higher-dimensional frameworks is the dynamical
+instability of the compactification scale. Such frameworks often require an
+additional stabilization potential to prevent the unobserved geometric
+oscillation or collapse of the compact dimensions. In Projection Relativity, the
+stationarity of the compact phase radius \(R_A\) does not rely on an external
+phenomenological radion potential. It is tied to the same radial spectral gap
+that fixes the finite coercive scale of the projection manifold.
+
+Because the displacement and phase sectors are coupled projections of the same master field $\Psi(x,\xi)$, a local perturbation of the compact phase radius $\delta R_A(x)$ forces a direct shift in the compact winding eigenvalue $\lambda_1^{(\theta)} = R_A^{-2}$. Also $R_A^{-2}$ is rigidly locked to the radial gap via the scale stationarity condition $C_A = \kappa_{\rm eff}$, any uncoordinated variation $\delta R_A(x)$ breaks internal spectral coherence, generating a massive geometric restoration force proportional to $\mu_{\min}^2 \delta R_A$. The stationary compact radius is gap-protected within the boundary-resolved PR closure, shielding the observable four-dimensional projection from uncontrolled compact-radius oscillations without requiring an independent, unconstrained phenomenological radion potential. The nonzero gap
+\begin{equation}
+\mu_{\min}^2>0
+\end{equation}
+then suppresses low-energy compact-radius drift. For a local four-dimensional
+high-energy event to excite \(R_A\), it must supply enough localized energy to
+breach the gap threshold fixed by the radial branch.
+
+The stationary compact radius is therefore gap protected within the
+boundary-resolved PR closure. The observable four-dimensional projection is
+shielded from uncontrolled compact-radius oscillations without introducing an
+additional phenomenological stabilization sector. In this sense, the compact
+radius is stabilized by the existing spectral architecture of the theory rather
+than by a separate radion potential.
+
+\subsection{Pole-Normalized Gravitational Coupling}
+\label{sec:pole_normalized_gravitational_coupling}
+
+The gravitational sector is controlled by the projection propagator. The internal response sector contributes a spectral self-energy, but the radial spectral gap prevents arbitrarily soft internal excitations. Consequently, the internal response spectral density has support only above the radial gap:
+\begin{equation}
+\boxed{
+\rho_X(\mu^2)=0,
+\qquad
+0\le \mu^2<\mu_{\min}^2.
+}
+\end{equation}
+
+To preserve the massless low-energy spin--2 pole, the projection self-energy kernel $F(k^2)$ is subtracted such that $F(0)=0$. As detailed in the supplementary material, expanding this subtracted kernel in the low-energy limit ($|k^2|\ll\mu_{\min}^2$) isolates the dominant correction, which is strictly governed by the positive spectral moment:
+\begin{equation}
+\boxed{
+M_2
+=
+\int_{\mu_{\min}^2}^{\infty}
+d\mu^2\,
+\frac{\rho_X(\mu^2)}{\mu^4} \ge 0.
+}
+\end{equation}
+
+This spectral moment modifies the spin--2 projection denominator, yielding the low-energy propagator pole residue:
+\begin{equation}
+\boxed{
+Z_{\rm pole}
+=
+\frac{1}{1+M_2}.
+}
+\end{equation}
+Because the spectral density is positive-definite above the gap ($M_2\ge0$), the pole residue is strictly bounded: $0<Z_{\rm pole}\le1$. The observed Newtonian \cite{newton1687} gravitational coupling is therefore not the bare parameter, but the pole-normalized projection coupling \cite{Donoghue1994}:
+\begin{equation}
+\boxed{
+G_N
+=
+G_PZ_{\rm pole}
+=
+\frac{G_P}{1+M_2}.
+}
+\end{equation}
+
+Accordingly, the PR gravitational closure follows the deterministic chain:
+\begin{equation}
+\boxed{
+\rho_X(\mu^2)
+\rightarrow
+M_2
+\rightarrow
+Z_{\rm pole}
+\rightarrow
+G_N.
+}
+\end{equation}
+
+This result confirms that the observed Newtonian coupling $G_N$ emerges only after the internal spectral response has been dynamically integrated out. The
+gravitational coupling used in the observable exterior theory is therefore the
+pole-normalized coupling, not an independently fitted bare constant.\footnote{It is important to distinguish between the topological invariants of this framework and its dimensional mapping constants, as the electromagnetic coupling $\alpha$ arises as a closed-loop topological invariant of the compact phase sector ($S^1$) as being dimensionless, it is intrinsically fixed by the trace fractions while $G_N$ functions as the necessary dimensional bridge mapping internal spectral stiffness ($\mu_{\min}^2$) to 4D external curvature. Because the internal manifold is compact and the 4D spacetime possesses an independent metric volume, $G_N$ is the proportionality constant required to maintain dimensional consistency across the projection; therefore, treating this mapping factor as a "free parameter" would be a categorical error, as it is a scale completeness requirement of the projection geometry that allows the internal manifold to recover the established units of General Relativity in the exterior limit.} 
+
+\subsection{Displacement-Generated Effective Inertia}
+\label{sec:displacement_generated_effective_inertia}
+Section~\ref{sec:displacement_sector} derived the stable displacement vacuum.
+Here we record the corresponding closure result: effective matter inertia is not
+inserted as an independent parameter, but generated by the displacement vacuum
+and its overlap with internal matter projection states.
+
+The displacement field is governed by the quartic potential:
+\begin{equation}
+\boxed{
+V_{\rm disp}(A)
+=
+V_0+\alpha_AA^2+\beta_AA^4,
+\qquad
+\alpha_A<0, \quad \beta_A>0.
+}
+\end{equation}
+
+The condition $\alpha_A < 0$ guarantees that the trivial origin is unstable, forcing the system into a stable, nonzero displacement vacuum. As derived in the supplementary material, extremizing this potential yields the stationary positive vacuum state $A_0 = \sqrt{-\alpha_A / 2\beta_A}$.
+
+When canonically normalized and coupled to the matter sector via the geometric overlap integral $\mathcal I_A$, the wave-function renormalization factors  cancel. The resulting effective inertia is strictly proportional to the unrenormalized vacuum expectation value and the overlap coupling:
+\begin{equation}
+\boxed{
+\mathcal M_{\rm eff}
+=
+g_0\mathcal I_AA_0
+=
+g_0\mathcal I_A
+\sqrt{
+-\frac{\alpha_A}{2\beta_A}
+}.
+}
+\end{equation}
+
+For multiple matter projection profiles, this naturally generalizes to a mass matrix governed by the tensorial overlap $\mathcal I_{ab}^{(A)}$:
+\begin{equation}
+\boxed{
+\mathcal M_{ab}^{\rm eff}
+=
+g_0\mathcal I_{ab}^{(A)}A_0.
+}
+\end{equation}
+
+This demonstrates the effective inertia emerges strictly from the framework's internal geometric topology, following the deterministic chain:
+\begin{equation}
+\boxed{
+V_{\rm disp}(A)
+\rightarrow
+A_0
+\rightarrow
+v_A
+\rightarrow
+g_{\rm eff}
+\rightarrow
+\mathcal M_{\rm eff}.
+}
+\end{equation}
+
+Because this identical effective inertia acts both as the kinematic response (mass) and as the active source for the gravitational projection, we achieve a structural derivation of the Equivalence Principle \cite{Will2014}. The full displacement-sector closure sequence is:
+\begin{equation}
+\boxed{
+A_0
+\rightarrow
+\mathcal M_{\rm eff}
+\rightarrow
+T_{\mu\nu}^{(\rm disp)}
+\rightarrow
+g_{\mu\nu}^{\rm eff}.
+}
+\end{equation}
+
+This represents the displacement-sector proof of the PR equivalence statement: inertia and gravitational sourcing are dual manifestations of the same underlying vacuum displacement.
+
+\subsection{Compact-Object and Finite-Core Closure}
+\label{sec:compact_object_consequence}
+
+For compact objects, the saturation radius and density ceiling are those derived 
+in Section~\ref{sec:finite_core_regularization}:
+\begin{equation}
+\boxed{
+r_c(M)
+=
+\left(
+\frac{G_NM}{c^2R_{\max}}
+\right)^{1/3},
+\qquad
+\rho_{\max}
+=
+\frac{3c^2R_{\max}}{4\pi G_N}.
+}
+\end{equation}
+
+The physical consequence is direct: increasing the total mass increases the 
+finite-core volume, not the maximum density. The core geometry remains regular 
+and de Sitter-like near the center, with finite curvature. Compact-object 
+collapse terminates as bounded spectral saturation rather than as a classical 
+\(r=0\) singularity. The remaining closure question is whether this finite core remains dynamically
+stable under the classical mass-inflation channel. That stability test is the
+subject of the next subsection.
+
+\subsubsection{Dynamical Stability and the No-Go Theorem Domain}
+\label{sec:dynamic_core_stability}
+
+Classical singularity and mass-inflation no-go \cite{poisson1990internal} 
+results are not rejected by Projection Relativity. They are accepted as correct 
+statements about the continuation of classical spacetime geometry beyond its 
+domain of validity. The key point is that the geometry assumed by those theorems 
+is not the geometry present at the PR core. Classical General Relativity extends 
+collapse toward an inner-horizon or point-singular regime in which unbounded 
+blueshift, divergent stress-energy, and arbitrarily large curvature remain 
+available channels. Projection Relativity removes precisely that assumption. The 
+projection-trace radial branch possesses a nonzero spectral gap. The classical 
+continuation to \(r=0\) is not part of the PR geometric domain:
+\begin{equation}
+\boxed{
+\mu_{\min}^2>0
+\quad\Longrightarrow\quad
+R_{\max}<\infty
+\quad\Longrightarrow\quad
+r_c>0
+\quad\Longrightarrow\quad
+K_{\rm PR}<\infty .
+}
+\end{equation}
+
+The classical no-go result is kept in its proper domain: it applies to the 
+unbounded classical interior, while PR replaces that domain with a finite 
+spectral projection geometry before the singular limit is reached. The PR 
+saturation surface is not an inner Cauchy horizon \cite{penrose1965} and not a 
+perfectly reflecting wall. It is a gapped spectral-response boundary. Incoming 
+null or matter flux is routed out of the exterior four-dimensional metric 
+description and into the internal projection-response ledger,
+\begin{equation}
+\boxed{
+T_{\mu\nu}^{\rm ext}
+\quad\longrightarrow\quad
+P_X[\Psi]
+\quad\longrightarrow\quad
+\mathcal B_c .
+}
+\end{equation}
+
+The relevant stability competition is therefore not between two classical null 
+streams on an unbounded inner horizon, but between the classical blueshift 
+driver \(\kappa\) and the internal spectral response scale. In the PR response 
+model, the maximal spectral absorption rate is fixed by the radial branch gap,
+\(\Gamma_X^{\max}=\mu_{\min}^2\), so the stable compact-core regime is
+\begin{equation}
+\boxed{
+2\kappa<\mu_{\min}^2 .
+}
+\end{equation}
+
+This is the PR replacement for the classical mass-inflation channel. When the 
+bound is satisfied, the exterior channel cannot run to infinite projected 
+stress-energy. The attempted classical divergence is converted into a finite 
+excitation of the internal spectral-response sector and an update of the 
+finite-core ledger \(\mathcal B_c\).
+
+We tested this claim with two nonlinear effective stability test harnesses: a 
+counter-streaming null-flux model and a two-dimensional double-null 
+wall-collision model. In both benchmarks, the classical channel undergoes 
+runaway mass-inflation growth, while the PR projection-response channel remains 
+bounded throughout the scanned regime satisfying \(2\kappa<\mu_{\min}^2\).
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.18}
+\footnotesize
+\caption{
+\label{tab:mass_inflation_stability_tests}
+\textbf{Nonlinear effective mass-inflation stability tests.}
+Both tests compare the classical runaway channel against the PR projection-response channel within the stable regime \(2\kappa<\mu_{\min}^2\).
+}
+\begin{tabular}{@{} p{0.28\textwidth} p{0.16\textwidth} p{0.14\textwidth} p{0.18\textwidth} p{0.08\textwidth} @{}}
+\toprule
+\textbf{Test} &
+\textbf{Classical channel} &
+\textbf{PR channel} &
+\textbf{Normalized curvature response} &
+\textbf{Result} \\
+\midrule
+Counter-streaming null-flux model &
+\(y_{\rm cl}\sim2.0\times10^{41}\) &
+\(y_{\rm PR}\sim1.08\) &
+\(K_{\rm PR}/\mathcal K_{\max}\simeq0.52\) &
+Stable \\
+\addlinespace
+Two-dimensional double-null wall-collision model &
+\(y_{\rm cl}\sim3.5\times10^{48}\) &
+\(y_{\rm PR}\sim3.10\) &
+\(K_{\rm PR}/\mathcal K_{\max}\simeq0.756\) &
+Stable \\
+\bottomrule
+\end{tabular}
+\captionsetup{font=footnotesize}
+\end{table}
+
+Here \(\mathcal K_{\rm PR}/\mathcal K_{\max}\) denotes the normalized 
+curvature-response ratio used in the stability harness, with
+\begin{equation}
+\mathcal K_{\rm PR}/\mathcal K_{\max}<1, 
+\end{equation}
+corresponding to bounded projected 
+curvature. Across the stable scanned regime, accumulated energy increases the 
+finite-core ledger \(\mathcal B_c\), the total mass \(M(t)\), and the 
+saturation radius \(r_c(M)\), while the central density remains fixed at 
+\(\rho_{\max}\). Added energy therefore grows the finite core; it does not 
+increase the curvature beyond the spectral ceiling. The mass-inflation channel 
+is quenched because the PR core is governed by different mathematics than the 
+classical inner-horizon geometry assumed in the no-go theorem.
+
+\begin{figure}[H]
+\centering
+\captionsetup{font=footnotesize}
+\includegraphics[width=1.0\textwidth]{plots/pr_combined_mass_inflation_double_wall_summary (2).png}
+\caption{
+\textbf{Nonlinear compact-core stability tests.}
+The classical counter-streaming channels exhibit runaway divergence, while the PR projection-response channels remain bounded throughout the scanned regime \(2\kappa<\mu_{\min}^2\). The core safely absorbs the inflationary energy into the internal ledger, keeping the curvature invariant strictly below the ceiling (\(K_{\rm PR}/R_{\max}<1\)).
+}
+\label{fig:pr_mass_inflation_double_wall_summary}
+\end{figure}
+
+
+\subsubsection{Phase-Sector Boundedness}
+\label{sec:phase_sector_boundedness}
+
+The curvature ceiling \(R_{\max}\) also bounds coupled projection modes. This
+is not only a qualitative statement. It follows from the fact that the compact
+phase sector and radial stiffness sector are two projections of the same
+internal operator. The internal spectral operator separates as
+\begin{equation}
+O_{\rm int}
+=
+O_X+O_\theta,
+\qquad
+O_\theta
+=
+-\frac{1}{R_A^2}
+\frac{d^2}{d\theta^2}.
+\end{equation}
+The compact boundary closure fixes the stationary compact stiffness,$R_{A,\star}^{-2}=C_A\mu_{\min}^2,$ with $0<\mu_{\min}^2<\infty, \qquad 0<C_A<\infty.$ We find that the compact phase stiffness is finite:
+\begin{equation}
+\boxed{
+0<R_{A,\star}^{-2}<\infty.
+}
+\end{equation}
+The compact phase operator therefore cannot generate an infinite stiffness
+scale independently of the radial branch. To make this explicit, expand a finite perturbation of the master field in the
+internal spectral basis:
+\begin{equation}
+\delta\Psi
+=
+\sum_{n,m}
+\delta c_{n,m}
+U_{n,m}(w,\theta).
+\end{equation}
+The compact contribution to the internal excitation energy is
+\begin{equation}
+\mathcal E_\theta[\delta\Psi]
+=
+\langle\delta\Psi|O_\theta|\delta\Psi\rangle_P
+=
+\sum_{n,m}
+\frac{m^2}{R_{A,\star}^2}
+|\delta c_{n,m}|^2 .
+\end{equation}
+Since the full internal response is positive in the quadratic spectral regime,
+\begin{equation}
+\mathcal E_\theta[\delta\Psi]
+\leq
+\langle\delta\Psi|O_{\rm int}|\delta\Psi\rangle_P .
+\end{equation}
+Inside the finite core, the total projected response is bounded by the spectral
+curvature ceiling. In density form, the compact-object closure gives
+\begin{equation}
+\boxed{
+\rho_{\rm total}
+\leq
+\rho_{\max}
+=
+\frac{3c^2R_{\max}}{4\pi G_N}.
+}
+\end{equation}
+Because \(\mathcal E_\theta\) is a positive contribution to the same projected
+ledger, it must remain finite:
+\begin{equation}
+\boxed{
+\mathcal E_\theta[\delta\Psi]<\infty.
+}
+\end{equation}
+For each compact winding mode with \(m\neq0\), this gives
+\begin{equation}
+\frac{m^2}{R_{A,\star}^2}
+|\delta c_{n,m}|^2
+\leq
+\mathcal E_\theta[\delta\Psi]
+<
+\infty.
+\end{equation}
+Accordingly, no compact winding amplitude can diverge while the finite-core
+ledger remains bounded. The same result appears in the observable phase-gradient form. The compact
+phase gradient is
+\begin{equation}
+X_\mu
+=
+\partial_\mu\theta
+-
+q\mathcal A_\mu .
+\end{equation}
+From the amplitude--phase split of the displacement sector, the compact phase
+contribution to the observable Lagrangian is
+\begin{equation}
+\mathcal L_\theta
+=
+-\frac12
+A_{\rm phys}^2
+X_\mu X^\mu .
+\end{equation}
+Let \(n^\mu\) be the local timelike unit normal to the observer frame and
+\(h^{\mu\nu}=g^{\mu\nu}+n^\mu n^\nu\) the induced spatial metric. The local
+positive phase-energy density is
+\begin{equation}
+\rho_\theta
+=
+\frac12
+A_{\rm phys}^2
+\left[
+(n^\mu X_\mu)^2
++
+h^{\mu\nu}X_\mu X_\nu
+\right]
+\geq0.
+\end{equation}
+Since the compact phase sector is part of the same finite projected stress
+ledger,
+\begin{equation}
+0
+\leq
+\rho_\theta
+\leq
+\rho_{\max}.
+\end{equation}
+Consequently,
+\begin{equation}
+\boxed{
+A_{\rm phys}^2
+\left[
+(n^\mu X_\mu)^2
++
+h^{\mu\nu}X_\mu X_\nu
+\right]
+\leq
+2\rho_{\max}.
+}
+\end{equation}
+The physical phase response is the amplitude-weighted compact gradient,
+\begin{equation}
+\mathcal X_\mu
+\equiv
+A_{\rm phys}X_\mu .
+\end{equation}
+Its local norm is bounded:
+\begin{equation}
+\boxed{
+(n^\mu\mathcal X_\mu)^2
++
+h^{\mu\nu}\mathcal X_\mu\mathcal X_\nu
+\leq
+2\rho_{\max}
+<
+\infty.
+}
+\end{equation}
+
+For a coherent compact phase region, \(A_{\rm phys}\) is nonzero. If
+\(A_{\rm phys}^2\geq A_{\rm coh}^2>0\), the bare compact phase gradient is also
+bounded:
+\begin{equation}
+\boxed{
+(n^\mu X_\mu)^2
++
+h^{\mu\nu}X_\mu X_\nu
+\leq
+\frac{2\rho_{\max}}{A_{\rm coh}^2}
+<
+\infty.
+}
+\end{equation}
+If \(A_{\rm phys}\rightarrow0\), the bare phase coordinate is not itself the
+physical observable; the physical compact response remains the bounded
+amplitude-weighted quantity \(\mathcal X_\mu=A_{\rm phys}X_\mu\). The compact coordinate is also topologically bounded, $\theta\sim\theta+2\pi n, \  \Delta\theta|_{S^1}\leq\pi$ on the fundamental branch. The only possible strong-field instability would therefore have to come from an unbounded phase gradient. The energy inequality
+above rules that out inside the finite spectral core. The boundedness chain is
+\begin{equation}
+\boxed{
+\mu_{\min}^2>0
+\rightarrow
+R_{\max}<\infty
+\rightarrow
+\rho_{\max}<\infty
+\rightarrow
+0\leq\rho_\theta\leq\rho_{\max}
+\rightarrow
+\|\mathcal X_\mu\|<\infty .
+}
+\end{equation}
+We find that the compact phase sector cannot develop an independent strong-field
+divergence once the radial projection geometry has saturated. It is not an
+independent exterior field placed on top of the gravitational geometry. It is a
+coupled projection of the same master field, and its physical phase response is
+bounded by the same finite spectral ledger that bounds the core curvature.
+
+\subsubsection{Exterior Entropy and Information Ledger}
+\label{sec:exterior_entropy_information_ledger}
+
+The finite core is a bounded spectral ledger, not an additional exterior entropy 
+volume. This matters because the finite-core replacement of the classical 
+singularity should not create an independent hidden reservoir of externally 
+accessible states.
+
+The finite core carries the full quantum-geometric ledger of the master field, 
+while the exterior observer accesses only the boundary-projected image of that 
+ledger on the apparent horizon. The unitary core evolution induces a horizon 
+projection channel:
+\begin{equation}
+\boxed{
+\mathcal E_H:\mathcal B_c\rightarrow\mathcal H_{\partial}.
+}
+\label{eq:horizon_projection_channel}
+\end{equation}
+Here \(\mathcal B_c\) is the finite-core spectral ledger and 
+\(\mathcal H_{\partial}\) is the horizon boundary data. Consequently, the 
+exterior entropy strictly obeys the Bekenstein--Hawking area bound:
+\begin{equation}
+\boxed{
+S_{\rm ext}
+\leq
+\frac{k_BA_H}{4\ell_P^2}.
+}
+\label{eq:exterior_entropy_bound}
+\end{equation}
+
+Information is not destroyed \cite{hawking_penrose_1970} at a classical singular 
+endpoint; it is preserved in the finite-core spectral state and projected outward 
+through the boundary channel. Projection Relativity finds separates full-state 
+unitarity from exterior coarse-grained entropy: the master-field evolution 
+remains unitary, while the exterior observer interacts with an area-bounded 
+holographic image. The algebraic regularization derivation is detailed in the 
+companion Supplementary Material, and the complete information-preservation 
+sequence is derived there as well.
+
+\subsection{Kerr Recovery and Residual Sideband Suppression}
+\label{sec:kerr_recovery_and_suppression}
+
+The gravitational-wave sector must satisfy a strict compatibility condition:
+the low-energy exterior ringdown must remain Kerr-dominated. This condition is
+not imposed by hand. It follows from the same gap-protected projection response
+that controls the spin--2 propagator. The internal response sector is gap protected:
+\begin{equation}
+\boxed{
+\rho_X(\mu^2)=0,
+\qquad
+0\leq\mu^2<\mu_{\min}^2.
+}
+\end{equation}
+The radial spectral gap is
+\begin{equation}
+\boxed{
+\mu_{\min}^2
+=
+3.052966743096.
+}
+\end{equation}
+Because of this gap, the Newton-normalized residual self-energy satisfies
+\begin{equation}
+\boxed{
+F_E(z)=O(z^2),
+\qquad
+\frac{F_E(z)}{z}\rightarrow0
+\quad
+(z\rightarrow0).
+}
+\end{equation}
+Here \(z\) denotes the local spectral value of the exterior spin--2 wave
+operator. In a local wave patch, \(z\rightarrow k^2\). The observable ringdown response decomposes as
+\begin{equation}
+\boxed{
+A_{\rm obs}(\omega)
+=
+A_{\rm Kerr}(\omega)
++
+A_X(\omega).
+}
+\end{equation}
+The first term is the ordinary Kerr response. The second term is the
+projection-sector residual. From the response expansion of the corrected
+wave operator, the residual amplitude is controlled by the dimensionless
+projection-response strength
+\begin{equation}
+\epsilon_{\rm GW}(z)
+\equiv
+C_{\rm Kerr}
+\left|
+\frac{F_E(z)}{z}
+\right|
+\epsilon_X^{\rm GW}.
+\end{equation}
+Using the gap-regulated residual bound,
+\begin{equation}
+\left|
+\frac{F_E(z)}{z}
+\right|
+\lesssim
+\frac{\eta}{(1+M_2)(1-\eta)},
+\qquad
+\eta=\frac{|z|}{\mu_{\min}^2},
+\qquad
+0\leq\eta<1,
+\end{equation}
+we obtain
+\begin{equation}
+\boxed{
+\frac{\|A_X\|}{\|A_{\rm Kerr}\|}
+\lesssim
+C_{\rm Kerr}
+\frac{\eta}{(1+M_2)(1-\eta)}
+\epsilon_X^{\rm GW}.
+}
+\end{equation}
+The recovery statement is
+\begin{equation}
+\boxed{
+\eta\ll1
+\quad
+\Longrightarrow
+\quad
+\|A_X\|\ll\|A_{\rm Kerr}\|.
+}
+\end{equation}
+
+This is the key compatibility result. Projection Relativity does not compete
+with the Kerr quasi-normal-mode hierarchy in the low-energy exterior regime.
+The fundamental Kerr ringdown remains the leading-order response, and ordinary
+Kerr overtones remain part of the Kerr model to be fitted and removed. The PR
+signature is a weak residual contribution after Kerr subtraction:
+\begin{equation}
+\boxed{
+h_X(t)
+=
+h_{\rm obs}(t)-h_{\rm Kerr}(t).
+}
+\end{equation}
+Accordingly, the observational target is not a replacement of the Kerr overtone
+ladder. The target is a weak high-frequency residual sideband shoulder, or
+finite-core leakage feature, in high-SNR ringdown data after the Kerr response
+has been accurately modeled. This also explains why current Kerr-consistent ringdown measurements do not
+contradict the projection sector. In the regime \( |z|\ll\mu_{\min}^2 \), the
+residual is gap suppressed. The detailed fiducial ringdown templates and
+finite-core leakage times are developed in Section~\ref{sec:gw_kerr_recovery}.
+
+\subsection{Unified Derived-Scale Closure}
+\label{sec:unified_derived_scale_closure}
+
+The preceding subsections show that the observable low-energy scales and
+boundedness conditions of Projection Relativity arise from different constraints
+of the same internal projection structure. The role of this section is to collect
+those closure outputs in one place before applying them to the phenomenological
+and observational tests of Section~\ref{sec:astrophysical_projections_phenomenological_signature}. The radial branch closure fixes the projection-trace potential and the universal
+spectral gap:
+\begin{equation}
+\boxed{
+a_2=1,
+\qquad
+a_4=\frac34,
+\qquad
+\mu_{\min}^2=\lambda_1-\lambda_0
+=
+3.052966743096.
+}
+\end{equation}
+The compact phase closure fixes the boundary-resolved electromagnetic
+normalization:
+\begin{equation}
+\boxed{
+(T_A,T_X)
+\rightarrow
+(D_A,N_{\rm bc})
+\rightarrow
+c_{\rm bc}
+\rightarrow
+P_{\rm geom}^{\rm bc}
+\rightarrow
+R_{A,\star}^{-2}
+=
+q_{\rm bc}
+\rightarrow
+\alpha_{{\rm PR},bc}^{-1}
+=
+4\pi q_{\rm bc}.
+}
+\end{equation}
+Numerically,
+\begin{equation}
+\boxed{
+q_{\rm bc}
+=
+10.905007182855176,
+\qquad
+\alpha_{{\rm PR},bc}^{-1}
+=
+137.036361812007.
+}
+\end{equation}
+
+The projection-response closure fixes the observed Newtonian coupling through
+the spin--2 pole residue:
+\begin{equation}
+\boxed{
+\rho_X(\mu^2)
+\rightarrow
+M_2
+=
+\int_{\mu_{\min}^2}^{\infty}
+d\mu^2\,
+\frac{\rho_X(\mu^2)}{\mu^4}
+\rightarrow
+Z_{\rm pole}
+=
+(1+M_2)^{-1}
+\rightarrow
+G_N
+=
+G_PZ_{\rm pole}.
+}
+\end{equation}
+
+The displacement-sector closure fixes effective inertia through the stable
+nonzero displacement vacuum and internal matter--displacement overlap:
+\begin{equation}
+\boxed{
+\alpha_A<0,
+\qquad
+\beta_A>0
+\rightarrow
+A_0
+=
+\sqrt{-\frac{\alpha_A}{2\beta_A}}
+\rightarrow
+\mathcal M_{\rm eff}
+=
+g_0\mathcal I_AA_0.
+}
+\end{equation}
+
+The finite-core closure fixes the compact-object saturation radius and density
+ceiling:
+\begin{equation}
+\boxed{
+r_c(M)
+=
+\left(
+\frac{G_NM}{c^2R_{\max}}
+\right)^{1/3},
+\qquad
+\rho_{\max}
+=
+\frac{3c^2R_{\max}}{4\pi G_N}.
+}
+\end{equation}
+The same bounded core geometry gives
+\begin{equation}
+\boxed{
+K_{\rm PR}(0)<\infty.
+}
+\end{equation}
+
+The dynamical stability closure places the mass-inflation channel inside the
+gap-protected response domain:
+\begin{equation}
+\boxed{
+2\kappa<\mu_{\min}^2.
+}
+\end{equation}
+In this regime, accumulated energy grows the finite-core ledger and the
+saturation radius \(r_c(M)\), while the central density remains fixed at
+\(\rho_{\max}\). The phase-sector boundedness closure ties the compact phase response to the
+same finite projected ledger:
+\begin{equation}
+\boxed{
+0\leq\rho_\theta\leq\rho_{\max},
+\qquad
+\|\mathcal X_\mu\|<\infty,
+}
+\end{equation}
+where
+\begin{equation}
+\mathcal X_\mu
+=
+A_{\rm phys}X_\mu,
+\qquad
+X_\mu
+=
+\partial_\mu\theta-q\mathcal A_\mu.
+\end{equation}
+
+The exterior information closure separates full-state unitarity from
+coarse-grained exterior entropy:
+\begin{equation}
+\boxed{
+\mathcal E_H:\mathcal B_c\rightarrow\mathcal H_{\partial},
+\qquad
+S_{\rm ext}
+\leq
+\frac{k_BA_H}{4\ell_P^2}.
+}
+\end{equation}
+
+The Kerr recovery closure gives the gravitational-wave residual bound:
+\begin{equation}
+\boxed{
+\frac{\|A_X\|}{\|A_{\rm Kerr}\|}
+\lesssim
+C_{\rm Kerr}
+\frac{\eta}{(1+M_2)(1-\eta)}
+\epsilon_X^{\rm GW},
+\qquad
+\eta=\frac{|z|}{\mu_{\min}^2}.
+}
+\end{equation}
+In the low-energy exterior regime,
+\begin{equation}
+\boxed{
+\eta\ll1
+\quad
+\Longrightarrow
+\quad
+\|A_X\|\ll\|A_{\rm Kerr}\|.
+}
+\end{equation}
+
+The complete Section~\ref{sec:geometric_closure_projection_scales} closure chain
+can be summarized as
+\small{
+\begin{equation}
+\boxed{
+\left\{
+\mu_{\min}^2,\, T_A,\, T_X,\, D_A,\, N_{\rm bc},\, c_{\rm bc},\, M_2,\, A_0,\, \mathcal I_A,\, R_{\max}
+\right\}
+\longrightarrow
+\left\{
+\begin{array}{@{}c@{}}
+\alpha_{{\rm PR},bc},\, G_N,\, \mathcal M_{\rm eff},\, r_c,\, \rho_{\max}, \\[1ex]
+\text{finite-core stability},\, \text{Kerr residual suppression}
+\end{array}
+\right\}.
+}
+\end{equation}}
+
+This completes the geometric closure chain. Projection Relativity does not treat
+\(\alpha_{{\rm PR},bc}\), \(G_N\), \(\mathcal M_{\rm eff}\), \(r_c\), or the
+Kerr residual bound as unrelated empirical insertions. They are sector-resolved
+outputs of the internal spectral manifold, compact phase topology, projection
+response kernel, displacement vacuum, and finite-core ledger. These fixed
+outputs are the theoretical inputs used by the phenomenological and
+observational tests in Section~\ref{sec:astrophysical_projections_phenomenological_signature}.
+
+\section{Observational Tests and Astrophysical Consistency}
+\label{sec:observational_tests}
+\label{sec:astrophysical_projections_phenomenological_signature}
+
+
+We separate our observational framework into positive tests and consistency bounds. The gravitational-wave sector acts as a Kerr-recovery constraint, ensuring exterior Kerr-consistency while suppressing geometric residuals. The quasar sector provides the primary direct support via luminosity-linked velocity residuals stabilized by low-ionization anchoring. Finally, foreground-cleaned Faraday residuals in the magnetic sector establish an inverse constraint on the projected compact-phase area rather than a universal fixed magnetic amplitude.
+
+\subsection{Quasar Luminosity-Linked Velocity Residual Test}
+\label{sec:quasar_luminosity_residual_test}
+
+\subsubsection{Prediction}
+
+Projection Relativity predicts that luminosity can trace projection strength. In this interpretation, higher-luminosity quasars should show a systematically more negative velocity residual relative to a low-ionization systemic anchor. The observable tested here is therefore the velocity residual between an adopted catalog redshift estimator \(Z_{\rm est}\) and the systemic low-ionization redshift \(Z_{\rm SYS}\):
+\begin{equation}
+\boxed{
+\Delta v_{\rm est}
+=
+c\,
+\frac{Z_{\rm est}-Z_{\rm SYS}}{1+Z_{\rm SYS}} .
+}
+\label{eq:quasar_velocity_residual}
+\end{equation}
+
+For each redshift-matched bin, we compare the high-luminosity and low-luminosity subsamples:
+\begin{equation}
+\boxed{
+\Delta v_{\rm high-low}
+=
+{\rm median}\!\left(\Delta v_{\rm est}\right)_{\rm high\ L}
+-
+{\rm median}\!\left(\Delta v_{\rm est}\right)_{\rm low\ L}.
+}
+\label{eq:quasar_high_low_residual}
+\end{equation}
+
+The PR sign prediction is
+\begin{equation}
+\boxed{
+\Delta v_{\rm high-low}<0.
+}
+\label{eq:quasar_pr_sign_prediction}
+\end{equation}
+That is, within matched redshift bins, the higher-luminosity objects should appear more blueshifted, or more negative in residual velocity, relative to the low-ionization systemic frame.
+
+\subsubsection{Testing Method}
+\label{sec:quasar_testing_method}
+
+The test was performed on the DR16Q/Wu--Shen \cite{Wu2020, Ahumada2020} quasar sample using strict
+low-ionization systemic anchors. The systemic redshift anchor \(Z_{\rm SYS}\)
+was selected empirically from the available low-ionization line estimates by
+choosing the valid line with the minimum reported line uncertainty,
+\(\mathrm{ZSYS\_LINES\_ERR}_i\). The strict low-ionization anchor families
+retained for the primary analysis were
+\begin{equation}
+[\mathrm{O\,III}],
+\qquad
+[\mathrm{O\,II}],
+\qquad
+\mathrm{Mg\,II},
+\end{equation}
+which define the common low-ionization parent sample. The luminosity comparison was performed inside matched redshift bins. Within each anchor family and redshift bin, objects were sorted by the catalog
+luminosity variable used in the analysis. The lower luminosity tercile defines
+the low-luminosity subsample, and the upper luminosity tercile defines the
+high-luminosity subsample:
+\begin{equation}
+L_{\rm low}
+=
+\{L\leq P_{33}(L)\},
+\qquad
+L_{\rm high}
+=
+\{L\geq P_{67}(L)\}.
+\end{equation}
+The middle tercile was excluded from the high-minus-low contrast. This makes
+the test a strict lower-tercile versus upper-tercile comparison rather than a
+median split or an arbitrary high/low partition.
+
+For each matched bin, the velocity residual was computed as
+\begin{equation}
+\Delta v_{\rm est}
+=
+c\,
+\frac{
+Z_{\rm est}-Z_{\rm SYS}
+}{
+1+Z_{\rm SYS}
+},
+\end{equation}
+and the luminosity-linked residual was defined by
+\begin{equation}
+\Delta v_{\rm high-low}
+=
+{\rm median}(\Delta v_{\rm est})_{\rm high\ L}
+-
+{\rm median}(\Delta v_{\rm est})_{\rm low\ L}.
+\end{equation}
+The PR sign prediction is
+\begin{equation}
+\Delta v_{\rm high-low}<0.
+\end{equation}
+
+The calculation was repeated across independent redshift estimators,
+\begin{equation}
+Z_{\rm DR16Q\_BASE},
+\qquad
+Z_{\rm PIPE},
+\qquad
+Z_{\rm PCA},
+\qquad
+Z_{\rm MGII},
+\qquad
+Z_{\rm HBETA},
+\qquad
+Z_{\rm HALPHA}.
+\end{equation}
+Estimator-specific warning-clean cuts were then imposed using the corresponding
+redshift-warning flags:
+
+\begin{equation}
+\begin{gathered}
+  \mathrm{ZWARNING}=0, \quad \mathrm{ZWARNPCA}=0, \quad \mathrm{ZWARNMGII}=0, \\
+  \quad \mathrm{ZWARNHBETA}=0, \quad \mathrm{ZWARNHALPHA}=0. \quad
+\end{gathered}
+\end{equation}
+
+
+
+The same low-ionization parent-sample construction, matched-bin structure, and
+tercile definition were retained across estimator tests; only the redshift
+estimator and its associated warning-clean filter were changed. Finally, a redshift-bin-preserving random-label permutation test was performed. In this null model, the luminosity labels were randomized inside each matched redshift bin while preserving the anchor family, estimator definition, bin
+membership, high/low sample sizes, and velocity-residual distribution. This
+directly tests whether the observed sign persistence can be produced by random
+luminosity ordering within the matched bins.
+
+\subsubsection{Warning-Clean Residual Results}
+
+The warning-clean alternate-estimator results are summarized in Table~\ref{tab:quasar_warning_clean_results}. The key result is that the negative residual persists across the broad catalog estimators \(Z_{\rm PIPE}\) and \(Z_{\rm PCA}\), and also survives the \(MgII\)-specific redshift estimator. We find that the signal is not confined to a single final catalog redshift definition.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{
+\label{tab:quasar_warning_clean_results}
+\textbf{Warning-clean strict low-ionization quasar residual test.}
+Each row reports the combined strict low-ionization matched-bin result after applying the relevant redshift-warning cut. The PR prediction is \(\Delta v_{\rm high-low}<0\).
+}
+\renewcommand{\arraystretch}{1.16}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l l r r r r r r}
+\toprule
+\textbf{Estimator} &
+\textbf{Warning filter} &
+\textbf{Matched bins} &
+\textbf{Negative bins} &
+\textbf{Negative fraction} &
+\(\boldsymbol{\Delta v_{\rm high-low}}\) \textbf{median} &
+\textbf{Sign-test \(p\)} &
+\textbf{Objects} \\
+\midrule
+\(Z_{\rm DR16Q\_BASE}\) & \(ZWARNING=0\)       & 144 & 140 & 0.972 & \(-33.31\ {\rm km\,s^{-1}}\) & \(7.93\times10^{-37}\) & 452026 \\
+\(Z_{\rm PIPE}\)        & \(ZWARNING=0\)       & 144 & 134 & 0.931 & \(-29.49\ {\rm km\,s^{-1}}\) & \(3.71\times10^{-29}\) & 449940 \\
+\(Z_{\rm PCA}\)         & \(ZWARN_{\rm PCA}=0\)   & 144 & 136 & 0.944 & \(-19.87\ {\rm km\,s^{-1}}\) & \(1.79\times10^{-31}\) & 537561 \\
+\(Z_{\rm MGII}\)        & \(ZWARN_{\rm MGII}=0\)  & 144 & 133 & 0.924 & \(-68.08\ {\rm km\,s^{-1}}\) & \(4.56\times10^{-28}\) & 507975 \\
+\(Z_{\rm HBETA}\)       & \(ZWARN_{\rm HBETA}=0\) & 144 &  96 & 0.667 & \(-8.02\ {\rm km\,s^{-1}}\)  & \(3.90\times10^{-5}\)  & 119984 \\
+\(Z_{\rm HALPHA}\)      & \(ZWARN_{\rm HALPHA}=0\)&  96 &  42 & 0.438 & \(+2.85\ {\rm km\,s^{-1}}\)  & \(9.08\times10^{-1}\)  & 15899 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+The \(Z_{\rm DR16Q\_BASE}\), \(Z_{\rm PIPE}\), \(Z_{\rm PCA}\), and \(Z_{\rm MGII}\) estimators all show strong sign persistence under the warning-clean controls. The \(H\beta\) estimator is weaker but remains negative and significant. The \(H\alpha\) estimator is retained as a null low-redshift line-estimator control; it does not show the predicted sign persistence.
+
+\subsubsection{High-\textit{N} Random-Label Permutation Audit}
+
+The high-\(N\) permutation audit used \(N_{\rm perm}=50{,}000\) random-label realizations for the core reviewer-facing estimators. The empirical resolution floor is therefore
+\begin{equation}
+p_{\rm floor}
+=
+\frac{1}{N_{\rm perm}+1}
+=
+\frac{1}{50001}
+\simeq
+1.99996\times10^{-5}.
+\end{equation}
+
+The results are summarized in Table~\ref{tab:quasar_highN_permutation_results}. For \(Z_{\rm DR16Q\_BASE}\), \(Z_{\rm PIPE}\), \(Z_{\rm PCA}\), and \(Z_{\rm MGII}\), no permutation reproduced either the observed negative-bin count or a median shift at least as negative as the observed value. Each therefore reaches the empirical floor \(p_{\rm perm}=1/50001\).
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{
+\label{tab:quasar_highN_permutation_results}
+\textbf{High-\(N\) redshift-bin-preserving random-label permutation audit.}
+The luminosity labels were randomized inside each matched redshift bin while preserving the anchor family, estimator, bin size, and velocity-residual distribution. The core estimators hit the empirical permutation floor \(p_{\rm perm}=1/50001\).
+}
+\renewcommand{\arraystretch}{1.16}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r r r r}
+\toprule
+\textbf{Estimator} &
+\textbf{Matched bins} &
+\textbf{Negative bins} &
+\(\boldsymbol{\Delta v_{\rm high-low}}\) \textbf{median} &
+\textbf{Sign-test \(p\)} &
+\(\boldsymbol{p_{\rm perm}}\) \textbf{sign} &
+\(\boldsymbol{p_{\rm perm}}\) \textbf{median} &
+\textbf{Permutation max negative bins} \\
+\midrule
+\(Z_{\rm DR16Q\_BASE}\) & 144 & 140 & \(-33.31\ {\rm km\,s^{-1}}\) & \(7.93\times10^{-37}\) & \(2.00\times10^{-5}\) & \(2.00\times10^{-5}\) & 100 \\
+\(Z_{\rm PIPE}\)        & 144 & 134 & \(-29.49\ {\rm km\,s^{-1}}\) & \(3.71\times10^{-29}\) & \(2.00\times10^{-5}\) & \(2.00\times10^{-5}\) & 97 \\
+\(Z_{\rm PCA}\)         & 144 & 136 & \(-19.87\ {\rm km\,s^{-1}}\) & \(1.79\times10^{-31}\) & \(2.00\times10^{-5}\) & \(2.00\times10^{-5}\) & 97 \\
+\(Z_{\rm MGII}\)        & 144 & 133 & \(-68.08\ {\rm km\,s^{-1}}\) & \(4.56\times10^{-28}\) & \(2.00\times10^{-5}\) & \(2.00\times10^{-5}\) & 100 \\
+\(Z_{\rm HBETA}\)       & 144 &  96 & \(-8.02\ {\rm km\,s^{-1}}\)  & \(3.90\times10^{-5}\)  & \(4.00\times10^{-5}\) & \(4.00\times10^{-5}\) & 97 \\
+\(Z_{\rm HALPHA}\)      &  96 &  42 & \(+2.85\ {\rm km\,s^{-1}}\)  & \(9.08\times10^{-1}\)  & \(9.07\times10^{-1}\) & \(9.09\times10^{-1}\) & 67 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+The permutation null distributions are centered near random sign balance. For the 144-bin estimators, the random-label negative-bin mean is approximately \(72\), while the observed values are \(140\), \(134\), \(136\), and \(133\) for \(Z_{\rm DR16Q\_BASE}\), \(Z_{\rm PIPE}\), \(Z_{\rm PCA}\), and \(Z_{\rm MGII}\), respectively. The strongest random-label realizations remain far below the observed sign persistence for the four core estimators.
+
+\begin{figure}[htbp]
+\centering
+\captionsetup{font=footnotesize}
+\includegraphics[width=1.0\textwidth]{plots/quasar_pr_residual_highN_summary.png}
+\caption{
+\textbf{PR-native quasar residual detection: $\Delta v_{\text{high-low}} < 0$.} Observed velocity residuals between high- and low-luminosity subsamples across matched-redshift bins. The predicted negative contrast is statistically robust across independent estimators ($Z_{\text{DR16Q}}, Z_{\text{PIPE}}, Z_{\text{PCA}}, Z_{\text{MGII}}$) and survives strict low-ionization anchoring, warning-clean cuts, random-label permutations, and bootstrap resampling.
+}
+\label{fig:quasar_pr_residual_highN_summary}
+\end{figure}
+
+\subsubsection{Matched-Bin Bootstrap Stability}
+
+A matched-bin bootstrap was also performed by resampling the observed matched bins. The bootstrap confidence intervals for the median velocity shift are shown in Table~\ref{tab:quasar_bootstrap_results}. The core estimators retain Negative locked \(95\%\) confidence intervals for the median high-minus-low luminosity residual.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{
+\label{tab:quasar_bootstrap_results}
+\textbf{Matched-bin bootstrap confidence intervals.}
+The bootstrap resamples the matched bins and estimates uncertainty on the median high-minus-low luminosity velocity residual.
+}
+\renewcommand{\arraystretch}{1.16}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l r r r r}
+\toprule
+\textbf{Estimator} &
+\textbf{Matched bins} &
+\(\boldsymbol{\Delta v_{\rm high-low}}\) \textbf{median} &
+\textbf{Bootstrap 95\% CI} &
+\textbf{Interpretation} \\
+\midrule
+\(Z_{\rm DR16Q\_BASE}\) & 144 & \(-33.31\ {\rm km\,s^{-1}}\) & \([-47.02,\,-27.30]\ {\rm km\,s^{-1}}\) & Negative locked \\
+\(Z_{\rm PIPE}\)        & 144 & \(-29.49\ {\rm km\,s^{-1}}\) & \([-51.21,\,-22.94]\ {\rm km\,s^{-1}}\) & Negative locked \\
+\(Z_{\rm PCA}\)         & 144 & \(-19.87\ {\rm km\,s^{-1}}\) & \([-34.47,\,-17.10]\ {\rm km\,s^{-1}}\) & Negative locked \\
+\(Z_{\rm MGII}\)        & 144 & \(-68.08\ {\rm km\,s^{-1}}\) & \([-81.68,\,-58.60]\ {\rm km\,s^{-1}}\) & Negative locked \\
+\(Z_{\rm HBETA}\)       & 144 & \(-8.02\ {\rm km\,s^{-1}}\)  & \([-13.83,\,-4.44]\ {\rm km\,s^{-1}}\)  & Negative, weaker \\
+\(Z_{\rm HALPHA}\)      &  96 & \(+2.85\ {\rm km\,s^{-1}}\)  & \([-0.82,\,+8.01]\ {\rm km\,s^{-1}}\)   & Null control \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\captionsetup{font=footnotesize}
+\includegraphics[width=0.90\textwidth]{plots/quasar_pr_residual_bootstrap_ci.png}
+\caption{
+\textbf{Matched-bin bootstrap stability of the PR residual.} Stability analysis of the PR-predicted velocity residual using matched-bin bootstrap resampling. The primary redshift estimators show negative locked 95\% confidence intervals, confirming that the observed residual is a statistically robust feature rather than a random-bin artifact.
+}
+\label{fig:quasar_pr_residual_bootstrap_ci}
+\end{figure}
+
+
+\subsubsection{Summary}
+
+The quasar analysis detects a luminosity-linked negative velocity residual with the sign predicted by PR. The result survives strict low-ionization anchoring, independent redshift estimators, warning-clean redshift cuts, redshift-bin-preserving random-label permutations, and matched-bin bootstrap resampling. The strongest controls are \(Z_{\rm PIPE}\), \(Z_{\rm PCA}\), and \(Z_{\rm MGII}\): each retains a strongly negative median shift, strong binomial sign persistence, and high-\(N\) permutation probabilities at the empirical floor.
+
+This is not a random-bin artifact and not a single-redshift-estimator artifact. It is a statistically robust observational residual with the sign predicted by Projection Relativity:
+
+\begin{equation}
+\boxed{
+\Delta v_{\rm high-low}<0.}
+\end{equation}
+
+Conventional luminosity-dependent quasar physics must now reproduce the same controlled residual structure under the same low-ion anchor, warning-clean, alternate-estimator, random-label, and bootstrap tests.
+
+\subsection{Compact-Phase Magnetic Area Law and Faraday-Rotation Constraint}
+\label{sec:compact_phase_magnetic_area_law}
+
+Projection Relativity does not insert a primordial magnetic seed by hand.
+The compact electromagnetic phase sector derives a flux normalization through
+the compact \(S^1_\theta\) winding structure and the boundary-resolved compact
+stiffness. The resulting magnetic amplitude is not a universal fixed number.
+It is determined by the projected compact-phase area of the realized magnetic
+domain. The gauge-invariant compact phase gradient is
+\begin{equation}
+\boxed{
+X_\mu
+=
+\partial_\mu\theta
+-
+q\mathcal A_\mu .
+}
+\end{equation}
+In a coherent compact-phase vacuum, \(X_\mu^{\rm vac}=0\). A residual
+compact phase-gradient curl defines a magnetic flux channel whenever
+\(\nabla\times X_{\rm res}\neq0\). Equivalently, the residual field strength is
+\begin{equation}
+\boxed{
+F_{\mu\nu}^{\rm res}
+=
+-\frac{1}{q}
+\partial_{[\mu}X_{\nu]}^{\rm res}.
+}
+\end{equation}
+The compact phase sector fixes the associated flux normalization, while the
+realized projected area fixes the magnetic field amplitude.
+
+\subsubsection{Compact-Phase Flux Normalization}
+
+The compact phase closure determines the electromagnetic winding stiffness,
+\begin{equation}
+Z_A
+=
+R_{A,\star}^{-2},
+\qquad
+\alpha_{{\rm PR},bc}^{-1}
+=
+4\pi Z_A .
+\end{equation}
+The corresponding compact-phase magnetic flux normalization is
+\begin{equation}
+\boxed{
+\Phi_\theta^{\rm PR}
+=
+\frac{\hbar}{e}
+\frac{Z_A}{c_{\rm bc}} .
+}
+\end{equation}
+Using the boundary-resolved compact stiffness and
+\begin{equation}
+c_{\rm bc}
+=
+0.796684464847899,
+\end{equation}
+this gives
+\begin{equation}
+\boxed{
+\Phi_\theta^{\rm PR}
+=
+9.009597185\times10^{-15}\ {\rm Wb}.
+}
+\end{equation}
+
+For a realized projected compact-phase magnetic domain with physical projected
+area \(A_{\rm proj}^{(\theta)}\), the magnetic field is therefore
+\begin{equation}
+\boxed{
+B_{\rm geo}^{\rm PR}
+=
+\frac{
+\Phi_\theta^{\rm PR}
+}{
+A_{\rm proj}^{(\theta)}
+}.
+}
+\end{equation}
+Equivalently,
+\begin{equation}
+\boxed{
+B_{\rm geo}^{\rm PR}[{\rm nG}]
+=
+\frac{
+0.09009597185
+}{
+A_{\rm proj}^{(\theta)}[{\rm m^2}]
+}.
+}
+\end{equation}
+
+The projected area \(A_{\rm proj}^{(\theta)}\) is not an additional compact-sector
+parameter. It is a physical property of the realized magnetic domain, analogous
+to the source mass \(M\) in the Newtonian law \(g=GM/r^2\). PR provides
+the compact flux law; the observed system supplies the projected domain area.
+
+\begin{figure}[htbp]
+\centering
+\captionsetup{font=footnotesize}
+\includegraphics[width=0.80\textwidth]{plots/pr_magnetic_area_law_support.pdf}
+\caption{
+\textbf{Projection Relativity magnetic area law.}
+The compact phase sector fixes the flux normalization
+\(\Phi_\theta^{\rm PR}=(\hbar/e)(Z_A/c_{\rm bc})\), while the realized magnetic domain supplies the projected compact-phase area \(A_{\rm proj}^{(\theta)}\).
+The resulting field is
+\(B_{\rm geo}^{\rm PR}[{\rm nG}]
+= 0.09009597185/A_{\rm proj}^{(\theta)}[{\rm m^2}]\).
+The shaded band shows the compact-phase areas corresponding to the foreground-cleaned LoTSS-scale residual field range.
+}
+\label{fig:pr_magnetic_area_law_support}
+\end{figure}
+
+
+
+\subsubsection{Faraday-Rotation Window}
+
+Faraday rotation measures the line-of-sight magnetic field weighted by the
+intervening plasma column. In standard astronomical units,
+\begin{equation}
+\boxed{
+{\rm RM}_{\rm pred}
+=
+812\,
+n_e[{\rm cm^{-3}}]\,
+L[{\rm Mpc}]\,
+B_{\rm geo}^{\rm PR}[{\rm nG}]\,
+W_{\rm EM}.
+}
+\end{equation}
+Here
+\begin{equation}
+\boxed{
+W_{\rm EM}
+=
+W_{\rm orient}
+W_{\rm coh}
+W_{\rm fill}
+W_z .
+}
+\end{equation}
+For a frozen comoving magnetic field,
+\begin{equation}
+B^{\rm phys}(z)
+=
+B^{\rm com}(1+z)^2,
+\end{equation}
+which cancels the Faraday \((1+z)^{-2}\) factor in the simplest comoving
+treatment. Therefore \(W_z=1\) in that limit. The remaining factors describe
+line-of-sight orientation, coherence, plasma filling, and the physical electron
+column. They are observational or environmental inputs, not tunable PR
+couplings. Substituting the area law gives
+\begin{equation}
+\boxed{
+{\rm RM}_{\rm pred}
+=
+812\,
+n_e L W_{\rm EM}
+\left[
+\frac{
+0.09009597185
+}{
+A_{\rm proj}^{(\theta)}
+}
+\right].
+}
+\end{equation}
+So that the Faraday-rotation data constrain the pair
+\begin{equation}
+\left(
+A_{\rm proj}^{(\theta)},
+W_{\rm EM}
+\right),
+\end{equation}
+rather than confirming a universal fixed primordial magnetic amplitude.
+
+\subsubsection{LoTSS Residual-RM Area Constraint}
+
+The LoTSS \cite{Shimwell2019} foreground-cleaned residual-RM analysis gives a robust residual
+Faraday-rotation scale after Galactic foreground subtraction. The preferred
+2022 one-degree foreground branch gives a high-latitude residual of order $|{\rm RRM}_{2022}|
+\simeq 1.25\ {\rm rad\,m^{-2}}.$ The bootstrap branch gives $|{\rm RRM}_{2022}|
+=
+1.254538\ {\rm rad\,m^{-2}},$ 
+$95\%{\rm\ CI}
+=
+1.192766\text{--}1.323486\ {\rm rad\,m^{-2}}.$ Under representative coherent-path plasma assumptions, this residual maps to
+an order-nG line-of-sight field scale. Using the compact-phase area law, residual fields of order  $B_{\rm geo}^{\rm PR} \sim 0.5\text{--}4\,{\rm nG}$ correspond to
+\begin{equation}
+\boxed{
+A_{\rm proj}^{(\theta)}
+\simeq
+0.0225\text{--}0.180\ {\rm m^2},
+}
+\end{equation}
+or
+\begin{equation}
+\boxed{
+\sqrt{A_{\rm proj}^{(\theta)}}
+\simeq
+0.150\text{--}0.424\ {\rm m}.
+}
+\end{equation}
+
+This is an inverse diagnostic. LoTSS constrains the realized compact-phase
+projected area under independently specified plasma, orientation, filling, and
+coherence assumptions. It is not used to tune
+\(\Phi_\theta^{\rm PR}\), \(Z_A\), \(c_{\rm bc}\), or
+\(\alpha_{{\rm PR},bc}\).
+
+\begin{figure}[htbp]
+\centering
+\captionsetup{font=footnotesize}
+\includegraphics[width=0.86\textwidth]{plots/pr_magnetic_rm_prediction_vs_lotss.pdf}
+\caption{
+\textbf{PR area-law RM prediction compared with LoTSS residual RM.}
+For each plasma/window model, the PR area law predicts a residual Faraday
+rotation through
+\({\rm RM}_{\rm pred}
+= 812\,n_eL W_{\rm EM}
+(0.09009597185/A_{\rm proj}^{(\theta)})\).
+The horizontal band shows the foreground-cleaned LoTSS residual
+\(|{\rm RRM}_{2022}|=1.254538\,{\rm rad\,m^{-2}}\) with its bootstrap
+confidence interval. Intersections determine the projected compact-phase area
+required by each physical window model.
+}
+\label{fig:pr_magnetic_rm_prediction_vs_lotss}
+\end{figure}
+
+Because the residual amplitude remains sensitive to Galactic foreground model,
+Galactic latitude, source-local contamination, and plasma-path assumptions, this
+branch should be interpreted as a foreground-limited residual magnetic-field
+constraint rather than a standalone cosmological magnetic-field detection.
+
+As a summary, the magnetic branch is not a fixed-field prediction. Projection Relativity derives a compact-phase magnetic area law. Once the physical projected
+compact-phase area and plasma window are specified, the law predicts the
+Faraday-rotation residual. Conversely, the foreground-cleaned LoTSS residual
+constrains the projected compact-phase area of the realized magnetic domain.
+
+\subsubsection{Falsifiability}
+
+Projection Relativity provides a parameter-free compact-phase flux normalization. Once the projected area is specified, the magnetic area law is directly falsifiable. Observational data must yield coherent, stable geometric areas. The framework can be falsified in three direct ways:
+
+\begin{enumerate}
+\item \textbf{Physical Plausibility:} Foreground-cleaned Faraday rotation measurements must translate into finite, physically sensible projected areas ($A_{\rm proj}^{(\theta)}$).
+\item \textbf{Environmental Consistency:} Independent astronomical surveys observing similar plasma environments (e.g., identical cosmic void classes) must infer compatible area scales.
+\item \textbf{Mutual Contradiction:} If highly controlled rotation-measure datasets demand mutually exclusive or wildly fluctuating $A_{\rm proj}^{(\theta)}$ values for identical environments, the area-law interpretation fails.
+\end{enumerate}
+
+The complete deterministic chain---from pure quantum topology to macroscopic astronomical observation is defined with the following chain:
+\begin{equation}
+\boxed{
+S^1_\theta
+\xrightarrow{\text{geometry}}
+Z_A
+\xrightarrow{\text{closure}}
+\Phi_\theta^{\rm PR}
+\xrightarrow{\text{environment}}
+A_{\rm proj}^{(\theta)}
+\xrightarrow{\text{area law}}
+B_{\rm geo}^{\rm PR}
+\xrightarrow{\text{plasma}}
+{\rm RM}_{\rm pred}
+}
+\end{equation}
+
+\subsection{Kerr Recovery and Gravitational-Wave Consistency}
+\label{sec:gw_kerr_recovery}
+
+Projection Relativity recovers the classical Kerr ringdown in the exterior, low-energy regime. For radial distances $r > r_c$, the projected geometry reduces cleanly to the Kerr exterior, ensuring the Teukolsky operator remains the governing descriptor of black-hole perturbations. Consequently, the gravitational-wave sector serves as a critical consistency test for the projection architecture: the framework must preserve the established Kerr hierarchy while rigorously suppressing any projection-sector corrections below current observational sensitivity. The corrected exterior wave operator may be written as
+\begin{equation}
+\boxed{
+O_{\rm PR}^{(s)}
+=
+O_{\rm Teuk}^{(s)}
++
+\widehat{\Sigma}_{X}^{\rm GW},
+\qquad
+\widehat{\Sigma}_{X}^{\rm GW}
+=
+-F_E\!\left(O_{\rm Teuk}^{(s)}\right).
+}
+\end{equation}
+
+The corresponding ringdown response decomposes as
+\begin{equation}
+\boxed{
+A_{\rm obs}(\omega)
+=
+A_{\rm Kerr}(\omega)
++
+A_X(\omega).
+}
+\end{equation}
+
+Here \(A_{\rm Kerr}\) is the ordinary Kerr response, while \(A_X\) is the residual projection-sector response. 
+This residual is not a massive-graviton contribution and does not modify the low-energy propagation speed. 
+After Newton normalization, the residual self-energy satisfies
+\begin{equation}
+F_E(z)=O(z^2),
+\qquad
+\frac{F_E(z)}{z}\rightarrow0
+\quad
+(z\rightarrow0).
+\end{equation}
+Where the low-energy dispersion relation remains
+\begin{equation}
+\omega=c|k|.
+\end{equation}
+
+The internal projection-response sector is gap protected:
+\begin{equation}
+\rho_X(\mu^2)=0,
+\qquad
+0\leq\mu^2<\mu_{\min}^2,
+\end{equation}
+with
+\begin{equation}
+\mu_{\min}^2=3.052966743096.
+\end{equation}
+
+Consequently, the projection-sector response is suppressed relative to the leading Kerr response. 
+In norm form,
+\begin{equation}
+\boxed{
+\frac{\|A_X\|}{\|A_{\rm Kerr}\|}
+\lesssim
+C_{\rm Kerr}
+\frac{\eta}{(1+M_2)(1-\eta)}
+\epsilon_X^{\rm GW},
+\qquad
+\eta=\frac{|z|}{\mu_{\min}^2}.
+}
+\end{equation}
+
+Therefore,
+\begin{equation}
+\boxed{
+\eta\ll1
+\quad\Longrightarrow\quad
+\|A_X\|\ll\|A_{\rm Kerr}\|.
+}
+\end{equation}
+
+This establishes a strict observational consistency condition, and the dominant ringdown response remains fundamentally Kerr-like. Projection Relativity aligns with the empirical success of exterior black-hole spectroscopy, requiring no shifts to the fundamental Kerr frequency, no massive-graviton dispersion laws, and no additional low-energy poles. A public-data screening analysis using the fixed PR restoration template did not produce a statistically robust residual after comparison with generic drift and decay controls; the present work therefore treats gravitational waves as a Kerr-consistency and future high-SNR residual-stack channel.
+
+\begin{figure}[h]
+\centering
+\captionsetup{font=footnotesize}
+\includegraphics[width=0.86\textwidth]{plots/pr_vs_kerr_ringdown_consistency.pdf}
+\caption{
+\label{fig:pr_kerr_ringdown_consistency}
+\textbf{Kerr-consistent gravitational-wave response.}
+In the exterior low-energy regime, Projection Relativity recovers the Kerr ringdown hierarchy rather than replacing it. The observable response decomposes as \(A_{\rm obs}=A_{\rm Kerr}+A_X\), with the projection-sector residual \(A_X\) suppressed by the radial spectral gap. For the illustrative mode shown here, \(\eta=\hat{\omega}^2/\mu_{\min}^2=0.0237\), while the Newton-normalized residual bound gives \(\|A_X\|/\|A_{\rm Kerr}\|\lesssim5.83\times10^{-4}\). The top panel shows the resulting Kerr/PR waveform overlap; the bottom panel magnifies the residual correction.
+}
+\label{fig:pr_vs_kerr_ringdown_consistency}
+\end{figure}
+
+\subsection{Magnetar Spin Residuals from Projection-Energy Inertia Redistribution}
+\label{sec:magnetar_projection_energy_inertia}
+
+Magnetars provide a high-field test of Projection Relativity because their compact electromagnetic phase sector cannot be treated as a weak spectator. At field strengths of order $B\sim10^{15}\ {\rm G}$, the compact phase energy becomes dynamically comparable to the internal displacement and stiffness response of the star.
+
+In PR, the magnetar spin anomaly is not modeled as a direct change in the total stellar mass. Rather, the strong compact phase stress redistributes the local projection energy among the phase, displacement, and stiffness sectors. Because rotational inertia is the second moment of energy, this redistribution alters the stellar moment of inertia even while the total projection energy remains strictly conserved:
+\begin{equation}
+\boxed{
+\Delta E_{\rm PR}=0
+\quad
+\not\Rightarrow
+\quad
+\Delta I_{\rm PR}=0.
+}
+\end{equation}
+
+A requirement for any emergent framework is the preservation of the Weak Equivalence Principle (WEP) \cite{Will2014}. In this architecture, the unified mixing Lagrangian ($\mathcal{L}_{\text{mix}}$) operates as a rank-neutral geometric projection. We derive that the coupling of any state to the gravitational stiffness sector is determined solely by the displacement invariant, which scales for all local excitations regardless of their internal compact phase-winding. Because the projection mapping is invariant under the $U(1)$ phase transformations associated with electromagnetic charge, the effective inertial response is strictly universal, ensuring that the theory satisfies WEP constraints to high-precision limits.
+
+\subsubsection{The Spin Residual Relation}
+As derived from the sector-variation integrals in supplementary material, a redistribution of projection energy ($\Delta E_{\rm exch}$) across an effective squared-radius shift ($\Delta\bar r^{\,2}$) yields a direct shift in the PR moment of inertia ($\Delta I_{\rm PR} = \frac{\Delta\bar r^{\,2}}{c^2}\Delta E_{\rm exch}$). By conservation of angular momentum over the impulsive glitch timescale, this inertia shift mathematically mandates an observable spin-frequency anomaly:
+\begin{equation}
+\boxed{
+\frac{\Delta\nu}{\nu}
+=
+-
+\frac{
+\Delta\bar r^{\,2}\Delta E_{\rm exch}
+}{
+I_{\rm PR}c^2
+}.
+}
+\end{equation}
+This two-sector approximation is strictly justified by the kinematic suppression of the internal response sector. Because the internal mode excitations ($E_X$) are protected by the foundational mass-gap threshold ($\mu_{\min}^2$), the macroscopic energy scales of the magnetar glitch are vastly insufficient to breach the gap. Therefore, energy leakage into the internal spectral response sector is geometrically forbidden ($\Delta E_X \simeq 0$), ensuring a lossless redistribution between the phase and displacement sectors.
+
+It should be noted PR does not require two unrelated, ad-hoc mechanisms to explain standard glitches and anti-glitches. Both emerge natively from the strict sign rule of the projection-energy second-moment shift:
+\begin{align}
+\Delta\bar r^{\,2}\Delta E_{\rm exch}<0
+\quad
+&\Longrightarrow
+\quad
+\text{Spin-up Glitch } (\Delta\nu>0, \text{ inward energy shift}),
+\\
+\Delta\bar r^{\,2}\Delta E_{\rm exch}>0
+\quad
+&\Longrightarrow
+\quad
+\text{Spin-down Anti-Glitch } (\Delta\nu<0, \text{ outward energy shift}).
+\end{align}
+
+\subsubsection{Phase-Displacement Coupling and Observational Bounds}
+The compact phase sector supplies a natural high-field driver for this redistribution because the displacement and phase sectors originate from the same projected master amplitude ($\Phi_{\rm disp} = A e^{i\theta}$). The covariant kinetic structure natively contains the topological coupling term:
+\begin{equation}
+\boxed{
+(D_\mu\Phi_{\rm disp})^\dagger
+(D^\mu\Phi_{\rm disp})
+\supset
+A^2X_\mu X^\mu,
+}
+\end{equation}
+where $X_\mu$ is the gauge-invariant compact phase gradient. Therein, intense internal magnetic fields ($X_\mu X^\mu$) inherently stress the displacement sector ($A$), altering the inertia distribution. This PR mechanism is strictly falsifiable. Assuming the exchange energy is supplied by the internal magnetic phase-stress reservoir ($E_B \simeq B_{\rm int}^2R^3/6$), an observed spin event imposes a required equivalent internal field:
+\begin{equation}
+\boxed{
+B_{\rm eq}^{\rm PR}
+=
+\sqrt{
+\frac{
+6I_{\rm PR}c^2
+}{
+f_rR^5
+}
+\left|
+\frac{\Delta\nu}{\nu}
+\right|
+},
+}
+\end{equation}
+where $f_r = |\Delta\bar r^{\,2}|/R^2 \le 1$. For a canonical neutron star, evaluating this bound yields:
+\begin{equation}
+\boxed{
+B_{\rm eq}^{\rm PR}
+\approx
+2.3\times10^{15}\ {\rm G}
+\left(
+\frac{|\Delta\nu/\nu|}{10^{-6}}
+\right)^{1/2}
+f_r^{-1/2}.
+}
+\end{equation}
+
+This establishes that, standard magnetar timing events ($|\Delta\nu/\nu| \sim 10^{-7} \text{ to } 10^{-5}$) naturally correspond to internal phase-stress fields of $10^{15} - 10^{16}\ {\rm G}$. If an observed spin event requires an equivalent field far exceeding plausible bounds ($B \gg 10^{17}\ {\rm G}$), the PR magnetar channel is falsified. If it falls within the $10^{15} - 10^{16}\ {\rm G}$ range, the event falls within the PR phase-displacement channel's expected scale. of PR phase-displacement coupling. The complete deterministic mechanism is therefore:
+\begin{equation}
+\boxed{
+\text{Phase Stress} (X_\mu X^\mu) \rightarrow \text{Energy Redistribution} (\Delta\bar r^{\,2}) \rightarrow \Delta I_{\rm PR} \rightarrow \Delta\Omega.
+}
+\end{equation}
+
+\subsection{Dark Energy, Vacuum Projection, and the Hubble-Scale Response}
+\label{sec:dark_energy}
+
+The classical cosmological constant problem arises when the raw zero-point energy of quantum fields is treated as the directly gravitating vacuum source. In that interpretation, the formal vacuum sum produces an enormous bare energy density \(\rho_{\rm vac}^{\rm bare}\) that contradicts observation by many orders of magnitude. Projection Relativity resolves this by strictly differentiating the unprojected vacuum bookkeeping term from the observable gravitational source. The observed late-time vacuum-like contribution is not the raw ultraviolet vacuum. It is the projection-coherent compact-phase contribution that survives the internal spectral projection and appears in the homogeneous phase-response sector.
+
+\subsubsection{Projection Subtraction of the Bare Vacuum}
+
+PR separates the bare vacuum bookkeeping from the observable vacuum source by defining the coherent projected contribution as a difference relative to the projection-symmetric zero-point baseline:
+\begin{equation}
+\boxed{
+\rho_{\theta,0}
+\equiv
+\rho_{\Lambda}^{\rm PR}
+=
+\rho_{\theta}^{\rm coh}
+-
+\rho_{\theta}^{(0)}
+=
+\Delta\rho_{\theta}^{\rm coh}.
+}
+\end{equation}
+
+Here \(\rho_{\theta,0}\) denotes the coherent compact-phase floor. It is a geometric boundary-selected contribution of the projection architecture, not the unprojected vacuum sum. Because the homogeneous phase contribution is regulated by the same internal radial gap \(\mu_{\min}^2\) and phase normalization \(Z_A\) that govern the rest of the PR architecture, this residual is finite. The smallness of the observed dark-energy scale is therefore not an arbitrary fine-tuning cancellation, but a geometric consequence of the fact that only a fractional coherent phase residual survives projection into observable spacetime:
+\begin{equation}
+\boxed{
+0<\epsilon_\theta\ll1.
+}
+\end{equation}
+
+As derived from the effective homogeneous phase Lagrangian in the supplementary material, the leading coherent late-time phase state has the vacuum-like equation-of-state limit
+\begin{equation}
+\boxed{
+w_\theta^{(0)}
+=
+\frac{p_{\theta,0}}{\rho_{\theta,0}c^2}
+\simeq
+-1.
+}
+\end{equation}
+
+Equivalently,
+\begin{equation}
+\boxed{
+p_{\theta,0}
+\simeq
+-\rho_{\theta,0}c^2.
+}
+\end{equation}
+
+This statement should be read as a geometric floor condition. It says that the lowest coherent compact-phase state is vacuum-like and cannot be unwound into the raw zero-point baseline by ordinary expansion. It does not say that the total Hubble rate is constant, nor that the observable projected phase response is identical across all redshift, scale, and observational windows. The observable homogeneous phase density may therefore be written as
+\begin{equation}
+\boxed{
+\rho_\theta(a,\mathcal W)
+=
+\rho_{\theta,0}
++
+\delta\rho_\theta(a,\mathcal W),
+}
+\end{equation}
+where \(\mathcal W\) denotes the observational window. The first term, \(\rho_{\theta,0}\), is the coherent geometric phase floor. The second term, \(\delta\rho_\theta(a,\mathcal W)\), is the scale- or redshift-dependent projected phase response sampled by a given observation. The corresponding effective equation of state is
+\begin{equation}
+\boxed{
+w_\theta^{\rm eff}(a,\mathcal W)
+=
+-1
+-
+\frac{1}{3}
+\frac{d\ln\rho_\theta(a,\mathcal W)}{d\ln a}.
+}
+\end{equation}
+
+We find that \(w_\theta^{(0)}\simeq -1\) is the leading coherent limit, while departures of \(w_\theta^{\rm eff}\) from \(-1\) constrain the evolution of the projected phase-response correction \(\delta\rho_\theta(a,\mathcal W)\). This geometric mechanism provides a natural, field-free theoretical origin for the dynamical dark energy hints recently observed by the DESI \cite{Adame2024DESI} collaboration, diverging from the rigid $w = -1$ constraint of standard $\Lambda$CDM cosmology without requiring ad-hoc scalar fields like Quintessence. The expansion rate is controlled by the total homogeneous density:
+\begin{equation}
+\boxed{
+H_{\rm PR}^{2}(a,\mathcal W)
+=
+\frac{8\pi G_N}{3}
+\left[
+\rho_r(a)
++
+\rho_m(a)
++
+\rho_{\theta,0}
++
+\delta\rho_\theta(a,\mathcal W)
+\right].
+}
+\end{equation}
+
+Consequently, the coherent phase floor can be present at all epochs without dominating the early universe. Radiation and matter dilute as the universe expands, while the coherent phase floor remains vacuum-like. The phase sector becomes dynamically dominant only after the matter and radiation responses have diluted sufficiently.
+
+\subsubsection{The Hubble Tension as a Scale-Dependent Phase Response}
+
+This architectural framework offers a PR-native interpretation of the Hubble tension~\cite{DiValentino2021}. The early-universe CMB inference and the late-universe local distance-ladder inference do not necessarily sample the same projected phase-response average. This naturally accommodates recent James Webb Space Telescope (JWST) observations \cite{Riess2024JWST} that confirm the local Cepheid-calibrated expansion rate is definitively higher than the Planck CMB baseline \cite{planck2020}, interpreting the divergence as a localized geometric phase response rather than a calibration error or a breakdown of low-energy relativity. In PR, the coherent floor \(\rho_{\theta,0}\) is common to both descriptions, but the projected correction \(\delta\rho_\theta(a,\mathcal W)\) can differ between the CMB and local observational windows. We therefore define
+\begin{equation}
+\boxed{
+\bar\rho_{\theta}^{\rm CMB}
+=
+\rho_{\theta,0}
++
+\left\langle
+\delta\rho_\theta
+\right\rangle_{\rm CMB},
+}
+\end{equation}
+and
+\begin{equation}
+\boxed{
+\bar\rho_{\theta}^{\rm loc}
+=
+\rho_{\theta,0}
++
+\left\langle
+\delta\rho_\theta
+\right\rangle_{\rm loc}.
+}
+\end{equation}
+
+The common coherent floor cancels in the difference:
+\begin{equation}
+\boxed{
+\Delta\rho_\theta
+=
+\bar\rho_{\theta}^{\rm loc}
+-
+\bar\rho_{\theta}^{\rm CMB}
+=
+\left\langle
+\delta\rho_\theta
+\right\rangle_{\rm loc}
+-
+\left\langle
+\delta\rho_\theta
+\right\rangle_{\rm CMB}.
+}
+\end{equation}
+
+The effective PR Friedmann \cite{Friedmann1922} diagnostic then links this projected phase-response difference to the observed Hubble discrepancy:
+\begin{equation}
+\boxed{
+\Delta\rho_\theta
+=
+\frac{3}{8\pi G_N}
+\left[
+\left(
+H_0^{\rm loc}
+\right)^2
+-
+\left(
+H_0^{\rm CMB}
+\right)^2
+\right].
+}
+\end{equation}
+
+This equation is the PR Hubble-response diagnostic. The relevant observational inequality is therefore
+\begin{equation}
+\boxed{
+H_0^{\rm loc} > H_0^{\rm CMB}
+\quad
+\Longleftrightarrow
+\quad
+\left\langle
+\delta\rho_\theta
+\right\rangle_{\rm loc}
+>
+\left\langle
+\delta\rho_\theta
+\right\rangle_{\rm CMB}.
+}
+\end{equation}
+
+Equivalently,
+\begin{equation}
+\boxed{
+H_0^{\rm loc} > H_0^{\rm CMB}
+\quad
+\Longleftrightarrow
+\quad
+\bar\rho_{\theta}^{\rm loc}
+>
+\bar\rho_{\theta}^{\rm CMB}.
+}
+\end{equation}
+
+In this interpretation, a higher local Hubble inference does not indicate a failure of low-energy relativity and does not require modifying the gravitational constant \(G_N\). It indicates that the local late-time observational window samples a larger projected compact-phase response than the CMB-inferred window. The geometric constant is the coherent phase floor \(\rho_{\theta,0}\); the physical cosmological response is the total window-dependent quantity \(\rho_\theta(a,\mathcal W)\). The deterministic chain is therefore more accurately written as
+\begin{equation}
+\boxed{
+P_\theta[\Psi]
+\rightarrow
+\theta_{\rm hom}(t)
+\rightarrow
+\rho_{\theta,0}
++
+\delta\rho_\theta(a,\mathcal W)
+\rightarrow
+H_{\rm PR}(a,\mathcal W).
+}
+\end{equation}
+
+This preserves the leading vacuum-like phase floor while allowing precision cosmological datasets to test whether the projected phase response carries measurable scale or redshift dependence.
+
+\subsubsection{Homogeneous Cosmological Saturation}
+
+The same coercivity bound that regularizes compact objects also prevents the classical FLRW scale factor from collapsing to zero. The PR curvature-density ceiling is inherited from the compact-object saturation density:
+\begin{equation}
+\boxed{
+\rho_{\max}
+=
+\frac{3c^2R_{\max}}{4\pi G_N}.
+}
+\end{equation}
+
+The homogeneous projection density cannot exceed this limit:
+\begin{equation}
+\boxed{
+\rho(a)\leq\rho_{\max}.
+}
+\end{equation}
+
+This saturation condition applies to the total homogeneous density, not only to the coherent phase floor. For ordinary matter or radiation with \(w>-1\), applying this density ceiling to the FLRW scale-factor evolution enforces a strictly positive minimum scale factor:
+\begin{equation}
+\boxed{
+a_{\min}
+=
+a_0
+\left(
+\frac{\rho_0}{\rho_{\max}}
+\right)^{\frac{1}{3(1+w)}}
+>
+0.
+}
+\end{equation}
+
+A minimal homogeneous saturation model implements this bound through the effective modified Friedmann equation:
+\begin{equation}
+\boxed{
+H_{\rm PR}^2
+=
+\frac{8\pi G_N}{3}
+\rho
+\left(
+1-\frac{\rho}{\rho_{\max}}
+\right).
+}
+\end{equation}
+
+At saturation, \(\rho=\rho_{\max}\), the Hubble parameter smoothly crosses zero:
+\begin{equation}
+\boxed{
+H_{\rm PR}(a_{\min})=0.
+}
+\end{equation}
+
+The time evolution at the saturated limit yields
+\begin{equation}
+\boxed{
+\dot H_{\rm PR}
+=
+4\pi G_N\rho_{\max}(1+w)
+>
+0.
+}
+\end{equation}
+
+It follows that the saturated homogeneous solution imposes a nonsingular bounce:
+\begin{equation}
+\boxed{
+H_{\rm PR}<0
+\rightarrow
+H_{\rm PR}=0
+\rightarrow
+H_{\rm PR}>0.
+}
+\end{equation}
+
+The complete cosmological regularization chain is
+\begin{equation}
+\boxed{
+\mu_{\min}^2>0
+\rightarrow
+R_{\max}<\infty
+\rightarrow
+\rho_{\max}<\infty
+\rightarrow
+a_{\min}>0
+\rightarrow
+H_{\rm PR}(a_{\min})=0
+\rightarrow
+\dot H_{\rm PR}(a_{\min})>0.
+}
+\end{equation}
+
+\subsection{Section Summary}
+\label{sec:observational_summary}
+
+The observational program separates five distinct levels of evidence and constraint. First, the quasar residual channel provides the strongest direct positive support, with the predicted negative luminosity-linked sign persisting across strictly anchored matched bins. Second, the magnetic channel provides an inverse area constraint for the compact phase. Third, the gravitational-wave channel enforces a strict Kerr-consistency limit, bounding projection-sector sidebands below current sensitivities. Fourth, magnetar spin anomalies provide a testable high-field signature of projection-energy redistribution between the phase and displacement sectors. Finally, the cosmological phase-response derives a dynamical equation of state ($w \neq -1$) and provides a geometric resolution to the Hubble tension, unifying early- and late-universe expansion inferences without introducing ad-hoc dark energy fluids. Together, these domains define a comprehensive, falsifiable observational boundary for the minimal bosonic projection chain.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+In this work, we have presented Projection Relativity (PR), a spectral--projection framework in which gravitational stiffness, displacement-generated inertia, compact electromagnetic phase, and projection-response effects arise as observable sectors of a single master projection field, $\Psi(x,\xi)$. The framework is built from a minimal radial--compact internal geometry,
+\(\mathcal M_{\rm int}=\mathbb R_w\times S^1_\theta\), whose radial spectral gap supplies a finite coercive scale and whose compact phase coordinate supplies the electromagnetic projection sector. Central to the construction is the internal spectral operator
+\begin{equation}
+\boxed{
+O_{\rm int}
+=
+O_X+O_\theta,
+\qquad
+O_X
+=
+-\frac{d^2}{dw^2}
++
+1+w^2+\frac34w^4,
+\qquad
+O_\theta
+=
+-\frac{1}{R_A^2}
+\frac{d^2}{d\theta^2}.
+}
+\end{equation}
+The radial branch is not chosen by numerical fitting. Its quadratic coefficient is fixed by unit radial stiffness, while the quartic coefficient is fixed by the \(3+1\) projection trace. The resulting radial spectral gap,
+\begin{equation}
+\boxed{
+\mu_{\min}^2
+=
+\lambda_1-\lambda_0
+=
+3.052966743096,
+}
+\end{equation}
+provides the finite coercive scale used throughout the gravitational, propagator, compact phase, and finite-core sectors.
+
+The foundational architecture of Projection Relativity unifies these seemingly disparate phenomena into an interconnected cascade of geometric responses. By grounding the framework in the rigid radial spectral gap $\mu_{\min}^2$, gravitational collapse is naturally regularized into a non-singular finite-core geometry, while the displacement sector dynamically establishes effective macroscopic inertia without empirical tuning. In the radiative regime, exterior gravitational-wave profiles strictly preserve Kerr consistency due to the gap-protected suppression of projection residuals. Astronomically, the framework provides its primary positive observational support through the persistent sign of quasar luminosity-linked velocity residuals under strict low-ionization anchoring. At cosmological scales, the framework naturally absorbs the modern Hubble tension by treating expansion as a window- and scale-dependent phase response coupled to a diluting matter trace, while the compact electromagnetic phase sector governs local Faraday-rotation amplitudes via a projected magnetic area law rather than an uncoupled primordial field. Ultimately, this entire structural chain achieves, zero-parameter boundary closure, producing the boundary-resolved compact electromagnetic normalization \(\alpha_{\rm PR,bc}^{-1}=137.036361812007\) from the topological cofactors of the finite-rank internal boundary map.
+
+
+The core mathematical definitions governing these derived sectors and their primary observational signatures are compiled sequentially in Table~\ref{tab:projection_summary}.
+
+
+\begin{table}[ht!]
+\centering
+\caption{Summary Matrix of Derived Projection Sectors and Observational Signatures}
+\label{tab:projection_summary}
+\small
+\begin{tabular}{p{3.8cm} p{6.2cm} p{5.5cm}}
+\hline
+\textbf{Sector / Consequence} & \textbf{Core Governing Equation} & \textbf{Physical Interpretation} \\ \hline
+\raggedright \textbf{Finite-Core\\Regularization} & 
+\vspace{-1em} \begin{equation*} r_c(M) = \left( \frac{G_NM}{c^2R_{\max}} \right)^{1/3} >0 \end{equation*} & 
+Stops collapse before $r=0$. Mass scales the core volume; density saturates. \\ \hline
+
+\raggedright \textbf{Displacement-Generated\\Effective Inertia} & 
+\vspace{-1em} \begin{equation*} \mathcal M_{\rm eff} = g_0I_AA_0 = g_0I_A\sqrt{- \frac{\alpha_A}{2\beta_A}} \end{equation*} & 
+Dynamically generates inertia via a stable vacuum instead of manual entry. \\ \hline
+
+\raggedright \textbf{Gravitational-Wave\\Kerr Consistency} & 
+\vspace{-1em} \begin{equation*} \frac{\|A_X\|}{\|A_{\rm Kerr}\|} \lesssim C_{\rm Kerr} \frac{\eta}{(1+M_2)(1-\eta)} \epsilon_X^{\rm GW}, \qquad \eta=\frac{|z|}{\mu_{\min}^2} \end{equation*} & 
+Ensures gap-protected suppression of residuals in low-energy regimes. \\ \hline
+
+\raggedright \textbf{Quasar Luminosity-Linked\\Velocity Residuals} & 
+\vspace{-1.2em} \begin{equation*} 
+\begin{aligned}
+\Delta v_{\rm high-low} &= {\rm median}(\Delta v_{\rm est})_{\rm high\ L} \\
+&\quad - {\rm median}(\Delta v_{\rm est})_{\rm low\ L} < 0
+\end{aligned}
+\end{equation*} & 
+Predicts a systematic negative velocity contrast under low-ionization anchoring. \\ \hline
+
+\raggedright \textbf{Hubble-Scale\\Phase Response} & 
+\vspace{-1.2em} \begin{equation*} 
+\begin{aligned}
+\Delta\rho_\theta &= \frac{3}{8\pi G_N} \left[(H_0^{\rm loc})^2 - (H_0^{\rm CMB})^2 \right] \\
+&= \left\langle\delta\rho_\theta\right\rangle_{\rm loc} - \left\langle\delta\rho_\theta\right\rangle_{\rm CMB}
+\end{aligned}
+\end{equation*} & 
+Frames the Hubble tension as a scale- and window-dependent phase-response diagnostic. \\ \hline
+
+\raggedright \textbf{Compact-Phase\\Magnetic Area Law} & 
+\vspace{-1.2em} \begin{equation*} 
+\begin{aligned}
+B_{\rm geo}^{\rm PR}
+&=
+\frac{\Phi_{\theta}^{\rm PR}}
+     {A_{\rm proj}^{(\theta)}} ,\
+B_{\rm geo}^{\rm PR}[{\rm nG}]
+=\frac{0.09009597185}
+     {A_{\rm proj}^{(\theta)}[{\rm m}^2]}
+\end{aligned}
+\end{equation*} & 
+Maps Faraday residuals to a projected compact area rather than a fixed field. \\ \hline
+
+\raggedright \textbf{Boundary-Resolved\\Electromagnetic Normalization} & 
+\vspace{-1.2em} \begin{equation*} 
+\begin{aligned}
+\alpha_{\rm PR,bc}^{-1} &= 4\pi \left[ p_1 q_1 + (1-p_1)q_3 \right] \\
+&= 137.036361812007
+\end{aligned}
+\end{equation*} & 
+Produces the boundary-resolved compact electromagnetic normalization without experimental calibration. \\ \hline
+\hline
+\end{tabular}
+\end{table}
+
+Taken together, these results define a single geometric closure architecture:
+\begin{equation}
+\boxed{
+\Psi
+\rightarrow
+O_{\rm int}
+\rightarrow
+\{U_{n,m},\Lambda_{n,m}\}
+\rightarrow
+\{P_g,P_{\rm disp},P_A,P_X,P_\theta\}
+\rightarrow
+\{g_{\mu\nu}^{\rm eff},\mathcal M_{\rm eff},A_\mu,\Sigma_X,H_{\rm PR}\}.
+}
+\end{equation}
+
+The complete mathematical derivations, parameter stability bounds, symbolic audits, numerical validation scripts, and figure-generation workflows are provided in the companion supplementary material and public repository. The computational test harness verifies the radial branch selection, spectral gap, compact boundary normalization, Kerr recovery, quasar residual workflow, and magnetic area-law diagnostics. This manuscript strictly focuses on the minimal bosonic projection chain—gravity, inertia, electromagnetism, and projection response—and its primary astrophysical consequences. Broader particle-sector completion, non-Abelian gauge structure, and higher internal topological sectors remain outside the scope of this first construction. Future work will investigate whether higher-order spectral modes of the \(\Psi(x,\xi)\) manifold provide a geometric route to additional confined or non-Abelian projection sectors.
+
+
+
+
+%\newpage
+%\appendix
+%\section{Appendix}
+%\label{app:master-reference}
+
+\newpage
+\bibliographystyle{unsrt} 
+\bibliography{paper/Oshetski_Projection_Relativity_References} 
+\end{document}
