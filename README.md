@@ -9,7 +9,7 @@
 **Author:** Michael Stanislaus Oshetski  
 **ORCID:** [0009-0007-3623-7586](https://orcid.org/0009-0007-3623-7586)   
 **Repository:** `oshetskiresearch/Projection-Relativity`  
-**Status:** Active research sandbox / manuscript support repository  
+**Status:** Complete  
 
 ---
 
