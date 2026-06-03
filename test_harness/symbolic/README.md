@@ -13,13 +13,13 @@ manuscript/Oshetski_Projection_Relativity_Supplement.tex
 The main Maple file is:
 
 ```text
-test_harness/ProjectionRelativityAppendixVerify.mpl
+test_harness/symbolic/ProjectionRelativityAppendixVerify.mpl
 ```
 
 The convenience runner is:
 
 ```text
-test_harness/run_appendix_verification.mpl
+test_harness/symbolic/run_appendix_verification.mpl
 ```
 
 ## What The Checker Does
