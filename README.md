@@ -6,7 +6,8 @@
 **Manuscript References:** `manuscript/Oshetski_Projection_Relativity_References.bib`    
 **Primary manuscript:**    `manuscript/Oshetski_Projection_Relativity_Main.pdf`   
 **Manuscript Supplement:** `manuscript/Oshetski_Projection_Relativity_Supplement.pdf`     
-**Author:** Michael Stanislaus Oshetski  
+**Author:** Michael Stanislaus Oshetski
+**Email:** oshetski.research@proton.me
 **ORCID:** [0009-0007-3623-7586](https://orcid.org/0009-0007-3623-7586)   
 **Repository:** `oshetskiresearch/Projection-Relativity`  
 **Status:** Complete  
