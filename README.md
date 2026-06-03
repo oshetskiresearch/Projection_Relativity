@@ -1,5 +1,5 @@
 # The Foundation of Projection Relativity   
-**A Spectral-Projection Architecture for Emergent Relativity**  
+**A Spectral-Projection Architecture for Emergent Relativity**  **[DOI](https://zenodo.org/records/20528719)**   
 
 **Project:** Projection Relativity  
 **Primary manuscript source:** `manuscript/Oshetski_Projection_Relativity_Main.tex`  
