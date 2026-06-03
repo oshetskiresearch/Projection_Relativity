@@ -9,7 +9,7 @@
 **Author:** Michael Stanislaus Oshetski   
 **Email:** oshetski.research@proton.me   
 **ORCID:** [0009-0007-3623-7586](https://orcid.org/0009-0007-3623-7586)   
-**Repository:** `oshetskiresearch/Projection-Relativity`  
+**Repository:** `oshetskiresearch/Projection_Relativity`  
 **Status:** Complete  
 
 ---
@@ -35,12 +35,11 @@ The compact coordinate `theta` supplies a phase and winding direction.
 The purpose of this repository is to support development of the Projection Relativity manuscript by keeping derivations, numerical tests, observational audits, plots, notes, failed paths, and reproducibility materials in one organized place.
 
 ---
-**Core Concept**
-
-Projection Relativity asks whether gravitational response, effective inertia, electromagnetic phase structure, and strong-field regularization can be described as different observable projections of one common internal geometric system.
-Instead of treating each physical sector as an unrelated addition, PR organizes them as projection outputs from the same underlying field structure.
-The basic conceptual chain is:
+**Core Concept** 
 ```text
+Projection Relativity asks whether gravitational response, effective inertia, electromagnetic phase structure, and strong-field regularization can be described as different observable projections of one common internal geometric system. Instead of treating each physical sector as an unrelated addition, PR organizes them as projection outputs from the same underlying field structure.
+The basic conceptual chain is:
+
 master projection field
         ↓
 internal spectral geometry
@@ -454,7 +453,7 @@ Then open a pull request into `main`.
 
 ---
 ** Our Claim Discipline**
-
+```text
 Projection Relativity is an active theoretical and computational research program. Repository language should clearly distinguish between:
 derivation,
 numerical support,
@@ -466,7 +465,7 @@ and open conjecture.
 **Citation / Attribution**
 
 Author:
-```text
+```
 Michael Stanislaus Oshetski
 ORCID: 0009-0007-3623-7586
 ```
