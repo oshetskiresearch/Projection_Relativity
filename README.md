@@ -248,12 +248,11 @@ strong-field endpoint behavior
 Observational audits are stored separately from core theory derivations. These audits are treated conservatively and are not described as externally confirmed unless all required controls and independent reproduction support that interpretation.
 Current observational audit areas include:
 ```text
-quasar residual tests
-LoTSS / Faraday-rotation magnetic-area constraints
-ringdown residual searches after Kerr subtraction
+GW Kerr consistency
+quasar residuals
+magnetic area law / LoTSS
 magnetar spin-residual diagnostics
 foreground-control tests
-matched-bin and random-label controls
 ```
 
 The current PR magnetic-field branch is an area-law constraint, not a fixed universal magnetic-amplitude claim. The compact phase sector fixes a flux normalization, while the realized projected compact-phase area sets the magnetic field amplitude.
@@ -310,12 +309,12 @@ W_{\mathrm{EM}}
 =
 W_{\mathrm{orient}}W_{\mathrm{coh}}W_{\mathrm{fill}}W_z
 ```
-Thus LoTSS/Faraday residuals are used to constrain the realized projected compact-phase area under plasma, coherence, filling, orientation, and redshift-window assumptions.
+LoTSS/Faraday residuals are used to constrain the realized projected compact-phase area under plasma, coherence, filling, orientation, and redshift-window assumptions.
 
 ---
 **Research Goals**
 
-The current goals of the Projection Relativity sandbox are:
+The current goals of the Projection Relativity are:
 Develop a mathematically closed projection architecture from a minimal internal manifold.
 Derive observable sectors from projection operations rather than from unrelated inserted assumptions.
 Recover known low-energy gravitational behavior in the appropriate limit.
