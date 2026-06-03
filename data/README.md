@@ -8,7 +8,7 @@ The package is designed to be extracted into the root of the public repository:
 oshetskiresearch/Projection_Relativity
 ```
 
-The data package is **not** intended to duplicate every raw public catalog or raw gravitational-wave strain file. Large public datasets remain external and be fetched by the supplied scripts when/if possible. The repository only contains the derived outputs, manifests, plotting data, and reproduction instructions needed for reviewers to verify the claims without guessing which files were used.
+The data package is **not** intended to duplicate every raw public catalog or raw gravitational-wave strain file. Large public datasets remain external and are fetched by the supplied scripts when possible. The repository contains the derived outputs, manifests, plotting data, and reproduction instructions needed for reviewers to verify the claims without guessing which files were used.
 
 ---
 
@@ -23,42 +23,43 @@ Projection_Relativity/
     Oshetski_Projection_Relativity_Supplement.tex
 
   test_harness/
-    ProjectionRelativityAppendixVerify.mpl
-    run_appendix_verification.mpl
-    README.md
-    equation_audit.md
-    equation_map.md
-    equation_derivations.md
-    proof_report.md
-    harness_validation.md
-    spectrum_recompute.md
+    symbolic/
+      ProjectionRelativityAppendixVerify.mpl
+      run_appendix_verification.mpl
+      README.md
+      equation_audit.md
+      equation_map.md
+      equation_derivations.md
+      proof_report.md
+      harness_validation.md
+      spectrum_recompute.md
 
   scripts/
     section11/
-      11_1_gw_kerr_consistency/
-      11_1_gw_residual_screen/
-      11_2_quasar_residuals/
+      11_1_quasar_residuals/
+      11_2_gw_kerr_consistency/
+      11_2_gw_residual_screen/
       11_3_magnetic_area_law/
 
   data/
     section11/
-      11_1_gw_kerr_consistency/
-      11_1_gw_residual_screen/
-      11_2_quasar_residuals/
+      11_1_quasar_residuals/
+      11_2_gw_kerr_consistency/
+      11_2_gw_residual_screen/
       11_3_magnetic_area_law/
 
   results/
     section11/
-      11_1_gw_kerr_consistency/
-      11_1_gw_residual_screen/
-      11_2_quasar_residuals/
+      11_1_quasar_residuals/
+      11_2_gw_kerr_consistency/
+      11_2_gw_residual_screen/
       11_3_magnetic_area_law/
 
   plots/
     section11/
-      11_1_gw_kerr_consistency/
-      11_1_gw_residual_screen/
-      11_2_quasar_residuals/
+      11_1_quasar_residuals/
+      11_2_gw_kerr_consistency/
+      11_2_gw_residual_screen/
       11_3_magnetic_area_law/
 
   docs/
@@ -73,110 +74,21 @@ Projection_Relativity/
 
 This package supports three active Section 11 observational/reproducibility channels:
 
-1. **Section 11.1 — Gravitational-wave Kerr consistency**
-2. **Section 11.2 — Quasar luminosity-linked velocity residuals**
+1. **Section 11.1 — Quasar luminosity-linked velocity residuals**
+2. **Section 11.2 — Gravitational-wave Kerr consistency**
 3. **Section 11.3 — Compact-phase magnetic area law / LoTSS Faraday residuals**
 
 The correct interpretation hierarchy is:
 
 ```text
-GW channel:       Kerr recovery / consistency / no positive residual detection claimed
 Quasar channel:   primary positive observational diagnostic
+GW channel:       Kerr recovery / consistency / no positive residual detection claimed
 Magnetic channel: compact-phase area-law constraint, not a universal fixed-field claim
 ```
 
 ---
 
-## Section 11.1: Gravitational-Wave Kerr Consistency
-
-### Purpose
-
-The gravitational-wave material supports the paper's current Kerr-consistency claim:
-
-```text
-Projection Relativity inherits the exterior Kerr ringdown hierarchy.
-Projection-sector residuals are gap-suppressed.
-No statistically robust public-data residual detection is claimed.
-```
-
-### Expected files
-
-```text
-results/section11/11_1_gw_kerr_consistency/
-  pr_vs_kerr_ringdown_plot_data.csv
-  pr_vs_kerr_ringdown_constants.csv
-
-plots/section11/11_1_gw_kerr_consistency/
-  pr_vs_kerr_ringdown_consistency.png
-  pr_vs_kerr_ringdown_consistency.pdf
-
-scripts/section11/11_1_gw_kerr_consistency/
-  pr_vs_kerr_ringdown_consistency_colab.py
-```
-
-### What this supports
-
-These files support the visual and numerical statement:
-
-```text
-A_obs = A_Kerr + A_X,
-with A_X gap-suppressed relative to A_Kerr.
-```
-
-The plots should show PR and Kerr waveforms nearly overlapping, with only the formal suppressed residual displayed in a magnified panel.
-
-### What this does not claim
-
-This package does **not** claim a gravitational-wave detection of PR. It does not claim fixed sidebands or echo detections. Old sideband/echo exploratory files should not be used as active evidence unless clearly archived as superseded theory notes.
-
----
-
-## Section 11.1: Gravitational-Wave Residual / Null Screens
-
-### Purpose
-
-The residual-screen package documents the public-data tests that motivated the final paper's conservative GW position.
-
-### Expected files
-
-```text
-results/section11/11_1_gw_residual_screen/
-  pr_ringdown_restoration_gw150914_strong_null_results.csv
-  pr_ringdown_restoration_gw150914_strong_null_summary.csv
-  pr_ringdown_restoration_gw150914_nested_linear_pr_results.csv
-  pr_ringdown_restoration_gw150914_nested_linear_pr_summary.csv
-  pr_ringdown_restoration_large_screen_detector_windows.csv
-  pr_ringdown_restoration_large_screen_detector_summary.csv
-  pr_ringdown_restoration_large_screen_event_summary.csv
-  pr_ringdown_restoration_focused_followup_windows.csv
-  pr_ringdown_restoration_focused_followup_detector_summary.csv
-  pr_ringdown_restoration_focused_followup_event_summary.csv
-
-plots/section11/11_1_gw_residual_screen/
-  *.png
-  *.pdf
-
-scripts/section11/11_1_gw_residual_screen/
-  *.py
-  *.ipynb
-```
-
-### Interpretation
-
-These screens compare PR-inspired residual templates against generic drift/decay controls and off-source windows. They support the final manuscript statement:
-
-```text
-Public gravitational-wave screening did not identify a statistically robust PR-specific residual.
-The GW channel is therefore treated as Kerr recovery and future high-SNR residual-stack work.
-```
-
-### Raw data policy
-
-Raw GW strain should generally not be stored in the repo. Scripts should fetch public strain from GWOSC or other official public sources when needed.
-
----
-
-## Section 11.2: Quasar Luminosity-Linked Velocity Residuals
+## Section 11.1: Quasar Luminosity-Linked Velocity Residuals
 
 ### Purpose
 
@@ -185,22 +97,25 @@ This is the strongest positive observational diagnostic in the current paper. Th
 ### Expected files
 
 ```text
-results/section11/11_2_quasar_residuals/
-  quasar_warning_clean_matched_bin_results.csv
-  quasar_estimator_summary.csv
-  quasar_permutation_summary.csv
-  quasar_bootstrap_summary.csv
-  quasar_anchor_identity_audit.csv
-  quasar_parent_sample_filter_counts.csv
-  quasar_bin_level_results.csv
+results/section11/11_1_quasar_residuals/
+  quasar_highN_permutation_summary.csv
+  quasar_highN_permutation_distribution.csv
+  quasar_alt_estimator_bootstrap_summary.csv
+  quasar_alt_estimator_bootstrap_distribution.csv
+  quasar_alt_estimator_columnwise_warning_clean_summary.csv
+  quasar_alt_estimator_columnwise_warning_clean_bins.csv
+  quasar_alt_estimator_columnwise_summary.csv
+  quasar_alt_estimator_columnwise_bins.csv
+  quasar_alt_estimator_permutation_summary.csv
+  quasar_alt_estimator_permutation_distribution.csv
 
-plots/section11/11_2_quasar_residuals/
+plots/section11/11_1_quasar_residuals/
   quasar_estimator_negative_bin_counts.png
   quasar_permutation_null_summary.png
   quasar_bootstrap_ci_summary.png
   quasar_bin_residual_distribution.png
 
-scripts/section11/11_2_quasar_residuals/
+scripts/section11/11_1_quasar_residuals/
   quasar_residual_shared.py
   run_quasar_matched_bin_test.py
   run_quasar_permutation_test.py
@@ -232,10 +147,10 @@ Delta v_high-low < 0
 The public repo does not redistribute large raw quasar catalogs unless the license and size are appropriate. Prefer this structure:
 
 ```text
-data/section11/11_2_quasar_residuals/raw_external_sources.md
+data/section11/11_1_quasar_residuals/raw_external_sources.md
 ```
 
-That file list catalog names, download locations, required columns, and checksums if available. Derived warning-clean and matched-bin tables in the release assets.
+That file should list catalog names, download locations, required columns, and checksums if available. Derived warning-clean and matched-bin tables belong in the release assets.
 
 ### Interpretation
 
@@ -244,6 +159,97 @@ The quasar channel is described as:
 ```text
 primary positive observational diagnostic under low-ionization systemic anchoring and matched-bin controls
 ```
+
+---
+
+## Section 11.2: Gravitational-Wave Kerr Consistency
+
+### Purpose
+
+The gravitational-wave material supports the paper's current Kerr-consistency claim:
+
+```text
+Projection Relativity inherits the exterior Kerr ringdown hierarchy.
+Projection-sector residuals are gap-suppressed.
+No statistically robust public-data residual detection is claimed.
+```
+
+### Expected files
+
+```text
+results/section11/11_2_gw_kerr_consistency/
+  pr_vs_kerr_ringdown_plot_data.csv
+  pr_vs_kerr_ringdown_constants.csv
+
+plots/section11/11_2_gw_kerr_consistency/
+  pr_vs_kerr_ringdown_consistency.png
+  pr_vs_kerr_ringdown_consistency.pdf
+
+scripts/section11/11_2_gw_kerr_consistency/
+  pr_vs_kerr_ringdown_consistency_colab.py
+```
+
+### What this supports
+
+These files support the visual and numerical statement:
+
+```text
+A_obs = A_Kerr + A_X,
+with A_X gap-suppressed relative to A_Kerr.
+```
+
+The plots should show PR and Kerr waveforms nearly overlapping, with only the formal suppressed residual displayed in a magnified panel.
+
+### What this does not claim
+
+This package does **not** claim a gravitational-wave detection of PR. It does not claim fixed sidebands or echo detections. Old sideband/echo exploratory files should not be used as active evidence unless clearly archived as superseded theory notes.
+
+---
+
+## Section 11.2 Support: Gravitational-Wave Residual / Null Screens
+
+### Purpose
+
+The residual-screen package documents the public-data tests that motivated the final paper's conservative GW position.
+
+### Expected files
+
+```text
+results/section11/11_2_gw_residual_screen/
+  pr_ringdown_restoration_gw150914_strong_null_results.csv
+  pr_ringdown_restoration_gw150914_strong_null_summary.csv
+  pr_ringdown_restoration_gw150914_nested_linear_pr_results.csv
+  pr_ringdown_restoration_gw150914_nested_linear_pr_summary.csv
+  pr_ringdown_restoration_large_screen_detector_windows.csv
+  pr_ringdown_restoration_large_screen_detector_summary.csv
+  pr_ringdown_restoration_large_screen_event_summary.csv
+  pr_ringdown_restoration_focused_followup_windows.csv
+  pr_ringdown_restoration_focused_followup_detector_summary.csv
+  pr_ringdown_restoration_focused_followup_event_summary.csv
+
+plots/section11/11_2_gw_residual_screen/
+  *.png
+  *.pdf
+
+scripts/section11/11_2_gw_residual_screen/
+  *.py
+  *.ipynb
+```
+
+### Interpretation
+
+These screens compare PR-inspired residual templates against generic drift/decay controls and off-source windows. They support the final manuscript statement:
+
+```text
+Public gravitational-wave screening did not identify a statistically robust PR-specific residual.
+The GW channel is therefore treated as Kerr recovery and future high-SNR residual-stack work.
+```
+
+### Raw data policy
+
+Raw GW strain should generally not be stored in the repo. Scripts should fetch public strain from GWOSC or other official public sources when needed.
+
+---
 
 ## Section 11.3: Compact-Phase Magnetic Area Law / LoTSS
 
@@ -303,12 +309,15 @@ scripts/section11/11_3_magnetic_area_law/
   lotss_foreground_residual_audit.py
   lotss_area_constraint_triage.py
 ```
+
+---
+
 ## Maple Audit and Numerical Harness
 
 The public release includes a source-linked Maple verification harness under:
 
 ```text
-test_harness/
+test_harness/symbolic/
 ```
 
 The Maple checker verifies the local repository manuscript files:
@@ -318,7 +327,7 @@ manuscript/Oshetski_Projection_Relativity_Main.tex
 manuscript/Oshetski_Projection_Relativity_Supplement.tex
 ```
 
-It does not download files from GitHub during the run. Users should clone or download the full repository and run Maple from `test_harness/`.
+It does not download files from GitHub during the run. Users should clone or download the full repository and run Maple from `test_harness/symbolic/`.
 
 Recommended release language:
 
@@ -374,7 +383,7 @@ tar -xzvf pr_public_repo_section11_support_CURATED_BUNDLE.tar.gz -C /path/to/Pro
 Then inspect the manifest:
 
 ```bash
-cat results/section11/SECTION11_MANIFEST.csv
+cat docs/section11/SECTION11_MANIFEST.csv
 ```
 
 or:
@@ -382,7 +391,7 @@ or:
 ```bash
 python - <<'PY'
 import pandas as pd
-m = pd.read_csv('results/section11/SECTION11_MANIFEST.csv')
+m = pd.read_csv('docs/section11/SECTION11_MANIFEST.csv')
 print(m.groupby(['section','channel','status']).size())
 PY
 ```
@@ -394,7 +403,7 @@ PY
 A reviewer should be able to:
 
 1. Build the manuscript from `manuscript/`.
-2. Run the Maple audit from `test_harness/`.
+2. Run the Maple audit from `test_harness/symbolic/`.
 3. Run or inspect the Python scripts under `scripts/section11/`.
 4. Recreate the Section 11 plots from the provided derived tables.
 5. Identify which raw datasets are included and which are external.
