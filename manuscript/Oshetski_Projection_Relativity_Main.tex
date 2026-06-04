@@ -58,9 +58,7 @@ which gravitational stiffness, displacement-generated inertia, compact
 electromagnetic phase, and projection-response effects arise as observable
 sectors of a single master projection field \(\Psi(x,\xi)\) over an internal
 spectral manifold. The framework is built from a minimal radial--compact internal geometry,$\mathcal M_{\rm int}=\mathbb R_w\times S^1_\theta,$ whose radial spectral gap supplies a finite coercive scale and whose compact
-phase coordinate supplies the electromagnetic projection sector.
-
-The projected metric recovers the Einstein field
+phase coordinate supplies the electromagnetic projection sector. The projected metric recovers the Einstein field
 equations in the low-energy limit and reduces to the Kerr exterior outside the
 finite projection core. The same nonzero radial spectral gap replaces the
 classical \(r=0\) singular endpoint with a bounded finite-core geometry, while
@@ -335,9 +333,10 @@ The radial sector is stabilized by a confining potential \cite{Simon1970}. Rathe
 
 Subject to even radial symmetry, the general quartic radial operator and potential take the form
 \begin{equation}
-    \boxed{ O_X = -\frac{d^2}{dw^2} + V_X(w), } \qquad V_X(w) = \Lambda_X^2 \left( 1 + a_2w^2 + a_4w^4 \right),
+    \boxed{ O_X = -\frac{d^2}{dw^2} + V_X(w),  \qquad 
+    V_X(w) = \Lambda_X^2 \left( 1 + a_2w^2 + a_4w^4 \right), \qquad
+    (a_2, a_4) > 0}
 \end{equation}
-with \(a_2, a_4 > 0\). 
 
 The quadratic coefficient \(a_2\) is strictly determined by the local radial stiffness normalization condition at the projection baseline (\(w=0\)):
 \begin{equation}
@@ -953,9 +952,7 @@ The electromagnetic sector of Projection Relativity is not introduced via an ind
 \subsection{The Compact Phase Manifold and Operator}
 \label{sec:compact_phase_manifold}
 
-The full internal manifold in the minimal gravitational-electromagnetic model \cite{Kaluza1921} is the cylinder $\mathcal{M}_{\rm int} = \mathbb{R}_w \times S^1_\theta$. The compact electromagnetic phase coordinate obeys the standard topological equivalence relation $\theta \sim \theta + 2\pi n$, parametrizing a unit circle $S^1$. 
-
-Assigned a stationary geometric radius $R_A$, the proper length element along the compact phase direction establishes the internal metric components $G_{ww} = 1$ and $G_{\theta\theta} = R_A^2$. This strictly fixes the invariant compact phase measure as $d\mu_\theta = R_A d\theta$.  The corresponding Laplace–Beltrami operator on the compact domain reduces to the positive Schrödinger-type operator \cite{dirac1931, Messiah1961}:
+The full internal manifold in the minimal gravitational-electromagnetic model \cite{Kaluza1921} is the cylinder $\mathcal{M}_{\rm int} = \mathbb{R}_w \times S^1_\theta$. The compact electromagnetic phase coordinate obeys the standard topological equivalence relation $\theta \sim \theta + 2\pi n$, parametrizing a unit circle $S^1$. Assigned a stationary geometric radius $R_A$, the proper length element along the compact phase direction establishes the internal metric components $G_{ww} = 1$ and $G_{\theta\theta} = R_A^2$. This strictly fixes the invariant compact phase measure as $d\mu_\theta = R_A d\theta$.  The corresponding Laplace–Beltrami operator on the compact domain reduces to the positive Schrödinger-type operator \cite{dirac1931, Messiah1961}:
 \begin{equation}
 O_\theta = -\frac{1}{R_A^2} \frac{d^2}{d\theta^2}.
 \end{equation}
@@ -1044,7 +1041,8 @@ Whereas the projection correction tensor satisfies
 \end{equation}
 in the low-energy exterior limit. As a result, the framework mathematically proves its own macroscopic reduction:
 \begin{equation}
-\lim_{k^2 \to 0} \left( G_{\mu\nu}[g_{\rm eff}] + \Delta_{\mu\nu}^{(P)} \right) = \frac{8\pi G_N}{c^4} T_{\mu\nu}
+\boxed{
+\lim_{k^2 \to 0} \left( G_{\mu\nu}[g_{\rm eff}] + \Delta_{\mu\nu}^{(P)} \right) = \frac{8\pi G_N}{c^4} T_{\mu\nu}}
 \end{equation}
 This confirms that at standard astrophysical distances, Projection Relativity recovers the Einstein field equations natively, with no ghost pole, no negative-stiffness pole, and no unsuppressed low-energy sideband channel \cite{Donoghue1994}. The complete algebraic evaluation of the contour integrals, trace-free verifications, and rigorous no-ghost/no-negative-stiffness pole stability proofs are provided in the supplementary material.
 
@@ -1361,9 +1359,7 @@ The numerical check should therefore be interpreted as verification of the analy
 =
 \frac{3}{4}.
 \end{equation}
-The scan confirms that this forced geometric branch is also the branch that reproduces the radial spectral closure used throughout the gravitational, propagator, and compact phase sectors.
-
-This verified radial branch supplies the spectral gap and trace structure used by the compact boundary closure in the next subsection.
+The scan confirms that this forced geometric branch is also the branch that reproduces the radial spectral closure used throughout the gravitational, propagator, and compact phase sectors. This verified radial branch supplies the spectral gap and trace structure used by the compact boundary closure in the next subsection.
 
 \subsection{Compact Phase Closure and Boundary-Resolved Electromagnetic Normalization}
 \label{sec:compact_phase_closure_alpha}
@@ -1687,15 +1683,8 @@ closure is
 =
 13.23388439508096.
 \end{equation}
-The finite-rank projection produces a parity-compatible leakage probability
-\begin{equation}
-p_1
-=
-7.6528903366\times10^{-4},
-\qquad
-p_3=1-p_1.
-\end{equation}
-The compact phase stiffness is then
+The finite-rank projection produces a parity-compatible leakage probability $p_1 = 7.6528903366\times10^{-4}$, and
+$p_3=1-p_1$. The compact phase stiffness is then determined
 \begin{equation}
 R_{A,\star}^{-2}
 =
@@ -1703,15 +1692,7 @@ q_{\rm bc}
 =
 p_1q_1+(1-p_1)q_3.
 \end{equation}
-Using
-\begin{equation}
-\lambda_0=2.322863529580,
-\qquad
-\lambda_1=5.375830272676,
-\qquad
-\lambda_3=13.23388439508096,
-\end{equation}
-the compact boundary-resolved stiffness is
+Using $\lambda_0=2.322863529580$, $\lambda_1=5.375830272676$, and $\lambda_3=13.23388439508096$, the compact boundary-resolved stiffness is
 \begin{equation}
 \boxed{
 q_{\rm bc}
@@ -2178,11 +2159,7 @@ stress-energy. The attempted classical divergence is converted into a finite
 excitation of the internal spectral-response sector and an update of the 
 finite-core ledger \(\mathcal B_c\).
 
-We tested this claim with two nonlinear effective stability test harnesses: a 
-counter-streaming null-flux model and a two-dimensional double-null 
-wall-collision model. In both benchmarks, the classical channel undergoes 
-runaway mass-inflation growth, while the PR projection-response channel remains 
-bounded throughout the scanned regime satisfying \(2\kappa<\mu_{\min}^2\).
+We tested this claim with two nonlinear effective stability test harnesses: a counter-streaming null-flux model and a two-dimensional double-null wall-collision model. In both benchmarks, the classical channel undergoes runaway mass-inflation growth, while the PR projection-response channel remains bounded throughout the scanned regime satisfying \(2\kappa<\mu_{\min}^2\), plotted in figure ~\ref{fig:pr_mass_inflation_double_wall_summary} .
 
 \begin{table}[H]
 \centering
@@ -2231,10 +2208,10 @@ increase the curvature beyond the spectral ceiling. The mass-inflation channel
 is quenched because the PR core is governed by different mathematics than the 
 classical inner-horizon geometry assumed in the no-go theorem.
 
-\begin{figure}[htbp]
+\begin{figure}[h]
 \centering
 \captionsetup{font=footnotesize}
-\includegraphics[width=0.80\textwidth]{plots/pr_combined_mass_inflation_double_wall_summary (2).png}
+\includegraphics[width=0.90\textwidth]{plots/pr_combined_mass_inflation_double_wall_summary (2).png}
 \caption{
 \textbf{Nonlinear compact-core stability tests.}
 The classical counter-streaming channels exhibit runaway divergence, while the PR projection-response channels remain bounded throughout the scanned regime \(2\kappa<\mu_{\min}^2\). The core safely absorbs the inflationary energy into the internal ledger, keeping the curvature invariant strictly below the ceiling (\(K_{\rm PR}/R_{\max}<1\)).
@@ -2987,7 +2964,7 @@ The luminosity labels were randomized inside each matched redshift bin while pre
 }
 \end{table}
 
-The permutation null distributions are centered near random sign balance. For the 144-bin estimators, the random-label negative-bin mean is approximately \(72\), while the observed values are \(140\), \(134\), \(136\), and \(133\) for \(Z_{\rm DR16Q\_BASE}\), \(Z_{\rm PIPE}\), \(Z_{\rm PCA}\), and \(Z_{\rm MGII}\), respectively. The strongest random-label realizations remain far below the observed sign persistence for the four core estimators.
+The permutation null distributions are centered near random sign balance. For the 144-bin estimators, the random-label negative-bin mean is approximately \(72\), while the observed values are \(140\), \(134\), \(136\), and \(133\) for \(Z_{\rm DR16Q\_BASE}\), \(Z_{\rm PIPE}\), \(Z_{\rm PCA}\), and \(Z_{\rm MGII}\), respectively. The strongest random-label realizations remain far below the observed sign persistence for the four core estimators, plotted in figure ~\ref{fig:quasar_pr_residual_highN_summary}.
 
 \begin{figure}[htbp]
 \centering
@@ -3031,15 +3008,6 @@ The bootstrap resamples the matched bins and estimates uncertainty on the median
 \end{tabular}
 }
 \end{table}
-
-\begin{figure}[htbp]
-\centering
-\captionsetup{font=footnotesize}
-\includegraphics[width=0.90\textwidth]{plots/quasar_pr_residual_bootstrap_ci.png}
-\caption{
-\textbf{Matched-bin bootstrap stability of the PR residual.} Stability analysis of the PR-predicted velocity residual using matched-bin bootstrap resampling. The primary redshift estimators show negative locked 95\% confidence intervals, confirming that the observed residual is a statistically robust feature rather than a random-bin artifact.}
-\label{fig:quasar_pr_residual_bootstrap_ci}
-\end{figure}
 
 \subsubsection{Summary}
 
@@ -3220,12 +3188,7 @@ rather than confirming a universal fixed primordial magnetic amplitude.
 The LoTSS \cite{Shimwell2019} foreground-cleaned residual-RM analysis gives a robust residual
 Faraday-rotation scale after Galactic foreground subtraction. The preferred
 2022 one-degree foreground branch gives a high-latitude residual of order $|{\rm RRM}_{2022}|
-\simeq 1.25\ {\rm rad\,m^{-2}}.$ The bootstrap branch gives $|{\rm RRM}_{2022}|
-=
-1.254538\ {\rm rad\,m^{-2}},$ 
-$95\%{\rm\ CI}
-=
-1.192766\text{--}1.323486\ {\rm rad\,m^{-2}}.$ Under representative coherent-path plasma assumptions, this residual maps to
+\simeq 1.25\ {\rm rad\,m^{-2}}.$ The bootstrap branch gives $|{\rm RRM}_{2022}| = 1.254538\ {\rm rad\,m^{-2}}, $95\%{\rm\ CI}=1.192766\text{--}1.323486\\ {\rm rad\,m^{-2}}$. Under representative coherent-path plasma assumptions, this residual maps to
 an order-nG line-of-sight field scale. Using the compact-phase area law, residual fields of order  $B_{\rm geo}^{\rm PR} \sim 0.5\text{--}4\,{\rm nG}$ correspond to
 \begin{equation}
 \boxed{
@@ -3280,13 +3243,7 @@ constrains the projected compact-phase area of the realized magnetic domain.
 
 \subsubsection{Falsifiability}
 
-Projection Relativity provides a parameter-free compact-phase flux normalization. Once the projected area is specified, the magnetic area law is directly falsifiable. Observational data must yield coherent, stable geometric areas. The framework can be falsified in three direct ways:
-
-\begin{enumerate}
-\item \textbf{Physical Plausibility:} Foreground-cleaned Faraday rotation measurements must translate into finite, physically sensible projected areas ($A_{\rm proj}^{(\theta)}$).
-\item \textbf{Environmental Consistency:} Independent astronomical surveys observing similar plasma environments (e.g., identical cosmic void classes) must infer compatible area scales.
-\item \textbf{Mutual Contradiction:} If highly controlled rotation-measure datasets demand mutually exclusive or wildly fluctuating $A_{\rm proj}^{(\theta)}$ values for identical environments, the area-law interpretation fails.
-\end{enumerate}
+Projection Relativity provides a parameter-free compact-phase flux normalization. Once the projected area is specified, the magnetic area law is directly falsifiable. Observational data must yield coherent, stable geometric areas. The framework can be falsified in three direct ways. One Physical Plausibility: Foreground-cleaned Faraday rotation measurements must translate into finite, physically sensible projected areas ($A_{\rm proj}^{(\theta)}$). Two Environmental Consistency: Independent astronomical surveys observing similar plasma environments (e.g., identical cosmic void classes) must infer compatible area scales. Three Mutual Contradiction: If highly controlled rotation-measure datasets demand mutually exclusive or wildly fluctuating $A_{\rm proj}^{(\theta)}$ values for identical environments, the area-law interpretation fails.
 
 The complete deterministic chain---from pure quantum topology to macroscopic astronomical observation is defined with the following chain:
 \begin{equation}
@@ -3367,7 +3324,7 @@ Therefore,
 }
 \end{equation}
 
-This establishes a strict observational consistency condition, and the dominant ringdown response remains fundamentally Kerr-like. Projection Relativity aligns with the empirical success of exterior black-hole spectroscopy, requiring no shifts to the fundamental Kerr frequency, no massive-graviton dispersion laws, and no additional low-energy poles. A public-data screening analysis using the fixed PR restoration template did not produce a statistically robust residual after comparison with generic drift and decay controls; the present work therefore treats gravitational waves as a Kerr-consistency and future high-SNR residual-stack channel.
+This establishes a strict observational consistency condition, and the dominant ringdown response remains fundamentally Kerr-like. Projection Relativity aligns with the empirical success of exterior black-hole spectroscopy, requiring no shifts to the fundamental Kerr frequency, no massive-graviton dispersion laws, and no additional low-energy poles. A public-data screening analysis using the fixed PR restoration template did not produce a statistically robust residual after comparison with generic drift and decay controls; the present work therefore treats gravitational waves as a Kerr-consistency and future high-SNR residual-stack as ploted in Figure \ref{fig:pr_kerr_ringdown_consistency}.
 
 \begin{figure}[h]
 \centering
