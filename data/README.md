@@ -77,6 +77,7 @@ This package supports three active Section 11 observational/reproducibility chan
 1. **Section 11.1 — Quasar luminosity-linked velocity residuals**
 2. **Section 11.2 — Gravitational-wave Kerr consistency**
 3. **Section 11.3 — Compact-phase magnetic area law / LoTSS Faraday residuals**
+4. **Section 11.5 — Hubble/DESI phase-response pressure test**
 
 The correct interpretation hierarchy is:
 
@@ -309,7 +310,31 @@ scripts/section11/11_3_magnetic_area_law/
   lotss_foreground_residual_audit.py
   lotss_area_constraint_triage.py
 ```
+```text
+scripts/section11/11_5_hubble_desi_phase_response/
+  pr_hubble_phase_response_test_colab.py
+  pr_hubble_desi_mixed_solution_test_colab_v2.py
 
+results/section11/11_5_hubble_desi_phase_response/
+  hubble_measurements_used.csv
+  hubble_phase_response_pairwise_summary.csv
+  hubble_phase_response_monte_carlo_summary.csv
+  pr_hubble_desi_mixed_solution_summary.csv
+  pr_hubble_desi_mixed_solution_top200.csv
+  PR_HUBBLE_PHASE_RESPONSE_REPORT.md
+  PR_HUBBLE_DESI_MIXED_RESPONSE_REPORT.md
+
+plots/section11/11_5_hubble_desi_phase_response/
+  h0_posterior_comparison.png
+  delta_rho_theta_monte_carlo.png
+  mixed_response_w0_wa_scan.png
+  mixed_response_h0_rd_theta_surface.png
+  desi_bao_vs_best_mixed_response.png
+
+data/section11/11_5_hubble_desi_phase_response/
+  desi_gaussian_bao_ALL_GCcomb_mean.txt
+  desi_gaussian_bao_ALL_GCcomb_cov.txt
+```
 ---
 
 ## Maple Audit and Numerical Harness
