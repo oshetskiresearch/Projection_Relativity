@@ -53,35 +53,13 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-We present Projection Relativity (PR), a spectral--projection framework in
-which gravitational stiffness, displacement-generated inertia, compact
-electromagnetic phase, and projection-response effects arise as observable
-sectors of a single master projection field \(\Psi(x,\xi)\) over an internal
-spectral manifold. The framework is built from a minimal radial--compact internal geometry,$\mathcal M_{\rm int}=\mathbb R_w\times S^1_\theta,$ whose radial spectral gap supplies a finite coercive scale and whose compact
-phase coordinate supplies the electromagnetic projection sector. The projected metric recovers the Einstein field
-equations in the low-energy limit and reduces to the Kerr exterior outside the
-finite projection core. The same nonzero radial spectral gap replaces the
-classical \(r=0\) singular endpoint with a bounded finite-core geometry, while
-preserving standard exterior black-hole phenomenology. In the dynamical ringdown sector, PR inherits the Kerr quasi-normal-mode hierarchy in the exterior limit. 
-Projection-sector corrections are gap-suppressed, so current gravitational-wave observations primarily test the Kerr-recovery limit rather than providing a positive residual detection.
+We present Projection Relativity (PR), a spectral--projection framework in which gravitational stiffness, displacement-generated inertia, compact electromagnetic phase, and projection-response effects arise as observable
+sectors of a single master projection field \(\Psi(x,\xi)\) over an internal spectral manifold. The framework is built from a minimal radial--compact internal geometry,$\mathcal M_{\rm int}=\mathbb R_w\times S^1_\theta,$ whose radial spectral gap supplies a finite coercive scale and whose compact phase coordinate supplies the electromagnetic projection sector. The projected metric recovers the Einstein field equations in the low-energy limit and reduces to the Kerr exterior outside the finite projection core. The same nonzero radial spectral gap replaces the
+classical \(r=0\) singular endpoint with a bounded finite-core geometry, while preserving standard exterior black-hole phenomenology. In the dynamical ringdown sector, PR inherits the Kerr quasi-normal-mode hierarchy in the exterior limit. Projection-sector corrections are gap-suppressed, so current gravitational-wave observations primarily test the Kerr-recovery limit rather than providing a positive residual detection.
 
-We find a luminosity-linked negative velocity residual in the quasar sample.
-Across the primary warning-clean estimators, the predicted sign appears in
-\(140/144\), \(134/144\), \(136/144\), and \(133/144\) matched bins for DR16Q,
-PIPE, PCA, and MgII, respectively. We also map the foreground-cleaned LoTSS
-residual, $|{\rm RRM}_{2022}|=1.254538\,{\rm rad\,m^{-2}}$, through the compact-phase magnetic area law, turning the observed
-Faraday-rotation residual into a projected compact-domain constraint rather
-than a fixed primordial field amplitude. A first Hubble--DESI pressure test maps the local--CMB Hubble split to a positive projected phase-density offset, \(\Delta\rho_\theta\simeq1.6\times10^{-27}\,{\rm kg\,m^{-3}}\), and finds that a high-\(H_0\) mixed phase-response diagnostic can remain close to compressed DESI BAO distances while approximately preserving the CMB acoustic calibration.
+We find a luminosity-linked negative velocity residual in the quasar sample. Across the primary warning-clean estimators, the predicted sign appears in \(140/144\), \(134/144\), \(136/144\), and \(133/144\) matched bins for DR16Q, PIPE, PCA, and MgII, respectively. We also map the foreground-cleaned LoTSS residual, $|{\rm RRM}_{2022}|=1.254538\,{\rm rad\,m^{-2}}$, through the compact-phase magnetic area law, turning the observed Faraday-rotation residual into a projected compact-domain constraint rather than a fixed primordial field amplitude. A first Hubble--DESI pressure test maps the local--CMB Hubble split to a positive projected phase-density offset, \(\Delta\rho_\theta\simeq1.6\times10^{-27}\,{\rm kg\,m^{-3}}\), and finds that a high-\(H_0\) mixed phase-response diagnostic can remain close to compressed DESI BAO distances while approximately preserving the CMB acoustic calibration.
 
-The resulting architecture provides a compact, testable projection framework
-for finite-core black holes, Kerr-consistent ringdown phenomenology,
-magnetically constrained compact phase structure, and luminosity-linked quasar
-velocity residuals. The complete derivation ledger, symbolic audits, numerical
-validation scripts, and figure-generation workflows are provided in the
-companion supplementary material and public repository. The scope of this
-manuscript is the minimal bosonic projection chain: gravitational stiffness,
-displacement-generated inertia, compact electromagnetic phase, projection
-response, and their first observational consequences.
+The resulting architecture provides a compact, testable projection framework for finite-core black holes, Kerr-consistent ringdown phenomenology, magnetically constrained compact phase structure, and luminosity-linked quasar velocity residuals. The complete derivation ledger, symbolic audits, numerical validation scripts, and figure-generation workflows are provided in the companion supplementary material and public repository. The scope of this manuscript is the minimal bosonic projection chain: gravitational stiffness, displacement-generated inertia, compact electromagnetic phase, projection response, and their first observational consequences.
 \end{abstract}
 
 \section{Introduction: Architectural Logic and Geometric Closure}
@@ -814,7 +792,7 @@ Integrating the spacetime kinetic action over the internal measure isolates the 
 Z_{\rm disp} = \langle \Xi_{\rm disp} | \Xi_{\rm disp} \rangle_P = \sum_{n,m} \left| \zeta_{n,m}^{\rm (disp)} \right|^2.
 \end{equation}
 
-We find that, the canonical positive-energy kinetic term for the observable amplitude governs the physical field normalization:
+The canonical positive-energy kinetic term for the observable amplitude governs the physical field normalization:
 \begin{equation}
 \boxed{ A_{\rm phys}(x) = \sqrt{Z_{\rm disp}} A(x) }
 \end{equation}
@@ -1049,7 +1027,7 @@ This confirms that at standard astrophysical distances, Projection Relativity re
 \section{Gravitational-Wave Propagation and Gap-Suppressed Residuals}
 \label{sec:gravitational_wave_propagation}
 
-The gravitational-wave sector of Projection Relativity determines how dynamic, transient perturbations of the effective metric propagate through observable spacetime. The framework does not abandon standard Kerr black hole perturbation theory; rather, it inherits the classical Kerr background in the exterior limit and rigorously subjects it to the geometric self-energy corrections of the internal manifold. The purpose of this section is to define the corrected wave operator, extract the resulting ringdown sidebands, and demonstrate how the internal spectral gap natively suppresses low-energy deviations to match classical observations.
+The gravitational-wave sector of Projection Relativity determines how dynamic, transient perturbations of the effective metric propagate through observable spacetime. The framework does not abandon standard Kerr black hole perturbation theory; rather, it inherits the classical Kerr background in the exterior limit and rigorously subjects it to the geometric self-energy corrections of the internal manifold. The purpose of this section is to define the corrected wave operator, extract the resulting gap-suppressed ringdown residuals, and demonstrate how the internal spectral gap natively suppresses low-energy deviations to match classical observations.
 
 \subsection{Teukolsky Inheritance and the Corrected Wave Operator}
 \label{sec:teukolsky_inheritance}
@@ -1078,7 +1056,7 @@ Acting this operator expansion on the transient source $S_s$ demonstrates that t
 \begin{equation}
 \boxed{ A_{\rm obs}(\omega) = A_{\rm Kerr}(\omega) + A_X(\omega) }
 \end{equation}
-The term $A_X(\omega)$ represents physical ringdown sidebands generated exclusively by the dynamic geometric resistance of the internal projection manifold. 
+The term $A_X(\omega)$ represents physical gap-suppressed ringdown residuals generated exclusively by the dynamic geometric resistance of the internal projection manifold. 
 
 \subsection{Luminal Propagation and Stability}
 \label{sec:luminal_propagation}
@@ -1132,7 +1110,7 @@ Integrating this density over the spatial hypersurface yields the total unified 
 \begin{equation}
 \boxed{ \frac{d E_{\rm PR}}{dt} = 0 }
 \end{equation}
-This mathematically guarantees that while energy may dynamically oscillate between the internal geometry and macroscopic phenomena (such as high-frequency sideband leakage via $\mathcal{L}_X$), the total projection energy of the universe remains conserved.
+This mathematically guarantees that while energy may dynamically oscillate between the internal geometry and macroscopic phenomena (such as high-frequency projection-sector residual response via $\mathcal{L}_X$), the total projection energy of the universe remains conserved.
 
 \subsection{Low-Energy Relativistic Kinematic Recovery}
 \label{sec:relativistic_kinematic_recovery}
@@ -3324,7 +3302,7 @@ Therefore,
 }
 \end{equation}
 
-This establishes a strict observational consistency condition, and the dominant ringdown response remains fundamentally Kerr-like. Projection Relativity aligns with the empirical success of exterior black-hole spectroscopy, requiring no shifts to the fundamental Kerr frequency, no massive-graviton dispersion laws, and no additional low-energy poles. A public-data screening analysis using the fixed PR restoration template did not produce a statistically robust residual after comparison with generic drift and decay controls; the present work therefore treats gravitational waves as a Kerr-consistency and future high-SNR residual-stack as ploted in Figure \ref{fig:pr_kerr_ringdown_consistency}.
+This establishes a strict observational consistency condition, and the dominant ringdown response remains fundamentally Kerr-like. Projection Relativity aligns with the empirical success of exterior black-hole spectroscopy, requiring no shifts to the fundamental Kerr frequency, no massive-graviton dispersion laws, and no additional low-energy poles. A public-data screening analysis using the fixed PR restoration template did not produce a statistically robust residual after comparison with generic drift and decay controls; the present work therefore treats gravitational waves as a Kerr-consistency and future high-SNR residual-stack as, as illustrated in Figure \ref{fig:pr_kerr_ringdown_consistency}.
 
 \begin{figure}[h]
 \centering
@@ -3427,7 +3405,7 @@ f_r^{-1/2}.
 }
 \end{equation}
 
-This establishes that, standard magnetar timing events ($|\Delta\nu/\nu| \sim 10^{-7} \text{ to } 10^{-5}$) naturally correspond to internal phase-stress fields of $10^{15} - 10^{16}\ {\rm G}$. If an observed spin event requires an equivalent field far exceeding plausible bounds ($B \gg 10^{17}\ {\rm G}$), the PR magnetar channel is falsified. If it falls within the $10^{15} - 10^{16}\ {\rm G}$ range, the event falls within the PR phase-displacement channel's expected scale. of PR phase-displacement coupling. The complete deterministic mechanism is therefore:
+This establishes that, standard magnetar timing events ($|\Delta\nu/\nu| \sim 10^{-7} \text{ to } 10^{-5}$) naturally correspond to internal phase-stress fields of $10^{15} - 10^{16}\ {\rm G}$. If an observed spin event requires an equivalent field far exceeding plausible bounds ($B \gg 10^{17}\ {\rm G}$), the PR magnetar channel is falsified. If it falls within the $10^{15} - 10^{16}\ {\rm G}$ range, the event falls within the PR phase-displacement channel's expected scale for PR phase-displacement coupling. The complete deterministic mechanism is therefore:
 \begin{equation}
 \boxed{
 \text{Phase Stress} (X_\mu X^\mu) \rightarrow \text{Energy Redistribution} (\Delta\bar r^{\,2}) \rightarrow \Delta I_{\rm PR} \rightarrow \Delta\Omega.
@@ -3634,7 +3612,7 @@ The Hubble-window diagnostic establishes both the sign and the magnitude of the 
 \end{equation}
 Here, \(\rho_{\theta,0}\) is the coherent geometric phase floor, while \(\delta\rho_\theta(a,\mathcal W)\) is the projected phase-response correction sampled by a specific observational window.
 
-Using the local and CMB Hubble references
+Using the local and CMB Hubble ~\cite{H0DN2026,Planck2018Cosmology} references
 $H_0^{\rm loc} = 73.50\pm0.81\ {\rm km\,s^{-1}\,Mpc^{-1}}$, and $H_0^{\rm CMB} = 67.4\pm0.5\ {\rm km\,s^{-1}\,Mpc^{-1}}$, the PR phase-response diagnostic gives
 \begin{equation}
 \Delta H_0
@@ -3687,8 +3665,8 @@ this corresponds to
 0.189.
 \end{equation}
 
-A Monte Carlo propagation using \(2\times10^5\) draws gives
-$\widehat P_{\rm MC} \!\left(H_0^{\rm loc}>H_0^{\rm CMB}\right)=1.000$, and $(N_{\rm MC}=2\times10^5)$. That is, every sampled draw satisfied the PR sign inequality under the adopted Gaussian uncertainty model. Where as, the current local and CMB Hubble windows satisfy the PR sign requirement:
+A Monte Carlo propagation using \(2\times10^5\) draws gives $\widehat P_{\rm MC} \!\left(H_0^{\rm loc}>H_0^{\rm CMB}\right)=1.000$
+with $(N_{\rm MC}=2\times10^5)$. That is, every sampled draw satisfied the PR sign inequality under the adopted Gaussian uncertainty model. Consequently, the current local and CMB Hubble windows satisfy the PR sign requirement:
 \begin{equation}
 H_0^{\rm loc}>H_0^{\rm CMB}
 \quad
@@ -3948,7 +3926,7 @@ The radial branch is not chosen by numerical fitting. Its quadratic coefficient 
 3.052966743096,
 }
 \end{equation}
-provides the finite coercive scale used throughout the gravitational, propagator, compact phase, and finite-core sectors. The foundational architecture of Projection Relativity unifies these seemingly disparate phenomena into an interconnected cascade of geometric responses. By grounding the framework in the rigid radial spectral gap $\mu_{\min}^2$, gravitational collapse is naturally regularized into a non-singular finite-core geometry, while the displacement sector dynamically establishes effective macroscopic inertia without empirical tuning. In the radiative regime, exterior gravitational-wave profiles strictly preserve Kerr consistency due to the gap-protected suppression of projection residuals. Astronomically, the framework provides its primary positive observational support through the persistent sign of quasar luminosity-linked velocity residuals under strict low-ionization anchoring. At cosmological scales, the framework naturally absorbs the modern Hubble tension by treating expansion as a window- and scale-dependent phase response coupled to a diluting matter trace, while the compact electromagnetic phase sector governs local Faraday-rotation amplitudes via a projected magnetic area law rather than an uncoupled primordial field. Ultimately, this entire structural chain achieves, zero-parameter boundary closure, producing the boundary-resolved compact electromagnetic normalization \(\alpha_{\rm PR,bc}^{-1}=137.036361812007\) from the topological cofactors of the finite-rank internal boundary map. The core mathematical definitions governing these derived sectors and their primary observational signatures are compiled sequentially in Table~\ref{tab:projection_summary}.
+provides the finite coercive scale used throughout the gravitational, propagator, compact phase, and finite-core sectors. The foundational architecture of Projection Relativity unifies these seemingly disparate phenomena into an interconnected cascade of geometric responses. By grounding the framework in the rigid radial spectral gap $\mu_{\min}^2$, gravitational collapse is naturally regularized into a non-singular finite-core geometry, while the displacement sector dynamically establishes effective macroscopic inertia without empirical tuning. In the radiative regime, exterior gravitational-wave profiles strictly preserve Kerr consistency due to the gap-protected suppression of projection residuals. Astronomically, the framework provides its primary positive observational support through the persistent sign of quasar luminosity-linked velocity residuals under strict low-ionization anchoring. At cosmological scales, the framework naturally absorbs the modern Hubble tension by treating expansion as a window- and scale-dependent phase response coupled to a diluting matter trace, while the compact electromagnetic phase sector governs local Faraday-rotation amplitudes via a projected magnetic area law rather than an uncoupled primordial field. Ultimately, this entire structural chain achieves zero-parameter boundary closure, producing the boundary-resolved compact electromagnetic normalization \(\alpha_{\rm PR,bc}^{-1}=137.036361812007\) from the topological cofactors of the finite-rank internal boundary map. The core mathematical definitions governing these derived sectors and their primary observational signatures are compiled sequentially in Table~\ref{tab:projection_summary}.
 
 Taken together, these results define a single geometric closure architecture:
 \begin{equation}
