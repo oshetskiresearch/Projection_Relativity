@@ -279,9 +279,11 @@ Representative topics include finite core radius, curvature ceiling, radial stif
 Observational analyses are stored separately from core theory derivations and are interpreted conservatively. The active public-release channels are:
 
 ```text
-11.1  Quasar luminosity-linked velocity residuals
-11.2  Gravitational-wave Kerr consistency and residual/null screens
-11.3  Compact-phase magnetic area law / LoTSS Faraday residuals
+11.1 Quasar luminosity-linked velocity residuals
+11.2 Gravitational-wave Kerr consistency / residual-null screens
+11.3 Compact-phase magnetic area law / LoTSS
+11.4 High-field phase/displacement response
+11.5 Hubble/DESI phase-response pressure test
 ```
 
 ### Quasar residuals
