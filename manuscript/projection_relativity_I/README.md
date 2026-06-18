@@ -7,7 +7,7 @@ This manuscript was developed and typeset using **LaTeX** via the **Overleaf** p
 
 ## Directory Structure
 * `Oshetski_Projection_Relativity_Main.tex`: The primary LaTeX source document containing the core text, derivations, and structure.
-* `Oshetski_Projection_Relativity_Main_References.bib`: The BibTeX file containing all formal citations and astrophysical data references.
+* `Oshetski_Projection_Relativity_References.bib`: The BibTeX file containing all formal citations and astrophysical data references.
 * `/plots`: Contains the high-resolution plots, projection diagrams, and observational charts used in the manuscript.
 
 ## How to Compile
