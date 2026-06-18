@@ -1,4 +1,4 @@
-# Projection Relativity Numerical Validation Harness
+# Projection Relativity I Numerical Validation Harness
 
 This README documents the Python numerical validation harness for the public
 Projection Relativity repository.
