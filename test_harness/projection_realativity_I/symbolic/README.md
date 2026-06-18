@@ -1,4 +1,4 @@
-# Projection Relativity Maple Checker
+# Projection Relativity I Maple Checker
 
 This folder contains the Maple symbolic verification harness for the public
 Projection Relativity manuscript.
