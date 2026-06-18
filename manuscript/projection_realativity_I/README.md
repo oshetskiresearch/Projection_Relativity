@@ -1,4 +1,4 @@
-# Manuscript: Projection Relativity
+# Manuscript: Projection Relativity I
 
 This directory contains the complete source files for the primary manuscript: **The Foundation of Projection Relativity: A Spectral-Projection Architecture for Emergent Relativity**.
 
