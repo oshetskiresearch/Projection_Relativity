@@ -1,6 +1,6 @@
-# Projection Relativity Public Data and Reproducibility Package
+# Projection Relativity I Public Data and Reproducibility Package
 
-This data package supports the public release of **Projection Relativity (PR)** and its companion manuscript/supplement. It contains derived tables, plots, reproducibility scripts, and audit outputs used to support the paper's numerical and observational claims.
+This data package supports the public release of **Projection Relativity (PR I)** and its companion manuscript/supplement. It contains derived tables, plots, reproducibility scripts, and audit outputs used to support the paper's numerical and observational claims.
 
 The package is designed to be extracted into the root of the public repository:
 
