@@ -254,7 +254,8 @@ and the boundary cofactor
 \begin{equation}
 c_{\rm bc} = \frac{3354902985}{4211081216} = 0.796684464847899.
 \end{equation}
-Together they reproduce the residual compact electromagnetic normalization\footnote{\textbf{Note on Computational Convergence and Framework Scope:} The numerical values reported in this manuscript (e.g., $\mu_{min}^2 \approx 3.052966743096$, $\alpha_{PR,bc}^{-1} \approx 137.036361812007$) reflect the baseline finite-difference solver resolution established in PR-I, ensuring strict version-control continuity across both works. Executing the identical geometric architecture through an upgraded, high-density spectral diagonalization ($N=10,000$ harmonic basis states) imptoves the finite-basis truncation residual, yielding a higher resolution spectral gap of $\mu_{min}^2 = 3.053016668059553$ and shifting the boundary-resolved electromagnetic normalization to $\alpha_{PR,bc}^{-1} = 137.036041304504209$ (compared to the empirical CODATA limit of $137.035999177(21)$). Because the objective of this manuscript is to establish the geometric architecture of the projection manifold rather than to exhaust arbitrary computational precision, the PR-I baseline is retained for all formal derivations. The high-precision limit demonstrates that the framework converges monotonically toward the empirical value as numerical resolution increases, confirming that the residual is a computational artifact rather than an architectural deviation.},
+Together they reproduce the residual compact electromagnetic normalization\footnote{\textbf{Note on numerical resolution and framework scope.}
+The numerical constants used throughout PR-II are inherited from the published finite-resolution PR-I ledger so that every downstream result remains reproducible from the original release. Independent banded harmonic-basis calculations stabilize the low radial spectrum and finite-rank boundary map at $\mu_{\min}^2\simeq 3.053016666733$,\quad $\alpha_{\rm PR,bc}^{-1}\simeq 137.036041314016$. This reduces the electromagnetic residual from approximately \(2.65\,{\rm ppm}\) in the original ledger to approximately \(0.31\,{\rm ppm}\) relative to the CODATA recommended value. The refinement demonstrates numerical stability and substantially improved agreement. The refined constants are not mixed into the present PR-II calculations. Their consistent propagation is reserved for a separate high-resolution release.},
 \begin{equation}
 \boxed{
 \alpha_{\rm PR,bc}^{-1}
@@ -1564,9 +1565,7 @@ Each term has a fixed geometric role.
 The first term is the radial compact-boundary action. 
 The second is the compact stiffness/cofactor determinant ratio. 
 The third is the \(3+1\) projection-trace orientation factor. 
-The final term is the weak boundary-deficit correction averaged over the residual compact boundary.
-
-The leading action gives
+The final term is the weak boundary-deficit correction averaged over the residual compact boundary. The leading action gives
 \begin{equation}
 \boxed{
 S_{\rm EW}^{\rm PR,base}
@@ -1575,7 +1574,7 @@ S_{\rm EW}^{\rm PR,base}
 }
 \end{equation}
 At leading order this already produces the weak displacement anchor to the sub-per-mille level. 
-The remaining discrepancy is corrected by the first second-order compact non-Abelian boundary term,
+We introduce the following second-order compact-boundary closure term 
 \begin{equation}
 \delta S_{\rm EW}^{(2)}
 =
@@ -1587,9 +1586,12 @@ The remaining discrepancy is corrected by the first second-order compact non-Abe
 \end{equation}
 The factor
 \begin{equation}
+A_{\rm EW}
+=
 \frac{1+3c_{\rm bc}}{2}
 \end{equation}
-is the singlet-plus-adjoint compact-boundary factor with one residual electromagnetic singlet channel plus three weak adjoint directions. The corrected hierarchy action is
+combines one residual electromagnetic singlet contribution with three weak-adjoint contributions under the normalization adopted in this closure rule. It is referred to below as the singlet-plus-adjoint compact factor. The numerical effect of the second-order term is to refine the leading weak-scale candidate. Its independent derivation and
+uniqueness remain part of the PR-III precision future research. The corrected hierarchy action is
 \begin{equation}
 \boxed{
 S_{\rm EW}^{\rm PR,total}
@@ -2062,39 +2064,35 @@ We can now use the same compact order direction that generates the \(W/Z\) masse
 \label{sec:pr2_order_mode_fermion_couplings}
 
 The PR-II flavor sections generate effective matter displacement overlaps rather than inserting fitted Yukawa \cite{Yukawa1935} matrices. 
-At low energy, the tree-level scalar coupling ledger must reduce to the usual mass-proportional form. 
-For a Dirac fermion sector \(f\), define the effective PR overlap coupling \(y_f^{\rm eff,PR}\) by
-\begin{equation}
-m_f^{\rm PR}
-=
-\frac{
-y_f^{\rm eff,PR}
-v_{\rm EW}^{\rm PR}
-}{\sqrt2}.
-\end{equation}
-Then the scalar order-mode interaction is
-\begin{equation}
-\mathcal L_{hff}^{\rm PR}
-=
--
-\frac{
-m_f^{\rm PR}
-}{
-v_{\rm EW}^{\rm PR}
-}
-h_{\rm PR}\bar f f.
-\end{equation}
-Equivalently,
+At low energy, the scalar coupling is determined by the dependence of the
+effective fermion mass operator on the scalar order mode. In general,
 \begin{equation}
 g_{hff}^{\rm PR}
 =
-\frac{
-m_f^{\rm PR}
-}{
-v_{\rm EW}^{\rm PR}
-}.
+\left.
+\frac{\partial m_f^{\rm PR}(h_{\rm PR})}
+{\partial h_{\rm PR}}
+\right|_{h_{\rm PR}=0}.
 \end{equation}
-We find that the same overlap quantities that generate fermion mass candidates also determine the corresponding tree-level scalar coupling ledger. For the charged-lepton sector, this means
+
+For the tree-level matching adopted in this framework, the effective mass is taken to depend linearly on the order mode:
+\begin{equation}
+m_f^{\rm PR}(h_{\rm PR})
+=
+m_f^{\rm PR}
+\left(
+1+\frac{h_{\rm PR}}{v_{\rm EW}^{\rm PR}}
+\right).
+\end{equation}
+Under this linear matching condition,
+\begin{equation}
+\boxed{
+g_{hff}^{\rm PR}
+=
+\frac{m_f^{\rm PR}}{v_{\rm EW}^{\rm PR}}.
+}
+\end{equation}
+The linear dependence is a tree-level matching assumption; its derivation from the full compact overlap operator is assigned to the PR-III scalar precision future work. We find that the same overlap quantities that generate fermion mass candidates also determine the corresponding tree-level scalar coupling ledger. For the charged-lepton sector, this means
 \begin{equation}
 \boxed{
 g_{hee}^{\rm PR}
@@ -2157,9 +2155,9 @@ It establishes the tree-level scalar coupling ledger that such an amplitude calc
 \subsection{Scalar Mass and Compact Hessian Target}
 \label{sec:pr2_scalar_mass_hessian}
 
-While the tree-level couplings between the scalar order-mode and the gauge ledger are fixed by the compact geometry, the physical mass of the scalar itself requires a dynamical evaluation of the vacuum curvature. It is imperative to clarify that PR-II does not claim a zero-new-parameter derivation of the scalar mass at this stage. Instead of inserting the observed scalar mass as an empirical fit, which would violate the manuscript's strict input discipline, this framework formally defines the scalar mass as a geometric target, setting the stage for the PR-III precision program.
+While the tree-level couplings between the scalar order-mode and the gauge ledger are fixed by the compact geometry, the physical mass of the scalar itself requires a dynamical evaluation of the vacuum curvature. It is imperative to clarify that PR-II does not claim a zero-new-parameter derivation of the scalar mass at this stage. Instead of inserting the observed scalar mass as an empirical fit, this framework formally defines the scalar mass as a geometric target, setting the stage for the PR-III precision future research.
 
-The scalar/order-mode coupling ledger is structurally recovered at tree level. However, the scalar mass itself is not inserted in PR-II. In a compact-boundary formulation, the scalar mass must arise from the curvature of the order-locking action:
+The scalar/order-mode coupling ledger is structurally recovered at tree level. However, the scalar mass itself is not inserted in as part of the calculation. In a compact-boundary formulation, the scalar mass must arise from the curvature of the order-locking action:
 \begin{equation}
 \boxed{
 m_{h,{\rm PR}}^2
@@ -2169,7 +2167,7 @@ m_{h,{\rm PR}}^2
 \right|_{h_{\rm PR}=0}.
 }
 \end{equation}
-Equivalently, \(m_{h,{\rm PR}}^2\) is the compact order-mode Hessian evaluated at the locked electroweak boundary. The present manuscript does not claim a zero-new-parameter derivation of the scalar mass. The observed scalar mass and scalar self-couplings are not used as inputs anywhere in the PR-II closure chain. They are deferred to the PR-III electroweak precision program, whose tasks include:
+Equivalently, \(m_{h,{\rm PR}}^2\) is the compact order-mode Hessian evaluated at the locked electroweak boundary. The present manuscript does not claim a zero-new-parameter derivation of the scalar mass. The observed scalar mass and scalar self-couplings are not used as inputs anywhere in the closure chain. They are deferred to the PR-III electroweak precision program, whose tasks include:
 \begin{equation}
 \boxed{
 m_{h,{\rm PR}},\quad \lambda_{\rm lock}^{\rm PR},\quad \Delta r_{\rm PR},\quad \alpha_{\rm PR}(0) \rightarrow \alpha_{\rm PR}(M_Z),
@@ -2272,20 +2270,26 @@ g_{hZZ}^{\rm PR}
 \end{equation}
 If these coupling ratios require independent tuning or fail to match this derivation, the scalar ledger is rendered mathematically inconsistent with the projection-locking mass ledger.
 
-Fourth, the Dirac fermion scalar couplings must emerge mass-proportional:
+Fourth, under the linear tree-level matching condition, the Dirac fermion scalar couplings must satisfy
 \begin{equation}
 g_{hff}^{\rm PR}
 =
 \frac{m_f^{\rm PR}}{v_{\rm EW}^{\rm PR}}.
 \end{equation}
-If the overlap mass ledger cannot be mapped directly to these mass-proportional vertices, the low-energy scalar sector is structurally incomplete.
+Failure of this relation would invalidate the adopted linear matching condition, while a nonlinear mass dependence would require evaluation through
+\begin{equation}
+g_{hff}^{\rm PR}
+=
+\left.
+\frac{\partial m_f^{\rm PR}(h_{\rm PR})}
+{\partial h_{\rm PR}}
+\right|_{h_{\rm PR}=0}.
+\end{equation}
 
 Finally, any attempt to insert the observed scalar mass as an empirical input is prohibited:
 \begin{equation}
 \boxed{
-m_h
-\quad
-\text{is not a generation input in this manuscript}.
+$m_h$ \space\text{is not a generation input in this manuscript}.
 }
 \end{equation}
 Such an insertion violates the zero-new-parameter discipline of PR-II. The scalar mass must be derived dynamically from the compact order-Hessian closure. Until that derivation is complete, it remains a PR-III precision target. With the compact order-mode and tree-level scalar coupling ledger established, we conclude this sector of the projection architecture. The subsequent section utilizes the compact non-Abelian current structure to recover the full breadth of charged-current and neutral-current weak interactions.
@@ -2663,14 +2667,7 @@ e^2(M_Z)
 =
 4\pi\alpha(M_Z).
 \end{equation}
-PR-I fixed the low-energy electromagnetic boundary, $\alpha_{\rm PR,bc}^{-1}=137.036361812007$, but the running map
-\begin{equation}
-\alpha_{\rm PR}(0)
-\rightarrow
-\alpha_{\rm PR}(M_Z)
-\end{equation}
-is a radiative matching layer. 
-Therefore, precision \(W/Z\) mass comparison is not claimed in this section. As a diagnostic tree-level branch, using a weak-scale electromagnetic coupling near
+PR-I fixed the low-energy electromagnetic boundary, $\alpha_{\rm PR,bc}^{-1}=137.036361812007$, but the running map $\alpha_{\rm PR}(0)\rightarrow\alpha_{\rm PR}(M_Z)$ is a radiative matching layer. Therefore, precision \(W/Z\) mass comparison is not claimed in this section. As a diagnostic tree-level branch, using a weak-scale electromagnetic coupling near
 \begin{equation}
 \boxed{
 \alpha(M_Z)^{-1}=127.955
@@ -3291,7 +3288,15 @@ N_{\rm gen}^{\rm PR}=3
 
 \subsection{Generation-Sheet Overlap Hierarchy}
 \label{sec:pr2_generation_sheet_overlap_hierarchy_main}
-While the three-sheet ledger successfully derives the generation count, it does not by itself explain the vast mass disparity observed between those generations. In the standard paradigm, these scale differences are accommodated by inserting arbitrary Yukawa couplings. The flavor hierarchy emerge from the boundary geometry. This hierarchical scaling is provided by the determinant suppression ratio inherited from PR-I. Functioning as a geometric attenuation factor, this ratio sequentially scales the terminal matter displacement overlap across the three distinct generation sheets, deriving a ordered mass hierarchy without relying on empirical fermion masses as inputs. The hierarchy is generated by the determinant suppression ratio inherited from PR-I:
+
+The compact electroweak quotient has three broken directions, 
+
+\begin{equation}
+\dim \left[\frac{SU(2)_L\times U(1)_Y}{U(1)_{\rm em}} \right] = 3. 
+\end{equation}
+
+PR-II proposes identifying these directions with three fermion-generation sheets. This geometric identification supplies the value $N_{\rm gen}^{\rm PR}=3$, while anomaly cancellation confirms that
+three replicated chiral ledgers remain consistent. The identification is a closure candidate; it does not follow from coset dimension or anomaly cancellation alone. Given this three-sheet assignment, the compact determinant ratio $r_G=c_{\rm bc}/q_{\rm bc}$ is used to define an ordered overlap hierarchy. The hierarchy is generated by the determinant suppression ratio inherited from PR-I:
 \begin{equation}
 \boxed{
 r_G
@@ -3793,7 +3798,15 @@ The key objective is to determine if the compact-boundary data can generate the 
 \subsection{Three-Sheet Square-Root Flavor Geometry}
 \label{sec:pr2_three_sheet_square_root_flavor_geometry}
 
-Using the three identical chiral ledgers as a geometric consequence of the broken electroweak quotient, we now supply the internal structure distinguishing these generations. Applying the three-sheet flavor geometry specifically to the charged-lepton sector. We do not introduce the Koide relation \cite{Koide1983} as an arbitrary numerical fit or an accidental parameterization, we derive it purely from the topological incidence density of the charged current ladder distributed across the three-generation plane. This geometric derivation fixes the flavor phase, dictating the exact spacing of the charged-lepton square-root mass vector. The generation-origin section fixed $N_{\rm gen}^{\rm PR}=3$. In the charged-lepton sector, we represent the square-root mass vector on a three-sheet flavor plane. The charged-current compact ladder has two orientations,
+The charged-lepton sector is represented on a three-sheet square-root mass plane. PR-II proposes associating the two charged-current ladder orientations with the nine ordered sheet-pair incidences of a three-generation ledger. This motivates the candidate phase
+\begin{equation}
+\theta_K^{\rm PR}
+=
+\frac{2}{N_{\rm gen}^2}
+=
+\frac29.
+\end{equation}
+The ratio \(2/N_{\rm gen}^2\) is adopted here as a phase in radians; its uniqueness remains a separate flavor-boundary derivation obligation. We do not introduce the Koide relation \cite{Koide1983}, we derive it purely from the topological incidence density of the charged current ladder distributed across the three-generation plane. This geometric derivation fixes the flavor phase, dictating the exact spacing of the charged-lepton square-root mass vector. The generation-origin section fixed $N_{\rm gen}^{\rm PR}=3$. In the charged-lepton sector, we represent the square-root mass vector on a three-sheet flavor plane. The charged-current compact ladder has two orientations,
 \begin{equation}
 T^+,
 \qquad
@@ -3807,6 +3820,7 @@ N_{\rm gen}^2
 =
 9
 \end{equation}
+
 oriented sheet-pair incidences. The generator-normalized Koide sheet phase is therefore defined as the charged-ladder incidence density:
 \begin{equation}
 \boxed{
@@ -3920,7 +3934,8 @@ m_e+m_\mu+m_\tau
 \frac23.
 }
 \end{equation}
-Thus the Koide relation is a geometric identity of the three-sheet square-root flavor plane. It does not determine the overall charged-lepton scale by itself. The remaining task is to determine \(M_\ell^{\rm PR}\) from compact-boundary data.
+The trigonometric parameterization enforces the Koide ratio \(2/3\) for any value of \(\theta_K\). The model-specific content of PR-II is therefore not the ratio alone, but the proposed phase \(\theta_K^{\rm PR}=2/9\), the sheet assignment, and the compact scale \(M_\ell^{\rm PR}\). We note that the parameterization does not determine the overall
+mass scale by itself.
 
 \subsection{Charged-Lepton Compact Scale}
 \label{sec:pr2_charged_lepton_compact_scale}
@@ -4290,7 +4305,9 @@ Inserting the established structural values \(q_{\rm bc} = 10.905007182855176\) 
 }
 \end{equation}
 
-In strict adherence to the zero-new-parameter discipline, this evaluation relies exclusively on the pre-established compact-boundary data. Empirical parameters such as \(\alpha_s(M_Z)\) \cite{GrossJackiw1972}, \(\Lambda_{\rm QCD}\), quark masses, CKM angles, or weak-scale observables are explicitly prohibited from entering the generation formula; they may only serve as post-calculation diagnostic benchmarks within a separately derived running or matching layer. The causal chain for the strong-coupling candidate is therefore exclusively geometric:
+For the running diagnostic developed below, $\alpha_3^{\rm PR}$ is interpreted as an $\overline{\rm MS}$ type coupling anchor at the neutral matching surface. This scale-and-scheme assignment is a matching convention rather than an independently derived identity of the compact-boundary formula.
+
+This evaluation relies exclusively on the pre-established compact-boundary data. Empirical parameters such as \(\alpha_s(M_Z)\) \cite{GrossWilczek1973}, \(\Lambda_{\rm QCD}\), quark masses, CKM angles, or weak-scale observables are explicitly prohibited from entering the generation formula; they may only serve as post-calculation diagnostic benchmarks within a separately derived running or matching layer. The causal chain for the strong-coupling candidate is therefore exclusively geometric:
 \begin{equation}
 \boxed{
 \left\{
@@ -4431,7 +4448,7 @@ This evaluates to
 }
 \end{equation}
 
-The charm-sector threshold requires a new geometric projection: the singlet-plus-adjoint compact-boundary average, defined as \(A_{\rm EW} = (1+3c_{\rm bc})/2\). The threshold is then generated by two determinant suppressions, the color Casimir lift (\(4/3\)), and this adjoint boundary gain:
+The charm-sector threshold requires a new geometric projection: the singlet-plus-adjoint compact factor, defined as \(A_{\rm EW} = (1+3c_{\rm bc})/2\). The threshold is then generated by two determinant suppressions, the color Casimir lift (\(4/3\)), and this adjoint boundary gain:
 \begin{equation}
 \boxed{
 \mu_c^{\rm PR}
@@ -4469,10 +4486,17 @@ The resulting geometric hierarchy recovers the massive quark spectrum order:
 \end{equation}
 The empirically observed heavy-quark masses are excluded from these generative formulas; they are permitted to enter the manuscript only post-generation as diagnostic benchmarks. So, the quantities generated here must be formally categorized as compact threshold-scale candidates, not as final, scheme-independent pole masses.
 
-\subsection{Three-Loop QCD Threshold Ledger and Running Diagnostics}
+\subsection{Three-Loop Coupling Running with Leading Threshold Matching}
 \label{sec:pr2_qcd_threshold_ledger}
 
-With the compact-boundary strong coupling and the heavy-quark threshold scales established, the PR-II architecture must enforce the standard perturbative continuity conditions across each flavor boundary. By driving the three-loop QCD running ledger downward from the electroweak neutral matching surface, the framework uniquely isolates the flavor-dependent QCD scale parameters, \(\Lambda_{n_f}^{\rm PR}\). This mathematical descent operates on the preceding geometric derivations and guarantees seamless coupling continuity at each derived heavy-quark threshold:
+The coupling evolution is evaluated using the displayed three-loop beta-function coefficients. Flavor thresholds are matched at leading
+continuity order,
+\begin{equation}
+\alpha_s^{(n_f)}(\mu_{\rm th})
+=
+\alpha_s^{(n_f-1)}(\mu_{\rm th}),
+\end{equation}
+while the quoted mass-running diagnostics use the leading anomalous-dimension exponent. The resulting calculation is therefore a three-loop coupling-running ledger with leading threshold matching, not a uniform three-loop quark-mass determination. Higher-order decoupling coefficients and higher-loop mass anomalous dimensions are deferred to the PR-III QCD precision layer future research.
 \begin{equation}
 \boxed{
 \alpha_s^{(5)}(\mu_t^{\rm PR}) = \alpha_s^{(6)}(\mu_t^{\rm PR}),
@@ -4483,7 +4507,7 @@ With the compact-boundary strong coupling and the heavy-quark threshold scales e
 }
 \end{equation}
 
-The exact evaluation of the resulting three-loop QCD threshold ledger is consolidated in Table~\ref{tab:pr2_qcd_lambda_scales}.
+The numerical evaluation of the resulting coupling-running and leading-matching ledger is consolidated in Table~\ref{tab:pr2_qcd_lambda_scales}.
 
 \begin{table}[H]
 \centering
@@ -4531,27 +4555,29 @@ The second endpoint is the compact boundary-return channel
 \begin{equation}
 {\rm Tr}(P_{\rm bc})=c_{\rm bc}.
 \end{equation}
-The unresolved confinement projector is
+
+Let the normalized endpoint response weights be
 \begin{equation}
 \boxed{
-P_{\rm conf}
-=
-\frac12
-\left(
-P_{\rm singlet}+P_{\rm bc}
-\right).
+w_{\rm singlet}=1,
+\qquad
+w_{\rm bc}=c_{\rm bc}.
 }
 \end{equation}
-Taking the trace gives the compact confinement average
+The unresolved compact confinement response is defined by
 \begin{equation}
 \boxed{
 C_{\rm conf}
 =
-{\rm Tr}(P_{\rm conf})
+\frac12
+\left(
+w_{\rm singlet}+w_{\rm bc}
+\right)
 =
 \frac{1+c_{\rm bc}}{2}.
 }
 \end{equation}
+
 Numerically,
 \begin{equation}
 \boxed{
@@ -4962,7 +4988,7 @@ Evaluating the parameterization directly yields the generated CKM matrix:
 \end{pmatrix}.
 }
 \end{equation}
-The topological integrity of this projection is confirmed by its exact unitarity residual:
+Because the standard unitary CKM parameterization is used, unitarity is exact by construction. The reported residual therefore tests the numerical implementation:
 \begin{equation}
 \boxed{
 \max
@@ -4982,7 +5008,7 @@ J_{\rm CKM}^{\rm PR}
 }
 \end{equation}
 
-It should be noted that this non-vanishing Jarlskog invariant result was not a targeted phenomenological design goal, but rather an entirely emergent consequence that naturally falls out of the geometric framework. This asymmetry is a topological consequence of the broken electroweak fiber. The exact same geometric boundary conditions that structurally dictate the quark mass hierarchy simultaneously guarantee the left-handed sheet misalignment required to generate a non-zero CP-violating phase. Consequently, the framework geometrically unites the origin of quark masses and the structural basis for matter-antimatter asymmetry as a consequences of a single compact projection. The generative parameters and their structural status are consolidated in Table~\ref{tab:pr2_ckm_candidate_main}.
+It should be noted that this non-vanishing Jarlskog invariant result was not a targeted phenomenological design goal, but rather an entirely emergent consequence that resulted from the geometric framework. This asymmetry is a topological consequence of the broken electroweak fiber. The exact same geometric boundary conditions that structurally dictate the quark mass hierarchy simultaneously guarantee the left-handed sheet misalignment required to generate a non-zero CP-violating phase. Consequently, the framework geometrically unites the origin of quark masses and the structural basis for matter-antimatter asymmetry as a consequences of a single compact projection. The generative parameters and their structural status are consolidated in Table~\ref{tab:pr2_ckm_candidate_main}.
 
 
 \begin{table}[ht!]
@@ -5055,7 +5081,7 @@ Numerical solved
 }
 \end{equation}
 
-The PMNS atmospheric-angle candidate is generated by distributing the singlet-plus-adjoint compact-boundary average over the three generation sheets:
+The PMNS atmospheric-angle candidate is generated by distributing the singlet-plus-adjoint compact factor over the three generation sheets:
 \begin{equation}
 \sin^2\theta_{23}^{\rm PR}
 =
@@ -5132,7 +5158,7 @@ Using the standard unitary PMNS parameterization, these angles generate
 \end{pmatrix}.
 }
 \end{equation}
-The unitarity residual is
+As in the CKM construction, unitarity follows from the standard unitary PMNS parameterization. The numerical implementation gives
 \begin{equation}
 \boxed{
 \max
@@ -5187,10 +5213,7 @@ J_{\rm PMNS}^{\rm PR}
 \end{tabular}
 \end{table}
 
-This result should be interpreted as a PMNS lepton-mixing structure candidate. 
-It derives large solar mixing, large atmospheric mixing, a small nonzero reactor angle, and a nonzero leptonic CP phase from compact-boundary data. 
-It does not yet derive neutrino mass eigenvalues, mass-squared splittings, ordering, or Majorana phases. 
-Those are completed in the neutrino mass-sector closure in Section~\ref{sec:pr2_neutrino_mass_majorana_boundary}.
+This result should be interpreted as a PMNS lepton-mixing structure candidate. It derives large solar mixing, large atmospheric mixing, a small nonzero reactor angle, and a nonzero leptonic CP phase from compact-boundary data. It does not yet derive neutrino mass eigenvalues, mass-squared splittings, ordering, or Majorana phases. Those are completed in the neutrino mass-sector closure in Section~\ref{sec:pr2_neutrino_mass_majorana_boundary}.
 
 \subsection{CKM--PMNS Contrast}
 \label{sec:pr2_ckm_pmns_contrast}
@@ -5542,7 +5565,13 @@ It states that the primary compact-boundary mass scale generated is Majorana-lik
 \subsection{Majorana Phase Boundary}
 \label{sec:pr2_majorana_phase_boundary}
 
-We calculate the exact neutrinoless double-beta decay effective mass ($m_{\beta\beta}$). This represents a major, falsifiable prediction of the PR-II architecture. While standard phenomenological models treat the governing Majorana phases as completely unconstrained free parameters yielding a broad, unpredictable envelope of possible decay rates—the PR-II framework forbids arbitrary phase insertions. Instead, the relative Majorana interference phase is derived as a direct topological projection of the residual compact confinement average. By mathematically enforcing this geometric constraint, the framework explicitly collapses the entire normal-ordering uncertainty envelope into a single, definitive numerical target. For the massless anchor ($m_1^{\rm PR}=0$), the neutrinoless double-beta effective mass \cite{Majorana1937, SchechterValle1982} is governed entirely by the interference of the two remaining states:
+Given the PR-II neutrino mass-spectrum candidate, PMNS mixing candidate, and compact Majorana phase rule, the corresponding neutrinoless double-beta effective mass can be evaluated. The numerical result is exact with respect to those stated inputs; the phase relation
+\begin{equation}
+\phi_M^{\rm PR}
+=
+\pi C_{\rm conf}
+\end{equation}
+remains a compact-boundary closure candidate rather than an independently derived theorem. For the massless anchor ($m_1^{\rm PR}=0$), the neutrinoless double-beta effective mass \cite{Majorana1937, SchechterValle1982} is governed entirely by the interference of the two remaining states:
 \begin{equation}
 \boxed{
 m_{\beta\beta}
@@ -5555,7 +5584,7 @@ m_3s_{13}^2e^{i(\alpha_{31}-2\delta_{\rm CP})}
 }
 \end{equation}
 
-Rather than treating the relative phase shift as a fitted phenomenological unknown, the architecture defines the compact-boundary relative Majorana interference phase exactly via the confinement trace:
+Rather than treating the relative phase shift as a fitted phenomenological unknown, the architecture proposes the compact-boundary relative Majorana interference phase through the confinement response:
 \begin{equation}
 \boxed{
 \phi_M^{\rm PR}
@@ -5577,7 +5606,7 @@ Adopting the standard parameterization convention $\alpha_{21}=0$, the compact-b
 }
 \end{equation}
 
-Incorporating the previously generated CP-violating phase ($\delta_{\rm CP}$), this projection mathematically locks the higher-generation Majorana phase at exactly:
+Incorporating the previously generated CP-violating phase ($\delta_{\rm CP}$), this phase rule gives the following higher-generation Majorana phase:
 \begin{equation}
 \boxed{
 \alpha_{31}^{\rm PR}
@@ -5588,16 +5617,17 @@ Incorporating the previously generated CP-violating phase ($\delta_{\rm CP}$), t
 }
 \end{equation}
 
-Evaluating the effective mass directly from these, structurally derived phases yields a definitive theoretical prediction:
+Evaluating the effective mass with these candidate phases gives:
 \begin{equation}
-\boxed{\boxed{
+\boxed{
 m_{\beta\beta}^{\rm PR}
 =
 1.507694477\times10^{-3}\ {\rm eV}.
-}}
+}
 \end{equation}
 
-For this specific normal-ordered mass spectrum, an arbitrary-phase phenomenological model would permit a broad uncertainty envelope spanning from $1.410\ {\rm meV}$ up to $3.642\ {\rm meV}$. By topologically enforcing the compact-boundary Majorana phase, the PR-II architecture decisively breaks this degeneracy \cite{ GERDA2020}. It mandates an exact, highly falsifiable experimental target of $1.508\ {\rm meV}$, residing near the strict lower-interference limit of the allowed parameter space.
+For this normal-ordering mass-spectrum candidate, arbitrary Majorana \cite{MakiNakagawaSakata1962} phases would permit the envelope
+$1.410\ {\rm meV}\leq m_{\beta\beta} \leq 3.642\ {\rm meV}$. The proposed compact-boundary phase selects $m_{\beta\beta}^{\rm PR} = 1.508\ {\rm meV}$, near the lower-interference side of that envelope. The single value is therefore conditional on the phase rule $\phi_M^{\rm PR}=\pi C_{\rm conf}$.
 
 \subsection{Flavor-Basis Majorana Mass Matrix}
 \label{sec:pr2_flavor_basis_majorana_mass_matrix}
@@ -5627,7 +5657,8 @@ M_\nu^{\rm PR}
 M_\nu^{\rm PR}.
 }
 \end{equation}
-This symmetry is a matrix-level mathematical consequence of the Majorana-dominant projection, distinguishing it from that of an ordinary Dirac operator. This matrix represents the terminal output of the structural derivation of the neutrino sector. The complete projection chain is closure, while it originates entirely from the dimension-five ratio $(v_{\rm EW}^{\rm PR})^2 / \bar M_{\rm Pl}$, routes through the compact Majorana channel to yield the exact mass eigenvalues, and finally rotates through the unconfined topological boundary to establish the exact, falsifiable flavor-basis matrix.
+The symmetry $(M_\nu^{\rm PR})^T=M_\nu^{\rm PR}$ 
+follows by construction from the Majorana form $U_{\rm PMNS}^{*}DU_{\rm PMNS}^{\dagger}$. It confirms that the implemented matrix has the required Majorana symmetry, but it does not independently derive the proposed mass eigenvalues or phase rule.
 
 \subsection{Input Discipline and Status}
 \label{sec:pr2_neutrino_input_discipline_status}
@@ -5957,7 +5988,7 @@ g_{hff}^{\rm PR}
 \end{aligned}
 \)
 &
-Tree-level \(hWW\), \(hZZ\), and mass-proportional \(hff\) couplings.
+Tree-level \(hWW\) and \(hZZ\) couplings, together with an \(hff\) coupling conditional on linear order-mode matching.
 &
 Structural tree-level ledger. \(m_h\), scalar self-couplings, and longitudinal unitarity amplitudes are PR-III targets.
 \\ \midrule
