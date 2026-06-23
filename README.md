@@ -1,7 +1,8 @@
 # Projection Relativity
 **Public manuscripts, validation harnesses, data packages, and generated figures**
 
-**PR-I release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.20545407)  
+**PR-I release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.20545407)   
+**PR-II release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.20817164)   
 **Repository:** `oshetskiresearch/Projection_Relativity`  
 **Author:** Michael Stanislaus Oshetski  
 **Email:** oshetski.research@proton.me  
