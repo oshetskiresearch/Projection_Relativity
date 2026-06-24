@@ -49,16 +49,16 @@
 \small Micatu, Inc. \\
 \small Horseheads, New York, USA \\
 \small ORCID: 0009-0007-3623-7586
-\date {May 2026}}
+\date {June 2026}}
 
 \begin{document}
 \maketitle
 \begin{abstract}
 We present Projection Relativity (PR), a spectral--projection framework in which gravitational stiffness, displacement-generated inertia, compact electromagnetic phase, and projection-response effects arise as observable sectors of a single master projection field \(\Psi(x,\xi)\) over an internal spectral manifold. The framework is built from a minimal radial--compact internal geometry,$\mathcal M_{\rm int}=\mathbb R_w\times S^1_\theta,$ whose radial spectral gap supplies a finite coercive scale and whose compact phase coordinate supplies the electromagnetic projection sector. The projected metric recovers the Einstein field equations in the low-energy limit and reduces to the Kerr exterior outside the finite projection core. The same nonzero radial spectral gap replaces the classical \(r=0\) singular endpoint with a bounded finite-core geometry, while preserving standard exterior black-hole phenomenology. In the dynamical ringdown sector, PR inherits the Kerr quasi-normal-mode hierarchy in the exterior limit. Projection-sector corrections are gap-suppressed, so current gravitational-wave observations primarily test the Kerr-recovery limit rather than providing a positive residual detection.
 
-We find a luminosity-linked negative velocity residual in the quasar sample. Across the primary warning-clean estimators, the predicted sign appears in \(140/144\), \(134/144\), \(136/144\), and \(133/144\) matched bins for DR16Q, PIPE, PCA, and MgII, respectively. We also map the foreground-cleaned LoTSS residual, $|{\rm RRM}_{2022}|=1.254538\,{\rm rad\,m^{-2}}$, through the compact-phase magnetic area law, turning the observed Faraday-rotation residual into a projected compact-domain constraint rather than a fixed primordial field amplitude. A first Hubble--DESI pressure test maps the local--CMB Hubble split to a positive projected phase-density offset, \(\Delta\rho_\theta\simeq1.6\times10^{-27}\,{\rm kg\,m^{-3}}\), and finds that a high-\(H_0\) mixed phase-response diagnostic can remain close to compressed DESI BAO distances while approximately preserving the CMB acoustic calibration.
+We find a luminosity-linked negative velocity residual in the quasar sample. Across the primary warning-clean estimators, the predicted sign appears in \(140/144\), \(134/144\), \(136/144\), and \(133/144\) matched bins for DR16Q, PIPE, PCA, and MgII, respectively. We also map the foreground-cleaned LoTSS residual, $|{\rm RRM}_{2022}|=1.254538\,{\rm rad\,m^{-2}}$, through the compact-phase magnetic area law, turning the observed Faraday-rotation residual into a projected compact-domain constraint rather than a fixed primordial field amplitude. At cosmological scales, we formulate a phase-stress diagnostic that separates the expansion-rate normalization from the acceleration observable. The cosmological branch is presented as a falsifiable joint CMB--BAO--supernova--growth stress test.
 
-The resulting architecture provides a compact, testable projection framework for finite-core black holes, Kerr-consistent ringdown phenomenology, magnetically constrained compact phase structure, and luminosity-linked quasar velocity residuals. The complete derivation ledger, symbolic audits, numerical validation scripts, and figure-generation workflows are provided in the companion supplementary material and public repository. The scope of this manuscript is the minimal bosonic projection chain: gravitational stiffness, displacement-generated inertia, compact electromagnetic phase, projection response, and their first observational consequences.
+The resulting architecture provides a compact, testable projection framework for finite-core black holes, Kerr-consistent ringdown phenomenology, magnetically constrained compact phase structure, luminosity-linked quasar velocity residuals, and a conditional cosmological phase-stress program. The complete derivation ledger, symbolic audits, numerical validation scripts, and figure-generation workflows are provided in the companion supplementary material and public repository. The scope of this manuscript is the minimal bosonic projection chain: gravitational stiffness, displacement-generated inertia, compact electromagnetic phase, projection response, and their first observational consequences.
 \end{abstract}
 
 \section{Introduction: Architectural Logic and Geometric Closure}
@@ -88,21 +88,19 @@ This displacement is fundamentally and inseparably linked to stiffness, or gravi
 To complete the spring analogy, phase can be understood as the angular offset, or torsional winding, of the projection spring. This sector is governed by the compact operator \(O_\theta\), the compact internal radius \(R_A\), and the phase coordinate \(\theta\in S^1\). While stiffness describes radial resistance and displacement describes stretch, phase describes compact winding. The compact phase is not chosen independently of the radial stiffness. It is constrained by coherence with the stiffness and displacement sectors. As with twisting a mechanical spring, compact phase winding stores geometric resistance in the internal manifold. In observable spacetime, that winding manifests as the electromagnetic \(U(1)\) phase sector. Expanding this analogy into the physical construction, compact phase winding of the internal projection manifold determines the observable \(U(1)\) phase rotation. By consequence, the electromagnetic coupling is an output of compact phase geometry and finite-rank boundary orientation. It is not inserted as a low-energy calibration.
 
 \subsection{Objective and Methodology}
-Grounded in this internal stiffness architecture, Projection Relativity provides a unified model where gravity, displacement, electromagnetism, and cosmology emerge without independent parameters as projections of a single master field. Regulated by a Geometric Closure Protocol, each sector ensures strict internal consistency and classical low-energy recovery. The framework is regularized by the radial spectral gap ($\mu_{\min}^2$), providing the finite coercive scale needed to resolve classical singularities while preserving verified relativistic successes. Ultimately, Projection Relativity does not replace the local gauge interactions of the Standard Model or QED; rather, it establishes the macroscopic, deterministic geometric architecture upon which those quantum fields operate.
+Grounded in this internal stiffness architecture, Projection Relativity provides a unified model in which gravity, displacement, and electromagnetism emerge as projections of a single master field. The cosmological phase sector is formulated as a projected stress-energy problem whose density, pressure, and directional response must be derived and tested rather than assumed. Regulated by a Geometric Closure Protocol, each closed sector ensures strict internal consistency and classical low-energy recovery. The framework is regularized by the radial spectral gap ($\mu_{\min}^2$), providing the finite coercive scale needed to resolve classical singularities while preserving verified relativistic successes. Ultimately, Projection Relativity does not replace the local gauge interactions of the Standard Model or QED; rather, it establishes the macroscopic, deterministic geometric architecture upon which those quantum fields operate.
 
 \subsection{Test-Driven Theoretical Physics Approach}
 Projection Relativity utilizes a Test-Driven Theoretical Physics methodology, adapting software engineering continuous integration (CI) and regression testing directly to fundamental differential geometry. To ensure structural consistency and eliminate theoretical drift, every equation, tensor relation, and boundary condition in this manuscript is strictly coupled to an automated symbolic engine driven by Maplesoft. The complete test suite and a cloud-executable Python numerical harness are publicly available at \url{https://github.com/oshetskiresearch/Projection_Relativity} for independent verification. Requiring this geometric architecture to successfully compile within an automated pipeline ensures that the framework's macroscopic predictions emerge as the rigid consequences of the mathematical structure.
 
-\subsection{Structure of the Presentation} The remainder of this manuscript is organized to strictly separate geometric construction from phenomenological consequence. Sections 2 and 3 establish the foundational postulates and internal spectral machinery of the framework. Sections 4 through 8 sequentially construct the macroscopic projection sectors: gravitational stiffness, displacement-generated inertia, compact electromagnetic phase, and the corrected wave operator. Section 9 unites these independent channels into a conserved global effective action. Finally, we present the physical consequences of the architecture: Section 10 proves the geometric closure of the framework by deriving the fundamental macroscopic scales without empirical calibration, while Section 11 subjects the theory to falsifiable astrophysical tests, including
-Kerr-consistent gravitational-wave recovery, compact-phase magnetic area-law constraints, and luminosity-linked quasar velocity residuals.
+\subsection{Structure of the Presentation} The remainder of this manuscript is organized to strictly separate geometric construction from phenomenological consequence. Sections 2 and 3 establish the foundational postulates and internal spectral machinery of the framework. Sections 4 through 8 sequentially construct the macroscopic projection sectors: gravitational stiffness, displacement-generated inertia, compact electromagnetic phase, and the corrected wave operator. Section 9 unites these independent channels into a conserved global effective action. Finally, we present the physical consequences of the architecture: Section 10 establishes the geometric closure of the derived macroscopic scales without empirical calibration, while Section 11 subjects the theory to falsifiable astrophysical and cosmological tests, including Kerr-consistent gravitational-wave recovery, compact-phase magnetic area-law constraints, luminosity-linked quasar velocity residuals, high-field phase--displacement bounds, and a joint cosmological phase-stress program.
 
 \subsection{Scope Of Research}
 The architectural objective of Projection Relativity is the
-regularization of classical gravitational singularities  \cite{Bardeen1968,Hayward2006} through the radial spectral gap of the internal projection manifold. The compact electromagnetic phase sector, including the boundary-resolved geometric derivation of its effective coupling., is not introduced as an independent theoretical target. Rather, it emerges as a rigid mathematical consequence of the same \(3+1\) projection trace structure required to stabilize the gravitational
+regularization of classical gravitational singularities  \cite{Bardeen1968,Hayward2006} through the radial spectral gap of the internal projection manifold. The compact electromagnetic phase sector, including the boundary-resolved geometric derivation of its effective coupling, is not introduced as an independent theoretical target. Rather, it emerges as a rigid mathematical consequence of the same \(3+1\) projection trace structure required to stabilize the gravitational
 sector. Accordingly, this manuscript develops the initial bosonic projection
 architecture: gravitational stiffness, displacement structure, compact
 electromagnetic phase, projection response, and their macroscopic observational signatures. The topological enlargement required to incorporate non-Abelian gauge sectors, fermionic matter families, and full particle-sector completion is outside the scope of this first construction and is deferred to possible future research.
-
 
 \section{Foundational Postulates}
 \label{sec:master_projection_field_foundational_postulates}
@@ -410,9 +408,11 @@ P_X[\Psi]
 \text{(projection response)},\\
 P_\theta[\Psi]
 &\rightarrow
-H_{\rm eff}(t)
+T_{\mu\nu}^{(\theta)}(x)
+\rightarrow
+\{H_{\rm eff},q_{\rm eff}\}
 &&
-\text{(homogeneous phase response)}.
+\text{(cosmological phase stress and response)}.
 \end{align}
 
 The organizing correspondence of the framework is defined as
@@ -426,7 +426,8 @@ O_{\rm int}
 \rightarrow
 \{P_g,P_{\rm disp},P_A,P_X,P_\theta\}
 \rightarrow
-\{g_{\mu\nu}^{\rm eff},A_{\rm phys},\mathcal A_\mu,\Sigma_X,H_{\rm eff}\}.
+\{g_{\mu\nu}^{\rm eff},A_{\rm phys},\mathcal A_\mu,\Sigma_X,
+T_{\mu\nu}^{(\theta)},H_{\rm eff},q_{\rm eff}\}.
 }
 \end{equation}
 
@@ -2134,9 +2135,7 @@ This is the PR replacement for the classical mass-inflation channel. When the
 bound is satisfied, the exterior channel cannot run to infinite projected 
 stress-energy. The attempted classical divergence is converted into a finite 
 excitation of the internal spectral-response sector and an update of the 
-finite-core ledger \(\mathcal B_c\).
-
-We tested this claim with two nonlinear effective stability test harnesses: a counter-streaming null-flux model and a two-dimensional double-null wall-collision model. In both benchmarks, the classical channel undergoes runaway mass-inflation growth, while the PR projection-response channel remains bounded throughout the scanned regime satisfying \(2\kappa<\mu_{\min}^2\), plotted in figure ~\ref{fig:pr_mass_inflation_double_wall_summary} .
+finite-core ledger \(\mathcal B_c\). We tested this claim with two nonlinear effective stability test harnesses: a counter-streaming null-flux model and a two-dimensional double-null wall-collision model. In both benchmarks, the classical channel undergoes runaway mass-inflation growth, while the PR projection-response channel remains bounded throughout the scanned regime satisfying \(2\kappa<\mu_{\min}^2\), plotted in figure ~\ref{fig:pr_mass_inflation_double_wall_summary} .
 
 \begin{table}[H]
 \centering
@@ -2172,23 +2171,13 @@ Stable \\
 \end{table}
 
 Here \(\mathcal K_{\rm PR}/\mathcal K_{\max}\) denotes the normalized 
-curvature-response ratio used in the stability harness, with
-\begin{equation}
-\mathcal K_{\rm PR}/\mathcal K_{\max}<1, 
-\end{equation}
-corresponding to bounded projected 
-curvature. Across the stable scanned regime, accumulated energy increases the 
-finite-core ledger \(\mathcal B_c\), the total mass \(M(t)\), and the 
-saturation radius \(r_c(M)\), while the central density remains fixed at 
-\(\rho_{\max}\). Added energy therefore grows the finite core; it does not 
-increase the curvature beyond the spectral ceiling. The mass-inflation channel 
-is quenched because the PR core is governed by different mathematics than the 
-classical inner-horizon geometry assumed in the no-go theorem.
+curvature-response ratio used in the stability harness, with $\mathcal K_{\rm PR}/\mathcal K_{\max}<1$,
+corresponding to bounded projected curvature. Across the stable scanned regime, accumulated energy increases the finite-core ledger \(\mathcal B_c\), the total mass \(M(t)\), and the saturation radius \(r_c(M)\), while the central density remains fixed at \(\rho_{\max}\). Added energy therefore grows the finite core; it does not increase the curvature beyond the spectral ceiling. The mass-inflation channel is quenched because the PR core is governed by different mathematics than the classical inner-horizon geometry assumed in the no-go theorem.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \captionsetup{font=footnotesize}
-\includegraphics[width=1.00\textwidth]{plots/pr_combined_mass_inflation_double_wall_summary (2).png}
+\includegraphics[width=0.68\textwidth]{plots/pr_combined_mass_inflation_double_wall_summary (2).png}
 \caption{
 \textbf{Nonlinear compact-core stability tests.}
 The classical counter-streaming channels exhibit runaway divergence, while the PR projection-response channels remain bounded throughout the scanned regime \(2\kappa<\mu_{\min}^2\). The core safely absorbs the inflationary energy into the internal ledger, keeping the curvature invariant strictly below the ceiling (\(K_{\rm PR}/R_{\max}<1\)).
@@ -2742,9 +2731,7 @@ observational tests in Section~\ref{sec:astrophysical_projections_phenomenologic
 \section{Observational Tests and Astrophysical Consistency}
 \label{sec:observational_tests}
 \label{sec:astrophysical_projections_phenomenological_signature}
-
-
-We separate our observational framework into positive tests and consistency bounds. The gravitational-wave sector acts as a Kerr-recovery constraint, ensuring exterior Kerr-consistency while suppressing geometric residuals. The quasar sector provides the primary direct support via luminosity-linked velocity residuals stabilized by low-ionization anchoring. Finally, foreground-cleaned Faraday residuals in the magnetic sector establish an inverse constraint on the projected compact-phase area rather than a universal fixed magnetic amplitude.
+We separate our observational framework into positive tests and consistency bounds. The gravitational-wave sector acts as a Kerr-recovery constraint, ensuring exterior Kerr-consistency while suppressing geometric residuals. The quasar sector provides the primary direct support via luminosity-linked velocity residuals stabilized by low-ionization anchoring. Finally, foreground-cleaned Faraday residuals in the magnetic sector establish an inverse constraint on the projected compact-phase area rather than a universal fixed magnetic amplitude. The cosmological sector is treated separately as a joint density–pressure and directional-response stress test; no dark-energy detection, deceleration detection, or Hubble-tension resolution is claimed in the present work
 
 \subsection{Quasar Luminosity-Linked Velocity Residual Test}
 \label{sec:quasar_luminosity_residual_test}
@@ -3165,17 +3152,17 @@ rather than confirming a universal fixed primordial magnetic amplitude.
 The LoTSS \cite{Shimwell2019} foreground-cleaned residual-RM analysis gives a robust residual
 Faraday-rotation scale after Galactic foreground subtraction. The preferred
 2022 one-degree foreground branch gives a high-latitude residual of order $|{\rm RRM}_{2022}|
-\simeq 1.25\ {\rm rad\,m^{-2}}.$ The bootstrap branch gives $|{\rm RRM}_{2022}| = 1.254538\ {\rm rad\,m^{-2}}, $95\%{\rm\ CI}=1.192766\text{--}1.323486\\ {\rm rad\,m^{-2}}$. Under representative coherent-path plasma assumptions, this residual maps to
-an order-nG line-of-sight field scale. Using the compact-phase area law, residual fields of order  $B_{\rm geo}^{\rm PR} \sim 0.5\text{--}4\,{\rm nG}$ correspond to
+\simeq 1.25\ {\rm rad\,m^{-2}}.$ The bootstrap branch gives $|{\rm RRM}_{2022}| = 1.254538\ {\rm rad\,m^{-2}}$, $95\%{\rm\ CI}=1.192766\text{--}1.323486\\ {\rm rad\,m^{-2}}$. Under representative coherent-path plasma assumptions, this residual maps to an order-nG line-of-sight field scale. Using the compact-phase area law, residual fields of order  $B_{\rm geo}^{\rm PR} \sim 0.5\text{--}4\,{\rm nG}$ correspond to
+
 \begin{equation}
 \boxed{
 A_{\rm proj}^{(\theta)}
 \simeq
 0.0225\text{--}0.180\ {\rm m^2},
-}
-\end{equation}
+ }
+\quad
 or
-\begin{equation}
+\quad
 \boxed{
 \sqrt{A_{\rm proj}^{(\theta)}}
 \simeq
@@ -3408,68 +3395,112 @@ This establishes that, standard magnetar timing events ($|\Delta\nu/\nu| \sim 10
 }
 \end{equation}
 
-\subsection{Dark Energy, Vacuum Projection, and the Hubble-Scale Response}
-\label{sec:dark_energy}
+\subsection{Cosmological Phase Response: Expansion, Acceleration, and Current Supernova Stress Tests}
+\label{sec:cosmological_phase_response}
 
-The classical cosmological constant problem arises when the raw zero-point energy of quantum fields is treated as the directly gravitating vacuum source. In that interpretation, the formal vacuum sum produces an enormous bare energy density \(\rho_{\rm vac}^{\rm bare}\) that contradicts observation by many orders of magnitude. Projection Relativity resolves this by strictly differentiating the unprojected vacuum bookkeeping term from the observable gravitational source. The observed late-time vacuum-like contribution is not the raw ultraviolet vacuum. It is the projection-coherent compact-phase contribution that survives the internal spectral projection and appears in the homogeneous phase-response sector.
+The cosmological phase sector must distinguish three logically separate objects. First a renormalized coherent phase baseline. Second the homogeneous phase stress-energy that governs the background expansion, and finally a local or window-dependent response terms inferred from particular observations. A density-only relation is insufficient to determine whether the expansion accelerates or decelerates, because the acceleration equation depends on both density and pressure. The purpose of this subsection is therefore not to identify the compact phase sector with dark energy by assumption. It is to state the minimum stress-energy structure that Projection Relativity (PR) must derive and to define observational tests that can distinguish an isotropic accelerating branch, an isotropic decelerating branch, and a local directional-response branch.
 
-\subsubsection{Projection Subtraction of the Bare Vacuum}
+\subsubsection{Renormalized Phase Baseline and Effective Stress-Energy}
+\label{sec:phase_stress_energy}
 
-PR separates the bare vacuum bookkeeping from the observable vacuum source by defining the coherent projected contribution as a difference relative to the projection-symmetric zero-point baseline:
+PR separates the unprojected vacuum bookkeeping term from the observable projected source by defining a coherent phase baseline relative to the projection-symmetric state,
 \begin{equation}
 \rho_{\theta,0}
 \equiv
-\rho_{\Lambda}^{\rm PR}
-=
 \rho_{\theta}^{\rm coh}
 -
-\rho_{\theta}^{(0)}
-=
-\Delta\rho_{\theta}^{\rm coh}.
+\rho_{\theta}^{(0)}.
 \end{equation}
-
-Here \(\rho_{\theta,0}\) denotes the coherent compact-phase floor. It is a geometric boundary-selected contribution of the projection architecture, not the unprojected vacuum sum. Because the homogeneous phase contribution is regulated by the same internal radial gap \(\mu_{\min}^2\) and phase normalization \(Z_A\) that govern the rest of the PR architecture, this residual is finite. The smallness of the observed dark-energy scale is therefore not an arbitrary fine-tuning cancellation, but a geometric consequence of the fact that only a fractional coherent phase residual survives projection into observable spacetime is $0<\epsilon_\theta\ll1$. As derived from the effective homogeneous phase Lagrangian in the supplementary material, the leading coherent late-time phase state has the vacuum-like equation-of-state limit
-\begin{equation}
-w_\theta^{(0)}
-=
-\frac{p_{\theta,0}}{\rho_{\theta,0}c^2}
-\simeq
--1.
-\end{equation}
-
-Equivalently,
-\begin{equation}
-p_{\theta,0}
-\simeq
--\rho_{\theta,0}c^2.
-\end{equation}
-
-This statement should be read as a geometric floor condition. It says that the lowest coherent compact-phase state is vacuum-like and cannot be unwound into the raw zero-point baseline by ordinary expansion. It does not say that the total Hubble rate is constant, nor that the observable projected phase response is identical across all redshift, scale, and observational windows. The observable homogeneous phase density may therefore be written as
+This equation is a renormalization condition for the observable source. By itself, it does not calculate the sign or magnitude of \(\rho_{\theta,0}\), and it should not be presented as a complete solution of the cosmological-constant problem. A full closure requires the projected action to determine both \(\rho_{\theta,0}\) and its pressure. We let \(\varepsilon_\theta=\rho_\theta c^2\) denote the phase energy density. In the phase-sector rest frame, the minimal effective stress-energy decomposition is
 \begin{equation}
 \boxed{
-\rho_\theta(a,\mathcal W)
+T_{\mu\nu}^{(\theta)}
+=
+\frac{\varepsilon_\theta+p_\theta}{c^2}
+ u_\mu u_\nu
++
+p_\theta g_{\mu\nu}^{\rm eff}
++
+\pi_{\mu\nu}^{(\theta)},
+}
+\end{equation}
+where \(u^\mu u_\mu=-c^2\), and \(\pi_{\mu\nu}^{(\theta)}\) is the traceless anisotropic stress. The exactly homogeneous and isotropic background has \(\bar\pi_{\mu\nu}^{(\theta)}=0\) and is described by
+\begin{equation}
+\bar\rho_\theta(a)
 =
 \rho_{\theta,0}
 +
-\delta\rho_\theta(a,\mathcal W),
-}
+\delta\bar\rho_\theta(a),
+\qquad
+\bar p_\theta(a)
+=
+p_{\theta,0}
++
+\delta\bar p_\theta(a).
 \end{equation}
-where \(\mathcal W\) denotes the observational window. The first term, \(\rho_{\theta,0}\), is the coherent geometric phase floor. The second term, \(\delta\rho_\theta(a,\mathcal W)\), is the scale- or redshift-dependent projected phase response sampled by a given observation. The corresponding effective equation of state is
+If the background phase sector is separately conserved, then
+\begin{equation}
+\frac{d\bar\rho_\theta}{d\ln a}
+=
+-3\left(
+\bar\rho_\theta
++
+\frac{\bar p_\theta}{c^2}
+\right).
+\end{equation}
+Consequently,
 \begin{equation}
 \boxed{
-w_\theta^{\rm eff}(a,\mathcal W)
+\bar w_\theta(a)
+\equiv
+\frac{\bar p_\theta(a)}{\bar\rho_\theta(a)c^2}
 =
 -1
 -
 \frac{1}{3}
-\frac{d\ln\rho_\theta(a,\mathcal W)}{d\ln a}.
+\frac{d\ln\bar\rho_\theta}{d\ln a},
 }
 \end{equation}
-
-We find that \(w_\theta^{(0)}\simeq -1\) is the leading coherent limit, while departures of \(w_\theta^{\rm eff}\) from \(-1\) constrain the evolution of the projected phase-response correction \(\delta\rho_\theta(a,\mathcal W)\). This geometric mechanism provides a natural, field-free theoretical origin for the dynamical dark energy hints recently observed by the DESI \cite{Adame2024DESI} collaboration, diverging from the rigid $w = -1$ constraint of standard $\Lambda$CDM cosmology without requiring ad-hoc scalar fields like Quintessence. The expansion rate is controlled by the total homogeneous density:
+provided that \(\bar\rho_\theta>0\) and no energy is exchanged with the other projected sectors. The proposed coherent-floor limit
+\begin{equation}
+ p_{\theta,0}\simeq-\rho_{\theta,0}c^2
+ \qquad
+ (w_{\theta}^{(0)}\simeq-1)
+\end{equation}
+is therefore a candidate low-response limit, not a statement that this component must dominate the present universe. A finite observational window may sample local departures from the homogeneous background. We define this as
+\begin{equation}
+\rho_\theta(a,{\cal W},\hat{\bm n})
+=
+\bar\rho_\theta(a)
++
+\delta\rho_\theta(a,{\cal W},\hat{\bm n}),
+\qquad
+p_\theta(a,{\cal W},\hat{\bm n})
+=
+\bar p_\theta(a)
++
+\delta p_\theta(a,{\cal W},\hat{\bm n}).
+\end{equation}
+For comparison with low-redshift supernova cosmography, a useful data-level directional parameterization is
 \begin{equation}
 \boxed{
-H_{\rm PR}^{2}(a,\mathcal W)
+q_{\rm PR}(z,\hat{\bm n};{\cal W})
+=
+q_{\rm m}(z;{\cal W})
++
+\bm q_{\rm d}(z;{\cal W})\!\cdot\!\hat{\bm n}\,
+\exp\!\left(-\frac{z}{S}\right).
+}
+\end{equation}
+Here \(q_{\rm m}\) is the monopole, \(\bm q_{\rm d}\) is a dipole, and \(S\) is its redshift-decay scale. This is an observational ansatz, not yet a PR-derived field equation. A fitted dipole can support PR only after the projection operators \(P_\theta\) and \(P_X\) predict its direction, scale, and amplitude independently of the supernova fit.
+
+\subsubsection{Expansion Rate and Acceleration Are Distinct Tests}
+\label{sec:phase_expansion_acceleration}
+
+For a homogeneous FLRW background, the phase sector enters the Friedmann equation through its density,
+\begin{equation}
+\boxed{
+H_{\rm PR}^2(a)
 =
 \frac{8\pi G_N}{3}
 \left[
@@ -3477,417 +3508,260 @@ H_{\rm PR}^{2}(a,\mathcal W)
 +
 \rho_m(a)
 +
-\rho_{\theta,0}
-+
-\delta\rho_\theta(a,\mathcal W)
-\right].
-}
-\end{equation}
-
-Consequently, the coherent phase floor can be present at all epochs without dominating the early universe. Radiation and matter dilute as the universe expands, while the coherent phase floor remains vacuum-like. The phase sector becomes dynamically dominant only after the matter and radiation responses have diluted sufficiently.
-
-\subsubsection{The Hubble Tension as a Scale-Dependent Phase Response}
-
-This architectural framework offers a PR-native interpretation of the Hubble tension~\cite{DiValentino2021}. The early-universe CMB inference and the late-universe local distance-ladder inference do not necessarily sample the same projected phase-response average. This naturally accommodates recent James Webb Space Telescope (JWST) observations \cite{Riess2024JWST} that confirm the local Cepheid-calibrated expansion rate is definitively higher than the Planck CMB baseline \cite{planck2020}, interpreting the divergence as a localized geometric phase response rather than a calibration error or a breakdown of low-energy relativity. In PR, the coherent floor \(\rho_{\theta,0}\) is common to both descriptions, but the projected correction \(\delta\rho_\theta(a,\mathcal W)\) can differ between the CMB and local observational windows. We therefore define
-\begin{equation}
-\boxed{
-\bar\rho_{\theta}^{\rm CMB}
-=
-\rho_{\theta,0}
-+
-\left\langle
-\delta\rho_\theta
-\right\rangle_{\rm CMB},
-}
-\end{equation}
-and
-\begin{equation}
-\boxed{
-\bar\rho_{\theta}^{\rm loc}
-=
-\rho_{\theta,0}
-+
-\left\langle
-\delta\rho_\theta
-\right\rangle_{\rm loc}.
-}
-\end{equation}
-
-The common coherent floor cancels in the difference:
-\begin{equation}
-\Delta\rho_\theta
-=
-\bar\rho_{\theta}^{\rm loc}
+\bar\rho_\theta(a)
+\right]
 -
-\bar\rho_{\theta}^{\rm CMB}
-=
-\left\langle
-\delta\rho_\theta
-\right\rangle_{\rm loc}
--
-\left\langle
-\delta\rho_\theta
-\right\rangle_{\rm CMB}.
+\frac{k c^2}{a^2}.
+}
 \end{equation}
-
-The effective PR Friedmann \cite{Friedmann1922} diagnostic then links this projected phase-response difference to the observed Hubble discrepancy:
+Whether the expansion accelerates is determined independently by the acceleration equation,
 \begin{equation}
 \boxed{
-\Delta\rho_\theta
+\frac{\ddot a}{a}
 =
-\frac{3}{8\pi G_N}
-\left[
+-\frac{4\pi G_N}{3}
 \left(
-H_0^{\rm loc}
-\right)^2
--
-\left(
-H_0^{\rm CMB}
-\right)^2
-\right].
-}
-\end{equation}
-
-This equation is the PR Hubble-response diagnostic. The relevant observational inequality is therefore
-\begin{equation}
-H_0^{\rm loc} > H_0^{\rm CMB}
-\quad
-\Longleftrightarrow
-\quad
-\left\langle
-\delta\rho_\theta
-\right\rangle_{\rm loc}
->
-\left\langle
-\delta\rho_\theta
-\right\rangle_{\rm CMB}.
-\end{equation}
-
-Equivalently,
-\begin{equation}
-\boxed{
-H_0^{\rm loc} > H_0^{\rm CMB}
-\quad
-\Longleftrightarrow
-\quad
-\bar\rho_{\theta}^{\rm loc}
->
-\bar\rho_{\theta}^{\rm CMB}.
-}
-\end{equation}
-
-In this interpretation, a higher local Hubble inference does not indicate a failure of low-energy relativity and does not require modifying the gravitational constant \(G_N\). It indicates that the local late-time observational window samples a larger projected compact-phase response than the CMB-inferred window. The geometric constant is the coherent phase floor \(\rho_{\theta,0}\); the physical cosmological response is the total window-dependent quantity \(\rho_\theta(a,\mathcal W)\). The deterministic chain is therefore more accurately written as
-\begin{equation}
-\boxed{
-P_\theta[\Psi]
-\rightarrow
-\theta_{\rm hom}(t)
-\rightarrow
-\rho_{\theta,0}
+\rho_{\rm tot}
 +
-\delta\rho_\theta(a,\mathcal W)
-\rightarrow
-H_{\rm PR}(a,\mathcal W).
-}
-\end{equation}
-
-This preserves the leading vacuum-like phase floor while allowing precision cosmological datasets to test whether the projected phase response carries measurable scale or redshift dependence.
-
-\subsubsection{Compressed Hubble--DESI Mixed Phase-Response Diagnostic}
-\label{sec:hubble_desi_mixed_response}
-
-The Hubble-window diagnostic establishes both the sign and the magnitude of the projected phase-response offset. A stricter follow-up question is whether this offset can coexist with baryon acoustic oscillation (BAO) data and the CMB acoustic calibration. As recent studies have emphasized in their analyzes of the DESI data \cite{Adame2024DESI, Giare2024_Dynamical, Li2026_DarkSector}, successfully resolving the Hubble tension requires a unified cosmological framework that simultaneously modifies early-universe calibration scales and late-time expansion dynamics. This provides a vital pressure test of the PR cosmological sector, as the framework does not treat the late-time phase response as a rigid physical cosmological constant. Instead, the observable phase density is inherently window-dependent:
-\begin{equation}
-\boxed{
-\rho_\theta(a,\mathcal W)
-=
-\rho_{\theta,0}
-+
-\delta\rho_\theta(a,\mathcal W).
-}
-\end{equation}
-Here, \(\rho_{\theta,0}\) is the coherent geometric phase floor, while \(\delta\rho_\theta(a,\mathcal W)\) is the projected phase-response correction sampled by a specific observational window.
-
-Using the local and CMB Hubble ~\cite{H0DN2026,Planck2018Cosmology} references
-$H_0^{\rm loc} = 73.50\pm0.81\ {\rm km\,s^{-1}\,Mpc^{-1}}$, and $H_0^{\rm CMB} = 67.4\pm0.5\ {\rm km\,s^{-1}\,Mpc^{-1}}$, the PR phase-response diagnostic gives
-\begin{equation}
-\Delta H_0
-=
-6.10\ {\rm km\,s^{-1}\,Mpc^{-1}},
+\frac{3p_{\rm tot}}{c^2}
+\right),
 \qquad
-\frac{\Delta H_0}{\sigma_{\Delta H_0}}
-=
-6.41,
+q_{\rm PR}
+\equiv
+-\frac{\ddot a}{aH_{\rm PR}^2}.
+}
 \end{equation}
-
-where
+For matter, radiation, and a homogeneous phase component,
 \begin{equation}
-\sigma_{\Delta H_0}
+q_0
 =
-\sqrt{
-(\sigma_{H_0}^{\rm loc})^2
+\frac{1}{2}\Omega_{m,0}
 +
-(\sigma_{H_0}^{\rm CMB})^2
-}.
+\Omega_{r,0}
++
+\frac{1}{2}\Omega_{\theta,0}
+\left(1+3\bar w_{\theta,0}\right).
 \end{equation}
-
-The corresponding projected phase-density gap, with \(H_0\) converted to \({\rm s^{-1}}\), is
+In the vacuum-like limit \(\bar w_{\theta,0}=-1\), and neglecting radiation,
 \begin{equation}
-\Delta\rho_\theta
+\boxed{
+q_0
+\simeq
+\frac{1}{2}\Omega_{m,0}
+-
+\Omega_{\theta,0}.
+}
+\end{equation}
+Thus a positive present-day monopole \(q_0>0\) would not remove the phase sector. It would require at least one of the following: either the vacuum-like phase floor is presently subdominant, the effective phase pressure differs from \(p_\theta=-\rho_\theta c^2\), or the low-redshift inference contains a local directional or population-dependent contribution. Conversely, a negative \(q_0\) does not by itself establish a PR phase origin; PR must predict the required density and pressure from the projected action.
+
+\subsubsection{Pantheon+ Progenitor-Age and Directional Stress Test}
+\label{sec:pantheon_phase_stress_test}
+
+The current Type Ia supernova literature does not provide a single settled result that PR may adopt as confirmation. Sah, Rameez, and Sarkar applied a fixed progenitor-age luminosity correction to Pantheon+ and reported positive best-fit monopoles, \(q_{\rm m}=0.35\), \(0.31\), \(0.32\), and \(0.21\) in the heliocentric, Local Group, CMB, and peculiar-velocity-corrected Hubble-diagram frames, respectively. Their fitted local dipole remained essentially unchanged and decayed on a scale \(S\sim0.01\) in redshift \cite{Sah2026PantheonAge}. This analysis therefore favors a decelerating monopole plus a local directional term under its adopted age correction.
+
+Independent analyses dispute the magnitude of the correction. Wiseman et al. argue that the standard host-mass correction absorbs the relevant environmental dependence, report host-mass-step evolution of \(-0.028\pm0.034\,\mathrm{mag}\,z^{-1}\), and find that including it changes the inferred dark-energy equation-of-state parameter by less than \(0.01\) \cite{Wiseman2026StillAccelerating}. A larger TITAN host-galaxy analysis finds only modest mean progenitor-age evolution and a redshift-dependent luminosity bias consistent with zero at current precision \cite{Murakami2026OldUniverse}. Chung et al. have in turn challenged those rebuttals and argue that the age correction remains cosmologically important \cite{Chung2026StillNonAccelerating}. The progenitor-age question is therefore an active nuisance-model dispute, not a closed observational premise. Our proposed model is
+\begin{equation}
+\boxed{
+\begin{aligned}
+m_{B,i}^{\rm model}
+={}&
+M
++
+\mu_{\rm cos}
+\!\left(z_i,\hat{\bm n}_i;\Theta_{\rm cos}\right)
+-
+\alpha x_{1,i}
++
+\beta c_i
++
+\Delta_{\rm host}(M_{\star,i})
++
+\gamma_{\rm age}\,\Delta t_{{\rm prog},i},
+\end{aligned}
+}
+\end{equation}
+with a joint parameter set containing at minimum
+\begin{equation}
+\Theta_{\rm fit}
+=
+\left\{
+H_0,
+q_{\rm m},
+\bm q_{\rm d},
+S,
+j_0,
+M,
+\alpha,
+\beta,
+\Delta_M,
+\gamma_{\rm age},
+\sigma_{\rm int},
+\Theta_{\rm DTD},
+\Theta_{v_{\rm pec}}
+\right\}.
+\end{equation}
+The host-mass step, age-luminosity slope, host-to-progenitor age mapping, delay-time distribution, intrinsic scatter, redshift frame, and peculiar-velocity covariance must be marginalized rather than fixed to a single branch. Until that joint analysis is completed, PR1 makes no supernova-based detection claim for either dark energy or deceleration.
+
+\subsubsection{Conditional Hubble-Window Mapping and the Required Joint Likelihood}
+\label{sec:hubble_window_conditional}
+
+A difference between locally inferred and early-universe-inferred values of \(H_0\) does not directly measure a phase density. For two inference windows, \(A\) and \(B\), the Friedmann equation gives
+\begin{equation}
+\boxed{
+\begin{aligned}
+\Delta\rho_\theta^{A-B}
+={}&
+\frac{3}{8\pi G_N}
+\left(H_A^2-H_B^2\right)
+-
+\Delta\rho_m^{A-B}
+-
+\Delta\rho_r^{A-B}
++
+\frac{3c^2}{8\pi G_N}
+\Delta\!\left(\frac{k}{a^2}\right)_{A-B},
+\end{aligned}
+}
+\end{equation}
+where \(\Delta X^{A-B}=X_A-X_B\). Only after holding the matter, radiation, curvature, calibration, and model assumptions fixed does this reduce to
+\begin{equation}
+\Delta\rho_{\rm eff}
 =
 \frac{3}{8\pi G_N}
 \left[
 \left(H_0^{\rm loc}\right)^2
 -
-\left(H_0^{\rm CMB}\right)^2
-\right]
-=
-1.61\times10^{-27}\ {\rm kg\,m^{-3}}.
-\end{equation}
-
-Equivalently, as an energy density, $\Delta u_\theta = \Delta\rho_\theta c^2
-= 1.45\times10^{-10}\ {\rm J\,m^{-3}}$. Relative to the CMB-inferred critical density,
-\begin{equation}
-\rho_{\rm crit}^{\rm CMB}
-=
-\frac{3\left(H_0^{\rm CMB}\right)^2}{8\pi G_N},
-\end{equation}
-this corresponds to
-\begin{equation}
-\Delta\Omega_\theta
-=
-\frac{\Delta\rho_\theta}{\rho_{\rm crit}^{\rm CMB}}
-\simeq
-0.189.
-\end{equation}
-
-A Monte Carlo propagation using \(2\times10^5\) draws gives $\widehat P_{\rm MC} \!\left(H_0^{\rm loc}>H_0^{\rm CMB}\right)=1.000$
-with $(N_{\rm MC}=2\times10^5)$. That is, every sampled draw satisfied the PR sign inequality under the adopted Gaussian uncertainty model. Consequently, the current local and CMB Hubble windows satisfy the PR sign requirement:
-\begin{equation}
-H_0^{\rm loc}>H_0^{\rm CMB}
-\quad
-\Longleftrightarrow
-\quad
-\left\langle
-\delta\rho_\theta
-\right\rangle_{\rm loc}
->
-\left\langle
-\delta\rho_\theta
-\right\rangle_{\rm CMB}.
-\end{equation}
-
-The more restrictive test is whether a mixed early/late response can preserve the CMB acoustic calibration while remaining compatible with compressed DESI BAO distances. 
-The relevant acoustic-calibration condition is
-\begin{equation}
-\boxed{
-\delta\ln H_0
-+
-\delta\ln r_d
--
-\delta\ln
-\left(
-\int_0^{z_*}
-\frac{dz}{E(z)}
-\right)
-\simeq
-0,
-}
-\end{equation}
-where
-\begin{equation}
-\boxed{
-E(z)
-=
-\frac{H(z)}{H_0},
-}
-\end{equation}
-and \(r_d\) is the sound-horizon calibration scale. 
-Physically, this condition states that any change in the late-time Hubble normalization must be compensated by the early calibration scale and the dimensionless distance integral in order to preserve the observed acoustic angular scale.
-
-For an initial compressed diagnostic, we parameterize the effective late-time phase response using the CPL form
-\begin{equation}
-w_\theta^{\rm eff}(a)
-=
-w_0+w_a(1-a),
-\end{equation}
-while allowing an early calibration response
-\begin{equation}
-r_d
-\rightarrow
-r_d\,s_r.
-\end{equation}
-
-The corresponding phase-response density factor is
-\begin{equation}
-\boxed{
-f_\theta(z)
-=
-(1+z)^{3(1+w_0+w_a)}
-\exp
-\left[
--\frac{3w_a z}{1+z}
+\left(H_0^{\rm ref}\right)^2
 \right].
-}
 \end{equation}
-
-The compressed BAO observables used in this diagnostic are defined on a single line as:
-\begin{equation}
-\frac{D_H(z)}{r_d} = \frac{c}{H(z)r_d}, \qquad \frac{D_M(z)}{r_d} = \frac{c}{H_0r_d}\int_0^z\frac{dz'}{E(z')}, \qquad \frac{D_V(z)}{r_d} = \frac{\left[zD_M^2(z)D_H(z)\right]^{1/3}}{r_d}.
-\end{equation}
-Using the compressed DESI DR2 BAO mean vector and covariance as diagnostic inputs, we scanned the mixed-response parameter set $\{H_0, \Omega_m, w_0, w_a, s_r\}$.
-
-
-
-\begin{table}[H]
-\centering
-\caption{Best first-pass Hubble--DESI mixed phase-response diagnostic point.}
-\label{tab:hubble_desi_diagnostic_point}
-\small
-\renewcommand{\arraystretch}{1.28}
-\begin{tabular}{p{10.0cm} c p{4.8cm}}
-\hline
-\textbf{Parameter Description} & \textbf{Symbol} & \textbf{Value} \\ \hline
-
-\multicolumn{3}{l}{\textbf{Mixed-response parameters}} \\ \hline
-
-Hubble constant & \(H_0\) & \(72.846\ {\rm km\,s^{-1}\,Mpc^{-1}}\) \\
-
-Matter density parameter & \(\Omega_m\) & \(0.3065\) \\
-
-Effective phase-response equation of state & \(w_0\) & \(-0.913\) \\
-
-Effective phase-response evolution & \(w_a\) & \(+0.047\) \\
-
-Sound-horizon scale factor & \(s_r\) & \(0.9248\) \\
-
-Effective sound horizon & \(r_d\) & \(136.03\ {\rm Mpc}\) \\ \hline
-
-\multicolumn{3}{l}{\textbf{Compressed BAO and CMB-calibration diagnostics}} \\ \hline
-
-BAO diagnostic score, thirteen observables & \(\chi^2_{\rm BAO}\) & \(11.13\) \\
-
-Acoustic-proxy residual & \(\Delta_{\theta_*}\) & \(-0.254\%\) \\ \hline
-
-\multicolumn{3}{l}{\textbf{PR phase-response density outputs}} \\ \hline
-
-PR projected phase-density offset & \(\Delta\rho_\theta\) & \(1.43\times10^{-27}\ {\rm kg\,m^{-3}}\) \\
-
-PR projected phase-energy offset & \(\Delta u_\theta\) & \(1.29\times10^{-10}\ {\rm J\,m^{-3}}\) \\
-
-Relative density offset & \(\Delta\Omega_\theta\) & \(0.168\) \\ \hline
-
-\end{tabular}
-
-\vspace{0.45em}
-\begin{minipage}{0.92\textwidth}
-\footnotesize
-\textit{Note.}
-This table reports a first-pass compressed Hubble--DESI diagnostic, not a completed cosmological likelihood fit. 
-The best point raises \(H_0\) close to the local value while keeping the compressed BAO vector reasonably matched and the CMB acoustic-proxy residual small. 
-Because \(s_r=0.9248\), the solution is primarily an early-calibration-dominated mixed response, corresponding to a sound-horizon compression from \(147.09\,{\rm Mpc}\) to \(136.03\,{\rm Mpc}\). 
-Although \(w_0>-1\), the best point has \(w_a>0\), so it is not claimed as a direct fit to the commonly discussed DESI-favored \(w_a<0\) quadrant.
-\end{minipage}
-\end{table}
-
-The diagnostic point in Table~\ref{tab:hubble_desi_diagnostic_point} raises the expansion normalization close to the local Hubble value while keeping the compressed DESI BAO distance vector reasonably matched and the CMB acoustic-proxy residual small. This should be interpreted as a first-pass pressure test of the PR phase-response architecture, not as a completed DESI likelihood fit. The dominant mechanism in this initial scan is an early-calibration response. In particular, the sound-horizon calibration scale is reduced by approximately \(7.5\%\):
+Using \(H_0^{\rm loc}=73.50\pm0.81\,\mathrm{km\,s^{-1}\,Mpc^{-1}}\) and \(H_0^{\rm ref}=67.4\pm0.5\,\mathrm{km\,s^{-1}\,Mpc^{-1}}\) gives the conditional scale
 \begin{equation}
 \boxed{
-r_d:
-147.09\ {\rm Mpc}
-\rightarrow
-136.03\ {\rm Mpc}.
+\Delta\rho_{\rm eff}
+\simeq
+1.61\times10^{-27}\ {\rm kg\,m^{-3}}.
 }
 \end{equation}
-The best diagnostic point is better described as an early-calibration-dominated mixed response than as a purely late-time dynamical-dark-energy solution. The late-time phase-response parameters remain mild, $w_0=-0.913$, and $w_a=+0.047$. Although \(w_0>-1\), the point does not lie in the commonly discussed DESI-favored quadrant \(w_a<0\). Accordingly, the present result is not claimed as a direct DESI \(w_0w_a\) fit. Its significance is narrower; the same PR phase-response architecture that produces the positive Hubble-window density offset can also remain compatible with a compressed BAO/CMB calibration pressure test.
-
-The cosmological diagnostic chain is therefore
+This number is an effective density-equivalent diagnostic, not a direct measurement of \(\Delta\rho_\theta\). Changes in the sound horizon, supernova calibration, recombination physics, or the assumed background model can shift the inferred \(H_0\) without representing a local phase-energy excess \cite{H0DN2026,Planck2018Cosmology}. The cosmological phase sector must therefore be tested with a joint likelihood,
 \begin{equation}
 \boxed{
-\rho_{\theta,0}
-+
-\delta\rho_\theta(a,\mathcal W)
-\rightarrow
-H_0^{\rm loc}>H_0^{\rm CMB}
-\rightarrow
-\Delta\rho_\theta>0
-\rightarrow
-\text{compressed BAO/CMB calibration pressure test}.
+{\cal L}_{\rm joint}
+=
+{\cal L}_{\rm CMB}
+{\cal L}_{\rm BAO}
+{\cal L}_{\rm SN}
+{\cal L}_{\rm growth}
+{\cal L}_{H_0},
 }
 \end{equation}
-Future work should replace this compressed diagnostic with a full cosmological likelihood analysis including CMB, BAO, supernova, and growth information.
+returning a common posterior for
+\begin{equation}
+\left\{
+H_0,
+r_d,
+\Omega_m,
+\bar\rho_\theta(a),
+\bar p_\theta(a),
+q_{\rm m},
+\bm q_{\rm d},
+S,
+\gamma_{\rm age},
+\Theta_{\rm DTD}
+\right\}.
+\end{equation}
+The earlier single-point compressed Hubble--DESI scan is therefore an exploratory calibration benchmark only. In particular, a free rescaling of \(r_d\) is not a PR prediction until it follows from a derived early-time phase stress-energy and remains consistent with CMB damping-tail, nucleosynthesis, and growth constraints.
 
-\subsubsection{Homogeneous Cosmological Saturation}
-The same coercivity bound that regularizes compact objects also prevents the classical FLRW scale factor from collapsing to zero. The PR curvature-density ceiling is inherited from the compact-object saturation density:
+\subsubsection{Homogeneous Saturation as a Candidate Early-Universe Closure}
+\label{sec:homogeneous_saturation_candidate}
+
+The finite-core construction supplies a candidate maximum projected density,
 \begin{equation}
 \rho_{\max}
 =
 \frac{3c^2R_{\max}}{4\pi G_N}.
 \end{equation}
-
-The homogeneous projection density cannot exceed this limit $\rho(a)\leq\rho_{\max}.$ This saturation condition applies to the total homogeneous density, not only to the coherent phase floor. For ordinary matter or radiation with \(w>-1\), applying this density ceiling to the FLRW scale-factor evolution enforces a strictly positive minimum scale factor:
+A finite density ceiling alone does not uniquely determine the homogeneous Friedmann dynamics and does not, by itself, prove a bounce. If the usual continuity law remains valid and \(\rho\propto a^{-3(1+w)}\) up to saturation, then
 \begin{equation}
 a_{\min}
 =
 a_0
 \left(
 \frac{\rho_0}{\rho_{\max}}
-\right)^{\frac{1}{3(1+w)}}
+\right)^{1/[3(1+w)]}
 >
-0.
+0
 \end{equation}
-
-A minimal homogeneous saturation model implements this bound through the effective modified Friedmann equation:
+for \(w>-1\). One minimal candidate closure is the effective saturation law
 \begin{equation}
+\boxed{
 H_{\rm PR}^2
 =
 \frac{8\pi G_N}{3}
 \rho
 \left(
-1-\frac{\rho}{\rho_{\max}}
+1-
+\frac{\rho}{\rho_{\max}}
 \right).
-\end{equation}
-
-At saturation, \(\rho=\rho_{\max}\), the Hubble parameter smoothly crosses zero: $H_{\rm PR}(a_{\min})=0.$
-The time evolution at the saturated limit yields $\dot H_{\rm PR} = 4\pi G_N\rho_{\max}(1+w) >0$. It follows that the saturated homogeneous solution imposes a nonsingular bounce:
-\begin{equation}
-\boxed{
-H_{\rm PR}<0
-\rightarrow
-H_{\rm PR}=0
-\rightarrow
-H_{\rm PR}>0.
 }
 \end{equation}
-
-The complete cosmological regularization chain is
+Together with \(\dot\rho=-3H(\rho+p/c^2)\), it gives
 \begin{equation}
-\boxed{
-\mu_{\min}^2>0
-\rightarrow
-R_{\max}<\infty
-\rightarrow
-\rho_{\max}<\infty
-\rightarrow
-a_{\min}>0
-\rightarrow
-H_{\rm PR}(a_{\min})=0
-\rightarrow
-\dot H_{\rm PR}(a_{\min})>0.
-}
+\dot H_{\rm PR}
+=
+-4\pi G_N
+\left(
+\rho+
+\frac{p}{c^2}
+\right)
+\left(
+1-
+\frac{2\rho}{\rho_{\max}}
+\right),
 \end{equation}
+and hence
+\begin{equation}
+H_{\rm PR}=0,
+\qquad
+\dot H_{\rm PR}
+=
+4\pi G_N\rho_{\max}(1+w)>0
+\end{equation}
+at \(\rho=\rho_{\max}\) for \(w>-1\). This ansatz produces a nonsingular bounce, but the correction factor \(1-\rho/\rho_{\max}\) must still be derived from the PR projected action. It is a candidate effective closure, not a consequence of the density bound alone. The early-universe saturation question is logically separate from the late-time acceleration question.
+
+\subsubsection{Falsifiability and Present Status}
+\label{sec:cosmology_falsifiability_status}
+
+\begin{table}[H]
+\centering
+\caption{Cosmological outcomes and the corresponding PR requirements.}
+\label{tab:pr_cosmology_outcomes}
+\small
+\begin{tabular}{p{5.4cm} p{5.4cm} p{5.4cm}}
+\hline
+\textbf{Observed branch} & \textbf{Required PR interpretation} & \textbf{Failure condition} \\
+\hline
+Isotropic acceleration, \(q_{\rm m}<0\), with no significant dipole
+& Derive a negative-pressure phase stress with sufficient abundance while preserving CMB, BAO, supernova, and growth constraints.
+& A fitted \(w_\theta\) or density that cannot be obtained from the projected action. \\
+\hline
+Isotropic deceleration, \(q_{\rm m}>0\)
+& The vacuum-like phase floor must be subdominant, evolving, or compensated by another projected contribution.
+& Retaining a dominant positive \(w_\theta=-1\) component that necessarily predicts \(q_0<0\). \\
+\hline
+Local dipole that decays with distance
+& Derive the dipole direction, amplitude, and decay scale from \(P_\theta\) and \(P_X\), independently of the supernova fit.
+& Introducing a phenomenological dipole only after observing it, or predicting a direction/scale inconsistent across tracers. \\
+\hline
+\end{tabular}
+\end{table}
+
+The present cosmological status of PR1 is therefore a structured stress test, not an observational detection. The theory must derive a phase pressure, establish whether the coherent floor is dynamically important today, and confront the disputed supernova-age correction in a joint likelihood.
 
 \subsection{Section Summary}
 \label{sec:observational_summary}
+The observational program separates five distinct levels of evidence and constraint. First, the quasar residual channel provides the strongest direct positive support, with the predicted negative luminosity-linked sign persisting across strictly anchored matched bins and estimator controls. Second, the gravitational-wave channel enforces the Kerr-consistency limit; the exterior ringdown remains Kerr-dominated, and no statistically robust projection-sector residual is claimed in the present work. Third, the magnetic channel provides an inverse compact-phase area constraint; Faraday residuals constrain the realized projected compact-domain area and plasma-window factors rather than a universal fixed primordial magnetic amplitude. Fourth, the high-field phase/displacement response channel, if retained, is treated as a pressure-test diagnostic rather than a primary observational detection claim. Fifth, the cosmological phase-response channel is a joint density--pressure stress test. It separately confronts the expansion rate, the deceleration monopole, possible local directional response, supernova population corrections, the sound-horizon calibration, and structure growth. No dark-energy detection or Hubble-tension resolution is claimed in the present work.
 
-The observational program separates five distinct levels of evidence and constraint. 
-First, the quasar residual channel provides the strongest direct positive support, with the predicted negative luminosity-linked sign persisting across strictly anchored matched bins and estimator controls. 
-Second, the gravitational-wave channel enforces the Kerr-consistency limit; the exterior ringdown remains Kerr-dominated, and no statistically robust projection-sector residual is claimed in the present work. 
-Third, the magnetic channel provides an inverse compact-phase area constraint; Faraday residuals constrain the realized projected compact-domain area and plasma-window factors rather than a universal fixed primordial magnetic amplitude. 
-Fourth, the high-field phase/displacement response channel, if retained, is treated as a pressure-test diagnostic rather than a primary observational detection claim. 
-Fifth, the cosmological phase-response channel maps the local/CMB Hubble split to a positive projected phase-density offset and tests whether that offset can coexist with a mixed early/late acoustic-calibration response using compressed DESI BAO data.
-
-Together, these tests define a falsifiable observational boundary for the minimal bosonic projection chain: PR must preserve Kerr externally, reproduce the quasar residual sign structure, map Faraday residuals to stable projected compact-phase areas under controlled plasma-window assumptions, and maintain a consistent Hubble/BAO phase-response diagnostic without violating the CMB acoustic calibration.
+Together, these tests define a falsifiable observational boundary for the minimal bosonic projection chain: PR must preserve Kerr externally, reproduce the quasar residual sign structure, map Faraday residuals to stable projected compact-phase areas under controlled plasma-window assumptions, and derive a cosmological phase stress that survives a joint CMB--BAO--supernova--growth analysis under alternative progenitor-age and peculiar-velocity models.
 
 \section{Conclusion}
 \label{sec:conclusion}
@@ -3912,19 +3786,25 @@ O_\theta
 \frac{d^2}{d\theta^2}.
 }
 \end{equation}
-The radial branch is not chosen by numerical fitting. Its quadratic coefficient is fixed by unit radial stiffness, while the quartic coefficient is fixed by the \(3+1\) projection trace. The resulting radial spectral gap,
+The radial branch is not chosen by numerical fitting. Its quadratic coefficient is fixed by unit radial stiffness, while the quartic coefficient is fixed by the \(3+1\) projection trace. The resulting radial spectral gap, 
 \begin{equation}
 \boxed{
-\mu_{\min}^2
-=
-\lambda_1-\lambda_0
-=
-3.052966743096,
+\mu_{\min}^2 = \lambda_1-\lambda_0 = 3.052966743096,
 }
 \end{equation}
-provides the finite coercive scale used throughout the gravitational, propagator, compact phase, and finite-core sectors. The foundational architecture of Projection Relativity unifies these seemingly disparate phenomena into an interconnected cascade of geometric responses. By grounding the framework in the rigid radial spectral gap $\mu_{\min}^2$, gravitational collapse is naturally regularized into a non-singular finite-core geometry, while the displacement sector dynamically establishes effective macroscopic inertia without empirical tuning. In the radiative regime, exterior gravitational-wave profiles strictly preserve Kerr consistency due to the gap-protected suppression of projection residuals. Astronomically, the framework provides its primary positive observational support through the persistent sign of quasar luminosity-linked velocity residuals under strict low-ionization anchoring. At cosmological scales, the framework naturally absorbs the modern Hubble tension by treating expansion as a window- and scale-dependent phase response coupled to a diluting matter trace, while the compact electromagnetic phase sector governs local Faraday-rotation amplitudes via a projected magnetic area law rather than an uncoupled primordial field. Ultimately, this entire structural chain achieves zero-parameter boundary closure, producing the boundary-resolved compact electromagnetic normalization \(\alpha_{\rm PR,bc}^{-1}=137.036361812007\) from the topological cofactors of the finite-rank internal boundary map. The core mathematical definitions governing these derived sectors and their primary observational signatures are compiled sequentially in Table~\ref{tab:projection_summary}.
+provides the finite coercive scale used throughout the gravitational, propagator, compact phase, and finite-core sectors. The foundational architecture of Projection Relativity unifies these seemingly disparate phenomena into an interconnected cascade of geometric responses. By grounding the framework in the rigid radial spectral gap $\mu_{\min}^2$, gravitational collapse is naturally regularized into a non-singular finite-core geometry, while the displacement sector dynamically establishes effective macroscopic inertia without empirical tuning. 
 
-Taken together, these results define a single geometric closure architecture:
+In the radiative regime, exterior gravitational-wave profiles strictly preserve Kerr consistency due to the gap-protected suppression of projection residuals. Astronomically, the framework provides its primary positive observational support through the persistent sign of quasar luminosity-linked velocity residuals under strict low-ionization anchoring. 
+
+At cosmological scales, the framework provides a density--pressure response formalism. The phase sector must reproduce both the measured expansion history and the independently inferred deceleration parameter, while current disagreements over Pantheon+ progenitor-age corrections are treated as unresolved nuisance-model branches. A full joint CMB--BAO--supernova--growth likelihood is therefore required before assigning the observed acceleration, deceleration, or local dipole to the PR phase sector. 
+
+The compact electromagnetic phase sector governs local Faraday-rotation amplitudes via a projected magnetic area law rather than an uncoupled primordial field. Ultimately, this entire structural chain achieves zero-parameter boundary closure, producing the boundary-resolved compact electromagnetic normalization 
+\begin{equation}
+\boxed{
+\alpha_{\rm PR,bc}^{-1}=137.036361812007    
+}
+\end{equation}
+from the topological cofactors of the finite-rank internal boundary map. The core mathematical definitions governing these derived sectors and their primary observational signatures are compiled sequentially in Table~\ref{tab:projection_summary}. Taken together, these results define a single geometric closure architecture:
 \begin{equation}
 \boxed{
 \Psi
@@ -3935,18 +3815,19 @@ O_{\rm int}
 \rightarrow
 \{P_g,P_{\rm disp},P_A,P_X,P_\theta\}
 \rightarrow
-\{g_{\mu\nu}^{\rm eff},\mathcal M_{\rm eff},A_\mu,\Sigma_X,H_{\rm PR}\}.
+\{g_{\mu\nu}^{\rm eff},\mathcal M_{\rm eff},A_\mu,\Sigma_X,
+T_{\mu\nu}^{(\theta)},H_{\rm PR},q_{\rm PR}\}.
 }
 \end{equation}
 
-The complete mathematical derivations, parameter stability bounds, symbolic audits, numerical validation scripts, and figure-generation workflows are provided in the companion supplementary material and public repository. The computational test harness verifies the radial branch selection, spectral gap, compact boundary normalization, Kerr recovery, quasar residual workflow, and magnetic area-law diagnostics. This manuscript strictly focuses on the minimal bosonic projection chain—gravity, inertia, electromagnetism, and projection response—and its primary astrophysical consequences. Broader particle-sector completion, non-Abelian gauge structure, and higher internal topological sectors remain outside the scope of this first construction. Future work will investigate whether higher-order spectral modes of the \(\Psi(x,\xi)\) manifold provide a geometric route to additional confined or non-Abelian projection sectors.
+The complete mathematical derivations, parameter stability bounds, symbolic audits, numerical validation scripts, and figure-generation workflows are provided in the companion supplementary material and public repository. The computational test harness verifies the radial branch selection, spectral gap, compact boundary normalization, Kerr recovery, quasar residual workflow, and magnetic area-law diagnostics. This manuscript strictly focuses on the minimal bosonic projection chain—gravity, inertia, electromagnetism, and projection response and its primary astrophysical consequences. Broader particle-sector completion, non-Abelian gauge structure, and higher internal topological sectors remain outside the scope of this first construction. Future work will investigate whether higher-order spectral modes of the \(\Psi(x,\xi)\) manifold provide a geometric route to additional confined or non-Abelian projection sectors.
 
-\begin{table}[ht!]
+\begin{table}[H]
 \centering
-\caption{Summary Matrix of Derived Projection Sectors and Observational Signatures}
+\caption{Summary Matrix of Closed Projection Outputs and Observational Stress Tests}
 \label{tab:projection_summary}
 \small
-\begin{tabular}{p{3.8cm} p{6.2cm} p{5.5cm}}
+\begin{tabular}{p{5.0cm} p{6.2cm} p{5.5cm}}
 \hline
 \textbf{Sector / Consequence} & \textbf{Core Governing Equation} & \textbf{Physical Interpretation} \\ \hline
 \raggedright \textbf{Finite-Core\\Regularization} & 
@@ -3957,9 +3838,17 @@ Stops collapse before $r=0$. Mass scales the core volume; density saturates. \\ 
 \vspace{-1em} \begin{equation*} \mathcal M_{\rm eff} = g_0I_AA_0 = g_0I_A\sqrt{- \frac{\alpha_A}{2\beta_A}} \end{equation*} & 
 Dynamically generates inertia via a stable vacuum instead of manual entry. \\ \hline
 
-\raggedright \textbf{Gravitational-Wave\\Kerr Consistency} & 
-\vspace{-1em} \begin{equation*} \frac{\|A_X\|}{\|A_{\rm Kerr}\|} \lesssim C_{\rm Kerr} \frac{\eta}{(1+M_2)(1-\eta)} \epsilon_X^{\rm GW}, \qquad \eta=\frac{|z|}{\mu_{\min}^2} \end{equation*} & 
-Ensures gap-protected suppression of residuals in low-energy regimes. \\ \hline
+\raggedright \textbf{Gravitational-Wave\\Kerr Consistency} &
+\vspace{-1.2em}
+\begin{equation*}
+\begin{aligned}
+\frac{\|A_X\|}{\|A_{\rm Kerr}\|}
+&\lesssim C_{\rm Kerr}
+\frac{\eta}{(1+M_2)(1-\eta)}\epsilon_X^{\rm GW},\\
+\eta&=\frac{|z|}{\mu_{\min}^2}
+\end{aligned}
+\end{equation*}
+& Ensures gap-protected suppression of residuals in low-energy regimes. \\ \hline
 
 \raggedright \textbf{Quasar Luminosity-Linked\\Velocity Residuals} & 
 \vspace{-1.2em} \begin{equation*} 
@@ -3970,39 +3859,47 @@ Ensures gap-protected suppression of residuals in low-energy regimes. \\ \hline
 \end{equation*} & 
 Predicts a systematic negative velocity contrast under low-ionization anchoring. \\ \hline
 
-\raggedright \textbf{Hubble-Scale\\Phase Response} & 
-\vspace{-1.2em} \begin{equation*} 
+\raggedright \textbf{Cosmological\\Phase Stress} &
+\vspace{-1.2em}
+\begin{equation*}
 \begin{aligned}
-\Delta\rho_\theta &= \frac{3}{8\pi G_N} \left[(H_0^{\rm loc})^2 - (H_0^{\rm CMB})^2 \right] \\
-&= \left\langle\delta\rho_\theta\right\rangle_{\rm loc} - \left\langle\delta\rho_\theta\right\rangle_{\rm CMB}
+H_{\rm PR}^2
+&=
+\frac{8\pi G_N}{3}\rho_{\rm tot}-\frac{kc^2}{a^2},\\
+q_{\rm PR}
+&=
+\frac{4\pi G_N}{3H_{\rm PR}^2}
+\left(\rho_{\rm tot}+\frac{3p_{\rm tot}}{c^2}\right)
 \end{aligned}
-\end{equation*} & 
-Frames the Hubble tension as a scale- and window-dependent phase-response diagnostic. \\ \hline
+\end{equation*}
+& Separates expansion-rate normalization from acceleration and requires both phase density and pressure. \\
+\hline
 
-\raggedright \textbf{Hubble--DESI Phase-Response Pressure Test} &\
-\vspace{-1.2em} \begin{equation*} 
+\raggedright \textbf{Supernova/Hubble\\Joint Stress Test} &
+\vspace{-1.2em}
+\begin{equation*}
 \begin{aligned}
-&\rho_\theta(a,\mathcal W) = \rho_{\theta,0} + \delta\rho_\theta(a,\mathcal W), \\[0.8em]
-&\Delta\rho_\theta = \frac{3}{8\pi G_N} \left[ (H_0^{\rm loc})^2 - (H_0^{\rm CMB})^2 \right], \\[0.8em]
-&\delta\ln H_0 + \delta\ln r_d - \delta\ln \!\left( \int_0^{z_*} \frac{dz}{E(z)} \right) \simeq 0.
+q(z,\hat{\bm n})
+&=q_{\rm m}+\bm q_{\rm d}\!\cdot\!\hat{\bm n}\,e^{-z/S},\\
+\Delta\rho_{\rm eff}
+&=\frac{3}{8\pi G_N}
+\left[(H_0^{\rm loc})^2-(H_0^{\rm ref})^2\right]
 \end{aligned}
-\end{equation*} &
-Positive phase-density offset; early-calibration Hubble--DESI pressure test.
-\\ \hline
+\end{equation*}
+& Treats the Hubble mapping as conditional and marginalizes supernova age, host, frame, and velocity systematics; no current PR detection is claimed. \\
+\hline
 
-\raggedright \textbf{Compact-Phase\\Magnetic Area Law} & 
-\vspace{-1.2em} \begin{equation*} 
+\raggedright \textbf{Compact-Phase\\Magnetic Area Law} &
+\vspace{-1.2em}
+\begin{equation*}
 \begin{aligned}
 B_{\rm geo}^{\rm PR}
-&=
-\frac{\Phi_{\theta}^{\rm PR}}
-     {A_{\rm proj}^{(\theta)}} ,\
+&=\frac{\Phi_{\theta}^{\rm PR}}{A_{\rm proj}^{(\theta)}},\\
 B_{\rm geo}^{\rm PR}[{\rm nG}]
-=\frac{0.09009597185}
-     {A_{\rm proj}^{(\theta)}[{\rm m}^2]}
+&=\frac{0.09009597185}{A_{\rm proj}^{(\theta)}[{\rm m}^2]}
 \end{aligned}
-\end{equation*} & 
-Maps Faraday residuals to a projected compact area rather than a fixed field. \\ \hline
+\end{equation*}
+& Maps Faraday residuals to a projected compact area rather than a fixed field. \\ \hline
 
 \raggedright \textbf{Boundary-Resolved\\Electromagnetic Normalization} & 
 \vspace{-1.2em} \begin{equation*} 
@@ -4015,7 +3912,6 @@ Produces the boundary-resolved compact electromagnetic normalization without exp
 \hline
 \end{tabular}
 \end{table}
-
 
 %\newpage
 %\appendix
