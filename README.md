@@ -425,7 +425,7 @@ symbolically audited and numerically validated where machine-checkable
 **PR-III manuscript:** *The Foundation of Projection Relativity III: Zero-Parameter Radiative and Cross-Sector Closure of the Projection Ledger*<br>
 **PR-I DOI:** [10.5281/zenodo.20545407](https://doi.org/10.5281/zenodo.20545407)<br>
 **PR-II DOI:** [10.5281/zenodo.20817164](https://doi.org/10.5281/zenodo.20817164)<br>
-**PR-III DOI:** [10.5281/zenodo.20817164](https://doi.org/10.5281/zenodo.20817164)<br>
+**PR-III DOI:** [10.5281/zenodo.21361507](https://doi.org/10.5281/zenodo.21361507)<br>  
 **Repository:** `oshetskiresearch/Projection_Relativity`
 
 When using an externally sourced dataset or derived table, also cite the
