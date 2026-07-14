@@ -1,4 +1,4 @@
-# PR-III Public Harness Run Summary
+# PR-III Symbolic Harness Run Summary
 
 Run date: 2026-07-14
 
@@ -8,8 +8,6 @@ Run date: 2026-07-14
 - Public repository commit checked before harness import: `001dae8f46803bce16a40834cbb240c63d497faf`
 - Public manuscript source: `manuscript/projection_relativity_III/Oshetski_Projection_Relativity_III_Main.tex`
 - Public manuscript PDF: `manuscript/projection_relativity_III/Oshetski_Projection_Relativity_III_Main.pdf`
-- PR-III sandbox ledger checkout: `oshetskiresearch/Projection-Relativity_III_Sandbox`
-- PR-III sandbox commit checked: `fbb61f3771db2674c2b551a2d767c923cd5f0a1f`
 - Maple engine: Maple 2026 command-line `cmaple`
 
 ## Result
