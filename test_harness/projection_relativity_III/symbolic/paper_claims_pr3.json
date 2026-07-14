@@ -1,0 +1,149 @@
+{
+  "project": "Projection Relativity III",
+  "paper_source": "Projection_Relativity public PR-III manuscript and PDF",
+  "repository": "oshetskiresearch/Projection-Relativity_III_Sandbox",
+  "checked_commit": "fbb61f3771db2674c2b551a2d767c923cd5f0a1f",
+  "locked_output_claims": [
+    {
+      "id": "alpha_inverse_PR",
+      "expected": "137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901",
+      "unit": "dimensionless",
+      "tolerance_abs": "1e-70",
+      "paper_snippets": ["137.035999207513", "+0.1376"]
+    },
+    {
+      "id": "M_W_PR_GeV",
+      "expected": "80.373942851862121269660365960912048165641419593354239705150762943078449202475090",
+      "unit": "GeV",
+      "tolerance_abs": "1e-60",
+      "paper_snippets": ["80.3739428518621", "+0.3566"]
+    },
+    {
+      "id": "M_Z_PR_GeV",
+      "expected": "91.187676431043922257304294605837072137923832857909555944715358374802790284187517",
+      "unit": "GeV",
+      "tolerance_abs": "1e-60",
+      "paper_snippets": ["91.1876764310439", "+0.0364"]
+    },
+    {
+      "id": "G_F_PR_GeV_minus2",
+      "expected": "0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169",
+      "unit": "GeV^-2",
+      "tolerance_abs": "1e-75",
+      "paper_snippets": ["1.166379220175995", "+0.6003"]
+    },
+    {
+      "id": "m1_neutrino_eV",
+      "expected": "0",
+      "unit": "eV",
+      "tolerance_abs": "0",
+      "paper_snippets": ["m1"]
+    },
+    {
+      "id": "m2_neutrino_eV",
+      "expected": "0.008627283010",
+      "unit": "eV",
+      "tolerance_abs": "1e-15",
+      "paper_snippets": ["0.008627283010"]
+    },
+    {
+      "id": "m3_neutrino_eV",
+      "expected": "0.05010655367",
+      "unit": "eV",
+      "tolerance_abs": "1e-14",
+      "paper_snippets": ["0.05010655367"]
+    },
+    {
+      "id": "sum_neutrino_masses_eV",
+      "expected": "0.058733836680",
+      "unit": "eV",
+      "tolerance_abs": "1e-15",
+      "paper_snippets": ["0.058733836680"]
+    },
+    {
+      "id": "m_beta_PR_meV",
+      "expected": "8.815029409998",
+      "unit": "meV",
+      "tolerance_abs": "1e-12",
+      "paper_snippets": ["8.815029409998"]
+    },
+    {
+      "id": "m_beta_beta_PR_meV",
+      "expected": "1.507694477",
+      "unit": "meV",
+      "tolerance_abs": "1e-12",
+      "paper_snippets": ["1.507694477"]
+    },
+    {
+      "id": "alpha3_PR",
+      "expected": "0.117861507469150",
+      "unit": "dimensionless",
+      "tolerance_abs": "1e-15",
+      "paper_snippets": ["0.117861507469150", "0.04"]
+    }
+  ],
+  "diagnostic_claims": [
+    {
+      "observable": "alpha_inverse",
+      "residual_contains": "+0.1376 sigma",
+      "status_contains": "pass within one sigma"
+    },
+    {
+      "observable": "M_W",
+      "residual_contains": "+0.3566 sigma",
+      "status_contains": "pass within one sigma"
+    },
+    {
+      "observable": "M_Z",
+      "residual_contains": "+0.0364 sigma",
+      "status_contains": "pass within one sigma"
+    },
+    {
+      "observable": "G_F",
+      "residual_contains": "+0.6003 sigma",
+      "status_contains": "pass within one sigma"
+    },
+    {
+      "observable": "alpha3",
+      "residual_contains": "-0.032648 percent",
+      "status_contains": "diagnostic compatible"
+    },
+    {
+      "observable": "anomaly_registry",
+      "residual_contains": "pass",
+      "status_contains": "anomaly safe"
+    },
+    {
+      "observable": "running_continuity",
+      "residual_contains": "pass",
+      "status_contains": "continuity pass"
+    },
+    {
+      "observable": "no_fit_provenance",
+      "residual_contains": "pass",
+      "status_contains": "no-fit pass"
+    }
+  ],
+  "global_status_gates": {
+    "PRIII_global_status": "CONSISTENCY_LOCKED",
+    "precision_status": "ALPHA_MW_MZ_GF_ONE_SIGMA_DIAGNOSTIC_PASS",
+    "compatibility_status": "NEUTRINO_AND_STRONG_BRANCHES_COMPATIBLE",
+    "structural_status": "ANOMALY_CONTINUITY_NO_FIT_PASS",
+    "final_exact_all_orders_theorem": "NOT_CLAIMED",
+    "PRIII_sandbox_ledger": "COMPLETE_THROUGH_STEP_09"
+  },
+  "paper_text_required_snippets": [
+    "Projection Relativity III",
+    "Zero-Parameter Radiative and Cross-Sector Closure",
+    "137.035999207513",
+    "80.3739428518621",
+    "91.1876764310439",
+    "+0.1376",
+    "+0.3566",
+    "+0.0364",
+    "+0.6003",
+    "0.117861507469150",
+    "normal-ordering",
+    "no-fit"
+  ]
+}
