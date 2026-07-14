@@ -1,0 +1,69 @@
+id,section,status,actual,expected,tolerance,note
+file:scripts/run_all_pr3_audits.py,required-files,PASS,True,True,exists,Required repo file scripts/run_all_pr3_audits.py
+file:scripts/pr3_artifact_drift_audit.py,required-files,PASS,True,True,exists,Required repo file scripts/pr3_artifact_drift_audit.py
+file:scripts/pr3_release_byte_exact_audit.py,required-files,PASS,True,True,exists,Required repo file scripts/pr3_release_byte_exact_audit.py
+file:MANIFEST_PR3_LOCKED_OUTPUTS.json,required-files,PASS,True,True,exists,Required repo file MANIFEST_PR3_LOCKED_OUTPUTS.json
+file:tables/pr3_cross_sector_diagnostic_table.csv,required-files,PASS,True,True,exists,Required repo file tables/pr3_cross_sector_diagnostic_table.csv
+file:data/global_final_priii_consistency_statement.json,required-files,PASS,True,True,exists,Required repo file data/global_final_priii_consistency_statement.json
+file:data/global_anomaly_registry_audit.json,required-files,PASS,True,True,exists,Required repo file data/global_anomaly_registry_audit.json
+repo_default_audit,repo-audit,PASS,PR-III reproducibility audit: PASS,returncode 0 with PASS,n/a,Repository audit command passed
+artifact_drift_audit,repo-audit,PASS,PR-III artifact drift audit: PASS,returncode 0 with PASS,n/a,Repository audit command passed
+release_byte_exact_audit,repo-audit,PASS,PR-III canonical release byte-exact audit: PASS,returncode 0 with PASS,n/a,Repository audit command passed
+alpha_inverse_PR,locked-output,PASS,137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901,137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901,1e-70,Locked PR-III output matches paper claim; abs error 0E-87
+M_W_PR_GeV,locked-output,PASS,80.373942851862121269660365960912048165641419593354239705150762943078449202475090,80.373942851862121269660365960912048165641419593354239705150762943078449202475090,1e-60,Locked PR-III output matches paper claim; abs error 0E-78
+M_Z_PR_GeV,locked-output,PASS,91.187676431043922257304294605837072137923832857909555944715358374802790284187517,91.187676431043922257304294605837072137923832857909555944715358374802790284187517,1e-60,Locked PR-III output matches paper claim; abs error 0E-78
+G_F_PR_GeV_minus2,locked-output,PASS,0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169,0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169,1e-75,Locked PR-III output matches paper claim; abs error 0E-84
+m1_neutrino_eV,locked-output,PASS,0,0,0,Locked PR-III output matches paper claim; abs error 0
+m2_neutrino_eV,locked-output,PASS,0.008627283010,0.008627283010,1e-15,Locked PR-III output matches paper claim; abs error 0E-12
+m3_neutrino_eV,locked-output,PASS,0.05010655367,0.05010655367,1e-14,Locked PR-III output matches paper claim; abs error 0E-11
+sum_neutrino_masses_eV,locked-output,PASS,0.058733836680,0.058733836680,1e-15,Locked PR-III output matches paper claim; abs error 0E-12
+m_beta_PR_meV,locked-output,PASS,8.815029409998,8.815029409998,1e-12,Locked PR-III output matches paper claim; abs error 0E-12
+m_beta_beta_PR_meV,locked-output,PASS,1.507694477,1.507694477,1e-12,Locked PR-III output matches paper claim; abs error 0E-9
+alpha3_PR,locked-output,PASS,0.117861507469150,0.117861507469150,1e-15,Locked PR-III output matches paper claim; abs error 0E-15
+diag:alpha_inverse:residual,diagnostic-table,PASS,+0.1376 sigma,+0.1376 sigma,substring,Diagnostic residual string matches paper-facing claim
+diag:alpha_inverse:status,diagnostic-table,PASS,pass within one sigma,pass within one sigma,substring,Diagnostic status string matches paper-facing claim
+diag:M_W:residual,diagnostic-table,PASS,+0.3566 sigma,+0.3566 sigma,substring,Diagnostic residual string matches paper-facing claim
+diag:M_W:status,diagnostic-table,PASS,pass within one sigma,pass within one sigma,substring,Diagnostic status string matches paper-facing claim
+diag:M_Z:residual,diagnostic-table,PASS,+0.0364 sigma,+0.0364 sigma,substring,Diagnostic residual string matches paper-facing claim
+diag:M_Z:status,diagnostic-table,PASS,pass within one sigma,pass within one sigma,substring,Diagnostic status string matches paper-facing claim
+diag:G_F:residual,diagnostic-table,PASS,+0.6003 sigma,+0.6003 sigma,substring,Diagnostic residual string matches paper-facing claim
+diag:G_F:status,diagnostic-table,PASS,pass within one sigma,pass within one sigma,substring,Diagnostic status string matches paper-facing claim
+diag:alpha3:residual,diagnostic-table,PASS,-0.032648 percent,-0.032648 percent,substring,Diagnostic residual string matches paper-facing claim
+diag:alpha3:status,diagnostic-table,PASS,diagnostic compatible,diagnostic compatible,substring,Diagnostic status string matches paper-facing claim
+diag:anomaly_registry:residual,diagnostic-table,PASS,pass,pass,substring,Diagnostic residual string matches paper-facing claim
+diag:anomaly_registry:status,diagnostic-table,PASS,anomaly safe,anomaly safe,substring,Diagnostic status string matches paper-facing claim
+diag:running_continuity:residual,diagnostic-table,PASS,pass,pass,substring,Diagnostic residual string matches paper-facing claim
+diag:running_continuity:status,diagnostic-table,PASS,continuity pass,continuity pass,substring,Diagnostic status string matches paper-facing claim
+diag:no_fit_provenance:residual,diagnostic-table,PASS,pass,pass,substring,Diagnostic residual string matches paper-facing claim
+diag:no_fit_provenance:status,diagnostic-table,PASS,no-fit pass,no-fit pass,substring,Diagnostic status string matches paper-facing claim
+gate:PRIII_global_status,global-status,PASS,CONSISTENCY_LOCKED,CONSISTENCY_LOCKED,exact,Final global status gate
+gate:precision_status,global-status,PASS,ALPHA_MW_MZ_GF_ONE_SIGMA_DIAGNOSTIC_PASS,ALPHA_MW_MZ_GF_ONE_SIGMA_DIAGNOSTIC_PASS,exact,Final global status gate
+gate:compatibility_status,global-status,PASS,NEUTRINO_AND_STRONG_BRANCHES_COMPATIBLE,NEUTRINO_AND_STRONG_BRANCHES_COMPATIBLE,exact,Final global status gate
+gate:structural_status,global-status,PASS,ANOMALY_CONTINUITY_NO_FIT_PASS,ANOMALY_CONTINUITY_NO_FIT_PASS,exact,Final global status gate
+gate:final_exact_all_orders_theorem,global-status,PASS,NOT_CLAIMED,NOT_CLAIMED,exact,Final global status gate
+gate:PRIII_sandbox_ledger,global-status,PASS,COMPLETE_THROUGH_STEP_09,COMPLETE_THROUGH_STEP_09,exact,Final global status gate
+gate:unsafe_claim_excluded,global-status,PASS,PR-III proves a complete exact all-orders theory of the Standard Model and QCD.,unsafe overclaim explicitly excluded,exact,All-orders overclaim remains excluded
+anomaly:SU3_cubed,symbolic-status,PASS,0,0,exact,SU3_cubed cancels per generation
+anomaly:SU3_squared_U1Y,symbolic-status,PASS,0,0,exact,SU3_squared_U1Y cancels per generation
+anomaly:SU2_squared_U1Y,symbolic-status,PASS,0,0,exact,SU2_squared_U1Y cancels per generation
+anomaly:U1Y_cubed,symbolic-status,PASS,0,0,exact,U1Y_cubed cancels per generation
+anomaly:gravity_squared_U1Y,symbolic-status,PASS,0,0,exact,gravity_squared_U1Y cancels per generation
+anomaly:witten_even,symbolic-status,PASS,12,even,predicate,Witten anomaly absent
+anomaly:residual_u1em,symbolic-status,PASS,VECTORLIKE_PASS,VECTORLIKE_PASS,exact,Residual electromagnetic branch remains vectorlike
+paper-text:Projection Relativity III,paper-text,PASS,present,Projection Relativity III,substring,Near-final paper contains required PR-III claim string
+paper-text:Zero-Parameter Radiative and Cross-Sector Closure,paper-text,PASS,present,Zero-Parameter Radiative and Cross-Sector Closure,substring,Near-final paper contains required PR-III claim string
+paper-text:137.035999207513,paper-text,PASS,present,137.035999207513,substring,Near-final paper contains required PR-III claim string
+paper-text:80.3739428518621,paper-text,PASS,present,80.3739428518621,substring,Near-final paper contains required PR-III claim string
+paper-text:91.1876764310439,paper-text,PASS,present,91.1876764310439,substring,Near-final paper contains required PR-III claim string
+paper-text:+0.1376,paper-text,PASS,present,+0.1376,substring,Near-final paper contains required PR-III claim string
+paper-text:+0.3566,paper-text,PASS,present,+0.3566,substring,Near-final paper contains required PR-III claim string
+paper-text:+0.0364,paper-text,PASS,present,+0.0364,substring,Near-final paper contains required PR-III claim string
+paper-text:+0.6003,paper-text,PASS,present,+0.6003,substring,Near-final paper contains required PR-III claim string
+paper-text:0.117861507469150,paper-text,PASS,present,0.117861507469150,substring,Near-final paper contains required PR-III claim string
+paper-text:normal-ordering,paper-text,PASS,present,normal-ordering,substring,Near-final paper contains required PR-III claim string
+paper-text:no-fit,paper-text,PASS,present,no-fit,substring,Near-final paper contains required PR-III claim string
+selftest:reject_wrong_alpha,negative-controls,PASS,False,False,must reject,Reject stale or mistyped alpha inverse
+selftest:reject_wrong_MW,negative-controls,PASS,False,False,must reject,Reject wrong W mass
+selftest:reject_all_orders_overclaim,negative-controls,PASS,False,False,must reject,Reject exact all-orders theorem overclaim
+selftest:reject_anomaly_violation,negative-controls,PASS,0,not 1,must reject,Reject anomaly-violating ledger
+selftest:reject_inverted_neutrino_order,negative-controls,PASS,m2=0.008627283010; m3=0.05010655367,m3 not less than m2,predicate,Reject inverted neutrino ordering

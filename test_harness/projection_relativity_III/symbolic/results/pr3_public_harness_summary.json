@@ -1,0 +1,41 @@
+{
+  "overall_status": "PASS",
+  "total_checks": 68,
+  "passed": 68,
+  "failed": 0,
+  "sections": {
+    "diagnostic-table": {
+      "total": 16,
+      "failed": 0
+    },
+    "global-status": {
+      "total": 7,
+      "failed": 0
+    },
+    "locked-output": {
+      "total": 11,
+      "failed": 0
+    },
+    "negative-controls": {
+      "total": 5,
+      "failed": 0
+    },
+    "paper-text": {
+      "total": 12,
+      "failed": 0
+    },
+    "repo-audit": {
+      "total": 3,
+      "failed": 0
+    },
+    "required-files": {
+      "total": 7,
+      "failed": 0
+    },
+    "symbolic-status": {
+      "total": 7,
+      "failed": 0
+    }
+  },
+  "failures": []
+}

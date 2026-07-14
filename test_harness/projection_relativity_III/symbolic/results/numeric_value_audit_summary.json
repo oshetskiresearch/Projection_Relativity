@@ -1,0 +1,15 @@
+{
+  "overall_status": "PASS",
+  "repo": "Projection-Relativity_III_Sandbox",
+  "tex_root": "../../manuscript/projection_relativity_III",
+  "numeric_literals_inventoried": 412,
+  "document_numeric_values_checked": 295,
+  "matched": 295,
+  "skipped_layout_literals": 117,
+  "unmatched": 0,
+  "status_counts": {
+    "PASS": 294,
+    "SKIP_LAYOUT": 117,
+    "PASS_ABS_CONTEXT": 1
+  }
+}
