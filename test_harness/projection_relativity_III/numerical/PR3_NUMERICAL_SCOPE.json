@@ -1,0 +1,51 @@
+{
+  "project": "Projection Relativity III",
+  "package": "public numerical reproducibility tester",
+  "source_repository": "oshetskiresearch/Projection-Relativity_III_Sandbox",
+  "source_snapshot_commit": "fbb61f3771db2674c2b551a2d767c923cd5f0a1f",
+  "verified_unchanged_through_commit": "14979ec5d6ecdc4f0fb8f8ed5e6345bec1cbf0fa",
+  "scope": {
+    "included": [
+      "PR-III Python generators declared by schemas/pr3_full_regeneration_pairs.json",
+      "PR-III JSON data ledgers and generator inputs",
+      "PR-III schema and numerical tolerance policies",
+      "PR-III reproducibility audit utilities",
+      "minimal manifest, table, and report support files required by Tier A"
+    ],
+    "excluded": [
+      "all paths whose names contain PR4, case-insensitively",
+      "the sandbox PR4 directory tree",
+      "PR4 generators, JSON data, schemas, reports, scripts, requirements, and release artifacts"
+    ]
+  },
+  "expected_counts": {
+    "generator_python_files": 41,
+    "data_json_files": 44,
+    "schema_json_files": 6,
+    "audit_python_files": 6,
+    "regeneration_pairs": 41
+  },
+  "required_audit_scripts": [
+    "scripts/pr3_artifact_drift_audit.py",
+    "scripts/pr3_canonical_json.py",
+    "scripts/pr3_numeric_drift_summary.py",
+    "scripts/pr3_release_byte_exact_audit.py",
+    "scripts/pr3_schema_drift_summary.py",
+    "scripts/run_all_pr3_audits.py"
+  ],
+  "required_support_files": [
+    "README_PR3_REPRODUCIBILITY.md",
+    "RUN_ORDER.md",
+    "MANIFEST_PR3_LOCKED_OUTPUTS.json",
+    "reports/PR3_FINAL_AUDIT_SUMMARY.md",
+    "tables/pr3_locked_outputs.csv",
+    "tables/pr3_cross_sector_diagnostic_table.csv"
+  ],
+  "claim_boundary": {
+    "tier_a_manifest_and_targeted_regeneration": "CLAIMED_WHEN_PASSING",
+    "tier_b_schema_numeric_reproducibility": "CLAIMED_WHEN_41_OF_41_PASS",
+    "tier_c_canonical_release_byte_identity": "CLAIMED_WHEN_41_OF_41_PASS",
+    "tier_d_raw_generator_stdout_byte_identity": "NOT_CLAIMED",
+    "tier_d_raw_checked_in_file_order_byte_identity": "NOT_CLAIMED"
+  }
+}
