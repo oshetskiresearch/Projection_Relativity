@@ -40,6 +40,6 @@
     "physics_values_modified_by_release_policy": false,
     "numeric_tolerance_relaxed": false
   },
-  "audit_entrypoint": "scripts/pr3_release_byte_exact_audit.py",
+  "audit_entrypoint": "code/pr3_release_byte_exact_audit.py",
   "pair_manifest": "schemas/pr3_full_regeneration_pairs.json"
 }

@@ -2,7 +2,7 @@
 """
 Summarize and classify PR-III numeric drift after schema drift is cleared.
 
-Input is the JSON emitted by scripts/pr3_artifact_drift_audit.py --json.
+Input is the JSON emitted by code/pr3_artifact_drift_audit.py --json.
 This tool does not change any reproducibility gate and does not relax numeric
 policy. It separates:
 
@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT = ROOT / "reports" / "pr3_artifact_drift_audit_pass_013.json"
+DEFAULT_INPUT = ROOT / "results" / "tier_b_artifact_drift_audit.json"
 
 NUMERIC_FAILURE_RE = re.compile(
     r"^(?P<path>.+?): numeric drift locked='(?P<locked>.*?)' generated='(?P<generated>.*?)' "
@@ -226,7 +226,7 @@ def print_text(summary: dict[str, Any]) -> None:
     print("\nNumeric formatting warning counts by pair:")
     for pair, count in summary["numeric_formatting_warning_counts_by_pair"].items():
         print(f"- {pair}: {count}")
-    print("\nClaims: no gate change, no tolerance relaxation, no byte-exact release claim.")
+    print("\nTier B claims: no gate change or tolerance relaxation; release-byte identity is evaluated by Tier C.")
 
 
 def main() -> None:

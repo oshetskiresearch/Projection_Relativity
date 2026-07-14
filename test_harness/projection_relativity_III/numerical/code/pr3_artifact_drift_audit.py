@@ -35,6 +35,8 @@ from typing import Any
 getcontext().prec = 120
 
 ROOT = Path(__file__).resolve().parents[1]
+REPOSITORY_ROOT = ROOT.parents[2]
+PAYLOAD_ROOT = REPOSITORY_ROOT / "data" / "projection_relativity_III"
 PAIR_MANIFEST = ROOT / "schemas" / "pr3_full_regeneration_pairs.json"
 TOLERANCE_MANIFEST = ROOT / "schemas" / "pr3_numeric_tolerances.json"
 
@@ -126,7 +128,7 @@ def regenerate_payload(code_path: Path, builder_name: str | None) -> tuple[dict[
     except Exception as import_error:
         proc = subprocess.run(
             [sys.executable, str(code_path)],
-            cwd=str(ROOT),
+            cwd=str(PAYLOAD_ROOT),
             text=True,
             capture_output=True,
             check=False,
@@ -297,8 +299,8 @@ def classify_failures(failures: list[str]) -> str:
 
 def run_pair(pair: dict[str, Any], tolerances: dict[str, Any]) -> dict[str, Any]:
     name = pair["name"]
-    data_path = ROOT / pair["data_path"]
-    code_path = ROOT / pair["code_path"]
+    data_path = PAYLOAD_ROOT / pair["data_path"]
+    code_path = PAYLOAD_ROOT / pair["code_path"]
     builder_name = pair.get("builder_function")
     if not data_path.exists():
         failures = [f"missing data artifact: {pair['data_path']}"]

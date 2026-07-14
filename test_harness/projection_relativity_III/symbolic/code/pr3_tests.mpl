@@ -123,5 +123,5 @@ PR3_RunAll := proc()
     printf("PASS count: %d\n", result_count - fail_count);
     printf("FAIL count: %d\n", fail_count);
     printf("SELFTEST PASS count: %d\n", selftest_count);
-    PR3_WriteReports("reports", "pr3_maple");
+    PR3_WriteReports("symbolic/results", "pr3_maple");
 end proc:

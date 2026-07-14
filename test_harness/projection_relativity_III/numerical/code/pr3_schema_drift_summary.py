@@ -2,7 +2,7 @@
 """
 Summarize PR-III artifact schema drift after the builder-exposure layer is gone.
 
-Input is the JSON emitted by scripts/pr3_artifact_drift_audit.py --json.
+Input is the JSON emitted by code/pr3_artifact_drift_audit.py --json.
 This tool does not relax or pass any reproducibility gate. It classifies the
 remaining schema-drift surface so the next hardening pass can distinguish:
 
@@ -24,7 +24,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT = ROOT / "reports" / "pr3_artifact_drift_audit_pass_006.json"
+DEFAULT_INPUT = ROOT / "results" / "tier_b_artifact_drift_audit.json"
 
 MISSING_RE = re.compile(r"^(?P<path>.+?): missing keys in generated artifact: \[(?P<keys>.*)\]$")
 EXTRA_RE = re.compile(r"^(?P<path>.+?): extra keys in generated artifact: \[(?P<keys>.*)\]$")
@@ -287,7 +287,7 @@ def print_text(summary: dict[str, Any]) -> None:
     print("\nPriority buckets:")
     for bucket in summary["priority_buckets"]:
         print(f"{bucket['rank']}. {bucket['bucket']}: {bucket.get('pair_count', 0)} pairs")
-    print("\nClaims: no reproducibility gate changed; byte-exact release still not claimed.")
+    print("\nTier B claims: no reproducibility gate changed; release-byte identity is evaluated by Tier C.")
 
 
 def main() -> None:
