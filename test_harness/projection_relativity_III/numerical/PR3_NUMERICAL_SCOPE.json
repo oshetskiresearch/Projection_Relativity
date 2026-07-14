@@ -6,11 +6,11 @@
   "verified_unchanged_through_commit": "14979ec5d6ecdc4f0fb8f8ed5e6345bec1cbf0fa",
   "scope": {
     "included": [
-      "PR-III Python generators declared by schemas/pr3_full_regeneration_pairs.json",
-      "PR-III JSON data ledgers and generator inputs",
-      "PR-III schema and numerical tolerance policies",
-      "PR-III reproducibility audit utilities",
-      "minimal manifest, table, and report support files required by Tier A"
+      "PR-III Python generators in data/projection_relativity_III/code declared by schemas/pr3_full_regeneration_pairs.json",
+      "PR-III JSON data ledgers and generator inputs in data/projection_relativity_III/data",
+      "PR-III schema and numerical tolerance policies in this test harness",
+      "PR-III reproducibility audit utilities in this test harness",
+      "minimal manifest and result support files required by Tier A"
     ],
     "excluded": [
       "all paths whose names contain PR4, case-insensitively",
@@ -26,20 +26,20 @@
     "regeneration_pairs": 41
   },
   "required_audit_scripts": [
-    "scripts/pr3_artifact_drift_audit.py",
-    "scripts/pr3_canonical_json.py",
-    "scripts/pr3_numeric_drift_summary.py",
-    "scripts/pr3_release_byte_exact_audit.py",
-    "scripts/pr3_schema_drift_summary.py",
-    "scripts/run_all_pr3_audits.py"
+    "code/pr3_artifact_drift_audit.py",
+    "code/pr3_canonical_json.py",
+    "code/pr3_numeric_drift_summary.py",
+    "code/pr3_release_byte_exact_audit.py",
+    "code/pr3_schema_drift_summary.py",
+    "code/run_all_pr3_audits.py"
   ],
   "required_support_files": [
     "README_PR3_REPRODUCIBILITY.md",
     "RUN_ORDER.md",
     "MANIFEST_PR3_LOCKED_OUTPUTS.json",
-    "reports/PR3_FINAL_AUDIT_SUMMARY.md",
-    "tables/pr3_locked_outputs.csv",
-    "tables/pr3_cross_sector_diagnostic_table.csv"
+    "results/PR3_FINAL_AUDIT_SUMMARY.md",
+    "results/pr3_locked_outputs.csv",
+    "results/pr3_cross_sector_diagnostic_table.csv"
   ],
   "claim_boundary": {
     "tier_a_manifest_and_targeted_regeneration": "CLAIMED_WHEN_PASSING",

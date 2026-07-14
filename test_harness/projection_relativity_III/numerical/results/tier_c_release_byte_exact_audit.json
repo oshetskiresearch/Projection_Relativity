@@ -35,7 +35,7 @@
   "pairs_failed": 0,
   "pairs_passed": 41,
   "policy": {
-    "audit_entrypoint": "scripts/pr3_release_byte_exact_audit.py",
+    "audit_entrypoint": "code/pr3_release_byte_exact_audit.py",
     "canonical_json": {
       "ensure_ascii": false,
       "indent": 2,

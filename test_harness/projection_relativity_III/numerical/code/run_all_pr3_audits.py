@@ -38,6 +38,8 @@ from types import ModuleType
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+REPOSITORY_ROOT = ROOT.parents[2]
+PAYLOAD_ROOT = REPOSITORY_ROOT / "data" / "projection_relativity_III"
 SCHEMA_TARGETS = ROOT / "schemas" / "pr3_regeneration_targets.json"
 FULL_TARGETS = ROOT / "schemas" / "pr3_generator_data_pairs_full.json"
 
@@ -61,10 +63,10 @@ REQUIRED_FILES = [
     "schemas/pr3_regeneration_targets.json",
     "schemas/pr3_generator_data_pairs_full.json",
     "schemas/pr3_artifact_drift_policy.json",
-    "scripts/pr3_canonical_json.py",
-    "reports/PR3_FINAL_AUDIT_SUMMARY.md",
-    "tables/pr3_locked_outputs.csv",
-    "tables/pr3_cross_sector_diagnostic_table.csv",
+    "code/pr3_canonical_json.py",
+    "results/PR3_FINAL_AUDIT_SUMMARY.md",
+    "results/pr3_locked_outputs.csv",
+    "results/pr3_cross_sector_diagnostic_table.csv",
 ]
 
 DEFAULT_NUMERIC_TOL = Decimal("1e-40")
@@ -193,7 +195,7 @@ def regenerate_payload(code_path: Path, builder_name: str | None) -> tuple[dict[
         # Fallback for simple script-only generators that print JSON to stdout.
         proc = subprocess.run(
             [sys.executable, str(code_path)],
-            cwd=str(ROOT),
+            cwd=str(PAYLOAD_ROOT),
             text=True,
             capture_output=True,
             check=False,
@@ -262,7 +264,7 @@ def validate_manifest() -> list[str]:
     failures: list[str] = []
 
     for rel_path, expected_status in REQUIRED_STATUS.items():
-        path = ROOT / rel_path
+        path = PAYLOAD_ROOT / rel_path
         if not path.exists():
             failures.append(f"missing: {rel_path}")
             continue
@@ -288,8 +290,8 @@ def validate_regeneration_targets(targets_path: Path, *, byte_exact: bool, drift
     schema = load_json(targets_path)
     for target in schema.get("targets", []):
         name = target["name"]
-        data_path = ROOT / target["data_path"]
-        code_path = ROOT / target["code_path"]
+        data_path = PAYLOAD_ROOT / target["data_path"]
+        code_path = PAYLOAD_ROOT / target["code_path"]
         builder_name = target.get("builder_function", "AUTO")
         expected_status = target["status"]
         required_top = set(target.get("required_top_level_keys", []))

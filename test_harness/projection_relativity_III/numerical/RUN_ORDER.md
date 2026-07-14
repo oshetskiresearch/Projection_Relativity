@@ -2,6 +2,10 @@
 
 Run or inspect the PR-III ledger in this order.
 
+The `code/...` and `data/...` construction paths below are relative to
+`data/projection_relativity_III` at the repository root. Audit commands are run
+from `test_harness/projection_relativity_III/numerical`.
+
 ## Alpha and electromagnetic closure
 
 ```text
@@ -91,7 +95,7 @@ data/global_final_priii_consistency_statement.json
 ### Tier A: default hardened audit
 
 ```bash
-python scripts/run_all_pr3_audits.py
+python code/run_all_pr3_audits.py
 ```
 
 This validates:
@@ -110,7 +114,7 @@ PR-III reproducibility audit: PASS
 ### Manifest-only compatibility mode
 
 ```bash
-python scripts/run_all_pr3_audits.py --manifest-only
+python code/run_all_pr3_audits.py --manifest-only
 ```
 
 This validates only file presence and expected locked status fields.
@@ -118,8 +122,8 @@ This validates only file presence and expected locked status fields.
 ### Tier B: full 41-pair schema/numeric artifact audit
 
 ```bash
-python scripts/pr3_artifact_drift_audit.py
-python scripts/pr3_artifact_drift_audit.py --json > reports/pr3_artifact_drift_audit_pass_016.json
+python code/pr3_artifact_drift_audit.py
+python code/pr3_artifact_drift_audit.py --json > results/tier_b_artifact_drift_audit.json
 ```
 
 This uses:
@@ -141,8 +145,8 @@ failure_classes:
 Supporting summaries:
 
 ```bash
-python scripts/pr3_schema_drift_summary.py reports/pr3_artifact_drift_audit_pass_016.json
-python scripts/pr3_numeric_drift_summary.py reports/pr3_artifact_drift_audit_pass_016.json
+python code/pr3_schema_drift_summary.py results/tier_b_artifact_drift_audit.json
+python code/pr3_numeric_drift_summary.py results/tier_b_artifact_drift_audit.json
 ```
 
 Expected summary state:
@@ -158,8 +162,8 @@ numeric_failure_event_count: 0
 ### Tier C: canonical release byte-exact audit
 
 ```bash
-python scripts/pr3_release_byte_exact_audit.py
-python scripts/pr3_release_byte_exact_audit.py --json > reports/pr3_release_byte_exact_audit_pass_016.json
+python code/pr3_release_byte_exact_audit.py
+python code/pr3_release_byte_exact_audit.py --json > results/tier_c_release_byte_exact_audit.json
 ```
 
 This uses:
@@ -182,7 +186,7 @@ canonical release byte matches: 41/41
 To write the regenerated canonical release tree:
 
 ```bash
-python scripts/pr3_release_byte_exact_audit.py --write-release-tree release/pr3_canonical_release
+python code/pr3_release_byte_exact_audit.py --write-release-tree results/pr3_canonical_release
 ```
 
 The release tree should contain the 41 regenerated canonical release JSON artifacts.
@@ -192,7 +196,7 @@ The release tree should contain the 41 regenerated canonical release JSON artifa
 The older full-target drift-report command remains useful as a raw-generator/canonical-diff diagnostic:
 
 ```bash
-python scripts/run_all_pr3_audits.py --full-targets --drift-report
+python code/run_all_pr3_audits.py --full-targets --drift-report
 ```
 
 This command is expected to show canonical diffs and formatting/root-wrapper drift unless it is explicitly wired to the Pass 016 release-byte policy. It is not the Tier C release-byte authority.
@@ -200,7 +204,7 @@ This command is expected to show canonical diffs and formatting/root-wrapper dri
 The older strict byte-exact command remains a stress test of raw canonical generator output:
 
 ```bash
-python scripts/run_all_pr3_audits.py --full-targets --byte-exact
+python code/run_all_pr3_audits.py --full-targets --byte-exact
 ```
 
 This is not the PR-III release-byte claim.

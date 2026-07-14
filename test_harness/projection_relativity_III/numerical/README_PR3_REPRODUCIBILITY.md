@@ -1,8 +1,12 @@
-# Projection Relativity III — Reproducibility Package
+# Projection Relativity III - Reproducibility Package
 
 ## Purpose
 
-This file defines the reproducibility entry point for the PR-III sandbox ledger through Step 09.
+This file defines the public reproducibility entry point for the PR-III ledger through Step 09.
+
+Construction generators and JSON ledgers live under
+`data/projection_relativity_III` at the repository root. Audit code, schemas,
+and results live in this test-harness directory.
 
 The sandbox status is:
 
@@ -49,7 +53,7 @@ Tier D is intentionally not the release claim. Raw JSON key order, raw generator
 
 ```text
 schemas/pr3_release_byte_exact_policy.json
-scripts/pr3_release_byte_exact_audit.py
+code/pr3_release_byte_exact_audit.py
 ```
 
 ## Required run order
@@ -65,7 +69,7 @@ RUN_ORDER.md
 The default audit runner is:
 
 ```bash
-python scripts/run_all_pr3_audits.py
+python code/run_all_pr3_audits.py
 ```
 
 By default, the audit runner performs:
@@ -78,7 +82,7 @@ By default, the audit runner performs:
 To run only the older manifest/status layer:
 
 ```bash
-python scripts/run_all_pr3_audits.py --manifest-only
+python code/run_all_pr3_audits.py --manifest-only
 ```
 
 The targeted regeneration schema list is:
@@ -98,8 +102,8 @@ MANIFEST_PR3_LOCKED_OUTPUTS.json
 Run:
 
 ```bash
-python scripts/pr3_artifact_drift_audit.py
-python scripts/pr3_artifact_drift_audit.py --json > reports/pr3_artifact_drift_audit_pass_016.json
+python code/pr3_artifact_drift_audit.py
+python code/pr3_artifact_drift_audit.py --json > results/tier_b_artifact_drift_audit.json
 ```
 
 Current Tier B result:
@@ -116,8 +120,8 @@ failure_classes:
 Supporting summaries:
 
 ```bash
-python scripts/pr3_schema_drift_summary.py reports/pr3_artifact_drift_audit_pass_016.json
-python scripts/pr3_numeric_drift_summary.py reports/pr3_artifact_drift_audit_pass_016.json
+python code/pr3_schema_drift_summary.py results/tier_b_artifact_drift_audit.json
+python code/pr3_numeric_drift_summary.py results/tier_b_artifact_drift_audit.json
 ```
 
 Both summaries are clean: no wrapper drift, no nested schema drift, no representation drift, and no numeric drift beyond policy.
@@ -127,8 +131,8 @@ Both summaries are clean: no wrapper drift, no nested schema drift, no represent
 Run:
 
 ```bash
-python scripts/pr3_release_byte_exact_audit.py
-python scripts/pr3_release_byte_exact_audit.py --json > reports/pr3_release_byte_exact_audit_pass_016.json
+python code/pr3_release_byte_exact_audit.py
+python code/pr3_release_byte_exact_audit.py --json > results/tier_c_release_byte_exact_audit.json
 ```
 
 Current Tier C result:
@@ -146,13 +150,13 @@ raw checked-in file-order byte matches: 0/41
 To regenerate the canonical release tree:
 
 ```bash
-python scripts/pr3_release_byte_exact_audit.py --write-release-tree release/pr3_canonical_release
+python code/pr3_release_byte_exact_audit.py --write-release-tree results/pr3_canonical_release
 ```
 
 The release tree contains the regenerated canonical JSON artifacts. Files are generated under:
 
 ```text
-release/pr3_canonical_release
+results/pr3_canonical_release
 ```
 
 ## Tier D: raw byte identity not claimed
@@ -168,7 +172,7 @@ that Python Decimal/string display tails are physical observables
 The older full-target drift-report command remains useful as a raw-generator/canonical-diff diagnostic:
 
 ```bash
-python scripts/run_all_pr3_audits.py --full-targets --drift-report
+python code/run_all_pr3_audits.py --full-targets --drift-report
 ```
 
 It is not the Tier C release-byte authority unless it is explicitly wired to the Pass 016 release policy.
@@ -176,7 +180,7 @@ It is not the Tier C release-byte authority unless it is explicitly wired to the
 The older strict byte-exact command remains a raw canonical-diff stress test:
 
 ```bash
-python scripts/run_all_pr3_audits.py --full-targets --byte-exact
+python code/run_all_pr3_audits.py --full-targets --byte-exact
 ```
 
 It is not the PR-III release-byte claim.
@@ -186,14 +190,14 @@ It is not the PR-III release-byte claim.
 Use:
 
 ```text
-reports/PR3_FINAL_AUDIT_SUMMARY.md
+results/PR3_FINAL_AUDIT_SUMMARY.md
 ```
 
 ## Core tables
 
 ```text
-tables/pr3_locked_outputs.csv
-tables/pr3_cross_sector_diagnostic_table.csv
+results/pr3_locked_outputs.csv
+results/pr3_cross_sector_diagnostic_table.csv
 ```
 
 ## Hardening record

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the self-contained PR-III Python/JSON reproducibility tester."""
+"""Run the public PR-III Python/JSON reproducibility tester."""
 
 from __future__ import annotations
 
@@ -16,10 +16,11 @@ from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parent
+REPOSITORY_ROOT = ROOT.parents[2]
+PAYLOAD_ROOT = REPOSITORY_ROOT / "data" / "projection_relativity_III"
 DEFAULT_OUTPUT = ROOT / "results"
 SCOPE_MANIFEST = ROOT / "PR3_NUMERICAL_SCOPE.json"
 PAIR_MANIFEST = ROOT / "schemas" / "pr3_full_regeneration_pairs.json"
-SOURCE_DIRS = ("code", "data", "schemas", "scripts")
 FORBIDDEN_SOURCE_TOKENS = ("pr4", "projection relativity iv")
 
 
@@ -65,8 +66,15 @@ def add_result(
     )
 
 
-def relative_paths(paths: Iterable[Path]) -> list[str]:
-    return sorted(path.relative_to(ROOT).as_posix() for path in paths)
+def relative_paths(paths: Iterable[Path], base: Path) -> list[str]:
+    return sorted(path.relative_to(base).as_posix() for path in paths)
+
+
+def repository_path(path: Path) -> str:
+    try:
+        return path.relative_to(REPOSITORY_ROOT).as_posix()
+    except ValueError:
+        return path.as_posix()
 
 
 def sha256(path: Path) -> str:
@@ -82,10 +90,10 @@ def validate_scope(results: list[CheckResult]) -> tuple[dict[str, Any], list[dic
     expected = scope["expected_counts"]
 
     groups = {
-        "generator_python_files": sorted((ROOT / "code").glob("*.py")),
-        "data_json_files": sorted((ROOT / "data").glob("*.json")),
+        "generator_python_files": sorted((PAYLOAD_ROOT / "code").glob("*.py")),
+        "data_json_files": sorted((PAYLOAD_ROOT / "data").glob("*.json")),
         "schema_json_files": sorted((ROOT / "schemas").glob("*.json")),
-        "audit_python_files": sorted((ROOT / "scripts").glob("*.py")),
+        "audit_python_files": sorted((ROOT / "code").glob("*.py")),
     }
     for key, paths in groups.items():
         add_result(
@@ -110,7 +118,7 @@ def validate_scope(results: list[CheckResult]) -> tuple[dict[str, Any], list[dic
     )
 
     required_scripts = set(scope["required_audit_scripts"])
-    actual_scripts = set(relative_paths(groups["audit_python_files"]))
+    actual_scripts = set(relative_paths(groups["audit_python_files"], ROOT))
     add_result(
         results,
         "scope:audit_scripts",
@@ -125,8 +133,8 @@ def validate_scope(results: list[CheckResult]) -> tuple[dict[str, Any], list[dic
     pairs = pair_payload.get("pairs", [])
     pair_code_paths = {item["code_path"] for item in pairs}
     pair_data_paths = {item["data_path"] for item in pairs}
-    actual_code_paths = set(relative_paths(groups["generator_python_files"]))
-    actual_data_paths = set(relative_paths(groups["data_json_files"]))
+    actual_code_paths = set(relative_paths(groups["generator_python_files"], PAYLOAD_ROOT))
+    actual_data_paths = set(relative_paths(groups["data_json_files"], PAYLOAD_ROOT))
     pair_ok = (
         len(pairs) == int(expected["regeneration_pairs"])
         and pair_code_paths == actual_code_paths
@@ -159,9 +167,9 @@ def validate_scope(results: list[CheckResult]) -> tuple[dict[str, Any], list[dic
         key=lambda path: path.as_posix(),
     )
     forbidden_paths = [
-        path.relative_to(ROOT).as_posix()
+        repository_path(path)
         for path in payload_files
-        if "pr4" in path.relative_to(ROOT).as_posix().casefold()
+        if "pr4" in repository_path(path).casefold()
     ]
     add_result(
         results,
@@ -177,7 +185,7 @@ def validate_scope(results: list[CheckResult]) -> tuple[dict[str, Any], list[dic
     for path in [item for paths in groups.values() for item in paths]:
         text = path.read_text(encoding="utf-8").casefold()
         if any(token in text for token in FORBIDDEN_SOURCE_TOKENS):
-            forbidden_references.append(path.relative_to(ROOT).as_posix())
+            forbidden_references.append(repository_path(path))
     add_result(
         results,
         "scope:forbidden_references",
@@ -190,7 +198,7 @@ def validate_scope(results: list[CheckResult]) -> tuple[dict[str, Any], list[dic
 
     inventory = [
         {
-            "path": path.relative_to(ROOT).as_posix(),
+            "path": repository_path(path),
             "bytes": path.stat().st_size,
             "sha256": sha256(path),
         }
@@ -346,7 +354,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     tier_data: dict[str, Any] = {}
 
     if scope_ok:
-        tier_a_rc, tier_a_output = run_command(["scripts/run_all_pr3_audits.py"])
+        tier_a_rc, tier_a_output = run_command(["code/run_all_pr3_audits.py"])
         (output_dir / "tier_a_manifest_audit.txt").write_text(tier_a_output, encoding="utf-8")
         tier_a_ok = tier_a_rc == 0 and "PR-III reproducibility audit: PASS" in tier_a_output
         add_result(
@@ -361,7 +369,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         tier_data["tier_a"] = {"status": "PASS" if tier_a_ok else "FAIL", "returncode": tier_a_rc}
 
         artifact_rc, artifact, artifact_raw = run_json_command(
-            ["scripts/pr3_artifact_drift_audit.py", "--json"],
+            ["code/pr3_artifact_drift_audit.py", "--json"],
             output_dir / "tier_b_artifact_drift_audit.json",
         )
         if artifact is None:
@@ -389,7 +397,7 @@ def main(argv: Iterable[str] | None = None) -> int:
 
         artifact_path = output_dir / "tier_b_artifact_drift_audit.json"
         schema_rc, schema_summary, schema_raw = run_json_command(
-            ["scripts/pr3_schema_drift_summary.py", str(artifact_path), "--json"],
+            ["code/pr3_schema_drift_summary.py", str(artifact_path), "--json"],
             output_dir / "tier_b_schema_drift_summary.json",
         )
         if schema_summary is None:
@@ -414,7 +422,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         )
 
         numeric_rc, numeric_summary, numeric_raw = run_json_command(
-            ["scripts/pr3_numeric_drift_summary.py", str(artifact_path), "--json"],
+            ["code/pr3_numeric_drift_summary.py", str(artifact_path), "--json"],
             output_dir / "tier_b_numeric_drift_summary.json",
         )
         if numeric_summary is None:
@@ -446,7 +454,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         }
 
         release_rc, release, release_raw = run_json_command(
-            ["scripts/pr3_release_byte_exact_audit.py", "--json"],
+            ["code/pr3_release_byte_exact_audit.py", "--json"],
             output_dir / "tier_c_release_byte_exact_audit.json",
         )
         if release is None:

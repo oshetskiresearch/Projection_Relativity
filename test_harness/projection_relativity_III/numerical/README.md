@@ -1,8 +1,8 @@
-Projection Relativity III Numerical Reproducibility Tester
+# Projection Relativity III Numerical Reproducibility Tester
 
 This directory contains the public Python numerical tester for Projection
-Relativity III. It reproduces and audits the PR-III generator/JSON ledger from
-the sandbox through the final Step 09F consistency statement.
+Relativity III. It audits the PR-III generator/JSON ledger through the final
+Step 09F consistency statement.
 
 This package is separate from the [`../symbolic/`](../symbolic/) tester. The
 symbolic package checks Maple identities and values printed in the paper; this
@@ -11,19 +11,23 @@ representations.
 
 ## Scope
 
-The tester contains:
+The public repository separates construction artifacts from validation code:
 
-- 41 PR-III Python generators covering Steps 01 through 09F.
-- 44 PR-III JSON data and input-ledger files.
-- Six PR-III schema/policy JSON files.
-- Six PR-III audit utilities.
-- The locked-output manifest and supporting audit tables required by the
-  original sandbox runner.
+- [`../../../data/projection_relativity_III/code/`](../../../data/projection_relativity_III/code/)
+  contains 41 PR-III Python generators covering Steps 01 through 09F.
+- [`../../../data/projection_relativity_III/data/`](../../../data/projection_relativity_III/data/)
+  contains 44 PR-III JSON data and input-ledger files.
+- [`schemas/`](schemas/) contains six PR-III schema and policy files.
+- [`code/`](code/) contains six PR-III audit utilities.
+- [`results/`](results/) contains the published reports and supporting tables.
+
+The runner resolves both parts from a complete checkout of this repository; the
+numerical test-harness directory is not intended to be detached from the data
+package.
 
 Files labelled for PR4 are outside the scope of this package. No `pr4_*.py`,
-`pr4_*.json`, PR4 report, or file from the sandbox `PR4/` tree is included or
-executed. The runner verifies this exclusion before it imports or executes any
-generator.
+`pr4_*.json`, PR4 report, or file from the sandbox `PR4/` tree is executed. The
+runner verifies this exclusion before it imports or executes any generator.
 
 ## Reproducibility Tiers
 
@@ -50,6 +54,7 @@ checked-in JSON key-order bytes are not treated as release identities.
 
 ## Requirements
 
+- A complete checkout of the public repository.
 - Python 3.10 or newer.
 - No third-party Python packages.
 
@@ -108,7 +113,7 @@ results/
 ```
 
 The checked source boundary is recorded in
-[`PR3_NUMERICAL_SCOPE.json`](PR3_NUMERICAL_SCOPE.json). The copied PR-III
+[`PR3_NUMERICAL_SCOPE.json`](PR3_NUMERICAL_SCOPE.json). The PR-III construction
 payload is traceable to sandbox commit
 `fbb61f3771db2674c2b551a2d767c923cd5f0a1f` and was verified unchanged through
 `14979ec5d6ecdc4f0fb8f8ed5e6345bec1cbf0fa` for the included paths.
