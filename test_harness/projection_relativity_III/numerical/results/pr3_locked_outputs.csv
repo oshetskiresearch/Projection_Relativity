@@ -1,0 +1,17 @@
+sector,observable,PR_value,unit,status
+Electromagnetic,alpha_inverse,137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901,dimensionless,current experimental precision closed
+Electroweak,M_W,80.373942851862121269660365960912048165641419593354239705150762943078449202475090,GeV,one-sigma diagnostic precision locked
+Electroweak,M_Z,91.187676431043922257304294605837072137923832857909555944715358374802790284187517,GeV,one-sigma diagnostic precision locked
+Electroweak,G_F,0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169,GeV^-2,one-sigma diagnostic precision locked
+Neutrino,m1,0,eV,normal ordering stable
+Neutrino,m2,0.008627283010,eV,normal ordering stable
+Neutrino,m3,0.05010655367,eV,normal ordering stable
+Neutrino,sum_masses,0.058733836680,eV,below conservative cosmology ceiling
+Neutrino,m_beta,8.815029409998,meV,below direct beta-decay bound
+Neutrino,m_beta_beta,1.507694477,meV,stable and below current direct 0nu beta beta limits
+Strong,alpha3,0.117861507469150,dimensionless,diagnostic-compatible anchor
+Strong,n_f_at_Lambda_EW_PR,6,count,threshold ledger locked
+Strong,beta0_at_Lambda_EW_PR,7,dimensionless,asymptotic freedom sign locked
+Structure,anomaly_registry,pass,status,local/global anomaly safe
+Structure,running_continuity,pass,status,cross-sector continuity pass
+Structure,no_fit_provenance,pass,status,forbidden-input audit pass

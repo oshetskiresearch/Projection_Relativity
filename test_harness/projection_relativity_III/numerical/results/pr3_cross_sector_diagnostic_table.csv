@@ -1,0 +1,14 @@
+sector,observable,PR_value,diagnostic_reference,residual_or_fraction,status
+Electromagnetic,alpha_inverse,137.035999207513,137.035999206(11),+0.1376 sigma,pass within one sigma
+Electroweak,M_W,80.3739428518621 GeV,80.3692 +/- 0.0133 GeV,+0.3566 sigma,pass within one sigma
+Electroweak,M_Z,91.1876764310439 GeV,91.1876 +/- 0.0021 GeV,+0.0364 sigma,pass within one sigma
+Electroweak,G_F,1.166379220176e-5 GeV^-2,1.1663788(7)e-5 GeV^-2,+0.6003 sigma,pass within one sigma
+Neutrino,Delta_m21_squared,7.4430e-5 eV^2,7.49e-5 eV^2,-0.627 percent,diagnostic compatible
+Neutrino,Delta_m31_squared,2.51067e-3 eV^2,2.513e-3 eV^2,-0.0928 percent,diagnostic compatible
+Neutrino,sum_masses,0.05873383668 eV,<0.12 eV,48.9449 percent of ceiling,below conservative ceiling
+Neutrino,m_beta,8.815029409998 meV,<0.45 eV,1.9589 percent of bound,below direct beta-decay bound
+Neutrino,m_beta_beta,1.507694477 meV,70 meV scale,2.15385 percent of scale,below current direct limits
+Strong,alpha3,0.117861507469150,0.1179,-0.032648 percent,diagnostic compatible
+Structure,anomaly_registry,pass,required cancellation,pass,anomaly safe
+Structure,running_continuity,pass,internal consistency,pass,continuity pass
+Structure,no_fit_provenance,pass,forbidden-input audit,pass,no-fit pass
