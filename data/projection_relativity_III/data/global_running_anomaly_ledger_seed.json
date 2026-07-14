@@ -1,0 +1,90 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "global_running_anomaly_ledger_seed",
+  "status": "STEP_09A_GLOBAL_LEDGER_LOCKED",
+  "input_policy": {
+    "uses_only_locked_PR_outputs": true,
+    "diagnostic_references_post_generation_only": true,
+    "generation_values_modified": false,
+    "exact_all_orders_theorems_claimed": false
+  },
+  "sector_ledgers": {
+    "electromagnetic": {
+      "alpha_PR_inv": "137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901",
+      "status": "CURRENT_EXPERIMENTAL_PRECISION_CLOSED",
+      "final_exact_theorem": "NOT_CLAIMED"
+    },
+    "electroweak": {
+      "MW_PR_GeV": "80.373942851862121269660365960912048165641419593354239705150762943078449202475090",
+      "MZ_PR_GeV": "91.187676431043922257304294605837072137923832857909555944715358374802790284187517",
+      "GF_PR_GeV_minus2": "0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169",
+      "status": "ONE_SIGMA_DIAGNOSTIC_PRECISION_LOCKED",
+      "final_exact_theorem": "NOT_CLAIMED"
+    },
+    "neutrino": {
+      "m1_eV": "0",
+      "m2_eV": "0.008627283010",
+      "m3_eV": "0.05010655367",
+      "sum_m_eV": "0.058733836680",
+      "m_beta_meV": "8.815029409998",
+      "m_beta_beta_meV": "1.507694477",
+      "status": "STABILITY_LOCKED_AND_DIAGNOSTIC_COMPATIBLE",
+      "final_exact_theorem": "NOT_CLAIMED"
+    },
+    "strong": {
+      "alpha3_PR": "0.117861507469150",
+      "group": "SU(3)_c",
+      "N_c": "3",
+      "adjoint_dimension": "8",
+      "C_A": "3",
+      "C_F": "4/3",
+      "T_F": "1/2",
+      "n_f_PR_at_Lambda_EW_PR": "6",
+      "beta0_PR_at_Lambda_EW_PR": "7",
+      "status": "ANCHOR_LOCKED_THRESHOLD_LOCKED_AND_DIAGNOSTIC_COMPATIBLE",
+      "final_exact_theorem": "NOT_CLAIMED"
+    }
+  },
+  "global_audit_queue": {
+    "anomaly_registry": [
+      "SU(3)c color representation consistency",
+      "SU(2)L global/Witten anomaly check",
+      "SU(2)^2 U(1) anomaly check",
+      "U(1)^3 anomaly check",
+      "gravity^2 U(1) anomaly check",
+      "residual U(1)em vectorlike consistency"
+    ],
+    "running_continuity": [
+      "alpha_PR low-energy closure to EW transport",
+      "EW coupling/mass ledger consistency",
+      "strong alpha3 anchor with PR threshold ledger",
+      "neutrino radiative stability under EW closure"
+    ],
+    "provenance_manifest": [
+      "forbidden target inputs excluded by sector",
+      "diagnostic references post-generation only",
+      "exact theorem claims separated from current diagnostic precision closure"
+    ]
+  },
+  "forbidden_global_generation_inputs": [
+    "CODATA/PDG targets as generation inputs",
+    "external weak masses",
+    "external quark masses",
+    "external QCD Lambda_MSbar",
+    "observed CKM entries",
+    "observed PMNS entries",
+    "cosmological neutrino limits",
+    "0nu beta beta limits",
+    "hadron masses as tuning targets"
+  ],
+  "acceptance_gates": {
+    "step_05_alpha_closure_imported": true,
+    "step_06_electroweak_closure_imported": true,
+    "step_07_neutrino_closure_imported": true,
+    "step_08_strong_closure_imported": true,
+    "exact_all_orders_theorem_claims_excluded": true,
+    "anomaly_and_consistency_audit_queue_defined": true,
+    "step_09B_defined": true
+  },
+  "next_step": "Step 09B: anomaly registry audit"
+}

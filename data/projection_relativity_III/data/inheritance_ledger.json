@@ -1,0 +1,478 @@
+{
+  "project": "Projection Relativity III",
+  "ledger": "inheritance_ledger",
+  "status": "FROZEN",
+  "description": "Canonical PR-I / PR-II inherited-object ledger for PR-III. Objects are frozen from the locked TeX sources recorded by SHA-256 in references/LOCKED_REFERENCE_MANIFEST.md.",
+  "policy": {
+    "no_new_empirical_knobs": true,
+    "target_measurements_allowed_only_as_diagnostics": true,
+    "locked_sources_required_for_updates": true
+  },
+  "forbidden_generation_inputs": [
+    "CODATA alpha",
+    "PDG m_W",
+    "PDG m_Z",
+    "PDG G_F",
+    "PDG sin^2 theta_W",
+    "PDG alpha_s(m_Z)",
+    "lattice alpha_s(m_Z)",
+    "PDG quark masses",
+    "charged-lepton masses as fitted target inputs",
+    "observed CKM entries",
+    "observed PMNS entries",
+    "neutrino mass targets",
+    "experimental m_beta_beta constraints"
+  ],
+  "objects": [
+    {
+      "symbol": "Psi",
+      "display": "\\Psi(x,\\xi)",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "\\Psi:\\mathbb R^{1,3}\\times\\mathcal M_{\\rm int}\\rightarrow\\mathbb C, \\Psi=\\Psi(x,\\xi)",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Universal master projection field. Source: Oshetski_Projection_Relativity_Main.tex lines 112-124."
+    },
+    {
+      "symbol": "M_int_PR1",
+      "display": "\\mathcal M_{\\rm int}=\\mathbb R_w\\times S^1_\\theta",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "\\mathbb R_w\\times S^1_\\theta, \\theta\\sim\\theta+2\\pi n",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Minimal radial--compact internal manifold. Source: PR-I main lines 133-143."
+    },
+    {
+      "symbol": "O_int",
+      "display": "O_{\\rm int}",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "O_X+O_\\theta",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Separable internal spectral operator. Source: PR-I main lines 260-263."
+    },
+    {
+      "symbol": "O_X",
+      "display": "O_X",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "-d^2/dw^2 + 1 + w^2 + (3/4)w^4",
+      "units": "dimensionless branch form",
+      "allowed_as_input": true,
+      "notes": "Projection-trace radial branch. Source: PR-I main lines 327-332 and 3773-3778."
+    },
+    {
+      "symbol": "O_theta",
+      "display": "O_\\theta",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "-(1/R_A^2)d^2/d\\theta^2",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Compact phase operator. Source: PR-I main lines 272-275 and 3779-3782."
+    },
+    {
+      "symbol": "a2_radial",
+      "display": "a_2",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "1",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Quadratic radial coefficient from unit local radial stiffness. Source: PR-I main lines 315-318."
+    },
+    {
+      "symbol": "a4_radial",
+      "display": "a_4",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "3/4",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Quartic radial coefficient from 3+1 projection trace. Source: PR-I main lines 320-328."
+    },
+    {
+      "symbol": "mu_min_squared",
+      "display": "\\mu_{\\min}^2",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "3.052966743096",
+      "units": "dimensionless internal stiffness units",
+      "allowed_as_input": true,
+      "notes": "Radial spectral gap lambda_1-lambda_0. Source: PR-I main lines 653-659 and 3785-3789."
+    },
+    {
+      "symbol": "projection_sector_set",
+      "display": "\\{P_g,P_{\\rm disp},P_A,P_X,P_\\theta\\}",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "[P_g, P_disp, P_A, P_X, P_theta]",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Primary PR-I projection-sector set. Source: PR-I main lines 374-379 and 3805-3815."
+    },
+    {
+      "symbol": "P_g",
+      "display": "P_g",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "gravitational stiffness projection",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Projection sector from the PR-I sector set."
+    },
+    {
+      "symbol": "P_disp",
+      "display": "P_{\\rm disp}",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "displacement / scalar-amplitude projection",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Seed for PR-III scalar Hessian. Source: PR-I main lines 827-885."
+    },
+    {
+      "symbol": "P_A",
+      "display": "P_A",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "compact electromagnetic phase projection",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Projection sector from the PR-I compact phase ledger."
+    },
+    {
+      "symbol": "P_X",
+      "display": "P_X",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "projection-response residual sector",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Projection-response residual sector inherited for radiative/noise/residual work."
+    },
+    {
+      "symbol": "P_theta",
+      "display": "P_\\theta",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "cosmological compact phase-stress projection",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Projection sector from PR-I cosmology phase-stress branch."
+    },
+    {
+      "symbol": "V_disp",
+      "display": "V_{\\rm disp}(A)",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "V_0+\\alpha_A A^2+\\beta_A A^4, \\beta_A>0",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Minimal bounded displacement potential. Source: PR-I main lines 827-835."
+    },
+    {
+      "symbol": "A0",
+      "display": "A_0",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "sqrt(-\\alpha_A/(2\\beta_A))",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Stable nonzero displacement vacuum. Source: PR-I main lines 838-851."
+    },
+    {
+      "symbol": "v_A",
+      "display": "v_A",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "sqrt(Z_disp) A_0",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Canonically normalized displacement vacuum. Source: PR-I main lines 853-863."
+    },
+    {
+      "symbol": "m_A_squared",
+      "display": "m_A^2",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "d^2 V_disp/dA^2 |_{A0} = -4 alpha_A = 8 beta_A A_0^2",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Effective displacement-curvature scale. Source: PR-I main lines 875-878."
+    },
+    {
+      "symbol": "M_eff",
+      "display": "\\mathcal M_{\\rm eff}",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "g_eff v_A = g_0 I_A A_0",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Effective inertia from stable displacement vacuum. Source: PR-I main lines 882-885 and 2001-2012."
+    },
+    {
+      "symbol": "R_max",
+      "display": "R_{\\max}",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "\\chi_R \\Lambda_X^2 \\mu_{\\star,\\min}^2 < \\infty",
+      "units": "curvature scale",
+      "allowed_as_input": true,
+      "notes": "Branch-tied curvature ceiling. Source: PR-I main lines 661-670."
+    },
+    {
+      "symbol": "r_c",
+      "display": "r_c(M)",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "(G_N M/(c^2 R_max))^(1/3)",
+      "units": "length",
+      "allowed_as_input": true,
+      "notes": "Finite-core radius. Source: PR-I main lines 671-679."
+    },
+    {
+      "symbol": "m_PR_profile",
+      "display": "m_{\\rm PR}(r)",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "M r^3/(r^3+r_c^3)",
+      "units": "mass",
+      "allowed_as_input": true,
+      "notes": "Regularized mass profile. Source: PR-I main lines 695-698."
+    },
+    {
+      "symbol": "rho_max",
+      "display": "\\rho_{\\max}",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "3 c^2 R_max/(4 pi G_N)",
+      "units": "density",
+      "allowed_as_input": true,
+      "notes": "Core density ceiling. Source: PR-I main lines 700-714."
+    },
+    {
+      "symbol": "q_bc",
+      "display": "q_{\\rm bc}",
+      "source": "PR-I / PR-II locked sources",
+      "status": "frozen",
+      "value": "10.905007182855176",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Compact boundary stiffness. Source: PR-I main lines 1673-1679; PR-II main lines 255 and 545."
+    },
+    {
+      "symbol": "c_bc",
+      "display": "c_{\\rm bc}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "0.796684464847899",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Compact boundary cofactor. Source: PR-II main lines 259 and 546."
+    },
+    {
+      "symbol": "alpha_PR_bc_inv",
+      "display": "\\alpha_{\\rm PR,bc}^{-1}",
+      "source": "PR-I main locked source",
+      "status": "frozen",
+      "value": "137.036361812007",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Boundary-resolved electromagnetic normalization, equal to 4*pi*q_bc. Source: PR-I main lines 1681-1689 and 3797-3801."
+    },
+    {
+      "symbol": "M_int_EW",
+      "display": "\\mathcal M_{\\rm int}^{\\rm EW}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "\\mathbb R_w\\times S_Y^1\\times SU(2)_L",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Electroweak lifted compact fiber. Source: PR-II main lines 79-83 and 129-134."
+    },
+    {
+      "symbol": "EW_parent_fiber",
+      "display": "SU(2)_L\\times U(1)_Y",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "parent electroweak compact phase fiber",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Parent electroweak phase-fiber boundary ledger. Source: PR-II main lines 137-146."
+    },
+    {
+      "symbol": "Q_residual",
+      "display": "Q",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "T_3 + Y/2",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Residual electromagnetic charge operator. Source: PR-II main lines 141-143 and 199."
+    },
+    {
+      "symbol": "rho_EW_tree",
+      "display": "\\rho_{\\rm EW}^{(0)}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "1",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Tree-level electroweak rho relation. Source: PR-II main lines 151-153 and 1764-1779."
+    },
+    {
+      "symbol": "Delta_EW",
+      "display": "\\Delta_{\\rm EW}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "0.018644236701811",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Weak boundary deficit, computed as (1-c_bc)/q_bc. Source: PR-II main lines 1110-1129 and 1420-1440."
+    },
+    {
+      "symbol": "sin2thetaW_tree",
+      "display": "\\sin^2\\theta_W^{\\rm PR}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "0.231355763298189",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Boundary weak-mixing output, equal to 1/4-Delta_EW. Source: PR-II main lines 1110-1150."
+    },
+    {
+      "symbol": "r_G",
+      "display": "r_G",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "0.073056757459128",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Compact generation suppression ratio c_bc/q_bc. Source: PR-II main lines 276-280 and table line 547."
+    },
+    {
+      "symbol": "Xi_EW",
+      "display": "\\Xi_{\\rm EW}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "2.0099841245909515",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Dimensionless electroweak order factor, q_bc*c_bc*sin^2 theta_W. Source: PR-II main lines 1444-1460."
+    },
+    {
+      "symbol": "sqrt_Xi_EW",
+      "display": "\\sqrt{\\Xi_{\\rm EW}}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "1.417739089039641",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Square root of electroweak order factor. Source: PR-II main lines 1455-1460."
+    },
+    {
+      "symbol": "y_T_PR",
+      "display": "y_T^{\\rm PR}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "0.997513275401799",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Terminal weak matter-displacement overlap. Source: PR-II main lines 1488-1500."
+    },
+    {
+      "symbol": "S_EW_total",
+      "display": "S_{\\rm EW}^{\\rm PR,total}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "37.17945086706573",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Corrected compact-boundary hierarchy action. Source: PR-II main around lines 1620-1635."
+    },
+    {
+      "symbol": "Lambda_EW_PR",
+      "display": "\\Lambda_{\\rm EW}^{\\rm PR}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "173.67059834472832",
+      "units": "GeV",
+      "allowed_as_input": true,
+      "notes": "Weak displacement anchor. Source: PR-II main around lines 1635-1640."
+    },
+    {
+      "symbol": "v_EW_PR",
+      "display": "v_{\\rm EW}^{\\rm PR}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "246.21959589022453",
+      "units": "GeV",
+      "allowed_as_input": true,
+      "notes": "Generated electroweak order scale. Source: PR-II main lines 158-160 and 1642-1656."
+    },
+    {
+      "symbol": "GF_tree",
+      "display": "G_F^{\\rm PR}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "1.166379220175995e-5",
+      "units": "GeV^-2",
+      "allowed_as_input": true,
+      "notes": "Generated Fermi constant from v_EW. Source: PR-II main lines 166-168 and 1657-1672."
+    },
+    {
+      "symbol": "N_gen_PR",
+      "display": "N_{\\rm gen}^{\\rm PR}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "3",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Generation count from dim[(SU(2)_L x U(1)_Y)/U(1)_em]. Source: PR-II main lines 173-188."
+    },
+    {
+      "symbol": "alpha3_PR",
+      "display": "\\alpha_3^{\\rm PR}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "0.117861507469150",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "Compact-boundary strong-coupling anchor; higher-loop and scheme matching deferred to PR-III. Source: PR-II main around lines 4263-4302 and 6131-6149."
+    },
+    {
+      "symbol": "neutrino_spectrum_PR",
+      "display": "normal-ordering neutrino mass candidate",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "m1=0 eV, m2=8.627283010e-3 eV, m3=5.010655367e-2 eV, sum=5.873383668e-2 eV",
+      "units": "eV",
+      "allowed_as_input": true,
+      "notes": "Normal-ordering compact-boundary candidate. Source: PR-II main around lines 5271-5475 and 6307-6341."
+    },
+    {
+      "symbol": "PMNS_angles_PR",
+      "display": "PMNS compact angle candidates",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "sin2theta12=0.299447410807983, sin2theta23=0.565008899090616, sin2theta13=0.022270270124743, delta_CP=195.646778408 deg",
+      "units": null,
+      "allowed_as_input": true,
+      "notes": "PR-II PMNS output; observed PMNS entries remain forbidden as generation inputs. Source: PR-II main around lines 5020-5090 and 6280-6304."
+    },
+    {
+      "symbol": "m_beta_beta_PR",
+      "display": "m_{\\beta\\beta}^{\\rm PR}",
+      "source": "PR-II main locked source",
+      "status": "frozen",
+      "value": "1.507694477e-3",
+      "units": "eV",
+      "allowed_as_input": true,
+      "notes": "Equivalent to 1.508 meV; neutrinoless double-beta effective Majorana mass output. Source: PR-II main lines 93-99 and around 5536-5598."
+    }
+  ]
+}

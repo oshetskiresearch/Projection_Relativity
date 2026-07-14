@@ -1,0 +1,78 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "neutrino_ordering_pmns_stability_audit",
+  "status": "STEP_07D_ORDERING_PMNS_STABILITY_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "external_neutrino_targets_used": false,
+    "diagnostic_comparisons_deferred": true,
+    "pmns_correction_inserted": false
+  },
+  "mass_branch": {
+    "m1_eV": "0",
+    "m2_eV": "0.008627283010",
+    "m3_eV": "0.05010655367",
+    "Delta_m1_env_eV": "0",
+    "Delta_m2_env_eV": "0.0000009996409476951758708280197761218227759646953334063826559027526705521378070274375562485041798800910034",
+    "Delta_m3_env_eV": "0.000005805832814150140250439420817385414296511340799115092025774221006777488520230705063509828982227988140",
+    "m2_interval_eV": [
+      "0.00862628336905230482412917198022387817722403530466659361734409724732944786219297256235056626470",
+      "0.00862828265094769517587082801977612182277596469533340638265590275267055213780702743764943373530"
+    ],
+    "m3_interval_eV": [
+      "0.0501007478371858498597495605791826145857034886592008849079742257789932225114797692943952779749",
+      "0.0501123595028141501402504394208173854142965113407991150920257742210067774885202307056047220251"
+    ],
+    "ordering_preserved": true
+  },
+  "mass_squared_branch": {
+    "Delta_m21_squared_PR_eV2": "0.000074430012134634660100",
+    "Delta_m31_squared_PR_eV2": "0.0025106667206845904689",
+    "Delta_m32_squared_PR_eV2": "0.002436236708549955808800",
+    "Delta_m21_squared_interval_eV2": [
+      "0.00007441276476318838263001062811611925804513882892921781514762637771160733505814697237439327655772404702",
+      "0.00007444726150464498618780805423470517726644007393885670782967769168891488140143395826014045256042215603"
+    ],
+    "Delta_m31_squared_interval_eV2": [
+      "0.002510084933845282612486743641268736621202845356705498779599813291773265895975145922558081743915705740",
+      "0.002511248574939287657038330321589816771324938679871556863788199071885980046624292917482741639740122689"
+    ],
+    "Delta_m32_squared_interval_eV2": [
+      "0.002435637672340637626298935587034031443936405282766642071770135600084351014573711964297941291355283584",
+      "0.002436835810176099274408319693473697513279799850942339048640572694174372711566145945108348363182398642"
+    ],
+    "all_splittings_positive": true
+  },
+  "pmns_branch": {
+    "sin2theta12": "0.299447410807983",
+    "sin2theta23": "0.565008899090616",
+    "sin2theta13": "0.022270270124743",
+    "delta_CP_deg": "195.646778408",
+    "theta12_deg": "33.176356643416725",
+    "theta23_deg": "48.73531040302701",
+    "theta13_deg": "8.582438058580076"
+  },
+  "pmns_first_row_audit": {
+    "abs_Ue1_squared": "0.684951093794122667931830223369",
+    "abs_Ue2_squared": "0.292778636081134332068169776631",
+    "abs_Ue3_squared": "0.022270270124743",
+    "row_sum": "1.000000000000000000000000000000"
+  },
+  "pmns_update_rule": {
+    "form": "U_PMNS_phys=U_PMNS_0*exp(A_nu_PR)",
+    "constraint": "A_nu_PR^dagger=-A_nu_PR",
+    "first_order": "Delta_U_PMNS_PR=U_PMNS_0*A_nu_PR",
+    "unitarity_preserved_to_first_order": true,
+    "observed_pmns_angles_forbidden_as_inputs": true
+  },
+  "acceptance_gates": {
+    "normal_ordering_preserved_over_envelope": true,
+    "mass_squared_splittings_remain_positive": true,
+    "massless_branch_protected": true,
+    "pmns_first_row_normalization_preserved": true,
+    "future_pmns_corrections_unitary_generator_only": true,
+    "external_oscillation_pmns_targets_not_used": true,
+    "step_07E_defined": true
+  },
+  "next_step": "Step 07E: diagnostic comparison of neutrino branch after generation"
+}

@@ -1,0 +1,86 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "gauge_null_quotient_seed",
+  "status": "STEP_03_QUOTIENT_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "forbidden_target_inputs_used": false,
+    "empirical_targets_allowed_as_diagnostics_only": true
+  },
+  "scalar_basis": ["h_A", "pi_1", "pi_2", "pi_3"],
+  "scalar_hessian_seed": {
+    "matrix_symbolic": [
+      ["H_AA", "0", "0", "0"],
+      ["0", "0", "0", "0"],
+      ["0", "0", "0", "0"],
+      ["0", "0", "0", "0"]
+    ],
+    "H_AA": "-4*alpha_A = 8*beta_A*A0^2",
+    "full_spectrum_symbolic": ["H_AA", "0", "0", "0"],
+    "nullity_before_quotient": 3,
+    "rank_before_quotient": 1
+  },
+  "gauge_null_subspace": {
+    "basis": ["pi_1", "pi_2", "pi_3"],
+    "dimension": 3,
+    "broken_quotient": "(SU(2)_L x U(1)_Y)/U(1)_em",
+    "broken_quotient_dimension": 3,
+    "null_projector": [
+      ["0", "0", "0", "0"],
+      ["0", "1", "0", "0"],
+      ["0", "0", "1", "0"],
+      ["0", "0", "0", "1"]
+    ],
+    "physical_projector": [
+      ["1", "0", "0", "0"],
+      ["0", "0", "0", "0"],
+      ["0", "0", "0", "0"],
+      ["0", "0", "0", "0"]
+    ]
+  },
+  "physical_quotient": {
+    "basis": ["h_A"],
+    "hessian_symbolic": [["H_AA"]],
+    "spectrum_symbolic": ["H_AA"],
+    "stability_condition": "H_AA=8*beta_A*A0^2>0 for beta_A>0 and A0^2>0"
+  },
+  "neutral_gauge_lock": {
+    "sin2thetaW_PR": "0.231355763298189",
+    "sin_thetaW_PR": "0.480994556412220740217768765489223953539786055779711286076093",
+    "cos_thetaW_PR": "0.876723580555360105457398073670122851235684044309931260035474",
+    "photon_vector_W3B": ["0.480994556412220740217768765489223953539786055779711286076093", "0.876723580555360105457398073670122851235684044309931260035474"],
+    "Z_vector_W3B": ["0.876723580555360105457398073670122851235684044309931260035474", "-0.480994556412220740217768765489223953539786055779711286076093"],
+    "photon_eigenvalue_GeV2": "0",
+    "Z_eigenvalue_GeV2": "7815.4609762693866174128181845803105434042688229137",
+    "photon_residual_max_abs": "9.1e-47",
+    "Z_residual_max_abs": "7.1e-47"
+  },
+  "degree_of_freedom_audit": {
+    "before_locking": {
+      "scalar_real_directions": 4,
+      "massless_gauge_bosons": 4,
+      "massless_gauge_polarizations_each": 2,
+      "total": 12
+    },
+    "after_locking": {
+      "physical_radial_scalars": 1,
+      "massless_photons": 1,
+      "photon_polarizations": 2,
+      "massive_vectors": 3,
+      "massive_vector_polarizations_each": 3,
+      "total": 12
+    },
+    "conserved": true
+  },
+  "acceptance_gates": {
+    "scalar_nullity_equals_three": true,
+    "nullity_matches_broken_quotient_dimension": true,
+    "physical_quotient_contains_only_H_AA": true,
+    "H_AA_symbolically_positive": true,
+    "photon_unbroken_and_massless": true,
+    "Z_direction_orthogonal_and_positive": true,
+    "degrees_of_freedom_conserved": true,
+    "no_fit_policy_active": true
+  },
+  "next_step": "Step 04: construct PR-native radiative determinant DeltaGamma_PR^(1)"
+}

@@ -1,0 +1,63 @@
+{
+  "project": "Projection Relativity III",
+  "policy": "alpha_baseline_policy",
+  "status": "ADOPTED_AS_PR3_TREE_BASELINE",
+  "codata_usage": "diagnostic_only",
+  "branches": {
+    "published_ledger": {
+      "alpha_inv": "137.036361812007",
+      "source": "PR-I / PR-II frozen inheritance ledger",
+      "role": "published finite-resolution reproducibility baseline"
+    },
+    "high_resolution_tree_N15000": {
+      "alpha_inv": "137.036041314016444",
+      "mu_min_squared": "3.053016666732689",
+      "q_bc": "10.904981678435453",
+      "c_bc": "0.796684464847899",
+      "p1": "7.685346950896231e-04",
+      "N": 15000,
+      "source": "PR-II high-resolution convergence sequence / independent banded harmonic-basis calculation",
+      "role": "PR-III tree-level precision baseline"
+    },
+    "diagnostic_reference_supplied": {
+      "alpha_inv": "137.035999206",
+      "source": "user-supplied empirical reference in PR alpha convergence note",
+      "role": "diagnostic comparison only",
+      "allowed_as_generation_input": false
+    }
+  },
+  "derived_diagnostics": {
+    "truncation_shift_inv": "-0.000320497990556",
+    "published_residual_inv": "0.000362606007",
+    "published_residual_ppm": "2.646063874",
+    "high_resolution_residual_inv": "0.000042108016444",
+    "high_resolution_residual_ppm": "0.307277042",
+    "diagnostic_radiative_target_inv": "-0.000042108016444",
+    "alpha_N10000_minus_N300": "0.000000000000114",
+    "alpha_N15000_minus_N10000": "0.000000000000057"
+  },
+  "equations": {
+    "tree_baseline": "alpha_PR_tree_inv := alpha_PR_HR_N15000_inv",
+    "physical_alpha": "alpha_PR_phys_inv = alpha_PR_HR_N15000_inv + Delta_alpha_PR_rad_inv"
+  },
+  "no_fit_rule": {
+    "allowed_generation_inputs": [
+      "alpha_PR_pub_inv",
+      "alpha_PR_HR_N15000_inv",
+      "q_bc_HR",
+      "c_bc",
+      "p1_HR",
+      "mu_min_squared_HR",
+      "locked PR-I / PR-II source outputs"
+    ],
+    "forbidden_generation_inputs": [
+      "diagnostic_reference_alpha_inv",
+      "CODATA alpha inverse",
+      "PDG electroweak target values",
+      "QCD target values",
+      "CKM observed values",
+      "PMNS observed values",
+      "neutrino target values"
+    ]
+  }
+}

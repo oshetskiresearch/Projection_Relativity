@@ -1,0 +1,78 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "global_final_priii_consistency_statement",
+  "status": "STEP_09F_FINAL_PRIII_CONSISTENCY_STATEMENT_LOCKED",
+  "input_policy": {
+    "uses_only_locked_PR_outputs": true,
+    "new_diagnostic_references_introduced": false,
+    "generation_values_modified": false,
+    "new_corrections_computed": false,
+    "final_exact_all_orders_theorem_claimed": false
+  },
+  "final_sector_status": {
+    "electromagnetic": {
+      "status": "CURRENT_EXPERIMENTAL_PRECISION_CLOSED",
+      "key_result": "alpha_inverse inside selected one-sigma diagnostic reference",
+      "exact_theorem_claimed": false
+    },
+    "electroweak": {
+      "status": "ONE_SIGMA_DIAGNOSTIC_PRECISION_LOCKED",
+      "key_result": "M_W, M_Z, and G_F all inside selected one-sigma diagnostics",
+      "exact_theorem_claimed": false
+    },
+    "neutrino": {
+      "status": "STABILITY_LOCKED_AND_DIAGNOSTIC_COMPATIBLE",
+      "key_result": "normal ordering, m_beta, and m_beta_beta stable and below current direct bounds",
+      "exact_theorem_claimed": false
+    },
+    "strong": {
+      "status": "ANCHOR_LOCKED_THRESHOLD_LOCKED_AND_DIAGNOSTIC_COMPATIBLE",
+      "key_result": "alpha3 anchor compatible at sub-0.04 percent; asymptotic freedom sign locked",
+      "exact_theorem_claimed": false
+    },
+    "anomaly_registry": {
+      "status": "PASS",
+      "key_result": "local anomalies cancel per generation, Witten anomaly absent, residual U(1)em vectorlike"
+    },
+    "running_continuity": {
+      "status": "PASS",
+      "key_result": "cross-sector ledger continuity passes"
+    },
+    "no_fit_provenance": {
+      "status": "PASS",
+      "key_result": "forbidden inputs excluded; diagnostic references post-generation only"
+    }
+  },
+  "global_decision": {
+    "PRIII_global_status": "CONSISTENCY_LOCKED",
+    "precision_status": "ALPHA_MW_MZ_GF_ONE_SIGMA_DIAGNOSTIC_PASS",
+    "compatibility_status": "NEUTRINO_AND_STRONG_BRANCHES_COMPATIBLE",
+    "structural_status": "ANOMALY_CONTINUITY_NO_FIT_PASS",
+    "PR2_obligations": "SATISFIED_TO_CURRENT_DIAGNOSTIC_PRECISION",
+    "final_exact_all_orders_theorem": "NOT_CLAIMED",
+    "PRIII_sandbox_ledger": "COMPLETE_THROUGH_STEP_09"
+  },
+  "safe_manuscript_statement": "PR-III extends the PR-I/PR-II projection ledger into a cross-sector radiative, electroweak, neutrino, and strong consistency program whose generated outputs pass the current diagnostic and structural audits recorded here, without using the corresponding diagnostic targets as generation inputs.",
+  "unsafe_claim_excluded": "PR-III proves a complete exact all-orders theory of the Standard Model and QCD.",
+  "remaining_obligations": [
+    "all-orders alpha theorem or higher-order residual proof",
+    "exact electroweak all-orders uncertainty theorem",
+    "additive Majorana seed derivation or exclusion",
+    "phase-sensitive PMNS radiative deformation derivation",
+    "strong reference scale Lambda_3_PR derivation",
+    "smooth PR strong threshold profiles",
+    "higher-loop strong running branch and scheme audit",
+    "confinement/hadronization as a separate PR module",
+    "final manuscript consolidation and reproducibility package"
+  ],
+  "acceptance_gates": {
+    "step_09E_global_diagnostic_table_imported": true,
+    "one_sigma_precision_diagnostics_reported": true,
+    "compatibility_and_bound_diagnostics_reported": true,
+    "structural_anomaly_continuity_no_fit_statuses_reported": true,
+    "exact_all_orders_theorem_claims_excluded": true,
+    "remaining_obligations_explicitly_preserved": true,
+    "PRIII_marked_consistency_locked_not_exact_theorem": true
+  },
+  "next_step": "Manuscript consolidation and reproducibility package"
+}

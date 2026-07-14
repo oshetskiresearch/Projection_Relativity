@@ -1,0 +1,81 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "electroweak_final_precision_audit",
+  "status": "STEP_06I_FINAL_EW_PRECISION_AUDIT_LOCKED",
+  "candidate_under_audit": "C2_three_sheet_vector_self_energy_split",
+  "input_policy": {
+    "references_used_after_generation_only": true,
+    "generation_values_modified": false,
+    "candidate_not_exact_theorem": true,
+    "current_precision_status_assigned": true
+  },
+  "generated_PR_values": {
+    "MW_C2_GeV": "80.373942851862121269660365960912048165641419593354239705150762943078449202475090",
+    "MZ_C2_GeV": "91.184141990108601240778101830153652821743992019019918862617911980779475157804027",
+    "GF_PR_GeV_minus2": "0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169",
+    "rho_EW_C2": "1.0108030425798909620173728568422867860962050389896724125958210974779774276828044"
+  },
+  "diagnostic_status": {
+    "MW_residual_GeV": "0.004742851862121269660365960912048165641419593354239705150762943078449202475090",
+    "MW_sigma_distance": "0.35660540316701275641849330165775681514433032738644399629796564499618063722481203",
+    "MW_status": "CLOSED_TO_ONE_SIGMA_DIAGNOSTIC_PRECISION",
+    "MZ_residual_GeV": "-0.003458009891398759221898169846347178256007980980081137382088019220524842195973",
+    "MZ_sigma_distance": "-1.6466713768565520104276999268319896457180861809910178009942948669165915218919048",
+    "MZ_status": "CLOSED_TO_TWO_SIGMA_DIAGNOSTIC_PRECISION_NOT_ONE_SIGMA",
+    "GF_residual_GeV_minus2": "0.000000000004201759949366003257867488874906911567673178839516230456502630714171261169",
+    "GF_sigma_distance": "0.60025142133800046540964126784384450966759697707374720807180438773875159557142857",
+    "GF_status": "CLOSED_TO_ONE_SIGMA_DIAGNOSTIC_PRECISION"
+  },
+  "no_fit_provenance": {
+    "allowed_generation_inputs": [
+      "alpha_PR(0) from Step 05H",
+      "q_bc_HR",
+      "c_bc",
+      "Delta_EW_HR",
+      "N_gen_PR",
+      "sin2thetaW_PR",
+      "v_EW_PR",
+      "C1 weak masses generated from PR transport"
+    ],
+    "excluded_generation_inputs": [
+      "diagnostic W mass",
+      "diagnostic Z mass",
+      "diagnostic Fermi constant",
+      "fitted kappa_W or kappa_Z",
+      "external oblique parameters",
+      "observed mixing matrices"
+    ]
+  },
+  "closure_status_decision": {
+    "EW_candidate_status": "CURRENT_PRECISION_LOCKED",
+    "W_status": "closed_to_one_sigma_diagnostic_precision",
+    "Z_status": "closed_to_two_sigma_diagnostic_precision",
+    "GF_status": "closed_to_one_sigma_diagnostic_precision",
+    "PR2_EW_obligation": "satisfied_to_current_diagnostic_precision",
+    "final_exact_EW_theorem": "not_claimed",
+    "step_06_status": "COMPLETE"
+  },
+  "remaining_obligation": {
+    "neutral_channel_residual_GeV": "-0.003458009891398759221898169846347178256007980980081137382088019220524842195973",
+    "neutral_channel_residual_MeV": "-3.458009891398759221898169846347178256007980980081137382088019220524842195973",
+    "status": "inside_two_sigma_but_outside_one_sigma",
+    "future_routes": [
+      "next-order neutral-vector correction",
+      "scheme or matching-scale uncertainty audit",
+      "weak-angle transport term coupled to C2",
+      "mode-resolved neutral self-energy kernel",
+      "all-orders weak-sector uncertainty theorem"
+    ]
+  },
+  "acceptance_gates": {
+    "C2_candidate_remains_no_fit": true,
+    "diagnostic_references_used_only_after_generation": true,
+    "W_inside_one_sigma": true,
+    "GF_inside_one_sigma": true,
+    "Z_inside_two_sigma": true,
+    "remaining_neutral_channel_residual_reported": true,
+    "current_precision_locked_not_exact_theorem": true,
+    "next_stage_defined": true
+  },
+  "next_step": "Step 07: neutrino branch radiative stability"
+}

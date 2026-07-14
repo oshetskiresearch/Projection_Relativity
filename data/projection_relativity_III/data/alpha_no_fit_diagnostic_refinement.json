@@ -1,0 +1,58 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "alpha_no_fit_diagnostic_refinement",
+  "status": "STEP_05E_NO_FIT_DIAGNOSTIC_LOCKED",
+  "candidate_under_audit": "minimal_boundary_leakage_D1",
+  "input_policy": {
+    "candidate_uses_only_frozen_PR_values": true,
+    "forbidden_target_inputs_used": false,
+    "diagnostic_reference_used_after_generation_only": true,
+    "do_not_promote_to_final_theorem": true
+  },
+  "candidate_formula": {
+    "D1": "-p1_HR*Delta_EW_HR*sin2thetaW_PR",
+    "Delta_EW_HR": "(1-c_bc)/q_bc_HR",
+    "DeltaZ_A_min_PR": "D1",
+    "Delta_alpha_PR_rad_min_inv": "4*pi*D1"
+  },
+  "candidate_result": {
+    "DeltaZ_A_min_PR": "-0.0000033150449735433222932326442973740154803469215638087",
+    "Delta_alpha_PR_rad_min_inv": "-0.000041658083740813887216904843821118454991063065733008",
+    "alpha_PR_phys_min_inv": "137.035999655932703186112783095156178881545008936934266992"
+  },
+  "diagnostic_comparison": {
+    "alpha_ref_inv": "137.035999206",
+    "post_generation_residual_inv": "0.000000449932703186112783095156178881545008936934266992",
+    "post_generation_residual_ppm": "0.003283317565",
+    "diagnostic_shift_capture_percent": "98.9314797011",
+    "remaining_D1_gap_inv": "-0.000000449932703186112783095156178881545008936934266992",
+    "remaining_D1_gap_DeltaZ_A": "-0.000000035804506885384207608885148433204346739676464938207721898986491963055452151542494"
+  },
+  "decision": {
+    "minimal_candidate_status": "accepted_as_D1_not_final",
+    "final_alpha_theorem_status": "not_complete",
+    "next_required_substep": "Step 05F mode-resolved correction / residual refinement"
+  },
+  "allowed_refinement_paths": [
+    "mode_resolved_heat_kernel_coefficients",
+    "PR_derived_threshold_refinement",
+    "projection_overlap_refinement",
+    "higher_order_boundary_leakage_derived_from_PR_algebra"
+  ],
+  "forbidden_refinement_paths": [
+    "fit_residual_directly",
+    "insert_CODATA_or_empirical_alpha",
+    "choose_thresholds_to_force_agreement",
+    "hide_residual_in_rounding",
+    "claim_final_closure_before_D2_derivation"
+  ],
+  "acceptance_gates": {
+    "step_05D_formula_confirmed_no_fit": true,
+    "diagnostic_reference_used_only_after_generation": true,
+    "residual_explicitly_reported": true,
+    "minimal_candidate_not_overstated": true,
+    "nonempirical_refinement_path_selected": true,
+    "next_substep_defined": true
+  },
+  "next_step": "Step 05F: derive a mode-resolved or higher-order D2 refinement without using the diagnostic residual as input"
+}

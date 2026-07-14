@@ -1,0 +1,64 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "global_running_continuity_audit",
+  "status": "STEP_09C_RUNNING_CONTINUITY_AUDIT_LOCKED",
+  "input_policy": {
+    "uses_only_locked_PR_outputs": true,
+    "new_diagnostic_references_introduced": false,
+    "generation_values_modified": false,
+    "new_corrections_computed": false
+  },
+  "continuity_tests": {
+    "em_to_ew_alpha_transport": {
+      "alpha_PR_inv_0": "137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901",
+      "Delta_run_C1_PR": "8.687829492660492292065934163247",
+      "alpha_PR_C1_inv_muEW": "128.34816971485292266682541193836959463567763749001553697855626858485557677931466",
+      "inverse_alpha_lowered": true,
+      "status": "PASS"
+    },
+    "ew_transport_to_weak_mass_ledger": {
+      "Pi_W_C3_PR": "0.0071761868359439893733287076445639690821946487788653056423301194572159567126904707",
+      "Pi_Z_C3_PR": "-0.0035108469317154309784857330325970968091048087578393575985553208083781250716297856",
+      "one_plus_Pi_W_positive": true,
+      "one_plus_Pi_Z_positive": true,
+      "MW_PR_GeV": "80.373942851862121269660365960912048165641419593354239705150762943078449202475090",
+      "MZ_PR_GeV": "91.187676431043922257304294605837072137923832857909555944715358374802790284187517",
+      "GF_PR_GeV_minus2": "0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169",
+      "status": "PASS"
+    },
+    "ew_to_neutrino_stability": {
+      "epsilon_nu_PR": "0.010764280253915984059993061466845953623291973168297958463495179185823935069035706",
+      "epsilon_shared_with_weak_vector_factor": true,
+      "m1_branch_status": "protected_at_multiplicative_order",
+      "normal_ordering_status": "stable",
+      "m_beta_beta_meV": "1.507694477",
+      "status": "PASS"
+    },
+    "ew_scale_to_strong_threshold_ledger": {
+      "Lambda_EW_PR_GeV": "173.67059834472832",
+      "top_threshold_PR_GeV": "172.8139732666624",
+      "Lambda_EW_above_top_threshold": true,
+      "n_f_PR_at_Lambda_EW_PR": "6",
+      "beta0_PR_at_Lambda_EW_PR": "7",
+      "status": "PASS"
+    },
+    "anomaly_continuity": {
+      "local_gauge_anomalies": "cancel_per_generation",
+      "Witten_anomaly": "absent",
+      "residual_U1em": "vectorlike",
+      "external_fields_inserted": false,
+      "status": "PASS"
+    }
+  },
+  "acceptance_gates": {
+    "alpha_connects_to_EW_transport": true,
+    "EW_transport_connects_to_final_weak_mass_ledger": true,
+    "neutrino_kernel_uses_EW_boundary_scale": true,
+    "strong_threshold_ledger_continuous_at_Lambda_EW": true,
+    "anomaly_registry_compatible_with_continuity_chain": true,
+    "no_new_diagnostic_reference_introduced": true,
+    "no_generated_sector_value_modified": true,
+    "step_09D_defined": true
+  },
+  "next_step": "Step 09D: no-fit provenance manifest"
+}

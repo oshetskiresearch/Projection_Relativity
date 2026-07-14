@@ -1,0 +1,61 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "pr_spectral_kernel_seed",
+  "status": "STEP_05C_KERNEL_ARCHITECTURE_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "forbidden_target_inputs_used": false,
+    "empirical_targets_allowed_as_diagnostics_only": true
+  },
+  "kernel_architecture": {
+    "generic_kernel": "K_i^PR = (C_i^hk/(16*pi^2))*I_i^PR",
+    "delta_ZA_formula": "DeltaZ_A^PR=sum_i sigma_i*n_i*Q_i^2*K_i^PR",
+    "C_i_hk_status": "assigned_in_step_05D",
+    "I_i_PR_status": "defined_as_PR_spectral_regulator_class_in_step_05C"
+  },
+  "spectral_regulator": {
+    "mu_min_squared_HR": "3.053016666732689",
+    "support_condition": "mu_n^2 >= mu_min_squared_HR > 0",
+    "shifted_spectrum": "mu_n^2=lambda_n-lambda_0",
+    "regulator_source": "internal_PR_spectral_gap_and_reference_subtraction_not_arbitrary_cutoff",
+    "kernel_class": "I_i^PR(tau_i)=sum_{n in S_i} omega_i,n^PR [ log(1+tau_i/mu_n^2) - R_i(tau_i;mu_n^2) ]"
+  },
+  "threshold_policy": {
+    "tau_i": "M_i^2/Lambda_ref^2",
+    "allowed_mass_sources": [
+      "frozen PR tree values",
+      "PR-II generated mass-sector outputs",
+      "future PR-III derived masses",
+      "symbolic placeholders pending PR-derived values"
+    ],
+    "forbidden_mass_sources": [
+      "PDG masses as generation inputs",
+      "fitted thresholds",
+      "empirical values chosen to force Delta alpha_PR_rad_inv"
+    ],
+    "allowed_provisional_reference_scale": "Lambda_EW_PR",
+    "Lambda_EW_PR_GeV": "173.67059834472832"
+  },
+  "boundary_anchors": {
+    "p1_HR": "7.685346950896231e-04",
+    "q_bc_HR": "10.904981678435453",
+    "c_bc": "0.796684464847899",
+    "alpha_PR_tree_inv": "137.036041314016444"
+  },
+  "charged_inventory_dependency": {
+    "source": "data/charged_mode_supertrace_inventory.json",
+    "kernel_multiplies_locked_charge_inventory": true,
+    "neutral_modes_remain_zero_by_Q2": true
+  },
+  "admissibility_gates": {
+    "uses_internal_spectral_gap": true,
+    "reference_normalized": true,
+    "uses_only_PR_derived_or_symbolic_thresholds": true,
+    "charge_inventory_not_altered": true,
+    "finite_without_arbitrary_cutoff_tuning": true,
+    "diagnostic_alpha_residual_not_used": true,
+    "neutral_modes_zero_by_Q2": true,
+    "spin_gauge_coefficients_not_hidden": true
+  },
+  "next_step": "Step 05D: compute candidate DeltaZ_A^PR from locked inventory and kernel"
+}

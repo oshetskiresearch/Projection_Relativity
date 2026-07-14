@@ -1,0 +1,63 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "electroweak_weak_angle_oblique_refinement_decision",
+  "status": "STEP_06F_REFINEMENT_DECISION_LOCKED",
+  "input_policy": {
+    "diagnostic_references_used_after_generation_only": true,
+    "generation_values_modified": false,
+    "refinement_inserted": false,
+    "reference_values_used_to_generate_PR_values": false,
+    "reference_values_used_to_select_constructive_branch": false,
+    "policy_classification": "NON_CONSTRUCTIVE_DIAGNOSTIC_TABLE"
+  },
+  "generated_C1_values": {
+    "e_PR_C1": "0.31290326301309718394080299657511217109788182140627164648683511130599266477420220",
+    "v_EW_PR_GeV": "246.21959589022453",
+    "sin2thetaW_PR": "0.231355763298189",
+    "MW_C1_GeV": "80.087096563511109803746814699902444354649798569999232287716279442425889446764759",
+    "MZ_C1_GeV": "91.348172148831652601189435910712007341759134665792081831637272352752169646942106"
+  },
+  "diagnostic_references": {
+    "MW_ref_GeV": "80.3692",
+    "MZ_ref_GeV": "91.1876",
+    "role": "nonconstructive diagnostic stress test only"
+  },
+  "weak_angle_only_test": {
+    "sin2thetaW_required_by_W": "0.22973445288237056079723195835680609313487954599597711484466735919640230366721443",
+    "delta_sin2thetaW_required_by_W": "-0.00162131041581843920276804164319390686512045400402288515533264080359769633278557",
+    "sin2thetaW_required_by_Z": "0.23252496898144973253908904626072714161339130633509181188042201963272533271616787",
+    "delta_sin2thetaW_required_by_Z": "0.00116920568326073253908904626072714161339130633509181188042201963272533271616787",
+    "required_shift_spread": "0.00279051609907917174185708790392104847851176033911469703575466043632302904895344",
+    "weak_angle_only_closure_possible": false
+  },
+  "ratio_and_rho_diagnostic": {
+    "C1_ratio_MW_over_MZ": "0.87672358055536010545739807367012285123568404430993126003547441293364789956911",
+    "cos_thetaW_PR": "0.87672358055536010545739807367012285123568404430993126003547441293364789956911",
+    "reference_ratio_MW_over_MZ": "0.88136106224969184406651781601884466747671832573727129565862025099903934306858",
+    "rho_required_with_PR_angle": "1.01060709878353918102676136213730083346818222916819271601829928697235312387450"
+  },
+  "mass_scale_diagnostics": {
+    "kappa_W": "1.00352245803124071275891449709760215823575883707467437832591665777672316773807",
+    "kappa_Z": "0.99824219636743211696008559534794545773552408043878783099060479287881717797268",
+    "kappa_W_squared": "1.00705732377306327771597165721212417052656056708974745789223810032054312695103",
+    "kappa_Z_squared": "0.99648748260847490276533573866997093623766455250751564721761443042339415931565"
+  },
+  "refinement_decision": {
+    "weak_angle_only": "DIAGNOSTICALLY_REJECTED",
+    "constructive_branch_selected_from_diagnostic_values": false,
+    "constructive_refinement_status": "DEFERRED_TO_STEP_06G_PR_ONLY_DERIVATION",
+    "Pi_values_status": "not_inserted_in_step_06F",
+    "next_step": "Step 06G derive PR vector self-energy from PR-only geometry"
+  },
+  "acceptance_gates": {
+    "diagnostic_references_used_only_after_generation": true,
+    "weak_angle_only_test_performed": true,
+    "W_and_Z_angle_requirements_incompatible": true,
+    "rho_diagnostic_reported": true,
+    "charged_neutral_vector_split_identified": true,
+    "no_refinement_inserted": true,
+    "nonconstructive_diagnostic_only": true,
+    "constructive_branch_not_selected_from_references": true,
+    "step_06G_defined": true
+  }
+}

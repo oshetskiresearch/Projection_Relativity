@@ -1,0 +1,134 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "global_cross_sector_diagnostic_table",
+  "status": "STEP_09E_CROSS_SECTOR_DIAGNOSTIC_TABLE_LOCKED",
+  "input_policy": {
+    "uses_only_locked_PR_outputs": true,
+    "diagnostic_references_post_generation_only": true,
+    "generation_values_modified": false,
+    "forbidden_generation_inputs_used": false,
+    "exact_all_orders_theorems_claimed": false
+  },
+  "diagnostic_rows": [
+    {
+      "sector": "electromagnetic",
+      "observable": "alpha_inverse",
+      "PR_value": "137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901",
+      "diagnostic_reference": "137.035999206(11)",
+      "residual": "0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901",
+      "sigma_distance": "0.13758317808103146378332678506160340818323063441420623498687061630133231771180918",
+      "status": "PASS_WITHIN_ONE_SIGMA"
+    },
+    {
+      "sector": "electroweak",
+      "observable": "M_W",
+      "PR_value_GeV": "80.373942851862121269660365960912048165641419593354239705150762943078449202475090",
+      "diagnostic_reference_GeV": "80.3692 +/- 0.0133",
+      "residual_GeV": "0.004742851862121269660365960912048165641419593354239705150762943078449202475090",
+      "sigma_distance": "0.35660540316701275641849330165775681514433032738644399629796564499618063722481203",
+      "status": "PASS_WITHIN_ONE_SIGMA"
+    },
+    {
+      "sector": "electroweak",
+      "observable": "M_Z",
+      "PR_value_GeV": "91.187676431043922257304294605837072137923832857909555944715358374802790284187517",
+      "diagnostic_reference_GeV": "91.1876 +/- 0.0021",
+      "residual_GeV": "0.000076431043922257304294605837072137923832857909555944715358374802790284187517",
+      "sigma_distance": "0.036395735201074906806955160510541868491837099788545102551607048947754375007904569",
+      "status": "PASS_WITHIN_ONE_SIGMA"
+    },
+    {
+      "sector": "electroweak",
+      "observable": "G_F",
+      "PR_value_GeV_minus2": "0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169",
+      "diagnostic_reference_GeV_minus2": "0.000011663788 +/- 0.000000000007",
+      "residual_GeV_minus2": "0.000000000004201759949366003257867488874906911567673178839516230456502630714171261169",
+      "sigma_distance": "0.60025142133800046540964126784384450966759697707374720807180438773875159557142857",
+      "status": "PASS_WITHIN_ONE_SIGMA"
+    },
+    {
+      "sector": "neutrino",
+      "observable": "Delta_m21_squared",
+      "PR_value_eV2": "0.000074430012134634660100",
+      "diagnostic_reference_eV2": "0.0000749",
+      "relative_residual_percent": "-0.627487136669345660881174899866488651535380507343124165554072096128170894526034712950600801",
+      "status": "DIAGNOSTIC_COMPATIBLE"
+    },
+    {
+      "sector": "neutrino",
+      "observable": "Delta_m31_squared",
+      "PR_value_eV2": "0.0025106667206845904689",
+      "diagnostic_reference_eV2": "0.002513",
+      "relative_residual_percent": "-0.0928483611384612455232789494627934739355352168722642260246717071229606048547552725825706327",
+      "status": "DIAGNOSTIC_COMPATIBLE"
+    },
+    {
+      "sector": "neutrino",
+      "observable": "sum_masses",
+      "PR_value_eV": "0.058733836680",
+      "diagnostic_ceiling_eV": "0.12",
+      "fraction_of_ceiling": "0.4894486390",
+      "status": "BELOW_CONSERVATIVE_CEILING"
+    },
+    {
+      "sector": "neutrino",
+      "observable": "m_beta",
+      "PR_value_eV": "0.00881502940999796816803578003302275917488053175479856521455075652335142341937931458977355095",
+      "diagnostic_bound_eV": "0.45",
+      "fraction_of_bound": "0.019588954244439929262301733406717242610845626121774589365668347829669829820842921310607891",
+      "status": "BELOW_DIRECT_BETA_DECAY_BOUND"
+    },
+    {
+      "sector": "neutrino",
+      "observable": "m_beta_beta",
+      "PR_value_meV": "1.507694477",
+      "diagnostic_scale_meV": "70",
+      "fraction_of_scale": "0.0215384925285714285714285714285714285714285714285714285714285714285714285714285714285714286",
+      "status": "BELOW_CURRENT_DIRECT_LIMITS"
+    },
+    {
+      "sector": "strong",
+      "observable": "alpha3",
+      "PR_value": "0.117861507469150",
+      "diagnostic_reference": "0.1179",
+      "residual": "-0.000038492530850",
+      "relative_residual_percent": "-0.032648457039864291772688719253604749787955894826124",
+      "status": "DIAGNOSTIC_COMPATIBLE"
+    },
+    {
+      "sector": "structure",
+      "observable": "anomaly_registry",
+      "status": "PASS",
+      "details": "local anomalies cancel per generation, Witten anomaly absent, residual U(1)em vectorlike"
+    },
+    {
+      "sector": "structure",
+      "observable": "running_continuity",
+      "status": "PASS",
+      "details": "alpha to EW, EW to neutrino, EW to strong, and anomaly continuity pass at ledger level"
+    },
+    {
+      "sector": "structure",
+      "observable": "no_fit_provenance",
+      "status": "PASS",
+      "details": "forbidden generation inputs used: no; diagnostic references post-generation only: yes"
+    }
+  ],
+  "summary": {
+    "one_sigma_precision_passes": ["alpha_inverse", "M_W", "M_Z", "G_F"],
+    "compatibility_passes": ["neutrino_oscillation_branch", "neutrino_mass_bounds", "strong_alpha3_anchor"],
+    "structural_passes": ["anomaly_registry", "running_continuity", "no_fit_provenance"],
+    "global_diagnostic_status": "CROSS_SECTOR_COMPATIBLE",
+    "exact_all_orders_theorems_claimed": false
+  },
+  "acceptance_gates": {
+    "every_completed_sector_represented": true,
+    "diagnostic_references_post_generation_only": true,
+    "generated_values_not_modified": true,
+    "precision_and_compatibility_statuses_explicit": true,
+    "structural_statuses_included": true,
+    "exact_all_orders_theorem_claims_excluded": true,
+    "step_09F_defined": true
+  },
+  "next_step": "Step 09F: final PR-III consistency statement"
+}

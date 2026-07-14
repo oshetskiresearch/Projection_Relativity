@@ -1,0 +1,51 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "electroweak_weak_mass_ledger_audit_C1",
+  "status": "STEP_06D_WEAK_MASS_LEDGER_AUDIT_LOCKED",
+  "candidate_under_audit": "minimal_compact_boundary_transport_C1",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "external_reference_inputs_used": false,
+    "diagnostic_comparisons_deferred": true,
+    "candidate_not_final_theorem": true
+  },
+  "transported_couplings": {
+    "alpha_PR_C1_inv_muEW": "128.34816971485292266682541193836959463567763749001553697855626858485557677931466",
+    "alpha_PR_C1_muEW": "0.00779130705347546782243858918112570743216401357172296132756710125920702837666948706686958744",
+    "e_PR_C1_muEW": "0.31290326301309718394080299657511217109788182140627164648683511130599266477420220",
+    "g_PR_C1_muEW": "0.65053389657269555366621864236356014205108728472986096227563003983367487964844967",
+    "gprime_PR_C1_muEW": "0.35690070388535548615358602693662928453403423460144794960597323766319291848160288"
+  },
+  "weak_mass_ledger_C1": {
+    "MW_GeV": "80.087096563511109803746814699902444354649798569999232287716279442425889446764759",
+    "MZ_GeV": "91.348172148831652601189435910712007341759134665792081831637272352752169646942106",
+    "GF_GeV_minus2": "0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169",
+    "rho_EW_C1": "1.0000000000000000000000000000000000000000000000000"
+  },
+  "internal_audits": {
+    "MW_equation_pass": true,
+    "MZ_equation_pass": true,
+    "GF_equation_pass": true,
+    "rho_EW_identity_pass": true,
+    "positive_masses_pass": true,
+    "screening_direction_pass": true
+  },
+  "refinement_decision": {
+    "C1_status": "INTERNAL_LEDGER_PASS",
+    "weak_mass_ledger_status": "GENERATED_AND_CONSISTENT",
+    "final_EW_precision_theorem": "NOT_YET",
+    "reason": "Weak-angle transport, oblique corrections, and scheme-dependent precision shifts remain untested.",
+    "next_step": "Step 06E diagnostic comparison of generated weak ledger"
+  },
+  "acceptance_gates": {
+    "C1_uses_only_frozen_PR_quantities": true,
+    "transported_inverse_alpha_lower_than_low_energy": true,
+    "couplings_reconstructed_from_PR_values_only": true,
+    "weak_masses_generated_from_ledger_equations": true,
+    "positive_WZ_masses": true,
+    "rho_EW_preserved": true,
+    "diagnostic_comparison_deferred": true,
+    "C1_not_final_theorem": true
+  },
+  "next_step": "Step 06E: diagnostic comparison of generated weak ledger"
+}

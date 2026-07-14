@@ -1,0 +1,52 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "alpha_radiative_candidate_D1_D2",
+  "status": "STEP_05F_D2_REFINEMENT_GENERATED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "forbidden_target_inputs_used": false,
+    "diagnostic_reference_used_after_generation_only": true,
+    "candidate_not_final_theorem": true
+  },
+  "candidate_name": "D1_plus_three_sheet_D2_refinement",
+  "formula": {
+    "D1": "-p1_HR*Delta_EW_HR*sin2thetaW_PR",
+    "epsilon_2_PR": "Delta_EW_HR/sqrt(N_gen_PR)",
+    "D2": "D1*epsilon_2_PR",
+    "DeltaZ_A_D1D2_PR": "D1+D2",
+    "Delta_alpha_D1D2_inv": "4*pi*(D1+D2)",
+    "alpha_PR_phys_D1D2_inv": "alpha_PR_tree_inv + Delta_alpha_D1D2_inv"
+  },
+  "frozen_inputs": {
+    "D1": "-0.0000033150449735433222932326442973740154803469215638087",
+    "Delta_EW_HR": "0.018644280306692899718928776428403028768291215822597",
+    "N_gen_PR": "3",
+    "alpha_PR_tree_inv": "137.036041314016444"
+  },
+  "derived_refinement": {
+    "epsilon_2_PR": "0.010764280253915984059993061466845953623291973168297815611743348884979166980206478",
+    "D2": "-0.0000000356840731495558199549846319357838375029994395698611894343571143823853634129916305743510899",
+    "DeltaZ_A_D1D2_PR": "-0.00000335072904669287811318762892930979931784992100337851630786204253710293778758370074941617298",
+    "Delta_alpha_D1D2_inv": "-0.0000421065030290411086538983834053643223625099844630214437314151444232206853445051700990393453",
+    "alpha_PR_phys_D1D2_inv": "137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901"
+  },
+  "diagnostic_comparison": {
+    "alpha_ref_inv": "137.035999206",
+    "post_generation_residual_inv": "0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901",
+    "post_generation_residual_ppm": "0.000011043922529",
+    "diagnostic_shift_capture_fraction": "0.999964058744945",
+    "diagnostic_shift_capture_percent": "99.9964058744945",
+    "remaining_D1D2_gap_inv": "-0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901",
+    "remaining_D1D2_gap_DeltaZ_A": "-0.000000000120433735828387653900516497420509236677025368261042104267959794539749283382214413619297187"
+  },
+  "acceptance_gates": {
+    "D2_uses_only_frozen_PR_quantities": true,
+    "diagnostic_reference_absent_from_D2_formula": true,
+    "D2_lowers_alpha_inverse": true,
+    "post_generation_residual_reduced_relative_to_D1": true,
+    "remaining_residual_reported": true,
+    "not_promoted_to_final_closure": true,
+    "no_empirical_target_values_used_as_inputs": true
+  },
+  "next_step": "Step 05G: final no-fit precision audit and closure-status decision"
+}

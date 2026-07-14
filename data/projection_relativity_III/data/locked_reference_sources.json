@@ -1,0 +1,31 @@
+{
+  "project": "Projection Relativity III",
+  "status": "LOCKED_FILES_RECEIVED",
+  "description": "Locked PR-I / PR-II source files supplied for PR-III inheritance synchronization.",
+  "files": [
+    {
+      "reference": "PR-I main manuscript",
+      "filename": "Oshetski_Projection_Relativity_Main.tex",
+      "size_bytes": 183597,
+      "sha256": "b9ab9d6e5cdb46aa7aa3572bc4d9c96e490ed5e724a7695b44d8590f12d41e8b"
+    },
+    {
+      "reference": "PR-I supplement",
+      "filename": "Oshetski_Projection_Relativity_Supplement.tex",
+      "size_bytes": 125299,
+      "sha256": "36fb0b59c0970e693aa5c78e8445cb1375e9c32b6f84dc8b43499c055131f916"
+    },
+    {
+      "reference": "PR-II main manuscript",
+      "filename": "Oshetski_Projection_Relativity_II_Main.tex",
+      "size_bytes": 222846,
+      "sha256": "c14579dec15b29c315b48fef80dc47031fa345baae9de8f358f63f55e74de214"
+    }
+  ],
+  "policy": {
+    "use_as_pr3_inheritance_source": true,
+    "target_measurements_allowed_only_as_diagnostics": true,
+    "do_not_replace_without_new_lock_manifest": true
+  },
+  "next_step": "Extract source-verified inherited symbols and move objects in data/inheritance_ledger.json from pending_source_sync to frozen."
+}

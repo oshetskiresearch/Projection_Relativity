@@ -1,0 +1,47 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "neutrino_radiative_kernel_seed",
+  "status": "STEP_07B_NEUTRINO_RADIATIVE_KERNEL_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "external_neutrino_targets_used": false,
+    "diagnostic_comparisons_deferred": true,
+    "radiative_correction_computed": false
+  },
+  "kernel_structure": {
+    "mass_correction": "Delta_m_i_PR_rad = m_i^(0)*R_nu_i_PR + S_nu_i_PR",
+    "multiplicative_kernel": "R_nu_i_PR = (1/(16*pi^2))*(C_W_nu*L_W_i_PR + C_Z_nu*L_Z_i_PR + C_M_nu*L_M_i_PR)",
+    "additive_seed_status": "forbidden_unless_derived_from_PR_Majorana_boundary_structure",
+    "m1_branch_status": "protected_at_multiplicative_order"
+  },
+  "frozen_branch": {
+    "m1_eV": "0",
+    "m2_eV": "0.008627283010",
+    "m3_eV": "0.05010655367",
+    "m_sum_eV": "0.05873383668",
+    "m_beta_beta_eV": "0.001507694477",
+    "m_beta_beta_meV": "1.507694477"
+  },
+  "electroweak_stability_scale": {
+    "Delta_EW_HR": "0.018644280306692899718928776428403028768291215822597",
+    "N_gen_PR": "3",
+    "epsilon_nu_PR": "0.010764280253915984059993061466845953623291973168297958463495179185823935069035706",
+    "epsilon_nu_PR_squared": "0.00011586972938484556226793118452733159798877344738994283391460838034477992707317453"
+  },
+  "seed_stability_envelope": {
+    "Delta_m2_seed_eV": "0.00000099964094769517587082801977612182277596469533340638265590275267055213780702743765",
+    "Delta_m3_seed_eV": "0.0000058058328141501402504394208173854142965113407991150920257742210067774885202307056",
+    "Delta_m_beta_beta_seed_eV": "0.00000017469615104501626172931944112792570583525803463406687603878334466374005182868801",
+    "Delta_m_beta_beta_seed_meV": "0.00017469615104501626172931944112792570583525803463406687603878334466374005182868801"
+  },
+  "admissibility_gates": {
+    "multiplicative_kernel_defined": true,
+    "additive_majorana_seed_forbidden_unless_derived": true,
+    "m1_branch_protected_at_multiplicative_order": true,
+    "epsilon_nu_scale_recorded": true,
+    "stability_envelope_reported_not_claimed_as_correction": true,
+    "external_neutrino_targets_excluded": true,
+    "step_07C_defined": true
+  },
+  "next_step": "Step 07C: propagate kernel into m_beta_beta stability"
+}

@@ -1,0 +1,52 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "electroweak_diagnostic_comparison_C1",
+  "status": "STEP_06E_DIAGNOSTIC_COMPARISON_LOCKED",
+  "candidate_under_audit": "minimal_compact_boundary_transport_C1",
+  "input_policy": {
+    "references_used_after_generation_only": true,
+    "generation_values_modified": false,
+    "candidate_not_final_theorem": true
+  },
+  "generated_PR_values": {
+    "MW_C1_GeV": "80.087096563511109803746814699902444354649798569999232287716279442425889446764759",
+    "MZ_C1_GeV": "91.348172148831652601189435910712007341759134665792081831637272352752169646942106",
+    "GF_PR_GeV_minus2": "0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169",
+    "rho_EW_C1": "1.0000000000000000000000000000000000000000000000000"
+  },
+  "diagnostic_references": {
+    "MW_ref_GeV": "80.3692",
+    "MW_sigma_GeV": "0.0133",
+    "MZ_ref_GeV": "91.1876",
+    "MZ_sigma_GeV": "0.0021",
+    "GF_ref_GeV_minus2": "0.000011663788",
+    "GF_sigma_GeV_minus2": "0.000000000007"
+  },
+  "diagnostic_residuals": {
+    "MW_residual_GeV": "-0.282103436488890196253185300097555645350201430000767712283720557574110553235241",
+    "MW_sigma_distance": "-21.210784698412796710765812037410198898511385714343437013813575757451921295882782",
+    "MW_relative_ppm": "-3510.0938728877504846780271558949901871637571358278",
+    "MZ_residual_GeV": "0.160572148831652601189435910712007341759134665792081831637272352752169646942106",
+    "MZ_sigma_distance": "76.462928015072667233064719386670162742445078948610396017748739405795069972431429",
+    "MZ_relative_ppm": "1760.8989471337396881751017760310320894412690518456",
+    "GF_residual_GeV_minus2": "0.000000000004201759949366003257867488874906911567673178839516230456502630714171261169",
+    "GF_sigma_distance": "0.60025142133800046540964126784384450966759697707374720807180438773875159557142857",
+    "GF_relative_ppm": "0.36023973938535261939495889970796036139144322920789"
+  },
+  "diagnostic_decision": {
+    "GF_status": "DIAGNOSTIC_PASS_WITHIN_ONE_SIGMA",
+    "MW_status": "REQUIRES_REFINEMENT",
+    "MZ_status": "REQUIRES_REFINEMENT",
+    "C1_status": "INTERNAL_LEDGER_PASS_ONLY",
+    "final_EW_precision_theorem": "NOT_YET",
+    "next_step": "Step 06F weak-angle or oblique refinement"
+  },
+  "acceptance_gates": {
+    "references_used_only_after_generation": true,
+    "all_residuals_reported": true,
+    "GF_precision_success_recorded": true,
+    "WZ_mass_failure_recorded": true,
+    "C1_not_overstated_as_final_closure": true,
+    "next_refinement_direction_defined": true
+  }
+}

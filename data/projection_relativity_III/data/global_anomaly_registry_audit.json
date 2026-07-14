@@ -1,0 +1,81 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "global_anomaly_registry_audit",
+  "status": "STEP_09B_ANOMALY_REGISTRY_AUDIT_LOCKED",
+  "input_policy": {
+    "uses_only_representation_ledger": true,
+    "external_fields_inserted": false,
+    "observed_CKM_PMNS_used": false,
+    "generation_values_modified": false
+  },
+  "hypercharge_convention": {
+    "residual_charge_operator": "Q=T3+Y/2",
+    "normalization": "PR-II hypercharge convention"
+  },
+  "one_generation_left_weyl_ledger": [
+    {"field": "Q_L", "representation": "(3,2)", "Y": "1/3", "multiplicity": 6},
+    {"field": "u_R^c", "representation": "(3bar,1)", "Y": "-4/3", "multiplicity": 3},
+    {"field": "d_R^c", "representation": "(3bar,1)", "Y": "2/3", "multiplicity": 3},
+    {"field": "L_L", "representation": "(1,2)", "Y": "-1", "multiplicity": 2},
+    {"field": "e_R^c", "representation": "(1,1)", "Y": "2", "multiplicity": 1},
+    {"field": "nu_R^c_optional", "representation": "(1,1)", "Y": "0", "multiplicity": 1, "contribution": "zero"}
+  ],
+  "local_anomaly_sums_per_generation": {
+    "SU3_cubed": {
+      "formula": "2*A(3)-A(3bar)-A(3bar)",
+      "value": "0",
+      "status": "PASS"
+    },
+    "SU3_squared_U1Y": {
+      "formula": "2*(1/2)*(1/3)+(1/2)*(-4/3)+(1/2)*(2/3)",
+      "value": "0",
+      "status": "PASS"
+    },
+    "SU2_squared_U1Y": {
+      "formula": "3*(1/2)*(1/3)+1*(1/2)*(-1)",
+      "value": "0",
+      "status": "PASS"
+    },
+    "U1Y_cubed": {
+      "formula": "6*(1/3)^3+3*(-4/3)^3+3*(2/3)^3+2*(-1)^3+2^3",
+      "value": "0",
+      "status": "PASS"
+    },
+    "gravity_squared_U1Y": {
+      "formula": "6*(1/3)+3*(-4/3)+3*(2/3)+2*(-1)+2",
+      "value": "0",
+      "status": "PASS"
+    }
+  },
+  "global_SU2_Witten_audit": {
+    "doublets_per_generation": "4",
+    "N_gen_PR": "3",
+    "total_SU2_doublets": "12",
+    "is_even": true,
+    "status": "PASS"
+  },
+  "residual_U1em_audit": {
+    "projection": "SU(2)_L x U(1)_Y -> U(1)_em",
+    "vectorlike_pairs": ["u_L/u_R", "d_L/d_R", "e_L/e_R"],
+    "neutral_branch": "neutrino electrically neutral",
+    "status": "VECTORLIKE_PASS"
+  },
+  "generation_scaling": {
+    "anomalies_cancel_per_generation": true,
+    "N_gen_PR": "3",
+    "scaled_local_anomalies": "0"
+  },
+  "acceptance_gates": {
+    "hypercharge_convention_fixed": true,
+    "SU3_cubed_anomaly_cancels": true,
+    "SU3_squared_U1_anomaly_cancels": true,
+    "SU2_squared_U1_anomaly_cancels": true,
+    "U1_cubed_anomaly_cancels": true,
+    "gravity_squared_U1_anomaly_cancels": true,
+    "Witten_anomaly_absent": true,
+    "residual_U1em_vectorlike": true,
+    "external_anomaly_canceling_fields_not_inserted": true,
+    "step_09C_defined": true
+  },
+  "next_step": "Step 09C: running-continuity audit"
+}

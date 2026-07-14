@@ -1,0 +1,73 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "neutrino_diagnostic_comparison",
+  "status": "STEP_07E_NEUTRINO_DIAGNOSTIC_COMPARISON_LOCKED",
+  "input_policy": {
+    "references_used_after_generation_only": true,
+    "generation_values_modified": false,
+    "external_neutrino_targets_used_as_inputs": false,
+    "final_theorem_claimed": false
+  },
+  "generated_PR_values": {
+    "m1_eV": "0",
+    "m2_eV": "0.008627283010",
+    "m3_eV": "0.05010655367",
+    "sum_m_eV": "0.058733836680",
+    "m_beta_eV": "0.00881502940999796816803578003302275917488053175479856521455075652335142341937931458977355095",
+    "m_beta_meV": "8.81502940999796816803578003302275917488053175479856521455075652335142341937931458977355095",
+    "m_beta_beta_eV": "0.001507694477",
+    "m_beta_beta_meV": "1.507694477000",
+    "Delta_m21_squared_eV2": "0.000074430012134634660100",
+    "Delta_m31_squared_eV2": "0.0025106667206845904689",
+    "sin2theta12": "0.299447410807983",
+    "sin2theta23": "0.565008899090616",
+    "sin2theta13": "0.022270270124743",
+    "delta_CP_deg": "195.646778408"
+  },
+  "diagnostic_references": {
+    "oscillation_reference": "NuFIT 6.0 representative normal-ordering values",
+    "Delta_m21_squared_ref_eV2": "0.0000749",
+    "Delta_m31_squared_ref_eV2": "0.002513",
+    "sin2theta12_ref": "0.307",
+    "sin2theta23_ref": "0.561",
+    "sin2theta13_ref": "0.02215",
+    "cosmology_sum_ceiling_eV": "0.12",
+    "direct_beta_decay_m_beta_bound_eV": "0.45",
+    "zero_nu_beta_beta_lower_edge_meV": "70"
+  },
+  "diagnostic_residuals": {
+    "Delta_m21_squared_residual_eV2": "-0.000000469987865365339900",
+    "Delta_m21_squared_relative_percent": "-0.627487136669345660881174899866488651535380507343124165554072096128170894526034712950600801",
+    "Delta_m31_squared_residual_eV2": "-0.0000023332793154095311",
+    "Delta_m31_squared_relative_percent": "-0.0928483611384612455232789494627934739355352168722642260246717071229606048547552725825706327",
+    "sin2theta12_residual": "-0.007552589192017",
+    "sin2theta12_relative_percent": "-2.46012677264397394136807817589576547231270358306188925081433224755700325732899022801302932",
+    "sin2theta23_residual": "0.004008899090616",
+    "sin2theta23_relative_percent": "0.714598768380748663101604278074866310160427807486631016042780748663101604278074866310160428",
+    "sin2theta13_residual": "0.000120270124743",
+    "sin2theta13_relative_percent": "0.542980247146726862302483069977426636568848758465011286681715575620767494356659142212189616",
+    "sum_margin_to_0p12_eV": "0.061266163320",
+    "sum_fraction_of_0p12_bound": "0.4894486390",
+    "m_beta_fraction_of_0p45_bound": "0.019588954244439929262301733406717242610845626121774589365668347829669829820842921310607891",
+    "m_beta_beta_fraction_of_70_meV_scale": "0.0215384925285714285714285714285714285714285714285714285714285714285714285714285714285714286"
+  },
+  "diagnostic_decision": {
+    "oscillation_branch_status": "DIAGNOSTIC_COMPATIBLE",
+    "mass_sum_status": "BELOW_CONSERVATIVE_COSMOLOGY_CEILING",
+    "m_beta_status": "BELOW_DIRECT_BETA_DECAY_LIMIT",
+    "m_beta_beta_status": "BELOW_CURRENT_DIRECT_LIMITS",
+    "normal_ordering_status": "STABLE_AND_DIAGNOSTICALLY_COMPATIBLE",
+    "final_neutrino_theorem": "NOT_CLAIMED"
+  },
+  "acceptance_gates": {
+    "diagnostic_values_used_only_after_generation": true,
+    "PR_neutrino_branch_not_modified": true,
+    "oscillation_branch_diagnostic_compatible": true,
+    "mass_sum_below_conservative_cosmology_ceiling": true,
+    "m_beta_below_direct_beta_decay_bound": true,
+    "m_beta_beta_below_current_direct_limits": true,
+    "not_overstated_as_detection_or_exact_theorem": true,
+    "step_07F_defined": true
+  },
+  "next_step": "Step 07F: final no-fit neutrino closure audit"
+}

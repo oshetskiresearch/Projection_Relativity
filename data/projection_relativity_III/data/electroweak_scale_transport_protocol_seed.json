@@ -1,0 +1,58 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "electroweak_scale_transport_protocol_seed",
+  "status": "STEP_06A_EW_TRANSPORT_PROTOCOL_LOCKED",
+  "low_energy_input": {
+    "alpha_PR_0_inv": "137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901",
+    "source": "Step 05H D1+D2 alpha closure"
+  },
+  "electroweak_scale": {
+    "mu_EW_PR_GeV": "173.67059834472832",
+    "scale_symbol": "Lambda_EW_PR",
+    "source": "frozen PR-II weak displacement anchor"
+  },
+  "order_scale": {
+    "v_EW_PR_GeV": "246.21959589022453"
+  },
+  "weak_angle_boundary": {
+    "sin2thetaW_PR_boundary": "0.231355763298189",
+    "transport_form": "sin2thetaW_PR(mu_EW)=sin2thetaW_PR^(0)+Delta_sin2thetaW_PR_run"
+  },
+  "transport_equation": {
+    "alpha_transport": "alpha_PR_inv(mu_EW)=alpha_PR_inv(0)-Delta_run_PR(0_to_mu_EW)",
+    "running_term_status": "not_assigned_in_step_06A"
+  },
+  "coupling_reconstruction": {
+    "e_PR_mu": "sqrt(4*pi*alpha_PR(mu_EW))",
+    "g_PR_mu": "e_PR(mu_EW)/sin(thetaW(mu_EW))",
+    "gprime_PR_mu": "e_PR(mu_EW)/cos(thetaW(mu_EW))"
+  },
+  "weak_ledger_equations": {
+    "MW2": "one_fourth*g_PR(mu_EW)^2*v_EW_PR^2",
+    "MZ2": "one_fourth*(g_PR(mu_EW)^2+gprime_PR(mu_EW)^2)*v_EW_PR^2",
+    "GF_PR": "1/(sqrt(2)*v_EW_PR^2)",
+    "rho_EW_PR": "MW2/(MZ2*cos(thetaW)^2)"
+  },
+  "allowed_inputs": [
+    "alpha_PR_phys_D1D2_inv",
+    "Lambda_EW_PR",
+    "v_EW_PR",
+    "sin2thetaW_PR",
+    "PR charged-mode inventory",
+    "PR spectral kernel objects"
+  ],
+  "excluded_reference_values": [
+    "external weak-sector reference values",
+    "external coupling references",
+    "observed mixing matrices"
+  ],
+  "acceptance_gates": {
+    "low_energy_alpha_imported_from_step_05H": true,
+    "EW_matching_scale_PR_derived": true,
+    "transport_equation_defined_without_fitted_running": true,
+    "coupling_reconstruction_locked": true,
+    "weak_ledger_equations_locked": true,
+    "diagnostic_comparisons_deferred": true
+  },
+  "next_step": "Step 06B: construct electroweak running inventory and kernel"
+}

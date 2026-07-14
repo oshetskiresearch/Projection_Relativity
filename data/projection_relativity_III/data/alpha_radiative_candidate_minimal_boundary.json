@@ -1,0 +1,50 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "alpha_radiative_candidate_minimal_boundary",
+  "status": "STEP_05D_MINIMAL_CANDIDATE_GENERATED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "forbidden_target_inputs_used": false,
+    "diagnostic_reference_used_after_generation_only": true,
+    "candidate_not_final_theorem": true
+  },
+  "candidate_name": "minimal_boundary_leakage_D1",
+  "formula": {
+    "Delta_EW_HR": "(1-c_bc)/q_bc_HR",
+    "DeltaZ_A_min_PR": "-p1_HR*Delta_EW_HR*sin2thetaW_PR",
+    "Delta_alpha_PR_rad_min_inv": "4*pi*DeltaZ_A_min_PR",
+    "alpha_PR_phys_min_inv": "alpha_PR_tree_inv + Delta_alpha_PR_rad_min_inv"
+  },
+  "frozen_inputs": {
+    "p1_HR": "7.685346950896231e-04",
+    "q_bc_HR": "10.904981678435453",
+    "c_bc": "0.796684464847899",
+    "sin2thetaW_PR": "0.231355763298189",
+    "alpha_PR_tree_inv": "137.036041314016444"
+  },
+  "derived_candidate": {
+    "Delta_EW_HR": "0.018644280306692899718928776428403028768291215822597",
+    "DeltaZ_A_min_PR": "-0.0000033150449735433222932326442973740154803469215638087",
+    "Delta_alpha_PR_rad_min_inv": "-0.000041658083740813887216904843821118454991063065733008",
+    "alpha_PR_phys_min_inv": "137.035999655932703186112783095156178881545008936934266992"
+  },
+  "diagnostic_comparison": {
+    "alpha_ref_inv": "137.035999206",
+    "post_generation_residual_inv": "0.000000449932703186112783095156178881545008936934266992",
+    "post_generation_residual_ppm": "0.003283317565",
+    "diagnostic_target_Delta_alpha_inv": "-0.000042108016444",
+    "diagnostic_shift_capture_fraction": "0.989314797011",
+    "diagnostic_shift_capture_percent": "98.9314797011",
+    "remaining_diagnostic_gap_inv": "-0.000000449932703186112783095156178881545008936934266992"
+  },
+  "acceptance_gates": {
+    "candidate_uses_only_frozen_PR_quantities": true,
+    "diagnostic_residual_not_used_in_formula": true,
+    "sign_lowers_alpha_inverse": true,
+    "candidate_has_correct_radiative_scale": true,
+    "remaining_residual_reported": true,
+    "labeled_minimal_candidate_not_final_theorem": true,
+    "no_empirical_target_values_used_as_inputs": true
+  },
+  "next_step": "Step 05E: no-fit diagnostic audit and refinement decision"
+}

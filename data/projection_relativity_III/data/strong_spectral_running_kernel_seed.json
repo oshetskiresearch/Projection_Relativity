@@ -1,0 +1,95 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "strong_spectral_running_kernel_seed",
+  "status": "STEP_08B_STRONG_SPECTRAL_RUNNING_KERNEL_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "external_QCD_targets_used": false,
+    "diagnostic_comparisons_deferred": true,
+    "running_correction_computed": false
+  },
+  "strong_anchor": {
+    "alpha3_PR": "0.117861507469150",
+    "source": "Step 08A frozen PR-II compact-boundary strong anchor"
+  },
+  "su3_group_ledger": {
+    "group": "SU(3)_c",
+    "N_c": "3",
+    "adjoint_dimension": "8",
+    "C_A": "3",
+    "C_F": "4/3",
+    "T_F": "1/2"
+  },
+  "running_equation": {
+    "symbolic_beta": "mu*d(alpha3_PR)/dmu = beta3_PR(alpha3, P_color, K3_PR)",
+    "one_loop_form": "beta3_PR ~ -(alpha3_PR^2/(2*pi))*beta0_PR*K3_PR + ...",
+    "beta0_form": "beta0_PR=(11/3)*C_A-(4/3)*T_F*n_f_PR",
+    "n_f_PR_status": "deferred_to_PR_threshold_audit"
+  },
+  "strong_supertrace_registry": [
+    {
+      "block": "gluon_adjoint",
+      "operator": "O_g^{ab,mu nu}",
+      "status": "included"
+    },
+    {
+      "block": "color_ghosts",
+      "operator": "M_gh^{ab}",
+      "status": "included"
+    },
+    {
+      "block": "quark_color_sheets",
+      "operator": "D_q",
+      "status": "included_after_PR_threshold_import"
+    },
+    {
+      "block": "color_neutral_leptons",
+      "operator": "none",
+      "status": "excluded"
+    },
+    {
+      "block": "electroweak_residual_backgrounds",
+      "operator": "external_to_pure_SU3_kernel",
+      "status": "excluded_from_direct_color_trace"
+    }
+  ],
+  "strong_kernel_class": {
+    "discrete_form": "K_3a_PR(mu0_to_mu)=sum_n omega_3a_n log((M_a^2+mu^2+mu_n^2*Lambda_3^2)/(M_a^2+mu0^2+mu_n^2*Lambda_3^2))-R_3a_run",
+    "support_condition": "mu_n^2 >= mu_min_HR^2 > 0",
+    "mu_min_HR_squared": "3.053016666732689",
+    "reference_subtraction": "R_3a_run preserves PR alpha3 anchor and cannot force diagnostic alpha_s agreement",
+    "cutoff_policy": "no arbitrary cutoff"
+  },
+  "threshold_policy": {
+    "allowed_sources": [
+      "PR-II quark mass sheets once imported from frozen source",
+      "PR-III derived threshold values",
+      "symbolic thresholds pending PR source synchronization",
+      "PR spectral gap and boundary anchors"
+    ],
+    "forbidden_sources": [
+      "external quark masses",
+      "PDG quark mass tables",
+      "hadron masses as tuning targets",
+      "external Lambda_MSbar",
+      "threshold choices selected to force alpha_s agreement"
+    ]
+  },
+  "reference_scale_policy": {
+    "Lambda3_PR_status": "symbolic_until_derived",
+    "provisional_symbolic_map": "Lambda3_PR = Lambda_EW_PR * Xi3_PR",
+    "Xi3_PR_status": "to_be_derived",
+    "external_Lambda_MSbar_allowed": false
+  },
+  "acceptance_gates": {
+    "step_08A_anchor_and_group_ledger_imported": true,
+    "strong_supertrace_registry_defined": true,
+    "strong_kernel_reference_normalized": true,
+    "spectral_support_uses_positive_gap": true,
+    "thresholds_restricted_to_PR_or_symbolic": true,
+    "external_QCD_targets_excluded": true,
+    "running_correction_not_computed_prematurely": true,
+    "step_08C_defined": true
+  },
+  "next_step": "Step 08C: one-loop color audit and asymptotic-freedom sign"
+}

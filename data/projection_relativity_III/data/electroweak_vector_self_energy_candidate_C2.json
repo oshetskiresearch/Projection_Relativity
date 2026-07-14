@@ -1,0 +1,49 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "electroweak_vector_self_energy_candidate_C2",
+  "status": "STEP_06G_VECTOR_SELF_ENERGY_CANDIDATE_GENERATED",
+  "candidate_name": "C2_three_sheet_vector_self_energy_split",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "diagnostic_mass_inputs_used": false,
+    "diagnostic_comparison_deferred": true,
+    "candidate_not_final_theorem": true
+  },
+  "formula": {
+    "epsilon_V_PR": "Delta_EW_HR/sqrt(N_gen_PR)",
+    "Pi_W_PR": "(2/N_gen_PR)*epsilon_V_PR",
+    "Pi_Z_PR": "-(1/N_gen_PR)*epsilon_V_PR",
+    "MW_C2_PR": "MW_C1_PR*sqrt(1+Pi_W_PR)",
+    "MZ_C2_PR": "MZ_C1_PR*sqrt(1+Pi_Z_PR)",
+    "rho_EW_C2_PR": "MW_C2_PR^2/(MZ_C2_PR^2*cos2thetaW_PR)"
+  },
+  "frozen_inputs": {
+    "Delta_EW_HR": "0.018644280306692899718928776428403028768291215822597",
+    "N_gen_PR": "3",
+    "MW_C1_PR_GeV": "80.087096563511109803746814699902444354649798569999232287716279442425889446764759",
+    "MZ_C1_PR_GeV": "91.348172148831652601189435910712007341759134665792081831637272352752169646942106",
+    "sin2thetaW_PR": "0.231355763298189",
+    "cos2thetaW_PR": "0.768644236701811"
+  },
+  "derived_vector_self_energy": {
+    "epsilon_V_PR": "0.010764280253915984059993061466845953623291973168297958463495179185823935069035706",
+    "Pi_W_PR": "0.0071761868359439893733287076445639690821946487788653056423301194572159567126904707",
+    "Pi_Z_PR": "-0.0035880934179719946866643538222819845410973243894326528211650597286079783563452353"
+  },
+  "corrected_weak_ledger_C2": {
+    "MW_C2_PR_GeV": "80.373942851862121269660365960912048165641419593354239705150762943078449202475090",
+    "MZ_C2_PR_GeV": "91.184141990108601240778101830153652821743992019019918862617911980779475157804027",
+    "rho_EW_C2_PR": "1.0108030425798909620173728568422867860962050389896724125958210974779774276828044"
+  },
+  "acceptance_gates": {
+    "Pi_terms_derived_from_frozen_PR_quantities": true,
+    "diagnostic_mass_values_not_used_in_formula": true,
+    "one_plus_Pi_W_positive": true,
+    "one_plus_Pi_Z_positive": true,
+    "corrected_masses_real_positive": true,
+    "charged_neutral_split_follows_quotient_structure": true,
+    "diagnostic_comparison_deferred": true,
+    "C2_not_final_theorem": true
+  },
+  "next_step": "Step 06H: diagnostic comparison of corrected C2 weak ledger"
+}

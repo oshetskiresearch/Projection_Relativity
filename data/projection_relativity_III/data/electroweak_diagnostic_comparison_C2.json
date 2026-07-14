@@ -1,0 +1,58 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "electroweak_diagnostic_comparison_C2",
+  "status": "STEP_06H_C2_DIAGNOSTIC_COMPARISON_LOCKED",
+  "candidate_under_audit": "C2_three_sheet_vector_self_energy_split",
+  "input_policy": {
+    "references_used_after_generation_only": true,
+    "generation_values_modified": false,
+    "candidate_not_final_theorem": true
+  },
+  "generated_PR_values": {
+    "MW_C2_GeV": "80.373942851862121269660365960912048165641419593354239705150762943078449202475090",
+    "MZ_C2_GeV": "91.184141990108601240778101830153652821743992019019918862617911980779475157804027",
+    "GF_PR_GeV_minus2": "0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169",
+    "rho_EW_C2": "1.0108030425798909620173728568422867860962050389896724125958210974779774276828044"
+  },
+  "diagnostic_references": {
+    "MW_ref_GeV": "80.3692",
+    "MW_sigma_GeV": "0.0133",
+    "MZ_ref_GeV": "91.1876",
+    "MZ_sigma_GeV": "0.0021",
+    "GF_ref_GeV_minus2": "0.000011663788",
+    "GF_sigma_GeV_minus2": "0.000000000007"
+  },
+  "diagnostic_residuals": {
+    "MW_residual_GeV": "0.004742851862121269660365960912048165641419593354239705150762943078449202475090",
+    "MW_sigma_distance": "0.35660540316701275641849330165775681514433032738644399629796564499618063722481203",
+    "MW_relative_ppm": "59.013301888301359978274773321722322001707038943273108986563796559492970878022924",
+    "MZ_residual_GeV": "-0.003458009891398759221898169846347178256007980980081137382088019220524842195973",
+    "MZ_sigma_distance": "-1.6466713768565520104276999268319896457180861809910178009942948669165915218919048",
+    "MZ_relative_ppm": "-37.921931177032394995571435659532417302440035488170950678469651800517199662815997",
+    "GF_residual_GeV_minus2": "0.000000000004201759949366003257867488874906911567673178839516230456502630714171261169",
+    "GF_sigma_distance": "0.60025142133800046540964126784384450966759697707374720807180438773875159557142857",
+    "GF_relative_ppm": "0.36023973938535261939495889970796036139144322920788944865104121526996728412759217"
+  },
+  "improvement_vs_C1": {
+    "MW_residual_reduction_factor": "59.479706448752059389848614000566571638399836153394703061066044526976169771970469",
+    "MZ_residual_reduction_factor": "46.434843703324814765642605280772434983183838530356106502718255089035621731753013"
+  },
+  "diagnostic_decision": {
+    "W_status": "PASS_WITHIN_ONE_SIGMA",
+    "Z_status": "PASS_WITHIN_TWO_SIGMA_NOT_ONE_SIGMA",
+    "GF_status": "PASS_WITHIN_ONE_SIGMA",
+    "C2_status": "CURRENT_PRECISION_CANDIDATE",
+    "final_EW_theorem": "NOT_YET",
+    "next_step": "Step 06I final electroweak no-fit precision audit or neutral-channel residual bounding"
+  },
+  "acceptance_gates": {
+    "references_used_only_after_generation": true,
+    "generated_values_not_modified": true,
+    "all_residuals_reported": true,
+    "W_inside_one_sigma": true,
+    "GF_inside_one_sigma": true,
+    "Z_inside_two_sigma": true,
+    "C2_not_overstated_as_final_theorem": true,
+    "remaining_neutral_channel_obligation_defined": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "electroweak_running_candidate_C1",
+  "status": "STEP_06C_EW_RUNNING_CANDIDATE_GENERATED",
+  "candidate_name": "minimal_compact_boundary_transport_C1",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "external_reference_inputs_used": false,
+    "diagnostic_comparisons_deferred": true,
+    "candidate_not_final_theorem": true
+  },
+  "formula": {
+    "Delta_run_C1_PR": "q_bc_HR*c_bc",
+    "alpha_PR_C1_inv_muEW": "alpha_PR_0_inv-Delta_run_C1_PR",
+    "e_PR_C1": "sqrt(4*pi/alpha_PR_C1_inv_muEW)",
+    "g_PR_C1": "e_PR_C1/sqrt(sin2thetaW_PR)",
+    "gprime_PR_C1": "e_PR_C1/sqrt(1-sin2thetaW_PR)",
+    "MW_PR_C1": "sqrt((1/4)*g_PR_C1^2*v_EW_PR^2)",
+    "MZ_PR_C1": "sqrt((1/4)*(g_PR_C1^2+gprime_PR_C1^2)*v_EW_PR^2)",
+    "GF_PR": "1/(sqrt(2)*v_EW_PR^2)",
+    "rho_EW_C1": "MW2/(MZ2*cos2thetaW_PR)"
+  },
+  "frozen_inputs": {
+    "alpha_PR_0_inv": "137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901",
+    "q_bc_HR": "10.904981678435453",
+    "c_bc": "0.796684464847899",
+    "sin2thetaW_PR": "0.231355763298189",
+    "v_EW_PR_GeV": "246.21959589022453",
+    "Lambda_EW_PR_GeV": "173.67059834472832"
+  },
+  "derived_transport": {
+    "Delta_run_C1_PR": "8.687829492660492292065934163247",
+    "alpha_PR_C1_inv_muEW": "128.34816971485292266682541193836959463567763749001553697855626858485557677931466",
+    "alpha_PR_C1_muEW": "0.00779130705347546782243858918112570743216401357172296132756710125920702837666948706686958744",
+    "e_PR_C1_muEW": "0.31290326301309718394080299657511217109788182140627164648683511130599266477420220",
+    "g_PR_C1_muEW": "0.65053389657269555366621864236356014205108728472986096227563003983367487964844967",
+    "gprime_PR_C1_muEW": "0.35690070388535548615358602693662928453403423460144794960597323766319291848160288"
+  },
+  "weak_mass_ledger_C1": {
+    "MW_squared_GeV2": "6413.9430359731530133831954893809959628589922893506930815065846025069283336000987087494771",
+    "MW_GeV": "80.087096563511109803746814699902444354649798569999232287716279442425889446764759",
+    "MZ_squared_GeV2": "8344.4885549325828238662608083105323627480753805042565240019725161128769592365803119229966",
+    "MZ_GeV": "91.348172148831652601189435910712007341759134665792081831637272352752169646942106",
+    "GF_GeV_minus2": "0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169",
+    "rho_EW_C1": "1.0000000000000000000000000000000000000000000000000"
+  },
+  "acceptance_gates": {
+    "candidate_uses_only_frozen_PR_quantities": true,
+    "transport_action_not_selected_from_external_reference": true,
+    "alpha_inverse_lowered_by_running": true,
+    "couplings_reconstructed_from_PR_values_only": true,
+    "weak_mass_ledger_generated_without_external_weak_inputs": true,
+    "rho_EW_preserved": true,
+    "diagnostic_comparison_deferred": true,
+    "minimal_C1_not_final_theorem": true
+  },
+  "next_step": "Step 06D: weak mass ledger audit and refinement decision"
+}

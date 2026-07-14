@@ -1,0 +1,56 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "strong_diagnostic_comparison",
+  "status": "STEP_08E_STRONG_DIAGNOSTIC_COMPARISON_LOCKED",
+  "input_policy": {
+    "references_used_after_generation_only": true,
+    "generation_values_modified": false,
+    "external_QCD_targets_used_as_inputs": false,
+    "final_QCD_theorem_claimed": false
+  },
+  "generated_PR_values": {
+    "alpha3_PR": "0.117861507469150",
+    "alpha3_PR_inverse": "8.4845342764833368725536701837814243566302335086122",
+    "n_f_PR_at_Lambda_EW_PR": "6",
+    "beta0_PR_at_Lambda_EW_PR": "7",
+    "asymptotic_freedom_sign_for_positive_K3": "negative"
+  },
+  "diagnostic_reference": {
+    "alpha_s_diag": "0.1179",
+    "alpha_s_diag_inverse": "8.4817642069550466497031382527565733672603901611535",
+    "role": "post-generation diagnostic reference only"
+  },
+  "diagnostic_residuals": {
+    "alpha3_residual": "-0.000038492530850",
+    "alpha3_relative_fraction": "-0.00032648457039864291772688719253604749787955894826124",
+    "alpha3_relative_percent": "-0.032648457039864291772688719253604749787955894826124",
+    "alpha3_relative_ppm": "-326.48457039864291772688719253604749787955894826124",
+    "alpha3_ratio_to_reference": "0.99967351542960135708227311280746395250212044105174",
+    "inverse_alpha3_residual": "0.0027700695282902228505319310248509893698433474587"
+  },
+  "threshold_running_status": {
+    "threshold_ledger_status": "PR_DERIVED_AND_ORDERED",
+    "n_f_at_Lambda_EW_PR": 6,
+    "beta0_positive_all_intervals": true,
+    "asymptotic_freedom_sign": "PASS_FOR_K3_POSITIVE",
+    "full_running_branch_computed": false
+  },
+  "diagnostic_decision": {
+    "alpha3_anchor_status": "DIAGNOSTIC_COMPATIBLE",
+    "relative_residual_percent": "-0.0326484570399",
+    "threshold_ledger_status": "PRESERVED",
+    "final_QCD_theorem": "NOT_CLAIMED",
+    "next_step": "Step 08F: final no-fit strong-sector closure audit"
+  },
+  "acceptance_gates": {
+    "PR_strong_anchor_compared_only_after_generation": true,
+    "alpha3_PR_not_modified": true,
+    "diagnostic_residual_explicitly_reported": true,
+    "PR_threshold_ledger_preserved": true,
+    "asymptotic_freedom_sign_locked": true,
+    "external_QCD_values_not_used_as_generation_inputs": true,
+    "not_overstated_as_final_QCD_theorem": true,
+    "step_08F_defined": true
+  },
+  "next_step": "Step 08F: final no-fit strong-sector closure audit"
+}

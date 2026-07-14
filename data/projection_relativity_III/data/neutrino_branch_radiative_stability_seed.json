@@ -1,0 +1,59 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "neutrino_branch_radiative_stability_seed",
+  "status": "STEP_07A_NEUTRINO_BRANCH_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "external_neutrino_targets_used": false,
+    "diagnostic_comparisons_deferred": true,
+    "radiative_correction_computed": false
+  },
+  "pr2_tree_branch": {
+    "ordering": "normal",
+    "masses_eV": {
+      "m1": "0",
+      "m2": "0.008627283010",
+      "m3": "0.05010655367",
+      "sum": "0.05873383668"
+    },
+    "pmns_angles": {
+      "sin2theta12": "0.299447410807983",
+      "sin2theta23": "0.565008899090616",
+      "sin2theta13": "0.022270270124743",
+      "delta_CP_deg": "195.646778408"
+    },
+    "m_beta_beta_eV": "0.001507694477",
+    "m_beta_beta_meV": "1.507694477"
+  },
+  "radiative_stability_form": {
+    "m_i_phys": "m_i^(0)+Delta_m_i_PR_rad",
+    "U_PMNS_phys": "U_PMNS^(0)+Delta_U_PMNS_PR_rad",
+    "m_beta_beta_phys": "m_beta_beta^(0)+Delta_m_beta_beta_PR_rad",
+    "m1_branch_policy": "massless boundary branch protected unless PR-III derives a nonzero radiative seed"
+  },
+  "allowed_generation_inputs": [
+    "frozen PR-II neutrino branch",
+    "frozen PR-II PMNS branch",
+    "PR-III alpha closure ledger",
+    "PR-III electroweak closure ledger",
+    "PR spectral gap and boundary anchors",
+    "symbolic radiative kernel pending derivation"
+  ],
+  "forbidden_generation_inputs": [
+    "measured neutrino mass splittings",
+    "observed PMNS angles",
+    "cosmological neutrino mass-sum limits",
+    "neutrinoless double-beta experimental limits",
+    "sterile-neutrino target values"
+  ],
+  "acceptance_gates": {
+    "normal_ordering_branch_frozen": true,
+    "PMNS_branch_frozen": true,
+    "m_beta_beta_frozen": true,
+    "radiative_correction_structure_defined": true,
+    "m1_branch_not_manually_lifted": true,
+    "external_neutrino_targets_excluded": true,
+    "step_07B_defined": true
+  },
+  "next_step": "Step 07B: construct neutrino radiative stability kernel"
+}

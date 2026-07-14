@@ -1,0 +1,60 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "alpha_convergence_N300_N10000_N15000",
+  "status": "FROZEN_CONVERGENCE_SEQUENCE_RECEIVED",
+  "interpretation_policy": {
+    "numerical_convergence": "saturated_to_64bit_precision_by_N10000",
+    "remaining_alpha_residual": "tree_level_residual_for_radiative_PR3_analysis_not_numerical_diagonalizer_error",
+    "codata_usage": "diagnostic_only"
+  },
+  "reference_alpha_inv_diagnostic_supplied": "137.035999206",
+  "rows": [
+    {
+      "N": 300,
+      "lambda_0": "2.322872581463488",
+      "lambda_1": "5.375889248196178",
+      "lambda_3": "13.233893408730458",
+      "mu_min_squared": "3.053016666732690",
+      "c_bc": "0.796684464847899",
+      "p1": "7.685346950896194e-04",
+      "q_bc": "10.904981678435441",
+      "alpha_PR_inv": "137.036041314016273"
+    },
+    {
+      "N": 10000,
+      "lambda_0": "2.322872581463488",
+      "lambda_1": "5.375889248196178",
+      "lambda_3": "13.233893408730466",
+      "mu_min_squared": "3.053016666732690",
+      "c_bc": "0.796684464847899",
+      "p1": "7.685346950896167e-04",
+      "q_bc": "10.904981678435449",
+      "alpha_PR_inv": "137.036041314016387"
+    },
+    {
+      "N": 15000,
+      "lambda_0": "2.322872581463488",
+      "lambda_1": "5.375889248196177",
+      "lambda_3": "13.233893408730470",
+      "mu_min_squared": "3.053016666732689",
+      "c_bc": "0.796684464847899",
+      "p1": "7.685346950896231e-04",
+      "q_bc": "10.904981678435453",
+      "alpha_PR_inv": "137.036041314016444"
+    }
+  ],
+  "deltas": {
+    "alpha_N10000_minus_N300": "0.000000000000114",
+    "alpha_N15000_minus_N10000": "0.000000000000057",
+    "qbc_N15000_minus_N10000": "0.000000000000004",
+    "mu_gap_N15000_minus_N10000": "-0.000000000000001"
+  },
+  "adopted_baseline": {
+    "branch": "high_resolution_tree_N15000",
+    "alpha_PR_tree_inv": "137.036041314016444",
+    "mu_min_squared_HR": "3.053016666732689",
+    "q_bc_HR": "10.904981678435453",
+    "c_bc": "0.796684464847899",
+    "p1": "7.685346950896231e-04"
+  }
+}

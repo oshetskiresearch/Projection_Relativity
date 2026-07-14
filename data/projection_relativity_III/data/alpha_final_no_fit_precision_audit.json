@@ -1,0 +1,74 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "alpha_final_no_fit_precision_audit",
+  "status": "STEP_05G_FINAL_NO_FIT_PRECISION_AUDIT_LOCKED",
+  "candidate_under_audit": "D1_plus_three_sheet_D2_refinement",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "forbidden_target_inputs_used": false,
+    "diagnostic_reference_used_after_generation_only": true,
+    "candidate_precision_locked": true,
+    "final_theorem_claimed": false
+  },
+  "generated_result": {
+    "DeltaZ_A_D1D2_PR": "-0.00000335072904669287811318762892930979931784992100337851630786204253710293778758370074941617298",
+    "Delta_alpha_D1D2_inv": "-0.0000421065030290411086538983834053643223625099844630214437314151444232206853445051700990393453",
+    "alpha_PR_phys_D1D2_inv": "137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901"
+  },
+  "diagnostic_comparison": {
+    "alpha_ref_inv": "137.035999206",
+    "post_generation_residual_inv": "0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901",
+    "post_generation_residual_ppm": "0.000011043922529",
+    "diagnostic_shift_capture_percent": "99.9964058744945",
+    "remaining_D1D2_gap_inv": "-0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901",
+    "remaining_D1D2_gap_DeltaZ_A": "-0.000000000120433735828387653900516497420509236677025368261042104267959794539749283382214413619297187"
+  },
+  "no_fit_provenance": {
+    "formula_D1": "-p1_HR*Delta_EW_HR*sin2thetaW_PR",
+    "formula_D2": "D1*Delta_EW_HR/sqrt(N_gen_PR)",
+    "allowed_inputs": [
+      "p1_HR",
+      "q_bc_HR",
+      "c_bc",
+      "Delta_EW_HR=(1-c_bc)/q_bc_HR",
+      "sin2thetaW_PR",
+      "N_gen_PR",
+      "alpha_PR_tree_inv"
+    ],
+    "forbidden_inputs_absent": [
+      "empirical alpha reference",
+      "CODATA alpha",
+      "PDG electroweak masses",
+      "PDG weak mixing angle",
+      "QCD target values",
+      "CKM observed values",
+      "PMNS observed values",
+      "neutrino target values"
+    ]
+  },
+  "closure_status_decision": {
+    "alpha_radiative_candidate_status": "PRECISION_LOCKED",
+    "D1_status": "ACCEPTED_FIRST_ORDER_BOUNDARY_LEAKAGE",
+    "D2_status": "ACCEPTED_THREE_SHEET_REFINEMENT",
+    "final_theorem_status": "NOT_YET_FINAL",
+    "reason": "Residual is nonzero and must be derived, bounded, or assigned to an explicit higher-order term before final theorem status."
+  },
+  "remaining_obligation": {
+    "routes": [
+      "derive D3 from higher-order boundary leakage",
+      "derive mode-resolved heat-kernel correction",
+      "derive PR threshold/overlap correction",
+      "show residual lies within diagnostic reference or numerical representation uncertainty",
+      "defer residual as an explicit PR-III precision obligation"
+    ]
+  },
+  "acceptance_gates": {
+    "D1D2_formula_verified_no_fit": true,
+    "diagnostic_reference_used_only_after_generation": true,
+    "final_residual_explicitly_reported": true,
+    "result_not_overstated_as_final_closure": true,
+    "alpha_candidate_marked_precision_locked": true,
+    "next_mathematical_obligation_defined": true
+  },
+  "next_step": "Step 05H: residual closure, uncertainty bounding, or D3 derivation"
+}

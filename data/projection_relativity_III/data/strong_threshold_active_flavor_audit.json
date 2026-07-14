@@ -1,0 +1,52 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "strong_threshold_active_flavor_audit",
+  "status": "STEP_08D_THRESHOLD_ACTIVE_FLAVOR_AUDIT_LOCKED",
+  "input_policy": {
+    "uses_only_PR_generated_thresholds": true,
+    "external_quark_masses_used": false,
+    "diagnostic_comparisons_deferred": true,
+    "running_branch_computed": false
+  },
+  "quark_thresholds_PR": {
+    "u_GeV": "0.002146462595",
+    "d_GeV": "0.004761039493",
+    "s_GeV": "0.094028510538",
+    "c_GeV": "1.274964814257465",
+    "b_GeV": "4.1664504826753515",
+    "t_GeV": "172.8139732666624",
+    "ordering": "u < d < s < c < b < t"
+  },
+  "active_flavor_count_definition": {
+    "sharp_threshold": "n_f_PR(mu)=sum_q Theta(mu-mu_q_PR)",
+    "smooth_future_threshold": "Theta_q_PR(mu;mu_q_PR,mu_min_HR^2)",
+    "smoothing_status": "deferred_to_future_PR_spectral_threshold_kernel"
+  },
+  "active_count_intervals": [
+    {"interval": "0 < mu < m_u", "active_quarks": [], "n_f_PR": 0, "beta0_PR": "11"},
+    {"interval": "m_u <= mu < m_d", "active_quarks": ["u"], "n_f_PR": 1, "beta0_PR": "31/3"},
+    {"interval": "m_d <= mu < m_s", "active_quarks": ["u", "d"], "n_f_PR": 2, "beta0_PR": "29/3"},
+    {"interval": "m_s <= mu < mu_c", "active_quarks": ["u", "d", "s"], "n_f_PR": 3, "beta0_PR": "9"},
+    {"interval": "mu_c <= mu < mu_b", "active_quarks": ["u", "d", "s", "c"], "n_f_PR": 4, "beta0_PR": "25/3"},
+    {"interval": "mu_b <= mu < mu_t", "active_quarks": ["u", "d", "s", "c", "b"], "n_f_PR": 5, "beta0_PR": "23/3"},
+    {"interval": "mu >= mu_t", "active_quarks": ["u", "d", "s", "c", "b", "t"], "n_f_PR": 6, "beta0_PR": "7"}
+  ],
+  "electroweak_matching_scale_audit": {
+    "Lambda_EW_PR_GeV": "173.67059834472832",
+    "top_threshold_GeV": "172.8139732666624",
+    "Lambda_EW_minus_top_threshold_GeV": "0.85662507806592",
+    "top_active_at_Lambda_EW_PR": true,
+    "n_f_PR_at_Lambda_EW_PR": 6,
+    "beta0_PR_at_Lambda_EW_PR": "7"
+  },
+  "acceptance_gates": {
+    "quark_thresholds_imported_from_PRII_generated_sheets": true,
+    "external_quark_masses_not_used": true,
+    "threshold_ordering_valid": true,
+    "active_flavor_count_function_defined": true,
+    "n_f_at_Lambda_EW_PR_equals_6": true,
+    "beta0_positive_all_threshold_intervals": true,
+    "running_comparison_deferred_to_step_08E": true
+  },
+  "next_step": "Step 08E: diagnostic comparison / strong running branch audit"
+}

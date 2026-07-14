@@ -1,0 +1,93 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "electroweak_running_inventory_kernel_seed",
+  "status": "STEP_06B_EW_RUNNING_KERNEL_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "external_reference_inputs_used": false,
+    "diagnostic_comparisons_deferred": true,
+    "running_correction_computed": false
+  },
+  "transport_equation": {
+    "alpha_transport": "alpha_PR_inv(mu_EW)=alpha_PR_inv(0)-Delta_run_PR(0_to_mu_EW)",
+    "running_decomposition": "Delta_run_PR=sum_i B_i_PR*L_i_PR(0_to_mu_EW)",
+    "B_i_PR_status": "assigned_in_step_06C",
+    "L_i_PR_status": "kernel_class_locked_in_step_06B"
+  },
+  "running_inventory": [
+    {
+      "sector": "charged_weak_vectors",
+      "charge_square_sum": "2",
+      "threshold_status": "PR tree W mass from Step 02",
+      "included": true
+    },
+    {
+      "sector": "charged_electroweak_ghosts",
+      "charge_square_sum": "2",
+      "threshold_status": "paired with W gauge convention",
+      "included": true
+    },
+    {
+      "sector": "charged_goldstone_partners",
+      "charge_square_sum": "2",
+      "threshold_status": "conditional gauge-fixing partner",
+      "included": "conditional"
+    },
+    {
+      "sector": "charged_leptons",
+      "charge_square_sum": "3",
+      "threshold_status": "PR-II mass sheets or symbolic pending import",
+      "included": true
+    },
+    {
+      "sector": "up_type_quarks_color_resolved",
+      "charge_square_sum": "4",
+      "threshold_status": "PR-II quark sheets or symbolic pending import",
+      "included": true
+    },
+    {
+      "sector": "down_type_quarks_color_resolved",
+      "charge_square_sum": "1",
+      "threshold_status": "PR-II quark sheets or symbolic pending import",
+      "included": true
+    },
+    {
+      "sector": "neutral_modes",
+      "charge_square_sum": "0",
+      "threshold_status": "not applicable",
+      "included": false
+    }
+  ],
+  "kernel_class": {
+    "continuous_form": "L_i_PR=int_0^muEW2 dQ2/(Q2+M_i2) * W_i_PR(Q2; mu_min_HR2, omega_i,n_PR)",
+    "discrete_form": "L_i_PR=sum_n omega_i,n_PR log((M_i2+mu_EW2+mu_n2*Lambda_ref2)/(M_i2+mu_n2*Lambda_ref2))-R_i_run",
+    "support_condition": "mu_n2 >= mu_min_HR2 > 0",
+    "mu_min_HR2": "3.053016666732689",
+    "reference_scale_provisional": "Lambda_EW_PR",
+    "Lambda_EW_PR_GeV": "173.67059834472832",
+    "subtraction_rule": "R_i_run preserves Step 05 low-energy normalization and cannot be selected to force diagnostic weak-scale values"
+  },
+  "threshold_policy": {
+    "allowed_sources": [
+      "PR tree W/Z seed values",
+      "PR-II generated lepton and quark mass sheets once imported",
+      "symbolic thresholds pending PR source synchronization",
+      "future PR-III derived threshold values"
+    ],
+    "excluded_sources": [
+      "external weak-sector reference masses",
+      "external quark or lepton mass tables as generation inputs",
+      "threshold values chosen to force weak-scale agreement"
+    ]
+  },
+  "acceptance_gates": {
+    "step_06A_transport_equation_imported": true,
+    "step_05B_charge_inventory_preserved": true,
+    "neutral_modes_excluded_by_Q2": true,
+    "PR_running_kernel_class_defined_without_arbitrary_cutoff": true,
+    "threshold_sources_restricted_to_PR_or_symbolic": true,
+    "external_weak_targets_not_used": true,
+    "running_correction_not_computed_prematurely": true
+  },
+  "next_step": "Step 06C: compute PR electroweak running candidate"
+}

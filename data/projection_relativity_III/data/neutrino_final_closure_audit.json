@@ -1,0 +1,81 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "neutrino_final_closure_audit",
+  "status": "STEP_07F_FINAL_NEUTRINO_CLOSURE_AUDIT_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "diagnostic_references_used_after_generation_only": true,
+    "generation_values_modified": false,
+    "final_exact_theorem_claimed": false
+  },
+  "final_PR_branch": {
+    "m1_eV": "0",
+    "m2_eV": "0.008627283010",
+    "m3_eV": "0.05010655367",
+    "sum_m_eV": "0.058733836680",
+    "m_beta_eV": "0.00881502940999796816803578003302275917488053175479856521455075652335142341937931458977355095",
+    "m_beta_meV": "8.81502940999796816803578003302275917488053175479856521455075652335142341937931458977355095",
+    "m_beta_beta_eV": "0.001507694477",
+    "m_beta_beta_meV": "1.507694477000"
+  },
+  "stability_envelope": {
+    "m_beta_beta_lower_meV": "1.507519780848954983738270680558872074294164741965365933123961216655336259948171312002546877549167519",
+    "m_beta_beta_upper_meV": "1.507869173151045016261729319441127925705835258034634066876038783344663740051828687997453122450832481",
+    "m_beta_beta_envelope_meV": "0.0001746961510450162617293194411279257058352580346340668760387833446637400518286879974531224508324814684",
+    "relative_envelope_ppm": "115.8697293848455622679311845273315979887734473899428339146083803447799270731745191987742824586081364",
+    "m1_branch_status": "protected_at_multiplicative_order",
+    "normal_ordering_preserved": true
+  },
+  "diagnostic_status": {
+    "oscillation_branch_status": "DIAGNOSTIC_COMPATIBLE",
+    "mass_sum_status": "BELOW_CONSERVATIVE_COSMOLOGY_CEILING",
+    "m_beta_status": "BELOW_DIRECT_BETA_DECAY_LIMIT",
+    "m_beta_beta_status": "BELOW_CURRENT_DIRECT_LIMITS",
+    "normal_ordering_status": "STABLE_AND_DIAGNOSTICALLY_COMPATIBLE"
+  },
+  "no_fit_provenance": {
+    "allowed_generation_inputs": [
+      "frozen PR-II neutrino masses",
+      "frozen PR-II PMNS branch",
+      "frozen PR-II m_beta_beta",
+      "PR-III alpha closure ledger",
+      "PR-III electroweak closure ledger",
+      "PR spectral gap and boundary anchors",
+      "Step 07B/07C PR stability envelope"
+    ],
+    "excluded_generation_inputs": [
+      "measured neutrino mass splittings",
+      "observed PMNS angles",
+      "cosmological mass-sum limits",
+      "neutrinoless double-beta experimental limits",
+      "sterile-neutrino target values"
+    ]
+  },
+  "closure_status_decision": {
+    "neutrino_branch_status": "STABILITY_LOCKED_AND_DIAGNOSTIC_COMPATIBLE",
+    "normal_ordering_status": "STABLE_UNDER_PR_MULTIPLICATIVE_ENVELOPE",
+    "PMNS_status": "FROZEN_UNITARY_BRANCH_WITH_UNITARY_UPDATE_RULE",
+    "m_beta_status": "BELOW_CURRENT_DIRECT_BETA_DECAY_LIMITS",
+    "m_beta_beta_status": "STABLE_AND_BELOW_CURRENT_DIRECT_0NUBB_LIMITS",
+    "PR2_neutrino_obligation": "SATISFIED_TO_CURRENT_DIAGNOSTIC_PRECISION",
+    "final_exact_neutrino_theorem": "NOT_CLAIMED",
+    "step_07_status": "COMPLETE"
+  },
+  "remaining_obligations": [
+    "derive or rule out additive Majorana seed S_nu_i_PR",
+    "derive phase-sensitive PMNS radiative deformation A_nu_PR",
+    "construct all-orders neutrino uncertainty theorem",
+    "update diagnostic comparisons when future constraints improve"
+  ],
+  "acceptance_gates": {
+    "branch_remains_no_fit": true,
+    "massless_branch_protected_at_multiplicative_order": true,
+    "normal_ordering_stable": true,
+    "PMNS_unitarity_preserved_by_update_rule": true,
+    "m_beta_beta_stable_under_PR_envelope": true,
+    "diagnostic_comparisons_post_generation_only": true,
+    "not_overstated_as_detection_or_exact_theorem": true,
+    "step_08_defined": true
+  },
+  "next_step": "Step 08: SU(3)_c strong phase-fiber closure and running audit"
+}

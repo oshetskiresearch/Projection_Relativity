@@ -1,0 +1,57 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "scalar_hessian_seed",
+  "status": "STEP_02_SEED_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "forbidden_target_inputs_used": false,
+    "empirical_targets_allowed_as_diagnostics_only": true
+  },
+  "scalar_amplitude_block": {
+    "potential": "V_disp(A)=V0+alpha_A*A^2+beta_A*A^4",
+    "vacuum": "A0^2=-alpha_A/(2*beta_A)",
+    "hessian_AA": "d2V/dA2|A0=-4*alpha_A=8*beta_A*A0^2",
+    "stability_condition": "beta_A>0 and A0^2>0 implies H_AA>0",
+    "numeric_status": "symbolic_until_scalar_curvature_normalization_is_derived"
+  },
+  "gauge_null_block": {
+    "broken_electroweak_scalar_directions": 3,
+    "treatment": "gauge-null directions removed before physical scalar stability audit",
+    "residual_photon_mode": "exactly massless at tree level"
+  },
+  "frozen_inputs": {
+    "alpha_PR_tree_inv": "137.036041314016444",
+    "sin2thetaW_PR": "0.231355763298189",
+    "v_EW_PR_GeV": "246.21959589022453"
+  },
+  "derived_couplings": {
+    "alpha_PR_tree": "0.0072973503204789169423024277591822611286230752427411",
+    "e_PR": "0.30282207421182286581809072020845327913143244571434",
+    "g_PR": "0.62957484689764151178346495625282724825379638851140",
+    "gprime_PR": "0.34540199548414150920957567770984563383700364736773"
+  },
+  "electroweak_mass_block": {
+    "charged_MW_squared_GeV2": "6007.3090365773732899464944214467471212162113713044",
+    "charged_MW_tree_GeV": "77.506832192893635832893671080594197560828951119835",
+    "neutral_matrix_basis": "[W3,B]",
+    "neutral_matrix_GeV2": [
+      ["6007.3090365773732899464944214467471212162113713042", "-3295.7741862598440700931668583026015217449302172168"],
+      ["-3295.7741862598440700931668583026015217449302172168", "1808.1519396920133274663237631335634221880574516096"]
+    ],
+    "neutral_eigenvalues_GeV2": {
+      "photon": "0",
+      "Z": "7815.4609762693866174128181845803105434042688229137"
+    },
+    "MZ_tree_GeV": "88.40509587274585732715680415742085114480023483002",
+    "rho_EW_tree": "1.0000000000000000000000000000000000000000000000000"
+  },
+  "acceptance_gates": {
+    "symbolic_scalar_amplitude_positive": true,
+    "gauge_null_modes_identified": true,
+    "photon_massless_tree": true,
+    "broken_EW_masses_positive": true,
+    "rho_EW_tree_equals_one": true,
+    "no_fit_policy_active": true
+  },
+  "next_step": "Step 03: gauge-null removal and physical Hessian quotient audit"
+}

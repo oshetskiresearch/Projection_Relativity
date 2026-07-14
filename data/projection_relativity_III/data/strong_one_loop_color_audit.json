@@ -1,0 +1,51 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "strong_one_loop_color_audit",
+  "status": "STEP_08C_ONE_LOOP_COLOR_AUDIT_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "external_QCD_targets_used": false,
+    "diagnostic_comparisons_deferred": true,
+    "running_branch_computed": false
+  },
+  "imported_inputs": {
+    "alpha3_PR": "0.117861507469150",
+    "C_A": "3",
+    "C_F": "4/3",
+    "T_F": "1/2",
+    "N_gen_PR": "3",
+    "n_f_PR_max_three_generation": "6"
+  },
+  "beta0_formula": {
+    "general": "beta0_PR=(11/3)*C_A-(4/3)*T_F*n_f_PR",
+    "SU3_reduced": "beta0_PR=11-(2/3)*n_f_PR",
+    "critical_nf": "16.5",
+    "asymptotic_freedom_condition": "n_f_PR < 16.5 for positive K3_PR"
+  },
+  "sign_table": [
+    {"n_f_PR": 0, "beta0_PR": "11", "beta_prefactor_for_K3_equals_1": "-0.024319620845385650599026232780179517761298958159156", "beta_sign_for_K3_positive": "negative"},
+    {"n_f_PR": 1, "beta0_PR": "31/3", "beta_prefactor_for_K3_equals_1": "-0.022845704430513792986964036854108031836371748573752", "beta_sign_for_K3_positive": "negative"},
+    {"n_f_PR": 2, "beta0_PR": "29/3", "beta_prefactor_for_K3_equals_1": "-0.021371788015641935374901840928036545911444538988349", "beta_sign_for_K3_positive": "negative"},
+    {"n_f_PR": 3, "beta0_PR": "9", "beta_prefactor_for_K3_equals_1": "-0.019897871600770077762839645001965059986517329402946", "beta_sign_for_K3_positive": "negative"},
+    {"n_f_PR": 4, "beta0_PR": "25/3", "beta_prefactor_for_K3_equals_1": "-0.018423955185898220150777449075893574061590119817542", "beta_sign_for_K3_positive": "negative"},
+    {"n_f_PR": 5, "beta0_PR": "23/3", "beta_prefactor_for_K3_equals_1": "-0.016950038771026362538715253149822088136662910232139", "beta_sign_for_K3_positive": "negative"},
+    {"n_f_PR": 6, "beta0_PR": "7", "beta_prefactor_for_K3_equals_1": "-0.015476122356154504926653057223750602211735700646736", "beta_sign_for_K3_positive": "negative"}
+  ],
+  "audit_decision": {
+    "beta0_positive_for_nf_0_to_6": true,
+    "three_generation_color_sheets_asymptotically_free": true,
+    "requires_positive_kernel_orientation": true,
+    "active_threshold_assignment_deferred": true,
+    "external_QCD_targets_not_used": true
+  },
+  "acceptance_gates": {
+    "beta0_derived_from_SU3_group_ledger": true,
+    "beta0_reduces_to_11_minus_2nf_over_3": true,
+    "critical_flavor_count_identified": true,
+    "full_three_generation_count_asymptotically_free": true,
+    "running_sign_negative_for_positive_K3": true,
+    "active_thresholds_deferred_to_step_08D": true,
+    "external_QCD_targets_excluded": true
+  },
+  "next_step": "Step 08D: threshold and active flavor-count audit"
+}

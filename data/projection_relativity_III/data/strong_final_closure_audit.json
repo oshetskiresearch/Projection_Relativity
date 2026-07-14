@@ -1,0 +1,94 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "strong_final_closure_audit",
+  "status": "STEP_08F_FINAL_STRONG_CLOSURE_AUDIT_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "diagnostic_references_used_after_generation_only": true,
+    "generation_values_modified": false,
+    "final_exact_QCD_theorem_claimed": false
+  },
+  "final_strong_anchor": {
+    "alpha3_PR": "0.117861507469150",
+    "alpha3_PR_inverse": "8.4845342764833368725536701837814243566302335086122",
+    "diagnostic_alpha_s": "0.1179",
+    "alpha3_residual": "-0.000038492530850",
+    "alpha3_relative_percent": "-0.0326484570399",
+    "alpha3_relative_ppm": "-326.484570399",
+    "anchor_status": "DIAGNOSTIC_COMPATIBLE_SUB_0P04_PERCENT"
+  },
+  "su3_group_ledger": {
+    "group": "SU(3)_c",
+    "N_c": "3",
+    "adjoint_dimension": "8",
+    "C_A": "3",
+    "C_F": "4/3",
+    "T_F": "1/2",
+    "beta0_reduced_form": "11-(2/3)*n_f_PR",
+    "critical_nf": "16.5"
+  },
+  "threshold_ledger": {
+    "u_GeV": "0.002146462595",
+    "d_GeV": "0.004761039493",
+    "s_GeV": "0.094028510538",
+    "c_GeV": "1.274964814257465",
+    "b_GeV": "4.1664504826753515",
+    "t_GeV": "172.8139732666624",
+    "ordering": "u < d < s < c < b < t",
+    "threshold_status": "PR_DERIVED_AND_ORDERED"
+  },
+  "active_flavor_status": {
+    "Lambda_EW_PR_GeV": "173.67059834472832",
+    "n_f_PR_at_Lambda_EW_PR": "6",
+    "beta0_PR_at_Lambda_EW_PR": "7",
+    "beta0_positive_all_intervals": true,
+    "asymptotic_freedom_sign_for_positive_K3": "PASS"
+  },
+  "no_fit_provenance": {
+    "allowed_generation_inputs": [
+      "frozen PR-II alpha3_PR",
+      "SU(3)c group identities",
+      "PR-II generated quark threshold sheets",
+      "PR-II generation count",
+      "PR-III electroweak matching scale",
+      "PR spectral gap and boundary anchors",
+      "symbolic strong kernel and threshold smoothing objects"
+    ],
+    "excluded_generation_inputs": [
+      "PDG alpha_s(M_Z) as a fit input",
+      "external quark masses",
+      "external QCD Lambda_MSbar",
+      "hadron masses as tuning targets",
+      "lattice QCD target values",
+      "observed CKM entries"
+    ]
+  },
+  "closure_status_decision": {
+    "strong_branch_status": "ANCHOR_LOCKED_THRESHOLD_LOCKED_AND_DIAGNOSTIC_COMPATIBLE",
+    "alpha3_anchor_status": "DIAGNOSTIC_COMPATIBLE_SUB_0P04_PERCENT",
+    "threshold_ledger_status": "PR_DERIVED_AND_ORDERED",
+    "asymptotic_freedom_status": "SIGN_LOCKED_FOR_POSITIVE_K3",
+    "PR2_strong_obligation": "SATISFIED_TO_CURRENT_DIAGNOSTIC_ANCHOR_PRECISION",
+    "final_exact_QCD_theorem": "NOT_CLAIMED",
+    "step_08_status": "COMPLETE"
+  },
+  "remaining_obligations": [
+    "derive Lambda_3_PR",
+    "replace sharp thresholds with PR spectral threshold profiles",
+    "derive higher-loop color coefficients inside PR kernel",
+    "construct full running branch alpha3_PR(mu)",
+    "perform scheme/matching diagnostics without importing Lambda_MSbar",
+    "address confinement/hadronization as a separate nonperturbative PR module"
+  ],
+  "acceptance_gates": {
+    "branch_remains_no_fit": true,
+    "strong_anchor_unmodified": true,
+    "threshold_ledger_PR_derived_and_ordered": true,
+    "active_flavor_count_ledger_locked": true,
+    "one_loop_asymptotic_freedom_sign_locked": true,
+    "diagnostic_comparison_post_generation_only": true,
+    "not_overstated_as_complete_QCD_theorem": true,
+    "step_09_defined": true
+  },
+  "next_step": "Step 09: global running-coupling and anomaly/consistency audit"
+}

@@ -1,0 +1,126 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "charged_mode_supertrace_inventory",
+  "status": "STEP_05B_INVENTORY_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "forbidden_target_inputs_used": false,
+    "empirical_targets_allowed_as_diagnostics_only": true
+  },
+  "generic_formula": "DeltaZ_A^PR = sum_i sigma_i*n_i*Q_i^2*K_i^PR",
+  "kernel_status": "K_i^PR deferred to Step 05C",
+  "supertrace_sign_convention": {
+    "real_bosonic_scalar": "+1/2",
+    "vector_boson_block": "+1/2 with vector kernel carrying spin/gauge structure",
+    "ghost_block": "-1",
+    "Dirac_fermion_block": "-1"
+  },
+  "charged_mode_inventory": [
+    {
+      "sector": "charged_weak_vectors",
+      "modes": ["W+", "W-"],
+      "charges": ["+1", "-1"],
+      "charge_square_sum": "2",
+      "raw_determinant_sign": "+1/2 vector kernel",
+      "status": "included",
+      "notes": "Vector spin/gauge structure deferred to K_vector^PR."
+    },
+    {
+      "sector": "charged_electroweak_ghosts",
+      "modes": ["c+", "c-"],
+      "charges": ["+1", "-1"],
+      "charge_square_sum": "2",
+      "raw_determinant_sign": "-1 ghost kernel",
+      "status": "included_with_background_field_gauge",
+      "notes": "Must accompany charged weak vector block."
+    },
+    {
+      "sector": "charged_goldstone_gauge_fixing_partners",
+      "modes": ["phi+", "phi-"],
+      "charges": ["+1", "-1"],
+      "charge_square_sum": "2",
+      "raw_determinant_sign": "+1/2 scalar kernel",
+      "status": "conditional_gauge_fixing_partner",
+      "notes": "Step 03 quotient removes these as physical scalar modes; gauge-fixing can reintroduce only with ghost terms."
+    },
+    {
+      "sector": "charged_leptons",
+      "modes": ["e", "mu", "tau"],
+      "charges": ["-1", "-1", "-1"],
+      "charge_square_sum": "3",
+      "raw_determinant_sign": "-1 fermion kernel",
+      "status": "included",
+      "notes": "Three charged-lepton projection sheets inherited from PR-II."
+    },
+    {
+      "sector": "up_type_quarks_color_resolved",
+      "modes": ["u", "c", "t"],
+      "charge": "+2/3",
+      "generations": 3,
+      "colors": 3,
+      "charge_square_sum": "4",
+      "raw_determinant_sign": "-1 fermion kernel",
+      "status": "included_for_electromagnetic_charge_counting",
+      "notes": "Strong thresholds and running deferred to strong-sector modules."
+    },
+    {
+      "sector": "down_type_quarks_color_resolved",
+      "modes": ["d", "s", "b"],
+      "charge": "-1/3",
+      "generations": 3,
+      "colors": 3,
+      "charge_square_sum": "1",
+      "raw_determinant_sign": "-1 fermion kernel",
+      "status": "included_for_electromagnetic_charge_counting",
+      "notes": "Strong thresholds and running deferred to strong-sector modules."
+    }
+  ],
+  "neutral_exclusions": [
+    {
+      "mode": "photon_background",
+      "Q": "0 self-charge in abelian extraction",
+      "status": "external_background_not_loop_self_charge"
+    },
+    {
+      "mode": "Z",
+      "Q": "0",
+      "status": "excluded_from_direct_Q2_contribution"
+    },
+    {
+      "mode": "neutrinos",
+      "Q": "0",
+      "status": "excluded_from_direct_Q2_contribution"
+    },
+    {
+      "mode": "radial_scalar_h_A",
+      "Q": "0 unless charged projection kernel later derived",
+      "status": "excluded_from_current_direct_Q2_contribution"
+    },
+    {
+      "mode": "gluons",
+      "Q": "0 under U(1)_em",
+      "status": "strong_sector_deferred"
+    }
+  ],
+  "charge_square_audits": {
+    "charged_weak_vector_Q2_sum": "2",
+    "charged_ghost_Q2_sum": "2",
+    "charged_goldstone_conditional_Q2_sum": "2",
+    "charged_lepton_Q2_sum": "3",
+    "up_type_quark_color_Q2_sum": "4",
+    "down_type_quark_color_Q2_sum": "1",
+    "charged_fermion_total_Q2_sum": "8",
+    "per_generation_charged_fermion_Q2_sum": "8/3"
+  },
+  "acceptance_gates": {
+    "all_nonzero_residual_charges_inventoried": true,
+    "neutral_modes_explicitly_excluded": true,
+    "charged_fermion_Q2_sum_equals_8": true,
+    "charged_weak_vector_and_ghost_sectors_represented": true,
+    "goldstone_partners_marked_conditional": true,
+    "spin_gauge_kernel_not_assigned_prematurely": true,
+    "no_empirical_target_values_used": true,
+    "delta_ZA_not_computed": true
+  },
+  "next_step": "Step 05C: define PR spectral kernel K_i^PR"
+}

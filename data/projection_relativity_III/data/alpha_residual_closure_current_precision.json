@@ -1,0 +1,62 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "alpha_residual_closure_current_precision",
+  "status": "STEP_05H_RESIDUAL_BOUNDING_LOCKED",
+  "input_policy": {
+    "candidate_uses_only_frozen_PR_values": true,
+    "forbidden_target_inputs_used": false,
+    "experimental_references_used_after_generation_only": true,
+    "exact_all_orders_theorem_claimed": false
+  },
+  "candidate": {
+    "alpha_PR_phys_D1D2_inv": "137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901",
+    "source": "Step 05F D1+D2 no-fit alpha candidate"
+  },
+  "Rb_reference": {
+    "alpha_inv": "137.035999206",
+    "sigma_inv": "0.000000011",
+    "notation": "137.035999206(11)",
+    "role": "post-generation diagnostic experimental reference"
+  },
+  "Rb_comparison": {
+    "residual_inv": "0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901",
+    "sigma_distance": "0.13758317808103146378332678506160340818323063441420623498687061630133231771180918",
+    "inside_1sigma": true,
+    "relative_residual_ppt": "11.043922528826152175374058370972881845412921887782251114704779506044035309180544",
+    "relative_sigma_ppt": "80.270878190658493267337368678784193430592323067590301203090422628023260797531080"
+  },
+  "CODATA_2022_reference": {
+    "alpha_inv": "137.035999177",
+    "sigma_inv": "0.000000021",
+    "notation": "137.035999177(21)",
+    "role": "post-generation diagnostic recommended-value comparison"
+  },
+  "CODATA_2022_comparison": {
+    "residual_inv": "0.000000030513414958891346101616594635677637490015536978556268584855576779314655494829901",
+    "sigma_distance": "1.4530197599472069572198378397941732138102636656455365992788369894911740711823762",
+    "inside_2sigma": true,
+    "relative_residual_ppt": "222.66714689677462854769632746454738166130091425469891865256419357230936983595925",
+    "relative_sigma_ppt": "153.24440385095992563516170055852534778938644758067257041137748802186047930464385"
+  },
+  "closure_status_decision": {
+    "alpha_candidate_status": "CURRENT_EXPERIMENTAL_PRECISION_CLOSED",
+    "Rb_sigma_distance": "0.1376 sigma",
+    "CODATA_2022_status": "inside 2 sigma",
+    "PR2_alpha_obligation": "satisfied_to_current_experimental_precision",
+    "final_exact_theorem": "not_claimed"
+  },
+  "remaining_all_orders_obligation": {
+    "residual_inv_against_Rb": "-0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901",
+    "note": "Residual is below current supplied Rb experimental uncertainty but remains nonzero. Future work may derive D3, mode-resolved heat-kernel correction, threshold/overlap correction, or an all-orders uncertainty theorem."
+  },
+  "acceptance_gates": {
+    "D1D2_candidate_remains_no_fit": true,
+    "references_used_only_after_generation": true,
+    "Rb_sigma_distance_computed": true,
+    "inside_Rb_one_sigma": true,
+    "inside_CODATA_2022_two_sigma": true,
+    "current_precision_closure_not_exact_theorem": true,
+    "remaining_residual_reported": true
+  },
+  "step_05_status": "COMPLETE_TO_CURRENT_EXPERIMENTAL_PRECISION"
+}

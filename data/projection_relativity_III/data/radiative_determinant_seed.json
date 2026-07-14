@@ -1,0 +1,98 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "radiative_determinant_seed",
+  "status": "STEP_04_DETERMINANT_ARCHITECTURE_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "forbidden_target_inputs_used": false,
+    "empirical_targets_allowed_as_diagnostics_only": true
+  },
+  "trace_convention": {
+    "definition": "Tr_PR' log(O O_ref^-1) = - d/ds [zeta_O_PR(s)-zeta_Oref_PR(s)] at s=0",
+    "zeta_definition": "zeta_O_PR(s)=sum_{lambda_n in spec_PR'(O)} lambda_n^(-s)",
+    "prime": "gauge-null modes and exact zero modes excluded or reference-normalized"
+  },
+  "supertrace_seed": {
+    "formula": "DeltaGamma_PR^(1)[B] = 1/2 STr_PR' log[H_PR[B] H_PR[0]^-1]",
+    "block_form": "1/2 Tr_scalar' log(H_A/H_A0) + 1/2 Tr_vector' log(O_V/O_V0) - Tr_ghost' log(M_gh/M_gh0) - Tr_fermion' log(D_F/D_F0)",
+    "delta_ZA_status": "not_computed_in_step_04"
+  },
+  "block_registry": [
+    {
+      "block": "physical_scalar",
+      "operator": "H_A = H_AA",
+      "multiplicity": 1,
+      "status": "included_symbolic",
+      "notes": "H_AA=8 beta_A A0^2>0"
+    },
+    {
+      "block": "gauge_null_scalars",
+      "operator": "pi_1, pi_2, pi_3",
+      "multiplicity": 3,
+      "status": "excluded_by_step_03_quotient",
+      "notes": "Gauge-null electroweak orientation modes, not determinant eigenvalues."
+    },
+    {
+      "block": "photon",
+      "operator": "O_gamma",
+      "multiplicity": 1,
+      "status": "external_background_reference_normalized",
+      "notes": "Massless residual U(1)_em projection used for Delta Z_A extraction."
+    },
+    {
+      "block": "charged_weak_vectors",
+      "operator": "O_W = [-D^2+M_W^2]g^{mu nu}+R_W^{mu nu}",
+      "multiplicity": 2,
+      "status": "included_seed_registry",
+      "mass_squared_GeV2": "6007.3090365773732899464944214467471212162113713044"
+    },
+    {
+      "block": "neutral_weak_vector",
+      "operator": "O_Z = [-partial^2+M_Z^2]g^{mu nu}+R_Z^{mu nu}",
+      "multiplicity": 1,
+      "status": "included_seed_registry",
+      "mass_squared_GeV2": "7815.4609762693866174128181845803105434042688229137"
+    },
+    {
+      "block": "electroweak_ghosts",
+      "operator": "M_gh",
+      "multiplicity": "gauge_fixing_dependent",
+      "status": "architecture_locked_explicit_gauge_fixing_pending",
+      "notes": "Ghosts represented explicitly so gauge redundancy is not silently counted."
+    },
+    {
+      "block": "fermions_flavor",
+      "operator": "D_F",
+      "multiplicity": "PR-II flavor sheets",
+      "status": "deferred_to_later_PR3_flavor_radiative_module"
+    },
+    {
+      "block": "strong_sector",
+      "operator": "O_G",
+      "multiplicity": "SU(3)_c",
+      "status": "deferred_until_strong_fiber_closure"
+    }
+  ],
+  "reference_normalization": {
+    "gauge_null_modes_removed": true,
+    "photon_zero_mode_reference_normalized": true,
+    "vacuum_reference_subtracted": true,
+    "log_zero_avoided": true
+  },
+  "alpha_radiative_extraction_convention": {
+    "effective_action_term": "DeltaGamma_PR^(1)[F] contains -1/4 DeltaZ_A^PR int F_{mu nu}F^{mu nu}",
+    "alpha_shift": "Delta alpha_PR_rad_inv = 4*pi*DeltaZ_A^PR",
+    "status": "Step 05 output, not Step 04 input"
+  },
+  "acceptance_gates": {
+    "physical_hessian_imported_from_step_03": true,
+    "gauge_null_modes_excluded": true,
+    "photon_treated_as_external_massless_background": true,
+    "positive_WZ_tree_masses_registered": true,
+    "PR_trace_log_reference_normalized": true,
+    "ghost_and_fermion_blocks_explicitly_represented": true,
+    "no_empirical_target_values_used": true,
+    "delta_ZA_not_inserted": true
+  },
+  "next_step": "Step 05: derive DeltaZ_A^PR and Delta alpha_PR_rad_inv"
+}

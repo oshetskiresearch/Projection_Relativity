@@ -1,0 +1,61 @@
+{
+  "project": "Projection Relativity III",
+  "dataset": "strong_phase_fiber_closure_seed",
+  "status": "STEP_08A_STRONG_BRANCH_LOCKED",
+  "input_policy": {
+    "uses_only_frozen_PR_values": true,
+    "external_QCD_targets_used": false,
+    "diagnostic_comparisons_deferred": true,
+    "running_correction_computed": false
+  },
+  "prerequisite_status": {
+    "step_07_status": "COMPLETE",
+    "step_08_ready": true
+  },
+  "strong_anchor": {
+    "alpha3_PR": "0.117861507469150",
+    "source": "frozen PR-II inheritance ledger",
+    "role": "compact-boundary strong-coupling anchor, not external fit"
+  },
+  "su3_group_ledger": {
+    "group": "SU(3)_c",
+    "N_c": 3,
+    "adjoint_dimension": 8,
+    "C_A": "3",
+    "C_F": "4/3",
+    "T_F": "1/2",
+    "identities_are_fit_parameters": false
+  },
+  "running_object": {
+    "equation": "mu*d(alpha3_PR)/dmu = beta3_PR(alpha3, P_color, K_PR)",
+    "one_loop_color_audit_form": "beta0_PR=(11/3)*C_A-(4/3)*T_F*n_f_PR",
+    "n_f_PR_status": "deferred_to_PR_derived_threshold_audit",
+    "running_computed_in_step_08A": false
+  },
+  "allowed_generation_inputs": [
+    "frozen PR-II alpha3_PR",
+    "SU(3)c group identities",
+    "PR-II quark mass sheets once imported from frozen source",
+    "PR spectral gap and boundary anchors",
+    "PR-III electroweak closure ledger",
+    "symbolic thresholds pending PR derivation"
+  ],
+  "forbidden_generation_inputs": [
+    "PDG alpha_s(M_Z)",
+    "external quark masses",
+    "external QCD Lambda_MSbar",
+    "hadron masses as tuning targets",
+    "lattice QCD target values",
+    "observed CKM entries"
+  ],
+  "acceptance_gates": {
+    "step_07_completion_verified": true,
+    "alpha3_PR_imported_from_frozen_ledger": true,
+    "SU3_group_ledger_locked": true,
+    "strong_beta_running_object_defined_symbolically": true,
+    "active_flavor_thresholds_deferred_to_PR_inputs": true,
+    "external_QCD_targets_excluded": true,
+    "step_08B_defined": true
+  },
+  "next_step": "Step 08B: construct PR strong spectral/running kernel"
+}
