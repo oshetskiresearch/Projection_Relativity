@@ -1,0 +1,4 @@
+PR-III reproducibility audit: PASS
+Manifest/status layer and targeted regeneration schema checks passed.
+Byte-exact full regeneration is not claimed unless --byte-exact is used and passes.
+Locked through Step 09F; ready for manuscript consolidation after reproducibility hardening.

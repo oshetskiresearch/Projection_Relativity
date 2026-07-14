@@ -1,0 +1,242 @@
+{
+  "claims": {
+    "byte_exact_release_claimed": false,
+    "changes_reproducibility_gate": false,
+    "full_numeric_reproducibility_claimed": false,
+    "relaxes_numeric_tolerance": false
+  },
+  "classification_counts": {},
+  "numeric_failure_event_count": 0,
+  "numeric_failure_events": [],
+  "numeric_formatting_warning_counts_by_pair": {
+    "Step 02 scalar Hessian seed": 13,
+    "Step 03 gauge-null quotient seed": 8,
+    "Step 05D minimal alpha candidate": 7,
+    "Step 05E no-fit diagnostic refinement": 1,
+    "Step 05F mode-resolved D2": 9,
+    "Step 05H residual closure bound": 11,
+    "Step 06C EW running candidate C1": 8,
+    "Step 06E EW diagnostic C1": 5,
+    "Step 06F weak-angle nonconstructive diagnostic audit": 13,
+    "Step 06G vector self-energy C2": 7,
+    "Step 06H EW diagnostic C2": 9,
+    "Step 06I final EW precision audit": 1,
+    "Step 06J electroweak C3 neutral D3 refinement": 10,
+    "Step 07A neutrino branch lock": 2,
+    "Step 07B neutrino radiative kernel": 3,
+    "Step 07C m beta beta stability": 14,
+    "Step 07D ordering PMNS stability": 11,
+    "Step 07E neutrino diagnostic comparison": 4,
+    "Step 08C one-loop color audit": 7,
+    "Step 08E strong diagnostic comparison": 7,
+    "Step 09C running continuity audit": 1
+  },
+  "numeric_formatting_warning_paths_by_pair": {
+    "Step 02 scalar Hessian seed": [
+      "data/scalar_hessian_seed.json.derived_couplings.alpha_PR_tree",
+      "data/scalar_hessian_seed.json.derived_couplings.e_PR",
+      "data/scalar_hessian_seed.json.derived_couplings.g_PR",
+      "data/scalar_hessian_seed.json.derived_couplings.gprime_PR",
+      "data/scalar_hessian_seed.json.electroweak_mass_block.MZ_tree_GeV",
+      "data/scalar_hessian_seed.json.electroweak_mass_block.charged_MW_squared_GeV2",
+      "data/scalar_hessian_seed.json.electroweak_mass_block.charged_MW_tree_GeV",
+      "data/scalar_hessian_seed.json.electroweak_mass_block.neutral_eigenvalues_GeV2.Z",
+      "data/scalar_hessian_seed.json.electroweak_mass_block.neutral_matrix_GeV2[0][0]",
+      "data/scalar_hessian_seed.json.electroweak_mass_block.neutral_matrix_GeV2[0][1]",
+      "data/scalar_hessian_seed.json.electroweak_mass_block.neutral_matrix_GeV2[1][0]",
+      "data/scalar_hessian_seed.json.electroweak_mass_block.neutral_matrix_GeV2[1][1]",
+      "data/scalar_hessian_seed.json.electroweak_mass_block.rho_EW_tree"
+    ],
+    "Step 03 gauge-null quotient seed": [
+      "data/gauge_null_quotient_seed.json.neutral_gauge_lock.Z_residual_max_abs",
+      "data/gauge_null_quotient_seed.json.neutral_gauge_lock.Z_vector_W3B[0]",
+      "data/gauge_null_quotient_seed.json.neutral_gauge_lock.Z_vector_W3B[1]",
+      "data/gauge_null_quotient_seed.json.neutral_gauge_lock.cos_thetaW_PR",
+      "data/gauge_null_quotient_seed.json.neutral_gauge_lock.photon_residual_max_abs",
+      "data/gauge_null_quotient_seed.json.neutral_gauge_lock.photon_vector_W3B[0]",
+      "data/gauge_null_quotient_seed.json.neutral_gauge_lock.photon_vector_W3B[1]",
+      "data/gauge_null_quotient_seed.json.neutral_gauge_lock.sin_thetaW_PR"
+    ],
+    "Step 05D minimal alpha candidate": [
+      "data/alpha_radiative_candidate_minimal_boundary.json.derived_candidate.DeltaZ_A_min_PR",
+      "data/alpha_radiative_candidate_minimal_boundary.json.derived_candidate.Delta_EW_HR",
+      "data/alpha_radiative_candidate_minimal_boundary.json.derived_candidate.Delta_alpha_PR_rad_min_inv",
+      "data/alpha_radiative_candidate_minimal_boundary.json.derived_candidate.alpha_PR_phys_min_inv",
+      "data/alpha_radiative_candidate_minimal_boundary.json.diagnostic_comparison.post_generation_residual_inv",
+      "data/alpha_radiative_candidate_minimal_boundary.json.diagnostic_comparison.remaining_diagnostic_gap_inv",
+      "data/alpha_radiative_candidate_minimal_boundary.json.frozen_inputs.p1_HR"
+    ],
+    "Step 05E no-fit diagnostic refinement": [
+      "data/alpha_no_fit_diagnostic_refinement.json.diagnostic_comparison.remaining_D1_gap_DeltaZ_A"
+    ],
+    "Step 05F mode-resolved D2": [
+      "data/alpha_radiative_candidate_D1_D2.json.derived_refinement.D2",
+      "data/alpha_radiative_candidate_D1_D2.json.derived_refinement.DeltaZ_A_D1D2_PR",
+      "data/alpha_radiative_candidate_D1_D2.json.derived_refinement.Delta_alpha_D1D2_inv",
+      "data/alpha_radiative_candidate_D1_D2.json.derived_refinement.alpha_PR_phys_D1D2_inv",
+      "data/alpha_radiative_candidate_D1_D2.json.derived_refinement.epsilon_2_PR",
+      "data/alpha_radiative_candidate_D1_D2.json.diagnostic_comparison.post_generation_residual_inv",
+      "data/alpha_radiative_candidate_D1_D2.json.diagnostic_comparison.remaining_D1D2_gap_DeltaZ_A",
+      "data/alpha_radiative_candidate_D1_D2.json.diagnostic_comparison.remaining_D1D2_gap_inv",
+      "data/alpha_radiative_candidate_D1_D2.json.frozen_inputs.alpha_PR_tree_inv"
+    ],
+    "Step 05H residual closure bound": [
+      "data/alpha_residual_closure_current_precision.json.CODATA_2022_comparison.relative_residual_ppt",
+      "data/alpha_residual_closure_current_precision.json.CODATA_2022_comparison.relative_sigma_ppt",
+      "data/alpha_residual_closure_current_precision.json.CODATA_2022_comparison.residual_inv",
+      "data/alpha_residual_closure_current_precision.json.CODATA_2022_comparison.sigma_distance",
+      "data/alpha_residual_closure_current_precision.json.CODATA_2022_reference.sigma_inv",
+      "data/alpha_residual_closure_current_precision.json.Rb_comparison.relative_residual_ppt",
+      "data/alpha_residual_closure_current_precision.json.Rb_comparison.relative_sigma_ppt",
+      "data/alpha_residual_closure_current_precision.json.Rb_comparison.residual_inv",
+      "data/alpha_residual_closure_current_precision.json.Rb_comparison.sigma_distance",
+      "data/alpha_residual_closure_current_precision.json.Rb_reference.sigma_inv",
+      "data/alpha_residual_closure_current_precision.json.remaining_all_orders_obligation.residual_inv_against_Rb"
+    ],
+    "Step 06C EW running candidate C1": [
+      "data/electroweak_running_candidate_C1.json.derived_transport.alpha_PR_C1_inv_muEW",
+      "data/electroweak_running_candidate_C1.json.derived_transport.e_PR_C1_muEW",
+      "data/electroweak_running_candidate_C1.json.derived_transport.g_PR_C1_muEW",
+      "data/electroweak_running_candidate_C1.json.derived_transport.gprime_PR_C1_muEW",
+      "data/electroweak_running_candidate_C1.json.weak_mass_ledger_C1.GF_GeV_minus2",
+      "data/electroweak_running_candidate_C1.json.weak_mass_ledger_C1.MW_GeV",
+      "data/electroweak_running_candidate_C1.json.weak_mass_ledger_C1.MZ_GeV",
+      "data/electroweak_running_candidate_C1.json.weak_mass_ledger_C1.rho_EW_C1"
+    ],
+    "Step 06E EW diagnostic C1": [
+      "data/electroweak_diagnostic_comparison_C1.json.diagnostic_references.GF_sigma_GeV_minus2",
+      "data/electroweak_diagnostic_comparison_C1.json.diagnostic_residuals.GF_relative_ppm",
+      "data/electroweak_diagnostic_comparison_C1.json.diagnostic_residuals.GF_residual_GeV_minus2",
+      "data/electroweak_diagnostic_comparison_C1.json.diagnostic_residuals.MW_relative_ppm",
+      "data/electroweak_diagnostic_comparison_C1.json.diagnostic_residuals.MZ_relative_ppm"
+    ],
+    "Step 06F weak-angle nonconstructive diagnostic audit": [
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.mass_scale_diagnostics.kappa_W",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.mass_scale_diagnostics.kappa_W_squared",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.mass_scale_diagnostics.kappa_Z",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.mass_scale_diagnostics.kappa_Z_squared",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.ratio_and_rho_diagnostic.C1_ratio_MW_over_MZ",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.ratio_and_rho_diagnostic.cos_thetaW_PR",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.ratio_and_rho_diagnostic.reference_ratio_MW_over_MZ",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.ratio_and_rho_diagnostic.rho_required_with_PR_angle",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.weak_angle_only_test.delta_sin2thetaW_required_by_W",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.weak_angle_only_test.delta_sin2thetaW_required_by_Z",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.weak_angle_only_test.required_shift_spread",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.weak_angle_only_test.sin2thetaW_required_by_W",
+      "data/electroweak_weak_angle_oblique_refinement_decision.json.weak_angle_only_test.sin2thetaW_required_by_Z"
+    ],
+    "Step 06G vector self-energy C2": [
+      "data/electroweak_vector_self_energy_candidate_C2.json.corrected_weak_ledger_C2.MW_C2_PR_GeV",
+      "data/electroweak_vector_self_energy_candidate_C2.json.corrected_weak_ledger_C2.MZ_C2_PR_GeV",
+      "data/electroweak_vector_self_energy_candidate_C2.json.corrected_weak_ledger_C2.rho_EW_C2_PR",
+      "data/electroweak_vector_self_energy_candidate_C2.json.derived_vector_self_energy.Pi_W_PR",
+      "data/electroweak_vector_self_energy_candidate_C2.json.derived_vector_self_energy.Pi_Z_PR",
+      "data/electroweak_vector_self_energy_candidate_C2.json.derived_vector_self_energy.epsilon_V_PR",
+      "data/electroweak_vector_self_energy_candidate_C2.json.frozen_inputs.Delta_EW_HR"
+    ],
+    "Step 06H EW diagnostic C2": [
+      "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.GF_relative_ppm",
+      "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.GF_residual_GeV_minus2",
+      "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.GF_sigma_distance",
+      "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.MW_relative_ppm",
+      "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.MW_sigma_distance",
+      "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.MZ_relative_ppm",
+      "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.MZ_sigma_distance",
+      "data/electroweak_diagnostic_comparison_C2.json.improvement_vs_C1.MW_residual_reduction_factor",
+      "data/electroweak_diagnostic_comparison_C2.json.improvement_vs_C1.MZ_residual_reduction_factor"
+    ],
+    "Step 06I final EW precision audit": [
+      "data/electroweak_final_precision_audit.json.remaining_obligation.neutral_channel_residual_MeV"
+    ],
+    "Step 06J electroweak C3 neutral D3 refinement": [
+      "data/electroweak_neutral_D3_candidate_C3.json.corrected_weak_ledger_C3.MZ_C3_PR_GeV",
+      "data/electroweak_neutral_D3_candidate_C3.json.corrected_weak_ledger_C3.rho_EW_C3_PR",
+      "data/electroweak_neutral_D3_candidate_C3.json.derived_D3.D3_Z_PR",
+      "data/electroweak_neutral_D3_candidate_C3.json.derived_D3.Pi_Z_C3_PR",
+      "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.GF_residual_GeV_minus2",
+      "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.GF_sigma_GeV_minus2",
+      "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.GF_sigma_distance",
+      "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.MW_sigma_distance",
+      "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.MZ_residual_GeV",
+      "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.MZ_sigma_distance"
+    ],
+    "Step 07A neutrino branch lock": [
+      "data/neutrino_branch_radiative_stability_seed.json.pr2_tree_branch.m_beta_beta_meV",
+      "data/neutrino_branch_radiative_stability_seed.json.pr2_tree_branch.masses_eV.sum"
+    ],
+    "Step 07B neutrino radiative kernel": [
+      "data/neutrino_radiative_kernel_seed.json.frozen_branch.m_beta_beta_meV",
+      "data/neutrino_radiative_kernel_seed.json.seed_stability_envelope.Delta_m2_seed_eV",
+      "data/neutrino_radiative_kernel_seed.json.seed_stability_envelope.Delta_m_beta_beta_seed_eV"
+    ],
+    "Step 07C m beta beta stability": [
+      "data/neutrino_mbb_stability_envelope.json.frozen_inputs.m_beta_beta_meV",
+      "data/neutrino_mbb_stability_envelope.json.frozen_inputs.m_sum_eV",
+      "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.Delta_m_beta_beta_env_eV",
+      "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.Delta_m_beta_beta_env_meV",
+      "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.lower_eV",
+      "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.lower_meV",
+      "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.relative_ppm",
+      "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.upper_eV",
+      "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.upper_meV",
+      "data/neutrino_mbb_stability_envelope.json.mass_branch_envelope.Delta_m1_env_eV",
+      "data/neutrino_mbb_stability_envelope.json.mass_branch_envelope.Delta_m2_env_eV",
+      "data/neutrino_mbb_stability_envelope.json.mass_branch_envelope.Delta_m3_env_eV",
+      "data/neutrino_mbb_stability_envelope.json.mass_branch_envelope.m_sum_lower_eV",
+      "data/neutrino_mbb_stability_envelope.json.mass_branch_envelope.m_sum_upper_eV"
+    ],
+    "Step 07D ordering PMNS stability": [
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_branch.Delta_m2_env_eV",
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_branch.m2_interval_eV[0]",
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_branch.m2_interval_eV[1]",
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_branch.m3_interval_eV[0]",
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_branch.m3_interval_eV[1]",
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m21_squared_interval_eV2[0]",
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m21_squared_interval_eV2[1]",
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m31_squared_interval_eV2[0]",
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m31_squared_interval_eV2[1]",
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m32_squared_interval_eV2[0]",
+      "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m32_squared_interval_eV2[1]"
+    ],
+    "Step 07E neutrino diagnostic comparison": [
+      "data/neutrino_diagnostic_comparison.json.diagnostic_residuals.Delta_m21_squared_residual_eV2",
+      "data/neutrino_diagnostic_comparison.json.diagnostic_residuals.sum_fraction_of_0p12_bound",
+      "data/neutrino_diagnostic_comparison.json.diagnostic_residuals.sum_margin_to_0p12_eV",
+      "data/neutrino_diagnostic_comparison.json.generated_PR_values.sum_m_eV"
+    ],
+    "Step 08C one-loop color audit": [
+      "data/strong_one_loop_color_audit.json.sign_table[0].beta_prefactor_for_K3_equals_1",
+      "data/strong_one_loop_color_audit.json.sign_table[1].beta_prefactor_for_K3_equals_1",
+      "data/strong_one_loop_color_audit.json.sign_table[2].beta_prefactor_for_K3_equals_1",
+      "data/strong_one_loop_color_audit.json.sign_table[3].beta_prefactor_for_K3_equals_1",
+      "data/strong_one_loop_color_audit.json.sign_table[4].beta_prefactor_for_K3_equals_1",
+      "data/strong_one_loop_color_audit.json.sign_table[5].beta_prefactor_for_K3_equals_1",
+      "data/strong_one_loop_color_audit.json.sign_table[6].beta_prefactor_for_K3_equals_1"
+    ],
+    "Step 08E strong diagnostic comparison": [
+      "data/strong_diagnostic_comparison.json.diagnostic_reference.alpha_s_diag_inverse",
+      "data/strong_diagnostic_comparison.json.diagnostic_residuals.alpha3_ratio_to_reference",
+      "data/strong_diagnostic_comparison.json.diagnostic_residuals.alpha3_relative_fraction",
+      "data/strong_diagnostic_comparison.json.diagnostic_residuals.alpha3_relative_percent",
+      "data/strong_diagnostic_comparison.json.diagnostic_residuals.alpha3_relative_ppm",
+      "data/strong_diagnostic_comparison.json.diagnostic_residuals.inverse_alpha3_residual",
+      "data/strong_diagnostic_comparison.json.generated_PR_values.alpha3_PR_inverse"
+    ],
+    "Step 09C running continuity audit": [
+      "data/global_running_continuity_audit.json.continuity_tests.ew_to_neutrino_stability.m_beta_beta_meV"
+    ]
+  },
+  "pair_classification_counts": {},
+  "project": "Projection Relativity III",
+  "source_audit": "artifact_drift_audit",
+  "source_counts": {
+    "failure_class_counts": {
+      "pass": 41
+    },
+    "pairs_checked": 41,
+    "pairs_failed": 0,
+    "pairs_passed": 41
+  },
+  "source_status": "PASS",
+  "summary_status": "NUMERIC_DRIFT_CLASSIFICATION_GENERATED"
+}

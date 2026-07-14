@@ -1,0 +1,18 @@
+id,category,status,actual,expected,detail
+scope:generator_python_files,scope,PASS,41,41,Packaged generator python files
+scope:data_json_files,scope,PASS,44,44,Packaged data json files
+scope:schema_json_files,scope,PASS,6,6,Packaged schema json files
+scope:audit_python_files,scope,PASS,6,6,Packaged audit python files
+scope:generator_names,scope,PASS,0,0,Every packaged generator must use the pr3_ filename prefix
+scope:audit_scripts,scope,PASS,6,6,Audit utility set matches the locked public scope manifest
+scope:regeneration_pairs,scope,PASS,41,41,The 41-pair manifest covers every packaged generator and every locked pair exists
+scope:support_files,scope,PASS,6,6,Minimal Tier A support files are present
+scope:forbidden_paths,scope,PASS,0,0,No PR4-labelled source path may enter the PR-III numerical package
+scope:forbidden_references,scope,PASS,0,0,"PR-III generators, JSON ledgers, schemas, and audit scripts contain no PR4 dependency"
+tier_a:manifest_targeted,tier_a,PASS,0,0,Manifest/status and targeted regeneration audit
+tier_b:artifact_drift,tier_b,PASS,41/41,41/41,Full schema/numeric artifact reproducibility under locked tolerances
+tier_b:schema_summary,tier_b,PASS,0,0,Schema drift accounting contains no failed generator/data pair
+tier_b:numeric_summary,tier_b,PASS,0,0,No numerical drift event exceeds the locked policy
+tier_c:canonical_release_bytes,tier_c,PASS,41/41,41/41,Canonical release JSON byte identity after locked policy normalization
+claim:raw_generator_stdout,claim_boundary,PASS,False,False,Raw generator stdout byte identity remains explicitly unclaimed
+claim:raw_checked_file_order,claim_boundary,PASS,False,False,Raw checked-in JSON file-order byte identity remains explicitly unclaimed

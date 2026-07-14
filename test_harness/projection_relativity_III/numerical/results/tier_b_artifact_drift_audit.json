@@ -1,0 +1,1097 @@
+{
+  "audit": "artifact_drift_audit",
+  "byte_exact_release_claimed": false,
+  "failure_class_counts": {
+    "pass": 41
+  },
+  "mechanical_root_wrapper_normalization": {
+    "added_from_locked_key_counts": {
+      "dataset": 13,
+      "input_policy": 13
+    },
+    "claim": "root metadata wrapper comparison normalization only; byte-exact release regeneration not claimed",
+    "pairs": [
+      "Step 04 radiative determinant seed",
+      "Step 05C PR spectral kernel",
+      "Step 05D minimal alpha candidate",
+      "Step 05F mode-resolved D2",
+      "Step 06C EW running candidate C1",
+      "Step 06E EW diagnostic C1",
+      "Step 06G vector self-energy C2",
+      "Step 06H EW diagnostic C2",
+      "Step 07D ordering PMNS stability",
+      "Step 07E neutrino diagnostic comparison",
+      "Step 08C one-loop color audit",
+      "Step 08D strong threshold active flavor audit",
+      "Step 08E strong diagnostic comparison"
+    ],
+    "pairs_normalized": 13,
+    "removed_from_generated_key_counts": {
+      "module": 13
+    }
+  },
+  "pairs_checked": 41,
+  "pairs_failed": 0,
+  "pairs_passed": 41,
+  "project": "Projection Relativity III",
+  "results": [
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v00_inheritance_ledger.py",
+      "data_path": "data/inheritance_ledger.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 01 inheritance ledger",
+      "resolved_builder": "build_inheritance_ledger",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v00b_alpha_baseline_policy.py",
+      "data_path": "data/alpha_baseline_policy.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 01B alpha baseline policy",
+      "resolved_builder": "build_alpha_baseline_policy",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v01_scalar_hessian.py",
+      "data_path": "data/scalar_hessian_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 02 scalar Hessian seed",
+      "resolved_builder": "build_scalar_hessian_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/scalar_hessian_seed.json.derived_couplings.alpha_PR_tree: numeric formatting drift locked='0.0072973503204789169423024277591822611286230752427411' generated='0.00729735032047891694230242775918226112862307524274110703424365'",
+        "data/scalar_hessian_seed.json.derived_couplings.e_PR: numeric formatting drift locked='0.30282207421182286581809072020845327913143244571434' generated='0.302822074211822865818090720208453279131432445714341970588801'",
+        "data/scalar_hessian_seed.json.derived_couplings.g_PR: numeric formatting drift locked='0.62957484689764151178346495625282724825379638851140' generated='0.629574846897641511783464956252827248253796388511400902334109'",
+        "data/scalar_hessian_seed.json.derived_couplings.gprime_PR: numeric formatting drift locked='0.34540199548414150920957567770984563383700364736773' generated='0.345401995484141509209575677709845633837003647367728984740715'",
+        "data/scalar_hessian_seed.json.electroweak_mass_block.MZ_tree_GeV: numeric formatting drift locked='88.40509587274585732715680415742085114480023483002' generated='88.4050958727458573271568041574208511448002348300209618650779'",
+        "data/scalar_hessian_seed.json.electroweak_mass_block.charged_MW_squared_GeV2: numeric formatting drift locked='6007.3090365773732899464944214467471212162113713044' generated='6007.3090365773732899464944214467471212162113713043435643750'",
+        "data/scalar_hessian_seed.json.electroweak_mass_block.charged_MW_tree_GeV: numeric formatting drift locked='77.506832192893635832893671080594197560828951119835' generated='77.5068321928936358328936710805941975608289511198344968667990'",
+        "data/scalar_hessian_seed.json.electroweak_mass_block.neutral_eigenvalues_GeV2.Z: numeric formatting drift locked='7815.4609762693866174128181845803105434042688229137' generated='7815.46097626938661741281818458031054340426882291386916416947'",
+        "data/scalar_hessian_seed.json.electroweak_mass_block.neutral_matrix_GeV2[0][0]: numeric formatting drift locked='6007.3090365773732899464944214467471212162113713042' generated='6007.3090365773732899464944214467471212162113713043435643750'",
+        "data/scalar_hessian_seed.json.electroweak_mass_block.neutral_matrix_GeV2[0][1]: numeric formatting drift locked='-3295.7741862598440700931668583026015217449302172168' generated='-3295.77418625984407009316685830260152174493021721685293970535'",
+        "data/scalar_hessian_seed.json.electroweak_mass_block.neutral_matrix_GeV2[1][0]: numeric formatting drift locked='-3295.7741862598440700931668583026015217449302172168' generated='-3295.77418625984407009316685830260152174493021721685293970535'",
+        "data/scalar_hessian_seed.json.electroweak_mass_block.neutral_matrix_GeV2[1][1]: numeric formatting drift locked='1808.1519396920133274663237631335634221880574516096' generated='1808.15193969201332746632376313356342218805745160952559979447'",
+        "data/scalar_hessian_seed.json.electroweak_mass_block.rho_EW_tree: numeric formatting drift locked='1.0000000000000000000000000000000000000000000000000' generated='0.999999999999999999999999999999999999999999999999999999999998'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v02_gauge_null_removal.py",
+      "data_path": "data/gauge_null_quotient_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 03 gauge-null quotient seed",
+      "resolved_builder": "__script_stdout__",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/gauge_null_quotient_seed.json.neutral_gauge_lock.Z_residual_max_abs: numeric formatting drift locked='7.1e-47' generated='7.07E-47'",
+        "data/gauge_null_quotient_seed.json.neutral_gauge_lock.Z_vector_W3B[0]: numeric formatting drift locked='0.876723580555360105457398073670122851235684044309931260035474' generated='0.87672358055536010545739807367012285123568404430993126003547441293364789956911286'",
+        "data/gauge_null_quotient_seed.json.neutral_gauge_lock.Z_vector_W3B[1]: numeric formatting drift locked='-0.480994556412220740217768765489223953539786055779711286076093' generated='-0.48099455641222074021776876548922395353978605577971128607609336555036370326376973'",
+        "data/gauge_null_quotient_seed.json.neutral_gauge_lock.cos_thetaW_PR: numeric formatting drift locked='0.876723580555360105457398073670122851235684044309931260035474' generated='0.87672358055536010545739807367012285123568404430993126003547441293364789956911286'",
+        "data/gauge_null_quotient_seed.json.neutral_gauge_lock.photon_residual_max_abs: numeric formatting drift locked='9.1e-47' generated='9.07E-47'",
+        "data/gauge_null_quotient_seed.json.neutral_gauge_lock.photon_vector_W3B[0]: numeric formatting drift locked='0.480994556412220740217768765489223953539786055779711286076093' generated='0.48099455641222074021776876548922395353978605577971128607609336555036370326376973'",
+        "data/gauge_null_quotient_seed.json.neutral_gauge_lock.photon_vector_W3B[1]: numeric formatting drift locked='0.876723580555360105457398073670122851235684044309931260035474' generated='0.87672358055536010545739807367012285123568404430993126003547441293364789956911286'",
+        "data/gauge_null_quotient_seed.json.neutral_gauge_lock.sin_thetaW_PR: numeric formatting drift locked='0.480994556412220740217768765489223953539786055779711286076093' generated='0.48099455641222074021776876548922395353978605577971128607609336555036370326376973'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v03_radiative_determinant.py",
+      "data_path": "data/radiative_determinant_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 04 radiative determinant seed",
+      "resolved_builder": "build_radiative_determinant_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v04a_alpha_radiative_protocol.py",
+      "data_path": "data/alpha_radiative_extraction_protocol_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 05A alpha extraction protocol",
+      "resolved_builder": "build_protocol_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v04b_charged_mode_inventory.py",
+      "data_path": "data/charged_mode_supertrace_inventory.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 05B charged mode inventory",
+      "resolved_builder": "build_charged_inventory",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v04c_pr_spectral_kernel.py",
+      "data_path": "data/pr_spectral_kernel_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 05C PR spectral kernel",
+      "resolved_builder": "build_kernel_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v04d_alpha_rad_candidate.py",
+      "data_path": "data/alpha_radiative_candidate_minimal_boundary.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 05D minimal alpha candidate",
+      "resolved_builder": "build_minimal_candidate",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/alpha_radiative_candidate_minimal_boundary.json.derived_candidate.DeltaZ_A_min_PR: numeric formatting drift locked='-0.0000033150449735433222932326442973740154803469215638087' generated='-0.0000033150449735433222932326442973740154803469215638086551184276854227205524241707091'",
+        "data/alpha_radiative_candidate_minimal_boundary.json.derived_candidate.Delta_EW_HR: numeric formatting drift locked='0.018644280306692899718928776428403028768291215822597' generated='0.018644280306692899718928776428403028768291215822596752573507879698576809774041661'",
+        "data/alpha_radiative_candidate_minimal_boundary.json.derived_candidate.Delta_alpha_PR_rad_min_inv: numeric formatting drift locked='-0.000041658083740813887216904843821118454991063065733008' generated='-0.000041658083740813887216904843821118454991063065733009074303552256696712261994914647'",
+        "data/alpha_radiative_candidate_minimal_boundary.json.derived_candidate.alpha_PR_phys_min_inv: numeric formatting drift locked='137.035999655932703186112783095156178881545008936934266992' generated='137.03599965593270318611278309515617888154500893693426699092569644774330328773801'",
+        "data/alpha_radiative_candidate_minimal_boundary.json.diagnostic_comparison.post_generation_residual_inv: numeric formatting drift locked='0.000000449932703186112783095156178881545008936934266992' generated='4.4993270318611278309515617888154500893693426699092569644774330328773801E-7'",
+        "data/alpha_radiative_candidate_minimal_boundary.json.diagnostic_comparison.remaining_diagnostic_gap_inv: numeric formatting drift locked='-0.000000449932703186112783095156178881545008936934266992' generated='-4.49932703186112783095156178881545008936934266990925696447743303287738005085353E-7'",
+        "data/alpha_radiative_candidate_minimal_boundary.json.frozen_inputs.p1_HR: numeric formatting drift locked='7.685346950896231e-04' generated='0.0007685346950896231'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v04e_no_fit_diagnostic.py",
+      "data_path": "data/alpha_no_fit_diagnostic_refinement.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 05E no-fit diagnostic refinement",
+      "resolved_builder": "__script_stdout__",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/alpha_no_fit_diagnostic_refinement.json.diagnostic_comparison.remaining_D1_gap_DeltaZ_A: numeric formatting drift locked='-0.000000035804506885384207608885148433204346739676464938207721898986491963055452151542494' generated='-3.5804506885384207608885148433204346739676464938207721898986491963055452151542494E-8'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v04f_mode_resolved_D2.py",
+      "data_path": "data/alpha_radiative_candidate_D1_D2.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 05F mode-resolved D2",
+      "resolved_builder": "build_d2_refinement",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/alpha_radiative_candidate_D1_D2.json.derived_refinement.D2: numeric formatting drift locked='-0.0000000356840731495558199549846319357838375029994395698611894343571143823853634129916305743510899' generated='-3.56840731495558199549846319357838375029994395698621461121616117858093138407923616861045714E-8'",
+        "data/alpha_radiative_candidate_D1_D2.json.derived_refinement.DeltaZ_A_D1D2_PR: numeric formatting drift locked='-0.00000335072904669287811318762892930979931784992100337851630786204253710293778758370074941617298' generated='-0.00000335072904669287811318762892930979931784992100337856214611216161178580931384079236168610457'",
+        "data/alpha_radiative_candidate_D1_D2.json.derived_refinement.Delta_alpha_D1D2_inv: numeric formatting drift locked='-0.0000421065030290411086538983834053643223625099844630214437314151444232206853445051700990393453' generated='-0.0000421065030290411086538983834053643223625099844630220197518544544091760880706574457776455132'",
+        "data/alpha_radiative_candidate_D1_D2.json.derived_refinement.alpha_PR_phys_D1D2_inv: numeric formatting drift locked='137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901' generated='137.035999207513414958891346101616594635677637490015536977980248145545590823911929342554222'",
+        "data/alpha_radiative_candidate_D1_D2.json.derived_refinement.epsilon_2_PR: numeric formatting drift locked='0.010764280253915984059993061466845953623291973168297815611743348884979166980206478' generated='0.0107642802539159840599930614668459536232919731682979584634951791858239350690357053915411592'",
+        "data/alpha_radiative_candidate_D1_D2.json.diagnostic_comparison.post_generation_residual_inv: numeric formatting drift locked='0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901' generated='1.513414958891346101616594635677637490015536977980248145545590823911929342554222E-9'",
+        "data/alpha_radiative_candidate_D1_D2.json.diagnostic_comparison.remaining_D1D2_gap_DeltaZ_A: numeric formatting drift locked='-0.000000000120433735828387653900516497420509236677025368261042104267959794539749283382214413619297187' generated='-1.20433735828387653900516497420509236677025368215203854148885111668223026290602143687710720E-10'",
+        "data/alpha_radiative_candidate_D1_D2.json.diagnostic_comparison.remaining_D1D2_gap_inv: numeric formatting drift locked='-0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901' generated='-1.5134149588913461016165946356776374900155369779802481455455908239119293425542223544868E-9'",
+        "data/alpha_radiative_candidate_D1_D2.json.frozen_inputs.alpha_PR_tree_inv: numeric formatting drift locked='137.036041314016444' generated='137.036041314016444000000000000000000000000000000000000000'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v04g_final_no_fit_precision.py",
+      "data_path": "data/alpha_final_no_fit_precision_audit.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 05G final alpha precision audit",
+      "resolved_builder": "build_final_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v04h_residual_closure_bound.py",
+      "data_path": "data/alpha_residual_closure_current_precision.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 05H residual closure bound",
+      "resolved_builder": "build_residual_closure",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/alpha_residual_closure_current_precision.json.CODATA_2022_comparison.relative_residual_ppt: numeric formatting drift locked='222.66714689677462854769632746454738166130091425469891865256419357230936983595925' generated='222.667146896774628547696327464547381661300914254698918652564193572309369835959254319992311'",
+        "data/alpha_residual_closure_current_precision.json.CODATA_2022_comparison.relative_sigma_ppt: numeric formatting drift locked='153.24440385095992563516170055852534778938644758067257041137748802186047930464385' generated='153.244403850959925635161700558525347789386447580672570411377488021860479304643848826015701'",
+        "data/alpha_residual_closure_current_precision.json.CODATA_2022_comparison.residual_inv: numeric formatting drift locked='0.000000030513414958891346101616594635677637490015536978556268584855576779314655494829901' generated='3.0513414958891346101616594635677637490015536978556268584855576779314655494829901E-8'",
+        "data/alpha_residual_closure_current_precision.json.CODATA_2022_comparison.sigma_distance: numeric formatting drift locked='1.4530197599472069572198378397941732138102636656455365992788369894911740711823762' generated='1.45301975994720695721983783979417321381026366564553659927883698949117407118237623809523810'",
+        "data/alpha_residual_closure_current_precision.json.CODATA_2022_reference.sigma_inv: numeric formatting drift locked='0.000000021' generated='2.1E-8'",
+        "data/alpha_residual_closure_current_precision.json.Rb_comparison.relative_residual_ppt: numeric formatting drift locked='11.043922528826152175374058370972881845412921887782251114704779506044035309180544' generated='11.0439225288261521753740583709728818454129218877822511147047795060440353091805440576881402'",
+        "data/alpha_residual_closure_current_precision.json.Rb_comparison.relative_sigma_ppt: numeric formatting drift locked='80.270878190658493267337368678784193430592323067590301203090422628023260797531080' generated='80.2708781906584932673373686787841934305923230675903012030904226280232607975310799588405783'",
+        "data/alpha_residual_closure_current_precision.json.Rb_comparison.residual_inv: numeric formatting drift locked='0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901' generated='1.513414958891346101616594635677637490015536978556268584855576779314655494829901E-9'",
+        "data/alpha_residual_closure_current_precision.json.Rb_comparison.sigma_distance: numeric formatting drift locked='0.13758317808103146378332678506160340818323063441420623498687061630133231771180918' generated='0.137583178081031463783326785061603408183230634414206234986870616301332317711809181818181818'",
+        "data/alpha_residual_closure_current_precision.json.Rb_reference.sigma_inv: numeric formatting drift locked='0.000000011' generated='1.1E-8'",
+        "data/alpha_residual_closure_current_precision.json.remaining_all_orders_obligation.residual_inv_against_Rb: numeric formatting drift locked='-0.000000001513414958891346101616594635677637490015536978556268584855576779314655494829901' generated='-1.513414958891346101616594635677637490015536978556268584855576779314655494829901E-9'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v05a_ew_scale_transport_protocol.py",
+      "data_path": "data/electroweak_scale_transport_protocol_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 06A EW transport protocol",
+      "resolved_builder": "build_protocol",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v05b_ew_running_inventory_kernel.py",
+      "data_path": "data/electroweak_running_inventory_kernel_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 06B EW running inventory kernel",
+      "resolved_builder": "build_running_kernel_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v05c_ew_running_candidate.py",
+      "data_path": "data/electroweak_running_candidate_C1.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 06C EW running candidate C1",
+      "resolved_builder": "build_candidate",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/electroweak_running_candidate_C1.json.derived_transport.alpha_PR_C1_inv_muEW: numeric formatting drift locked='128.34816971485292266682541193836959463567763749001553697855626858485557677931466' generated='128.348169714852922666825411938369594635677637490015536978556268584855576779314655494829901'",
+        "data/electroweak_running_candidate_C1.json.derived_transport.e_PR_C1_muEW: numeric formatting drift locked='0.31290326301309718394080299657511217109788182140627164648683511130599266477420220' generated='0.312903263013097183940802996575112171097881821406271646486835111305992664774202206091621389'",
+        "data/electroweak_running_candidate_C1.json.derived_transport.g_PR_C1_muEW: numeric formatting drift locked='0.65053389657269555366621864236356014205108728472986096227563003983367487964844967' generated='0.650533896572695553666218642363560142051087284729860962275630039833674879648449679147518699'",
+        "data/electroweak_running_candidate_C1.json.derived_transport.gprime_PR_C1_muEW: numeric formatting drift locked='0.35690070388535548615358602693662928453403423460144794960597323766319291848160288' generated='0.356900703885355486153586026936629284534034234601447949605973237663192918481602881464103440'",
+        "data/electroweak_running_candidate_C1.json.weak_mass_ledger_C1.GF_GeV_minus2: numeric formatting drift locked='0.000011663792201759949366003257867488874906911567673178839516230456502630714171261169' generated='0.0000116637922017599493660032578674888749069115676731788395162304565026307141712611684517740773'",
+        "data/electroweak_running_candidate_C1.json.weak_mass_ledger_C1.MW_GeV: numeric formatting drift locked='80.087096563511109803746814699902444354649798569999232287716279442425889446764759' generated='80.0870965635111098037468146999024443546497985699992322877162794424258894467647601427148403'",
+        "data/electroweak_running_candidate_C1.json.weak_mass_ledger_C1.MZ_GeV: numeric formatting drift locked='91.348172148831652601189435910712007341759134665792081831637272352752169646942106' generated='91.3481721488316526011894359107120073417591346657920818316372723527521696469421080125886933'",
+        "data/electroweak_running_candidate_C1.json.weak_mass_ledger_C1.rho_EW_C1: numeric formatting drift locked='1.0000000000000000000000000000000000000000000000000' generated='1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v05d_weak_mass_ledger_audit.py",
+      "data_path": "data/electroweak_weak_mass_ledger_audit_C1.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 06D weak mass ledger audit C1",
+      "resolved_builder": "__script_stdout__",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v05e_ew_diagnostic_comparison.py",
+      "data_path": "data/electroweak_diagnostic_comparison_C1.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 06E EW diagnostic C1",
+      "resolved_builder": "build_diagnostic_comparison",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/electroweak_diagnostic_comparison_C1.json.diagnostic_references.GF_sigma_GeV_minus2: numeric formatting drift locked='0.000000000007' generated='7E-12'",
+        "data/electroweak_diagnostic_comparison_C1.json.diagnostic_residuals.GF_relative_ppm: numeric formatting drift locked='0.36023973938535261939495889970796036139144322920789' generated='0.36023973938535261939495889970796036139144322920788944865104121526996728412759217'",
+        "data/electroweak_diagnostic_comparison_C1.json.diagnostic_residuals.GF_residual_GeV_minus2: numeric formatting drift locked='0.000000000004201759949366003257867488874906911567673178839516230456502630714171261169' generated='4.201759949366003257867488874906911567673178839516230456502630714171261169E-12'",
+        "data/electroweak_diagnostic_comparison_C1.json.diagnostic_residuals.MW_relative_ppm: numeric formatting drift locked='-3510.0938728877504846780271558949901871637571358278' generated='-3510.0938728877504846780271558949901871637571358277513311532347911153844163590156'",
+        "data/electroweak_diagnostic_comparison_C1.json.diagnostic_residuals.MZ_relative_ppm: numeric formatting drift locked='1760.8989471337396881751017760310320894412690518456' generated='1760.8989471337396881751017760310320894412690518456657663681504146635030085461839'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v05f_weak_angle_oblique_refinement.py",
+      "data_path": "data/electroweak_weak_angle_oblique_refinement_decision.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 06F weak-angle nonconstructive diagnostic audit",
+      "resolved_builder": "build_refinement_decision",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.mass_scale_diagnostics.kappa_W: numeric formatting drift locked='1.00352245803124071275891449709760215823575883707467437832591665777672316773807' generated='1.00352245803124071275891449709760215823575883707467437832591665777672316773807451522330760'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.mass_scale_diagnostics.kappa_W_squared: numeric formatting drift locked='1.00705732377306327771597165721212417052656056708974745789223810032054312695103' generated='1.00705732377306327771597165721212417052656056708974745789223810032054312695102897998589452'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.mass_scale_diagnostics.kappa_Z: numeric formatting drift locked='0.99824219636743211696008559534794545773552408043878783099060479287881717797268' generated='0.998242196367432116960085595347945457735524080438787830990604792878817177972678523505274122'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.mass_scale_diagnostics.kappa_Z_squared: numeric formatting drift locked='0.99648748260847490276533573866997093623766455250751564721761443042339415931565' generated='0.996487482608474902765335738669970936237664552507515647217614430423394159315651670798460467'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.ratio_and_rho_diagnostic.C1_ratio_MW_over_MZ: numeric formatting drift locked='0.87672358055536010545739807367012285123568404430993126003547441293364789956911' generated='0.876723580555360105457398073670122851235684044309931260035474412933647899569112871759383647'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.ratio_and_rho_diagnostic.cos_thetaW_PR: numeric formatting drift locked='0.87672358055536010545739807367012285123568404430993126003547441293364789956911' generated='0.876723580555360105457398073670122851235684044309931260035474412933647899569112864952798353'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.ratio_and_rho_diagnostic.reference_ratio_MW_over_MZ: numeric formatting drift locked='0.88136106224969184406651781601884466747671832573727129565862025099903934306858' generated='0.881361062249691844066517816018844667476718325737271295658620250999039343068575113282946366'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.ratio_and_rho_diagnostic.rho_required_with_PR_angle: numeric formatting drift locked='1.01060709878353918102676136213730083346818222916819271601829928697235312387450' generated='1.01060709878353918102676136213730083346818222916819271601829928697235312387450442321789778'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.weak_angle_only_test.delta_sin2thetaW_required_by_W: numeric formatting drift locked='-0.00162131041581843920276804164319390686512045400402288515533264080359769633278557' generated='-0.001621310415818439202768041643193906865120454004022885155332640803597696332785572955780631'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.weak_angle_only_test.delta_sin2thetaW_required_by_Z: numeric formatting drift locked='0.00116920568326073253908904626072714161339130633509181188042201963272533271616787' generated='0.001169205683260732539089046260727141613391306335091811880422019632725332716167871931427430'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.weak_angle_only_test.required_shift_spread: numeric formatting drift locked='0.00279051609907917174185708790392104847851176033911469703575466043632302904895344' generated='0.002790516099079171741857087903921048478511760339114697035754660436323029048953444887208061'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.weak_angle_only_test.sin2thetaW_required_by_W: numeric formatting drift locked='0.22973445288237056079723195835680609313487954599597711484466735919640230366721443' generated='0.229734452882370560797231958356806093134879545995977114844667359196402303667214427044219369'",
+        "data/electroweak_weak_angle_oblique_refinement_decision.json.weak_angle_only_test.sin2thetaW_required_by_Z: numeric formatting drift locked='0.23252496898144973253908904626072714161339130633509181188042201963272533271616787' generated='0.232524968981449732539089046260727141613391306335091811880422019632725332716167871931427430'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v05g_vector_self_energy_candidate.py",
+      "data_path": "data/electroweak_vector_self_energy_candidate_C2.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 06G vector self-energy C2",
+      "resolved_builder": "build_c2_candidate",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/electroweak_vector_self_energy_candidate_C2.json.corrected_weak_ledger_C2.MW_C2_PR_GeV: numeric formatting drift locked='80.373942851862121269660365960912048165641419593354239705150762943078449202475090' generated='80.3739428518621212696603659609120481656414195933542359052334998849159876182619993618672508'",
+        "data/electroweak_vector_self_energy_candidate_C2.json.corrected_weak_ledger_C2.MZ_C2_PR_GeV: numeric formatting drift locked='91.184141990108601240778101830153652821743992019019918862617911980779475157804027' generated='91.1841419901086012407781018301536528217439920190199210414046728215013403638657747505992281'",
+        "data/electroweak_vector_self_energy_candidate_C2.json.corrected_weak_ledger_C2.rho_EW_C2_PR: numeric formatting drift locked='1.0108030425798909620173728568422867860962050389896724125958210974779774276828044' generated='1.01080304257989096201737285684228678609620503898967226871339449343908987626011095822941301'",
+        "data/electroweak_vector_self_energy_candidate_C2.json.derived_vector_self_energy.Pi_W_PR: numeric formatting drift locked='0.0071761868359439893733287076445639690821946487788653056423301194572159567126904707' generated='0.00717618683594398937332870764456396908219464877886521040782889925665277798680431858951930927'",
+        "data/electroweak_vector_self_energy_candidate_C2.json.derived_vector_self_energy.Pi_Z_PR: numeric formatting drift locked='-0.0035880934179719946866643538222819845410973243894326528211650597286079783563452353' generated='-0.00358809341797199468666435382228198454109732438943260520391444962832638899340215929475965463'",
+        "data/electroweak_vector_self_energy_candidate_C2.json.derived_vector_self_energy.epsilon_V_PR: numeric formatting drift locked='0.010764280253915984059993061466845953623291973168297958463495179185823935069035706' generated='0.0107642802539159840599930614668459536232919731682978156117433488849791669802064778842789639'",
+        "data/electroweak_vector_self_energy_candidate_C2.json.frozen_inputs.Delta_EW_HR: numeric formatting drift locked='0.018644280306692899718928776428403028768291215822597' generated='0.0186442803066928997189287764284030287682912158225967525735078796985768097740416609302866393'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v05h_c2_diagnostic_comparison.py",
+      "data_path": "data/electroweak_diagnostic_comparison_C2.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 06H EW diagnostic C2",
+      "resolved_builder": "build_c2_diagnostic",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.GF_relative_ppm: numeric formatting drift locked='0.36023973938535261939495889970796036139144322920788944865104121526996728412759217' generated='0.360239739385352619394958899707960361391443229207889448651041215269967284127592168170409133'",
+        "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.GF_residual_GeV_minus2: numeric formatting drift locked='0.000000000004201759949366003257867488874906911567673178839516230456502630714171261169' generated='4.201759949366003257867488874906911567673178839516230456502630714171261169E-12'",
+        "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.GF_sigma_distance: numeric formatting drift locked='0.60025142133800046540964126784384450966759697707374720807180438773875159557142857' generated='0.600251421338000465409641267843844509667596977073747208071804387738751595571428571428571429'",
+        "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.MW_relative_ppm: numeric formatting drift locked='59.013301888301359978274773321722322001707038943273108986563796559492970878022924' generated='59.0133018883013599782747733217223220017070389432731089865637965594929708780229242047948717'",
+        "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.MW_sigma_distance: numeric formatting drift locked='0.35660540316701275641849330165775681514433032738644399629796564499618063722481203' generated='0.356605403167012756418493301657756815144330327386443996297965644996180637224812030075187970'",
+        "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.MZ_relative_ppm: numeric formatting drift locked='-37.921931177032394995571435659532417302440035488170950678469651800517199662815997' generated='-37.9219311770323949955714356595324173024400354881709506784696518005171996628159969118608232'",
+        "data/electroweak_diagnostic_comparison_C2.json.diagnostic_residuals.MZ_sigma_distance: numeric formatting drift locked='-1.6466713768565520104276999268319896457180861809910178009942948669165915218919048' generated='-1.64667137685655201042769992683198964571808618099101780099429486691659152189190476190476190'",
+        "data/electroweak_diagnostic_comparison_C2.json.improvement_vs_C1.MW_residual_reduction_factor: numeric formatting drift locked='59.479706448752059389848614000566571638399836153394703061066044526976169771970469' generated='59.4797064487520593898486140005665716383998361533947030610660445269761697719704685336601814'",
+        "data/electroweak_diagnostic_comparison_C2.json.improvement_vs_C1.MZ_residual_reduction_factor: numeric formatting drift locked='46.434843703324814765642605280772434983183838530356106502718255089035621731753013' generated='46.4348437033248147656426052807724349831838385303561065027182550890356217317530126999003806'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v05i_final_ew_precision_audit.py",
+      "data_path": "data/electroweak_final_precision_audit.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 06I final EW precision audit",
+      "resolved_builder": "build_final_ew_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/electroweak_final_precision_audit.json.remaining_obligation.neutral_channel_residual_MeV: numeric formatting drift locked='-3.458009891398759221898169846347178256007980980081137382088019220524842195973' generated='-3.458009891398759221898169846347178256007980980081137382088019220524842195973000'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v05j_neutral_D3_refinement.py",
+      "data_path": "data/electroweak_neutral_D3_candidate_C3.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 06J electroweak C3 neutral D3 refinement",
+      "resolved_builder": "build_c3_refinement",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/electroweak_neutral_D3_candidate_C3.json.corrected_weak_ledger_C3.MZ_C3_PR_GeV: numeric formatting drift locked='91.187676431043922257304294605837072137923832857909555944715358374802790284187517' generated='91.18767643104392225730429460583707213792383285790955594471535837480279028418751659999492961738910383'",
+        "data/electroweak_neutral_D3_candidate_C3.json.corrected_weak_ledger_C3.rho_EW_C3_PR: numeric formatting drift locked='1.0107246865003527938615173245462022783718104045444463940244298353143956157334031' generated='1.010724686500352793861517324546202278371810404544446394024429835314395615733403131853716702076335154'",
+        "data/electroweak_neutral_D3_candidate_C3.json.derived_D3.D3_Z_PR: numeric formatting drift locked='0.000077246486256563708178620789684887731992515631593295222609738920229853284715449679465849522' generated='0.00007724648625656370817862078968488773199251563159329522260973892022985328471544968819867816885226866795'",
+        "data/electroweak_neutral_D3_candidate_C3.json.derived_D3.Pi_Z_C3_PR: numeric formatting drift locked='-0.0035108469317154309784857330325970968091048087578393575985553208083781250716297856' generated='-0.003510846931715430978485733032597096809104808757839357598555320808378125071629785611801321831147731332'",
+        "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.GF_residual_GeV_minus2: numeric formatting drift locked='0.000000000004201759949366003257867488874906911567673178839516230456502630714171261169' generated='4.201759949366003257867488874906911567673178839516230456502630714171261169E-12'",
+        "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.GF_sigma_GeV_minus2: numeric formatting drift locked='0.000000000007' generated='7E-12'",
+        "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.GF_sigma_distance: numeric formatting drift locked='0.60025142133800046540964126784384450966759697707374720807180438773875159557142857' generated='0.6002514213380004654096412678438445096675969770737472080718043877387515955714285714285714285714285714'",
+        "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.MW_sigma_distance: numeric formatting drift locked='0.35660540316701275641849330165775681514433032738644399629796564499618063722481203' generated='0.3566054031670127564184933016577568151443303273864439962979656449961806372248120300751879699248120301'",
+        "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.MZ_residual_GeV: numeric formatting drift locked='0.000076431043922257304294605837072137923832857909555944715358374802790284187517' generated='0.00007643104392225730429460583707213792383285790955594471535837480279028418751659999492961738910383'",
+        "data/electroweak_neutral_D3_candidate_C3.json.diagnostic_comparison.MZ_sigma_distance: numeric formatting drift locked='0.036395735201074906806955160510541868491837099788545102551607048947754375007904569' generated='0.03639573520107490680695516051054186849183709978854510255160704894775437500790475949029399481134761905'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v06a_neutrino_branch_lock.py",
+      "data_path": "data/neutrino_branch_radiative_stability_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 07A neutrino branch lock",
+      "resolved_builder": "build_neutrino_branch_lock",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/neutrino_branch_radiative_stability_seed.json.pr2_tree_branch.m_beta_beta_meV: numeric formatting drift locked='1.507694477' generated='1.507694477000'",
+        "data/neutrino_branch_radiative_stability_seed.json.pr2_tree_branch.masses_eV.sum: numeric formatting drift locked='0.05873383668' generated='0.058733836680'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v06b_neutrino_radiative_kernel.py",
+      "data_path": "data/neutrino_radiative_kernel_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 07B neutrino radiative kernel",
+      "resolved_builder": "build_kernel_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/neutrino_radiative_kernel_seed.json.frozen_branch.m_beta_beta_meV: numeric formatting drift locked='1.507694477' generated='1.507694477000'",
+        "data/neutrino_radiative_kernel_seed.json.seed_stability_envelope.Delta_m2_seed_eV: numeric formatting drift locked='0.00000099964094769517587082801977612182277596469533340638265590275267055213780702743765' generated='9.9964094769517587082801977612182277596469533340638265590275267055213780702743765E-7'",
+        "data/neutrino_radiative_kernel_seed.json.seed_stability_envelope.Delta_m_beta_beta_seed_eV: numeric formatting drift locked='0.00000017469615104501626172931944112792570583525803463406687603878334466374005182868801' generated='1.7469615104501626172931944112792570583525803463406687603878334466374005182868801E-7'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v06c_mbb_stability.py",
+      "data_path": "data/neutrino_mbb_stability_envelope.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 07C m beta beta stability",
+      "resolved_builder": "build_mbb_stability",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/neutrino_mbb_stability_envelope.json.frozen_inputs.m_beta_beta_meV: numeric formatting drift locked='1.507694477' generated='1.507694477000'",
+        "data/neutrino_mbb_stability_envelope.json.frozen_inputs.m_sum_eV: numeric formatting drift locked='0.05873383668' generated='0.058733836680'",
+        "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.Delta_m_beta_beta_env_eV: numeric formatting drift locked='0.0000001746961510450162617293194411279257058352580346340668760387833446637400518286879974531224508324814684' generated='1.7469615104501626172931944112792570583525803463406687603878334466374005182868801373807081E-7'",
+        "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.Delta_m_beta_beta_env_meV: numeric formatting drift locked='0.0001746961510450162617293194411279257058352580346340668760387833446637400518286879974531224508324814684' generated='0.00017469615104501626172931944112792570583525803463406687603878334466374005182868801373807081000'",
+        "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.lower_eV: numeric formatting drift locked='0.001507519780848954983738270680558872074294164741965365933123961216655336259948171312002546877549167519' generated='0.00150751978084895498373827068055887207429416474196536593312396121665533625994817131198626192919'",
+        "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.lower_meV: numeric formatting drift locked='1.507519780848954983738270680558872074294164741965365933123961216655336259948171312002546877549167519' generated='1.50751978084895498373827068055887207429416474196536593312396121665533625994817131198626192919000'",
+        "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.relative_ppm: numeric formatting drift locked='115.8697293848455622679311845273315979887734473899428339146083803447799270731745191987742824586081364' generated='115.86972938484556226793118452733159798877344738994283391460838034477992707317453000000'",
+        "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.upper_eV: numeric formatting drift locked='0.001507869173151045016261729319441127925705835258034634066876038783344663740051828687997453122450832481' generated='0.00150786917315104501626172931944112792570583525803463406687603878334466374005182868801373807081'",
+        "data/neutrino_mbb_stability_envelope.json.m_beta_beta_envelope.upper_meV: numeric formatting drift locked='1.507869173151045016261729319441127925705835258034634066876038783344663740051828687997453122450832481' generated='1.50786917315104501626172931944112792570583525803463406687603878334466374005182868801373807081000'",
+        "data/neutrino_mbb_stability_envelope.json.mass_branch_envelope.Delta_m1_env_eV: numeric formatting drift locked='0' generated='0E-83'",
+        "data/neutrino_mbb_stability_envelope.json.mass_branch_envelope.Delta_m2_env_eV: numeric formatting drift locked='0.0000009996409476951758708280197761218227759646953334063826559027526705521378070274375562485041798800910034' generated='9.9964094769517587082801977612182277596469533340638265590275267055213780702743764943373530E-7'",
+        "data/neutrino_mbb_stability_envelope.json.mass_branch_envelope.Delta_m3_env_eV: numeric formatting drift locked='0.000005805832814150140250439420817385414296511340799115092025774221006777488520230705063509828982227988140' generated='0.0000058058328141501402504394208173854142965113407991150920257742210067774885202307056047220251'",
+        "data/neutrino_mbb_stability_envelope.json.mass_branch_envelope.m_sum_lower_eV: numeric formatting drift locked='0.05872703120623815468387873255940649276292752396386747852531832302632267037367274185738024166683789192' generated='0.05872703120623815468387873255940649276292752396386747852531832302632267037367274185674584423960'",
+        "data/neutrino_mbb_stability_envelope.json.mass_branch_envelope.m_sum_upper_eV: numeric formatting drift locked='0.05874064215376184531612126744059350723707247603613252147468167697367732962632725814261975833316210807' generated='0.05874064215376184531612126744059350723707247603613252147468167697367732962632725814325415576040'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v06d_ordering_pmns_stability.py",
+      "data_path": "data/neutrino_ordering_pmns_stability_audit.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 07D ordering PMNS stability",
+      "resolved_builder": "build_ordering_pmns_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_branch.Delta_m2_env_eV: numeric formatting drift locked='0.0000009996409476951758708280197761218227759646953334063826559027526705521378070274375562485041798800910034' generated='9.996409476951758708280197761218227759646953334063826559027526705521378070274375562485041798800910034E-7'",
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_branch.m2_interval_eV[0]: numeric formatting drift locked='0.00862628336905230482412917198022387817722403530466659361734409724732944786219297256235056626470' generated='0.008626283369052304824129171980223878177224035304666593617344097247329447862192972562443751495820119909'",
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_branch.m2_interval_eV[1]: numeric formatting drift locked='0.00862828265094769517587082801977612182277596469533340638265590275267055213780702743764943373530' generated='0.008628282650947695175870828019776121822775964695333406382655902752670552137807027437556248504179880091'",
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_branch.m3_interval_eV[0]: numeric formatting drift locked='0.0501007478371858498597495605791826145857034886592008849079742257789932225114797692943952779749' generated='0.05010074783718584985974956057918261458570348865920088490797422577899322251147976929493649017101777201'",
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_branch.m3_interval_eV[1]: numeric formatting drift locked='0.0501123595028141501402504394208173854142965113407991150920257742210067774885202307056047220251' generated='0.05011235950281415014025043942081738541429651134079911509202577422100677748852023070506350982898222799'",
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m21_squared_interval_eV2[0]: numeric formatting drift locked='0.00007441276476318838263001062811611925804513882892921781514762637771160733505814697237439327655772404702' generated='0.00007441276476318838263001062811611925804513882892921781514762637771160733505814697237600096097662961831'",
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m21_squared_interval_eV2[1]: numeric formatting drift locked='0.00007444726150464498618780805423470517726644007393885670782967769168891488140143395826014045256042215603' generated='0.00007444726150464498618780805423470517726644007393885670782967769168891488140143395825853239553442559229'",
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m31_squared_interval_eV2[0]: numeric formatting drift locked='0.002510084933845282612486743641268736621202845356705498779599813291773265895975145922558081743915705740' generated='0.002510084933845282612486743641268736621202845356705498779599813291773265895975145922612312015443917880'",
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m31_squared_interval_eV2[1]: numeric formatting drift locked='0.002511248574939287657038330321589816771324938679871556863788199071885980046624292917482741639740122689' generated='0.002511248574939287657038330321589816771324938679871556863788199071885980046624292917428498799461799993'",
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m32_squared_interval_eV2[0]: numeric formatting drift locked='0.002435637672340637626298935587034031443936405282766642071770135600084351014573711964297941291355283584' generated='0.002435637672340637626298935587034031443936405282766642071770135600084351014573711964353779619909492288'",
+        "data/neutrino_ordering_pmns_stability_audit.json.mass_squared_branch.Delta_m32_squared_interval_eV2[1]: numeric formatting drift locked='0.002436835810176099274408319693473697513279799850942339048640572694174372711566145945108348363182398642' generated='0.002436835810176099274408319693473697513279799850942339048640572694174372711566145945052497838485170375'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v06e_neutrino_diagnostic_comparison.py",
+      "data_path": "data/neutrino_diagnostic_comparison.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 07E neutrino diagnostic comparison",
+      "resolved_builder": "build_diagnostic",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/neutrino_diagnostic_comparison.json.diagnostic_residuals.Delta_m21_squared_residual_eV2: numeric formatting drift locked='-0.000000469987865365339900' generated='-4.69987865365339900E-7'",
+        "data/neutrino_diagnostic_comparison.json.diagnostic_residuals.sum_fraction_of_0p12_bound: numeric formatting drift locked='0.4894486390' generated='0.489448639'",
+        "data/neutrino_diagnostic_comparison.json.diagnostic_residuals.sum_margin_to_0p12_eV: numeric formatting drift locked='0.061266163320' generated='0.06126616332'",
+        "data/neutrino_diagnostic_comparison.json.generated_PR_values.sum_m_eV: numeric formatting drift locked='0.058733836680' generated='0.05873383668'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v06f_final_neutrino_closure.py",
+      "data_path": "data/neutrino_final_closure_audit.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 07F final neutrino closure",
+      "resolved_builder": "build_final_neutrino_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v07a_strong_phase_fiber_lock.py",
+      "data_path": "data/strong_phase_fiber_closure_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 08A strong fiber lock",
+      "resolved_builder": "build_strong_branch_lock",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v07b_strong_spectral_running_kernel.py",
+      "data_path": "data/strong_spectral_running_kernel_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 08B strong spectral running kernel",
+      "resolved_builder": "build_strong_kernel_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v07c_one_loop_color_audit.py",
+      "data_path": "data/strong_one_loop_color_audit.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 08C one-loop color audit",
+      "resolved_builder": "build_one_loop_color_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/strong_one_loop_color_audit.json.sign_table[0].beta_prefactor_for_K3_equals_1: numeric formatting drift locked='-0.024319620845385650599026232780179517761298958159156' generated='-0.024319620845385650599026232780179517761298958159155739943198749469226091456256985'",
+        "data/strong_one_loop_color_audit.json.sign_table[1].beta_prefactor_for_K3_equals_1: numeric formatting drift locked='-0.022845704430513792986964036854108031836371748573752' generated='-0.022845704430513792986964036854108031836371748573752361764823067683212388943756561'",
+        "data/strong_one_loop_color_audit.json.sign_table[2].beta_prefactor_for_K3_equals_1: numeric formatting drift locked='-0.021371788015641935374901840928036545911444538988349' generated='-0.021371788015641935374901840928036545911444538988348983586447385897198686431256138'",
+        "data/strong_one_loop_color_audit.json.sign_table[3].beta_prefactor_for_K3_equals_1: numeric formatting drift locked='-0.019897871600770077762839645001965059986517329402946' generated='-0.019897871600770077762839645001965059986517329402945605408071704111184983918755715'",
+        "data/strong_one_loop_color_audit.json.sign_table[4].beta_prefactor_for_K3_equals_1: numeric formatting drift locked='-0.018423955185898220150777449075893574061590119817542' generated='-0.018423955185898220150777449075893574061590119817542227229696022325171281406255292'",
+        "data/strong_one_loop_color_audit.json.sign_table[5].beta_prefactor_for_K3_equals_1: numeric formatting drift locked='-0.016950038771026362538715253149822088136662910232139' generated='-0.016950038771026362538715253149822088136662910232138849051320340539157578893754868'",
+        "data/strong_one_loop_color_audit.json.sign_table[6].beta_prefactor_for_K3_equals_1: numeric formatting drift locked='-0.015476122356154504926653057223750602211735700646736' generated='-0.015476122356154504926653057223750602211735700646735470872944658753143876381254445'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v07d_threshold_active_flavor_audit.py",
+      "data_path": "data/strong_threshold_active_flavor_audit.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 08D strong threshold active flavor audit",
+      "resolved_builder": "build_threshold_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v07e_strong_diagnostic_comparison.py",
+      "data_path": "data/strong_diagnostic_comparison.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 08E strong diagnostic comparison",
+      "resolved_builder": "build_strong_diagnostic",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/strong_diagnostic_comparison.json.diagnostic_reference.alpha_s_diag_inverse: numeric formatting drift locked='8.4817642069550466497031382527565733672603901611535' generated='8.4817642069550466497031382527565733672603901611535199321458863443596268023748940'",
+        "data/strong_diagnostic_comparison.json.diagnostic_residuals.alpha3_ratio_to_reference: numeric formatting drift locked='0.99967351542960135708227311280746395250212044105174' generated='0.99967351542960135708227311280746395250212044105173876166242578456318914334181510'",
+        "data/strong_diagnostic_comparison.json.diagnostic_residuals.alpha3_relative_fraction: numeric formatting drift locked='-0.00032648457039864291772688719253604749787955894826124' generated='-0.00032648457039864291772688719253604749787955894826123833757421543681085665818490246'",
+        "data/strong_diagnostic_comparison.json.diagnostic_residuals.alpha3_relative_percent: numeric formatting drift locked='-0.032648457039864291772688719253604749787955894826124' generated='-0.032648457039864291772688719253604749787955894826123833757421543681085665818490246'",
+        "data/strong_diagnostic_comparison.json.diagnostic_residuals.alpha3_relative_ppm: numeric formatting drift locked='-326.48457039864291772688719253604749787955894826124' generated='-326.48457039864291772688719253604749787955894826123833757421543681085665818490246'",
+        "data/strong_diagnostic_comparison.json.diagnostic_residuals.inverse_alpha3_residual: numeric formatting drift locked='0.0027700695282902228505319310248509893698433474587' generated='0.0027700695282902228505319310248509893698433474586340719142174263753114159163734'",
+        "data/strong_diagnostic_comparison.json.generated_PR_values.alpha3_PR_inverse: numeric formatting drift locked='8.4845342764833368725536701837814243566302335086122' generated='8.4845342764833368725536701837814243566302335086121540040601037707349382182912674'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v07f_final_strong_closure.py",
+      "data_path": "data/strong_final_closure_audit.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 08F final strong closure",
+      "resolved_builder": "build_final_strong_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v08a_global_ledger_lock.py",
+      "data_path": "data/global_running_anomaly_ledger_seed.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 09A global ledger lock",
+      "resolved_builder": "build_global_ledger",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v08b_anomaly_registry_audit.py",
+      "data_path": "data/global_anomaly_registry_audit.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 09B anomaly registry audit",
+      "resolved_builder": "build_anomaly_registry",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": false,
+      "canonical_json_equal_after_root_normalization": false,
+      "code_path": "code/pr3_v08c_running_continuity_audit.py",
+      "data_path": "data/global_running_continuity_audit.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 09C running continuity audit",
+      "resolved_builder": "build_running_continuity_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": [
+        "data/global_running_continuity_audit.json.continuity_tests.ew_to_neutrino_stability.m_beta_beta_meV: numeric formatting drift locked='1.507694477' generated='1.507694477000'"
+      ]
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v08d_no_fit_provenance_manifest.py",
+      "data_path": "data/global_no_fit_provenance_manifest.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 09D no-fit provenance manifest",
+      "resolved_builder": "build_manifest",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v08e_cross_sector_diagnostic_table.py",
+      "data_path": "data/global_cross_sector_diagnostic_table.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 09E cross-sector diagnostic table",
+      "resolved_builder": "build_table",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    },
+    {
+      "byte_exact_release_equal": false,
+      "canonical_json_equal": true,
+      "canonical_json_equal_after_root_normalization": true,
+      "code_path": "code/pr3_v08f_final_priii_consistency_statement.py",
+      "data_path": "data/global_final_priii_consistency_statement.json",
+      "failure_class": null,
+      "failures": [],
+      "name": "Step 09F final PRIII consistency statement",
+      "resolved_builder": "build_final_consistency",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "schema_numeric_equal": true,
+      "status": "PASS",
+      "warnings": []
+    }
+  ],
+  "status": "PASS"
+}

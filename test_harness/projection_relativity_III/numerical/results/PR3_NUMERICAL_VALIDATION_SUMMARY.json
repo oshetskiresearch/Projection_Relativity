@@ -1,0 +1,54 @@
+{
+  "checks_failed": 0,
+  "checks_passed": 17,
+  "checks_total": 17,
+  "claim_boundary": {
+    "tier_a_manifest_and_targeted_regeneration": "CLAIMED_WHEN_PASSING",
+    "tier_b_schema_numeric_reproducibility": "CLAIMED_WHEN_41_OF_41_PASS",
+    "tier_c_canonical_release_byte_identity": "CLAIMED_WHEN_41_OF_41_PASS",
+    "tier_d_raw_checked_in_file_order_byte_identity": "NOT_CLAIMED",
+    "tier_d_raw_generator_stdout_byte_identity": "NOT_CLAIMED"
+  },
+  "output_directory": "results",
+  "package": "public numerical reproducibility tester",
+  "project": "Projection Relativity III",
+  "source_repository": "oshetskiresearch/Projection-Relativity_III_Sandbox",
+  "source_scope": {
+    "counts": {
+      "audit_python_files": 6,
+      "data_json_files": 44,
+      "generator_python_files": 41,
+      "schema_json_files": 6
+    },
+    "forbidden_paths": [],
+    "forbidden_references": [],
+    "regeneration_pairs": 41,
+    "source_payload_files": 103
+  },
+  "source_snapshot_commit": "fbb61f3771db2674c2b551a2d767c923cd5f0a1f",
+  "status": "PASS",
+  "tiers": {
+    "tier_a": {
+      "returncode": 0,
+      "status": "PASS"
+    },
+    "tier_b": {
+      "numeric_failure_event_count": 0,
+      "pairs_checked": 41,
+      "pairs_failed": 0,
+      "pairs_passed": 41,
+      "status": "PASS"
+    },
+    "tier_c": {
+      "canonical_release_byte_matches": 41,
+      "numeric_display_locked": 151,
+      "numeric_tolerance_relaxed": false,
+      "pairs_checked": 41,
+      "pairs_failed": 0,
+      "pairs_passed": 41,
+      "raw_checked_in_file_order_byte_exact_claimed": false,
+      "raw_generator_stdout_byte_exact_claimed": false,
+      "status": "PASS"
+    }
+  }
+}

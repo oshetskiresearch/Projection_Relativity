@@ -1,0 +1,895 @@
+{
+  "audit": "canonical_release_byte_exact_regeneration_audit",
+  "canonical_release_byte_exact_claimed": true,
+  "canonical_release_byte_matches": 41,
+  "event_counts": {
+    "numeric_display_locked": 151
+  },
+  "mechanical_root_wrapper_normalization": {
+    "added_from_locked_key_counts": {
+      "dataset": 13,
+      "input_policy": 13
+    },
+    "pairs": [
+      "Step 04 radiative determinant seed",
+      "Step 05C PR spectral kernel",
+      "Step 05D minimal alpha candidate",
+      "Step 05F mode-resolved D2",
+      "Step 06C EW running candidate C1",
+      "Step 06E EW diagnostic C1",
+      "Step 06G vector self-energy C2",
+      "Step 06H EW diagnostic C2",
+      "Step 07D ordering PMNS stability",
+      "Step 07E neutrino diagnostic comparison",
+      "Step 08C one-loop color audit",
+      "Step 08D strong threshold active flavor audit",
+      "Step 08E strong diagnostic comparison"
+    ],
+    "pairs_normalized": 13,
+    "removed_from_generated_key_counts": {
+      "module": 13
+    }
+  },
+  "numeric_tolerance_relaxed": false,
+  "pairs_checked": 41,
+  "pairs_failed": 0,
+  "pairs_passed": 41,
+  "policy": {
+    "audit_entrypoint": "scripts/pr3_release_byte_exact_audit.py",
+    "canonical_json": {
+      "ensure_ascii": false,
+      "indent": 2,
+      "sort_keys": true,
+      "terminal_newline": true
+    },
+    "claim_boundaries": {
+      "canonical_release_byte_identity_claimed_when_audit_passes": true,
+      "numeric_tolerance_relaxed": false,
+      "physics_values_modified_by_release_policy": false,
+      "raw_checked_in_file_order_identity_claimed": false,
+      "raw_generator_stdout_byte_identity_claimed": false,
+      "schema_numeric_reproducibility_required_first": true
+    },
+    "normalization_policy": {
+      "numeric_display_lock": {
+        "does_not_apply_when_numeric_drift_exceeds_policy": true,
+        "does_not_relax_numeric_tolerance": true,
+        "rule": "when locked and generated leaves parse as finite Decimals and are equal under configured abs/rel tolerance, emit the locked artifact display string into the release artifact",
+        "scope": "numeric JSON leaves only"
+      },
+      "root_metadata_wrapper": {
+        "allowed_only_when_schema_numeric_audit_passes": true,
+        "copy_from_locked_when_generated_lacks": [
+          "dataset",
+          "input_policy"
+        ],
+        "remove_from_generated_when_locked_lacks": [
+          "module"
+        ],
+        "scope": "artifact_root_only"
+      },
+      "text_metadata": {
+        "does_not_use_display_lock": true,
+        "rule": "nonnumeric text must match exactly before release bytes are emitted"
+      }
+    },
+    "pair_manifest": "schemas/pr3_full_regeneration_pairs.json",
+    "project": "Projection Relativity III",
+    "release_tier": "canonical_release_bytes",
+    "schema": "PR-III release byte-exact regeneration policy",
+    "status": "PRIII_RELEASE_BYTE_EXACT_POLICY_LOCKED_PASS_016"
+  },
+  "project": "Projection Relativity III",
+  "raw_checked_in_byte_matches": 0,
+  "raw_checked_in_file_order_byte_exact_claimed": false,
+  "raw_generator_stdout_byte_exact_claimed": false,
+  "release_tree_written": null,
+  "results": [
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v00_inheritance_ledger.py",
+      "data_path": "data/inheritance_ledger.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 01 inheritance ledger",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_inheritance_ledger",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v00b_alpha_baseline_policy.py",
+      "data_path": "data/alpha_baseline_policy.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 01B alpha baseline policy",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_alpha_baseline_policy",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v01_scalar_hessian.py",
+      "data_path": "data/scalar_hessian_seed.json",
+      "events": {
+        "numeric_display_locked": 13
+      },
+      "failures": [],
+      "name": "Step 02 scalar Hessian seed",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_scalar_hessian_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v02_gauge_null_removal.py",
+      "data_path": "data/gauge_null_quotient_seed.json",
+      "events": {
+        "numeric_display_locked": 8
+      },
+      "failures": [],
+      "name": "Step 03 gauge-null quotient seed",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "__script_stdout__",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v03_radiative_determinant.py",
+      "data_path": "data/radiative_determinant_seed.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 04 radiative determinant seed",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_radiative_determinant_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v04a_alpha_radiative_protocol.py",
+      "data_path": "data/alpha_radiative_extraction_protocol_seed.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 05A alpha extraction protocol",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_protocol_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v04b_charged_mode_inventory.py",
+      "data_path": "data/charged_mode_supertrace_inventory.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 05B charged mode inventory",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_charged_inventory",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v04c_pr_spectral_kernel.py",
+      "data_path": "data/pr_spectral_kernel_seed.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 05C PR spectral kernel",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_kernel_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v04d_alpha_rad_candidate.py",
+      "data_path": "data/alpha_radiative_candidate_minimal_boundary.json",
+      "events": {
+        "numeric_display_locked": 7
+      },
+      "failures": [],
+      "name": "Step 05D minimal alpha candidate",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_minimal_candidate",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v04e_no_fit_diagnostic.py",
+      "data_path": "data/alpha_no_fit_diagnostic_refinement.json",
+      "events": {
+        "numeric_display_locked": 1
+      },
+      "failures": [],
+      "name": "Step 05E no-fit diagnostic refinement",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "__script_stdout__",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v04f_mode_resolved_D2.py",
+      "data_path": "data/alpha_radiative_candidate_D1_D2.json",
+      "events": {
+        "numeric_display_locked": 9
+      },
+      "failures": [],
+      "name": "Step 05F mode-resolved D2",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_d2_refinement",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v04g_final_no_fit_precision.py",
+      "data_path": "data/alpha_final_no_fit_precision_audit.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 05G final alpha precision audit",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_final_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v04h_residual_closure_bound.py",
+      "data_path": "data/alpha_residual_closure_current_precision.json",
+      "events": {
+        "numeric_display_locked": 11
+      },
+      "failures": [],
+      "name": "Step 05H residual closure bound",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_residual_closure",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v05a_ew_scale_transport_protocol.py",
+      "data_path": "data/electroweak_scale_transport_protocol_seed.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 06A EW transport protocol",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_protocol",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v05b_ew_running_inventory_kernel.py",
+      "data_path": "data/electroweak_running_inventory_kernel_seed.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 06B EW running inventory kernel",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_running_kernel_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v05c_ew_running_candidate.py",
+      "data_path": "data/electroweak_running_candidate_C1.json",
+      "events": {
+        "numeric_display_locked": 8
+      },
+      "failures": [],
+      "name": "Step 06C EW running candidate C1",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_candidate",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v05d_weak_mass_ledger_audit.py",
+      "data_path": "data/electroweak_weak_mass_ledger_audit_C1.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 06D weak mass ledger audit C1",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "__script_stdout__",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v05e_ew_diagnostic_comparison.py",
+      "data_path": "data/electroweak_diagnostic_comparison_C1.json",
+      "events": {
+        "numeric_display_locked": 5
+      },
+      "failures": [],
+      "name": "Step 06E EW diagnostic C1",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_diagnostic_comparison",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v05f_weak_angle_oblique_refinement.py",
+      "data_path": "data/electroweak_weak_angle_oblique_refinement_decision.json",
+      "events": {
+        "numeric_display_locked": 13
+      },
+      "failures": [],
+      "name": "Step 06F weak-angle nonconstructive diagnostic audit",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_refinement_decision",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v05g_vector_self_energy_candidate.py",
+      "data_path": "data/electroweak_vector_self_energy_candidate_C2.json",
+      "events": {
+        "numeric_display_locked": 7
+      },
+      "failures": [],
+      "name": "Step 06G vector self-energy C2",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_c2_candidate",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v05h_c2_diagnostic_comparison.py",
+      "data_path": "data/electroweak_diagnostic_comparison_C2.json",
+      "events": {
+        "numeric_display_locked": 9
+      },
+      "failures": [],
+      "name": "Step 06H EW diagnostic C2",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_c2_diagnostic",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v05i_final_ew_precision_audit.py",
+      "data_path": "data/electroweak_final_precision_audit.json",
+      "events": {
+        "numeric_display_locked": 1
+      },
+      "failures": [],
+      "name": "Step 06I final EW precision audit",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_final_ew_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v05j_neutral_D3_refinement.py",
+      "data_path": "data/electroweak_neutral_D3_candidate_C3.json",
+      "events": {
+        "numeric_display_locked": 10
+      },
+      "failures": [],
+      "name": "Step 06J electroweak C3 neutral D3 refinement",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_c3_refinement",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v06a_neutrino_branch_lock.py",
+      "data_path": "data/neutrino_branch_radiative_stability_seed.json",
+      "events": {
+        "numeric_display_locked": 2
+      },
+      "failures": [],
+      "name": "Step 07A neutrino branch lock",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_neutrino_branch_lock",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v06b_neutrino_radiative_kernel.py",
+      "data_path": "data/neutrino_radiative_kernel_seed.json",
+      "events": {
+        "numeric_display_locked": 3
+      },
+      "failures": [],
+      "name": "Step 07B neutrino radiative kernel",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_kernel_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v06c_mbb_stability.py",
+      "data_path": "data/neutrino_mbb_stability_envelope.json",
+      "events": {
+        "numeric_display_locked": 14
+      },
+      "failures": [],
+      "name": "Step 07C m beta beta stability",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_mbb_stability",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v06d_ordering_pmns_stability.py",
+      "data_path": "data/neutrino_ordering_pmns_stability_audit.json",
+      "events": {
+        "numeric_display_locked": 11
+      },
+      "failures": [],
+      "name": "Step 07D ordering PMNS stability",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_ordering_pmns_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v06e_neutrino_diagnostic_comparison.py",
+      "data_path": "data/neutrino_diagnostic_comparison.json",
+      "events": {
+        "numeric_display_locked": 4
+      },
+      "failures": [],
+      "name": "Step 07E neutrino diagnostic comparison",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_diagnostic",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v06f_final_neutrino_closure.py",
+      "data_path": "data/neutrino_final_closure_audit.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 07F final neutrino closure",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_final_neutrino_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v07a_strong_phase_fiber_lock.py",
+      "data_path": "data/strong_phase_fiber_closure_seed.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 08A strong fiber lock",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_strong_branch_lock",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v07b_strong_spectral_running_kernel.py",
+      "data_path": "data/strong_spectral_running_kernel_seed.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 08B strong spectral running kernel",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_strong_kernel_seed",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v07c_one_loop_color_audit.py",
+      "data_path": "data/strong_one_loop_color_audit.json",
+      "events": {
+        "numeric_display_locked": 7
+      },
+      "failures": [],
+      "name": "Step 08C one-loop color audit",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_one_loop_color_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v07d_threshold_active_flavor_audit.py",
+      "data_path": "data/strong_threshold_active_flavor_audit.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 08D strong threshold active flavor audit",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_threshold_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v07e_strong_diagnostic_comparison.py",
+      "data_path": "data/strong_diagnostic_comparison.json",
+      "events": {
+        "numeric_display_locked": 7
+      },
+      "failures": [],
+      "name": "Step 08E strong diagnostic comparison",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_strong_diagnostic",
+      "root_wrapper_normalization": {
+        "added_from_locked": [
+          "dataset",
+          "input_policy"
+        ],
+        "applied": true,
+        "removed_from_generated": [
+          "module"
+        ],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v07f_final_strong_closure.py",
+      "data_path": "data/strong_final_closure_audit.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 08F final strong closure",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_final_strong_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v08a_global_ledger_lock.py",
+      "data_path": "data/global_running_anomaly_ledger_seed.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 09A global ledger lock",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_global_ledger",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v08b_anomaly_registry_audit.py",
+      "data_path": "data/global_anomaly_registry_audit.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 09B anomaly registry audit",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_anomaly_registry",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v08c_running_continuity_audit.py",
+      "data_path": "data/global_running_continuity_audit.json",
+      "events": {
+        "numeric_display_locked": 1
+      },
+      "failures": [],
+      "name": "Step 09C running continuity audit",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_running_continuity_audit",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v08d_no_fit_provenance_manifest.py",
+      "data_path": "data/global_no_fit_provenance_manifest.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 09D no-fit provenance manifest",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_manifest",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v08e_cross_sector_diagnostic_table.py",
+      "data_path": "data/global_cross_sector_diagnostic_table.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 09E cross-sector diagnostic table",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_table",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    },
+    {
+      "canonical_release_byte_equal": true,
+      "code_path": "code/pr3_v08f_final_priii_consistency_statement.py",
+      "data_path": "data/global_final_priii_consistency_statement.json",
+      "events": {},
+      "failures": [],
+      "name": "Step 09F final PRIII consistency statement",
+      "raw_checked_in_byte_equal": false,
+      "resolved_builder": "build_final_consistency",
+      "root_wrapper_normalization": {
+        "added_from_locked": [],
+        "applied": false,
+        "removed_from_generated": [],
+        "scope": "root_metadata_wrapper_only"
+      },
+      "status": "PASS"
+    }
+  ],
+  "schema_numeric_reproducibility_required": true,
+  "status": "PASS"
+}
