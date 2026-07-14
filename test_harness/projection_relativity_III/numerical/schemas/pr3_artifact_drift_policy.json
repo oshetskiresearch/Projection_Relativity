@@ -1,0 +1,49 @@
+{
+  "project": "Projection Relativity III",
+  "policy": "artifact drift handling for reproducibility hardening",
+  "status": "PRIII_ARTIFACT_DRIFT_POLICY_LOCKED",
+  "comparison_tiers": {
+    "tier_1_schema": {
+      "purpose": "generator and locked artifact expose the same required top-level schema and gate names",
+      "current_runner_support": true,
+      "required_for_development_pass": true
+    },
+    "tier_2_numeric_tolerance": {
+      "purpose": "physical numeric outputs agree within declared tolerances even if decimal string tails differ",
+      "current_runner_support": "partial",
+      "required_for_reproducibility_hardening": true
+    },
+    "tier_3_canonical_json": {
+      "purpose": "canonical sorted JSON formatting for stable diffs",
+      "current_runner_support": "utility_added_not_universal",
+      "required_for_release_candidate": true
+    },
+    "tier_4_byte_exact": {
+      "purpose": "byte-for-byte artifact regeneration equality",
+      "current_runner_support": false,
+      "required_for_full_clean_regeneration_claim": true
+    }
+  },
+  "allowed_development_drift": [
+    "metadata key additions before schema lock",
+    "decimal formatting differences between fixed and exponent notation",
+    "stored decimal tail differences below declared tolerance",
+    "extended precision recomputation below declared tolerance"
+  ],
+  "not_allowed_drift": [
+    "missing required top-level schema keys",
+    "missing required gate names",
+    "false acceptance gates",
+    "status field mismatch",
+    "numeric physical output drift beyond declared tolerance",
+    "diagnostic reference values entering generation formulas"
+  ],
+  "default_decimal_tail_tolerance": "1e-75",
+  "current_full_byte_exact_regeneration_claimed": false,
+  "next_required_actions": [
+    "cover every generator/data pair in schemas/pr3_regeneration_targets.json",
+    "add field-level numeric tolerances for physical outputs",
+    "route all generators through canonical JSON serialization",
+    "only then enable byte-exact release mode"
+  ]
+}

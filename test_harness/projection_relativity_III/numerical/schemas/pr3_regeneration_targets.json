@@ -1,0 +1,92 @@
+{
+  "project": "Projection Relativity III",
+  "schema_manifest": "targeted regeneration checks for reproducibility hardening",
+  "status": "PRIII_REGENERATION_SCHEMA_TARGETS_LOCKED",
+  "targets": [
+    {
+      "name": "Step 06F weak-angle nonconstructive diagnostic audit",
+      "data_path": "data/electroweak_weak_angle_oblique_refinement_decision.json",
+      "code_path": "code/pr3_v05f_weak_angle_oblique_refinement.py",
+      "builder_function": "build_refinement_decision",
+      "status": "STEP_06F_REFINEMENT_DECISION_LOCKED",
+      "required_top_level_keys": [
+        "project",
+        "dataset",
+        "status",
+        "input_policy",
+        "generated_C1_values",
+        "diagnostic_references",
+        "weak_angle_only_test",
+        "ratio_and_rho_diagnostic",
+        "mass_scale_diagnostics",
+        "refinement_decision",
+        "acceptance_gates"
+      ],
+      "gate_field": "acceptance_gates"
+    },
+    {
+      "name": "Step 06J electroweak C3 neutral D3 refinement",
+      "data_path": "data/electroweak_neutral_D3_candidate_C3.json",
+      "code_path": "code/pr3_v05j_neutral_D3_refinement.py",
+      "builder_function": "build_c3_refinement",
+      "status": "STEP_06J_NEUTRAL_D3_REFINEMENT_GENERATED",
+      "required_top_level_keys": [
+        "project",
+        "dataset",
+        "status",
+        "candidate_name",
+        "input_policy",
+        "formula",
+        "frozen_inputs",
+        "derived_D3",
+        "corrected_weak_ledger_C3",
+        "diagnostic_comparison",
+        "diagnostic_decision",
+        "acceptance_gates",
+        "next_step"
+      ],
+      "gate_field": "acceptance_gates"
+    },
+    {
+      "name": "Step 07B neutrino radiative kernel seed",
+      "data_path": "data/neutrino_radiative_kernel_seed.json",
+      "code_path": "code/pr3_v06b_neutrino_radiative_kernel.py",
+      "builder_function": "build_kernel_seed",
+      "status": "STEP_07B_NEUTRINO_RADIATIVE_KERNEL_LOCKED",
+      "required_top_level_keys": [
+        "project",
+        "dataset",
+        "status",
+        "input_policy",
+        "kernel_structure",
+        "frozen_branch",
+        "electroweak_stability_scale",
+        "seed_stability_envelope",
+        "admissibility_gates",
+        "next_step"
+      ],
+      "gate_field": "admissibility_gates"
+    },
+    {
+      "name": "Step 09C running-continuity audit",
+      "data_path": "data/global_running_continuity_audit.json",
+      "code_path": "code/pr3_v08c_running_continuity_audit.py",
+      "builder_function": "build_running_continuity_audit",
+      "status": "STEP_09C_RUNNING_CONTINUITY_AUDIT_LOCKED",
+      "required_top_level_keys": [
+        "project",
+        "dataset",
+        "status",
+        "input_policy",
+        "continuity_tests",
+        "acceptance_gates",
+        "next_step"
+      ],
+      "gate_field": "acceptance_gates"
+    }
+  ],
+  "notes": [
+    "This target list includes the concrete schema drift cases, Step 06F policy-classification patch, and Step 09C stored-precision continuity patch identified during third-party review.",
+    "Additional generator/data pairs can be appended as manuscript reproducibility requirements tighten."
+  ]
+}

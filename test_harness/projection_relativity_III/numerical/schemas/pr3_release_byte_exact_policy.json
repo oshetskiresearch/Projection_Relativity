@@ -1,0 +1,45 @@
+{
+  "project": "Projection Relativity III",
+  "schema": "PR-III release byte-exact regeneration policy",
+  "status": "PRIII_RELEASE_BYTE_EXACT_POLICY_LOCKED_PASS_016",
+  "release_tier": "canonical_release_bytes",
+  "canonical_json": {
+    "indent": 2,
+    "sort_keys": true,
+    "ensure_ascii": false,
+    "terminal_newline": true
+  },
+  "normalization_policy": {
+    "root_metadata_wrapper": {
+      "scope": "artifact_root_only",
+      "copy_from_locked_when_generated_lacks": [
+        "dataset",
+        "input_policy"
+      ],
+      "remove_from_generated_when_locked_lacks": [
+        "module"
+      ],
+      "allowed_only_when_schema_numeric_audit_passes": true
+    },
+    "numeric_display_lock": {
+      "scope": "numeric JSON leaves only",
+      "rule": "when locked and generated leaves parse as finite Decimals and are equal under configured abs/rel tolerance, emit the locked artifact display string into the release artifact",
+      "does_not_apply_when_numeric_drift_exceeds_policy": true,
+      "does_not_relax_numeric_tolerance": true
+    },
+    "text_metadata": {
+      "rule": "nonnumeric text must match exactly before release bytes are emitted",
+      "does_not_use_display_lock": true
+    }
+  },
+  "claim_boundaries": {
+    "schema_numeric_reproducibility_required_first": true,
+    "raw_generator_stdout_byte_identity_claimed": false,
+    "raw_checked_in_file_order_identity_claimed": false,
+    "canonical_release_byte_identity_claimed_when_audit_passes": true,
+    "physics_values_modified_by_release_policy": false,
+    "numeric_tolerance_relaxed": false
+  },
+  "audit_entrypoint": "scripts/pr3_release_byte_exact_audit.py",
+  "pair_manifest": "schemas/pr3_full_regeneration_pairs.json"
+}

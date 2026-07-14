@@ -1,0 +1,20 @@
+{
+  "project": "Projection Relativity III",
+  "schema": "numeric tolerance policy for artifact drift audit",
+  "status": "PRIII_NUMERIC_TOLERANCE_POLICY_LOCKED",
+  "default": {
+    "abs_tol": "1e-40",
+    "rel_tol": "1e-40"
+  },
+  "decimal_tail_fields": {
+    "abs_tol": "1e-75",
+    "rel_tol": "1e-75",
+    "purpose": "stored decimal tail differences from Decimal.sqrt or formatting, not physical-output drift"
+  },
+  "notes": [
+    "This policy supports schema/numeric reproducibility without claiming byte-for-byte release equality.",
+    "Field-specific tolerances can be added under fields when third-party diffs identify recurring deterministic decimal-tail differences.",
+    "Diagnostic references remain post-generation comparison values and may not be used in generator equations."
+  ],
+  "fields": {}
+}
