@@ -3,7 +3,7 @@
 
 **PR-I release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.20545407)<br>
 **PR-II release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.20817164)<br>
-**PR-III release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.20817164)<br>
+**PR-III release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.21361507)<br>
 
 **Repository:** `oshetskiresearch/Projection_Relativity`<br>
 **Author:** Michael Stanislaus Oshetski<br>
