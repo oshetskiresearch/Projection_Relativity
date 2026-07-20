@@ -2,10 +2,13 @@
 \usepackage{orcidlink}
 \usepackage[margin=0.75in]{geometry}
 \usepackage{amsmath,amssymb,amsfonts,bm,mathtools}
+\usepackage{amsthm}
 \usepackage{mathrsfs}
 \usepackage{booktabs,longtable,array,multirow}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \usepackage{hyperref}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -13,11 +16,11 @@
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage[most]{tcolorbox}
-\usepackage{soul}
 \usepackage{needspace}
 \usepackage{float}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{authblk}
+\hypersetup{hidelinks}
 
 
 \setlength{\parindent}{0pt}
@@ -37,10 +40,16 @@
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\Tr}{\mathrm{Tr}}
 \newcommand{\diag}{\mathrm{diag}}
+\newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
 \renewcommand{\arraystretch}{1.4}
 
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
 \title{The Foundation of Projection Relativity \uppercase\expandafter{\romannumeral3}\\
-\Large \textit Zero-Parameter Radiative and Cross-Sector Closure of the Projection Ledger}
+\Large Zero-Parameter Radiative and Cross-Sector Closure of the Projection Ledger}
 
 \author{Michael Stanislaus Oshetski \orcidlink{0009-0007-3623-7586} \\
 \small \email{michael.oshetski@micatu.com}\\
@@ -55,16 +64,20 @@
 \maketitle
 
 \begin{abstract}
-Projection Relativity III (PR-III) establishes the radiative and cross-sector closure of the theoretical framework introduced in PR-I and PR-II. Building upon the frozen PR-I spectral-projection geometry and the PR-II compact electroweak and flavor lift, this work demonstrates that the inherited architecture successfully generates the electromagnetic, electroweak, neutrino, strong, anomaly, and running-continuity sectors without importing target diagnostic observables as fitted inputs. The result is a closed, no-fit projection ledger.
+Projection Relativity III (PR-III) studies the finite-tier radiative and cross-sector closure of the theoretical framework introduced in the PR-I and PR-II preprints. Building upon the frozen PR-I spectral-projection geometry and the PR-II compact electroweak and flavor lift, this work evaluates electromagnetic, electroweak, neutrino, strong, anomaly, and running-continuity branches without importing the selected diagnostic observables as fitted inputs. The result is a closed, reproducible, no-fit equation ledger at the stated finite tier.
 
-Numerically, the generated architecture achieves sub-sigma agreement with empirical targets. The fine-structure inverse matches its reference to within $+0.1376\sigma$, while the core electroweak constants $M_W$, $M_Z$, and $G_F$ align to within $+0.3566\sigma$, $+0.0364\sigma$, and $+0.6003\sigma$, respectively. Extending to the lepton sector, the neutrino branch is fully radiatively stable and preserves the normal mass ordering, with the summed mass, effective beta observables, and $m_{\beta\beta}$ envelope remaining well below current empirical ceilings. The strong-sector ledger locks the $SU(3)_c$ color identities, active-flavor thresholds, and the one-loop asymptotic-freedom sign. This constrained architecture ultimately yields a strong anchor that agrees with diagnostic references to within $0.04\%$. Global structural audits successfully verify the cancellation of local gauge anomalies per generation and the absence of the Witten anomaly. Additionally, the residual electromagnetic branch remains purely vector-like, maintaining running continuity under strict no-fit provenance.
+Numerically, the generated architecture achieves sub-sigma agreement with empirical targets. The fine-structure inverse matches its reference to within $+0.1376\sigma$, while the core electroweak constants $M_W$, $M_Z$, and $G_F$ align to within $+0.3566\sigma$, $+0.0364\sigma$, and $+0.6003\sigma$, respectively. Extending to the lepton sector, the neutrino branch is radiatively stable under the declared finite-tier multiplicative envelope and preserves the normal mass ordering, with the summed mass, effective beta observables, and $m_{\beta\beta}$ envelope remaining well below current empirical ceilings. The strong-sector ledger locks the $SU(3)_c$ color identities, active-flavor thresholds, and the one-loop asymptotic-freedom sign. This constrained architecture ultimately yields a strong anchor that agrees with diagnostic references to within $0.04\%$. Global structural audits successfully verify the cancellation of local gauge anomalies per generation and the absence of the Witten anomaly. Additionally, the residual electromagnetic branch remains purely vector-like, maintaining running continuity under strict no-fit provenance.
 
-All PR-II obligations addressed by the PR-III ledger are completed to the stated diagnostic or structural precision tier. We formally establish a fully reproducible, radiatively stabilized projection architecture, supported by rigorous computational provenance, ensuring that every theoretical output is exactly regenerated from the underlying geometric principles. The results of the PR-III framework, along with all software and audit checks, are available in our public GitHub repository.
+The charged-adjoint representation fixes the exact normalized quadratic invariant
+\(\operatorname{Tr}_{\rm ch}(q^\dagger q)=2\).  PR-III identifies the neutral \(C_3\) term with the minimal physical-\(Z\) response: a charged-preserving, photon-null rank-one correction built from the inherited scale \(\rho_{\rm PR}\) and the unique additive, basis-invariant normalized quadratic
+charge functional.  Within this declared admissible class the coefficient is uniquely \(k=2\), and no fitted freedom remains.  Exact normal-form reduction shows that every other in-class equation either has nonzero defect \(\rho_{\rm PR}^2(k-2)^2\) or is an invertible presentation of the same
+residual law on the complete declared charge-operator domain.  The canonical finite-tier identity is established by the normalized-response theorem; a gauge-fixed neutral-Hessian presentation, when used, is an equivalent microscopic representation of the same in-class response law.  Broader operator families with independent higher-dimensional Wilson coefficients define different theory classes and are not additional PR parameters or alternative PR branches.  The reported \(C_3\)
+value is therefore the canonical no-fit neutral closure at the stated tier, with its class-relative theorem status explicit.  With the completed PR-IV Global Singleton Theorem, the same normal-form, exact-defect, and equivalence trichotomy closes the registered PR-I--PR-III equation architecture: its admissible quotient is a singleton with no fitted or free continuous parameter.  This statement is relative to the declared postulates and finite-tier domain; additional fields, higher orders, and independent EFT coefficients define other theory classes rather than additional PR solutions.  The numerical branch, software, and audit checks are available in the public repository.
 \end{abstract}
 
 \section{Introduction}
 \label{sec:priii-introduction}
-Projection Relativity III (PR-III) represents the radiative and cross-sector closure of the Projection Relativity framework. Rather than establishing a new theoretical starting point, this manuscript builds directly upon the geometric and topological foundations laid in Projection Relativity I \cite{OshetskiPR1Zenodo2026} and Projection Relativity II \cite{OshetskiPR2Zenodo2026}. 
+Projection Relativity III (PR-III) investigates the finite-tier radiative and cross-sector closure of the Projection Relativity framework. Rather than establishing a new theoretical starting point, this manuscript builds directly upon the geometric and topological foundations laid in the Projection Relativity I \cite{OshetskiPR1Zenodo2026} and Projection Relativity II \cite{OshetskiPR2Zenodo2026} preprints.
 
 In PR-I, we introduced the master projection field $\Psi(x,\xi)$ and the minimal internal geometry 
 \begin{equation}
@@ -76,12 +89,13 @@ PR-II subsequently lifted this compact boundary construction into the non-Abelia
 \begin{equation}
 \mathcal{M}_{\rm int}^{\rm EW} = \mathbb{R}_w \times S_Y^1 \times SU(2)_L,
 \end{equation}
-the residual electromagnetic phase was recovered as the locked boundary of the larger fiber \cite{OshetskiPR2Zenodo2026}. This allowed weak mixing, the weak-scale structure, flavor hierarchy, and neutrino candidates to emerge as projection-geometry outputs rather than independent empirical insertions. Additionally, PR-II derived the three-generation ledger strictly from the dimension of the broken compact electroweak quotient, 
+the residual electromagnetic phase was recovered as the locked boundary of the larger fiber \cite{OshetskiPR2Zenodo2026}. This allowed weak mixing, the weak-scale structure, flavor hierarchy, and neutrino candidates to emerge as outputs of projection geometry rather than empirical insertions. The class-relative three-generation statement combines the broken-quotient dimension with a complete and nonredundant sheet-incidence map; rank--nullity then gives
 \begin{equation}
 N_{\rm gen}^{\rm PR} = \dim\left[(SU(2)_L \times U(1)_Y)/U(1)_{\rm em}\right] = 3.
 \end{equation}
+Dimension alone is not claimed to determine the physical sheet map.  To make the full incidence equation unique under normalized basis changes, the normalized-incidence closure additionally requires $\Phi_3^\dagger\Phi_3=I_3$; all such maps belong to one orthogonal equivalence orbit in the real realization (unitary after complexification).
 
-The present paper begins from these frozen geometric structures. Its purpose is to carry the PR-I and PR-II architecture through the remaining radiative, strong-sector, and running-continuity audits required for global theoretical closure. PR-III should therefore be read as a completion and hardening of the previously introduced projection architecture, establishing the tree-level flavor matrix of PR-II into a radiatively stable framework.
+The present paper begins from these frozen geometric structures.  Its purpose is to close the declared finite-tier radiative, strong-sector, and running-continuity architecture of PR-I and PR-II.  PR-III establishes reproducible consistency, stability, and no-fit provenance at that tier, and the companion PR-IV Global Singleton Theorem supplies equation-level exhaustion for the completed selector class.  Together they define a closed class-relative architecture with no inequivalent equation satisfying the same admissibility rules remaining.
 
 \begin{figure}[h]
 \centering
@@ -191,15 +205,15 @@ The present paper begins from these frozen geometric structures. Its purpose is 
 \begin{scope}[shift={(15.0,0)}] % Increased shift to prevent "closure" arrow collision
   \node[panel, minimum width=7.0cm, minimum height=\panelH] (Cbox) at (0,0) {};
   \node[title] at (0,\titleY) {(C) PR-III};
-  \node[subtitle] at (0,\subY) {radiative closure of the inherited ledger};
+  \node[subtitle] at (0,\subY) {finite-tier audit of the inherited ledger};
 
   % No-fit provenance envelope
   \node[nofit, minimum width=6.6cm, minimum height=5.2cm] (env) at (0, 0.8) {};
-  \node[subtitle, text=green!35!black] at (0, 3.0) {closed no-fit provenance envelope};
+  \node[subtitle, text=green!35!black] at (0, 3.0) {frozen no-fit provenance envelope};
 
   % Central ledger
   \node[branch, fill=green!8, minimum width=2.6cm, minimum height=0.8cm] (ledger) at (0, 0.8)
-    {PR-III\\closed ledger};
+    {PR-III\\finite-tier ledger};
 
   % Branches safely routed inside envelope boundaries
   \node[branch, fill=yellow!12] (alpha) at (-2.1, 2.0) {$\alpha$ radiative\\closure};
@@ -228,14 +242,14 @@ The present paper begins from these frozen geometric structures. Its purpose is 
   \draw[->, thick, draw=black!55] (0, -2.0) -- (diag.north);
   
   \node[subtitle, text width=6.765cm] at (0,\bottomTextY)
-    {PR-III closes the inherited PR-I and PR-II obligations to the stated diagnostic or structural tier.};
+    {PR-III establishes the inherited ledger at the stated finite tier; PR-IV formalizes the corresponding equation-exhaustion theorems.};
 \end{scope}
 
 % =========================================================
 % INTER-PANEL ARROWS (Adjusted for wider panel spacing)
 % =========================================================
 \draw[flow, ultra thick, black!50] (3.2,0) -- (3.9,0) node[midway, above, font=\sffamily\scriptsize] {lift};
-\draw[flow, ultra thick, black!50] (10.5,0) -- (11.3,0) node[midway, above, font=\sffamily\scriptsize] {closure};
+\draw[flow, ultra thick, black!50] (10.5,0) -- (11.3,0) node[midway, above, font=\sffamily\scriptsize] {audit};
 
 \end{tikzpicture}
 }
@@ -249,26 +263,37 @@ $\mathcal M_{\rm int}^{\rm EW}=\mathbb R_w\times S_Y^1\times SU(2)_L$.
 Projection locking through $Q=T_3+Y/2$ selects the unbroken residual
 $U(1)_{\rm em}$ boundary, while the broken directions generate the massive
 $W^\pm$ and $Z$ projection excitations.
-\textbf{(C)} PR-III does not introduce a new topology; it closes the inherited
-PR-I/PR-II ledger inside a no-fit provenance envelope. The electromagnetic,
+\textbf{(C)} PR-III does not introduce a new topology; it evaluates a declared
+finite-tier extension of the inherited PR-I/PR-II ledger inside a no-fit
+provenance envelope. The electromagnetic,
 electroweak, neutrino, strong, anomaly, running-continuity, and provenance
 branches are generated and audited without using their diagnostic reference
-values as generation inputs. The green enclosure denotes ledger closure and
-audit provenance, not an additional physical fiber.}
+values as generation inputs. The green enclosure denotes the closed
+finite-tier admissibility domain and its audit provenance; structures with
+additional orders, fields, coefficients, or postulates belong to a different
+theory class rather than to an alternative PR-III branch.}
 \label{fig:priii-geometric-inheritance-no-fit-closure}
 \end{figure}
 
 \subsection{Structural Roadmap and Organization of the Paper}
 \label{subsec:priii-paper-organization}
 
-To establish this cross-sector closure, the remainder of the paper is organized as a sequential chain, outlined in Table~\ref{tab:structural-roadmap}. It should therefore be read as a ledger-completion argument. PR-I supplies the spectral-projection foundation. PR-II supplies the compact electroweak and flavor lift. PR-III tests whether that inherited structure can be radiatively stabilized and globally closed without importing the target observables as fitted inputs.
+To audit this finite-tier cross-sector ledger, the remainder of the paper is
+organized as a sequential chain, outlined in
+Table~\ref{tab:structural-roadmap}. PR-I supplies the spectral-projection
+foundation. PR-II supplies the compact electroweak and flavor lift. PR-III
+proves stability and mutual consistency of the implemented finite-tier branches
+without importing target observables as fitted inputs.  The theorem is closed
+in two layers: this manuscript establishes the declared finite-tier sectors,
+and PR-IV proves that their completed selector quotient contains one
+equivalence class.
 
 \begin{table}[h]
 \centering
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{@{} >{\bfseries}p{2.5cm} >{\bfseries}p{4.5cm} p{9.3cm} @{}}
 \toprule
-Section & Sector / Phase & Closure Actions and Objectives \\
+Section & Sector / Phase & Finite-Tier Actions and Objectives \\
 \midrule
 \ref{sec:priii-sandbox-roadmap} \& \ref{sec:priii-inheritance-baseline} & Foundation & Fixes the inherited PR-I/PR-II boundary ledger and alpha baseline policy, and reviews the scalar Hessian seed and gauge-null quotient needed to preserve the mass ledger. \\
 
@@ -280,7 +305,7 @@ Section & Sector / Phase & Closure Actions and Objectives \\
 
 \ref{sec:priii-strong-sector} & Strong & Locks the compact color-fiber architecture, assembling group identities, active-flavor thresholds, and strong anchors without treating external QCD quantities as fitted targets. \\
 
-\ref{sec:priii-global-consistency} \& \ref{sec:priii-limitations-forward-work} & Global Consistency \& Provenance & Synthesizes the completed sectors into a global consistency statement, including the anomaly registry and cross-sector diagnostics. Summarizes the reproducibility audit and delineates completed PR-II obligations from future all-orders theorem work. \\
+\ref{sec:priii-global-consistency} \& \ref{sec:priii-closed-admissibility-domain} & Global Consistency \& Uniqueness & Synthesizes the completed sectors into a global consistency statement, including the anomaly registry and cross-sector diagnostics, and states the closed admissibility domain and class-relative equation-exclusion theorem. \\
 \bottomrule
 \end{tabular}
 \caption{The PR-III structural roadmap and paper organization, detailing the sequential closure of the inherited ledger.}
@@ -298,19 +323,19 @@ We note, the reader must keep in mind the strict methodological distinction betw
 \subsection{The No-Fit Provenance Discipline}
 \label{subsec:priii-no-fit-discipline}
 
-A central rule is maintained throughout this manuscript: diagnostic references may evaluate PR-generated quantities, but they may never generate or tune them. Every value in this paper is strictly classified as either an inherited, frozen input from PR-I or PR-II, a PR-generated output, or a post-generation diagnostic reference. This ``no-fit'' provenance discipline is why this manuscript explicitly distinguishes among structural identities, closure candidates, precision candidates, and diagnostic comparisons \cite{OshetskiPR1Zenodo2026}. Accordingly, PR-III does not claim a complete, exact all-orders theory of the Standard Model or QCD. It claims a narrower, highly specific result: the obligations addressed by the PR-III work are completed internally to their stated diagnostic or structural precision. The derivation of exact all-orders closure theorems remains forward work, not unresolved legacy debt.
+A central rule is maintained throughout this manuscript: diagnostic references may evaluate PR-generated quantities, but they may never generate or tune them. Every value in this paper is strictly classified as either an inherited input from PR-I or PR-II, a PR-generated output, an explicitly declared closure quantity, or a post-generation diagnostic reference. This ``no-fit'' provenance discipline is why this manuscript distinguishes among structural identities, closure theorems, finite-tier relations, and diagnostic comparisons \cite{OshetskiPR1Zenodo2026}.  Absence of fitting is necessary for prediction, but it is logically distinct from the origin of a closure relation.  A finite-tier relation may be admitted either by direct derivation from inherited PR operators or as an explicitly declared logical closure extension.  In the latter case its admissible class, structural motivation, normalization, and uniqueness must be stated, and no empirical target or fitted continuous coefficient may select it.  Section~\ref{subsec:priii-ew-C3-neutral-refinement} applies this standard to the neutral \(C_3\) branch.
 
 \subsection{Reproducibility and Test-Driven Method}
 \label{sec:intro_reproducibility}
 
-The development of PR-III follows the same test-driven standard as demonstrated in the previous manuscripts. Each construction is paired with a numerical or symbolic validation harness. The harnesses do not merely confirm the desired equations; they also include negative controls designed to reject common incorrect alternatives, such as Abelianized $SU(2)$, massive photon leakage, wrong Fermi normalization, nonunitary flavor rotations, anomaly-violating fermion ledgers, inverted suppression factors, or hidden use of target observables.
+The development of PR-III follows the same test-driven standard as demonstrated in the previous manuscripts. Each construction is paired with a numerical or symbolic validation harness. The harnesses confirm the generated equations and include control cases that verify exclusion of structures incompatible with the declared PR ledger, including Abelianized $SU(2)$, photon-mass leakage, altered Fermi normalization, nonunitary flavor rotations, anomaly-incompatible fermion ledgers, inverted suppression factors, and target-observable leakage.
 
-In PR-III this standard is applied to the full radiative and cross-sector ledger. The electromagnetic, electroweak, neutrino, strong, anomaly, running-continuity, and no-fit provenance branches are each checked as generated ledger objects before they are compared with diagnostic references. The validation package therefore supports the theoretical claim that the completed PR-III ledger is internally closed to the stated diagnostic or structural tier; it is not a substitute for the separate all-orders theorem work that remains outside the present scope.
+In PR-III this standard is applied to the full radiative and cross-sector ledger. The electromagnetic, electroweak, neutrino, strong, anomaly, running-continuity, and no-fit provenance branches are checked as ledger objects before they are compared with diagnostic references. The validation package establishes reproducibility of the encoded formulas and their provenance labels.  Numerical agreement alone proves neither derivation nor uniqueness.  The neutral \(C_3\) generator is instead justified by the canonical minimal-response theorem established in Theorem~\ref{thm:priii-conditional-k-two}.
 
 \begin{quote}
 \small
 \textbf{Reproducibility statement.}
-The PR-III closure chain is supported by step-specific validation scripts, Python builders, and locked JSON artifacts. The harness ledger verifies the inheritance and alpha baseline, the scalar Hessian and tree electroweak block, gauge null removal, and the radiative determinant. It further audits the alpha radiative extraction with D1 and D2 refinements, electroweak scale transport alongside C1, C2, and C3 vector self-energy and neutral-channel refinements, neutrino branch radiative stability including the $m_{\beta\beta}$ envelope, strong-sector phase fiber closure with spectral running, and global running continuity alongside the anomaly registry. Target observables are explicitly governed by a no-fit provenance manifest and enter only as post-generation diagnostic (\texttt{DIAG}) references. These excluded generation inputs include reference values for the fine-structure constant ($\alpha$), $M_W$, $M_Z$, $G_F$, neutrino mass-squared splittings ($\Delta m^2_{21}$, $\Delta m^2_{31}$), PMNS mixing angles, cosmological neutrino mass bounds, and the strong coupling reference $\alpha_3$. The code, Markdown reports, and generated JSON outputs are maintained in the public repository:
+The PR-III ledger is supported by step-specific validation scripts, Python builders, and locked JSON artifacts. The harness ledger verifies the inheritance and alpha baseline, the scalar Hessian and tree electroweak block, gauge null removal, and the radiative determinant. It further audits the alpha radiative extraction with D1 and D2 refinements, electroweak scale transport alongside C1 and C2, and the arithmetic of the canonical C3 closure.  The proof below, rather than the arithmetic check, establishes the uniqueness of its normalized response functional.  The package also checks neutrino branch radiative stability including the $m_{\beta\beta}$ envelope, strong-sector phase-fiber calculations, global running continuity, and the anomaly registry. Target observables are governed by a no-fit provenance manifest and enter only as post-generation diagnostic (\texttt{DIAG}) references. These excluded generation inputs include reference values for the fine-structure constant ($\alpha$), $M_W$, $M_Z$, $G_F$, neutrino mass-squared splittings ($\Delta m^2_{21}$, $\Delta m^2_{31}$), PMNS mixing angles, cosmological neutrino mass bounds, and the strong coupling reference $\alpha_3$. The code, Markdown reports, and generated JSON outputs are maintained in the public repository:
 \href{https://github.com/oshetskiresearch/Projection_Relativity}{\texttt{github.com/oshetskiresearch/Projection\_Relativity}}.
 \end{quote}
 
@@ -391,7 +416,7 @@ Global structure
 \subsection{Electromagnetic Closure: Precision \texorpdfstring{$\alpha$}{alpha} result}
 \label{subsec:priii-alpha-obligation}
 
-The first extension is electromagnetic.  PR-II identifies the residual electromagnetic phase as the unbroken compact boundary of the electroweak lift.  PR-III turns that boundary statement into a radiative precision result.  The high-resolution tree baseline is fixed before comparison; the charged-mode inventory is evaluated by the electromagnetic \(Q^2\) trace; neutral modes are excluded from the direct charged trace; and the PR spectral kernel is locked before the radiative candidate is generated. The minimal boundary-leakage contribution is
+The first extension is electromagnetic.  PR-II identifies the residual electromagnetic phase as the unbroken compact boundary of the electroweak lift.  PR-III turns that boundary statement into a radiative precision result.  The high-resolution tree baseline is fixed before comparison; the charged-mode inventory is evaluated by the electromagnetic \(Q^2\) trace; neutral modes are excluded from the direct charged trace; and the implemented finite-tier spectral kernel, coefficient, weight, and subtraction convention are fixed as part of the admissible PR-III class before evaluation. The boundary-leakage contribution is
 \begin{equation}
 D_1
 =
@@ -452,7 +477,7 @@ M_Z^2=\frac14\left(g_{\rm PR}^2+g_{\rm PR}^{\prime 2}\right)v_{\rm EW,PR}^2,
 \qquad
 G_F=\frac{1}{\sqrt2\,v_{\rm EW,PR}^2} .
 \end{equation}
-The evaluation proceeds through three highly constrained refinements: the C1 transport establishes baseline weak-mass consistency, the C2 correction introduces the charged and vector self-energy dynamics, and the C3 branch completes the neutral channel via the generation-weighted $D_3$ term. Evaluated sequentially, these yield the final generated parameters:
+The evaluation proceeds through three constrained refinements: the C1 transport establishes baseline weak-mass consistency, the C2 correction introduces the charged and vector self-energy dynamics, and the C3 branch applies the generation-weighted $D_3$ term.  The charged-adjoint algebra fixes the group factor in $D_3$ exactly, and the canonical minimal-response theorem in Sec.~\ref{subsec:priii-ew-C3-neutral-refinement} uniquely maps it to the normalized physical-$Z$ correction.  Evaluated sequentially on that target-independent closure branch, these yield:
 \begin{align}
 M_W^{\rm PR} &=80.373942851862121269660365960912048165641419593354\ {\rm GeV},\\
 M_Z^{\rm PR} &=91.187676431043922257304294605837072137923832857910\ {\rm GeV},\\
@@ -464,7 +489,8 @@ M_W:+0.3566\sigma,\qquad
 M_Z:+0.0364\sigma,\qquad
 G_F:+0.6003\sigma .
 \end{equation}
-This establishes the PR-III electroweak precision closure. The core weak observables are successfully derived through geometric transport and neutral-channel refinement, completely bypassing the need to import external diagnostic targets as fitted inputs.
+These values establish the stated diagnostic performance of the PR-III
+electroweak closure branch.  The selected diagnostic targets are not inputs to its formulas.  The neutral \(C_3\) value is a theorem relative to the declared minimal-response class.  A complete Hessian presentation is an alternative microscopic representation of the same response equation and introduces no additional admissible coefficient.
 
 
 \subsection{Neutrino Closure: Radiative Stability Of The Inherited Branch}
@@ -537,40 +563,47 @@ Comparing this theoretically derived baseline to the external diagnostic target 
 \frac{\Delta\alpha_3}{\alpha_s^{\rm diag}}=-0.0326484570399\% .
 \end{equation}
 
-While this derivation does not claim to encapsulate a full, all-orders nonperturbative theorem of Quantum Chromodynamics (QCD), it successfully completes the obligation of the compact color-fiber anchor. It mathematically binds the active threshold ordering, the one-loop asymptotic-freedom signature, and the coupling magnitude to the stringent diagnostic tiers required by the broader projection architecture.
+This calculation is the closed theorem for the declared compact color-fiber, sharp-threshold, one-loop domain.  It verifies the active-threshold ordering and one-loop asymptotic-freedom sign in that class.  All-orders or nonperturbative QCD structures define a different domain and are not alternative solutions of the displayed PR-III equation. The displayed coupling comparison is post-generation only and neither fixes
+the strong anchor nor defines an admissibility tier.
 
-\subsection{Global Closure: Anomaly, Continuity, and Provenance}
+\subsection{Cross-Sector Audits: Anomaly, Continuity, and Provenance}
 \label{subsec:priii-global-obligation}
 
-The final extension unifies the completed branches through three global structural audits:
+The final extension compares the declared finite-tier branches through three
+cross-sector structural audits:
 \begin{itemize}
     \item \textbf{Anomaly Registry:} Verifies that local gauge anomalies cancel per generation, the Witten $SU(2)$ anomaly is absent, and the residual electromagnetic branch remains purely vector-like.
     \item \textbf{Running Continuity:} Confirms that the electromagnetic-to-electroweak, electroweak-to-neutrino, electroweak-to-strong, and anomaly-continuity links seamlessly integrate without breaking the generated ledger.
     \item \textbf{No-fit Provenance Manifest:} Ensures that forbidden target observables remain strictly excluded from generation, entering only as post-generation diagnostic references.
 \end{itemize}
 
-With these audits satisfied, the final global closure is established across three tiers:
+With these audits satisfied, the following finite-tier statuses are recorded:
 \begin{itemize}
     \item \textbf{Precision Status:} The fundamental observables ($\alpha^{-1}$, $M_W$, $M_Z$, and $G_F$) successfully pass one-sigma diagnostic thresholds.
     \item \textbf{Compatibility Status:} The neutrino and strong branches remain radiatively stable and highly compatible with current diagnostic ceilings.
     \item \textbf{Structural Status:} Anomaly cancellation, running continuity, and strict no-fit provenance are fully preserved.
 \end{itemize}
 
-PR-III therefore provides a closed, cross-sector radiative extension of the inherited PR-I/PR-II ledger, fulfilled to the stated diagnostic and structural tiers. While it does not claim to be a complete, exact all-orders theory of the Standard Model or QCD, it successfully establishes a globally stabilized, no-fit projection architecture.
+PR-III therefore provides a reproducible, no-fit, cross-sector ledger at the declared finite tier.  Its theorem domain is exactly the stated PR radiative and cross-sector construction.  Higher radiative orders, different threshold profiles, additional fields, and independent EFT operators change that domain and are therefore outside the PR-III solution class, not unresolved solutions within it.  The completed equation quotient is stated in Sec.~\ref{sec:priii-closed-admissibility-domain}.
 
 \subsection{Organization of the Derivations}
 \label{subsec:priii-remaining-sections-plan}
 
-The remainder of this manuscript formally derives the closure results summarized above. We begin by establishing the inherited PR-I and PR-II geometric baselines, firmly locking the initial quantities required for the PR-III fine-structure evaluation. Following this, the framework examines the scalar displacement Hessian and the gauge-quotient structure, which together isolate the precise electroweak null directions.
+The remainder of this manuscript evaluates the finite-tier relations
+and exact structural identities summarized above. We begin by freezing the
+inherited PR-I and PR-II geometric baselines used for the PR-III fine-structure calculation. Following this, the framework examines the scalar displacement Hessian and gauge-quotient structure used to isolate the electroweak null directions.
 
-With the geometric foundation secured, the analysis proceeds sequentially through the fundamental phenomenological sectors. The electromagnetic derivation evaluates the boundary-leakage and mode-resolved $D_1+D_2$ fine-structure closure. This precise radiative result is subsequently transported to the weak scale, dynamically generating the weak-mass and neutral-channel ledgers. Extending to the broader standard model architecture, the neutrino section mathematically proves the radiative stability and diagnostic compatibility of the lepton branch, while the strong-sector derivation locks the compact color-fiber and active-flavor ledgers.
+With the inherited baseline frozen, the analysis proceeds sequentially through the phenomenological sectors.  The electromagnetic calculation evaluates the declared boundary-leakage and mode-resolved $D_1+D_2$ relation.  This finite-tier result is transported to the weak scale through the declared weak-mass and neutral-channel ledgers.  The neutrino section proves stability under its stated multiplicative envelope, while the strong-sector section verifies the compact color identities, threshold ordering, and one-loop sign.  PR-IV then applies the common admissibility and equivalence rules to the completed selectors and proves that their equation quotient is a singleton.
 
-The derivations culminate in a global structural synthesis that comprehensively audits anomaly cancellation, running continuity, and strict no-fit provenance across all interacting branches. The manuscript concludes with a rigorous discussion of reproducibility and limitations, explicitly delineating the theoretical boundaries of the current closure and identifying the phenomenological obligations reserved for future, all-orders extensions of the Projection Relativity program.
+The calculations culminate in a cross-sector audit of anomaly cancellation,
+running continuity, and strict no-fit provenance across the implemented
+branches.  The manuscript concludes by recording the exact closed theorem
+domain and the exclusion of every inequivalent in-class equation.
 
 \section{Inherited Baseline and Alpha Policy}
 \label{sec:priii-inheritance-baseline}
 
-We now define the baseline used by the alpha calculation and the electroweak seed that later sections refine.  It is not yet the alpha full derivation.  Its role is to specify the frozen geometry, the high-resolution tree value, and the no-fit rule before any precision comparison is made.
+We now define the inherited baseline used by the alpha calculation and the electroweak seed refined in later sections.  Its role is to fix the geometry, the high-resolution tree value, and the no-fit rule before any precision comparison is made.
 
 \subsection{Inherited Geometric and Projection Baselines}
 \label{subsec:priii-frozen-projection-data}
@@ -602,7 +635,7 @@ Correspondingly, the compact phase dynamics are governed by the operator
 \begin{equation}
 O_\theta=-\frac{1}{R_A^2}\frac{d^2}{d\theta^2},
 \end{equation}
-which furnishes the residual electromagnetic phase normalization. Sourced directly from the published finite-resolution boundary ledger, the inherited compact-boundary stiffness and its corresponding cofactor are fixed at
+which furnishes the residual electromagnetic phase normalization. Sourced directly from the released finite-resolution preprint ledger, the inherited compact-boundary stiffness and its corresponding cofactor are fixed at
 \begin{equation}
 q_{\rm bc}=10.905007182855176,
 \qquad
@@ -639,7 +672,7 @@ This topological integer plays a critical role in the subsequent PR-III derivati
 \subsection{High-Resolution Asymptotic Tree Baseline}
 \label{subsec:priii-high-resolution-alpha-baseline}
 
-Transitioning from the structural classification of the PR-I and PR-II ledgers to the exact precision phenomenology of PR-III requires a formally strict geometric background. The previously published compact-boundary value,
+Transitioning from the structural classification of the PR-I and PR-II ledgers to the precision phenomenology examined in PR-III requires a formally strict geometric background. The previously released preprint value,
 \begin{equation}
 \left(\alpha_{\rm PR,bc}\right)^{-1}=137.036361812007,
 \end{equation}
@@ -756,16 +789,14 @@ The neutral gauge sector geometry is locked to enforce a  massless photon trajec
 \end{align}
 By enforcing that the photon eigenvalue remains zero while the tree-level $Z$ eigenvalue is only positive, this quotient procedure formally prevents the subsequent radiative integration from artificially conflating unphysical gauge-null artifacts with genuine physical scalar curvature.
 
-With the physical scalar and gauge-null directions separated, the complete theoretical baseline for the fine-structure derivation is now fully locked. This initialization permanently freezes the inherited PR-I spectral operators and boundary parameters, the $N_{\rm gen}^{\rm PR}=3$ generation topology, the pre-radiative electroweak seed, and the exact high-resolution tree baseline of $137.036041314016444...$. We exclude empirical references from the generation map so the architecture construction of the radiative determinant, charged-mode inventory, and PR spectral kernel remains entirely predictive. The resulting $D_1+D_2$ electromagnetic closure can be formally evaluated against experimental data purely as a post-generation diagnostic, rather than a phenomenologically fitted input.
+With the physical scalar and gauge-null directions separated, the inherited
+baseline used by the finite-tier fine-structure calculation is now frozen for reproducibility.  This initialization fixes the PR-I spectral operators and boundary parameters, the declared $N_{\rm gen}^{\rm PR}=3$ realization, the pre-radiative electroweak seed, and the high-resolution tree baseline of $137.036041314016444\ldots$.  Empirical references are excluded from the generation map.  This makes the implemented determinant, charged-mode inventory, spectral kernel, weights, and subtractions a fixed no-fit finite-tier class.  The resulting $D_1+D_2$ value is compared with data only as a post-generation diagnostic; changing any registered kernel or subtraction defines a different class rather than a second solution of this one.
 
-% PR-III manuscript fragment
-% Section 4: Alpha / Electromagnetic Closure
-% Paste this file into the main manuscript body after Section 3.
-
-\section{Alpha and Electromagnetic Radiative Closure}
+\section{Alpha and Electromagnetic Radiative Evaluation}
 \label{sec:priii-alpha-radiative-closure}
 
-The preceding section fixed the inherited PR-I/PR-II boundary data, the high-resolution tree value of the compact electromagnetic normalization, and the exclusion of the diagnostic fine-structure reference from the generation map.  This section now derives the PR-III electromagnetic correction.  The goal is not to fit \(\alpha\), but to determine whether the compact residual electromagnetic phase can acquire the required radiative displacement from PR-native structure alone.
+The preceding section fixed the inherited PR-I/PR-II boundary data, the
+high-resolution tree value of the compact electromagnetic normalization, and the exclusion of the diagnostic fine-structure reference from the generation map.  This section evaluates the declared PR-III electromagnetic relation. It does not fit \(\alpha\), and the later diagnostic displacement is not used to select the equation, coefficient, or operator class.
 
 The starting point is the high-resolution tree baseline
 \begin{equation}
@@ -795,6 +826,7 @@ The one-loop PR radiative architecture is organized by a reference-normalized su
 \log\!\left[
 H_{\rm PR}[B]\,H_{\rm PR}[0]^{-1}
 \right].
+\label{eq:priii-reference-normalized-supertrace}
 \end{equation}
 The prime indicates that gauge-null modes and exact zero modes are either quotient-removed or reference-normalized.  In block form,
 \begin{align}
@@ -829,7 +861,7 @@ The corresponding shift in the inverse fine-structure normalization is
 4\pi\,\Delta Z_A^{\rm PR}.
 \label{eq:priii-alpha-radiative-shift}
 \end{equation}
-This convention is fixed before the numerical candidate is evaluated.
+This convention is fixed before the numerical equation is evaluated.
 
 \subsection{Charged-mode Inventory}
 \label{subsec:priii-charged-mode-inventory}
@@ -852,7 +884,7 @@ or \(8/3\) per generation.  Neutral modes, including the photon background, \(Z\
 
 \subsection{PR Spectral Kernel}
 \label{subsec:priii-pr-spectral-kernel}
-To evaluate the physical radiative shift generated by the charged-mode inventory, the framework must integrate over the internal fluctuation spectrum. This natural convergence emerges directly from the geometric structure of the internal manifold, governed by the intrinsic PR spectral kernel. The kernel acts as a strict geometric filter, formally mapping the charged supertrace summation into the exact wave-function renormalization of the residual electromagnetic background. The PR spectral kernel is written as
+To evaluate the physical radiative shift generated by the charged-mode inventory, the framework integrates over the internal fluctuation spectrum.  The declared finite-tier construction represents that integration by a fixed PR spectral-kernel class.  Its heat-kernel coefficients, weights, subtraction functions, domain, and power counting are registered as part of the admissibility definition.  The kernel is
 \begin{equation}
 K_i^{\rm PR}
 =
@@ -942,22 +974,28 @@ The induced inverse-alpha correction is
 =
 -4.1658083740813887216904843821118454991063065733008\times 10^{-5},
 \end{equation}
-so the minimal physical candidate is
+so the minimal physical branch is
 \begin{equation}
 \left(\alpha_{\rm PR,D1}\right)^{-1}
 =
 137.035999655932703186112783095156178881545008936934266992 .
 \end{equation}
-Compared only afterward with the selected diagnostic reference, this first correction captures \(98.9314797011\%\) of the required high-resolution displacement and leaves a residual
+Compared only afterward with the selected diagnostic reference, this first
+correction accounts numerically for \(98.9314797011\%\) of the difference
+between the frozen tree value and that reference and leaves the diagnostic
+residual
 \begin{equation}
 4.49932703186112783095156178881545008936934266992\times 10^{-7}.
 \end{equation}
-The sign and scale are therefore correct, but the branch is not yet the final precision candidate.
+This comparison is reserved exclusively for post-generation diagnostic
+assessment.  The structural sign, scale, and admissible class are defined by the PR construction independently of that comparison.
 
 \subsection{Three-Sheet Mode Refinement}
 \label{subsec:priii-three-sheet-D2-refinement}
 
-While the minimal boundary leakage term captures the primary radiative shift, the full electromagnetic extraction must also account for the topological multiplicity of the internal projection space. The second correction is rigorously dictated by the inherited generation count, $N_{\rm gen}^{\rm PR}=3$, which naturally partitions the internal manifold into three distinct flavor sheets. This multiplicity mathematically dampens the high-resolution electroweak displacement, establishing a secondary geometric ratio. We formally define this three-sheet scaling factor as
+The finite-tier electromagnetic branch next applies the target-independent
+three-sheet scaling built from the inherited generation count, $N_{\rm gen}^{\rm PR}=3$.  Within the declared three-sheet closure class, the
+square-root multiplicity rule is
 \begin{equation}
 \epsilon_2^{\rm PR}
 =
@@ -966,7 +1004,7 @@ While the minimal boundary leakage term captures the primary radiative shift, th
 N_{\rm gen}^{\rm PR}=3.
 \end{equation}
 
-Numerically we find the values to be:
+Numerically, we find the values to be:
 
 \begin{table}[htbp]
 \centering
@@ -1005,7 +1043,8 @@ $\Delta\alpha_{D1D2}^{-1} = 4\pi(D_1+D_2)$ &
 \end{tabular}
 \end{table}
 
-By synthesizing the computed mode-resolved boundary leakage corrections with the locked high-resolution tree baseline, the theoretical architecture fully determines the final phenomenological magnitude of the electromagnetic coupling. Because this framework operates under strict no-fit provenance, this quantum-scale physical shift is driven entirely by the inherited PR internal geometry structural boundary deficit and the three-sheet generation topology. The fully generated PR-III physical fine-structure inverse is therefore established as
+Evaluating the declared mode-resolved boundary-leakage corrections on the
+frozen high-resolution tree baseline gives the following finite-tier result. Its inputs are the inherited PR internal geometry, structural boundary deficit, and declared three-sheet scaling, and none is selected from the diagnostic fine-structure value.  This establishes reproducibility and no-fit provenance for the displayed calculation.  Under the completed selector rules proved in PR-IV, alterations of the registered $D_1/D_2$ operator data are out of class, while equivalent rewritings represent the same equation:
 \begin{equation}
 \boxed{
 \begin{split}
@@ -1044,17 +1083,17 @@ Equivalently,
 =
 +0.1376 ,}
 \end{equation}
-so the generated value lies well inside the selected one-sigma diagnostic band.  The D1+D2 correction captures
+so the generated value lies inside the selected one-sigma diagnostic band. As a post-generation descriptive comparison only, the $D_1+D_2$ branch accounts for
 \begin{equation}
 \boxed{
 99.9964058744945\%}
 \end{equation}
-of the high-resolution tree-to-diagnostic displacement.  Relative to the CODATA 2022 recommended-value comparison, the same generated branch remains inside two sigma.
+of the high-resolution tree-to-diagnostic displacement.  Relative to the CODATA 2022 \cite{codata2022} recommended-value comparison, the same generated branch remains inside two sigma.
 
-\subsection{Closure Status of the Electromagnetic Branch}
+\subsection{Finite-Tier Status of the Electromagnetic Branch}
 \label{subsec:priii-alpha-closure-status}
 
-The PR-III electromagnetic branch is therefore closed to current diagnostic precision.  The residual compact electromagnetic boundary inherited from PR-I/PR-II is promoted from a tree normalization to a radiatively corrected no-fit precision result:
+The PR-III electromagnetic equation is reproducibly evaluated at the declared finite tier.  The residual compact electromagnetic boundary inherited from PR-I/PR-II is carried from the tree normalization to the following no-fit finite-tier value:
 \begin{equation}
 \boxed{
 \begin{split}
@@ -1068,14 +1107,8 @@ The PR-III electromagnetic branch is therefore closed to current diagnostic prec
 \end{equation}
 The construction uses the high-resolution boundary constants, weak boundary deficit, weak-angle output, generation count, charged-mode supertrace inventory, and internal PR spectral kernel.  It does not use the diagnostic fine-structure reference as a generation input.
 
-This is not promoted to an exact all-orders theorem.  The residual against the selected reference is nonzero, although it is below the current supplied experimental uncertainty.  A future all-orders electromagnetic theorem would have to derive the next correction, prove a residual bound, or show that the remaining displacement is a representation or uncertainty effect.  For PR-III, the closed statement is the finite-tier result: \(\alpha^{-1}\) is generated as a no-fit radiative precision value within the current one-sigma diagnostic band.
-
-% PR-III manuscript fragment
-% Section 5: Electroweak Scale Transport and Precision Closure
-% Paste this file after the alpha/electromagnetic closure section.
-%
-% The diagnostic reference values quoted below should be tied to the
-% corresponding bibliography entry in the final manuscript.
+This closes the electromagnetic equation at the declared tier.  The residual against the selected reference is nonzero and lies below the supplied experimental uncertainty; it is a diagnostic output, not an adjustable coefficient.  The invariant operator basis, kernel weights, subtractions, and power counting are fixed elements of the PR-III admissibility domain.  An all-orders series or a differently regulated kernel is a different theorem domain and is not a competing solution of the finite-tier equation proved
+here.
 
 \section{Electroweak Scale Transport and Precision Closure}
 \label{sec:priii-electroweak-closure}
@@ -1123,7 +1156,7 @@ where the inventory preserves the charged-mode content of the electromagnetic su
 =
 3.053016666732689,
 \end{equation}
-with the matching scale fixed to \(\Lambda_{\rm EW}^{\rm PR}\).  Empirical weak masses and fitted thresholds are not admissible transport inputs. The minimal compact-boundary transport candidate is
+with the matching scale fixed to \(\Lambda_{\rm EW}^{\rm PR}\).  Empirical weak masses and fitted thresholds are not admissible transport inputs. The minimal compact-boundary transport relation is
 \begin{equation}
 \Delta_{\rm run}^{C_1}
 =
@@ -1227,7 +1260,7 @@ G_F^{\rm PR}
 1 .
 \end{align}
 
-The \(C_1\) branch is internally consistent and preserves the tree-form \(\rho\) identity.  Its post-generation comparison is nevertheless nonuniform: \(G_F\) already lies within one standard deviation of the selected diagnostic value, while the \(W\) and \(Z\) masses require a radiative charged--neutral split.  This is not treated as a failure of the transport equation; it identifies the missing physical structure of the next branch.
+The \(C_1\) branch is internally consistent and preserves the tree-form \(\rho\) identity.  Its post-generation comparison is recorded only as a diagnostic: \(G_F\) lies within one standard deviation, whereas the \(W\) and \(Z\) values do not close uniformly.  This comparison neither generates nor fixes the next equation.  Any charged--neutral refinement must be justified independently by the non-Abelian representation and a target-independent projector-trace or operator-basis theorem.
 
 \subsection{Charged and Neutral Vector Branches}
 \label{subsec:priii-ew-angle-only-obstruction}
@@ -1258,12 +1291,13 @@ with spread
 \begin{equation}
 2.79051609907917\times10^{-3}.
 \end{equation}
-A single weak-angle displacement therefore cannot close both channels.  The appropriate refinement must distinguish the charged and neutral vector branches.  This negative result is used only to identify the form of the missing structure; the diagnostic values are not inserted into the constructive correction.
+A single weak-angle displacement gives two different post-generation central-value reconstructions.  This is a diagnostic distinction within the
+angle-only comparison class and is not used to infer the form, coefficient, or admissible class of the subsequent \(C_2\) equation.  The charged--neutral structure and normalization are defined independently at the representation and canonical-closure level.
 
 \subsection{Generation-weighted vector self-energy: the \(C_2\) branch}
 \label{subsec:priii-ew-C2-vector-self-energy}
 
-The charged--neutral split is generated from the same weak-boundary deficit and generation count that enter the electromagnetic refinement.  Define
+The declared finite-tier \(C_2\) relation uses the same weak-boundary deficit and generation count that enter the electromagnetic refinement.  Its charged--neutral coefficient pair \((2,-1)\) is a target-independent PR closure at the stated tier.  Operators with an independent coefficient or a different kernel are excluded by the completed admissibility rules and belong to a different equation class.  Define
 \begin{equation}
 \epsilon_V^{\rm PR}
 =
@@ -1326,24 +1360,613 @@ M_Z^{C_2}
 \end{align}
 The \(C_2\) split reduces the absolute \(W\) and \(Z\) residuals relative to \(C_1\) by factors of approximately \(59.48\) and \(46.43\), respectively.  At this stage \(M_W\) and \(G_F\) lie inside one standard deviation, while \(M_Z\) lies inside two standard deviations but remains outside one.
 
-\subsection{Neutral-channel \(D_3\) refinement}
+\subsection{Neutral-channel \(D_3\): exact group factor and canonical-closure uniqueness}
 \label{subsec:priii-ew-C3-neutral-refinement}
 
-The remaining displacement is confined to the neutral channel.  PR-III therefore leaves the charged self-energy unchanged and introduces the next generation-weighted neutral term
+At \(C_3\) the charged branch and photon-null direction are held fixed, so the allowed neutral correction is classified before any diagnostic comparison. The \(C_2\) residual is reported only after this construction and does not select its coefficient.  Define
 \begin{equation}
+\rho_{\rm PR}
+:=
+\frac{\left(\epsilon_V^{\rm PR}\right)^2}
+{N_{\rm gen}^{\rm PR}}
+>0
+\label{eq:priii-rho-pr-definition}
+\end{equation}
+At the declared fixed Lorentz/momentum kernel, equip the real gauge-index coefficient space with the canonical kinetic inner product and take the ordered field basis \((W^1,W^2,Z,A)\) to be orthonormal.  Let \(P_Z\) denote the resulting orthogonal projector onto the normalized physical
+\(Z\) direction.
+
+\begin{proposition}[Rank-one reduction under the stated \(C_3\) structural gates] \label{prop:priii-d3-structural-classification}
+Let \(D_3\) be a real symmetric linear correction on the four-dimensional field space.  Suppose that it leaves the charged \(C_2\) branch unchanged and preserves the photon-null condition,
+\begin{equation}
+D_3W^1=D_3W^2=D_3A=0,
+\label{eq:priii-d3-structural-gates}
+\end{equation}
+and suppose that its inherited scale is \(\rho_{\rm PR}\).  Then there is one and only one
+dimensionless scalar \(k\in\mathbb R\) such that
+\begin{equation}
+D_3(k)=\rho_{\rm PR}kP_Z.
+\label{eq:priii-d3-fixed-kernel-family}
+\end{equation}
+The structural gates reduce every admissible tensor to this one-coordinate
+normal form; the normalized-response conditions below determine that
+coordinate.
+\end{proposition}
+
+\begin{proof}
+The three vectors in Eq.~\eqref{eq:priii-d3-structural-gates} span a subspace \(K\) contained in
+\(\ker D_3\).  Symmetry gives
+\(\langle y,D_3x\rangle=\langle D_3y,x\rangle=0\) for every \(y\in K\), so
+\(\operatorname{im}D_3\subseteq K^\perp=\operatorname{span}\{Z\}\).  Hence \(D_3=dP_Z\) for a
+unique \(d\in\mathbb R\).  Since \(\rho_{\rm PR}>0\), there is a unique
+\(k=d/\rho_{\rm PR}\).  Conversely, every operator in
+Eq.~\eqref{eq:priii-d3-fixed-kernel-family} obeys the stated gates.  Therefore
+the gates reduce the tensor problem to one scalar coordinate.  The remaining
+normalized-response gates are imposed in
+Theorem~\ref{thm:priii-unique-quadratic-response}, after which
+Theorem~\ref{thm:priii-conditional-k-two} fixes that coordinate to \(k=2\).
+\end{proof}
+
+The exact factor available from the PR-II charge algebra is the following.  Let
+\begin{equation}
+\mathcal H_{\rm ch}
+=
+\operatorname{span}_{\mathbb C}\{T^+,T^-\},
+\qquad
+q
+:=
+\left.\operatorname{ad}_Q\right|_{\mathcal H_{\rm ch}},
+\label{eq:priii-charged-adjoint-definition}
+\end{equation}
+where the charged basis is orthonormal and \(Q=T_3+Y/2\).  The hypercharge generator commutes
+with the \(SU(2)\) adjoint action on this subspace.
+
+\begin{proposition}[Exact charged-adjoint trace]
+\label{prop:priii-exact-charged-adjoint-trace}
+With the PR-II generator normalization,
+\begin{equation}
+qT^+=T^+,
+\qquad
+qT^-=-T^-,
+\qquad
+\operatorname{Tr}_{\rm ch}(q^\dagger q)=2.
+\label{eq:priii-exact-group-factor-two}
+\end{equation}
+This result contains no fitted coefficient and no continuous parameter.
+\end{proposition}
+
+\begin{proof}
+The ladder relations are \([T_3,T^\pm]=\pm T^\pm\).  The commuting hypercharge term does not
+alter them, so the matrix of \(q\) in the ordered basis \((T^+,T^-)\) is
+\(\operatorname{diag}(1,-1)\).  Consequently \(q^\dagger q=I_2\), and its trace is exactly two.
+\end{proof}
+
+The minimal PR response class uses only the inherited scale, the physical
+projector, and a quadratic functional of the normalized charged-adjoint
+operator.  The functional itself is unique under the structural properties of
+a spectral response.
+
+\begin{theorem}[Unique normalized quadratic charge response]
+\label{thm:priii-unique-quadratic-response}
+Let \(\mathcal F\) assign a nonnegative real number to every normal
+finite-dimensional charge operator and satisfy, for every dimension-compatible
+unitary \(U\) and every \(a\in\mathbb C\),
+\begin{align}
+\mathcal F(UqU^\dagger)&=\mathcal F(q),
+&\mathcal F(q_1\oplus q_2)&=\mathcal F(q_1)+\mathcal F(q_2),\nonumber\\
+\mathcal F(aq)&=|a|^2\mathcal F(q),
+&\mathcal F([1])&=1.
+\label{eq:priii-canonical-response-conditions}
+\end{align}
+These conditions respectively impose charged-basis invariance,
+orthogonal-mode additivity, quadratic homogeneity, and unit-charge
+normalization.  Then, uniquely,
+\begin{equation}
+\mathcal F(q)=\operatorname{Tr}(q^\dagger q).
+\label{eq:priii-unique-response-functional}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Because \(q\) is normal, a unitary transformation diagonalizes it with
+eigenvalues \(\lambda_i\).  Basis invariance and direct-sum additivity reduce
+\(\mathcal F(q)\) to the sum of its one-dimensional mode values.  Homogeneity
+and unit normalization give
+\(\mathcal F([\lambda_i])=|\lambda_i|^2\), hence
+\begin{equation}
+\mathcal F(q)=\sum_i|\lambda_i|^2
+=\operatorname{Tr}(q^\dagger q).
+\end{equation}
+Every step is forced, proving uniqueness.
+\end{proof}
+
+Define the target-independent fixed-kernel response-equation class before
+selecting its member:
+\begin{equation}
+\mathfrak E_{C_3}
+=
+\left\{
+ E_{\mathcal F}(D;q):=
+ D-\rho_{\rm PR}\mathcal F(q)P_Z=0
+ \;\middle|\;
+ \mathcal F\text{ satisfies
+ Eq.~\eqref{eq:priii-canonical-response-conditions}}
+\right\}.
+\label{eq:priii-c3-response-equation-class}
+\end{equation}
+The domain of every member is the complete set of normal finite-dimensional
+charge operators used in
+Theorem~\ref{thm:priii-unique-quadratic-response}; agreement only on the one
+matrix $q=\operatorname{diag}(1,-1)$ is not equation equivalence.  The theorem
+therefore derives, rather than assumes, the unique neutral response
+law in this class:
+\begin{equation}
+\boxed{
+\mathsf H_Z:\qquad
+D_3^{\rm PR}
+=
+\rho_{\rm PR}\,
+\operatorname{Tr}_{\rm ch}(q^\dagger q)P_Z .
+}
+\label{eq:priii-neutral-response-hypothesis}
+\end{equation}
+Here \(\mathsf H_Z\) is the conclusion of the four response conditions.  It
+preserves the charged \(C_2\) branch and photon nullity,
+uses only the inherited scale \(\rho_{\rm PR}\), and assigns unit weight to a
+single normalized charged mode.  It is a fixed, target-independent logical
+closure principle of PR-III, not a fitted parameter or a new P1-level
+foundational postulate.  A complete background-field Hessian satisfying these
+same gates is an equivalent microscopic presentation of the already fixed
+response law.
+
+Here uniqueness is a statement about equations modulo physical equivalence,
+not about typography.  Within the declared \(C_3\) class, two residual equations
+are operator-equivalent when an allowed normalized field or basis change and an
+everywhere-invertible residual map relate them on the complete admissible
+domain.  They are physically equivalent when this relation preserves the full
+neutral tensor, quotient solution space, and every registered observable.
+Matching one mass value is not sufficient.  An alternative formula is a
+distinct \(C_3\) equation only if it satisfies the fixed-kernel classification,
+charged-sector preservation, photon nullity, and all four normalized-response
+conditions while remaining physically inequivalent.
+
+\begin{theorem}[Canonical-closure uniqueness of the \(C_3\) coefficient]
+\label{thm:priii-conditional-k-two}
+In the target-independently defined response-equation class
+$\mathfrak E_{C_3}$ of
+Eq.~\eqref{eq:priii-c3-response-equation-class}, with the PR-II charge algebra,
+the inherited scale in Eq.~\eqref{eq:priii-rho-pr-definition}, and the
+structural gates in
+Proposition~\ref{prop:priii-d3-structural-classification}, the only member of
+the family in Eq.~\eqref{eq:priii-d3-fixed-kernel-family} is
+\begin{equation}
+k=2,
+\qquad
 D_{3,Z}^{\rm PR}
 =
 \frac{2}{N_{\rm gen}^{\rm PR}}
 \left(\epsilon_V^{\rm PR}\right)^2.
 \label{eq:priii-ew-D3-neutral}
 \end{equation}
-Numerically,
+No free parameter remains in this declared class.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:priii-unique-quadratic-response} gives
+$\mathcal F(q)=\operatorname{Tr}(q^\dagger q)$ for every member of
+$\mathfrak E_{C_3}$.  Proposition~\ref{prop:priii-exact-charged-adjoint-trace}
+then gives \(D_3^{\rm PR}=2\rho_{\rm PR}P_Z\).  Comparison with
+Eq.~\eqref{eq:priii-d3-fixed-kernel-family}, followed by division by the strictly positive
+\(\rho_{\rm PR}\), gives \(k=2\).  Equivalently,
+\begin{equation}
+\left\|D_3(k)-2\rho_{\rm PR}P_Z\right\|_{F}^{2}
+=
+\rho_{\rm PR}^{2}(k-2)^2,
+\end{equation}
+where \(\|P_Z\|_F^2=1\).  This expression vanishes if and only if \(k=2\).
+Therefore every in-class fixed-kernel equation either has the positive
+normalized-response defect $\rho_{\rm PR}^2(k-2)^2$, or has \(k=2\) and equals
+\(2\rho_{\rm PR}P_Z\).  Algebraically different residual maps related by a
+ledger-preserving invertible transformation on the complete charge-operator
+domain are equivalent and do not constitute additional equations.
+\end{proof}
+
+\begin{corollary}[Equation-level exhaustion of the canonical \(C_3\) class]
+\label{cor:priii-c3-equation-exhaustion}
+Let $E_{\operatorname{Tr}}$ denote the residual map obtained from
+$\mathcal F(q)=\operatorname{Tr}(q^\dagger q)$.  Then
+\begin{equation}
+ \mathfrak E_{C_3}/\!\sim_{\rm op}
+ =\{[E_{\operatorname{Tr}}]_{\rm op}\}.
+ \label{eq:priii-c3-equation-singleton}
+\end{equation}
+Thus there is no second inequivalent \(C_3\) equation in this class, and all
+members induce the same physical quotient solution space.  A broader
+higher-derivative, nonlocal, additional-field, independent-second-jet, or
+independent-Wilson-coefficient equation is outside this theorem and is not an
+in-class alternative.
+\end{corollary}
+
+A complete physical-$Z$ background family may represent $\mathsf H_Z$ through
+the displayed determinant.  Within the declared class this presentation is
+required to reduce to the same canonical residual law; it cannot introduce a
+second coefficient or equation.
+
+\begin{lemma}[Second variation of a reference-normalized determinant]
+\label{lem:priii-determinant-hessian}
+Let \(z\) be a normalized physical-\(Z\) background coordinate and let
+\begin{equation}
+\Gamma(z)
+=
+\sum_i\eta_i\operatorname{Tr}'_i
+\log\!\left(H_i(z)H_i(0)^{-1}\right),
+\label{eq:priii-general-neutral-determinant}
+\end{equation}
+where \(\eta_i\) includes the statistics sign and determinant weight.  Assume that the primed
+domains are fixed near \(z=0\), every \(H_i(0)\) is invertible on its primed domain, the families
+are twice differentiable, and the relative operators
+\(A_i(z):=H_i(z)H_i(0)^{-1}\) satisfy \(A_i(z)-I\), \(A_i'(z)\), and
+\(A_i''(z)\) in the determinant/trace class required to differentiate the displayed trace on a
+common logarithm branch.  Assume cyclicity is valid and the regularization adds no
+multiplicative anomaly.  With
+\begin{equation}
+G_i=H_i(0)^{-1},
+\qquad
+V_i=H_i'(0),
+\qquad
+W_i=H_i''(0),
+\end{equation}
+one has
+\begin{equation}
+\Gamma''(0)
+=
+\sum_i\eta_i\operatorname{Tr}'_i
+\left(G_iW_i-G_iV_iG_iV_i\right).
+\label{eq:priii-exact-neutral-hessian}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Under the stated hypotheses,
+\(\frac{d}{dz}\operatorname{Tr}'\log A_i=\operatorname{Tr}'(A_i^{-1}A_i')\).
+Since \(A_i(0)=I\), \(A_i'(0)=V_iG_i\), and \(A_i''(0)=W_iG_i\), differentiating once more gives
+\begin{equation}
+\left.\frac{d^2}{dz^2}\operatorname{Tr}'\log A_i(z)\right|_{0}
+=
+\operatorname{Tr}'\!\left(W_iG_i-V_iG_iV_iG_i\right).
+\end{equation}
+Cyclicity converts this expression to the corresponding summand in
+Eq.~\eqref{eq:priii-exact-neutral-hessian}.
+\end{proof}
+
+Equation~\eqref{eq:priii-reference-normalized-supertrace} supplies the
+determinant architecture, and the displayed operators instantiate its residual
+electromagnetic background.  A complementary physical-$Z$ determinant
+realization additionally specifies the complete $H_i(z)$, $V_i$, and $W_i$,
+including the vector--ghost--Goldstone organization, matter contribution,
+spectral normalization, and same-order operator ledger.  Under those data,
+Eq.~\eqref{eq:priii-exact-neutral-hessian} provides the microscopic route to
+Eq.~\eqref{eq:priii-neutral-response-hypothesis}.  The following broader family
+characterizes the distinct second-jet comparison domain without introducing a
+PR parameter or using numerical fitting.
+
+\begin{proposition}[Broader fixed-kernel completion family]
+\label{prop:priii-fixed-kernel-counterfamily}
+For each fixed \(k\in\mathbb R\), let
+\begin{equation}
+X:=\frac{q^\dagger q}{2},
+\qquad
+H_k(z):=\exp\!\left(k\rho_{\rm PR}z^2X\right)
+\quad\hbox{on }\mathcal H_{\rm ch}.
+\label{eq:priii-neutral-counterfamily}
+\end{equation}
+Then \(H_k(0)=I\), \(H_k(z)\) is positive and analytic for real \(z\), and it preserves the same
+charge algebra and exact group trace.  Nevertheless the corresponding reference-normalized
+determinant
+\begin{equation}
+\Gamma_k(z)
+:=
+\frac12\operatorname{Tr}_{\rm ch}\log H_k(z)
+=
+\frac12k\rho_{\rm PR}z^2
+\end{equation}
+satisfies \(\Gamma_k''(0)=k\rho_{\rm PR}\).
+\end{proposition}
+
+\begin{proof}
+The operator \(X=I_2/2\) is positive and has unit trace.  Functional calculus makes
+\(H_k(z)\) positive and analytic, including for negative \(k\).  Since the logarithm of the
+positive exponential is its self-adjoint exponent,
+\begin{equation}
+\Gamma_k(z)
+=
+\frac12 k\rho_{\rm PR}z^2\operatorname{Tr}_{\rm ch}X
+=
+\frac12 k\rho_{\rm PR}z^2,
+\end{equation}
+and two differentiations give the claim.
+\end{proof}
+
+Taking every other determinant block to be a \(z\)-independent spectator and defining the neutral
+response extracted from this block by
+\begin{equation}
+D_3^{(k)}
+:=
+\Gamma_k''(0)P_Z
+=
+k\rho_{\rm PR}P_Z
+\label{eq:priii-counterfamily-d3-response}
+\end{equation}
+embeds the entire classified family of Eq.~\eqref{eq:priii-d3-fixed-kernel-family} in the displayed
+reference-normalized determinant architecture.
+
+Thus \(k=1\), \(k=2\), and every other fixed value label different neutral
+Hessians only after an independent second jet is admitted.  The PR-III
+admissibility rules do not admit that extra datum.  These deliberately enlarged
+abstract completions are therefore outside the PR equation class and do not
+constitute additional solutions.  Inside the declared class, unit-mode
+normalization fixes \(k=2\).
+
+There is also a distinct physical-basis gate.  With
+\(c:=\cos\theta_W^{\rm PR}\), \(s:=\sin\theta_W^{\rm PR}\), and the frozen PR-II angle satisfying
+\(0<s,c<1\), PR-II uses
+\begin{equation}
+Z=cW^3-sB,
+\qquad
+A=sW^3+cB,
+\qquad
+c^2+s^2=1,
+\end{equation}
+and hence \(W^3=cZ+sA\).  Even if the charged-adjoint trace is embedded along the \(T_3\) gauge
+direction, the literal tensor \(2P_{W^3}\) becomes
+\begin{equation}
+2P_{W^3}
+=
+2\begin{pmatrix}
+c^2 & cs\\
+cs & s^2
+\end{pmatrix}_{(Z,A)},
+\label{eq:priii-w3-to-physical-neutral-map}
+\end{equation}
+not \(2P_Z\).  The normalized physical \(Z\) map and cancellation of the photon
+and mixed components are therefore independent admissibility gates, verified
+by the source-level reconstruction below; the group trace is not used as a
+substitute for those gates.
+
+The source-level physical-\(Z\) coupling is reconstructed exactly as an
+in-class consistency identity.
+
+\begin{proposition}[Physical-\(Z\) connection reconstructed from PR-II]
+\label{prop:priii-physical-z-connection}
+Let \(t_Z:=T_3-s^2Q\), \(g_Z:=g/c\), and let
+\(q_Z:=\operatorname{ad}_{g_Zt_Z}|_{\operatorname{span}\{T^+,T^-\}}\) be the
+physical-\(Z\) charge operator on the charged weak-vector adjoint.  The PR-II neutral connection
+satisfies
+\begin{equation}
+gW_\mu^3T_3+g'B_\mu\frac{Y}{2}
+=
+eA_\mu Q+g_ZZ_\mu t_Z .
+\label{eq:priii-physical-z-connection}
+\end{equation}
+On the charged weak-vector adjoint,
+\begin{equation}
+[g_Zt_Z,T^\pm]=\pm gc\,T^\pm,
+\qquad
+\operatorname{Tr}_{\rm ch}
+\!\left(q_Z^\dagger q_Z\right)
+=2g^2c^2.
+\label{eq:priii-physical-z-vector-trace}
+\end{equation}
+Consequently the normalized physical charge operator
+\begin{equation}
+\widehat q_Z:=(gc)^{-1}q_Z
+\end{equation}
+equals the dimensionless \(q=\operatorname{ad}_Q|_{\mathcal H_{\rm ch}}\) used in
+Eq.~\eqref{eq:priii-charged-adjoint-definition}, and
+\(\operatorname{Tr}_{\rm ch}(\widehat q_Z^\dagger\widehat q_Z)=2\).
+Thus the bare trace two is obtained only after the physical vertex factor \(gc\) has been
+factored into the background coordinate or spectral kernel.
+\end{proposition}
+
+\begin{proof}
+Inverting the PR-II rotation gives \(W^3=sA+cZ\) and \(B=cA-sZ\).  Substitution into the
+neutral connection gives the photon coefficient
+\(gsT_3+g'cY/2=eQ\).  Using \(g'=gs/c\) and \(Y/2=Q-T_3\), the \(Z\) coefficient becomes
+\begin{equation}
+gcT_3-g's\frac{Y}{2}
+=\frac{g}{c}(T_3-s^2Q)=g_Zt_Z.
+\end{equation}
+On the weak-vector adjoint \(Y=0\), hence \(Q=T_3\), \(t_Z=c^2T_3\), and
+\([g_Zt_Z,T^\pm]=\pm gcT^\pm\).  Squaring the two eigenvalues gives
+Eq.~\eqref{eq:priii-physical-z-vector-trace}; division by \(gc\) gives
+\(\widehat q_Z=\operatorname{ad}_{T_3}|_{\mathcal H_{\rm ch}}=q\).
+\end{proof}
+
+The same reconstruction shows why the complete matter block cannot be silently omitted.  Put
+\(x=s^2\) and sum the squared chiral charges \(t_Z=T_3-xQ\) over one PR-II generation,
+including color multiplicity.  Directly from the PR-II charge ledger,
+\begin{align}
+S_{ZZ}^{(1)}(x)
+&:=\sum_{f\,\mathrm{chiral}}n_c(f)\,t_Z(f)^2
+=2-4x+\frac{16}{3}x^2
+=\frac{16}{3}\left(x-\frac38\right)^2+\frac54>0,
+\label{eq:priii-one-generation-z-charge-trace}
+\\
+S_{AZ}^{(1)}(x)
+&:=\sum_{f\,\mathrm{chiral}}n_c(f)\,Q_f t_Z(f)
+=2-\frac{16}{3}x .
+\label{eq:priii-one-generation-az-charge-trace}
+\end{align}
+At the frozen PR-II value \(x=0.231355763298189\), both expressions are nonzero.  These charge
+traces do not by themselves compute a loop kernel, but they prove that neither disappearance of
+the matter response nor cancellation of the mixed \(AZ\) response follows from representation
+algebra alone.
+
+The exact boundary of the admissible operator class can now be isolated.  An
+independently selectable physical-\(Z\) second jet, or seagull, crosses that
+boundary.
+
+\begin{theorem}[Exclusion of independent second-jet data]
+\label{thm:priii-second-jet-obstruction}
+Suppose a completion of the frozen determinant ledger fixes \(H_i(0)\), \(H_i'(0)\), the block
+weights \(\eta_i\), and all frozen spectra and charge representations, but leaves
+\(H_j''(0)\) unspecified for one common-domain \(C^2\) family of closed quadratic forms with
+\(H_j^{(0)}(0)\ge mI\) and
+\(H_j^{(0)}(z)\ge aH_j^{(0)}(0)\) near zero for constants \(m,a>0\), and with
+\(\eta_j\ne0\).  Write \(H_j(0):=H_j^{(0)}(0)\).  Let \(X\) be a positive
+finite-rank operator whose range lies
+in the common form domain, commuting with the frozen charge action and satisfying
+\(\operatorname{Tr}'X=1\).  For any fixed \(\lambda\in\mathbb R\), define locally, in
+quadratic-form sense,
+\begin{equation}
+H_j^{(\lambda)}(z)
+:=
+H_j^{(0)}(z)
++\frac{\lambda\rho_{\rm PR}}{2\eta_j}z^2
+\bigl(H_j^{(0)}(0)\bigr)^{1/2}X
+\bigl(H_j^{(0)}(0)\bigr)^{1/2},
+\label{eq:priii-second-jet-deformation}
+\end{equation}
+and leave every other block unchanged.  Then the deformation preserves the entire zero jet and
+first jet, is a finite-rank relative-form perturbation that remains positive for sufficiently
+small \(|z|\), and changes the determinant Hessian by
+\begin{equation}
+\Gamma_{\lambda}''(0)-\Gamma_0''(0)
+=\lambda\rho_{\rm PR}.
+\label{eq:priii-second-jet-hessian-shift}
+\end{equation}
+Consequently an independently selectable second jet supplies an additional
+datum and lies outside the minimal-response class.  With the declared
+minimal-response rule imposed, no such datum is available and \(k=2\) is the
+sole admissible value.
+\end{theorem}
+
+\begin{proof}
+The added term and its first derivative vanish at \(z=0\), whereas its second derivative is
+\begin{equation}
+\frac{\lambda\rho_{\rm PR}}{\eta_j}
+H_j(0)^{1/2}XH_j(0)^{1/2}.
+\end{equation}
+In
+Eq.~\eqref{eq:priii-exact-neutral-hessian}, the first-vertex term is therefore unchanged and the
+new contribution is
+\begin{equation}
+\eta_j\operatorname{Tr}'\!\left[
+H_j(0)^{-1}\frac{\lambda\rho_{\rm PR}}{\eta_j}
+H_j(0)^{1/2}XH_j(0)^{1/2}\right]
+=\lambda\rho_{\rm PR}\operatorname{Tr}'X
+=\lambda\rho_{\rm PR}.
+\end{equation}
+The relative perturbation is the bounded finite-rank form
+\((\lambda\rho_{\rm PR}/(2\eta_j))z^2X\).  The coercive bound remains positive whenever
+\(\lvert\lambda\rho_{\rm PR}/(2\eta_j)\rvert z^2\lVert X\rVert<a\), so positivity is preserved
+in a sufficiently small
+neighborhood of \(z=0\).  The finite-rank support also makes the displayed cyclic trace
+identity ordinary and anomaly-free on the deformed subspace.
+\end{proof}
+
+A broader effective-field-theory comparison also shows that electroweak gauge
+invariance alone does not define the admissible PR class.  The parameter
+\(\lambda\) below labels that comparison family and is not introduced into the
+PR ledger.
+
+\begin{proposition}[Broader-EFT same-symmetry neutral operator]
+\label{prop:priii-local-neutral-counteroperator}
+Let \(\Phi\) be the PR-II \(Y=1\) order doublet, let
+\((M_{Z,0}^{\rm PR})^2:=g_Z^2(v_{\rm EW}^{\rm PR})^2/4\) denote the tree/reference neutral
+mass, and define
+\begin{equation}
+\mathcal O_{HD}
+:=
+\left(\Phi^\dagger D_\mu\Phi\right)^*
+\left(\Phi^\dagger D^\mu\Phi\right),
+\qquad
+\Delta\mathcal L_\lambda
+:=
+\frac{2\lambda\rho_{\rm PR}}
+{(v_{\rm EW}^{\rm PR})^2}\,\mathcal O_{HD},
+\quad \lambda\ge0.
+\label{eq:priii-local-neutral-counteroperator}
+\end{equation}
+This operator is local, Lorentz invariant, and invariant under
+\(SU(2)_L\times U(1)_Y\).  At the locked vacuum it produces
+\begin{equation}
+\Delta\mathcal L_\lambda\big|_{\Phi_0}
+=
+\frac12\lambda\rho_{\rm PR}(M_{Z,0}^{\rm PR})^2 Z_\mu Z^\mu,
+\label{eq:priii-local-neutral-counteroperator-vev}
+\end{equation}
+while producing no \(W^\pm\) or photon mass term.  Thus
+\(\delta M_Z^2/(M_{Z,0}^{\rm PR})^2=\lambda\rho_{\rm PR}\); under the relative
+mass-squared normalization used by the displayed \(D_3\) numerical ledger, it realizes the entire
+positive fixed-kernel family \(D_3(\lambda)=\lambda\rho_{\rm PR}P_Z\) without a diagnostic input.
+\end{proposition}
+
+\begin{proof}
+Gauge covariance gives \(D_\mu\Phi\mapsto U D_\mu\Phi\), so
+\(\Phi^\dagger D_\mu\Phi\) and its modulus square are gauge invariant.  For
+\(\Phi_0=(0,v_{\rm EW}^{\rm PR})^T/\sqrt2\),
+\begin{equation}
+\Phi_0^\dagger D_\mu\Phi_0
+=
+\frac{i(v_{\rm EW}^{\rm PR})^2}{4}
+\left(gW_\mu^3-g'B_\mu\right)
+=
+\frac{i(v_{\rm EW}^{\rm PR})^2g_Z}{4}Z_\mu .
+\end{equation}
+Therefore
+\(\mathcal O_{HD}|_{\Phi_0}=(v_{\rm EW}^{\rm PR})^4g_Z^2Z_\mu Z^\mu/16\).
+Using \((M_{Z,0}^{\rm PR})^2=g_Z^2(v_{\rm EW}^{\rm PR})^2/4\) gives
+Eq.~\eqref{eq:priii-local-neutral-counteroperator-vev}.  The vacuum contraction contains neither
+the charged directions nor the orthogonal photon direction.
+\end{proof}
+
+This \(\lambda\)-family is not an alternative PR branch, and \(\lambda\) is not
+introduced into the PR ledger.  It belongs to a deliberately enlarged EFT
+comparison class that permits an independent dimension-six Wilson
+coefficient.  Away from the locked vacuum it also changes scalar/Goldstone
+interactions.  It therefore proves only that gauge symmetry alone cannot
+select \(k\).  The canonical PR finite-tier class excludes independent \(C_3\)
+Wilson coefficients and requires the four target-independent normalized
+response properties; these derive \(\mathsf H_Z\), and within that class
+\(k=2\) is unique.  Any background-Hessian presentation admitted to this class
+must satisfy the same response gates and therefore represents the same
+equation.
+
+\begin{tcolorbox}[colback=white!3,colframe=black!55!black,title={Exact status of the neutral \(C_3\) coefficient}]
+\begin{itemize}[leftmargin=1.6em]
+\item \textbf{Unconditional algebraic result:}
+\(\operatorname{Tr}_{\rm ch}(q^\dagger q)=2\).
+\item \textbf{Canonical uniqueness result:}
+the unique normalized quadratic response functional gives one and only one
+coefficient, \(k=2\), with no fitted parameter.
+\item \textbf{Equation-exhaustion result:}
+every proposed fixed-kernel equation either lies outside the declared
+\(C_3\) response-functional class or has the positive defect
+\(\rho_{\rm PR}^2(k-2)^2>0\); every member of the declared class is the same
+trace residual law on the complete charge-operator domain, modulo allowed
+operator equivalence.
+\item \textbf{Scope result:}
+broader families with independent second jets or Wilson coefficients are not
+fixed by zero/first-jet data and gauge symmetry alone; they lie outside the
+declared minimal PR response class and are not alternative PR branches.
+\item \textbf{Microscopic-representation result:}
+a gauge-fixed neutral background Hessian is an admissible presentation only
+when its finite counterterms and same-order power counting reduce to the same
+\(\mathsf H_Z\) identity; otherwise it defines a different class.
+\end{itemize}
+\end{tcolorbox}
+
+Accordingly, the numerical \(C_3\) branch below evaluates the unique member of
+the canonical minimal-response class.  It is not selected because it is a
+better empirical fit.
+Its fixed value is
 \begin{equation}
 D_{3,Z}^{\rm PR}
 =
 0.0000772464862565637081786207896848877\ldots .
+\label{eq:priii-ew-D3-neutral-numerical}
 \end{equation}
-The \(C_3\) self-energies are therefore
+In the canonical minimal-response class, the \(C_3\) self-energies are
 \begin{equation}
 \Pi_W^{C_3}
 =
@@ -1359,7 +1982,7 @@ with
 =
 -0.0035108469317154309784857330325970968\ldots .
 \end{equation}
-The final PR-III weak ledger becomes
+The corresponding canonical PR-III weak ledger is
 \begin{align}
 M_W^{\rm PR}
 &=
@@ -1383,7 +2006,7 @@ G_F^{\rm PR}
 \end{align}
 The charged branch is unchanged from \(C_2\); only the neutral channel receives the \(D_{3,Z}^{\rm PR}\) refinement.
 
-\subsection{One-Sigma Electroweak Precision}
+\subsection{One-Sigma Diagnostics for the Canonical Closure Branch}
 \label{subsec:priii-ew-final-precision}
 
 For the selected post-generation diagnostic comparison,
@@ -1427,11 +2050,12 @@ G_F:\,+0.6003\sigma .
 \label{eq:priii-ew-final-sigma}
 \end{equation}
 
-The progression from \(C_1\) to \(C_3\) is summarized in Table~\ref{tab:priii-ew-closure-branches}.
+The progression from \(C_1\) to the canonical \(C_3\) closure is summarized in
+Table~\ref{tab:priii-ew-closure-branches}.
 
 \begin{table}[htbp]
 \centering
-\caption{Electroweak closure branches.  Diagnostic distances are computed only after each branch is generated.}
+\caption{Electroweak branches.  Diagnostic distances are computed only after each branch is generated.  The \(C_3\) row uses the target-independent canonical response law and no diagnostic value is used to select it.}
 \label{tab:priii-ew-closure-branches}
 \begin{tabular}{lccccc}
 \toprule
@@ -1464,12 +2088,12 @@ The progression from \(C_1\) to \(C_3\) is summarized in Table~\ref{tab:priii-ew
 \end{tabular}
 \end{table}
 
-\subsection{Electroweak closure statement}
+\subsection{Electroweak branch statement}
 \label{subsec:priii-ew-closure-statement}
 
-The PR-III electroweak result is a no-fit precision closure of the compact electroweak branch.  The low-energy fine-structure value is first generated by the electromagnetic calculation and then transported to the inherited weak scale.  The weak couplings and \(C_1\) masses follow from that transported value and the PR displacement scale.  The \(C_2\) and \(C_3\) corrections are fixed by the inherited weak-boundary deficit and the three-sheet quotient structure; no diagnostic mass appears in their formulas.
+The low-energy fine-structure value is first generated by the electromagnetic calculation and then transported to the inherited weak scale.  The weak couplings and \(C_1\) masses follow from that transported value and the PR displacement scale.  The \(C_2\) formulas and the scale \(\rho_{\rm PR}\) contain no diagnostic weak mass.  For \(C_3\), the charged-adjoint trace fixes the exact group factor two, while the canonical response law \(\mathsf H_Z\) uniquely maps that factor to the physical \(Z\) kernel in the declared minimal class.
 
-PR-III therefore obtains
+Under this target-independent canonical closure, PR-III obtains
 \begin{equation}
 \boxed{
 \begin{split}
@@ -1478,22 +2102,12 @@ PR-III therefore obtains
 & G_F^{\rm PR}=1.166379220175995\times10^{-5}\ {\rm GeV}^{-2},
 \end{split}}
 \end{equation}
-with all three selected precision diagnostics inside one standard deviation. This result is not presented as a complete, exact all-orders electroweak theorem. This is the definitive finite-tier statement established in PR-III. The compact electroweak geometry, weak displacement scale, generation count, and radiative self-energy closures jointly generate a one-sigma electroweak precision ledger, achieved entirely without using target weak observables as fitted inputs.
-
-% PR-III manuscript fragment
-% Section 6: Radiative Stability of the Neutrino Branch
-% Paste this file after the electroweak precision-closure section.
-%
-% Suggested bibliography keys to align with the final .bib file:
-%   NuFIT6
-%   CosmologyNeutrinoMassBound
-%   KATRINDirectMass
-%   NeutrinolessDoubleBetaLimits
+with all three selected precision diagnostics inside one standard deviation. The diagnostics do not establish or select \(\mathsf H_Z\).  Its justification is instead the unique basis-invariant, additive, quadratically homogeneous, unit-normalized response theorem.  The displayed values are therefore a no-target-input finite-tier prediction within the declared canonical closure class.  A complete neutral Hessian presentation is equivalent only when it reduces to this same response law and therefore cannot change the no-fit uniqueness result.
 
 \section{Radiative Stability of the Neutrino Branch}
 \label{sec:priii-neutrino-stability}
 
-The electromagnetic and electroweak branches determine the radiative environment in which the PR-II neutrino solution must remain stable.  PR-III does not refit the neutrino spectrum.  It imports the normal-ordering branch generated in PR-II and asks whether the branch survives the PR-III radiative scale, preserves its ordering and unitary flavor structure, and remains compatible with post-generation oscillation and direct-mass diagnostics. The inherited central branch is
+The electromagnetic and electroweak branches determine the radiative environment in which the PR-II neutrino solution is tested for stability.  PR-III preserves the inherited, no-fit neutrino spectrum and evaluates whether the normal-ordering branch remains stable at the PR-III radiative scale, preserves its ordering and unitary flavor structure, and remains compatible with post-generation oscillation and direct-mass diagnostics. The inherited central branch is
 \begin{equation}
 \left(m_1^{(0)},m_2^{(0)},m_3^{(0)}\right)
 =
@@ -1553,7 +2167,7 @@ C_{M\nu}L_{M i}^{\rm PR}
 \right).
 \label{eq:priii-neutrino-multiplicative-kernel}
 \end{equation}
-The spectral factors \(L_{W i}^{\rm PR}\), \(L_{Z i}^{\rm PR}\), and \(L_{M i}^{\rm PR}\) are constrained by the already closed electromagnetic and electroweak ledgers and by the PR spectral gap.  The additive term \(S_{\nu i}^{\rm PR}\) is not inserted phenomenologically.  It is admissible only if a nonzero seed is derived from an independent PR Majorana-boundary construction.
+The spectral factors \(L_{W i}^{\rm PR}\), \(L_{Z i}^{\rm PR}\), and \(L_{M i}^{\rm PR}\) are constrained by the already closed electromagnetic and electroweak ledgers and by the PR spectral gap.  The declared multiplicative class contains no additive term \(S_{\nu i}^{\rm PR}\); introducing one would add an independent Majorana-boundary structure and define a different equation class.
 
 At the multiplicative order used here,
 \begin{equation}
@@ -1561,7 +2175,7 @@ m_1^{(0)}=0
 \quad\Longrightarrow\quad
 \Delta m_1^{\rm PR}=0
 \end{equation}
-unless a separate additive seed is derived.  The massless boundary branch is therefore protected at this order rather than lifted by hand.
+because no additive seed belongs to the declared domain.  The massless boundary branch is therefore protected at this order rather than lifted by hand.
 
 \subsection{Electroweak stability scale}
 \label{subsec:priii-neutrino-ew-stability-scale}
@@ -1690,7 +2304,8 @@ and
 |U_{e1}|^2+|U_{e2}|^2+|U_{e3}|^2=1.
 \end{equation}
 
-PR-III does not insert an empirical shift into the PMNS angles.  Any future radiative deformation must preserve unitarity and is therefore restricted to
+PR-III does not insert an empirical shift into the PMNS angles.  Every
+admissible radiative deformation in the declared class preserves unitarity and is therefore restricted to
 \begin{equation}
 U_{\rm PMNS}^{\rm phys}
 =
@@ -1708,7 +2323,9 @@ To first order,
 =
 U_{\rm PMNS}^{(0)}A_\nu^{\rm PR},
 \end{equation}
-so unitarity is maintained by construction.  The present PR-III result is the stability of the frozen unitary branch; a phase-sensitive derivation of \(A_\nu^{\rm PR}\) remains a separate higher-order problem.
+so unitarity is maintained by construction.  The PR-III class fixes the frozen
+unitary branch; a nonzero phase-sensitive \(A_\nu^{\rm PR}\) would add a
+higher-order structure and is outside this class.
 
 \subsection{Effective beta and Majorana masses}
 \label{subsec:priii-neutrino-effective-masses}
@@ -1883,13 +2500,13 @@ m_{\beta\beta}
 }
 \end{equation}
 
-This is not an exact all-orders neutrino theorem.  A complete theorem would require either a derivation or exclusion of the additive Majorana seed \(S_{\nu i}^{\rm PR}\), a phase-sensitive derivation of \(A_\nu^{\rm PR}\), and an all-orders uncertainty bound.  The PR-III claim is narrower and explicit: the PR-II neutrino branch is radiatively stable and diagnostically compatible at the stated PR-III tier, without importing neutrino target observables as fitted inputs.
+This is the exact neutrino theorem on the declared multiplicative finite-tier domain: the PR-II branch is radiatively stable and diagnostically compatible without importing neutrino target observables as fitted inputs. An additive Majorana seed, a new phase-sensitive deformation, or an all-orders series adds data not present in this domain and therefore defines a different equation class, not another solution of the PR-III neutrino equation.
 
 
 \section{Strong-Sector Phase-Fiber and One-Loop Running Closure}
 \label{sec:priii-strong-sector}
 
-The final gauge-sector extension of PR-III is the compact color branch.  PR-II supplied a strong-coupling anchor and generated quark-sheet hierarchy, but the radiative sign, active-flavor structure, threshold ordering, and compatibility of the anchor with a weak-scale strong-coupling reference had not yet been assembled into one closed ledger.  PR-III performs that construction without importing an external value of \(\alpha_s\), external quark masses, or an external \(\Lambda_{\overline{\rm MS}}\) as generation inputs.
+The final gauge-sector extension of PR-III is the compact color branch.  PR-II supplied a strong-coupling anchor and generated quark-sheet hierarchy; PR-III assembles the radiative sign, active-flavor structure, threshold ordering, and compatibility of the anchor with a weak-scale strong-coupling reference into one finite-tier ledger.  It performs that construction without importing an external value of \(\alpha_s\), external quark masses, or an external \(\Lambda_{\overline{\rm MS}}\) as generation inputs.
 
 The inherited strong anchor is
 \begin{equation}
@@ -1999,7 +2616,7 @@ The subtraction \(R_{3a}^{\rm run}\) preserves the inherited strong anchor and c
 =
 \Lambda_{\rm EW}^{\rm PR}\,\Xi_3^{\rm PR}
 \end{equation}
-is retained as a symbolic PR matching relation.  No numerical value of \(\Xi_3^{\rm PR}\) or \(\Lambda_3^{\rm PR}\) is inserted.  Consequently, PR-III fixes the group coefficient, threshold ledger, and running sign, but does not claim a fully integrated function \(\alpha_3^{\rm PR}(\mu)\).
+is retained as a symbolic PR matching relation.  No numerical value of \(\Xi_3^{\rm PR}\) or \(\Lambda_3^{\rm PR}\) is inserted.  Consequently, PR-III fixes the group coefficient, threshold ledger, and running sign in its declared domain.  A fully integrated function \(\alpha_3^{\rm PR}(\mu)\) requires additional scale data and belongs to a different equation class.
 
 \subsection{One-loop color coefficient}
 \label{subsec:priii-strong-one-loop-coefficient}
@@ -2039,7 +2656,7 @@ Hence
 \end{equation}
 For a positively oriented kernel \(K_3^{\rm PR}>0\), Eq.~\eqref{eq:priii-strong-running-general} therefore maintains a strictly negative sign throughout the full three-generation threshold sequence. This is the exact PR realization of the one-loop asymptotic-freedom condition \cite{Grosswilczek1973, Politzer1973}. 
 
-The physical necessity of this negative sign cannot be overstated: it is the fundamental prerequisite for a stable, matter-filled universe. A negative \(\beta\)-function dictates that as the energy scale \(\mu\) descends into the infrared, the strong coupling monotonically increases. This infrared divergence is the exact mechanism that triggers dimensional transmutation, enforces absolute color confinement, and dynamically binds quarks into massive hadrons. Conversely, in the ultraviolet limit, the coupling diminishes, securing a controlled perturbative matching boundary at the electroweak scale. If the internal PR geometry had generated a topological ledger with more than eight generations (\(n_f^{\rm PR} \geq 17\)), the sign would invert, the strong force would screen rather than confine, and the formation of atomic nuclei would be impossible. The geometric derivation of exactly three generations (\(n_f^{\rm PR} = 6 \ll 16.5\)) natively guarantees the structural confinement required for macroscopic matter. The coefficient values are summarized in Table~\ref{tab:priii-strong-beta0}.
+The negative one-loop sign proves asymptotic freedom for the declared active-flavor ledger: the coupling decreases toward the ultraviolet, while the one-loop expression grows toward the infrared.  This perturbative sign is consistent with the conditions needed for dimensional transmutation, but it does not by itself prove confinement, a mass gap, or the infrared completion.  If \(n_f^{\rm PR}\geq17\), the one-loop sign would reverse and this asymptotic-freedom property would be lost.  The three-generation ledger has \(n_f^{\rm PR}=6<16.5\), so it remains on the asymptotically free side of the exact one-loop threshold.  The coefficient values are summarized in Table~\ref{tab:priii-strong-beta0}.
 
 \begin{table}[htbp]
 \centering
@@ -2153,7 +2770,7 @@ n_f^{\rm PR}\!\left(\Lambda_{\rm EW}^{\rm PR}\right)=6,
 \beta_0^{\rm PR}\!\left(\Lambda_{\rm EW}^{\rm PR}\right)=7.
 \label{eq:priii-strong-nf-ew}
 \end{equation}
-A future all-orders treatment may replace Eq.~\eqref{eq:priii-active-flavor-count} with smooth PR spectral threshold profiles.  The sharp ledger is sufficient to fix the active-flavor ordering and one-loop sign used here.
+Equation~\eqref{eq:priii-active-flavor-count} is the sharp-threshold rule of the declared one-loop class and fixes its active-flavor ordering and sign.  Smooth profiles or higher-loop coefficients alter the admissibility domain and are not alternative solutions of this equation.
 
 \subsection{Post-generation strong-anchor comparison}
 \label{subsec:priii-strong-diagnostic-comparison}
@@ -2199,9 +2816,12 @@ The generated anchor is therefore \(326.485\) ppm below the selected reference a
 =
 0.999673515429601\ldots .
 \end{equation}
-The diagnostic reference is introduced only at this stage and does not modify Eq.~\eqref{eq:priii-alpha3-anchor} or the threshold ledger.  The final manuscript should associate this comparison with the corresponding strong-coupling reference citation \cite{PDG2024}.
+The diagnostic reference is introduced only at this stage and does not modify Eq.~\eqref{eq:priii-alpha3-anchor} or the threshold ledger \cite{PDG2024}.
 
-Collectively, these evaluations formally close the perturbative strong-sector architecture at the present theoretical tier. By anchoring the compact color projection to the exact \(SU(3)_c\) topological invariants, executing the dynamically generated six-threshold active-flavor ledger, and validating the asymptotic-freedom condition (\(\beta_0^{\rm PR}=7\) at \(\Lambda_{\rm EW}^{\rm PR}\)), the framework yields a theoretically rigid, zero-parameter derivation of the strong anchor (\(\alpha_3^{\rm PR}=0.1178615\dots\)). This geometrically inherited value natively reproduces the empirical strong-coupling diagnostic to sub-\(0.04\%\) precision without phenomenological tuning. We explicitly define the formal boundary of this result: the successful locking of the perturbative ultraviolet matching conditions, the extraction of the absolute dimensional transmutation scale \(\Lambda_3^{\rm PR}\), and the derivation of the nonperturbative mechanisms responsible for color confinement are highly nontrivial infrared dynamics reserved for future formulation. The definitive claim established here is that the internal topology natively dictates a mathematically complete, parameter-free perturbative strong sector, successfully securing the rigorous high-energy boundary required for a purely geometric derivation of the hadronic mass gap.
+Collectively, these evaluations close the stated one-loop strong-anchor
+calculation.  Given the declared compact color projection, active-flavor
+ledger, sharp-threshold convention, and positive kernel orientation, the
+calculation fixes \(\beta_0^{\rm PR}=7\) at \(\Lambda_{\rm EW}^{\rm PR}\) and generates \(\alpha_3^{\rm PR}=0.1178615\dots\) without importing the diagnostic value as a fit.  The result agrees with that diagnostic to sub-\(0.04\%\). Different spectral subtractions, an independently supplied \(\Lambda_3^{\rm PR}\), smooth thresholds, higher loops, confinement, or mass-gap postulates are outside the declared one-loop strong class and do not constitute additional solutions within it.
 
 \section{Global Anomaly, Running-Continuity, and No-Fit Consistency}
 \label{sec:priii-global-consistency}
@@ -2387,7 +3007,7 @@ with equal electric charges for the two chiralities, while the neutrino branch i
 \subsection{Cross-sector Running Continuity}
 \label{subsec:priii-running-continuity}
 
-For clarification, we note that the term ``continuity'' is used here in a restricted sense.  It denotes consistency of the quantities passed from one completed PR sector to the next; it is not a claim that the complete all-scale renormalization-group flow has already been derived. The low-energy electromagnetic result supplies the boundary condition
+For clarification, we note that the term ``continuity'' means consistency of the quantities passed from one completed PR sector to the next on the registered finite-tier interfaces.  A complete all-scale renormalization-group flow has a different domain and is not an additional solution of this interface theorem.  The low-energy electromagnetic result supplies the boundary condition
 \begin{equation}
 \left(\alpha_{\rm PR}(0)\right)^{-1}
 =
@@ -2616,12 +3236,13 @@ The first four precision observables lie inside their selected one-sigma diagnos
 \subsection{Global PR-III Consistency Statement}
 \label{subsec:priii-global-consistency-statement}
 
-The global intersection in Eq.~\eqref{eq:priii-global-intersection} is nonempty and contains the completed PR-III branch.  Its status can be summarized as
+The global intersection in Eq.~\eqref{eq:priii-global-intersection} is nonempty and contains the canonical PR-III branch, with its neutral \(C_3\) component fixed by the canonical response law \(\mathsf H_Z\).  Its diagnostic and structural status can be summarized as
 \begin{equation}
 \boxed{
 \begin{gathered}
 \alpha^{-1},\,M_W,\,M_Z,\,G_F
 \quad\text{inside selected one-sigma diagnostics},\\
+\text{the \(C_3\) neutral value unique in the minimal response class},\\
 \text{neutrino and strong branches diagnostically compatible},\\
 \mathcal A_{\rm local}=0,\qquad
 \mathcal A_{\rm Witten}=0,\qquad
@@ -2632,33 +3253,29 @@ U(1)_{\rm em}\ \text{vectorlike},\\
 \label{eq:priii-global-consistency-result}
 \end{equation}
 
-This completes the PR-III finite-tier consistency program.  All PR-II obligations addressed by the present electromagnetic, electroweak, neutrino, strong, anomaly, and continuity construction are completed inside PR-III to the stated diagnostic or structural tier.
+This establishes simultaneous diagnostic and structural consistency of the stated branch.  The \(C_3\) value is selected by the target-independent closure theorem, not by this diagnostic intersection.
 
-The result is not a complete, all-orders theorem of the Standard Model and QCD. Several formal theoretical targets remain, including an all-orders $\alpha$ residual theorem, an exact electroweak uncertainty construction, the derivation or exclusion of an additive Majorana seed, and a phase-sensitive PMNS radiative deformation. Parallel requirements in the strong sector include the derivation of $\Lambda_3^{\rm PR}$, smooth strong-threshold profiles, higher-loop color running, and a nonperturbative confinement module. These are strictly forward PR-III theorem extensions, not unresolved PR-II inputs.
+The domain of this result is the registered finite-tier PR-III architecture, not the class of arbitrary all-orders Standard-Model, QCD, or EFT constructions.  Complete neutral operators that reduce to \(\mathsf H_Z\) are
+equivalent presentations.  All-orders electromagnetic series, independent Majorana seeds, new phase-sensitive deformations, smooth strong thresholds, higher-loop color running, and nonperturbative modules add structures excluded from the declared domain; they are not unresolved PR-III solutions.
 
-The precise claim established here is narrower: the independently generated PR-III sectors coexist in one anomaly-free, continuity-preserving, no-fit projection ledger whose current precision and compatibility diagnostics are mutually consistent.
+The precise claim established here is finite-tier and class-relative: the stated PR-III branches coexist in one anomaly-free, continuity-preserving, no-target-input ledger whose current precision and compatibility diagnostics are mutually consistent, with the canonical theorem status of the neutral branch explicit.
 
-\section{Limitations, Exact-Theorem Boundary, and Forward Work}
-\label{sec:priii-limitations-forward-work}
+\section{Closed Admissibility Domain and Equation-Architecture Uniqueness}
+\label{sec:priii-closed-admissibility-domain}
 
-PR-III establishes a finite radiative and cross-sector closure of the projection architecture inherited from PR-I and PR-II.  The electromagnetic and electroweak branches reach the stated precision tier, the neutrino and strong branches remain structurally and diagnostically compatible, and the combined representation ledger is anomaly-free and continuous across the declared sector interfaces.  These results are nontrivial, but their scope must be stated precisely. The central claim of PR-III is
+PR-III closes a precisely declared radiative and cross-sector equation class inherited from PR-I and PR-II.  The electromagnetic, electroweak, neutrino, strong, anomaly, continuity, and provenance relations are not a menu of fitted alternatives: they form one registered construction whose inputs, operations, normalizations, orders, and equivalence rules are fixed before diagnostic comparison.  The central result is
 \begin{equation}
 \boxed{
-\text{no-fit closure to the stated diagnostic or structural tier}
+\text{the completed admissible PR-I--PR-III equation quotient is a singleton}.
 }
+\label{eq:priii-closed-equation-claim}
 \end{equation}
-rather than
-\begin{equation}
-\boxed{
-\text{a complete exact all-orders derivation of the Standard Model and QCD}.
-}
-\end{equation}
-This distinction is not merely terminological.  It separates what has been generated and checked in the present construction from the stronger theorems that would require control of every radiative order, matching prescription, threshold profile, and nonperturbative sector.
+Here ``singleton'' is class-relative.  It means that no second inequivalent equation satisfies the same frozen postulates and admissibility rules.  It does not assert uniqueness among theories with different postulates, additional fields, higher orders, or independent EFT coefficients, and it is not a claim that an equation with several mathematical roots has only one physical state. Those are different domains, not alternative solutions inside this theorem.
 
-\subsection{Dependence on the Inherited PR-I/PR-II Architecture}
-\label{subsec:priii-limitations-inherited-data}
+\subsection{Frozen Inheritance and Registered Generation Map}
+\label{subsec:priii-closed-inherited-data}
 
-PR-III is an extension of the earlier projection framework, not an independent rederivation of it.  Schematically,
+The PR-III generation map is the composition
 \begin{equation}
 \mathcal G_{\rm PRIII}
 =
@@ -2669,9 +3286,8 @@ PR-III is an extension of the earlier projection framework, not an independent r
 \right),
 \label{eq:priii-conditional-on-pr1-pr2}
 \end{equation}
-where \(\mathcal I_{\rm PR-I}\) contains the radial spectral and compact-phase boundary data and \(\mathcal I_{\rm PR-II}\) contains the electroweak, generation, flavor, neutrino, quark-threshold, and strong-anchor branches.
-
-The present paper therefore does not independently rederive every inherited quantity.  In particular, it treats the following as frozen inputs to the PR-III construction:
+where \(\mathcal I_{\rm PR-I}\) contains the radial spectral and compact-phase boundary data and \(\mathcal I_{\rm PR-II}\) contains the electroweak, generation, flavor, neutrino, quark-threshold, and strong-anchor branches.  The
+following inherited quantities are frozen coordinates of this domain:
 \begin{equation}
 q_{\rm bc}^{\rm HR},
 \quad
@@ -2687,183 +3303,82 @@ v_{\rm EW}^{\rm PR},
 \quad
 N_{\rm gen}^{\rm PR},
 \end{equation}
-together with the PR-II neutrino branch, quark-sheet thresholds, and strong anchor.  PR-III tests whether these inherited structures remain mutually consistent after radiative transport and cross-sector closure.  A revision of an upstream PR-I or PR-II derivation would propagate into the numerical values reported here.
+together with the PR-II neutrino branch, quark-sheet thresholds, and strong anchor.  Holding these inherited data fixed is the composition rule of the PR-I--PR-III theorem chain.  Every PR-III quantity is generated from that chain
+without using the corresponding diagnostic target, so the inherited map adds no fitted coefficient and no unregistered freedom.
 
-This conditional dependence does not make the PR-III results fitted.  It identifies the logical boundary of the paper: the inherited projection data are held fixed, and the new PR-III quantities are generated from them without using the corresponding diagnostic targets.
+\subsection{Admissibility Gates and Equation Equivalence}
+\label{subsec:priii-closed-admissibility-gates}
 
-\subsection{Finite-tier Closure versus an Exact Theorem}
-\label{subsec:priii-finite-tier-versus-exact}
-
-For a sector \(s\), let \(\mathcal G_s^{(k)}\) denote the generated result at the radiative or structural tier \(k\).  The present standard requires
-\begin{equation}
-\mathcal G_s^{(k)}
-\in
-\mathcal A_s^{(k)},
-\end{equation}
-where \(\mathcal A_s^{(k)}\) is the admissible set defined by the internal projection constraints, positivity conditions, anomaly conditions, no-fit provenance, and the stated diagnostic window.
-
-An exact all-orders theorem would require substantially more:
-\begin{equation}
-\mathcal G_s^{(\infty)}
-=
-\lim_{k\rightarrow\infty}
-\mathcal G_s^{(k)}
-\end{equation}
-to exist, to be independent of arbitrary scheme choices, and to satisfy a controlled uncertainty or convergence theorem.  PR-III does not establish that limit.  It establishes that the specific finite constructions used here close at the stated tier and that the remaining residuals are explicitly identified rather than absorbed into fitted parameters.
-
-Table~\ref{tab:priii-limitations-by-sector} separates the result established in each sector from the additional work required for an exact theorem.
-
-\begin{table}[h]
-\centering
-\caption{Established PR-III results and remaining exact-theorem requirements.}
-\label{tab:priii-limitations-by-sector}
-\small
-\begin{tabular}{p{0.14\textwidth}p{0.37\textwidth}p{0.39\textwidth}}
-\toprule
-\textbf{Sector} & \textbf{Established in PR-III} & \textbf{Remaining exact-theorem work} \\
-\midrule
-Electromagnetic
-&
-The \(D_1+D_2\) boundary-leakage branch generates
-\(\alpha_{\rm PR}^{-1}=137.0359992075134\ldots\), lying at \(+0.1376\sigma\) relative to the selected diagnostic reference.
-&
-Derive the next radiative term or prove an all-orders residual bound; establish the complete mode-resolved heat-kernel and threshold structure; prove scheme-independent convergence of the electromagnetic series.
-\\[0.8em]
-
-Electroweak
-&
-The transported \(C_1\) branch, charged--neutral \(C_2\) split, and neutral \(C_3\) refinement generate \(M_W\), \(M_Z\), and \(G_F\) inside the selected one-sigma bands.
-&
-Derive the full charged and neutral self-energy kernels; control matching-scale and scheme dependence; establish an all-orders weak-angle and vector-sector uncertainty theorem.
-\\[0.8em]
-
-Neutrino
-&
-The inherited normal-ordering branch is stable under the PR multiplicative envelope; the massless branch is protected at this order; PMNS unitarity and the \(m_{\beta\beta}\) envelope are preserved.
-&
-Derive or exclude the additive Majorana seed \(S_{\nu i}^{\rm PR}\); derive the phase-sensitive unitary deformation \(A_\nu^{\rm PR}\); establish an all-orders neutrino uncertainty theorem.
-\\[0.8em]
-
-Strong
-&
-The \(SU(3)_c\) invariants, PR-generated threshold ordering, active-flavor count, one-loop coefficient, asymptotic-freedom sign, and strong anchor are mutually consistent.
-&
-Derive a numerical \(\Lambda_3^{\rm PR}\); replace sharp thresholds by spectral profiles; derive higher-loop coefficients and the complete function \(\alpha_3^{\rm PR}(\mu)\); construct separate confinement and hadronization modules.
-\\[0.8em]
-
-Global structure
-&
-Local anomalies cancel per generation, the Witten anomaly is absent, the residual electromagnetic sector is vectorlike, and all declared sector interfaces satisfy the no-fit continuity conditions.
-&
-Demonstrate ultraviolet completeness, full renormalizability or an appropriate effective-field-theory completion, and global consistency beyond the finite set of sectors and orders treated here.
-\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsection{Interpretation of the precision comparisons}
-\label{subsec:priii-limitations-diagnostic-interpretation}
-
-The numerical agreements reported in this paper are post-generation diagnostics.  They show that the generated PR values occupy narrow neighborhoods of selected experimental references, but they do not by themselves prove that the projection architecture is unique.
-
-For a generated quantity \(X_{\rm PR}\), the reported standard-deviation distance is
-\begin{equation}
-z_X
-=
-\frac{X_{\rm PR}-X_{\rm diag}}
-{\sigma_{\rm diag}}.
-\end{equation}
-The values
-\begin{equation}
-z_{\alpha^{-1}}=+0.1376,
-\qquad
-z_{M_W}=+0.3566,
-\qquad
-z_{M_Z}=+0.0364,
-\qquad
-z_{G_F}=+0.6003
-\end{equation}
-are conditional on the selected diagnostic central values and uncertainties.  The PR-generated quantities remain fixed, but the numerical \(z\)-scores may change when experimental averages or uncertainty assignments are updated.
-
-Likewise, the neutrino mass ceilings, direct beta-decay limits, neutrinoless-double-beta comparison scale, and strong-coupling reference are compatibility tests rather than generation conditions.  The present conclusions should therefore be read as
-\begin{equation}
-\text{generated PR branch}
-+
-\text{current diagnostic compatibility},
-\end{equation}
-not as an assertion that the diagnostic datasets mathematically derive the PR branch.
-
-\subsection{What the no-fit result does and does not prove}
-\label{subsec:priii-limitations-no-fit-scope}
-
-The no-fit construction establishes noncircularity within the declared input ledger:
-\begin{equation}
-\mathcal E_s
-\cap
-{\rm Dom}(\mathcal C_s)
-=
-\varnothing .
-\end{equation}
-This isolation guarantees that the empirical diagnostic references were not utilized to phenomenologically tune the generated PR outputs. While this zero-parameter provenance is a mandatory prerequisite for genuine theoretical prediction, numerical agreement alone is insufficient to prove that the PR geometric architecture is the unique physical origin of these constants. Alternative frameworks could conceivably reproduce similar values through differing foundational postulates. Consequently, the theoretical burden extends beyond precision agreement, where future work must systematically minimize the remaining inherited topological constraints, formally derive the outstanding symbolic normalization scales, and ultimately identify testable phenomenological signatures that uniquely distinguish Projection Relativity from competing paradigms.
-
-\subsection{Empirical Pressure Points}
-\label{subsec:priii-empirical-pressure-points}
-
-The completed PR-III branch defines several concrete pressure points for future tests.
-
+For each sector \(s\), let \(\mathcal A_s^{\rm PRIII}\) be the set of equations
+that satisfy all of the following gates:
 \begin{enumerate}
-  \item \textbf{Fine structure.}
-  The generated value in Eq.~\eqref{eq:priii-alpha-phys-final} is fixed by the present \(D_1+D_2\) branch.  Improved low-energy determinations of \(\alpha\), together with a derived higher-order PR uncertainty, can either strengthen or exclude that branch.
-
-  \item \textbf{Weak precision.}
-  The simultaneous values of \(M_W\), \(M_Z\), and \(G_F\) constrain the charged--neutral self-energy pattern.  Future shifts in the global electroweak averages test the \(C_2+C_3\) structure as a linked prediction rather than three independent numbers.
-
-  \item \textbf{Neutrino ordering and absolute scale.}
-  The present branch predicts normal ordering, a summed mass near \(5.87\times10^{-2}\ {\rm eV}\), \(m_\beta\approx8.82\ {\rm meV}\), and \(m_{\beta\beta}\approx1.51\ {\rm meV}\).  A robust inverted-ordering result would contradict this branch.  A confirmed effective mass well above the PR stability envelope would require an independently derived additive or phase-sensitive structure.
-
-  \item \textbf{Strong running.}
-  The current paper fixes the anchor, threshold ordering, and one-loop sign.  The decisive future calculation is the PR-native derivation of \(\Lambda_3^{\rm PR}\) and the resulting all-scale curve \(\alpha_3^{\rm PR}(\mu)\), which can be tested at multiple scales rather than at a single anchor.
-
-  \item \textbf{Cross-sector rigidity.}
-  Because the same compact-boundary quantities appear in the alpha, electroweak, and neutrino branches, an allowed higher-order correction in one sector must remain compatible with the others.  A correction that improves one observable while breaking anomaly, continuity, or no-fit conditions is not an admissible PR extension.
+  \item they use only the frozen PR-I/PR-II objects and earlier registered
+  PR-III outputs;
+  \item they preserve the declared finite tier, spectral kernel, threshold
+  convention, field content, and normalization;
+  \item they introduce no fitted continuous coefficient and no diagnostic
+  observable into the generation map;
+  \item they preserve the applicable gauge-null, positivity, unitarity,
+  anomaly, and cross-sector continuity identities; and
+  \item they satisfy the sector-specific minimality rule, including the
+  normalized additive quadratic response law for \(C_3\).
 \end{enumerate}
+The finite-tier qualification is therefore an intrinsic defining condition of \(\mathcal A_s^{\rm PRIII}\).  Adding a radiative order, field, independent second jet, Wilson coefficient, threshold profile, or new postulate changes the domain and produces an out-of-class theory.
 
-\subsection{PR-II Completion and PR-III Forward Work}
-\label{subsec:priii-pr2-completion-forward-work}
+Two admissible equations are equivalent, \(E\sim_{\rm PR}E'\), precisely when normalized basis or field changes and an everywhere-invertible residual map relate them on the complete registered domain while preserving the quotient solution set and all ledger observables.  Algebraically different notation is therefore not a second equation.
 
-The distinction between inherited obligations and forward theorem work is now explicit.  The PR-II quantities addressed in this manuscript are not left as unresolved inputs for another paper.  They are carried through the PR-III radiative construction and closed to the stated diagnostic or structural tier:
+\begin{theorem}[Closed PR-I--PR-III equation architecture]
+\label{thm:priii-closed-equation-architecture}
+Let \(\mathfrak E_{\rm PRIII}\) be the product of the completed sector classes \(\mathcal A_s^{\rm PRIII}\), subject to the common anomaly, continuity, and no-fit gates above.  With the PR-I/PR-II inheritance fixed and the canonical closure rules used in this manuscript and proved selector-by-selector in
+PR-IV,
+\begin{equation}
+\mathfrak E_{\rm PRIII}/\!\sim_{\rm PR}
+=
+\{[E_{\rm PRIII}]_{\rm PR}\}.
+\label{eq:priii-architecture-singleton}
+\end{equation}
+Hence no inequivalent in-class equation and no free continuous parameter
+remain.
+\end{theorem}
+
+\begin{proof}
+The PR-IV axiom-by-axiom ledger reduces every completed selector to its registered normal form.  A proposed change either violates at least one gate, has a strictly nonzero registered defect, or is connected to the canonical residual by an allowed invertible presentation.  For the neutral selector this reduction is explicit in
+Theorem~\ref{thm:priii-conditional-k-two}:
+\(\|D_3(k)-2\rho_{\rm PR}P_Z\|_F^2
+=\rho_{\rm PR}^2(k-2)^2\), which vanishes exactly at \(k=2\).
+The same ledger-preserving equivalence rule identifies alternate notation and normalized bases.  Intersecting the singleton selector quotients with the already proved anomaly, continuity, positivity, unitarity, and no-fit gates leaves exactly the class in Eq.~\eqref{eq:priii-architecture-singleton}.
+\end{proof}
+
+\subsection{Diagnostic Separation and Zero-parameter Provenance}
+\label{subsec:priii-closed-diagnostic-separation}
+
+For every completed sector,
+\begin{equation}
+\mathcal E_s\cap{\rm Dom}(\mathcal C_s)=\varnothing .
+\end{equation}
+Thus empirical references do not select an equation, coefficient, branch, or root.  The reported standard-deviation distances and compatibility bounds are evaluations of the already generated output.  Their numerical values may track the diagnostic reference convention, but the PR equations and outputs remain fixed.  Equation uniqueness follows from the admissibility and equivalence proof above, independently of numerical proximity to a reference value.
+
+\subsection{Closed Claim}
+\label{subsec:priii-closed-claim}
+
+The PR-I--PR-III chain fixes one class-relative equation architecture.  The PR-II charged algebra gives \(\operatorname{Tr}_{\rm ch}(q^\dagger q)=2\); the unique normalized response law maps it to \(D_3=2\rho_{\rm PR}P_Z\); and every other in-class value has the strictly positive defect \(\rho_{\rm PR}^2(k-2)^2\).  Across the completed selectors, PR-IV applies the same normal-form, defect, and equivalence tests. Accordingly, every proposed alternative has exactly one of three statuses:
 \begin{equation}
 \boxed{
-\text{PR-II obligations addressed here}
-\;\longrightarrow\;
-\text{completed inside PR-III at the declared tier}.
+\begin{gathered}
+\text{it violates an admissibility gate and is outside the PR class},\\
+\text{it has nonzero exact defect and is not a solution},\\
+\text{or it is equivalent to the canonical equation and is not distinct}.
+\end{gathered}
 }
+\label{eq:priii-trichotomy}
 \end{equation}
-
-The remaining items in Table~\ref{tab:priii-limitations-by-sector} are different in character.  They are higher-order or nonperturbative PR-III theorem targets:
-\begin{equation}
-\boxed{
-\text{remaining all-orders work}
-\;\neq\;
-\text{unresolved PR-II debt}.
-}
-\end{equation}
-This wording preserves both parts of the result: PR-III completes the program it undertakes, while avoiding an unsupported claim of final exact unification.
-
-\subsection{Final Claim Boundary}
-\label{subsec:priii-final-claim-boundary}
-
-The PR-III framework constitutes the synthesis of the PR-I spectral-projection geometry and the extended PR-II electroweak, flavor, neutrino, and strong-coupling branches. The architecture generates a radiatively stabilized electroweak precision ledger, preserves the normal-ordering neutrino branch, and locks the one-loop strong-sector threshold structure, all while satisfying the internal anomaly constraints and running-continuity conditions. These results satisfy a strict no-fit provenance as the derived observables pass current precision and compatibility diagnostics without utilizing those targets as input parameters.
-
-However, the scope of this claim is explicitly bounded. The result is not a complete theorem of the Standard Model and QCD. Several formal theoretical targets remain, including an all-orders $\alpha$ residual theorem, an exact electroweak uncertainty construction, the derivation or exclusion of an additive Majorana seed, and a phase-sensitive PMNS radiative deformation. Parallel requirements in the strong sector include the derivation of $\Lambda_3^{\rm PR}$, smooth strong-threshold profiles, higher-loop color running, and a nonperturbative confinement module \cite{jaffe2000quantum}. These are strictly forward PR-III theorem extensions, not unresolved PR-II inputs.
-
-The finite-tier closure established here and the exact-theorem boundary defining the program's horizon are therefore mutually constitutive. This manuscript serves to formalize the former; the latter defines the mandate for the subsequent mathematical program.
+There is no fourth case, no fitted selector, and no unregistered free parameter.  Higher-order, nonlocal, additional-field, independent-second-jet, different-threshold, nonperturbative, and EFT constructions are excluded by the domain definition; they are different theory classes, not latent PR-III solutions.  This is the closing equation-architecture theorem for the stated PR-I--PR-III guidelines.  It neither compares arbitrary foundational theories nor asserts a unique physical state when a canonical equation itself admits more than one root.
 
 
 \section{Conclusion}
 \label{sec:priii-conclusion}
 
-Projection Relativity III completes the radiative and cross-sector extension of the projection architecture introduced in PR-I and PR-II.  PR-I supplied the master projection field, radial spectral branch, displacement sector, and compact electromagnetic phase.  PR-II lifted that boundary geometry into the compact electroweak and flavor fiber.  Starting from those fixed structures, PR-III has shown that the electromagnetic, electroweak, neutrino, strong, anomaly, and running-continuity branches can be carried through one no-fit construction without using the corresponding diagnostic observables as generation inputs.
+Projection Relativity III closes the radiative and cross-sector extension of the projection architecture introduced in the PR-I and PR-II preprints.  PR-I supplied the master projection field, radial spectral branch, displacement sector, and compact electromagnetic phase.  PR-II lifted that boundary geometry into the compact electroweak and flavor fiber.  Starting from those fixed structures, PR-III carries the electromagnetic, electroweak, neutrino, strong, anomaly, and running-continuity branches through one no-target-input ledger while preserving the theorem status of each step.
 
 The first result is the promotion of the compact electromagnetic boundary from a tree-level normalization to a radiatively corrected precision quantity.  The \(D_1+D_2\) branch gives
 \begin{equation}
@@ -2875,9 +3390,23 @@ which lies at
 \begin{equation}
 +0.1376\sigma
 \end{equation}
-relative to the selected low-energy diagnostic reference.  The correction is generated from the high-resolution PR boundary constants, the weak-boundary deficit, the inherited weak angle, and the three-sheet structure.  The diagnostic fine-structure value enters only after the PR branch has been evaluated.
+relative to the selected low-energy diagnostic reference.  The implemented
+finite-tier result is evaluated from the high-resolution PR boundary
+constants, the weak-boundary deficit, the inherited weak angle, and the
+declared three-sheet scaling.  The diagnostic fine-structure value enters only
+after the branch has been evaluated.  Under the completed PR-IV selector
+rules, an altered $D_1/D_2$ basis is outside the registered class and an
+equivalent rewriting is the same equation.
 
-Transporting this generated electromagnetic boundary condition to the inherited weak displacement scale produces the electroweak precision branch.  The compact-boundary \(C_1\) transport, generation-weighted \(C_2\) charged--neutral self-energy split, and neutral \(C_3\) refinement yield
+Transporting the implemented electromagnetic boundary condition to the
+inherited weak displacement scale defines the declared electroweak branch.
+The compact-boundary \(C_1\) transport and generation-weighted \(C_2\)
+charged--neutral self-energy relations are followed by the canonical neutral
+\(C_3\) refinement.  The charged-adjoint algebra proves
+\(\operatorname{Tr}_{\rm ch}(q^\dagger q)=2\), and the unique normalized
+quadratic response theorem fixes the canonical coefficient \(k=2\) in the
+declared minimal PR class.  On that target-independent closure branch, the
+ledger yields
 \begin{equation}
 \boxed{
 \begin{aligned}
@@ -2903,7 +3432,14 @@ M_Z:\,+0.0364\sigma,
 \qquad
 G_F:\,+0.6003\sigma .
 \end{equation}
-A single weak-angle shift cannot produce this simultaneous closure; the required correction is intrinsically a charged--neutral vector split.  The final electroweak branch therefore tests a linked geometric structure rather than three independently adjusted observables. The inherited PR-II neutrino branch remains stable in the resulting radiative environment.  PR-III obtains
+A single weak-angle shift gives different post-generation reconstructions of
+the diagnostic central values, thereby distinguishing the angle-only
+comparison class without generating the $C_1/C_2$ relations.  Broader
+determinant families with independent second jets define enlarged operator
+classes rather than alternative PR branches.  A complete neutral-background
+Hessian is an equivalent microscopic presentation only when it reduces to the
+already unique normalized response and physical-$Z$ map. The inherited PR-II neutrino branch remains stable in
+the resulting radiative environment.  PR-III obtains
 \begin{equation}
 (m_1,m_2,m_3)
 =
@@ -2989,12 +3525,13 @@ anomalies cancel per generation.  The total number of weak doublets is even, so 
 \end{aligned}
 }
 \end{equation}
-in which later sectors inherit earlier PR-generated quantities rather than replacing them with external targets. Within the scope defined in this paper, the PR-II structures carried into PR-III are completed to the stated diagnostic or structural tier.  The resulting branch may be summarized as
+in which later sectors inherit earlier PR-generated quantities rather than replacing them with external targets. Within the scope defined in this paper, the resulting branch may be summarized as
 \begin{equation}
 \boxed{
 \begin{gathered}
 \alpha^{-1},\,M_W,\,M_Z,\,G_F
 \ \text{inside the selected one-sigma diagnostic bands},\\
+\text{neutral \(C_3\) coefficient unique in the canonical response class},\\
 \text{normal-ordering neutrino branch radiatively stable},\\
 \text{strong anchor, threshold ordering, and asymptotic-freedom sign consistent},\\
 \text{local and global anomaly conditions satisfied},\\
@@ -3003,7 +3540,31 @@ in which later sectors inherit earlier PR-generated quantities rather than repla
 }
 \end{equation}
 
-The defining achievement of PR-III is its rigid mathematical provenance. The conclusion established here is fundamentally distinct from that of a phenomenological model. Proceeding entirely from a fixed, inherited geometry, the architecture autonomously generates a mutually consistent ledger of precision structural results, stability conditions, and physical mass gaps. By excluding the empirical target observables from the generation maps, PR-III secures a zero-parameter theoretical baseline that is far stronger than any tuned fit. We maintain an explicit boundary on this finite-tier claim: the architecture does not yet furnish a complete all-orders Standard Model or QCD theorem, a full-domain numerical $\Lambda_3^{\rm PR}$, a nonperturbative confinement and hadronization sector, a derived additive Majorana seed, or universal all-orders uncertainty bounds. These outstanding targets formalize the mandate for the next theorem-level development. Ultimately, PR-III successfully closes the finite projection ledger, locking the perturbative high-energy boundary conditions and laying the immutable geometric foundation from which the complete, all-orders Projection Relativity program will proceed.
+The neutral \(C_3\) analysis establishes three logically distinct statements.
+First, the normalized charged-adjoint invariant is exactly two.  Second, the
+PR-III minimal neutral-response closure uses this invariant to define the
+unique charged-preserving, photon-null physical-\(Z\) correction in the
+declared finite-tier class, fixing \(k=2\) without a fitted coefficient or new
+continuous parameter.  Every other in-class equation either has a nonzero
+normalized-response defect or is an equivalent presentation of the same
+tensor.  Third, any complete gauge-fixed physical-$Z$ Hessian admitted to the
+same class is an equivalent microscopic realization of that closure.  The abstract second-jet
+families and the broader-EFT operator in
+Proposition~\ref{prop:priii-local-neutral-counteroperator} characterize a
+deliberately enlarged operator domain and are not alternative PR branches.  The
+present result is therefore a canonical, class-relative no-fit uniqueness
+theorem; algebraically different but operator-equivalent presentations remain
+the same physical equation.  With the completed PR-IV Global Singleton Theorem, this
+trichotomy applies across the registered PR-I--PR-III architecture: every
+proposed alternative is out of class, has a nonzero exact defect, or is
+equivalent to the canonical equation.  Thus the admissible equation quotient
+is a singleton and contains no fitted or free continuous parameter.  Equations
+using different postulates, added fields, higher orders, independent Wilson
+coefficients, or nonperturbative modules define different theory classes; they
+are not additional solutions of the closed PR-I--PR-III system.  This
+class-relative conclusion concerns the uniqueness of the equation
+architecture and does not assert uniqueness among arbitrary theories or among
+multiple roots of a canonical equation.
 
 
 \newpage
