@@ -1,15 +1,15 @@
 {
   "overall_status": "PASS",
-  "repo": "Projection-Relativity_III_Sandbox",
-  "tex_root": "../../manuscript/projection_relativity_III",
-  "numeric_literals_inventoried": 412,
-  "document_numeric_values_checked": 295,
-  "matched": 295,
-  "skipped_layout_literals": 117,
+  "repo": "C:\\Users\\Michael Oshetski\\Documents\\Codex\\2026-07-20\\do\\work\\Projection-Relativity_III_Sandbox",
+  "tex_root": "C:\\Users\\Michael Oshetski\\Documents\\Codex\\2026-07-20\\do\\work\\Projection_Relativity\\manuscript\\projection_relativity_III",
+  "numeric_literals_inventoried": 398,
+  "document_numeric_values_checked": 283,
+  "matched": 283,
+  "skipped_layout_literals": 115,
   "unmatched": 0,
   "status_counts": {
-    "PASS": 294,
-    "SKIP_LAYOUT": 117,
+    "PASS": 282,
+    "SKIP_LAYOUT": 115,
     "PASS_ABS_CONTEXT": 1
   }
 }

@@ -2,7 +2,7 @@
   "project": "Projection Relativity III",
   "paper_source": "Projection_Relativity public PR-III manuscript and PDF",
   "repository": "oshetskiresearch/Projection-Relativity_III_Sandbox",
-  "checked_commit": "fbb61f3771db2674c2b551a2d767c923cd5f0a1f",
+  "checked_commit": "47a175c56676242fdfe1dfebdc15d680aa531109",
   "locked_output_claims": [
     {
       "id": "alpha_inverse_PR",
@@ -135,6 +135,11 @@
   "paper_text_required_snippets": [
     "Projection Relativity III",
     "Zero-Parameter Radiative and Cross-Sector Closure",
+    "canonical-closure uniqueness",
+    "charged-adjoint trace",
+    "positive defect",
+    "closed admissibility domain",
+    "equation quotient is a singleton",
     "137.035999207513",
     "80.3739428518621",
     "91.1876764310439",

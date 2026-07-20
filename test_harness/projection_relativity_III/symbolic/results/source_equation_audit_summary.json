@@ -1,21 +1,23 @@
 {
   "overall_status": "PASS",
-  "repo": "Projection_Relativity",
-  "tex_root": "../../manuscript/projection_relativity_III",
-  "total_display_blocks": 225,
+  "repo": "C:\\Users\\Michael Oshetski\\Documents\\Codex\\2026-07-20\\do\\work\\Projection_Relativity",
+  "tex_root": "C:\\Users\\Michael Oshetski\\Documents\\Codex\\2026-07-20\\do\\work\\Projection_Relativity\\manuscript\\projection_relativity_III",
+  "total_display_blocks": 253,
   "unmapped_display_blocks": 0,
-  "direct_maple_or_locked_value_blocks": 122,
-  "direct_maple_or_locked_value_fraction": 0.5422222222222223,
+  "direct_maple_or_locked_value_blocks": 148,
+  "direct_maple_or_locked_value_fraction": 0.5849802371541502,
   "status_counts": {
-    "PASS": 193,
-    "NOTE": 16,
-    "DATA": 16
+    "PASS": 221,
+    "NOTE": 19,
+    "DATA": 13
   },
   "coverage_class_counts": {
-    "REPO_GENERATION_COVERED": 71,
-    "DIRECT_MAPLE_OR_LOCKED_VALUE": 122,
-    "SOURCE_LEDGER_OR_CONTEXT": 16,
-    "DIAGNOSTIC_OR_POST_GENERATION_COMPARISON": 16
+    "REPO_GENERATION_COVERED": 73,
+    "DIRECT_MAPLE_OR_LOCKED_VALUE": 148,
+    "SOURCE_LEDGER_OR_CONTEXT": 11,
+    "DIAGNOSTIC_OR_POST_GENERATION_COMPARISON": 13,
+    "THEOREM_DEFINITION_OR_ANALYTIC_CONTEXT": 5,
+    "PRIV_SELECTOR_EXHAUSTION": 3
   },
-  "direct_proof_backlog_count": 87
+  "direct_proof_backlog_count": 84
 }

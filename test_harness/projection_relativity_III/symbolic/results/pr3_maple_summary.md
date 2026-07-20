@@ -2,9 +2,9 @@
 
 Execution engine: Maple
 
-- Total tests: 38
-- Passed: 38
+- Total tests: 67
+- Passed: 67
 - Failed: 0
-- Negative controls passed: 7
+- Negative controls passed: 12
 
 OVERALL_STATUS: PASS

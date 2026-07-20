@@ -112,15 +112,24 @@ Python audit scripts.
 The checked public run completed with:
 
 ```text
-Maple symbolic checks: PASS, 38/38
-Maple negative controls: PASS, 7/7
-Equation audit: PASS, 225/225 display blocks mapped
-Manuscript value audit: PASS, 295/295 values matched
-Layout-only values classified separately: 117
+Maple symbolic checks: PASS, 67/67
+Maple negative controls: PASS, 12/12
+Equation audit: PASS, 253/253 display blocks mapped
+Direct Maple or locked-value coverage: 148 display blocks
+Manuscript value audit: PASS, 283/283 values matched
+Layout-only values classified separately: 115
 Unmatched manuscript values: 0
+Symbolic/public paper conformance: PASS, 82/82
 ```
+
+The 2026-07-20 symbolic refresh adds direct checks for the revised canonical
+neutral `C3` section: the charged-adjoint trace, rank-one and photon-null
+gates, normalized quadratic-response identities, the exact `k=2` defect,
+the determinant Hessian, physical-`Z` reconstruction, matter charge traces,
+second-jet and EFT comparison families, and normalized incidence/equivalence
+conditions. The separate numerical validation harness was intentionally not
+rerun because the manuscript's locked numerical outputs did not change.
 
 Detailed machine-readable and human-readable outputs are committed in
 [`results/`](results/). The run inputs and repository revisions are recorded
 in [`../RUN_SUMMARY.md`](../RUN_SUMMARY.md).
-
