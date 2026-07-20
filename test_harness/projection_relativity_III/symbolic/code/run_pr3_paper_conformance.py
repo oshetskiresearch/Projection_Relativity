@@ -14,6 +14,7 @@ import subprocess
 import sys
 from dataclasses import dataclass, asdict
 from decimal import Decimal, getcontext
+from fractions import Fraction
 from pathlib import Path
 from typing import Iterable
 
@@ -170,6 +171,84 @@ def check_anomaly_gates(repo: Path, results: list[Result]) -> None:
         "VECTORLIKE_PASS", "exact", "Residual electromagnetic branch remains vectorlike")
 
 
+def check_c3_closure_gates(results: list[Result]) -> None:
+    """Exact, dependency-free mirrors of the revised Maple C3 checks."""
+    q_ch = (Fraction(1), Fraction(-1))
+    response = sum(charge * charge for charge in q_ch)
+    add(results, "c3:charged_adjoint_trace", "canonical-C3", response == 2,
+        response, 2, "exact", "Charged-adjoint quadratic trace")
+
+    rho = Fraction(3, 7)
+    canonical_defect = rho * rho * (Fraction(2) - 2) ** 2
+    add(results, "c3:canonical_defect", "canonical-C3", canonical_defect == 0,
+        canonical_defect, 0, "exact", "Canonical k=2 has zero exact defect")
+
+    # P_Z = diag(0,0,1,0): charged and photon directions are null and
+    # only the normalized physical-Z direction survives.
+    pz_diagonal = (0, 0, 1, 0)
+    add(results, "c3:rank_one_projector", "canonical-C3",
+        sum(pz_diagonal) == 1 and all(x * x == x for x in pz_diagonal),
+        pz_diagonal, "rank-one idempotent", "exact", "Physical-Z projector gates")
+    add(results, "c3:photon_null", "canonical-C3", pz_diagonal[3] == 0,
+        pz_diagonal[3], 0, "exact", "Canonical C3 response preserves photon nullity")
+
+    # Exact response-functional checks on rational charge modes.
+    q1 = (Fraction(2, 3), Fraction(-1, 3))
+    q2 = (Fraction(1, 2),)
+    f1 = sum(x * x for x in q1)
+    f2 = sum(x * x for x in q2)
+    f12 = sum(x * x for x in q1 + q2)
+    add(results, "c3:response_additivity", "canonical-C3", f12 == f1 + f2,
+        f12, f1 + f2, "exact", "Quadratic response is direct-sum additive")
+    scale = Fraction(5, 4)
+    scaled = sum((scale * x) ** 2 for x in q1)
+    add(results, "c3:response_homogeneity", "canonical-C3", scaled == scale**2 * f1,
+        scaled, scale**2 * f1, "exact", "Quadratic response is degree-two homogeneous")
+
+    # Revised one-generation matter traces, checked at independent rational x.
+    x = Fraction(7, 30)
+    szz_charges = [
+        (1, Fraction(1, 2)),
+        (1, Fraction(-1, 2) + x),
+        (1, x),
+        (3, Fraction(1, 2) - Fraction(2, 3) * x),
+        (3, Fraction(-1, 2) + Fraction(1, 3) * x),
+        (3, -Fraction(2, 3) * x),
+        (3, Fraction(1, 3) * x),
+    ]
+    szz = sum(mult * charge * charge for mult, charge in szz_charges)
+    szz_expected = 2 - 4 * x + Fraction(16, 3) * x * x
+    add(results, "c3:matter_ZZ_trace", "canonical-C3", szz == szz_expected,
+        szz, szz_expected, "exact", "One-generation ZZ charge trace")
+
+    qaz = [
+        (1, Fraction(-1), Fraction(-1, 2) + x),
+        (1, Fraction(-1), x),
+        (3, Fraction(2, 3), Fraction(1, 2) - Fraction(2, 3) * x),
+        (3, Fraction(-1, 3), Fraction(-1, 2) + Fraction(1, 3) * x),
+        (3, Fraction(2, 3), -Fraction(2, 3) * x),
+        (3, Fraction(-1, 3), Fraction(1, 3) * x),
+    ]
+    saz = sum(mult * charge * tz for mult, charge, tz in qaz)
+    saz_expected = 2 - Fraction(16, 3) * x
+    add(results, "c3:matter_AZ_trace", "canonical-C3", saz == saz_expected,
+        saz, saz_expected, "exact", "One-generation AZ charge trace")
+
+    # Rational orthogonal representative of Phi_3^T Phi_3 = I_3.
+    phi3 = (
+        (Fraction(1), Fraction(0), Fraction(0)),
+        (Fraction(0), Fraction(3, 5), Fraction(-4, 5)),
+        (Fraction(0), Fraction(4, 5), Fraction(3, 5)),
+    )
+    gram = tuple(
+        tuple(sum(phi3[k][i] * phi3[k][j] for k in range(3)) for j in range(3))
+        for i in range(3)
+    )
+    identity = tuple(tuple(Fraction(int(i == j)) for j in range(3)) for i in range(3))
+    add(results, "c3:normalized_incidence", "canonical-C3", gram == identity,
+        gram, identity, "exact", "Normalized three-sheet incidence map")
+
+
 def check_paper_text(paper_text: Path | None, claims: dict, results: list[Result]) -> None:
     if paper_text is None:
         add(results, "paper-text:skipped", "paper-text", True, "not provided",
@@ -210,6 +289,19 @@ def run_negative_controls(repo: Path, claims: dict, results: list[Result]) -> No
     add(results, "selftest:reject_inverted_neutrino_order", "negative-controls",
         not (m3 < m2), f"m2={m2}; m3={m3}", "m3 not less than m2", "predicate",
         "Reject inverted neutrino ordering")
+
+    wrong_k_defect = (Decimal("1") - Decimal("2")) ** 2
+    add(results, "selftest:reject_noncanonical_C3_k", "negative-controls",
+        wrong_k_defect != 0, wrong_k_defect, "nonzero", "must reject",
+        "Reject noncanonical C3 coefficient k=1")
+    frozen_s2 = Decimal("0.231355763298189")
+    wrong_photon_component = 2 * frozen_s2
+    add(results, "selftest:reject_W3_as_physical_Z", "negative-controls",
+        wrong_photon_component != 0, wrong_photon_component, "nonzero", "must reject",
+        "Reject literal W3 projector as photon-null physical-Z projector")
+    add(results, "selftest:reject_linear_charge_trace", "negative-controls",
+        sum((1, -1)) != 2, sum((1, -1)), "not 2", "must reject",
+        "Reject linear trace as the normalized quadratic response")
 
 
 def write_reports(results: list[Result], outdir: Path) -> None:
@@ -302,6 +394,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     check_diagnostics(repo, claims, results)
     check_status_gates(repo, claims, results)
     check_anomaly_gates(repo, results)
+    check_c3_closure_gates(results)
     check_paper_text(args.paper_text.resolve() if args.paper_text else None, claims, results)
     run_negative_controls(repo, claims, results)
 

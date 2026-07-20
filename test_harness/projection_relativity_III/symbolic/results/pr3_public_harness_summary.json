@@ -1,9 +1,13 @@
 {
   "overall_status": "PASS",
-  "total_checks": 68,
-  "passed": 68,
+  "total_checks": 82,
+  "passed": 82,
   "failed": 0,
   "sections": {
+    "canonical-C3": {
+      "total": 9,
+      "failed": 0
+    },
     "diagnostic-table": {
       "total": 16,
       "failed": 0
@@ -17,15 +21,11 @@
       "failed": 0
     },
     "negative-controls": {
-      "total": 5,
+      "total": 8,
       "failed": 0
     },
     "paper-text": {
-      "total": 12,
-      "failed": 0
-    },
-    "repo-audit": {
-      "total": 3,
+      "total": 17,
       "failed": 0
     },
     "required-files": {

@@ -84,6 +84,7 @@ LAYOUT_CONTEXT_PATTERNS = [
     r"minimum width",
     r"minimum height",
     r"text width",
+    r"leftmargin\s*=",
     r"shift=\{",
     r"controls",
     r"ellipse",

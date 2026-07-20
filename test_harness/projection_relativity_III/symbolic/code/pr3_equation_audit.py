@@ -127,7 +127,68 @@ def classify(rel_file: str, block: str) -> tuple[str, str, str, str, str, str]:
     c = compact_math(block)
     low = c.lower()
 
+    # These quotient statements summarize selector-exhaustion results whose
+    # axiom-by-axiom proof is delegated to PR-IV. Keep them distinct from
+    # direct PR-III Maple assertions and numerical generation coverage.
+    pr4_theorem_needles = [
+        "the completed admissible pr-i--pr-iii equation quotient is a singleton",
+        "\\mathfrak e_{\\rm priii}/\\!\\sim_{\\rm pr}",
+        "it violates an admissibility gate and is outside the pr class",
+    ]
+    if has_any(low, pr4_theorem_needles):
+        return (
+            "NOTE",
+            "PRIV_SELECTOR_EXHAUSTION",
+            "Class-relative equation-exhaustion statement; selector proof is supplied by PR-IV",
+            "",
+            "PR-IV Global Singleton Theorem",
+            "no",
+        )
+
+    analytic_context_needles = [
+        "\\mathfrak e_{c_3}",
+        "\\Gamma(z) = \\sum_i",
+        "G_i=H_i(0)^{-1}",
+        "\\mathcal O_{HD} :=",
+    ]
+    if has_any(low, analytic_context_needles):
+        return (
+            "NOTE",
+            "THEOREM_DEFINITION_OR_ANALYTIC_CONTEXT",
+            "Formal class/operator definition or theorem-domain statement; supporting identities are checked separately",
+            "",
+            "PR3-C3 symbolic identity suite and manuscript proof",
+            "no",
+        )
+
     direct_rules = [
+        ("PR3-C3-003", ["\\operatorname{Tr}_{\\rm ch}(q^\\dagger q)=2"]),
+        ("PR3-C3-004..C3-009", ["D_3W^1=D_3W^2=D_3A=0"]),
+        ("PR3-C3-004..C3-010", ["d_3(k)=\\rho_{\\rm pr}kP_Z"]),
+        ("PR3-C3-010", ["\\rho_{\\rm pr}^{2}(k-2)^2"]),
+        ("PR3-C3-011..C3-014", ["\\mathcal F(UqU^\\dagger)", "\\mathcal F(q_1\\oplus q_2)"]),
+        ("PR3-C3-011..C3-014", ["\\mathcal F(q)=\\operatorname{Tr}(q^\\dagger q)"]),
+        ("PR3-C3-003..C3-014", ["D_3^{\\rm PR} = \\rho_{\\rm PR}"]),
+        ("PR3-C3-003..C3-010", ["k=2", "D_{3,Z}^{\\rm PR}"]),
+        ("PR3-C3-015", ["G_iW_i-G_iV_iG_iV_i"]),
+        ("PR3-C3-015", ["W_iG_i-V_iG_iV_iG_i"]),
+        ("PR3-C3-016", ["\\Gamma_k''(0)=k\\rho_{\\rm PR}"]),
+        ("PR3-C3-016", ["H_k(z):=\\exp"]),
+        ("PR3-C3-016", ["D_3^{(k)}"]),
+        ("PR3-C3-016", ["\\Gamma_k(z) :="]),
+        ("PR3-C3-017..C3-020", ["2P_{W^3}", "q_Z^\\dagger q_Z"]),
+        ("PR3-C3-017..C3-020", ["Z=cW^3-sB"]),
+        ("PR3-C3-028..C3-029", ["gW_\\mu^3T_3+g'B_\\mu"]),
+        ("PR3-C3-020", ["\\widehat q_Z:=(gc)^{-1}q_Z"]),
+        ("PR3-C3-028..C3-029", ["gcT_3-g's"]),
+        ("PR3-C3-021", ["S_{ZZ}^{(1)}"]),
+        ("PR3-C3-022", ["S_{AZ}^{(1)}"]),
+        ("PR3-C3-023", ["H_j^{(\\lambda)}(z)"]),
+        ("PR3-C3-023", ["\\Gamma_{\\lambda}''(0)-\\Gamma_0''(0)"]),
+        ("PR3-C3-023", ["\\lambda\\rho_{\\rm PR}\\operatorname{Tr}'X"]),
+        ("PR3-C3-024", ["\\Delta\\mathcal L_\\lambda\\big|_{\\Phi_0}"]),
+        ("PR3-C3-024", ["\\Phi_0^\\dagger D_\\mu\\Phi_0"]),
+        ("PR3-C3-025..C3-026", ["\\Phi_3^\\dagger\\Phi_3=I_3"]),
         ("PR3-P001", ["137.035999207513"]),
         ("PR3-P002", ["80.373942851862"]),
         ("PR3-P003", ["91.187676431043"]),

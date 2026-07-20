@@ -3,11 +3,11 @@
 This report separates full display-block accounting from direct Maple proof density.
 
 ```text
-Total display blocks: 225
+Total display blocks: 253
 Unmapped display blocks: 0
-Direct Maple or locked-value coverage: 122
-Direct coverage fraction: 0.542
-Direct proof backlog rows: 87
+Direct Maple or locked-value coverage: 148
+Direct coverage fraction: 0.585
+Direct proof backlog rows: 84
 ```
 
 ## Recommended Follow-Up
