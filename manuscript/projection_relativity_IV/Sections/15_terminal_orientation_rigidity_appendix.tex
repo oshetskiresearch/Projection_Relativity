@@ -1,0 +1,48 @@
+\section{Terminal-orientation Rigidity in the PR-I Boundary Class}
+\label{app:terminal-orientation-rigidity}
+
+The remaining terminal-sign ambiguity can be solved exactly inside the signed finite-rank boundary class used by PR-I.  Introduce a formal trace-length
+variable $z$ and a one-boundary marker $X$, with $X^2=0$.  The compact interior
+return series and terminal numerator are
+\begin{equation}
+ I(z)=\frac{1}{1-z^3-z^4},
+ \qquad
+ N_{\sigma}(z,X)=1+z^3+z^4+X(z^5+\sigma_8z^8).
+\end{equation}
+The complete pre-projection one-boundary series is
+\begin{equation}
+ F_{\sigma}(z,X)=N_{\sigma}(z,X)I(z).
+ \label{eq:pr35-full-boundary-return-series}
+\end{equation}
+
+Let $E=Xz^8$ be a nonzero independent word.  There are two separate ledgers.
+The raw recurrence $Xz^5[z^3]I$ contributes $[E]C_{\rm raw}=1$, while the
+explicit cofactor counterterm contributes $[E]N_{\sigma,\rm corr}=\sigma_8$.
+Thus the published $-Xz^8$ remains in the numerator precisely to cancel the
+raw positive incidence in the full series. The finite-rank orientation rule excludes the first repeated length-eight recirculation before projection.  In the formal return algebra, this is the exact incidence equation
+\begin{equation}
+ [Xz^8]F_{\sigma}=0.
+ \label{eq:pr35-xz8-exclusion}
+\end{equation}
+
+\begin{theorem}[Conditional Terminal-Orientation Rigidity]
+Equation~\eqref{eq:pr35-xz8-exclusion} has the unique real solution $\sigma_8=-1$.  Hence every other integer or real coefficient violates the PR-I finite-rank boundary-exclusion equation.
+\end{theorem}
+
+\begin{proof}
+The interior series begins
+\begin{equation}
+ I(z)=1+z^3+z^4+z^6+2z^7+z^8+\mathcal O(z^9).
+\end{equation}
+Only $Xz^5[z^3]I$ and $\sigma_8Xz^8[z^0]I$ contribute to $[Xz^8]F_{\sigma}$.
+Both interior coefficients equal one, so
+\begin{equation}
+ [Xz^8]F_{\sigma}=1+\sigma_8.
+\end{equation}
+The exclusion condition gives $1+\sigma_8=0$, and therefore
+$\sigma_8=-1$ uniquely.
+\end{proof}
+
+For $\sigma_8=0$, one forbidden length-eight return remains.  For $\sigma_8=+1$, its multiplicity is two.  More generally, every $\sigma_8\ne-1$ leaves nonzero incidence $1+\sigma_8$.  The exclusion uses no fine-structure value or other diagnostic and is not a best-fit selection.
+
+As with Appendix~\ref{app:generation-count-rigidity}, the theorem domain must be stated.  The result closes the coefficient inside PR-I's signed boundary-orientation class.  P1 through P7 alone do not state Eq.~\eqref{eq:pr35-xz8-exclusion}; without that rule, the previously constructed common-reduct countermodels remain.  The exact conclusion is that $\sigma_8=-1$ is uniquely necessary for the PR-I finite-rank boundary return, not that the frozen postulates independently generate the exclusion rule. If ``exclusion'' were instead defined only by a later projection that annihilates $E$, every value of $\sigma_8$ would become equivalent in that quotient.  The uniqueness theorem specifically concerns PR-I's signed pre-projection counterterm accounting.
