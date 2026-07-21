@@ -342,17 +342,20 @@ data/section11/11_5_hubble_desi_phase_response/
 The public release includes a source-linked Maple verification harness under:
 
 ```text
-test_harness/symbolic/
+test_harness/projection_relativity_I/symbolic/
 ```
 
 The Maple checker verifies the local repository manuscript files:
 
 ```text
-manuscript/Oshetski_Projection_Relativity_Main.tex
-manuscript/Oshetski_Projection_Relativity_Supplement.tex
+manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Main.tex
+manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Supplement.tex
 ```
 
-It does not download files from GitHub during the run. Users should clone or download the full repository and run Maple from `test_harness/symbolic/`.
+It does not download files from GitHub during the run. Users should clone or
+download the full repository and run the documented Maple command from the
+repository root; see
+[`test_harness/projection_relativity_I/symbolic/README.md`](../../test_harness/projection_relativity_I/symbolic/README.md).
 
 Recommended release language:
 
@@ -427,8 +430,9 @@ PY
 
 A reviewer should be able to:
 
-1. Build the manuscript from `manuscript/`.
-2. Run the Maple audit from `test_harness/symbolic/`.
+1. Build the manuscript from `manuscript/projection_relativity_I/`.
+2. Run the Maple audit from the repository root using
+   `test_harness/projection_relativity_I/symbolic/code/run_appendix_verification.mpl`.
 3. Run or inspect the Python scripts under `scripts/section11/`.
 4. Recreate the Section 11 plots from the provided derived tables.
 5. Identify which raw datasets are included and which are external.

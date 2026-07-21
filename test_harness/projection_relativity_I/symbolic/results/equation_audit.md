@@ -6,8 +6,8 @@ Source documents:
 
 `oshetskiresearch/Projection_Relativity`, branch `main`
 
-- Main paper: `manuscript/Oshetski_Projection_Relativity_Main.tex`, source id `path-linked-to-main`
-- Supplement: `manuscript/Oshetski_Projection_Relativity_Supplement.tex`, source id `path-linked-to-main`
+- Main paper: `manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Main.tex`, source id `path-linked-to-main`
+- Supplement: `manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Supplement.tex`, source id `path-linked-to-main`
 
 Maple harness audited:
 

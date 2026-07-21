@@ -19,7 +19,7 @@ constants.
 The current Colab-ready harness file is:
 
 ```text
-projection_relativity_numerical_validation_colab.py
+test_harness/projection_relativity_I/numerical/code/projection_relativity_numerical_validation_harness.py
 ```
 The script writes outputs to:
 
@@ -88,13 +88,15 @@ a valid machine-checkable run.
 ## Run In Google Colab
 
 1. Open a new Colab notebook.
-2. Upload `projection_relativity_numerical_validation_colab.py`.
+2. Upload `projection_relativity_numerical_validation_harness.py` from the
+   repository's `test_harness/projection_relativity_I/numerical/code/`
+   directory.
 3. Optional but recommended: upload the current paper and supplement `.tex`
    files into `/content` to activate document source checks.
 4. Run:
 
 ```python
-%run projection_relativity_numerical_validation_colab.py
+%run projection_relativity_numerical_validation_harness.py
 ```
 
 For the deeper stress run:
@@ -102,7 +104,7 @@ For the deeper stress run:
 ```python
 import os
 os.environ["PR_STRESS_MODE"] = "1"
-%run projection_relativity_numerical_validation_colab.py
+%run projection_relativity_numerical_validation_harness.py
 ```
 
 The script creates:
@@ -116,16 +118,16 @@ Download the archive from Colab after the run.
 
 ## Run Locally
 
-From the folder containing the harness:
+From the repository root:
 
 ```bash
-python projection_relativity_numerical_validation_colab.py
+python test_harness/projection_relativity_I/numerical/code/projection_relativity_numerical_validation_harness.py
 ```
 
 For stress mode:
 
 ```bash
-python projection_relativity_numerical_validation_colab.py --stress
+python test_harness/projection_relativity_I/numerical/code/projection_relativity_numerical_validation_harness.py --stress
 ```
 
 If `python` is not on your path, use the full path to your Python executable.
@@ -138,7 +140,7 @@ available in the runtime.
 It searches common runtime locations such as:
 
 ```text
-.
+the repository root and its subdirectories
 /content
 ```
 
@@ -258,7 +260,6 @@ Status meanings:
 - `WARNING`: a nonfatal boundary or optional source-text condition needs review.
 - `FAIL`: release blocker.
 - `OPEN`: intentionally unresolved or not active in this run.
-```
 
 ## Relationship To Maple
 
@@ -269,8 +270,8 @@ Maple checker  -> symbolic, algebraic, dimensional, trace, and source-text audit
 Python checker -> numerical, convergence, stability, GR benchmark, and stress audit
 ```
 
-The Maple checker should be run from the repository-local `test_harness/`
-folder after updating the repo. The Python checker can run locally or in Colab.
+The Maple and local Python checkers should be run from the repository root after
+updating the checkout. The Python checker can also run in Colab.
 
 Recommended release workflow:
 
@@ -288,7 +289,7 @@ Recommended release workflow:
 Install the required packages:
 
 ```bash
-pip install numpy pandas scipy matplotlib
+python -m pip install numpy pandas scipy matplotlib
 ```
 
 In Colab, the script attempts to install missing required packages
@@ -324,7 +325,7 @@ Do not call the script through an argument parser cell that inherits Jupyter
 kernel arguments. Use:
 
 ```python
-%run projection_relativity_numerical_validation_colab.py
+%run projection_relativity_numerical_validation_harness.py
 ```
 
 or set stress mode with:
@@ -332,7 +333,7 @@ or set stress mode with:
 ```python
 import os
 os.environ["PR_STRESS_MODE"] = "1"
-%run projection_relativity_numerical_validation_colab.py
+%run projection_relativity_numerical_validation_harness.py
 ```
 
 ### Output Archive Missing

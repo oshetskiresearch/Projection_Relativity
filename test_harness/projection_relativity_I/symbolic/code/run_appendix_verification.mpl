@@ -3,8 +3,8 @@
 # equation_derivations.md, proof_report.md, spectrum_recompute.md,
 # and equation_audit.md.
 #
-# From Maple, run:
-#   read "run_appendix_verification.mpl";
+# From the repository root in Maple, run:
+#   read "test_harness/projection_relativity_I/symbolic/code/run_appendix_verification.mpl";
 
-read "ProjectionRelativityAppendixVerify.mpl":
+read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
 PR_RunAll();

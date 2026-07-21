@@ -38,8 +38,11 @@
 # physical or observational statement is certified beyond the machine-checkable scope.
 #
 # Usage:
-#   Standard: python projection_relativity_numerical_validation_colab.py
-#   Stress:   python projection_relativity_numerical_validation_colab.py --stress
+#   Standard from repository root:
+#       python test_harness/projection_relativity_I/numerical/code/projection_relativity_numerical_validation_harness.py
+#   Stress from repository root:
+#       python test_harness/projection_relativity_I/numerical/code/projection_relativity_numerical_validation_harness.py --stress
+#   Colab: upload this file and run %run projection_relativity_numerical_validation_harness.py
 #   Colab stress mode: set os.environ["PR_STRESS_MODE"] = "1" before running.
 # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 

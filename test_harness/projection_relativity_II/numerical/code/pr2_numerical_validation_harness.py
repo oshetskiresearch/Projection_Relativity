@@ -59,13 +59,13 @@
 # and strong-sector precision matching are assigned to the PR-III precision layer.
 #
 # Usage:
-#   Standard:
-#       python pr2_full_colab_harness_colab.py
+#   Standard from repository root:
+#       python test_harness/projection_relativity_II/numerical/code/pr2_numerical_validation_harness.py
 #
 #   In Google Colab:
 #       from google.colab import files
 #       uploaded = files.upload()
-#       %run pr2_full_colab_harness_colab.py
+#       %run pr2_numerical_validation_harness.py
 #       files.download("/content/pr2_harness_output.zip")
 #
 # Outputs:

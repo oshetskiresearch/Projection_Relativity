@@ -6,20 +6,20 @@ Projection Relativity manuscript.
 The checker is linked to the LaTeX source files in:
 
 ```text
-manuscript/Oshetski_Projection_Relativity_Main.tex
-manuscript/Oshetski_Projection_Relativity_Supplement.tex
+manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Main.tex
+manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Supplement.tex
 ```
 
 The main Maple file is:
 
 ```text
-test_harness/symbolic/ProjectionRelativityAppendixVerify.mpl
+test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl
 ```
 
 The convenience runner is:
 
 ```text
-test_harness/symbolic/run_appendix_verification.mpl
+test_harness/projection_relativity_I/symbolic/code/run_appendix_verification.mpl
 ```
 
 ## What The Checker Does
@@ -62,12 +62,17 @@ The expected public repository layout is:
 ```text
 Projection_Relativity/
   manuscript/
-    Oshetski_Projection_Relativity_Main.tex
-    Oshetski_Projection_Relativity_Supplement.tex
+    projection_relativity_I/
+      Oshetski_Projection_Relativity_Main.tex
+      Oshetski_Projection_Relativity_Supplement.tex
   test_harness/
-    ProjectionRelativityAppendixVerify.mpl
-    run_appendix_verification.mpl
-    README.md
+    projection_relativity_I/
+      symbolic/
+        README.md
+        code/
+          ProjectionRelativityAppendixVerify.mpl
+          run_appendix_verification.mpl
+        results/
 ```
 
 The Maple harness has these source constants near the top of
@@ -76,13 +81,14 @@ The Maple harness has these source constants near the top of
 ```maple
 PR_source_repo := "oshetskiresearch/Projection_Relativity":
 PR_source_branch := "main":
-PR_source_path := "manuscript/Oshetski_Projection_Relativity_Main.tex":
-PR_supplement_path := "manuscript/Oshetski_Projection_Relativity_Supplement.tex":
+PR_source_path := "manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Main.tex":
+PR_supplement_path := "manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Supplement.tex":
+PR_results_path := "test_harness/projection_relativity_I/symbolic/results":
 PR_require_source_text := true:
 ```
 
-When the checker is run from `test_harness/`, it finds the manuscript through
-the fallback path `../manuscript/...`.
+Run the checker from the repository root. This makes the source and result paths
+above valid on Windows, macOS, and Linux without staging or copying files.
 
 The checker does not download files from GitHub. It intentionally verifies the
 repo-local LaTeX files in the current checkout. To check the latest public
@@ -98,7 +104,8 @@ You need:
 
 - Maple installed locally
 - a local clone or downloaded copy of `oshetskiresearch/Projection_Relativity`
-- the `manuscript/` folder and `test_harness/` folder in the same repository
+- the complete `manuscript/projection_relativity_I/` and
+  `test_harness/projection_relativity_I/symbolic/` directories
 
 No Python dependencies are required for the Maple checker.
 
@@ -111,8 +118,8 @@ No Python dependencies are required for the Maple checker.
 
 ```maple
 restart:
-currentdir("C:/path/to/Projection_Relativity/test_harness"):
-read "ProjectionRelativityAppendixVerify.mpl":
+currentdir("C:/path/to/Projection_Relativity"):
+read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
 PR_RunAll();
 ```
 
@@ -120,8 +127,8 @@ On Windows, an example path may look like:
 
 ```maple
 restart:
-currentdir("C:/Users/Michael Oshetski/Documents/GitHub/Projection_Relativity/test_harness"):
-read "ProjectionRelativityAppendixVerify.mpl":
+currentdir("C:/Users/your-name/Documents/GitHub/Projection_Relativity"):
+read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
 PR_RunAll();
 ```
 
@@ -129,26 +136,31 @@ On macOS or Linux, an example path may look like:
 
 ```maple
 restart:
-currentdir("/Users/michael/Projection_Relativity/test_harness"):
-read "ProjectionRelativityAppendixVerify.mpl":
+currentdir("/Users/your-name/Projection_Relativity"):
+read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
 PR_RunAll();
 ```
 
 ## Quick Start From Maple Command Line
 
-From inside the repository's `test_harness/` folder, run Maple and read the
-runner:
+From the repository root, run the convenience runner with command-line Maple:
+
+```bash
+cmaple -q test_harness/projection_relativity_I/symbolic/code/run_appendix_verification.mpl
+```
+
+From an interactive Maple prompt at the repository root, read the same runner:
 
 ```maple
 restart:
-read "run_appendix_verification.mpl";
+read "test_harness/projection_relativity_I/symbolic/code/run_appendix_verification.mpl";
 ```
 
 Or read the main harness directly:
 
 ```maple
 restart:
-read "ProjectionRelativityAppendixVerify.mpl":
+read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
 PR_RunAll();
 ```
 
@@ -200,7 +212,8 @@ machine-checkable scope.
 
 ## Generated Files
 
-Every full run refreshes these files in `test_harness/`:
+Every full run refreshes these files in
+`test_harness/projection_relativity_I/symbolic/results/`:
 
 ```text
 equation_map.md
@@ -229,8 +242,8 @@ After loading the harness:
 
 ```maple
 restart:
-currentdir("C:/path/to/Projection_Relativity/test_harness"):
-read "ProjectionRelativityAppendixVerify.mpl":
+currentdir("C:/path/to/Projection_Relativity"):
+read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
 ```
 
 you can run individual sections:
@@ -297,11 +310,11 @@ numerical constants. This is what ties the checker to the LaTeX source.
 It expects:
 
 ```text
-../manuscript/Oshetski_Projection_Relativity_Main.tex
-../manuscript/Oshetski_Projection_Relativity_Supplement.tex
+manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Main.tex
+manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Supplement.tex
 ```
 
-when running from `test_harness/`.
+when running from the repository root.
 
 By default, source-text coverage is required:
 
@@ -317,7 +330,7 @@ For a standalone algebra-only smoke check, you may explicitly relax this after
 loading the harness:
 
 ```maple
-read "ProjectionRelativityAppendixVerify.mpl":
+read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
 PR_require_source_text := false:
 PR_RunAll();
 ```
@@ -326,7 +339,7 @@ Do not use relaxed mode for a release check.
 
 For release:
 
-1. Run from `test_harness/`.
+1. Run from the repository root.
 2. Confirm the source scan is not skipped.
 3. Confirm `MANUSCRIPT count: 0`.
 4. Commit the refreshed Markdown reports.
@@ -340,14 +353,14 @@ Whenever either LaTeX file changes:
 
 ```maple
 restart:
-currentdir("C:/path/to/Projection_Relativity/test_harness"):
-read "ProjectionRelativityAppendixVerify.mpl":
+currentdir("C:/path/to/Projection_Relativity"):
+read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
 PR_RunAll();
 ```
 
 3. Review the console summary.
-4. Open `equation_audit.md`.
-5. Open `harness_validation.md`.
+4. Open `test_harness/projection_relativity_I/symbolic/results/equation_audit.md`.
+5. Open `test_harness/projection_relativity_I/symbolic/results/harness_validation.md`.
 6. If `MANUSCRIPT count` is nonzero, fix either the paper or the harness.
 7. Commit the updated `test_harness/*.md` reports with the paper change.
 
@@ -361,8 +374,8 @@ Fix: restart Maple and run only:
 
 ```maple
 restart:
-currentdir("C:/path/to/Projection_Relativity/test_harness"):
-read "ProjectionRelativityAppendixVerify.mpl":
+currentdir("C:/path/to/Projection_Relativity"):
+read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
 PR_RunAll();
 ```
 
@@ -376,21 +389,22 @@ harness file.
 ### Source-text scan skipped
 
 Cause: `PR_require_source_text` was explicitly set to `false` and Maple could
-not find `manuscript/...` from the current working directory.
+not find `manuscript/projection_relativity_I/...` from the current working
+directory.
 
 In normal release mode, this condition is an error rather than a skipped note.
 
 Fix: run from:
 
 ```text
-Projection_Relativity/test_harness
+Projection_Relativity/
 ```
 
 and make sure the paper files exist at:
 
 ```text
-Projection_Relativity/manuscript/Oshetski_Projection_Relativity_Main.tex
-Projection_Relativity/manuscript/Oshetski_Projection_Relativity_Supplement.tex
+Projection_Relativity/manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Main.tex
+Projection_Relativity/manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Supplement.tex
 ```
 
 If you want the newest GitHub version, update the repository first:
@@ -416,11 +430,12 @@ harness.
 
 Before tagging or publishing:
 
-1. Run `PR_RunAll()` from `test_harness/`.
+1. Run `PR_RunAll()` from the repository root.
 2. Confirm the source-text scan finds both LaTeX files.
 3. Confirm `MANUSCRIPT count: 0`.
-4. Confirm `harness_validation.md` shows negative controls passed.
-5. Review `equation_audit.md`.
+4. Confirm `test_harness/projection_relativity_I/symbolic/results/harness_validation.md`
+   shows negative controls passed.
+5. Review `test_harness/projection_relativity_I/symbolic/results/equation_audit.md`.
 6. Commit refreshed generated reports.
 7. Use boundary language in the paper and README:
 

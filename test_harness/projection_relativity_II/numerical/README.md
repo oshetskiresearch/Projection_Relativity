@@ -57,8 +57,10 @@ The script is intended to run both locally and in Google Colab. If you rename th
 
 ### Local Python
 
+From the repository root:
+
 ```bash
-python pr2_full_colab_harness_colab.py
+python test_harness/projection_relativity_II/numerical/code/pr2_numerical_validation_harness.py
 ```
 
 The script writes its audit package to:
@@ -76,7 +78,7 @@ Upload the script into a Colab session, then run:
 from google.colab import files
 uploaded = files.upload()
 
-%run pr2_full_colab_harness_colab.py
+%run pr2_numerical_validation_harness.py
 
 files.download("/content/pr2_harness_output.zip")
 ```
@@ -153,18 +155,16 @@ These values are generated before diagnostic reference comparisons are loaded.
 
 ## Repository Layout
 
-Recommended public repository layout:
+Public repository layout:
 
 ```text
-.
+test_harness/projection_relativity_II/numerical/
 |-- README.md
-|-- pr2_full_colab_harness_colab.py
-|-- LICENSE
-`-- examples/
-    `-- sample_run_summary.md
+|-- code/
+|   `-- pr2_numerical_validation_harness.py
+`-- results/
+    `-- pr2_harness_output.zip
 ```
-
-The `examples/` folder is optional, but it can be useful for preserving a known-good run summary.
 
 ## Reproducibility Notes
 
@@ -189,5 +189,5 @@ ORCID: 0009-0007-3623-7586
 
 ## License
 
-Add the license you want for public use before publishing the repository. If no license is included, default copyright restrictions apply even if the repository is public.
+This harness is distributed under the repository's root MIT `LICENSE`.
 
