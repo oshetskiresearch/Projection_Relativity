@@ -1,0 +1,281 @@
+{
+  "checks": [
+    {
+      "actual": "(Fraction(1, 1), Fraction(3, 4), Fraction(4, 1))",
+      "expected": "(1, 3/4), determinant 4",
+      "group": "radial",
+      "id": "radial:unique_coefficients",
+      "note": "The two declared coefficient constraints have one exact solution.",
+      "status": "PASS"
+    },
+    {
+      "actual": "V''/Lambda^2 = 2 + 9 w^2",
+      "expected": "positive for every real w",
+      "group": "radial",
+      "id": "radial:strict_convexity",
+      "note": "The canonical minimal even quartic is strictly convex.",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1, 2, 5]",
+      "expected": "[1, 2, 5]",
+      "group": "compact",
+      "id": "compact:semigroup_gaps",
+      "note": "Seeds 6,7,8 and closure under +3 prove the complete positive gap list.",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(251, 256), Fraction(267453, 262144), Fraction(3354902985, 4211081216))",
+      "expected": "(Fraction(251, 256), Fraction(267453, 262144), Fraction(3354902985, 4211081216))",
+      "group": "compact",
+      "id": "compact:boundary_rationals",
+      "note": "Exact PR-I boundary arithmetic.",
+      "status": "PASS"
+    },
+    {
+      "actual": "[{1, 3}]",
+      "expected": "[{1, 3}]",
+      "group": "compact",
+      "id": "compact:minimal_projector",
+      "note": "Rank two plus inclusion of both required channels leaves only Pi_13.",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/4211081216",
+      "expected": "9/4211081216",
+      "group": "negative-control",
+      "id": "compact:axiom_layer_negative_control",
+      "note": "Omitting signed incidence leaves a distinct P1-P7-compatible expansion.",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(1, 1), 0, 0, Fraction(1, 1), Fraction(1, 1), 0, Fraction(1, 1), Fraction(2, 1), Fraction(1, 1)]",
+      "expected": "[1, 0, 0, 1, 1, 0, 1, 2, 1]",
+      "group": "terminal",
+      "id": "terminal:return_series",
+      "note": "Exact coefficients through z^8.",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(1, 1), Fraction(1, 1), Fraction(-1, 1))",
+      "expected": "(1, 1, -1)",
+      "group": "terminal",
+      "id": "terminal:unique_orientation",
+      "note": "[X z^8]F_sigma=1+sigma has the sole real zero sigma=-1.",
+      "status": "PASS"
+    },
+    {
+      "actual": "{-1: 0, 0: 1, 1: 2}",
+      "expected": "only -1 has zero incidence",
+      "group": "negative-control",
+      "id": "terminal:omitted_rule_negative_control",
+      "note": "The broader post-projection quotient does not select an orientation.",
+      "status": "PASS"
+    },
+    {
+      "actual": "{(3, 0): Fraction(144, 1), (2, 1): Fraction(-36, 1), (1, 2): Fraction(-18, 1)}",
+      "expected": "{(1, 2): Fraction(-18, 1), (2, 1): Fraction(-36, 1), (3, 0): Fraction(144, 1)}",
+      "group": "hypercharge",
+      "id": "hypercharge:cubic_factorization",
+      "note": "Exact sparse-polynomial anomaly factorization.",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'discriminant': Fraction(36, 1), 'u/t roots': (Fraction(2, 1), Fraction(-4, 1))}",
+      "expected": "one nonzero orbit modulo singlet relabeling",
+      "group": "hypercharge",
+      "id": "hypercharge:nonzero_orbit",
+      "note": "The nonzero residual-charge ledger excludes t=0; the other roots relabel up/down singlets.",
+      "status": "PASS"
+    },
+    {
+      "actual": "t=0, d=-u",
+      "expected": "anomaly-free outside nonzero-charge ledger",
+      "group": "negative-control",
+      "id": "hypercharge:zero_branch_negative_control",
+      "note": "Anomaly cancellation alone is intentionally not certified as unique.",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(0, 1), [Fraction(0, 1), Fraction(0, 1)])",
+      "expected": "(0, [0, 0])",
+      "group": "photon",
+      "id": "photon:rank_one_null_line",
+      "note": "The fixed outer-product neutral mass matrix has a one-dimensional kernel.",
+      "status": "PASS"
+    },
+    {
+      "actual": "[(3, 3)]",
+      "expected": "[(3, 3)]",
+      "group": "generation",
+      "id": "generation:count_rigidity",
+      "note": "Completeness and nonredundancy defects vanish only at N=rank=3.",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(0, 1), Fraction(9, 1))",
+      "expected": "(0, 'positive')",
+      "group": "generation",
+      "id": "generation:normalized_incidence",
+      "note": "Metric compatibility removes continuous singular-value moduli.",
+      "status": "PASS"
+    },
+    {
+      "actual": "all sampled positive N",
+      "expected": "anomaly/Witten gates do not select N",
+      "group": "negative-control",
+      "id": "generation:anomaly_gate_negative_control",
+      "note": "The sheet-incidence theorem is a necessary closure layer.",
+      "status": "PASS"
+    },
+    {
+      "actual": "(23, 21)",
+      "expected": "(23, 21)",
+      "group": "finite-tier",
+      "id": "finite-tier:monomial_enumeration",
+      "note": "The inherited PR-III composition grammar keeps D1,D2 and excludes 21 broader-class monomials.",
+      "status": "PASS"
+    },
+    {
+      "actual": "[(1, 1, 1, 1), (1, 1, 1, 2), (1, 1, 2, 0)]",
+      "expected": "formal alternatives exist if the grammar is dropped",
+      "group": "negative-control",
+      "id": "finite-tier:grammar_negative_control",
+      "note": "This confirms that fixed finite-tier order is part of the theorem domain.",
+      "status": "PASS"
+    },
+    {
+      "actual": "(4, 3, 1)",
+      "expected": "(4, 3, 1)",
+      "group": "d3",
+      "id": "d3:u1_rank_reduction",
+      "note": "Exact rational row reduction exhausts Sym(4) under the three structural gates.",
+      "status": "PASS"
+    },
+    {
+      "actual": "[[0, 0, 0], [0, 0, 0], [0, 0, 2]]",
+      "expected": "[[0, 0, 0], [0, 0, 0], [0, 0, 2]]",
+      "group": "d3",
+      "id": "d3:adjoint_trace",
+      "note": "The normalized charged-adjoint contraction is exactly 2 P_3.",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(1303, 441), Fraction(1303, 441), Fraction(1303, 1225))",
+      "expected": "additive, degree two, unit normalized",
+      "group": "d3",
+      "id": "d3:unique_quadratic_response",
+      "note": "The diagonal normal form forces F(q)=Tr(q^dagger q) in the declared response class.",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "d3",
+      "id": "d3:canonical_k",
+      "note": "The PR charged-adjoint spectrum (+1,-1) fixes k=2.",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(2, 1)]",
+      "expected": "[2]",
+      "group": "d3",
+      "id": "d3:unique_defect_zero",
+      "note": "rho^2(k-2)^2 has the sole real zero k=2 because rho>0.",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(-3, 1), Fraction(0, 1), Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(11, 2)]",
+      "expected": "all real k pass the first three structural gates",
+      "group": "negative-control",
+      "id": "d3:structural_family_negative_control",
+      "note": "Canonical unit response, not diagnostics, removes the scalar family.",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1, 2, 3]",
+      "expected": "[1, 2, 3]",
+      "group": "negative-control",
+      "id": "d3:diagnostic_firewall",
+      "note": "The one-sigma diagnostic interval does not select k=2.",
+      "status": "PASS"
+    },
+    {
+      "actual": "29208/100793",
+      "expected": "29208/100793",
+      "group": "d3",
+      "id": "d3:log_hessian",
+      "note": "Exact scalar representative of Tr(GW-GVGV); linearity extends blockwise.",
+      "status": "PASS"
+    },
+    {
+      "actual": "36/91",
+      "expected": "36/91",
+      "group": "scope",
+      "id": "d3:second_jet_counterfamily",
+      "note": "An independent second jet shifts the neutral Hessian by xi*rho.",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/26",
+      "expected": "5/26",
+      "group": "scope",
+      "id": "physical-z:second_jet_shift",
+      "note": "The deformation changes the second jet while leaving the zero and first jets fixed.",
+      "status": "PASS"
+    },
+    {
+      "actual": "5929/9360",
+      "expected": "5929/9360",
+      "group": "scope",
+      "id": "physical-z:eft_operator",
+      "note": "O_HD yields the stated neutral mass term but carries a new Wilson coefficient.",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(128, 325), Fraction(8, 13))",
+      "expected": "unequal for 0<c<1",
+      "group": "scope",
+      "id": "d3:mixing_normalization_nogo",
+      "note": "Photon nullity prevents simultaneous unit W3 and physical-Z normalization.",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(3, 4), Fraction(3, 4), Fraction(1, 1), Fraction(-9, 16), Fraction(2, 1))",
+      "expected": "eQ, (g/c)(T3-s^2Q), trace 2",
+      "group": "physical-z",
+      "id": "physical-z:normalized_generator",
+      "note": "Exact rational electroweak rotation verifies the normalized physical-Z response.",
+      "status": "PASS"
+    },
+    {
+      "actual": "{'radial': (Fraction(1, 1), Fraction(3, 4)), 'projector': 'span{phi1,phi3}', 'terminal': Fraction(-1, 1), 'hypercharge': 'nonzero orbit', 'photon': 'one null line', 'generation': (3, '[I3]'), 'neutral-response': Fraction(2, 1)}",
+      "expected": "seven manuscript selector coordinates",
+      "group": "global",
+      "id": "global:selector_coordinate_exhaustion",
+      "note": "Every adjustable equation-selection coordinate has a complete normal form.",
+      "status": "PASS"
+    },
+    {
+      "actual": "['radial', 'projector', 'terminal', 'hypercharge', 'photon', 'generation', 'neutral-response']",
+      "expected": "dependency-ordered acyclic composition",
+      "group": "global",
+      "id": "global:normal_form_composition",
+      "note": "Fiberwise singleton normal forms compose to one global selector orbit.",
+      "status": "PASS"
+    },
+    {
+      "actual": "diagnostics occur only in negative controls",
+      "expected": "no diagnostic generative checks",
+      "group": "global",
+      "id": "global:no_fit_firewall",
+      "note": "The exact singleton gate is independent of empirical residual ranking.",
+      "status": "PASS"
+    }
+  ],
+  "failed": 0,
+  "passed": 34,
+  "scope": "Completed PR admissible class with broader-class negative controls",
+  "status": "PASS",
+  "total": 34
+}

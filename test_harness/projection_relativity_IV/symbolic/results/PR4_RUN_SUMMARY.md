@@ -1,0 +1,16 @@
+# Projection Relativity IV Harness Run
+
+Status: **PASS**
+
+- Exact symbolic checks: **34/34**
+- Display-math coverage: **138/138**
+- Theorem/proposition/lemma coverage: **23/23**
+- Unresolved references: **0**
+- Unresolved citations: **0**
+- Manuscript source commit: `494b5faa97280eab57cf396763194fd57b6cc98f`
+- Main TeX SHA-256: `58f3bcd13adfd329c7db44b20486bec59fccf7dc60fc8db16bf62b94f31242f0`
+- Main PDF SHA-256: `8c28fc1e191393e97e065271e12e5d38c466400a201f80c61356d00937c9c3e7`
+
+All seven adjustable equation-selection coordinates are covered by exact certificates. The broader-class survivors are exercised as negative controls and are excluded only by the final manuscript's declared, target-independent canonical-closure rules.
+
+Full display coverage is accounting coverage: definitions, inherited PR-I--PR-III relations, diagnostics, and outside-class countermodels retain explicit coverage labels rather than being misrepresented as independent symbolic theorems.

@@ -1,0 +1,35 @@
+id,group,status,actual,expected,note
+radial:unique_coefficients,radial,PASS,"(Fraction(1, 1), Fraction(3, 4), Fraction(4, 1))","(1, 3/4), determinant 4",The two declared coefficient constraints have one exact solution.
+radial:strict_convexity,radial,PASS,V''/Lambda^2 = 2 + 9 w^2,positive for every real w,The canonical minimal even quartic is strictly convex.
+compact:semigroup_gaps,compact,PASS,"[1, 2, 5]","[1, 2, 5]","Seeds 6,7,8 and closure under +3 prove the complete positive gap list."
+compact:boundary_rationals,compact,PASS,"(Fraction(251, 256), Fraction(267453, 262144), Fraction(3354902985, 4211081216))","(Fraction(251, 256), Fraction(267453, 262144), Fraction(3354902985, 4211081216))",Exact PR-I boundary arithmetic.
+compact:minimal_projector,compact,PASS,"[{1, 3}]","[{1, 3}]",Rank two plus inclusion of both required channels leaves only Pi_13.
+compact:axiom_layer_negative_control,negative-control,PASS,9/4211081216,9/4211081216,Omitting signed incidence leaves a distinct P1-P7-compatible expansion.
+terminal:return_series,terminal,PASS,"[Fraction(1, 1), 0, 0, Fraction(1, 1), Fraction(1, 1), 0, Fraction(1, 1), Fraction(2, 1), Fraction(1, 1)]","[1, 0, 0, 1, 1, 0, 1, 2, 1]",Exact coefficients through z^8.
+terminal:unique_orientation,terminal,PASS,"(Fraction(1, 1), Fraction(1, 1), Fraction(-1, 1))","(1, 1, -1)",[X z^8]F_sigma=1+sigma has the sole real zero sigma=-1.
+terminal:omitted_rule_negative_control,negative-control,PASS,"{-1: 0, 0: 1, 1: 2}",only -1 has zero incidence,The broader post-projection quotient does not select an orientation.
+hypercharge:cubic_factorization,hypercharge,PASS,"{(3, 0): Fraction(144, 1), (2, 1): Fraction(-36, 1), (1, 2): Fraction(-18, 1)}","{(1, 2): Fraction(-18, 1), (2, 1): Fraction(-36, 1), (3, 0): Fraction(144, 1)}",Exact sparse-polynomial anomaly factorization.
+hypercharge:nonzero_orbit,hypercharge,PASS,"{'discriminant': Fraction(36, 1), 'u/t roots': (Fraction(2, 1), Fraction(-4, 1))}",one nonzero orbit modulo singlet relabeling,The nonzero residual-charge ledger excludes t=0; the other roots relabel up/down singlets.
+hypercharge:zero_branch_negative_control,negative-control,PASS,"t=0, d=-u",anomaly-free outside nonzero-charge ledger,Anomaly cancellation alone is intentionally not certified as unique.
+photon:rank_one_null_line,photon,PASS,"(Fraction(0, 1), [Fraction(0, 1), Fraction(0, 1)])","(0, [0, 0])",The fixed outer-product neutral mass matrix has a one-dimensional kernel.
+generation:count_rigidity,generation,PASS,"[(3, 3)]","[(3, 3)]",Completeness and nonredundancy defects vanish only at N=rank=3.
+generation:normalized_incidence,generation,PASS,"(Fraction(0, 1), Fraction(9, 1))","(0, 'positive')",Metric compatibility removes continuous singular-value moduli.
+generation:anomaly_gate_negative_control,negative-control,PASS,all sampled positive N,anomaly/Witten gates do not select N,The sheet-incidence theorem is a necessary closure layer.
+finite-tier:monomial_enumeration,finite-tier,PASS,"(23, 21)","(23, 21)","The inherited PR-III composition grammar keeps D1,D2 and excludes 21 broader-class monomials."
+finite-tier:grammar_negative_control,negative-control,PASS,"[(1, 1, 1, 1), (1, 1, 1, 2), (1, 1, 2, 0)]",formal alternatives exist if the grammar is dropped,This confirms that fixed finite-tier order is part of the theorem domain.
+d3:u1_rank_reduction,d3,PASS,"(4, 3, 1)","(4, 3, 1)",Exact rational row reduction exhausts Sym(4) under the three structural gates.
+d3:adjoint_trace,d3,PASS,"[[0, 0, 0], [0, 0, 0], [0, 0, 2]]","[[0, 0, 0], [0, 0, 0], [0, 0, 2]]",The normalized charged-adjoint contraction is exactly 2 P_3.
+d3:unique_quadratic_response,d3,PASS,"(Fraction(1303, 441), Fraction(1303, 441), Fraction(1303, 1225))","additive, degree two, unit normalized",The diagonal normal form forces F(q)=Tr(q^dagger q) in the declared response class.
+d3:canonical_k,d3,PASS,2,2,"The PR charged-adjoint spectrum (+1,-1) fixes k=2."
+d3:unique_defect_zero,d3,PASS,"[Fraction(2, 1)]",[2],rho^2(k-2)^2 has the sole real zero k=2 because rho>0.
+d3:structural_family_negative_control,negative-control,PASS,"[Fraction(-3, 1), Fraction(0, 1), Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(11, 2)]",all real k pass the first three structural gates,"Canonical unit response, not diagnostics, removes the scalar family."
+d3:diagnostic_firewall,negative-control,PASS,"[1, 2, 3]","[1, 2, 3]",The one-sigma diagnostic interval does not select k=2.
+d3:log_hessian,d3,PASS,29208/100793,29208/100793,Exact scalar representative of Tr(GW-GVGV); linearity extends blockwise.
+d3:second_jet_counterfamily,scope,PASS,36/91,36/91,An independent second jet shifts the neutral Hessian by xi*rho.
+physical-z:second_jet_shift,scope,PASS,5/26,5/26,The deformation changes the second jet while leaving the zero and first jets fixed.
+physical-z:eft_operator,scope,PASS,5929/9360,5929/9360,O_HD yields the stated neutral mass term but carries a new Wilson coefficient.
+d3:mixing_normalization_nogo,scope,PASS,"(Fraction(128, 325), Fraction(8, 13))",unequal for 0<c<1,Photon nullity prevents simultaneous unit W3 and physical-Z normalization.
+physical-z:normalized_generator,physical-z,PASS,"(Fraction(3, 4), Fraction(3, 4), Fraction(1, 1), Fraction(-9, 16), Fraction(2, 1))","eQ, (g/c)(T3-s^2Q), trace 2",Exact rational electroweak rotation verifies the normalized physical-Z response.
+global:selector_coordinate_exhaustion,global,PASS,"{'radial': (Fraction(1, 1), Fraction(3, 4)), 'projector': 'span{phi1,phi3}', 'terminal': Fraction(-1, 1), 'hypercharge': 'nonzero orbit', 'photon': 'one null line', 'generation': (3, '[I3]'), 'neutral-response': Fraction(2, 1)}",seven manuscript selector coordinates,Every adjustable equation-selection coordinate has a complete normal form.
+global:normal_form_composition,global,PASS,"['radial', 'projector', 'terminal', 'hypercharge', 'photon', 'generation', 'neutral-response']",dependency-ordered acyclic composition,Fiberwise singleton normal forms compose to one global selector orbit.
+global:no_fit_firewall,global,PASS,diagnostics occur only in negative controls,no diagnostic generative checks,The exact singleton gate is independent of empirical residual ranking.
