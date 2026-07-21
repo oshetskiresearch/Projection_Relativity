@@ -1,0 +1,155 @@
+\section{Exact Closure and Equation Exhaustion for Three Selectors}
+\label{app:three-selector-closure}
+
+The three values below have exact uniqueness arguments inside the completed PR realization classes fixed by the admissibility guidelines.  Their theorem domains are stated explicitly and no diagnostic preference enters.
+
+\subsection{Terminal Orientation}
+
+Let $E=XA^8$ be an independent terminal word.  In the signed finite-rank pre-projection exclusion class, the raw return grammar contributes one copy of $E$, the terminal counterterm contributes $\sigma_8E$, and admissibility requires zero total $E$ incidence.  Exact coefficient extraction gives
+\begin{equation}
+ [E](C_{\rm raw}+N_{\sigma})=1+\sigma_8=0,
+ \qquad \sigma_8=-1.
+\end{equation}
+Every other value leaves the nonzero defect $(1+\sigma_8)E$.  The independent-word grammar and pre-projection zero-incidence rule define the target-independent PR-I boundary closure; if a later projector merely annihilates $E$, the signs instead become quotient-equivalent. Appendix~\ref{app:terminal-orientation-rigidity} states the exact theorem and its domain.
+
+\subsection{Neutral Quadratic Representation Factor}
+
+At one fixed $D_3$ Lorentz/momentum kernel and declared scalar order, an exact rank reduction over all ten components of its real symmetric gauge-index coefficient matrix on $(W^1,W^2,Z,A)$ gives dimensions four after residual $U(1)$ invariance, three after requiring the charged sector unchanged, and one after photon nullity.  The complete structural family within this fixed-kernel matrix class is therefore
+\begin{equation}
+ D_3(k)=\frac{\epsilon_V^2}{N_{\rm gen}}kP_Z,
+ \qquad k\in\mathbb R.
+\end{equation}
+Thus the structural gates fix a one-dimensional subspace but not its scalar. Independent Lorentz/derivative structures remain outside this matrix classification.  For the normalized
+adjoint matrices $(F_a)_{bc}=-i\epsilon_{abc}$ and charged projector $P_{\rm ch}=\operatorname{diag}(1,1,0)$, define
+\begin{equation}
+ K_{ab}=\operatorname{Tr}_{\rm ad}
+ \!\left(P_{\rm ch}F_aP_{\rm ch}F_b\right).
+\end{equation}
+Direct contraction gives $K_{ab}=2\delta_{a3}\delta_{b3}$.  Hence, if the PR-III operator is exactly
+\begin{equation}
+ (D_3)_{ab}=\frac{\epsilon_V^2}{N_{\rm gen}}K_{ab}
+\end{equation}
+with unit prefactor and no other same-order contribution, then its charged entries vanish and $D_{3,Z}=2\epsilon_V^2/N_{\rm gen}$.  Thus $k=2$ is unique in this contraction class.  More strongly,
+Theorem~\ref{thm:pr35-unique-quadratic-response} proves that basis invariance, orthogonal-mode additivity, quadratic homogeneity, and unit-charge normalization uniquely force this trace contraction in the minimal response class.  On the complete structural family the exact
+squared defect is
+$(\epsilon_V^2/N_{\rm gen})^2(k-2)^2$, whose sole real zero is two.  Dropping the unit-prefactor identity creates the outside-class family $D_\lambda=2\lambda(\epsilon_V^2/N_{\rm gen})P_Z$; every $\lambda\ne1$ violates canonical unit normalization and is not a PR solution. The locked one-sigma mass gate permits $0.7684347876\ldots<k<3.1450923435\ldots$, including the fixed alternatives $k=1$, $2\cos^2\theta_W$, and $3$. Appendix~\ref{app:d3-coefficient-rigidity} gives the necessary-and-sufficient four-defect candidate characterization.  Its normalization defect is exactly the target-independent canonical response condition.  A determinant Hessian with the same normalized physical-$Z$ map is an equivalent microscopic realization of the unique operator.
+
+\subsection{Generation Identification}
+
+Let $V_{\rm br}$ be the three-dimensional broken electroweak tangent space and $\Phi_N:S_N\to V_{\rm br}$ the terminal-sheet incidence map.  Completeness makes $\Phi_N$ surjective and nonredundancy makes it injective.  Rank--nullity then gives
+\begin{equation}
+ N=\operatorname{rank}\Phi_N+\dim\ker\Phi_N=3+0=3.
+\end{equation}
+Count rigidity alone does not identify every invertible $3\times3$ incidence matrix under normalized basis changes, because unequal singular values would remain.  The minimal normalized-incidence equation class therefore also requires metric compatibility,
+\begin{equation}
+ \Phi_N^\dagger\Phi_N=I_N,
+ \label{eq:pr35-normalized-incidence-isometry}
+\end{equation}
+which assigns unit response to each normalized sheet and uses no measured target.  Once $N=3$, every such map is orthogonal in the real realization (unitary after complexification) and is equivalent to $I_3$ under allowed normalized incidence-basis transformations.  Completeness and nonredundancy therefore prove the count, while Eq.~\eqref{eq:pr35-normalized-incidence-isometry} closes the incidence equation itself without a continuous singular-value modulus. Consequently, $N<3$ is incomplete and $N>3$ has a redundant sheet combination in that realization class.  The direct sheet map is the target-independent PR-II canonical closure used by the completed admissible class.  Appendix \ref{app:generation-count-rigidity} states the complete integer theorem.
+
+\subsection{Verdict}
+
+All three values are exactly rigid in their stated PR realization classes and none is selected by best fit.  The signed-incidence, complete/nonredundant sheet, and canonical normalized-response principles are therefore non-fitted logical closures.  The broader common-reduct classes explain why these principles are stated explicitly; they do not supply alternative solutions inside the completed classes.  The framework-native motivation and theorem domain of each closure are part of the final class definition.
+
+\begin{theorem}[Equation-level Exhaustion of the Three Closure Selectors]
+\label{thm:pr35-three-selector-equation-exhaustion}
+For the declared signed terminal-boundary, normalized complete/nonredundant generation-incidence, and fixed-kernel minimal quadratic-response classes, every admissible equation is operator-equivalent to the corresponding canonical PR equation.  Their unique normal-form values are
+\begin{equation}
+ \boxed{
+ \sigma_8=-1,
+ \qquad
+ (N_{\rm gen},[\Phi_3])=(3,[I_3]),
+ \qquad
+ D_3=2\rho P_Z\quad(k=2).}
+ \label{eq:pr35-three-selector-equation-exhaustion}
+\end{equation}
+Every inequivalent member of those candidate classes has a nonzero exact defect.
+\end{theorem}
+
+\begin{proof}
+For the terminal boundary class, every candidate reduces in the independent word algebra to the fixed raw grammar plus
+\begin{equation}
+ N_\sigma
+ =1+T_A^3+T_A^4+T_X(T_A^5+\sigma T_A^8),
+ \qquad \sigma\in\mathbb R.
+\end{equation}
+All other coefficients are fixed, so the $XA^8$ coefficient is a complete normal-form invariant.  The raw return contributes one copy of the independent word $E=XA^8$ and the cofactor contributes $\sigma E$.  The independently declared pre-projection exclusion rule therefore has defect
+\begin{equation}
+ d_8(\sigma)=\left|[E](C_{\rm raw}+N_\sigma)\right|
+ =|1+\sigma|,
+\end{equation}
+whose sole real zero is $\sigma=-1$.  Any algebraic rewriting related by a nowhere-singular multiplier is equivalent; every other coefficient leaves a nonzero forbidden incidence.  If exclusion is instead defined only after a later projector annihilates $E$, the coefficients become quotient-equivalent, which is the separate theorem domain already identified above.
+
+For generation incidence, write $r=\operatorname{rank}\Phi_N$ for $\Phi_N:S_N\to V_{\rm br}$ with $\dim V_{\rm br}=3$.  On $0\le r\le\min\{N,3\}$, completeness and nonredundancy have the exact
+nonnegative defects
+\begin{equation}
+ d_{\rm comp}(N,r)=3-r,
+ \qquad
+ d_{\rm red}(N,r)=N-r.
+\end{equation}
+Both vanish if and only if $(N,r)=(3,3)$.  This fixes the count but, under normalized basis changes, does not alone fix every invertible incidence matrix.  The declared equation class also contains the target-independent metric-compatibility defect
+\begin{equation}
+ d_{\rm norm}(\Phi_3)
+ =\|\Phi_3^\dagger\Phi_3-I_3\|_F^2.
+\end{equation}
+Its zero set consists of orthogonal incidence maps (unitary after complexification).  Any two are related by normalized orthogonal or unitary changes of the sheet or broken-direction basis, so the
+complete normal form is $(N,[\Phi_3])=(3,[I_3])$.  Without this normalization, the theorem proves only the count $N=3$, not a unique incidence operator.
+
+For the neutral response, Theorem~\ref{thm:pr35-d3-u1-classification}, charged-sector preservation, and photon nullity exhaust every fixed-kernel real symmetric candidate as
+\begin{equation}
+ D_3(k)=\rho kP_Z,
+ \qquad k\in\mathbb R.
+\end{equation}
+The corresponding residual equation is $E_k(D)=D-\rho kP_Z=0$; thus this application has the same residual-map form as Theorem~\ref{thm:pr35-normal-form-exhaustion}. The normalized eigenvalue multiset of $D_3/\rho$ makes $k$ a complete equivalence invariant.  Theorem~\ref{thm:pr35-unique-quadratic-response} exhausts every response functional satisfying basis invariance, orthogonal-mode
+additivity, quadratic homogeneity, and unit-charge normalization and gives $\mathcal F(q)=\operatorname{Tr}(q^\dagger q)$.  On the charged-adjoint spectrum $(+1,-1)$, $\mathcal F(q)=2$, and the complete defect is
+\begin{equation}
+ d_k(k)=\|D_3(k)-2\rho P_Z\|_F^2
+ =\rho^2(k-2)^2.
+\end{equation}
+Its sole real zero is $k=2$.  A differently written formula that reduces to the same trace on the complete declared charge-operator domain is equivalent. A formula that merely returns two on this single matrix but differs on another admissible charge operator is not the same response law: it either lies outside the declared response-functional domain or has a nonzero defect under at least
+one of the four functional conditions.
+
+Each selector satisfies
+Theorem~\ref{thm:pr35-normal-form-exhaustion}.  The composition is triangular, not an assumption of three independent Cartesian factors: terminal incidence first fixes $\sigma_8=-1$; normalized sheet incidence fixes $N_{\rm gen}=3$ and hence the inherited $\rho=\epsilon_V^2/3$; on that unique
+fiber, the response defect fixes $k=2$.  The combined dependency-ordered normal form therefore has the sole zero $(-1,3,[I_3],2)$, proving the result.
+\end{proof}
+
+\begin{proposition}[Completed Equation-coordinate Quotient]
+\label{prop:pr35-current-closed-equation-quotient}
+Let $\Theta_{\rm closed}$ be the dependency-ordered normal-form space of the explicitly declared
+minimal radial, minimal coordinate-projector, signed terminal-boundary, nonzero-ledger hypercharge, fixed outer-product photon, complete/nonredundant normalized generation-incidence, and fixed-kernel normalized-response selector equations audited in this paper.  Inherited data are frozen before a downstream fiber is classified, and $\sim_{\rm sel}$ applies the stated ledger-preserving
+equivalence in each fiber.  Then
+\begin{equation}
+ \{\theta\in\Theta_{\rm closed}:d_{\rm closed}(\theta)=0\}
+ /\!\sim_{\rm sel}
+ =\{[\theta_{\rm PR}]_{\rm sel}\}.
+ \label{eq:pr35-current-closed-equation-singleton}
+\end{equation}
+Thus another in-class equation that works is either a ledger-preserving representation of the same physical operator or has a nonzero defect.  These are all adjustable equation-selection coordinates of
+$\mathfrak A_{\rm PR}^{\rm can}$; the remaining public sector maps are fixed inherited relations.  This proposition is therefore the selector-coordinate factor used in the global singleton
+Theorem~\ref{thm:pr35-completed-selector-singleton}.
+\end{proposition}
+
+\begin{table}[H]
+\centering
+\caption{Complete Normal Forms in the Completed Selector-coordinate Quotient.}
+\label{tab:pr35-closed-selector-normal-forms}
+\begin{tabularx}{\textwidth}{@{}p{0.20\textwidth}p{0.29\textwidth}X@{}}
+\toprule
+Block & Normal form modulo stated equivalence & Unique-zero certificate \\
+\midrule
+Radial & $(a_2,a_4)$ in the minimal even quartic & $(a_2-1)^2+(a_4-3/4)^2=0$ \\
+Coordinate projector & $\operatorname{Ran}\Pi$ in the minimal required-channel rank-two class & rank two and inclusion of $\phi_1,\phi_3$ force $\operatorname{Ran}\Pi=\operatorname{span}\{\phi_1,\phi_3\}$ \\
+Terminal boundary & $\sigma_8\in\mathbb R$ & $|1+\sigma_8|=0$ \\
+Hypercharge & anomaly-solution orbit $[Y]$ & the factored anomaly ideal plus the fixed nonzero charge ledger leaves one orbit modulo normalization and up/down relabeling \\
+Photon & normalized null line $[v_\gamma]$ & the fixed rank-one outer-product neutral matrix has a one-dimensional kernel \\
+Generation incidence & $(N,[\Phi_N])$ in the normalized incidence class & completeness, nonredundancy, and $\|\Phi_3^\dagger\Phi_3-I_3\|_F^2=0$ leave $(3,[I_3])$ \\
+Neutral response & $(k,[\mathcal F])$ at fixed kernel & the four response conditions give $\mathcal F=\operatorname{Tr}(q^\dagger q)$ and $\rho^2(k-2)^2=0$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{proof}
+The complete normal form and unique-zero condition for each closed block are listed in Table~\ref{tab:pr35-closed-selector-normal-forms} and proved in the cited sector sections and appendices.  Order the blocks by the dependency ledger.  The first block has one admissible orbit.  Inductively, freeze its unique inherited data and apply the next block's complete normal-form theorem
+on that fiber; it too has one admissible orbit.  Repeating this finite argument through the neutral-response fiber gives one dependency-compatible selector orbit.  No Cartesian independence assumption is used.
+\end{proof}
