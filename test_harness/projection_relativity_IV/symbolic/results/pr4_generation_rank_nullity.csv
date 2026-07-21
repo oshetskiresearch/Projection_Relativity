@@ -1,0 +1,13 @@
+N_gen,broken_dimension,max_rank,completeness_possible,nonredundancy_possible,complete_and_nonredundant,minimum_omitted_directions,minimum_redundant_combinations_if_complete
+1,3,1,False,True,False,2,0
+2,3,2,False,True,False,1,0
+3,3,3,True,True,True,0,0
+4,3,3,True,False,False,0,1
+5,3,3,True,False,False,0,2
+6,3,3,True,False,False,0,3
+7,3,3,True,False,False,0,4
+8,3,3,True,False,False,0,5
+9,3,3,True,False,False,0,6
+10,3,3,True,False,False,0,7
+11,3,3,True,False,False,0,8
+12,3,3,True,False,False,0,9

@@ -1,0 +1,25 @@
+{
+  "candidate_generation_uses_diagnostics": false,
+  "compact_outside_class_inside_Rb_1sigma": [
+    "control_sigma0_Pi13",
+    "control_sigma_plus1_Pi13"
+  ],
+  "compact_rows": 5,
+  "electroweak_outside_class_inside_both_1sigma": [
+    [
+      2,
+      -1,
+      1
+    ],
+    [
+      2,
+      -1,
+      3
+    ]
+  ],
+  "electroweak_rows": 64,
+  "interpretation": "Diagnostics are post-generation checks. They neither define nor enlarge the completed admissible class.",
+  "radiative_outside_class_inside_Rb_1sigma": 0,
+  "radiative_rows": 24,
+  "status": "PASS"
+}

@@ -1,4 +1,19 @@
 {
+  "bounded_reproduction_counts": {
+    "branch_elimination_rows": 103,
+    "compact_scope_rows": 9,
+    "electroweak_diagnostic_rows": 64,
+    "radiative_monomials": 23
+  },
+  "component_status": {
+    "branch_elimination": "PASS",
+    "diagnostic_propagation": "PASS",
+    "exact_symbolic": "PASS",
+    "manuscript_coverage": "PASS",
+    "neutral_d3": "PASS",
+    "pr1_numerical": "PASS",
+    "scope_controls": "PASS"
+  },
   "display_coverage": {
     "covered": 138,
     "total": 138,

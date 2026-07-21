@@ -1,0 +1,5 @@
+coefficient_k,canonical,role
+1,False,fixed-kernel diagnostic sample
+2,True,canonical
+3,False,fixed-kernel diagnostic sample
+4,False,fixed-kernel diagnostic sample

@@ -1,0 +1,10 @@
+sigma8,projector,channels,c_bc_fraction,c_bc_decimal,same_trace_alphabet,same_primitive_denominator,rank_two_odd_projector,orientation_closure,minimal_required_channel_closure,completed_class_admissible,role
+-1,Pi13,"1,3",3354902985/4211081216,0.796684464847899010,True,True,True,True,True,True,canonical
+-1,Pi15,"1,5",3354902985/4211081216,0.796684464847899010,True,True,True,True,False,False,outside-class control
+-1,Pi17,"1,7",3354902985/4211081216,0.796684464847899010,True,True,True,True,False,False,outside-class control
+0,Pi13,"1,3",52420359/65798144,0.796684462710680719,True,True,True,False,True,False,outside-class control
+0,Pi15,"1,5",52420359/65798144,0.796684462710680719,True,True,True,False,False,False,outside-class control
+0,Pi17,"1,7",52420359/65798144,0.796684462710680719,True,True,True,False,False,False,outside-class control
+1,Pi13,"1,3",3354902967/4211081216,0.796684460573462427,True,True,True,False,True,False,outside-class control
+1,Pi15,"1,5",3354902967/4211081216,0.796684460573462427,True,True,True,False,False,False,outside-class control
+1,Pi17,"1,7",3354902967/4211081216,0.796684460573462427,True,True,True,False,False,False,outside-class control

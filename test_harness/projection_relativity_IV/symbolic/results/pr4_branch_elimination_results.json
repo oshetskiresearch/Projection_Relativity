@@ -1,0 +1,850 @@
+{
+  "expected_outcome_counts": {
+    "NON_DISCRIMINATING": 9,
+    "REJECTED_DERIVED": 1,
+    "REJECTED_PHYSICAL": 84,
+    "REJECTED_PHYSICAL_CONDITIONAL": 1,
+    "SURVIVES": 8
+  },
+  "findings": [
+    {
+      "candidate": "published_sigma_minus1_Pi13",
+      "no_fit": true,
+      "outcome": "SURVIVES",
+      "reason": "alpha^-1=137.035999207475299; distance=0.134116879 sigma",
+      "sector": "PR-I compact",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "published_sigma_minus1_Pi13",
+      "no_fit": true,
+      "outcome": "NON_DISCRIMINATING",
+      "reason": "The published diagnostic contains no sigma8, c_bc, or projector selector.",
+      "sector": "PR-I compact",
+      "test": "quasar residual sign"
+    },
+    {
+      "candidate": "published_sigma_minus1_Pi13",
+      "no_fit": true,
+      "outcome": "NON_DISCRIMINATING",
+      "reason": "Changing sigma8 at fixed Pi13 leaves the radial spectral gap unchanged.",
+      "sector": "PR-I compact",
+      "test": "Kerr residual-suppression bound"
+    },
+    {
+      "candidate": "published_sigma_minus1_Pi13",
+      "no_fit": true,
+      "outcome": "NON_DISCRIMINATING",
+      "reason": "The projected source area is not independently fixed by this diagnostic.",
+      "sector": "PR-I compact",
+      "test": "magnetic area/Faraday residual"
+    },
+    {
+      "candidate": "control_sigma0_Pi13",
+      "no_fit": true,
+      "outcome": "SURVIVES",
+      "reason": "alpha^-1=137.035999207415216; distance=0.128654743 sigma",
+      "sector": "PR-I compact",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "control_sigma0_Pi13",
+      "no_fit": true,
+      "outcome": "NON_DISCRIMINATING",
+      "reason": "The published diagnostic contains no sigma8, c_bc, or projector selector.",
+      "sector": "PR-I compact",
+      "test": "quasar residual sign"
+    },
+    {
+      "candidate": "control_sigma0_Pi13",
+      "no_fit": true,
+      "outcome": "NON_DISCRIMINATING",
+      "reason": "Changing sigma8 at fixed Pi13 leaves the radial spectral gap unchanged.",
+      "sector": "PR-I compact",
+      "test": "Kerr residual-suppression bound"
+    },
+    {
+      "candidate": "control_sigma0_Pi13",
+      "no_fit": true,
+      "outcome": "NON_DISCRIMINATING",
+      "reason": "The projected source area is not independently fixed by this diagnostic.",
+      "sector": "PR-I compact",
+      "test": "magnetic area/Faraday residual"
+    },
+    {
+      "candidate": "control_sigma_plus1_Pi13",
+      "no_fit": true,
+      "outcome": "SURVIVES",
+      "reason": "alpha^-1=137.035999207355104; distance=0.123190024 sigma",
+      "sector": "PR-I compact",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "control_sigma_plus1_Pi13",
+      "no_fit": true,
+      "outcome": "NON_DISCRIMINATING",
+      "reason": "The published diagnostic contains no sigma8, c_bc, or projector selector.",
+      "sector": "PR-I compact",
+      "test": "quasar residual sign"
+    },
+    {
+      "candidate": "control_sigma_plus1_Pi13",
+      "no_fit": true,
+      "outcome": "NON_DISCRIMINATING",
+      "reason": "Changing sigma8 at fixed Pi13 leaves the radial spectral gap unchanged.",
+      "sector": "PR-I compact",
+      "test": "Kerr residual-suppression bound"
+    },
+    {
+      "candidate": "control_sigma_plus1_Pi13",
+      "no_fit": true,
+      "outcome": "NON_DISCRIMINATING",
+      "reason": "The projected source area is not independently fixed by this diagnostic.",
+      "sector": "PR-I compact",
+      "test": "magnetic area/Faraday residual"
+    },
+    {
+      "candidate": "control_sigma_minus1_Pi15",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "alpha^-1=254.208754866269146; distance=10652068696.388103485 sigma",
+      "sector": "PR-I compact",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "control_sigma_minus1_Pi17",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "alpha^-1=384.885897406293452; distance=22531808927.299404144 sigma",
+      "sector": "PR-I compact",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_2",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;1;1;1; distance=1641.519143847011814458759381134094981811519726556909368414690263636364 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_3",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;1;1;2; distance=2565.635320945033720699853217541865000270816189908799177452504309090909 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_4",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;1;2;0; distance=2951.834425691284231758861922186151441635086842808208992534397981818182 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_5",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;1;2;1; distance=3322.146201641104754005088587324602078205197189785793112866434281818182 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_6",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;1;2;2; distance=3535.945805169822016646893368001444419938968341542130270238738718181818 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_7",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;2;1;0; distance=3757.393768517870905421403136026902802312631288197760878098614172727273 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_9",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;2;1;2; distance=3804.465586112017574534407105948361540164816490005314232093477454545455 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_10",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;2;2;0; distance=3811.665990475100521316216239210072393357330368664739801313184263636364 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_11",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;2;2;1; distance=3818.570187026778233448837844576402545417763887054055388075566690909091 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_12",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;3;1;0; distance=3826.685064666434725451409797011577349589608624896474675278579272727273 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_13",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;3;1;1; distance=3827.241453554123997100944131487422751064260936377042729746895290909091 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_14",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=1;3;2;0; distance=3827.696931185472367560697210088191760781634151308353228031235109090909 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_15",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=2;1;1;0; distance=3825.090978301294146684643663628589519011482512513418813684024945454545 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_16",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=2;1;1;1; distance=3826.321107362098571881452623773788517460657047786682107937020590909091 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_17",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=2;1;1;2; distance=3827.031322706491988288820615148923779064433564777200210621947709090909 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_18",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=2;1;2;0; distance=3827.328130117702033338715528214927613471177295255486743575013545454545 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_19",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=2;1;2;1; distance=3827.612727565519725478411901099567985560958630732363892015407981818182 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_20",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=2;2;1;0; distance=3827.947230421617861291387915319743970394188617912446286623155909090909 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_21",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=2;2;1;1; distance=3827.970165292640907868682908295371032710651069528102020256955054545455 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_22",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=2;2;2;0; distance=3827.988940507171597102060297645669153589203325978194914897638645454545 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_23",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "exponents=2;3;1;0; distance=3828.000483186775762562266563729890726937032488355846004205708590909091 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "monomial_24",
+      "no_fit": true,
+      "outcome": "SURVIVES",
+      "reason": "exponents=published_D1_plus_D2; distance=0.1375831780810314637833267850616034081832306343628660190248909090909091 sigma",
+      "sector": "PR-III electromagnetic",
+      "test": "locked Rb alpha^-1 (1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-4,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=235.9769909371397958114933762324634356083323801803157284393718498722 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-4,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=235.1308831232065735355218448618930639841790365836898298018643438397619 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-4,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=234.2847918854542958737912881561754953637430601364942746497449244352095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-4,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=233.4387172229087642505097183444986304320366756437961140604206327068143 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-3,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=157.4443372792612720286567951350419712313534472071119349174191041491762 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-3,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=156.5997652437217948403494602934938199161516880165257357913662091438190 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-3,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=155.7552096942660028431388972231362070521563138594996466590945619591095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-3,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=154.9106706299285064661125593529244707422667558561368892193957905210619 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-2,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=79.05397373483044058431010726112663435626526758773788844325993012687143 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-2,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=78.21092914511101880999211823259811160693680180303811043170269574764762 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-2,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=77.36790095219125833904823487687000510792070074055506144108940898838095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-2,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=76.5248891551144674922683194980964650440434690026729715932524405755 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-1,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=0.8051296661943243953538314977674534454723795965550633577285757454333333 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-1,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=0.03639573520107490680695516051054186849183709978854510255160704894761905 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-1,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=0.8779048282778408752713241157472473651867655448525324348093856945476190 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(1,-1,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=10.41745098256109407141283530389574967434415374930832490071221924572030 sigma; MZ distance=1.719397613984076615222764935646950560428961631512623984655341896466667 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-4,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=235.9769909371397958114933762324634356083323801803157284393718498722 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-4,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=235.1308831232065735355218448618930639841790365836898298018643438397619 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-4,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=234.2847918854542958737912881561754953637430601364942746497449244352095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-4,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=233.4387172229087642505097183444986304320366756437961140604206327068143 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-3,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=157.4443372792612720286567951350419712313534472071119349174191041491762 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-3,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=156.5997652437217948403494602934938199161516880165257357913662091438190 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-3,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=155.7552096942660028431388972231362070521563138594996466590945619591095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-3,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=154.9106706299285064661125593529244707422667558561368892193957905210619 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-2,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=79.05397373483044058431010726112663435626526758773788844325993012687143 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-2,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=78.21092914511101880999211823259811160693680180303811043170269574764762 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-2,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=77.36790095219125833904823487687000510792070074055506144108940898838095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-2,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=76.5248891551144674922683194980964650440434690026729715932524405755 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-1,1)",
+      "no_fit": true,
+      "outcome": "SURVIVES",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=0.8051296661943243953538314977674534454723795965550633577285757454333333 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-1,2)",
+      "no_fit": true,
+      "outcome": "SURVIVES",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=0.03639573520107490680695516051054186849183709978854510255160704894761905 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-1,3)",
+      "no_fit": true,
+      "outcome": "SURVIVES",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=0.8779048282778408752713241157472473651867655448525324348093856945476190 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(2,-1,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=0.3566054031670127564184933016577568151443303273864439962979656449947368 sigma; MZ distance=1.719397613984076615222764935646950560428961631512623984655341896466667 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-4,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=235.9769909371397958114933762324634356083323801803157284393718498722 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-4,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=235.1308831232065735355218448618930639841790365836898298018643438397619 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-4,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=234.2847918854542958737912881561754953637430601364942746497449244352095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-4,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=233.4387172229087642505097183444986304320366756437961140604206327068143 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-3,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=157.4443372792612720286567951350419712313534472071119349174191041491762 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-3,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=156.5997652437217948403494602934938199161516880165257357913662091438190 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-3,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=155.7552096942660028431388972231362070521563138594996466590945619591095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-3,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=154.9106706299285064661125593529244707422667558561368892193957905210619 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-2,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=79.05397373483044058431010726112663435626526758773788844325993012687143 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-2,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=78.21092914511101880999211823259811160693680180303811043170269574764762 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-2,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=77.36790095219125833904823487687000510792070074055506144108940898838095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-2,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=76.5248891551144674922683194980964650440434690026729715932524405755 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-1,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=0.8051296661943243953538314977674534454723795965550633577285757454333333 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-1,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=0.03639573520107490680695516051054186849183709978854510255160704894761905 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-1,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=0.8779048282778408752713241157472473651867655448525324348093856945476190 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(3,-1,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=11.11148738155810419089654646084081589032317868890870107421728651363985 sigma; MZ distance=1.719397613984076615222764935646950560428961631512623984655341896466667 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-4,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=235.9769909371397958114933762324634356083323801803157284393718498722 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-4,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=235.1308831232065735355218448618930639841790365836898298018643438397619 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-4,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=234.2847918854542958737912881561754953637430601364942746497449244352095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-4,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=233.4387172229087642505097183444986304320366756437961140604206327068143 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-3,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=157.4443372792612720286567951350419712313534472071119349174191041491762 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-3,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=156.5997652437217948403494602934938199161516880165257357913662091438190 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-3,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=155.7552096942660028431388972231362070521563138594996466590945619591095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-3,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=154.9106706299285064661125593529244707422667558561368892193957905210619 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-2,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=79.05397373483044058431010726112663435626526758773788844325993012687143 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-2,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=78.21092914511101880999211823259811160693680180303811043170269574764762 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-2,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=77.36790095219125833904823487687000510792070074055506144108940898838095 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-2,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=76.5248891551144674922683194980964650440434690026729715932524405755 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-1,1)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=0.8051296661943243953538314977674534454723795965550633577285757454333333 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-1,2)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=0.03639573520107490680695516051054186849183709978854510255160704894761905 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-1,3)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=0.8779048282778408752713241157472473651867655448525324348093856945476190 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "(a,b,k)=(4,-1,4)",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL",
+      "reason": "MW distance=21.84729696279438093399889744902279139163631575138960677063003678213233 sigma; MZ distance=1.719397613984076615222764935646950560428961631512623984655341896466667 sigma",
+      "sector": "PR-III electroweak",
+      "test": "locked MW and MZ gates (both 1 sigma)"
+    },
+    {
+      "candidate": "t=0 vectorlike singlet family",
+      "no_fit": true,
+      "outcome": "REJECTED_DERIVED",
+      "reason": "The branch has a zero charged-fermion ledger.",
+      "sector": "PR-II hypercharge",
+      "test": "fixed nonzero charge ledger"
+    },
+    {
+      "candidate": "N_gen != 3 complete replicas",
+      "no_fit": true,
+      "outcome": "REJECTED_PHYSICAL_CONDITIONAL",
+      "reason": "Physical exclusion follows after the manuscript's sheet-to-generation identification.",
+      "sector": "PR-II generations",
+      "test": "observed generation count"
+    },
+    {
+      "candidate": "N_gen=1,2,3,...",
+      "no_fit": true,
+      "outcome": "SURVIVES",
+      "reason": "This broader reduct omits the completed-class completeness/nonredundancy closure.",
+      "sector": "PR-II generations",
+      "test": "local anomalies plus Witten parity"
+    }
+  ],
+  "findings_total": 103,
+  "interpretation": "The matrix reproduces bounded diagnostic behavior. The exact PR-IV theorem is decided by completed-class closure, not residual ranking.",
+  "outcome_counts": {
+    "NON_DISCRIMINATING": 9,
+    "REJECTED_DERIVED": 1,
+    "REJECTED_PHYSICAL": 84,
+    "REJECTED_PHYSICAL_CONDITIONAL": 1,
+    "SURVIVES": 8
+  },
+  "policy": {
+    "best_residual_is_selection_rule": false,
+    "candidate_generation_uses_diagnostics": false,
+    "coefficient_fitting": false
+  },
+  "status": "PASS"
+}
