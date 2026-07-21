@@ -1,0 +1,9 @@
+{
+  "absolute_tolerances": {
+    "exact_symbolic": 0,
+    "p1": 1e-12,
+    "published_table": 1e-8,
+    "spectral": 1e-9
+  },
+  "policy": "Exact identities use zero tolerance. Floating-point eigensolver results are compared to frozen manuscript values with absolute tolerances that exceed observed BLAS-tail variation while remaining below the manuscript's reported precision of scientific significance."
+}

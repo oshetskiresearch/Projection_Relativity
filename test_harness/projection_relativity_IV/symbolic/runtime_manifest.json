@@ -1,0 +1,13 @@
+{
+  "recommended_environment": {
+    "python": "3.12",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "reproducibility_environment": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "scope": "The exact certificate is platform independent. Numerical eigensolver tail digits can vary by BLAS implementation and are judged only by numerical_tolerances.json."
+}
