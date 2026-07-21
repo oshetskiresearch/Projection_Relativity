@@ -10,12 +10,16 @@ calculation sequence from Step 01 through the Step 09F consistency statement.
 projection_relativity_III/
   code/                         41 PR-III Python generators
   data/                         44 PR-III JSON ledgers and inputs
-  PR3_PUBLIC_DATA_MANIFEST.json generator/data pairs and SHA-256 hashes
   README.md
 ```
 
-The 41 declared generator/data pairs are recorded in
-[`PR3_PUBLIC_DATA_MANIFEST.json`](PR3_PUBLIC_DATA_MANIFEST.json). Three
+The 41 declared generator/data pairs are recorded in the numerical harness's
+authoritative
+[`pr3_full_regeneration_pairs.json`](../../test_harness/projection_relativity_III/numerical/schemas/pr3_full_regeneration_pairs.json).
+The checked
+[`PR3_NUMERICAL_SOURCE_INVENTORY.csv`](../../test_harness/projection_relativity_III/numerical/results/PR3_NUMERICAL_SOURCE_INVENTORY.csv)
+records the repository path, byte count, and SHA-256 hash for 103 public package
+files, including all 82 code and data files referenced by the 41 pairs. Three
 additional JSON files provide convergence, refinement, or locked-reference
 inputs used by the calculation ledger.
 
@@ -36,7 +40,7 @@ python data/projection_relativity_III/code/pr3_v08f_final_priii_consistency_stat
 ```
 
 Each generator emits its JSON result to standard output. The corresponding
-checked-in result is identified in the public data manifest.
+checked-in result is identified in the 41-pair regeneration manifest.
 
 ## Full Reproducibility Test
 

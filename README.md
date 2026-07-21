@@ -88,8 +88,7 @@ Projection_Relativity/
 |   |-- projection_relativity_II/
 |   `-- projection_relativity_III/
 |       |-- code/
-|       |-- data/
-|       `-- PR3_PUBLIC_DATA_MANIFEST.json
+|       `-- data/
 |
 |-- plots/
 |   |-- projection_relativity_I/
@@ -130,7 +129,7 @@ they should use the same paper-directory convention:
 | [`test_harness/projection_relativity_IV/numerical/`](test_harness/projection_relativity_IV/numerical/) | PR-IV numerical-scope and runtime-policy documentation. |
 | [`data/projection_relativity_I/`](data/projection_relativity_I/) | PR-I data policy, derived observational products, manifests, and external-source instructions. |
 | [`data/projection_relativity_II/`](data/projection_relativity_II/) | PR-II boundary-ledger data, diagnostic reference data, and generated support tables. |
-| [`data/projection_relativity_III/`](data/projection_relativity_III/) | Canonical PR-III construction generators, JSON ledgers, input/reference data, and SHA-256 pair manifest. |
+| [`data/projection_relativity_III/`](data/projection_relativity_III/) | Canonical PR-III construction generators, JSON ledgers, and input/reference data; the authoritative [41-pair schema](test_harness/projection_relativity_III/numerical/schemas/pr3_full_regeneration_pairs.json) and [SHA-256 source inventory](test_harness/projection_relativity_III/numerical/results/PR3_NUMERICAL_SOURCE_INVENTORY.csv) are maintained with the numerical harness. |
 | [`plots/projection_relativity_I/`](plots/projection_relativity_I/) | PR-I generated figures and observational plots. |
 | [`plots/projection_relativity_II/`](plots/projection_relativity_II/) | PR-II electroweak, flavor, mass-ledger, and audit figures. |
 | [`plots/projection_relativity_III/`](plots/projection_relativity_III/) | PR-III generated-figure and plot-documentation location. |
@@ -273,7 +272,11 @@ python run_pr3_numerical_validation.py
 The checked run verifies 41 declared generator/data pairs at the
 schema/numerical tier and at the canonical release-byte tier. The canonical
 construction generators and JSON ledger are published under
-[`data/projection_relativity_III/`](data/projection_relativity_III/).
+[`data/projection_relativity_III/`](data/projection_relativity_III/). The
+authoritative pair mapping is
+[`pr3_full_regeneration_pairs.json`](test_harness/projection_relativity_III/numerical/schemas/pr3_full_regeneration_pairs.json),
+and file sizes and SHA-256 hashes are recorded in
+[`PR3_NUMERICAL_SOURCE_INVENTORY.csv`](test_harness/projection_relativity_III/numerical/results/PR3_NUMERICAL_SOURCE_INVENTORY.csv).
 
 ### Read, compile, or validate Projection Relativity IV
 
