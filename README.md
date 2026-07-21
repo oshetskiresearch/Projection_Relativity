@@ -99,8 +99,11 @@ Projection_Relativity/
 `-- README.md
 ```
 
-If additional roots such as `results/`, `docs/`, or `scripts/` are added later,
-they should use the same paper-directory convention:
+The current public tree has no top-level `results/`, `docs/`, or `scripts/`
+directories. Some PR-I archives contain those names as archive-internal working
+paths; extract those archives into a separate directory. If any such roots are
+added to the checked-in public tree later, they should use the same
+paper-directory convention:
 
 ```text
 <root>/projection_relativity_I/
@@ -127,7 +130,7 @@ they should use the same paper-directory convention:
 | [`test_harness/projection_relativity_III/numerical/`](test_harness/projection_relativity_III/numerical/) | PR-III Python schema/numerical and canonical release-byte reproducibility tester. |
 | [`test_harness/projection_relativity_IV/symbolic/`](test_harness/projection_relativity_IV/symbolic/) | PR-IV exact certificates, numerical table generators, scope controls, and complete manuscript-coverage audit. |
 | [`test_harness/projection_relativity_IV/numerical/`](test_harness/projection_relativity_IV/numerical/) | PR-IV numerical-scope and runtime-policy documentation. |
-| [`data/projection_relativity_I/`](data/projection_relativity_I/) | PR-I data policy, derived observational products, manifests, and external-source instructions. |
+| [`data/projection_relativity_I/`](data/projection_relativity_I/) | PR-I archive inventory, authoritative Section 11 numbering, usable GW support, placeholder status, and external raw-data boundaries. |
 | [`data/projection_relativity_II/`](data/projection_relativity_II/) | PR-II boundary-ledger data, diagnostic reference data, and generated support tables. |
 | [`data/projection_relativity_III/`](data/projection_relativity_III/) | Canonical PR-III construction generators, JSON ledgers, and input/reference data; the authoritative [41-pair schema](test_harness/projection_relativity_III/numerical/schemas/pr3_full_regeneration_pairs.json) and [SHA-256 source inventory](test_harness/projection_relativity_III/numerical/results/PR3_NUMERICAL_SOURCE_INVENTORY.csv) are maintained with the numerical harness. |
 | [`plots/projection_relativity_I/`](plots/projection_relativity_I/) | PR-I generated figures and observational plots. |
@@ -203,13 +206,12 @@ The PR-I symbolic checker is located at:
 test_harness/projection_relativity_I/symbolic/
 ```
 
-From a local Maple session:
+From a local Maple session opened at the repository root:
 
 ```maple
 restart:
-currentdir("C:/path/to/Projection_Relativity/test_harness/projection_relativity_I/symbolic"):
-read "ProjectionRelativityAppendixVerify.mpl":
-PR_RunAll();
+currentdir("C:/path/to/Projection_Relativity"):
+read "test_harness/projection_relativity_I/symbolic/code/run_appendix_verification.mpl";
 ```
 
 The checker verifies repository-local manuscript files. It does not download
@@ -321,9 +323,14 @@ PR-I includes:
 - finite-core and strong-field checks;
 - Maple symbolic verification;
 - numerical validation scripts;
-- observational support packages for quasar residuals, gravitational-wave
-  Kerr consistency, compact magnetic area-law constraints, and the Hubble/DESI
-  pressure test.
+- observational tests covering Section 11.1 quasar residuals, Section 11.2
+  compact magnetic area-law constraints, Section 11.3 gravitational-wave Kerr
+  consistency, Section 11.4 magnetar relations, and Section 11.5 cosmological
+  stress tests;
+- usable repository-contained support archives for the Section 11.3
+  gravitational-wave channel. The Section 11.1, 11.2, and 11.5 archive files
+  are explicitly marked empty placeholders in the
+  [`data/projection_relativity_I/` map](data/projection_relativity_I/README.md).
 
 ### Projection Relativity II
 

@@ -1,24 +1,59 @@
 # Manuscript: Projection Relativity I
 
-This directory contains the complete source files for the primary manuscript: **The Foundation of Projection Relativity: A Spectral-Projection Architecture for Emergent Relativity**.
+This directory contains the public manuscript package for **The Foundation of
+Projection Relativity: A Spectral-Projection Architecture for Emergent
+Relativity**.
+
+## Directory Contents
+
+| File | Purpose |
+|---|---|
+| `Oshetski_Projection_Relativity_Main.tex` | Primary LaTeX manuscript source. |
+| `Oshetski_Projection_Relativity_Main.pdf` | Compiled primary manuscript. |
+| `Oshetski_Projection_Relativity_Supplement.tex` | Supplementary derivations and supporting analysis. |
+| `Oshetski_Projection_Relativity_Supplement.pdf` | Compiled supplement. |
+| `Oshetski_Projection_Relativity_References.bib` | BibTeX references shared by the PR-I sources. |
+| `CITATION.cff` | Machine-readable citation metadata. |
+
+PR-I figures and their generators are maintained in
+[`plots/projection_relativity_I/`](../../plots/projection_relativity_I/), not in
+a `/plots` subdirectory of the manuscript package.
+
+The public validation and data maps are located at:
+
+- [`test_harness/projection_relativity_I/symbolic/`](../../test_harness/projection_relativity_I/symbolic/)
+- [`test_harness/projection_relativity_I/numerical/`](../../test_harness/projection_relativity_I/numerical/)
+- [`data/projection_relativity_I/`](../../data/projection_relativity_I/)
+
+The data map records the manuscript's authoritative Section 11 numbering and
+identifies which observational support archives are usable, unavailable, or
+dependent on external raw data.
 
 ## Development Environment
-This manuscript was developed and typeset using **LaTeX** via the **Overleaf** platform for professional scientific document management. This ensures standardized formatting, precise rendering of the geometric proofs, and rigorous structural organization of the equations.
 
-## Directory Structure
-* `Oshetski_Projection_Relativity_Main.tex`: The primary LaTeX source document containing the core text, derivations, and structure.
-* `Oshetski_Projection_Relativity_References.bib`: The BibTeX file containing all formal citations and astrophysical data references.
-* `/plots`: Contains the high-resolution plots, projection diagrams, and observational charts used in the manuscript.
+The manuscript was developed and typeset with LaTeX using Overleaf. It can also
+be compiled with a standard TeX distribution such as TeX Live, MiKTeX, or
+MacTeX.
 
-## How to Compile
-If you wish to compile the PDF locally from the source files, you will need a standard TeX distribution (such as TeX Live, MiKTeX, or MacTeX). 
+## Compile the Main Manuscript
 
-You can compile the document using standard `pdflatex` or `latexmk`. From your terminal in this directory, run:
+From this directory, run:
 
 ```bash
 pdflatex Oshetski_Projection_Relativity_Main.tex
 bibtex Oshetski_Projection_Relativity_Main
 pdflatex Oshetski_Projection_Relativity_Main.tex
 pdflatex Oshetski_Projection_Relativity_Main.tex
+```
 
+## Compile the Supplement
+
+From this directory, run:
+
+```bash
+pdflatex Oshetski_Projection_Relativity_Supplement.tex
+bibtex Oshetski_Projection_Relativity_Supplement
+pdflatex Oshetski_Projection_Relativity_Supplement.tex
+pdflatex Oshetski_Projection_Relativity_Supplement.tex
+```
 

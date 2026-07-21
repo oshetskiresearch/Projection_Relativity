@@ -18,7 +18,7 @@ separate data package is not applicable.
 
 | Paper | Data location | Public role |
 |---|---|---|
-| **PR-I** | [`projection_relativity_I/`](projection_relativity_I/) | Compact-phase precision audit plus observational support archives; several named archives are currently empty placeholders. |
+| **PR-I** | [`projection_relativity_I/`](projection_relativity_I/) | Compact-phase precision audit, two usable Section 11.3 gravitational-wave support archives, and explicit placeholders for unavailable Section 11.1, 11.2, and 11.5 packages. |
 | **PR-II** | [`projection_relativity_II/`](projection_relativity_II/) | Banded radial spectral compiler and its convergence table. |
 | **PR-III** | [`projection_relativity_III/`](projection_relativity_III/) | Forty-four JSON calculation ledgers and inputs paired by stage with forty-one Python generators. These are generated scientific ledgers, not raw experimental datasets. |
 | **PR-IV** | Not applicable | PR-IV adds no independent data package. Its exact and numerical outputs are under `test_harness/projection_relativity_IV/symbolic/results/`, so `data/projection_relativity_IV/` does not exist. |
@@ -34,8 +34,8 @@ are documented in
 | Archive | What it contains | Intended use |
 |---|---|---|
 | [`pr_public_section_10_compact_phase_fsc.tar`](projection_relativity_I/pr_public_section_10_compact_phase_fsc.tar) | A 20-digit compact-phase/fine-structure precision audit script, JSON report, and CSV summary. | Reproduce the high-precision compact-boundary arithmetic reported for the PR-I electromagnetic sector. |
-| [`pr_public_section11_1_gw_kerr_consistency_support.tar.gz`](projection_relativity_I/pr_public_section11_1_gw_kerr_consistency_support.tar.gz) | Ringdown sample and summary CSV files, PNG/PDF plots, and the generating Python script. | Check the claim that the PR exterior ringdown follows the Kerr hierarchy with only a formally suppressed projection-sector residual. This is a consistency test, not a detection claim. |
-| [`pr_public_section11_1_gw_residual_screen_support.tar.gz`](projection_relativity_I/pr_public_section11_1_gw_residual_screen_support.tar.gz) | GW150914 screens, large-event and focused-follow-up tables, kernel and template interfaces, diagnostic plots, scripts, and theory notes. | Reproduce the conservative public-data residual/null screens. The active interpretation is that no statistically robust PR-specific residual was identified. |
+| [`pr_public_section11_3_gw_kerr_consistency_support.tar.gz`](projection_relativity_I/pr_public_section11_3_gw_kerr_consistency_support.tar.gz) | Ringdown sample and summary CSV files, PNG/PDF plots, and the generating Python script. | Check the Section 11.3 claim that the PR exterior ringdown follows the Kerr hierarchy with only a formally suppressed projection-sector residual. This is a consistency test, not a detection claim. |
+| [`pr_public_section11_3_gw_residual_screen_support.tar.gz`](projection_relativity_I/pr_public_section11_3_gw_residual_screen_support.tar.gz) | GW150914 screens, large-event and focused-follow-up tables, kernel and template interfaces, diagnostic plots, scripts, and theory notes. | Reproduce the conservative Section 11.3 public-data residual/null screens. The active interpretation is that no statistically robust PR-specific residual was identified. |
 
 ### Empty placeholders
 
@@ -44,13 +44,19 @@ valid TAR archives and contain no usable data:
 
 | File | Intended channel | Current status |
 |---|---|---|
-| `pr_public_section11_2_quasar_support.tar` | Quasar luminosity-linked velocity-residual support. | **Empty placeholder** |
-| `pr_public_section11_3_magnetic_area_law_support.tar.gz` | Compact-phase magnetic area-law and Faraday-residual support. | **Empty placeholder** |
+| `pr_public_section11_1_quasar_support.tar` | Section 11.1 quasar luminosity-linked velocity-residual support. | **Empty placeholder** |
+| `pr_public_section11_2_magnetic_area_law_support.tar.gz` | Section 11.2 compact-phase magnetic area-law and Faraday-residual support. | **Empty placeholder** |
 | `pr_public_section11_5_hubble_desi_phase_response.tar` | Hubble/DESI phase-response pressure test. | **Empty placeholder** |
 
 Do not extract, cite, or treat these placeholders as released datasets. The
-PR-I README describes the expected contents and external-source policy for
-those channels.
+PR-I README records the authoritative manuscript numbering and the precise
+external-data boundary for those channels. Section 11.4 has no separate data
+archive because its displayed magnetar relations are analytic.
+
+There is no separate externally hosted PR-I support bundle in the public
+release contract. Usable PR-I support archives are checked into
+`data/projection_relativity_I/`; third-party raw catalogs and strain data remain
+external under their original providers' terms.
 
 ### Raw-data boundary
 
@@ -182,14 +188,17 @@ For that reason, `data/projection_relativity_IV/` intentionally does not exist.
 
 ## Extracting Available Archives
 
-From the repository root:
+From the repository root, extract an available archive into a separate working
+directory rather than treating its internal paths as live public-tree paths:
 
 ```bash
+mkdir pr1_archive_work
+
 # gzip-compressed TAR archive
-tar -xzf data/projection_relativity_I/<archive>.tar.gz
+tar -xzf data/projection_relativity_I/<archive>.tar.gz -C pr1_archive_work
 
 # uncompressed TAR archive
-tar -xf data/projection_relativity_I/<archive>.tar
+tar -xf data/projection_relativity_I/<archive>.tar -C pr1_archive_work
 ```
 
 Only files marked **Available** above should be extracted. Preserve each
