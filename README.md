@@ -4,6 +4,7 @@
 **PR-I release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.20545407)<br>
 **PR-II release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.20817164)<br>
 **PR-III release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.21361507)<br>
+**PR-IV release:** [Zenodo DOI](https://doi.org/10.5281/zenodo.21477033)<br>
 
 **Repository:** `oshetskiresearch/Projection_Relativity`<br>
 **Author:** Michael Stanislaus Oshetski<br>
@@ -24,9 +25,10 @@ The repository is organized by paper using the directory names:
 projection_relativity_I
 projection_relativity_II
 projection_relativity_III
+projection_relativity_IV
 ```
 
-Each major repository area separates PR-I, PR-II, and PR-III so that manuscript
+Each major repository area uses paper-specific directories so that manuscript
 files, test harnesses, data products, and plots remain traceable to the paper
 they support.
 
@@ -39,11 +41,15 @@ they support.
 | **Projection Relativity I** | Spectral-projection gravity, displacement-generated inertia, compact electromagnetic phase, finite-core regularization, and first observational diagnostics | [`manuscript/projection_relativity_I/`](manuscript/projection_relativity_I/) |
 | **Projection Relativity II** | Compact non-Abelian electroweak projection, tree-level scalar-coupling ledger, fermion/flavor structure, QCD diagnostics, CKM/PMNS candidates, and neutrino-sector candidates | [`manuscript/projection_relativity_II/`](manuscript/projection_relativity_II/) |
 | **Projection Relativity III** | Zero-parameter radiative and cross-sector closure of the inherited projection ledger across electromagnetic, electroweak, neutrino, strong, anomaly, and running-continuity sectors | [`manuscript/projection_relativity_III/`](manuscript/projection_relativity_III/) |
+| **Projection Relativity IV** | Global singleton theorem, axiom-by-axiom uniqueness, canonical closure, and explicit classification of the completed Projection Relativity admissible architecture | [`manuscript/projection_relativity_IV/`](manuscript/projection_relativity_IV/) |
 
 PR-I is the released foundational manuscript. PR-II extends the public project
 into the electroweak and flavor sectors. PR-III develops the radiative and
 cross-sector closure ledger inherited from PR-I and PR-II and is accompanied by
 symbolic, manuscript-conformance, and numerical reproducibility packages.
+PR-IV establishes the global singleton theorem within the completed admissible
+class and publishes exact, numerical, scope-control, and manuscript-coverage
+certificates for the result.
 
 ---
 
@@ -56,11 +62,12 @@ Projection_Relativity/
 |-- manuscript/
 |   |-- projection_relativity_I/
 |   |-- projection_relativity_II/
-|   `-- projection_relativity_III/
-|       |-- README.md
-|       |-- Oshetski_Projection_Relativity_III_Main.tex
-|       |-- Oshetski_Projection_Relativity_III_Main.pdf
-|       `-- Oshetski_Projection_Relativity_III_References.bib
+|   |-- projection_relativity_III/
+|   `-- projection_relativity_IV/
+|       |-- sections/
+|       |-- Oshetski_Projection_Relativity_IV_Main.tex
+|       |-- Oshetski_Projection_Relativity_IV_Main.pdf
+|       `-- Oshetski_Projection_Relativity_IV_References.bib
 |
 |-- test_harness/
 |   |-- projection_relativity_I/
@@ -69,7 +76,10 @@ Projection_Relativity/
 |   |-- projection_relativity_II/
 |   |   |-- symbolic/
 |   |   `-- numerical/
-|   `-- projection_relativity_III/
+|   |-- projection_relativity_III/
+|   |   |-- symbolic/
+|   |   `-- numerical/
+|   `-- projection_relativity_IV/
 |       |-- symbolic/
 |       `-- numerical/
 |
@@ -97,6 +107,7 @@ they should use the same paper-directory convention:
 <root>/projection_relativity_I/
 <root>/projection_relativity_II/
 <root>/projection_relativity_III/
+<root>/projection_relativity_IV/
 ```
 
 ---
@@ -108,12 +119,15 @@ they should use the same paper-directory convention:
 | [`manuscript/projection_relativity_I/`](manuscript/projection_relativity_I/) | PR-I main manuscript, supplement, bibliography, and manuscript README. |
 | [`manuscript/projection_relativity_II/`](manuscript/projection_relativity_II/) | PR-II manuscript source, bibliography, and manuscript README. |
 | [`manuscript/projection_relativity_III/`](manuscript/projection_relativity_III/) | PR-III manuscript source, compiled PDF, bibliography, and manuscript README. |
+| [`manuscript/projection_relativity_IV/`](manuscript/projection_relativity_IV/) | PR-IV manuscript source, compiled PDF, bibliography, and section files. |
 | [`test_harness/projection_relativity_I/symbolic/`](test_harness/projection_relativity_I/symbolic/) | PR-I Maple symbolic audit, equation maps, proof reports, and negative controls. |
 | [`test_harness/projection_relativity_I/numerical/`](test_harness/projection_relativity_I/numerical/) | PR-I Python/Colab numerical validation files and outputs. |
 | [`test_harness/projection_relativity_II/symbolic/`](test_harness/projection_relativity_II/symbolic/) | PR-II symbolic-audit location. |
 | [`test_harness/projection_relativity_II/numerical/`](test_harness/projection_relativity_II/numerical/) | PR-II Python/Colab electroweak-flavor validation harness and generated audit outputs. |
 | [`test_harness/projection_relativity_III/symbolic/`](test_harness/projection_relativity_III/symbolic/) | PR-III Maple checks, negative controls, complete display-equation accounting, and manuscript numerical-value audit. |
 | [`test_harness/projection_relativity_III/numerical/`](test_harness/projection_relativity_III/numerical/) | PR-III Python schema/numerical and canonical release-byte reproducibility tester. |
+| [`test_harness/projection_relativity_IV/symbolic/`](test_harness/projection_relativity_IV/symbolic/) | PR-IV exact certificates, numerical table generators, scope controls, and complete manuscript-coverage audit. |
+| [`test_harness/projection_relativity_IV/numerical/`](test_harness/projection_relativity_IV/numerical/) | PR-IV numerical-scope and runtime-policy documentation. |
 | [`data/projection_relativity_I/`](data/projection_relativity_I/) | PR-I data policy, derived observational products, manifests, and external-source instructions. |
 | [`data/projection_relativity_II/`](data/projection_relativity_II/) | PR-II boundary-ledger data, diagnostic reference data, and generated support tables. |
 | [`data/projection_relativity_III/`](data/projection_relativity_III/) | Canonical PR-III construction generators, JSON ledgers, input/reference data, and SHA-256 pair manifest. |
@@ -261,6 +275,35 @@ schema/numerical tier and at the canonical release-byte tier. The canonical
 construction generators and JSON ledger are published under
 [`data/projection_relativity_III/`](data/projection_relativity_III/).
 
+### Read, compile, or validate Projection Relativity IV
+
+The public source and compiled PDF are located in:
+
+```text
+manuscript/projection_relativity_IV/
+```
+
+A standard local build sequence is:
+
+```bash
+cd manuscript/projection_relativity_IV
+pdflatex Oshetski_Projection_Relativity_IV_Main.tex
+bibtex Oshetski_Projection_Relativity_IV_Main
+pdflatex Oshetski_Projection_Relativity_IV_Main.tex
+pdflatex Oshetski_Projection_Relativity_IV_Main.tex
+```
+
+After installing the pinned requirements, run the complete public PR-IV gate
+from the repository root:
+
+```powershell
+python -m pip install -r test_harness\projection_relativity_IV\requirements.txt
+python test_harness\projection_relativity_IV\symbolic\code\run_all_pr4_audits.py
+```
+
+The authoritative checked run is summarized in
+[`test_harness/projection_relativity_IV/RUN_SUMMARY.md`](test_harness/projection_relativity_IV/RUN_SUMMARY.md).
+
 ---
 
 ## Package Scope
@@ -315,6 +358,21 @@ PR-III presents a finite-tier radiative and cross-sector closure ledger. It does
 not claim a complete all-orders Standard Model or QCD theorem, a full
 nonperturbative confinement and hadronization construction, or raw generator
 stdout byte identity.
+
+### Projection Relativity IV
+
+PR-IV includes:
+
+- exact normal-form certificates for all seven adjustable selector coordinates;
+- the global singleton composition theorem in the completed admissible class;
+- PR-I radial/compact numerical-ledger reproduction;
+- finite compact, generation, radiative, C2, and D3 scope controls;
+- diagnostic propagation and the bounded branch-control matrix;
+- neutral D3 classification, normalization, and physical-Z scope checks;
+- complete display-equation and theorem-claim coverage of the public manuscript.
+
+Broader common-reduct alternatives are retained as outside-class controls and
+are not counted as admissible PR-IV solutions.
 
 ---
 
@@ -374,6 +432,10 @@ For PR-III, schema/numerical reproducibility and canonical release-byte
 reproducibility are separate checked tiers. Raw generator stdout bytes and raw
 checked-in JSON key order are not release identities and are not claimed.
 
+For PR-IV, exact identities use zero tolerance. Floating-point eigensolver tail
+digits are evaluated with the explicit tolerances and runtime policy published
+under [`test_harness/projection_relativity_IV/`](test_harness/projection_relativity_IV/).
+
 ### Result-status labels
 
 | Label | Meaning |
@@ -423,9 +485,11 @@ symbolically audited and numerically validated where machine-checkable
 **PR-I manuscript:** *The Foundation of Projection Relativity: A Spectral-Projection Architecture for Emergent Relativity*<br>
 **PR-II manuscript:** *The Foundation of Projection Relativity II: Geometric Constraints on the Non-Abelian Phase Fiber*<br>
 **PR-III manuscript:** *The Foundation of Projection Relativity III: Zero-Parameter Radiative and Cross-Sector Closure of the Projection Ledger*<br>
+**PR-IV manuscript:** *The Foundation of Projection Relativity IV: The Global Singleton Theorem—Axiom-by-Axiom Uniqueness and Canonical Closure of the Complete Projection Relativity Architecture*<br>
 **PR-I DOI:** [10.5281/zenodo.20545407](https://doi.org/10.5281/zenodo.20545407)<br>
 **PR-II DOI:** [10.5281/zenodo.20817164](https://doi.org/10.5281/zenodo.20817164)<br>
-**PR-III DOI:** [10.5281/zenodo.21361507](https://doi.org/10.5281/zenodo.21361507)<br>  
+**PR-III DOI:** [10.5281/zenodo.21361507](https://doi.org/10.5281/zenodo.21361507)<br>
+**PR-IV DOI:** [10.5281/zenodo.21477033](https://doi.org/10.5281/zenodo.21477033)<br>
 **Repository:** `oshetskiresearch/Projection_Relativity`
 
 When using an externally sourced dataset or derived table, also cite the
