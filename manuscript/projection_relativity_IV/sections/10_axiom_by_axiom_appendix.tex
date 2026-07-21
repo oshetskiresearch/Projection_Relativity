@@ -1,0 +1,61 @@
+\appendix
+\section{Base-postulate Satisfaction and Canonical-closure Selection}
+\label{app:axiom-by-axiom}
+
+This appendix verifies the layered structure of the PR-I construction.  Let $T_{\rm PR}$ denote the seven-postulate foundation and let the completed compact class additionally include the signed pre-projection boundary-incidence rule and the minimal required-channel projector rule proved in this paper.  Fix $R_A>0$ and $\Lambda_X^2>0$ and take the common foundational data
+\begin{align}
+ \Psi&:\mathbb R^{1,3}\times(\mathbb R_w\times S^1_\theta)\to\mathbb C,\\
+ ds_{\rm int}^2&=dw^2+R_A^2d\theta^2,\\
+ \mathcal H_P&=L^2(\mathbb R_w\times S^1_\theta,R_A\,dw\,d\theta),\\
+ O_{\rm int}&=O_X+O_\theta,\\
+ O_X&=-\frac{d^2}{dw^2}+\Lambda_X^2\left(1+w^2+\frac34w^4\right),\\
+ O_\theta&=-R_A^{-2}\frac{d^2}{d\theta^2}.
+\end{align}
+The standard Schr\"odinger and periodic domains make the two operators self-adjoint \cite{ReedSimon_1975}, and quartic confinement gives a simple discrete radial spectrum.
+
+For purposes of exhaustive comparison, define
+\begin{equation}
+ \mathcal M_{\rm PR}=(-1,\Pi_{13}),\qquad
+ \mathcal M_{0}=(0,\Pi_{13}),\qquad
+ \mathcal M_{15}=(-1,\Pi_{15}),
+\end{equation}
+where the first entry is $\sigma_8$ in
+\begin{equation}
+ N_\sigma=1+T_A^3+T_A^4+T_X(T_A^5+\sigma_8T_A^8).
+\end{equation}
+These three formal expansions share the same foundational data; the canonical closure equations determine which expansion belongs to the completed PR class.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Layered satisfaction of the PR-I foundation and compact closure.}
+\label{tab:axiom-satisfaction}
+\begin{tabularx}{\textwidth}{@{}p{0.15\textwidth}c c c X@{}}
+\toprule
+Condition & $\mathcal M_{\rm PR}$ & $\mathcal M_0$ & $\mathcal M_{15}$ & Selection witness \\
+\midrule
+P1 throught P6 & Pass & Pass & Pass & Identical master field, internal geometry, Hilbert space, separable operator, and radial potential. \\
+P7 projection setting & Pass & Pass & Pass & All five projection sectors are represented. \\
+Signed boundary incidence & Pass & Nonzero defect & Pass & $|1+\sigma_8|=0$ fixes $\sigma_8=-1$. \\
+Minimal required channels & Pass & Pass & Nonzero defect & Rank two together with the required $\phi_1,\phi_3$ channels fixes $\Pi_{13}$. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The exact boundary witness is
+\begin{equation}
+ c_{-1}=\frac{3354902985}{4211081216},\qquad
+ c_0=\frac{52420359}{65798144},\qquad
+ c_{-1}-c_0=\frac{9}{4211081216}\ne0.
+\end{equation}
+For the spectral slices, the compressed radial traces are $\lambda_1+\lambda_3$ and $\lambda_1+\lambda_5$.  Simplicity of the radial spectrum gives $\lambda_3\ne\lambda_5$, and compressed trace is invariant under an allowed basis change.  The formal comparison expansions are therefore distinct before the canonical closure conditions are applied.
+
+\begin{theorem}[Axiom-by-axiom Uniqueness in the Completed Compact Class]
+Among expansions of the displayed PR-I foundational data that satisfy signed pre-projection zero incidence and the minimal required-channel rank-two condition, the sole equivalence class is
+$\mathcal M_{\rm PR}=(-1,\Pi_{13})$.
+\end{theorem}
+\begin{proof}
+Signed boundary incidence gives $1+\sigma_8=0$ and hence $\sigma_8=-1$.  The minimal rank-two projector containing the required nondegenerate channels $\phi_1$ and $\phi_3$ has range $\operatorname{span}\{\phi_1,\phi_3\}$ and is therefore $\Pi_{13}$ modulo an allowed normalized basis representation.  Both conditions have one zero, so the completed quotient contains only $[\mathcal M_{\rm PR}]$.
+\end{proof}
+
+This axiom-by-axiom check confirms that the postulates and canonical closure rules play complementary roles: the former supply the foundation, while the latter make the compact construction mathematically complete and unique without introducing a fitted parameter or diagnostic input.

@@ -1,0 +1,42 @@
+\section{Generation-count Rigidity in the PR-II Sheet Class}
+\label{app:generation-count-rigidity}
+
+The generation ambiguity can be closed inside the generation-sheet class actually used by PR-II.  Let
+\begin{equation}
+ G=SU(2)_L\times U(1)_Y,
+ \qquad H=U(1)_{\rm em},
+ \qquad V_{\rm br}=T_{[eH]}(G/H).
+\end{equation}
+The broken-direction space has the exact dimension
+\begin{equation}
+ \dim V_{\rm br}=\dim G-\dim H=(3+1)-1=3.
+ \label{eq:pr35-broken-dimension}
+\end{equation}
+
+Let $S_N$ be the span of $N$ distinct terminal generation sheets, and let
+\begin{equation}
+ \Phi_N:S_N\longrightarrow V_{\rm br}
+ \label{eq:pr35-sheet-incidence-map}
+\end{equation}
+be their broken-direction incidence map.  The direct mapping described in PR-II has two structural requirements.  Completeness requires $\Phi_N$ to be surjective, so no broken electroweak direction is omitted.  Non-redundancy requires $\Phi_N$ to be injective, so no nonzero sheet combination has a zero
+geometric image.
+
+\begin{theorem}[PR-II generation-count rigidity]
+A complete and nonredundant terminal-sheet realization exists if and only if $N=3$.  Consequently $N_{\rm gen}^{\rm PR}=3$ is the unique count in this construction class.
+\end{theorem}
+
+\begin{proof}
+Surjectivity implies $\operatorname{rank}\Phi_N=\dim V_{\rm br}=3$, hence $N\ge3$.  Injectivity implies $\operatorname{nullity}\Phi_N=0$.  Rank--nullity then gives
+\begin{equation}
+ N=\dim S_N
+ =\operatorname{rank}\Phi_N+\operatorname{nullity}\Phi_N
+ =3+0=3.
+\end{equation}
+Conversely, a basis of $S_3$ can be mapped to a basis of $V_{\rm br}$, giving an isomorphism.  Therefore three is necessary and sufficient.
+\end{proof}
+
+This proof exhausts every positive integer.  If $N<3$, the map has rank at most $N$ and cannot cover the quotient.  If $N>3$, every surjective map has nullity at least $N-3$, producing redundant or geometrically ungrounded sheet combinations.  Thus every alternative count breaks either completeness or nonredundancy.
+
+The theorem domain is PR-II's declared terminal-sheet realization, which directly maps the replicated matter ledger across the broken compact projection directions.  Within that complete domain, every $N\ne3$ has a strict completeness or redundancy defect and is not a PR solution.  No measured generation count, mass, mixing angle, or diagnostic residual enters the proof.
+
+The closure principle is the minimal faithful realization of the broken compact space: surjectivity represents every broken direction and injectivity excludes an unobservable or redundant sheet combination.  These conditions are logical, target-independent, and contain no adjustable coefficient.  They constitute the canonical PR-II closure of the sheet-incidence map.  Direct P1 through P7 ancestry and proved canonical closure are both accepted provenance routes under Proposition~\ref{prop:pr35-canonical-closure-standard}.

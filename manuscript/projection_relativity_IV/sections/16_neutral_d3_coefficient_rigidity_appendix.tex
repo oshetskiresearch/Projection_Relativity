@@ -1,0 +1,570 @@
+\section{Complete fixed-kernel \texorpdfstring{$D_3$}{D3} Gauge-index Classification and Canonical Reduction}
+\label{app:d3-coefficient-rigidity}
+
+Set
+\begin{equation}
+ \rho=\frac{\epsilon_V^2}{N_{\rm gen}}>0.
+ \label{eq:pr35-d3-rho}
+\end{equation}
+This appendix classifies every real symmetric gauge-index coefficient matrix multiplying the fixed Lorentz/momentum kernel at the declared scalar order. Independent Lorentz structures, CP-odd or complex Hermitian kernels, higher derivatives, nonlocal operators, and additional fields violate that fixed operator inventory and belong to different theory classes.  Algebraically equivalent equations necessarily describe the same tensor.
+
+Throughout this appendix the reproducibility source map references repository commit
+\begin{center}
+\texttt{9680f70b21f04df0350fd857471b1aff4ec07ead}.
+\end{center}
+The corresponding DOI mauscripts and the current PR-III manuscript supply the inherited representation data, determinant architecture, and finite-tier construction used here.  The source-version record is retained solely for reproducibility and leaves every PR-I through PR-III result intact.
+
+Let
+\begin{equation}
+ V_{\rm EW}=\operatorname{span}_{\mathbb R}
+ \{W^1,W^2,W^3,B\}=\mathcal C\oplus\mathcal N,
+ \qquad \mathcal C=\operatorname{span}\{W^1,W^2\}.
+\end{equation}
+The canonical real inner product makes $(W^1,W^2,W^3,B)$ orthonormal.  For a
+unit vector $v$, let $P_v=v\otimes v$ be its orthogonal projector.  Then
+\begin{equation}
+ \|P_v\|_F^2=\operatorname{Tr}(P_v^2)=1,
+ \qquad P_{\rm ch}=P_{W^1}+P_{W^2}.
+ \label{eq:pr35-d3-projector-normalization}
+\end{equation}
+PR-II fixes the physical neutral basis \cite{PRII}
+\begin{equation}
+ Z=cW^3-sB,\qquad A=sW^3+cB,
+ \qquad c=\cos\theta_W,\quad s=\sin\theta_W.
+ \label{eq:pr35-d3-neutral-basis}
+\end{equation}
+
+\subsection{Exhaustion under residual symmetry}
+
+In the ordered basis $(W^1,W^2,Z,A)$, residual $U(1)_{\rm em}$ acts as
+\begin{equation}
+ R(\alpha)=\operatorname{diag}(R_2(\alpha),1,1),\qquad
+ J=R'(0)=\operatorname{diag}(J_2,0,0),\qquad
+ J_2=\begin{pmatrix}0&-1\\1&0\end{pmatrix}.
+\end{equation}
+
+\begin{theorem}[Complete residual-$U(1)$ classification]
+\label{thm:pr35-d3-u1-classification}
+For $D\in\operatorname{Sym}(V_{\rm EW})$, the identity
+\begin{equation}
+ R(\alpha)^TDR(\alpha)=D\qquad\text{for every }\alpha\in\mathbb R
+ \label{eq:pr35-d3-u1-invariance}
+\end{equation}
+holds if and only if
+\begin{equation}
+ D=aP_{\rm ch}+zP_Z+x(Z\otimes A+A\otimes Z)+\gamma P_A
+ \label{eq:pr35-d3-complete-invariant-family}
+\end{equation}
+for arbitrary $a,z,x,\gamma\in\mathbb R$.
+\end{theorem}
+
+\begin{proof}
+Write the symmetric block matrix
+\begin{equation}
+ D=\begin{pmatrix}C&L\\L^T&N\end{pmatrix},
+ \qquad C,N\in\operatorname{Sym}_2(\mathbb R).
+\end{equation}
+Differentiating Eq.~\eqref{eq:pr35-d3-u1-invariance} at $\alpha=0$ gives
+$[D,J]=0$, hence
+\begin{equation}
+ CJ_2=J_2C,\qquad J_2L=0,\qquad L^TJ_2=0.
+\end{equation}
+Because $J_2$ is invertible, $L=0$.  If
+$C=\left(\begin{smallmatrix}u&v\\v&w\end{smallmatrix}\right)$, the first equation gives $v=0$ and $u=w$, so $C=aI_2$.  The residual group acts trivially on the neutral plane, leaving $N$ as an arbitrary real symmetric $2\times2$ matrix.  Expanding $N$ in the $(Z,A)$ basis gives exactly
+Eq.~\eqref{eq:pr35-d3-complete-invariant-family}.  Direct substitution proves the converse.
+\end{proof}
+
+The accompanying exact rational row reduction starts with all ten independent components of a symmetric $4\times4$ matrix.  Equation \eqref{eq:pr35-d3-u1-invariance} has rank six and therefore the four-dimensional solution space in Theorem~\ref{thm:pr35-d3-u1-classification}.  Imposing an
+unchanged charged sector,
+\begin{equation}
+ P_{\rm ch}DP_{\rm ch}=0,
+ \label{eq:pr35-d3-charged-unchanged}
+\end{equation}
+sets $a=0$; the combined rank is seven and the solution dimension is three. If $D_3$ is a zero-momentum mass-kernel correction, photon preservation adds
+\begin{equation}
+ DA=0.
+ \label{eq:pr35-d3-photon-null}
+\end{equation}
+Equation~\eqref{eq:pr35-d3-complete-invariant-family} then gives $x=\gamma=0$.  The combined rank is nine, and the complete structural family is therefore
+\begin{equation}
+ D(k)=\rho kP_Z,\qquad k\in\mathbb R.
+ \label{eq:pr35-d3-all-real-k-family}
+\end{equation}
+Every real $k$ satisfies residual symmetry, charged-sector preservation, and photon nullity.  These conditions fix a one-dimensional subspace, not its scalar.  For a momentum-dependent polarization, ordinary Lorentz transversality must not be silently replaced by Eq.~\eqref{eq:pr35-d3-photon-null}; the displayed result uses the stronger mass-kernel condition relevant to the PR-III scalar mass
+correction.
+
+The current local PR-III revision states the same fixed-kernel exhaustion.  Its stable label is
+\begin{center}
+\texttt{prop:priii-d3-structural-classification}.
+\end{center}
+The revision likewise records that the structural gates classify the projector direction but do not select the scalar $k$.
+
+\begin{theorem}[Frozen-reduct Expansions]
+\label{thm:pr35-d3-common-reduct}
+Let $\mathcal L_0$ be the target-free language containing the symbols of P1--P7 together with the frozen background objects used above---$\rho$, $V_{\rm EW}=\mathbb R^4$ with its canonical metric and charge grading, real $c,s$ with $c^2+s^2=1$, and the physical $Z,A$ basis and residual action---but
+no $D_3$ tensor symbol.  Let $\mathsf T_0$ be \emph{exactly} P1 through P7 together
+with those enumerated target-free background axioms.  It contains neither the candidate equation $D_{3,Z}=2\rho$ nor downstream diagnostic comparisons, and no additional target-free PR-II/III sentence is silently included.  Extend the language by a real symmetric symbol $D_3$, and set
+\begin{equation}
+ \mathsf T_{\rm struct}=\mathsf T_0\cup
+ \left\{\begin{array}{l}
+ R(\alpha)^TD_3R(\alpha)=D_3\quad(\forall\alpha\in\mathbb R),\\
+ P_{\rm ch}D_3P_{\rm ch}=0,\quad D_3A=0
+ \end{array}\right\}.
+ \label{eq:pr35-d3-structural-theory}
+\end{equation}
+The theory $\mathsf T_0$ is nonempty.  For every $k\in\mathbb R$, the
+expansion of the explicit model $\mathfrak M_0$ constructed below,
+\begin{equation}
+ \mathfrak M_k=(\mathfrak M_0,D_3=\rho kP_Z)
+ \label{eq:pr35-d3-model-expansion}
+\end{equation}
+models $\mathsf T_{\rm struct}$.  Moreover, $\mathfrak M_k$ and
+$\mathfrak M_{k'}$ are inequivalent under normalized orthogonal basis changes
+whenever $k\ne k'$.
+\end{theorem}
+
+\begin{proof}
+Start with the explicit P1--P7 common reduct constructed in Appendix~\ref{app:axiom-by-axiom}.  Adjoin the independent target-free background $V_{\rm EW}=\mathbb R^4$ with orthonormal basis
+$(W^1,W^2,W^3,B)$; choose $\rho>0$ and $c^2+s^2=1$; and define $Z,A$ and $R(\alpha)$ by Eqs.~\eqref{eq:pr35-d3-neutral-basis} and the residual action above.  These definitions alter no P1--P7 symbol and contain no $D_3$ equation, so by the explicit definition of $\mathsf T_0$ they give an
+explicit $\mathfrak M_0\models\mathsf T_0$. Changing the interpretation of the new $D_3$ symbol cannot alter any $\mathcal L_0$ sentence, so every expansion preserves all P1 through P7 and
+the enumerated target-free background axioms.  Equation \eqref{eq:pr35-d3-all-real-k-family} verifies each added structural sentence. Finally,
+\begin{equation}
+ \operatorname{spec}_{\rm mult}(D_3/\rho)=\{k,0,0,0\}.
+\end{equation}
+Normalized orthogonal similarity preserves this eigenvalue multiset, proving inequivalence when $k\ne k'$.
+\end{proof}
+
+This is the axiom-by-axiom common-reduct proof of an uncountable structural model class.  If Eq.~\eqref{eq:pr35-d3-photon-null} is not a derived mass-kernel condition, that class is larger still.
+
+\subsection{Canonical Adjoint Trace}
+
+PR-II fixes \cite{PRII}
+\begin{equation}
+ T_a=\frac{\sigma_a}{2},\qquad
+ \operatorname{Tr}(T_aT_b)=\frac12\delta_{ab},\qquad
+ [T_a,T_b]=i\epsilon_{abc}T_c,
+ \label{eq:pr35-d3-prii-normalization}
+\end{equation}
+and places the weak projection modes in the adjoint $j=1$ representation.
+On $\mathcal H_{\rm ch}=\operatorname{span}\{T^+,T^-\}$,
+$[Q,T^+]=+T^+$ and $[Q,T^-]=-T^-$.  Let $e_3=(0,0,1)^T$ and
+$P_3=e_3\otimes e_3$.  Define
+\begin{equation}
+ (F_a)_{bc}=-i\epsilon_{abc},\qquad
+ P_{\rm ch}^{\rm ad}=\operatorname{diag}(1,1,0),\qquad
+ K_{ab}=\operatorname{Tr}_{\rm ad}
+ \!\left(P_{\rm ch}^{\rm ad}F_aP_{\rm ch}^{\rm ad}F_b\right).
+ \label{eq:pr35-d3-projected-tensor}
+\end{equation}
+Here $P_3$ denotes the adjoint third-axis projector and is unrelated to the base postulate carrying the label P3.
+
+\begin{lemma}[Exact projected-adjoint tensor]
+\label{lem:pr35-d3-adjoint-trace}
+With the frozen normalization in Eq.~\eqref{eq:pr35-d3-prii-normalization},
+\begin{equation}
+ K_{ab}=2\delta_{a3}\delta_{b3}=2(P_3)_{ab}.
+ \label{eq:pr35-d3-k-equals-two-p3}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$P_{\rm ch}^{\rm ad}F_1P_{\rm ch}^{\rm ad}$ and
+$P_{\rm ch}^{\rm ad}F_2P_{\rm ch}^{\rm ad}$ vanish, whereas
+\begin{equation}
+ P_{\rm ch}^{\rm ad}F_3P_{\rm ch}^{\rm ad}
+ =\begin{pmatrix}0&-i&0\\i&0&0\\0&0&0\end{pmatrix},
+ \qquad
+ \operatorname{Tr}\!\left[
+ (P_{\rm ch}^{\rm ad}F_3P_{\rm ch}^{\rm ad})^2\right]=2.
+\end{equation}
+Thus only $K_{33}$ is nonzero and it equals two.  Equivalently, the charged eigenvalues of $\operatorname{ad}_Q$ are $(+1,-1)$, so their squared trace is $1^2+(-1)^2=2$; or directly $\sum_{b,c}\epsilon_{3bc}^2=\epsilon_{312}^2+\epsilon_{321}^2=2$.
+\end{proof}
+
+The charged scalar trace is invariant under normalized transformations that preserve $Q$ and the charged subspace.  The displayed component tensor is covariant relative to the distinguished neutral axis.  The lemma fixes a canonical representation trace; it does not fix the dynamical scalar
+multiplying an effective operator.
+
+This exact representation result is now also stated in the current local PR-III revision under the stable label
+\begin{center}
+\texttt{prop:priii-exact-charged-adjoint-trace}.
+\end{center}
+
+\subsection{Canonical logical closure of \texorpdfstring{$k$}{k}}
+
+Let
+\begin{equation}
+ q=\operatorname{ad}_Q\big|_{\mathcal H_{\rm ch}},
+ \qquad \mathcal H_{\rm ch}=\operatorname{span}\{T^+,T^-\}.
+\end{equation}
+The frozen charge normalization gives
+$qT^+=T^+$ and $qT^-=-T^-$.  Hence
+\begin{equation}
+ q^\dagger q=I_{\mathcal H_{\rm ch}},
+ \qquad
+ \operatorname{Tr}_{\rm ch}(q^\dagger q)=2.
+ \label{eq:pr35-d3-canonical-response-norm}
+\end{equation}
+
+\begin{proposition}[Exact canonical-response value]
+\label{prop:pr35-d3-direct-k-value}
+If the physical neutral correction is the canonically normalized quadratic charged-adjoint response
+\begin{equation}
+ D_{3,Z}=\rho\operatorname{Tr}_{\rm ch}(q^\dagger q),
+ \label{eq:pr35-d3-canonical-response-identity}
+\end{equation}
+then
+\begin{equation}
+ D_{3,Z}=2\rho,
+ \qquad k=2.
+\end{equation}
+This value is invariant under every unitary change of charged basis that preserves the normalized charge operator.  It contains no empirical target, phase choice, continuous coefficient, or residual ranking.
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:pr35-d3-canonical-response-norm} substituted into Eq.~\eqref{eq:pr35-d3-canonical-response-identity} gives the result.  Under a unitary charged-basis change $U$, $q^\dagger q$ changes by similarity, so its trace remains two.
+\end{proof}
+
+The response identity is not an arbitrary choice.  It is forced inside the minimal quadratic-response class by the following functional theorem.
+
+\begin{theorem}[Uniqueness of the normalized quadratic response]
+\label{thm:pr35-unique-quadratic-response}
+Let $\mathcal F$ assign a nonnegative real number to every normal finite-dimensional charge operator.  For every dimension-compatible unitary $U$ and every $a\in\mathbb C$, suppose
+\begin{align}
+ \mathcal F(UqU^\dagger)&=\mathcal F(q),
+ &&\text{unitary-basis invariance},\nonumber\\
+ \mathcal F(q_1\oplus q_2)&=\mathcal F(q_1)+\mathcal F(q_2),
+ &&\text{orthogonal-mode additivity},\nonumber\\
+ \mathcal F(aq)&=|a|^2\mathcal F(q),
+ &&\text{quadratic homogeneity},\nonumber\\
+ \mathcal F([1])&=1,
+ &&\text{unit-charge normalization}.
+ \label{eq:pr35-canonical-response-axioms}
+\end{align}
+Then, uniquely,
+\begin{equation}
+ \mathcal F(q)=\operatorname{Tr}(q^\dagger q).
+ \label{eq:pr35-unique-response-functional}
+\end{equation}
+Consequently the class of neutral corrections
+\begin{equation}
+ D_3=\rho\mathcal F(q)P_Z
+ \label{eq:pr35-minimal-neutral-response-class}
+\end{equation}
+contains one element for the PR charged-adjoint spectrum $(+1,-1)$, namely
+$D_3=2\rho P_Z$.
+\end{theorem}
+
+\begin{proof}
+For a normal $q$, choose a unitary $U$ such that $UqU^\dagger=\operatorname{diag}(\lambda_1,\ldots,\lambda_n)$.  Unitary invariance and direct-sum additivity reduce $\mathcal F(q)$ to the sum of its one-dimensional values.  Quadratic homogeneity and unit normalization give
+$\mathcal F([\lambda_i])=|\lambda_i|^2$.  Hence
+\begin{equation}
+ \mathcal F(q)=\sum_i|\lambda_i|^2
+ =\operatorname{Tr}(q^\dagger q).
+\end{equation}
+Every step is forced, so no other functional satisfies all four conditions. For $q=\operatorname{diag}(1,-1)$ the result is $2$; substitution into Eq.~\eqref{eq:pr35-minimal-neutral-response-class} completes the proof.
+\end{proof}
+
+The four hypotheses express the logical content of the PR extension: observables cannot depend on the charged basis, independent charged modes add in the spectral trace, the declared tier is quadratic in charge, and a single normalized mode has unit weight.  They introduce neither a new scale nor an
+adjustable coefficient.  The current local PR-III revision names Eq.~\eqref{eq:pr35-d3-canonical-response-identity} as $\mathsf H_Z$.  It is therefore the canonical no-fit closure law.  A complete neutral determinant satisfying the same conditions is an equivalent microscopic realization; it
+does not define another coefficient or branch.
+
+There is an equivalent arithmetic observation in the released finite-tier ledger.  The public formulas imply
+\begin{equation}
+ D_{3,Z}=\epsilon_V\Pi_W^{C_2},
+ \qquad
+ \Pi_W^{C_2}=\frac{2}{N_{\rm gen}}\epsilon_V,
+ \label{eq:pr35-d3-recurrence-observation}
+\end{equation}
+and therefore $D_{3,Z}=2\epsilon_V^2/N_{\rm gen}$.  This arithmetic identity is consistent with the canonical response theorem but is not used to select the response functional.  Theorem~\ref{thm:pr35-unique-quadratic-response} provides the target-independent logical selection; an operator determinant is an equivalent realization when it produces the same normalized response.
+
+\subsection{Independent Determinant-Hessian Realization}
+
+The PR-III determinant architecture is instantiated for the residual electromagnetic background.  A normalized physical-$Z$ background family provides a complementary microscopic realization of the canonical response $\mathsf H_Z$.  For such a realization, write the smooth multi-component
+blocks as $H_i[B^a]$, including the normalized physical neutral direction. This operator construction is an equivalent representation of the finite-tier canonical theorem.  Write its block architecture as
+\begin{equation}
+ \Gamma^{(1)}[B]
+ =\sum_i\eta_i\operatorname{Tr}'_i
+ \log\!\left(H_i[B]H_i[0]^{-1}\right),
+ \label{eq:pr35-d3-block-determinant}
+\end{equation}
+where the released weights are
+$\eta_{\rm scalar}=\eta_{\rm vector}=1/2$ and
+$\eta_{\rm ghost}=\eta_{\rm fermion}=-1$.  Set
+\begin{equation}
+ G_i=H_i[0]^{-1},\qquad
+ V_{i,a}=\left.\frac{\delta H_i}{\delta B^a}\right|_0,\qquad
+ W_{i,ab}=\left.\frac{\delta^2H_i}
+ {\delta B^a\delta B^b}\right|_0.
+\end{equation}
+
+\begin{lemma}[Second Variation of the Reference-normalized Determinant]
+\label{lem:pr35-d3-log-hessian}
+Assume for each block that the primed subspace and operator domain are fixed,$H_i[B]$ is a twice differentiable invertible family there, and the relative variations are trace class in a topology permitting differentiation under the trace and cyclic rearrangement.  Alternatively, for a zeta prescription assume that the same differentiated-trace identity holds without an additional local
+regularization anomaly.  Then
+\begin{equation}
+ \left.\frac{\delta^2\Gamma^{(1)}}
+ {\delta B^a\delta B^b}\right|_0
+ =\sum_i\eta_i\operatorname{Tr}'_i\!\left(
+ G_iW_{i,ab}-G_iV_{i,a}G_iV_{i,b}
+ \right).
+ \label{eq:pr35-d3-exact-log-hessian}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For each block,
+$\delta\operatorname{Tr}\log H=\operatorname{Tr}(H^{-1}\delta H)$ and $\delta H^{-1}=-H^{-1}(\delta H)H^{-1}$.  Differentiating once more and evaluating at $B=0$ gives Eq.~\eqref{eq:pr35-d3-exact-log-hessian}; cyclicity of the trace makes the expression symmetric in $a,b$.
+\end{proof}
+
+A complete determinant realization specifies the neutral vertices $V_{i,a}$, seagulls $W_{i,ab}$, block weights and multiplicities, spectral trace, gauge-fixed vector--ghost--Goldstone organization
+\cite{PeskinSchroeder_1995}, matter contribution, and the normalization that extracts the physical-$Z$ self-energy from Eq.~\eqref{eq:pr35-d3-exact-log-hessian}.  These ingredients define an
+equivalent microscopic representation of the canonical-response theorem.  If a selected regularization produces a local counterterm or anomaly, its contribution is recorded explicitly in the operator-basis and renormalization ledger rather than absorbed into $k$.
+
+The following exact family characterizes the broader second-jet comparison domain and thereby distinguishes it from the completed minimal PR response class.
+
+\begin{theorem}[Second-jet Completion Family]
+\label{thm:pr35-d3-determinant-counterfamily}
+Let $H_0>0$ satisfy the explicitly released Step-04 reference-block properties.  Let $X$ be a finite-rank spectral projector supported in the retained primed subspace, commuting with $H_0$, and satisfying $\operatorname{Tr}'X=1$.  Let $z$ be a dimensionless canonically normalized coordinate along the physical $Z$ background.  For every $\xi\in\mathbb R$, define
+\begin{equation}
+ H_\xi[z]=H_0\exp(\xi\rho z^2X).
+ \label{eq:pr35-d3-determinant-counterblock}
+\end{equation}
+Then $H_\xi[0]=H_0$, every $H_\xi[z]$ is positive and reference-normalized, and its bosonic determinant contribution is
+\begin{equation}
+ \frac12\operatorname{Tr}'\log
+ \left(H_\xi[z]H_0^{-1}\right)
+ =\frac12\xi\rho z^2.
+\end{equation}
+Consequently, its neutral Hessian is $\xi\rho$.  This family parametrizes a deliberately broader second-jet comparison domain; it does not add PR solutions, because the completed minimal-response class also imposes the four normalized response conditions that uniquely give $k=2$.
+\end{theorem}
+
+\begin{proof}
+Commutation makes
+$H_\xi[z]H_0^{-1}=\exp(\xi\rho z^2X)$.  Functional calculus gives positivity for every real $\xi$, while the finite rank of $X$ makes the relative trace finite.  Taking the logarithm and using
+$\operatorname{Tr}'X=1$ gives the displayed quadratic action; differentiating twice gives $\xi\rho$.
+\end{proof}
+
+This family is a scope comparison whose arbitrary second jet lies outside the canonical minimal-response class unless the complete normalized-response conditions are satisfied.  The current PR-III manuscript records the corresponding construction at the stable label as a fixed kernel counter family.  In particular, the special normalized block
+\begin{equation}
+ H_{\rm ch}[z]H_{\rm ch}[0]^{-1}
+ =\exp\!\left(\rho z^2q^\dagger q\right)
+ \label{eq:pr35-d3-needed-normalized-block}
+\end{equation}
+would give
+$\Gamma^{(1)}=\rho z^2$ and hence $D_{ZZ}=2\rho$, but
+Eq.~\eqref{eq:pr35-d3-needed-normalized-block} is one possible determinant realization of the canonical response identity.
+
+\subsection{Canonical Reduction to the Physical Tensor}
+
+Let
+\begin{equation}
+ \mathcal E:\operatorname{span}_{\mathbb R}\{P_3\}
+ \longrightarrow\operatorname{span}_{\mathbb R}\{P_Z\}
+\end{equation}
+be a specified normalized real-linear isometry.  The needed hypotheses are: \begin{enumerate}[label=\textnormal{H\arabic*.},leftmargin=2.8em]  \item the declared minimal order-$\rho$ neutral-response class contains no  independent Wilson coefficient or additional same-order operator;
+ \item its scalar response obeys the basis-invariance, mode-additivity,  quadratic-homogeneity, and unit-charge normalization conditions of  Theorem~\ref{thm:pr35-unique-quadratic-response}; together with H3 these  conditions give $D=\rho\mathcal E(K)$ with unit mode weight;  \item $\mathcal E$ is real-linear and $\mathcal E(P_3)=P_Z$, as a normalized  neutral-line map rather than an unannounced ordinary $W^3$ component  projection;
+ \item generator, trace, field, kinetic, $\epsilon_V$, and generation
+ normalizations are frozen; and
+ \item Eqs.~\eqref{eq:pr35-d3-u1-invariance}--
+ \eqref{eq:pr35-d3-photon-null} hold.
+\end{enumerate}
+
+\begin{theorem}[Canonical $D_3$ reduction]
+\label{thm:pr35-d3-conditional-uniqueness}
+Under H1--H5,
+\begin{equation}
+ D=2\rho P_Z,\qquad
+ D_{3,W}=0,\qquad
+ D_{3,Z}=\frac{2}{N_{\rm gen}}\epsilon_V^2,
+ \label{eq:pr35-d3-unique-canonical-result}
+\end{equation}
+so $k=2$ is the unique coefficient in this operator class.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{lem:pr35-d3-adjoint-trace}, H2, and H3 give
+\begin{equation}
+ D=\rho\mathcal E(K)=2\rho\mathcal E(P_3)=2\rho P_Z.
+\end{equation}
+H1 excludes a second same-order tensor, and H4 excludes absorbing a multiplier into the fields or $\epsilon_V$.
+\end{proof}
+
+This theorem uses no experimental residual and is not a best-fit selection. H2 is derived as the unique normalized quadratic functional in Theorem~\ref{thm:pr35-unique-quadratic-response}; it introduces no adjustable coefficient.  A gauge-fixed determinant calculation satisfying H1 through H5 provides the same map and cannot create an additional admissible normalization.
+
+The current local PR-III revision records the corresponding reduction under the stable legacy label
+\begin{center}
+\texttt{thm:priii-conditional-k-two}.
+\end{center}
+Within the canonical response class $\mathsf H_Z$, division by $\rho_{\rm PR}>0$ selects $k=2$ uniquely and leaves no free coefficient.
+
+\subsection{Necessary Sufficient Candidate Characterization}
+
+For arbitrary $D\in\operatorname{Sym}(V_{\rm EW})$, define
+\begin{align}
+ E_{\rm sym}(D)&=\sup_{\alpha}
+ \|R(\alpha)^TDR(\alpha)-D\|_F,\nonumber\\
+ E_{\rm ch}(D)&=\|P_{\rm ch}DP_{\rm ch}\|_F,\nonumber\\
+ E_{\gamma}(D)&=\|DA\|_2,\nonumber\\
+ E_{\rm norm}(D)&=|Z^TDZ-2\rho|.
+ \label{eq:pr35-d3-four-defects}
+\end{align}
+
+\begin{theorem}[Complete Candidate Characterization]
+\label{thm:pr35-d3-four-defect-certificate}
+All four defects in Eq.~\eqref{eq:pr35-d3-four-defects} vanish if and only if $D=2\rho P_Z$.
+\end{theorem}
+
+\begin{proof}
+$E_{\rm sym}=0$ gives the complete family in Theorem~\ref{thm:pr35-d3-u1-classification}.  Then $E_{\rm ch}=0$ sets $a=0$, and $E_\gamma=0$ sets $x=\gamma=0$, leaving $D=zP_Z$. $E_{\rm norm}=0$ finally gives $z=2\rho$.  Direct substitution proves the converse.
+\end{proof}
+
+Thus every other real symmetric tensor either has a nonzero structural defect or differs from the canonical response normalization. On the structural family \eqref{eq:pr35-d3-all-real-k-family},
+\begin{equation}
+ D(k)-D(2)=\rho(k-2)P_Z,\qquad
+ \|D(k)-D(2)\|_F^2=\rho^2(k-2)^2,
+ \label{eq:pr35-d3-complete-real-defect}
+\end{equation}
+whose sole real zero is $k=2$.  The logical role of $E_{\rm norm}=0$ is now explicit: Theorem~\ref{thm:pr35-unique-quadratic-response} derives it as the unique target-independent functional in the declared minimal response class. A determinant derivation at the microscopic operator level is an equivalent realization and is not an additional condition of the uniqueness theorem.
+
+\subsection{Exclusion of Incomplete Structural Reductions and the Electroweak Mixing-normalization Distinction}
+
+If H2 is omitted, the resulting outside-class scalar family is
+\begin{equation}
+ D_\lambda=\rho\lambda\mathcal E(K)=2\lambda\rho P_Z,
+ \qquad \lambda\in\mathbb R,
+ \label{eq:pr35-d3-lambda-counterfamily}
+\end{equation}
+passes the first three defects.  Fixed rational choices require no fitted continuous parameter: $\lambda=1/2$ gives $k=1$, and $\lambda=3/2$ gives $k=3$.  They show that the three broad structural gates alone do not determine the normalization.  They are not proposed PR branches and do not satisfy the unit-charge normalization of the canonical response class.
+
+The three linear structural gates in Theorem~\ref{thm:pr35-d3-common-reduct} permit every real $k$.  An independent strict positivity condition on the neutral correction would restrict the family to $k>0$, while positive semidefiniteness would give $k\geq0$.  Either case remains uncountable and retains the fixed alternatives $k=1$, $2\cos^2\theta_W$, $2$, and $3$; neither selects two.
+
+Checking only the stated $ZZ$ scalar is still weaker.  Every tensor
+\begin{equation}
+ \rho\{2P_Z+x(Z\otimes A+A\otimes Z)+\gamma P_A\}
+\end{equation}
+has the same $ZZ$ entry for arbitrary $x,\gamma$.  Photon nullity eliminates these two directions, but leaves the scalar family
+\eqref{eq:pr35-d3-lambda-counterfamily}.
+
+The ordinary electroweak rotation creates a separate normalization issue.  In the $(Z,A)$ basis,
+\begin{equation}
+ 2P_{W^3}=2\begin{pmatrix}c^2&cs\\cs&s^2\end{pmatrix}.
+ \label{eq:pr35-d3-literal-w3-embedding}
+\end{equation}
+Its $ZZ$ pullback is $2c^2$, but it has $ZA$ mixing and a photon component. A photon-safe tensor with the same scalar is $2c^2P_Z$, which is a different operator with nonzero canonical-normalization defect.  The current PR-III revision records this same normalization distinction at the stable label
+\texttt{eq:priii-w3-to-physical-neutral-map}.
+
+\begin{proposition}[Mixing-normalization Incompatibility]
+\label{prop:pr35-d3-mixing-nogo}
+Assume $D$ is real symmetric, $0<c<1$, and $DA=0$.  It is impossible to have both $D_{W^3W^3}=2\rho$ and $D_{ZZ}=2\rho$.
+\end{proposition}
+
+\begin{proof}
+Since $W^3=cZ+sA$, symmetry and $DA=0$ give
+\begin{equation}
+ D_{W^3W^3}=(cZ+sA)^TD(cZ+sA)=c^2D_{ZZ}.
+\end{equation}
+The two proposed nonzero equalities therefore imply $c^2=1$, a contradiction.
+\end{proof}
+
+Consequently, three inequivalent maps give, respectively,
+\begin{equation}
+ \begin{array}{lll}
+ P_3\mapsto P_Z:&D=2\rho P_Z,&k=2,\\
+ \text{component-preserving photon completion}:&
+ D=(2\rho/c^2)P_Z,&k=2/c^2,\\
+ \text{literal }W^3\text{ embedding}:&D=2\rho P_{W^3},&
+ D_{ZZ}/\rho=2c^2.
+ \end{array}
+ \label{eq:pr35-d3-three-neutral-maps}
+\end{equation}
+The declared PR map is $\mathcal E(P_3)=P_Z$, with canonical unit normalization.  The literal $2P_{W^3}$ tensor and the photon-safe $2c^2P_Z$ tensor are distinct cases: the first has nonzero photon-nullity defect, while the second changes the normalization.
+
+\subsection{Locked Diagnostics do not Isolate the Coefficient}
+
+The released arithmetic is
+\begin{equation}
+ M_Z(k)=M_{Z,C1}\sqrt{1+\Pi_{Z,C2}+\rho k}.
+ \label{eq:pr35-d3-mz-k}
+\end{equation}
+Monotonicity of the positive square root gives the exact released strict one-standard-deviation open interval
+\begin{equation}
+ 0.768434787688685769\ldots< k <
+ 3.145092343548119919\ldots .
+ \label{eq:pr35-d3-diagnostic-interval}
+\end{equation}
+It is uncountable and its integer members are exactly $\{1,2,3\}$.  Its endpoints have unit diagnostic distance and lie on the excluded boundary of the released strict acceptance gate.  The exact diagnostic central-value solution is $k=1.956749882341106\ldots$, not two.  Representative results are
+\begin{table}[H]
+\centering
+\caption{Parameter-free $D_3$ normalizations under the locked PR-III mass diagnostic.}
+\label{tab:pr35-d3-countermodel-diagnostics}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+$k$ & $M_Z(k)$ (GeV) & absolute diagnostic distance ($\sigma$)\\
+\midrule
+$1$ & $91.1859092277010$ & $0.80513$\\
+$2\cos^2\theta_W=1.53728847\ldots$ & $91.1868587299446$ & $0.35299$\\
+$2$ & $91.1876764310439$ & $0.03640$\\
+$3$ & $91.1894436001394$ & $0.87790$\\
+\bottomrule
+\end{tabular}
+\end{table}
+$M_W$ and $G_F$ are independent of $k$ in the released generator.  Thus the locked diagnostics are corroborative rather than generative.  The exact normalized-response theorem, independent of best-fit ranking, fixes $k=2$.
+
+\subsection{Source Mapping, PR-III Integration, and Exact Theorem}
+
+The PR-III construction supplies the representation data, the stated finite-tier candidate, and the reference-normalized determinant
+\begin{equation}
+ \Delta\Gamma_{\rm PR}^{(1)}[B]
+ =\frac12\operatorname{STr}_{\rm PR}'
+ \log[H_{\rm PR}[B]H_{\rm PR}[0]^{-1}],
+\end{equation}
+including vector, ghost, scalar, and fermion blocks \cite{PRIII}.  Its electromagnetic charged-mode inventory supplies the exact $Q_i^2$ extraction for the photon kinetic term.  The canonical neutral-response theorem developed here supplies the corresponding target-independent physical-$Z$ closure at the declared finite tier.
+
+The integrated PR-III statement is organized by the following stable labels:
+\begin{itemize}
+ \item the determinant architecture,
+ \texttt{eq:priii-reference-normalized-supertrace};
+ \item the fixed-kernel reduction before canonical normalization,
+ \texttt{prop:priii-d3-structural-}\\[-0.25em]
+ \hspace*{1.5em}\texttt{classification};
+ \item the exact charged-adjoint trace,
+ \texttt{prop:priii-exact-charged-adjoint-trace};
+ \item the named canonical neutral-response closure $\mathsf H_Z$,
+ \texttt{eq:priii-neutral-response-hypothesis};
+ \item uniqueness of $k=2$ in that declared response class,
+ \texttt{thm:priii-conditional-k-two};
+ \item the relative-determinant Hessian,
+ \texttt{lem:priii-determinant-hessian};
+ \item the excluded arbitrary-$k$ second-jet family,
+ \texttt{prop:priii-fixed-kernel-}\\[-0.25em]
+ \hspace*{1.5em}\texttt{counterfamily}; and
+ \item the ordinary $W^3$-to-$(Z,A)$ normalization distinction,
+ \texttt{eq:priii-w3-to-physical-neutral-map}.
+\end{itemize}
+Together these results distinguish the exact group trace, the canonical physical-response closure, and its complementary determinant realization. The Step~06J generator implements the same theorem without a fitted numerical literal.  It reads the locked charged weak-vector inventory, parses the eigencharges $(+1,-1)$ with exact \texttt{Fraction} arithmetic, and computes
+\begin{equation}
+ k=(+1)^2+(-1)^2
+ =\operatorname{Tr}_{\rm ch}(q^\dagger q)=2.
+ \label{eq:pr35-d3-current-generator-trace}
+\end{equation}
+Its generated provenance records that $k$ is derived from the locked inventory and that the canonical neutral-response identity is a target-independent closure principle. A complementary equivalent microscopic representation is
+\begin{equation}
+ \frac12\operatorname{STr}'\log(H/H_0)
+ \ \Longrightarrow\ \text{complete order-}\rho\text{ neutral Hessian}
+ \ \Longrightarrow\ \rho\mathcal E(K)
+ \label{eq:pr35-d3-missing-source-edge}
+\end{equation}
+with unit prefactor, no other same-order term, and $\mathcal E(P_3)=P_Z$.  It gives the same canonical response dynamically. With H1--H5 stated, the theorem is a complete canonical reduction of the declared fixed-kernel response domain; the three-gate family obtained by dropping H2 is outside the PR class.
+\Needspace{10\baselineskip}
+\thispagestyle{fancy}
+In particular:
+\begin{itemize}
+ \item $K=2P_3$ is proved exactly from the frozen representation;
+ \item every $k\ne2$ has positive canonical-response defect
+ $\rho^2(k-2)^2$;
+ \item every tensor satisfying the full target-independent characterization
+ is operator-equivalent to $2\rho P_Z$; and
+ \item the larger three-gate class retains $D(k)=\rho kP_Z$, demonstrating
+ why the minimal response principle must be part of the stated admissible
+ class rather than inferred from diagnostic agreement.
+\end{itemize}
+The architecture-wide theorem includes the minimal canonical-response principle explicitly.  The family in Eq.~\eqref{eq:pr35-d3-lambda-counterfamily} is a scope witness outside that class, not an alternative PR solution. The accompanying public-source map retains the released manuscript anchors and current stable labels for full source-version reproducibility.

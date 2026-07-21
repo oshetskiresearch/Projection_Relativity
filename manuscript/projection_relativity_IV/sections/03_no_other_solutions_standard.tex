@@ -1,0 +1,180 @@
+\section{No-Other-Solutions Standard}
+\label{sec:pr35-no-other-solutions-standard}
+
+For each sector $s$, let \(\mathfrak A_s\) be the explicitly declared
+admissible candidate set, let \(\sim_s\) identify gauge, basis, phase,
+coordinate, algebraic, and unit conventions, and let \(F_s\) collect the
+target-independent mathematical and closure constraints.  The meaningful
+uniqueness claim requires
+\begin{equation}
+\boxed{
+\{x\in\mathfrak A_s:F_s(x)=0\}/\!\sim_s
+=
+\{[x_{\rm PR}]\}.}
+\label{eq:pr35-sector-uniqueness-standard}
+\end{equation}
+Verifying only \(F_s(x_{\rm PR})=0\) establishes existence, not uniqueness.
+The proof must also show local isolation after unphysical null directions are
+removed and exhaust every disconnected branch \emph{inside the same declared
+class}.  A model in a broader theory belongs to a different theorem domain
+unless it also satisfies all of \(F_s\).  Conversely, if two inequivalent
+members satisfy every declared condition, the admissible quotient contains two
+classes rather than the singleton required by
+Eq.~\eqref{eq:pr35-sector-uniqueness-standard}.
+
+\subsection{Equation Equivalence and Exhaustive Uniqueness}
+\label{subsec:pr35-equation-equivalence}
+
+Fix a sector $s$.  Let $\mathcal X_s$ be its configuration space after all
+upstream fields, domains, normalizations, and identities have been fixed; let
+$\mathcal Y_s$ be its residual space; and let $\mathcal G_s$ be the declared
+group of gauge transformations, normalized basis changes, coordinate and unit
+changes, and invertible field redefinitions that preserve the frozen ledger
+and registered observable algebra.  A candidate equation is a covariant
+residual map
+\begin{equation}
+ E:\mathcal X_s\longrightarrow\mathcal Y_s,
+ \qquad
+ Z(E):=\{x\in\mathcal X_s:E(x)=0\}.
+ \label{eq:pr35-equation-zero-set}
+\end{equation}
+
+The structural candidate class $\mathfrak E_s^0$ is fixed before its equations
+are solved and is saturated under $\sim_{\rm op}$, so an invertible rewriting
+cannot be excluded merely by typography.  It is specified by field content, operator domain, locality or
+finite-tier order, regularity, covariance, boundary grammar, representation
+content, and inherited normalizations.  A target-independent closure ledger is
+a map
+\begin{equation}
+ \Delta_s:\mathfrak E_s^0\longrightarrow[0,\infty)^{m_s}.
+ \label{eq:pr35-closure-defect-map}
+\end{equation}
+An equation is admissible precisely when $\Delta_s(E)=0$.  Neither
+$\mathfrak E_s^0$ nor $\Delta_s$ may contain a measured target, diagnostic
+residual, fitted tolerance, or the desired answer inserted as a coefficient.
+Unit normalization, zero incidence, completeness, nonredundancy, covariance,
+and fixed-order minimality are admissible only when stated independently of the
+value obtained after the equations are solved. Three relations must be distinguished:
+\begin{enumerate}
+ \item $E\sim_{\rm op}E'$, called \emph{operator equivalence}, when there are
+ $g\in\mathcal G_s$ and $A_x\in\operatorname{GL}(\mathcal Y_s)$ at every $x$
+ such
+ that
+ \begin{equation}
+  E'(gx)=A_xE(x)
+  \qquad\text{for every }x\in\mathcal X_s.
+  \label{eq:pr35-operator-equivalence}
+ \end{equation}
+ This includes algebraic rearrangement, multiplication by a nowhere-zero
+ factor, and allowed invertible changes of variables.
+ \item $E\sim_{\rm sol}E'$, called \emph{solution equivalence}, when an allowed
+ transformation maps the complete zero set of one equation bijectively onto
+ that of the other, $gZ(E)=Z(E')$.
+ \item $E\sim_{\rm phys}E'$, called \emph{physical equivalence}, when their
+ quotient solution spaces are isomorphic and the isomorphism preserves every
+ registered observable, multiplicity, boundary label, and physical spectral
+ datum:
+ \begin{equation}
+  Z(E)/\mathcal G_s\cong Z(E')/\mathcal G_s.
+  \label{eq:pr35-physical-equation-equivalence}
+ \end{equation}
+\end{enumerate}
+Operator equivalence implies solution equivalence, and solution equivalence
+under an allowed ledger-preserving transformation implies physical
+equivalence.  The converses need not hold.  In particular, matching one
+reported number is not equivalence.  Equations must agree on the complete
+admissible domain and preserve the physical operator, not merely one
+diagnostic evaluation.  For example, $u=0$ and $u^3=0$ have the same real zero
+set, but their linearizations at the zero have different rank and they are not
+operator-equivalent through an invertible residual multiplier.
+
+\begin{theorem}[Normal-form exhaustion and alternative-equation trichotomy]
+\label{thm:pr35-normal-form-exhaustion}
+Suppose a sector has a parameter space $\Theta_s$ and a normal-form map
+$\nu_s:\mathfrak E_s^0\to\Theta_s$ with the following independently proved
+properties:
+\begin{enumerate}
+ \item $\nu_s$ is complete:
+ $\nu_s(E)=\nu_s(E')$ if and only if $E\sim_{\rm op}E'$;
+ \item admissibility is decided in normal form by a target-independent
+ certificate $d_s:\Theta_s\to[0,\infty)^{m_s}$,
+ \begin{equation}
+  \Delta_s(E)=0
+  \quad\Longleftrightarrow\quad
+  d_s(\nu_s(E))=0;
+ \end{equation}
+ \item the certificate has exactly one zero,
+ $d_s^{-1}(0)=\{\theta_s^\star\}$.
+\end{enumerate}
+Then
+\begin{equation}
+ \boxed{
+ \{E\in\mathfrak E_s^0:\Delta_s(E)=0\}/\!\sim_{\rm op}
+ =\{[E_s^\star]_{\rm op}\},}
+ \label{eq:pr35-equation-class-singleton}
+\end{equation}
+and every admissible equation induces the same physical quotient solution
+space as $E_s^\star$.  If, in addition, the canonical equation has an isolated
+physical solution,
+\begin{equation}
+ Z(E_s^\star)/\mathcal G_s=\{[x_s^\star]\},
+ \label{eq:pr35-canonical-solution-isolation}
+\end{equation}
+then the sector has one physical solution class as well.  Every proposed
+equation $\widetilde E$ has exactly one of three physical dispositions:
+it is physically equivalent to $E_s^\star$ on the complete declared domain
+and is not a second physical equation; it is physically inequivalent but lies
+in $\mathfrak E_s^0$, in which case it has a nonzero defect; or it is physically
+inequivalent and lies outside $\mathfrak E_s^0$, in which case it belongs to an
+enlarged theory outside the theorem.  An inequivalent in-class equation
+satisfying every declared condition enlarges the admissible quotient and must
+therefore be included in the theorem statement.
+\end{theorem}
+
+\begin{proof}
+Let $E$ be admissible.  The certificate property gives
+$d_s(\nu_s(E))=0$, so the unique-zero property gives
+$\nu_s(E)=\theta_s^\star$.  If $E_s^\star$ is any representative with that
+normal form, completeness gives $E\sim_{\rm op}E_s^\star$.  Hence all
+admissible equations occupy one operator-equivalence class.
+Equation~\eqref{eq:pr35-operator-equivalence} maps their zero sets
+bijectively and uses only transformations in $\mathcal G_s$, so their physical
+quotient solution spaces agree.  If
+Eq.~\eqref{eq:pr35-canonical-solution-isolation} also holds, each of those
+spaces is the same singleton.  The three dispositions are the same argument
+and its contrapositive for in-class equations.  For an outside proposal, a
+full-domain physical-equivalence test places it in the first disposition if it
+is merely another representation; otherwise its inequivalent operator content
+places it in the enlarged-theory disposition.
+\end{proof}
+
+The theorem is noncircular: the candidate class, quotient group, normal-form
+classification, and defect ledger are fixed without using
+$\theta_s^\star$.  That value first appears as the computed zero of the
+certificate.  The substantive proof obligation is therefore to classify every
+in-class equation into a faithful normal form and then exhaust the complete
+zero set of its defect.
+
+Finite discrete candidates are treated by exhaustive enumeration. Polynomial
+and rational constraints are solved by exact elimination or complete analytic
+parameterization. Continuous numerical roots require interval isolation and
+exclusion of the complement. Operator claims require self-adjoint domains and
+certified spectral enclosures. Radiative corrections require a complete
+invariant-operator basis and an explicit power-counting rule.
+
+Post-generation diagnostic agreement is not a generative admissibility
+constraint. If
+\(\mathcal E_s\) denotes external data and \(\mathcal C_s\) the construction
+map, the firewall condition is
+\begin{equation}
+\mathcal E_s\cap\operatorname{Dom}(\mathcal C_s)=\varnothing .
+\end{equation}
+No residual or standard-deviation score may select a branch, coefficient,
+truncation order, numerical resolution, or acceptance tolerance.
+
+Thus ``no other solution'' never means that no differently written equation
+can return the same number.  It means that no inequivalent operator or branch
+in the declared PR closure class satisfies the complete structural ledger.
+The global theorem may combine direct postulate theorems and proved canonical
+closures, provided their status is explicit and every included sector contains
+one zero-defect equivalence class.
