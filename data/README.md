@@ -2,7 +2,7 @@
 
 This directory is the public guide to data and generated numerical ledgers for
 the Projection Relativity manuscript series. It distinguishes usable release
-artifacts from empty placeholders, external raw sources, and papers for which a
+artifacts from unavailable packages, external raw sources, and papers for which a
 separate data package is not applicable.
 
 ## Status Key
@@ -11,14 +11,14 @@ separate data package is not applicable.
 |---|---|
 | **Available** | The file contains a usable dataset, generated ledger, script, or result. |
 | **External raw data** | The underlying public catalog or strain data is not redistributed here; the release contains derived products or retrieval instructions. |
-| **Empty placeholder** | The named file exists but contains no usable archive content and must not be cited as a dataset. |
+| **Not available** | No usable public artifact is present for the documented channel. |
 | **Not applicable** | That paper has no separate public data package, so no paper directory exists here. |
 
 ## At a Glance
 
 | Paper | Data location | Public role |
 |---|---|---|
-| **PR-I** | [`projection_relativity_I/`](projection_relativity_I/) | Compact-phase precision audit, two usable Section 11.3 gravitational-wave support archives, and explicit placeholders for unavailable Section 11.1, 11.2, and 11.5 packages. |
+| **PR-I** | [`projection_relativity_I/`](projection_relativity_I/) | Compact-phase precision audit, two usable Section 11.3 gravitational-wave support archives, and explicit **not available** documentation for Sections 11.1, 11.2, and 11.5. |
 | **PR-II** | [`projection_relativity_II/`](projection_relativity_II/) | Banded radial spectral compiler and its convergence table. |
 | **PR-III** | [`projection_relativity_III/`](projection_relativity_III/) | Forty-four JSON calculation ledgers and inputs paired by stage with forty-one Python generators. These are generated scientific ledgers, not raw experimental datasets. |
 | **PR-IV** | Not applicable | PR-IV adds no independent data package. Its exact and numerical outputs are under `test_harness/projection_relativity_IV/symbolic/results/`, so `data/projection_relativity_IV/` does not exist. |
@@ -37,21 +37,20 @@ are documented in
 | [`pr_public_section11_3_gw_kerr_consistency_support.tar.gz`](projection_relativity_I/pr_public_section11_3_gw_kerr_consistency_support.tar.gz) | Ringdown sample and summary CSV files, PNG/PDF plots, and the generating Python script. | Check the Section 11.3 claim that the PR exterior ringdown follows the Kerr hierarchy with only a formally suppressed projection-sector residual. This is a consistency test, not a detection claim. |
 | [`pr_public_section11_3_gw_residual_screen_support.tar.gz`](projection_relativity_I/pr_public_section11_3_gw_residual_screen_support.tar.gz) | GW150914 screens, large-event and focused-follow-up tables, kernel and template interfaces, diagnostic plots, scripts, and theory notes. | Reproduce the conservative Section 11.3 public-data residual/null screens. The active interpretation is that no statistically robust PR-specific residual was identified. |
 
-### Empty placeholders
+### Unavailable PR-I packages
 
-The following files are each two bytes in the current public tree. They are not
-valid TAR archives and contain no usable data:
+No public support archive is present for the following channels:
 
-| File | Intended channel | Current status |
-|---|---|---|
-| `pr_public_section11_1_quasar_support.tar` | Section 11.1 quasar luminosity-linked velocity-residual support. | **Empty placeholder** |
-| `pr_public_section11_2_magnetic_area_law_support.tar.gz` | Section 11.2 compact-phase magnetic area-law and Faraday-residual support. | **Empty placeholder** |
-| `pr_public_section11_5_hubble_desi_phase_response.tar` | Hubble/DESI phase-response pressure test. | **Empty placeholder** |
+| Manuscript channel | Current status |
+|---|---|
+| Section 11.1 quasar luminosity-linked velocity residuals | **Not available** |
+| Section 11.2 compact-phase magnetic area law and Faraday residuals | **Not available** |
+| Section 11.5 cosmological phase-response pressure test | **Not available** |
 
-Do not extract, cite, or treat these placeholders as released datasets. The
-PR-I README records the authoritative manuscript numbering and the precise
-external-data boundary for those channels. Section 11.4 has no separate data
-archive because its displayed magnetar relations are analytic.
+These statuses must not be treated as released datasets. The PR-I README
+records the authoritative manuscript numbering and precise external-data
+boundary. Section 11.4 has no separate data archive because its displayed
+magnetar relations are analytic.
 
 There is no separate externally hosted PR-I support bundle in the public
 release contract. Usable PR-I support archives are checked into

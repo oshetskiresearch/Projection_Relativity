@@ -12,7 +12,7 @@ not applicable.
 | **Available** | The archive or image contains a usable public plot. |
 | **Source only** | Plot-generating code exists, but no usable generated plot archive is present. |
 | **Inherited reference** | The file illustrates material inherited from an earlier paper rather than a new plot result for the directory in which it is stored. |
-| **Empty placeholder** | The file contains no usable archive content. |
+| **Not available** | No generated public plot archive is present for the documented source. |
 | **Not applicable** | That paper has no separate plot release, so no paper directory exists here. |
 
 ## At a Glance
@@ -39,7 +39,7 @@ not applicable.
 
 | Source | Plot meaning | Current status |
 |---|---|---|
-| [`code/pr_double_null_wall_stability.py`](projection_relativity_I/code/pr_double_null_wall_stability.py) | Simulates crossing ingoing/outgoing null-flux walls near the PR saturation boundary and compares the classical and finite-core response. | **Source only.** The companion `pr_double_null_wall_stability.tar.gz` file is two bytes and is an **empty placeholder**, so no generated public figure is available from that archive. |
+| [`code/pr_double_null_wall_stability.py`](projection_relativity_I/code/pr_double_null_wall_stability.py) | Simulates crossing ingoing/outgoing null-flux walls near the PR saturation boundary and compares the classical and finite-core response. | **Source only.** A generated public plot archive is **not available**. |
 
 ### Plot generators
 
@@ -116,6 +116,5 @@ tar -xzf plots/projection_relativity_I/<archive>.tar.gz
 tar -xf plots/projection_relativity_II/pr2_figures.tar
 ```
 
-Do not attempt to extract files marked **Empty placeholder**. When publishing a
-figure derived from an external dataset, cite both the applicable Projection
-Relativity manuscript and the original data source.
+When publishing a figure derived from an external dataset, cite both the
+applicable Projection Relativity manuscript and the original data source.

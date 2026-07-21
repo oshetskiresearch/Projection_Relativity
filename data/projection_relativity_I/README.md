@@ -2,8 +2,8 @@
 
 This directory is the authoritative inventory of the data-side artifacts
 checked into the public repository for **Projection Relativity I (PR-I)**. It
-distinguishes usable archives from empty placeholders and from raw datasets
-that must be obtained from their original providers.
+distinguishes usable archives from unavailable support packages and from raw
+datasets that must be obtained from their original providers.
 
 No separately hosted Projection Relativity support bundle is required by this
 release. The usable PR-I archives are versioned directly in this directory.
@@ -16,11 +16,11 @@ The current public manuscript fixes the following order:
 
 | Manuscript location | Channel | Public data status |
 |---|---|---|
-| Section 11.1 | Quasar luminosity-linked velocity residual test | Empty placeholder; no usable public archive is present. |
-| Section 11.2 | Compact-phase magnetic area law and Faraday-rotation constraint | Empty placeholder; no usable public archive is present. |
+| Section 11.1 | Quasar luminosity-linked velocity residual test | **Not available**; no public support archive is present. |
+| Section 11.2 | Compact-phase magnetic area law and Faraday-rotation constraint | **Not available**; no public support archive is present. |
 | Section 11.3 | Kerr recovery and gravitational-wave consistency | Two usable repository-contained archives. |
 | Section 11.4 | Magnetar spin residuals from projection-energy inertia redistribution | No separate data archive; the displayed relations are covered by the manuscript, supplement, and symbolic harness. |
-| Section 11.5 | Cosmological phase response and current stress tests | Empty placeholder; no usable public archive is present. |
+| Section 11.5 | Cosmological phase response and current stress tests | **Not available**; no public support archive is present. |
 
 This numbering follows
 [`Oshetski_Projection_Relativity_Main.tex`](../../manuscript/projection_relativity_I/Oshetski_Projection_Relativity_Main.tex).
@@ -34,11 +34,8 @@ The checked-in PR-I data tree is:
 data/projection_relativity_I/
 |-- README.md
 |-- pr_public_section_10_compact_phase_fsc.tar
-|-- pr_public_section11_1_quasar_support.tar
-|-- pr_public_section11_2_magnetic_area_law_support.tar.gz
 |-- pr_public_section11_3_gw_kerr_consistency_support.tar.gz
-|-- pr_public_section11_3_gw_residual_screen_support.tar.gz
-`-- pr_public_section11_5_hubble_desi_phase_response.tar
+`-- pr_public_section11_3_gw_residual_screen_support.tar.gz
 ```
 
 There are no checked-in top-level `scripts/section11/`, `results/section11/`,
@@ -66,10 +63,10 @@ Status: **Available**.
 
 ### Section 11.1 quasar residual support
 
-`pr_public_section11_1_quasar_support.tar` is a two-byte empty placeholder. It
-is not a valid TAR archive and contains no released table, plot, or script.
+No Section 11.1 support archive is present in the public tree.
 
-Status: **Empty placeholder**. Do not extract or cite it as evidence.
+Status: **Not available**. No released table, plot, or reproduction script is
+provided for this channel, and no external PR-I bundle should be inferred.
 
 The quasar statistic defined in the manuscript is
 
@@ -83,11 +80,10 @@ from its original provider, with that provider's license and citation terms.
 
 ### Section 11.2 magnetic area-law support
 
-`pr_public_section11_2_magnetic_area_law_support.tar.gz` is a two-byte empty
-placeholder. It is not a valid gzip-compressed TAR archive and contains no
-released table, plot, or script.
+No Section 11.2 support archive is present in the public tree.
 
-Status: **Empty placeholder**. Do not extract or cite it as evidence.
+Status: **Not available**. No released observational table, plot, or
+reproduction script is provided for this channel.
 
 The machine-checkable algebraic relations are covered by the PR-I symbolic
 harness, including
@@ -152,13 +148,11 @@ Status: **No separate data package**.
 
 ### Section 11.5 cosmology support
 
-`pr_public_section11_5_hubble_desi_phase_response.tar` is a two-byte empty
-placeholder. It is not a valid TAR archive and contains no released likelihood,
-table, plot, or script.
+No Section 11.5 support archive is present in the public tree.
 
-Status: **Empty placeholder**. Do not extract or cite it as evidence. The
-manuscript presents this channel as a conditional pressure test requiring a
-joint external-data analysis.
+Status: **Not available**. No released likelihood, table, plot, or reproduction
+script is provided for this channel. The manuscript presents it as a
+conditional pressure test requiring a joint external-data analysis.
 
 ## Inspecting and Extracting the Usable Archives
 
@@ -186,8 +180,6 @@ For the uncompressed Section 10 archive:
 tar -xf data/projection_relativity_I/pr_public_section_10_compact_phase_fsc.tar -C pr1_section11_work
 ```
 
-Do not run `tar` against files identified above as empty placeholders.
-
 ## Reproducibility Boundary
 
 A fresh clone can directly:
@@ -198,11 +190,11 @@ A fresh clone can directly:
 4. inspect and extract the two usable Section 11.3 support archives; and
 5. inspect the Section 10 compact-phase precision audit.
 
-A fresh clone cannot reproduce the missing quasar, magnetic, or cosmological
-observational packages from the two-byte placeholders. Those files are
-explicitly unavailable and must not be represented as an external PR bundle.
-External raw datasets, where applicable, remain governed by their original
-providers.
+A fresh clone cannot reproduce the unavailable quasar, magnetic, or
+cosmological observational packages because no public support archives are
+provided for those channels. Their **not available** status is documentation,
+not a pointer to an external PR bundle. External raw datasets, where
+applicable, remain governed by their original providers.
 
 ## Citation and Use
 
