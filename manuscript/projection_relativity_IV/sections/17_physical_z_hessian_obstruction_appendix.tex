@@ -1,0 +1,114 @@
+\section{Physical-\texorpdfstring{$Z$}{Z} Admissibility and Exclusion Theorem}
+\label{app:physical-z-hessian-obstruction}
+
+This appendix verifies that the physical-$Z$ normalization used by the canonical $D_3$ closure is fixed and that apparent second-jet or effective-field-theory alternatives acquire freedom only by leaving the PR admissible class.  No diagnostic residual is used.
+
+\subsection{Exact Physical Neutral Connection}
+
+PR-II supplies
+\begin{equation}
+ \mathcal A_\mu^{\rm neutral}
+ =gW_\mu^3T_3+g'B_\mu\frac{Y}{2},
+ \qquad A=sW^3+cB,\qquad Z=cW^3-sB,
+ \label{eq:pr35-z-source-connection}
+\end{equation}
+where $e=gs=g'c$, $Q=T_3+Y/2$, and $c^2+s^2=1$.
+
+\begin{proposition}[Physical-$Z$ generator and normalized charged-vector trace]
+\label{prop:pr35-physical-z-generator}
+Define $t_Z=T_3-s^2Q$, $g_Z=g/c$, and let
+$q_Z=\operatorname{ad}_{g_Zt_Z}$ on
+$\operatorname{span}\{T^+,T^-\}$.  Then
+\begin{equation}
+ \mathcal A_\mu^{\rm neutral}=eA_\mu Q+g_ZZ_\mu t_Z,
+ \qquad [g_Zt_Z,T^\pm]=\pm gc\,T^\pm.
+\end{equation}
+Consequently the normalized physical charge operator
+$\widehat q_Z=(gc)^{-1}q_Z$ has spectrum $(+1,-1)$ and
+\begin{equation}
+ \operatorname{Tr}_{\rm ch}
+ (\widehat q_Z^\dagger\widehat q_Z)=2.
+ \label{eq:pr35-z-physical-vector-trace}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Inverting Eq.~\eqref{eq:pr35-z-source-connection} gives $W^3=sA+cZ$ and $B=cA-sZ$.  The photon coefficient is $gsT_3+g'cY/2=eQ$, while the $Z$ coefficient is $gcT_3-g'sY/2=(g/c)(T_3-s^2Q)$.  On the weak-vector adjoint $Y=0$, so the ladder commutators have eigenvalues $\pm gc$.  Division by $gc$ gives the normalized spectrum and trace.
+\end{proof}
+
+Thus the physical-$Z$ map has exactly the unit-normalized charged-adjoint response assumed in Theorem~\ref{thm:pr35-unique-quadratic-response}.  It supplies $F(\widehat q_Z)=2$ without an adjustable mixing factor.
+
+\subsection{Second-jet Exclusion}
+
+For a normalized physical-$Z$ background $z$, a reference-normalized determinant has second variation
+\begin{equation}
+ \Gamma''(0)=\sum_i\eta_i\operatorname{Tr}'_i
+ \left(G_iW_i-G_iV_iG_iV_i\right),
+ \qquad V_i=H_i'(0),\quad W_i=H_i''(0).
+ \label{eq:pr35-z-required-block-hessian}
+\end{equation}
+
+\begin{theorem}[Independent Second Jets are Outside the PR Class]
+\label{thm:pr35-z-second-jet-nonuniqueness}
+Let one block be deformed by
+\begin{equation}
+ H_j^{(\lambda)}(z)=H_j^{(0)}(z)
+ +\frac{\lambda\rho}{2\eta_j}z^2H_j(0)^{1/2}XH_j(0)^{1/2},
+ \label{eq:pr35-z-second-jet-family}
+\end{equation}
+where $X$ is positive, finite rank, commutes with the frozen charge action, and satisfies $\operatorname{Tr}'X=1$.  The zero and first jets are unchanged, but
+\begin{equation}
+ \Gamma_\lambda''(0)-\Gamma_0''(0)=\lambda\rho.
+ \label{eq:pr35-z-second-jet-shift}
+\end{equation}
+For every independent $\lambda\ne0$, the deformation introduces a new response datum and therefore violates inheritance, minimality, and the no-new-coefficient rule of
+Proposition~\ref{prop:pr35-complete-certified-class}.  It is not an alternative PR solution.
+\end{theorem}
+
+\begin{proof}
+The deformation and its first derivative vanish at $z=0$.  Its second derivative changes only the $G_jW_j$ term in Eq.~\eqref{eq:pr35-z-required-block-hessian}, by
+\begin{equation}
+ \eta_j\operatorname{Tr}'\!\left[
+ H_j(0)^{-1}\frac{\lambda\rho}{\eta_j}
+ H_j(0)^{1/2}XH_j(0)^{1/2}\right]
+ =\lambda\rho\operatorname{Tr}'X=\lambda\rho.
+\end{equation}
+The free scalar $\lambda$ is precisely an independent second-jet datum, which is forbidden by the completed minimal-response class.
+\end{proof}
+
+\subsection{Effective Operator Exclusion}
+
+\begin{proposition}[Independent neutral EFT operator is inadmissible]
+\label{prop:pr35-z-local-counteroperator}
+For the PR-II $Y=1$ doublet, the gauge-invariant operator
+\begin{equation}
+ \mathcal O_{HD}
+ =|\Phi^\dagger D_\mu\Phi|^2,
+ \qquad
+ \Delta\mathcal L_\lambda
+ =\frac{2\lambda\rho}{v_{\rm EW}^2}\mathcal O_{HD}
+ \label{eq:pr35-z-local-counteroperator}
+\end{equation}
+produces at $\Phi_0=(0,v_{\rm EW})^T/\sqrt2$
+\begin{equation}
+ \Delta\mathcal L_\lambda\big|_{\Phi_0}
+ =\frac12\lambda\rho M_{Z,0}^2Z_\mu Z^\mu,
+ \qquad M_{Z,0}^2=\frac14g_Z^2v_{\rm EW}^2.
+\end{equation}
+It adds no charged-vector or photon mass, but its independent Wilson \cite{Wilson_1975}
+coefficient $\lambda$ and dimension-six operator violate the declared finite-tier operator inventory and no-new-parameter guideline.  Hence it is a different theory, not a PR branch.
+\end{proposition}
+
+\begin{proof}
+At the locked vacuum,
+$\Phi_0^\dagger D_\mu\Phi_0
+=iv_{\rm EW}^2g_ZZ_\mu/4$.  Taking the modulus square gives the displayed neutral mass term.  The operator carries an independent Wilson coefficient and changes the scalar/Goldstone interactions, so it is excluded by the complete PR class definition.
+\end{proof}
+
+\begin{proposition}[Physical-$Z$ closure]
+Every fixed-kernel neutral response satisfying the PR inheritance, photon nullity, charged-sector preservation, canonical unit normalization, and minimal quadratic-response guidelines is operator-equivalent to \begin{equation}
+ \boxed{D_3=\rho\operatorname{Tr}_{\rm ch}
+ (\widehat q_Z^\dagger\widehat q_Z)P_Z=2\rho P_Z.}
+\end{equation}
+Every $k\ne2$ has defect $\rho^2(k-2)^2$.  Independent second jets and EFT operators have additional-data defects and lie outside $\mathfrak A_{\rm PR}^{\rm can}$.  Therefore, neither construction supplies a second admissible coefficient, equation, or solution branch.
+\end{proposition}
