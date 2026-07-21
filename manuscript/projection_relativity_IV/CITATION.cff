@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this manuscript or its reproducibility package, please cite it as below."
+title: "The Foundation of Projection Relativity IV: The Global Singleton Theorem—Axiom-by-Axiom Uniqueness and Canonical Closure of the Complete Projection Relativity Architecture"
+authors:
+  - family-names: "Oshetski"
+    given-names: "Michael Stanislaus"
+    orcid: "https://orcid.org/0009-0007-3623-7586"
+version: 1.0.0
+date-released: 2026-07-21
+doi: "10.5281/zenodo.21477033"
+url: "https://doi.org/10.5281/zenodo.21477033"
+repository-code: "https://github.com/oshetskiresearch/Projection_Relativity"
+preferred-citation:
+  type: article
+  title: "The Foundation of Projection Relativity IV: The Global Singleton Theorem—Axiom-by-Axiom Uniqueness and Canonical Closure of the Complete Projection Relativity Architecture"
+  authors:
+    - family-names: "Oshetski"
+      given-names: "Michael Stanislaus"
+      orcid: "https://orcid.org/0009-0007-3623-7586"
+  year: 2026
+  doi: "10.5281/zenodo.21477033"
+  url: "https://doi.org/10.5281/zenodo.21477033"

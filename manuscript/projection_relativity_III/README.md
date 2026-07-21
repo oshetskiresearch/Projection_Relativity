@@ -21,6 +21,8 @@ derivations, and rigorous structural organization of the equations.
 - `Oshetski_Projection_Relativity_III_References.bib`: The BibTeX file
   containing all formal citations and referenced scientific sources.
 - `Oshetski_Projection_Relativity_III_Main.pdf`: The compiled public manuscript.
+- `CITATION.cff`: Citation File Format metadata for the manuscript and its
+  Zenodo release.
 
 The broader repository stores the PR-III validation harness under
 `test_harness/projection_relativity_III/` and its public construction data under

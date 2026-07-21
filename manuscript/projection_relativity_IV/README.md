@@ -23,6 +23,8 @@ equations.
 - `Oshetski_Projection_Relativity_IV_References.bib`: The BibTeX file
   containing all formal citations and referenced scientific sources.
 - `Oshetski_Projection_Relativity_IV_Main.pdf`: The compiled public manuscript.
+- `CITATION.cff`: Citation File Format metadata for the manuscript and its
+  Zenodo release.
 - `sections/`: The lowercase, case-sensitive directory containing the complete
   ordered body sections and appendices loaded by the main source.
 
