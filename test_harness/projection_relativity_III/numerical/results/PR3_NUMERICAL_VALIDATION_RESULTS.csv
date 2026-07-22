@@ -1,7 +1,7 @@
 id,category,status,actual,expected,detail
 scope:generator_python_files,scope,PASS,41,41,Packaged generator python files
 scope:data_json_files,scope,PASS,44,44,Packaged data json files
-scope:schema_json_files,scope,PASS,6,6,Packaged schema json files
+scope:schema_json_files,scope,PASS,5,5,Packaged schema json files
 scope:audit_python_files,scope,PASS,6,6,Packaged audit python files
 scope:generator_names,scope,PASS,0,0,Every packaged generator must use the pr3_ filename prefix
 scope:audit_scripts,scope,PASS,6,6,Audit utility set matches the locked public scope manifest

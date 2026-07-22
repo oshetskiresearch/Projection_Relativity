@@ -1,0 +1,156 @@
+id,section,kind,status,actual,expected,error,tolerance,note
+G001,sec:pr2_nonabelian_generator_algebra,matrix,PASS,"[[0.5j, 0j], [0j, -0.5j]]","[[0.5j, 0j], [0j, (-0-0.5j)]]",0.0,1e-15,"[T1,T2]=iT3"
+G002,sec:pr2_nonabelian_generator_algebra,matrix,PASS,"[[0j, 0.5j], [0.5j, 0j]]","[[0j, 0.5j], [0.5j, 0j]]",0.0,1e-15,"[T2,T3]=iT1"
+G003,sec:pr2_nonabelian_generator_algebra,matrix,PASS,"[[0.0, 0.5], [-0.5, 0.0]]","[[0j, (0.5+0j)], [(-0.5+0j), 0j]]",0.0,1e-15,"[T3,T1]=iT2"
+G004,sec:pr2_nonabelian_generator_algebra,numeric,PASS,0.5,0.5,0.0,1e-15,Trace normalization for T1
+G005,sec:pr2_nonabelian_generator_algebra,numeric,PASS,0.5,0.5,0.0,1e-15,Trace normalization for T2
+G006,sec:pr2_nonabelian_generator_algebra,numeric,PASS,0.5,0.5,0.0,1e-15,Trace normalization for T3
+G007,sec:pr2_nonabelian_generator_algebra,numeric,PASS,0.0,0,0.0,1e-15,Off-diagonal trace normalization
+G008,sec:pr2_nonabelian_generator_algebra,matrix,PASS,"[[(0.75+0j), 0j], [0j, (0.75+0j)]]","[[0.75, 0.0], [0.0, 0.75]]",0.0,1e-15,Fundamental Casimir is 3/4 I
+G009,sec:pr2_compact_weak_isospin_operator,exact,PASS,0,0,0,0,j=0 spectral value numerator
+G010,sec:pr2_compact_weak_isospin_operator,numeric,PASS,0.75,0.75,0.0,1e-15,j=1/2 spectral value numerator
+G011,sec:pr2_compact_weak_isospin_operator,exact,PASS,2,2,0,0,j=1 adjoint Casimir
+G012,sec:pr2_charged_current_topological_ladder,vector,PASS,"[(1+0j), 0j]","[1, 0]",0.0,1e-15,T+ raises down to up
+G013,sec:pr2_charged_current_topological_ladder,vector,PASS,"[0j, (1+0j)]","[0, 1]",0.0,1e-15,T- lowers up to down
+G014,sec:pr2_charged_current_topological_ladder,vector,PASS,"[0j, 0j]","[0, 0]",0.0,1e-15,T+ annihilates up
+G015,sec:pr2_charged_current_topological_ladder,vector,PASS,"[0j, 0j]","[0, 0]",0.0,1e-15,T- annihilates down
+G016,sec:pr2_compact_electroweak_order_direction,vector,PASS,"[0.0, 0.0]","[0, 0]",0.0,1e-15,Q annihilates the locking direction
+G017,sec:pr2_charged_current_ladder,matrix,PASS,"[[0j, (1+0j)], [0j, 0j]]","[[0j, (1+0j)], [0j, 0j]]",0.0,1e-15,"[Q,T+]=T+"
+G018,sec:pr2_charged_current_ladder,matrix,PASS,"[[0j, 0j], [(-1+0j), 0j]]","[[(-0+0j), (-0+0j)], [(-1+0j), (-0+0j)]]",0.0,1e-15,"[Q,T-]=-T-"
+EW001,sec:pr2_electroweak_connection_mass_ledger,numeric,PASS,-1.862645149230957e-09,0,1.862645149230957e-09,1e-08,Neutral mass matrix has zero determinant
+EW002,sec:pr2_electroweak_connection_mass_ledger,numeric,PASS,7753.6125,7753.612500000001,9.094947017729282e-13,1e-12,Nonzero neutral eigenvalue is MZ^2
+EW003,sec:pr2_tree_level_electroweak_consistency,numeric,PASS,1.0,1,0.0,1e-15,rho_EW tree-level identity
+EW004,sec:pr2_charged_weak_projection_fermi_limit,numeric,PASS,8.262277744728668e-06,8.262277744728666e-06,1.6940658945086007e-21,1e-20,Charged Fermi contact coefficient
+EW005,sec:pr2_neutral_current_projection,numeric,PASS,8.262277744728666e-06,8.262277744728666e-06,0.0,1e-20,Neutral-current contact coefficient
+EW006,sec:pr2_compact_order_field_counting,exact,PASS,3,3,0,0,Broken compact directions
+EW007,sec:pr2_compact_order_field_counting,exact,PASS,1,1,0,0,One scalar order-mode remains
+EW008,sec:pr2_order_mode_gauge_boson_couplings,numeric,PASS,48.8187,48.81870000000001,7.105427357601002e-15,1e-14,hWW coupling ratio
+EW009,sec:pr2_order_mode_gauge_boson_couplings,numeric,PASS,63.03750000000001,63.03750000000001,0.0,1e-15,hZZ coupling ratio
+B001,sec:pr2_boundary_ledger_electroweak_lift,numeric,PASS,3.052966743096,3.052966743096,0.0,1e-12,Radial stiffness gap
+B002,sec:pr2_boundary_ledger_electroweak_lift,numeric,PASS,10.905007182855176,10.905007182855176,0.0,1e-12,Compact boundary stiffness
+B003,sec:pr2_boundary_ledger_electroweak_lift,numeric,PASS,0.796684464847899,0.796684464847899,0.0,1e-12,Compact boundary cofactor
+B004,sec:pr2_boundary_ledger_electroweak_lift,numeric,PASS,137.036361812007,137.036361812007,0.0,1e-12,PR boundary alpha inverse
+B005,sec:pr2_boundary_ledger_electroweak_lift,numeric,PASS,0.07305675745912797,0.073056757459128,2.7755575615628914e-17,1e-12,Generation suppression ratio
+B006,sec:pr2_weak_mixing_boundary_closure,numeric,PASS,0.018644236701810996,0.018644236701811,3.469446951953614e-18,1e-12,Normalized weak boundary deficit
+B007,sec:pr2_weak_mixing_boundary_closure,numeric,PASS,0.231355763298189,0.231355763298189,0.0,1e-12,Weak mixing sin^2
+B008,sec:pr2_weak_mixing_boundary_closure,numeric,PASS,0.768644236701811,0.768644236701811,0.0,1e-12,Weak mixing cos^2
+B009,sec:pr2_weak_mixing_boundary_closure,numeric,PASS,0.548627374785032,0.548627374785032,0.0,1e-12,g'/g = tan theta_W
+B010,sec:pr2_dimensionless_weak_order_factor,numeric,PASS,2.0099841245909515,2.0099841245909515,0.0,1e-12,Dimensionless weak-order factor
+B011,sec:pr2_dimensionless_weak_order_factor,numeric,PASS,1.417739089039641,1.417739089039641,0.0,1e-12,sqrt Xi
+B012,sec:pr2_terminal_weak_displacement_overlap,numeric,PASS,0.9975132754017989,0.997513275401799,1.1102230246251565e-16,1e-12,Terminal weak overlap
+B013,sec:pr2_compact_spectral_hierarchy_action,numeric,PASS,37.18004007116382,37.18004007116382,0.0,1e-12,Base hierarchy action
+B014,sec:pr2_compact_spectral_hierarchy_action,numeric,PASS,-0.0005892040980909842,-0.0005892040980909848,6.505213034913027e-19,1e-12,Second-order action correction
+B015,sec:pr2_compact_spectral_hierarchy_action,numeric,PASS,37.17945086706573,37.17945086706573,0.0,1e-12,Total hierarchy action
+B016,sec:pr2_compact_spectral_hierarchy_action,numeric,PASS,173.67059834472832,173.67059834472832,0.0,1e-10,Weak displacement anchor
+B017,sec:pr2_generated_weak_scale_fermi_constant,numeric,PASS,246.21959589022453,246.21959589022453,0.0,1e-10,Generated electroweak vacuum scale
+B018,sec:pr2_generated_weak_scale_fermi_constant,numeric,PASS,1.166379220175995e-05,1.166379220175995e-05,0.0,1e-16,Generated Fermi constant
+B019,sec:pr2_generated_weak_scale_fermi_constant,numeric,PASS,-2.2298753452732824e-07,-2.23e-07,1.2465472671760646e-11,1e-09,Weak-scale diagnostic residual
+B020,sec:pr2_generated_weak_scale_fermi_constant,numeric,PASS,4.459752182912452e-07,4.46e-07,2.4781708754820166e-11,1e-09,Fermi diagnostic residual
+B021,sec:pr2_mass_geometry_diagnostic_coupling,numeric,PASS,80.21004474727235,80.210045,2.5272764503370126e-07,1e-06,Diagnostic W mass using alpha(MZ)^-1
+B022,sec:pr2_mass_geometry_diagnostic_coupling,numeric,PASS,91.4884081211359,91.488408,1.2113589775708533e-07,1e-06,Diagnostic Z mass using alpha(MZ)^-1
+A001,sec:pr2_residual_em_charges_fermion_ledger,numeric,PASS,0.6666666666666666,0.6666666666666666,0.0,1e-15,u_L charge
+A002,sec:pr2_residual_em_charges_fermion_ledger,numeric,PASS,-0.33333333333333337,-0.3333333333333333,5.551115123125783e-17,1e-15,d_L charge
+A003,sec:pr2_residual_em_charges_fermion_ledger,numeric,PASS,0.0,0,0.0,1e-15,nu_L charge
+A004,sec:pr2_residual_em_charges_fermion_ledger,numeric,PASS,-1.0,-1,0.0,1e-15,e_L charge
+A005,sec:pr2_pure_color_anomaly,exact,PASS,0,0,0,0,Pure color anomaly
+A006,sec:pr2_mixed_color_hypercharge_anomaly,numeric,PASS,0.0,0,0.0,1e-15,Mixed color-hypercharge anomaly
+A007,sec:pr2_mixed_weak_hypercharge_anomaly,numeric,PASS,0.0,0,0.0,1e-15,Mixed weak-hypercharge anomaly
+A008,sec:pr2_mixed_gravitational_hypercharge_anomaly,numeric,PASS,0.0,0,0.0,1e-15,Mixed gravitational-hypercharge anomaly
+A009,sec:pr2_cubic_hypercharge_anomaly,numeric,PASS,1.7763568394002505e-15,0,1.7763568394002505e-15,1e-14,Cubic hypercharge anomaly
+A010,sec:pr2_witten_global_anomaly,predicate,PASS,True,True,0,0,One-generation Witten parity
+A011,sec:pr2_three_sheet_representation_ledger,predicate,PASS,True,True,0,0,Three-generation Witten parity
+F001,sec:pr2_generation_origin_flavor_sheets,exact,PASS,3,3,0,0,Generation count from compact quotient
+F002,sec:pr2_generation_sheet_overlap_hierarchy_main,numeric,PASS,0.00533728981044185,0.005337289810442,1.5005358067199381e-16,1e-12,First sheet eta
+F003,sec:pr2_generation_sheet_overlap_hierarchy_main,numeric,PASS,0.07305675745912797,0.073056757459128,2.7755575615628914e-17,1e-12,Second sheet eta
+F004,sec:pr2_generation_sheet_overlap_hierarchy_main,numeric,PASS,1,1,0,1e-12,Third sheet eta
+F005,sec:pr2_generation_sheet_overlap_hierarchy_main,predicate,PASS,True,True,0,0,Sheet hierarchy ordering
+F006,sec:pr2_generation_sheet_overlap_hierarchy_main,numeric,PASS,13.687987734186748,13.6879877341867,4.796163466380676e-14,1e-10,Successive hierarchy ratio
+F007,sec:pr2_generation_sheet_overlap_hierarchy_main,numeric,PASS,0.005324017440582496,0.005324017440582,4.961309141293668e-16,1e-12,First terminal matter overlap
+F008,sec:pr2_generation_sheet_overlap_hierarchy_main,numeric,PASS,0.07287508542328955,0.07287508542329,4.579669976578771e-16,1e-12,Second terminal matter overlap
+F009,sec:pr2_generation_sheet_overlap_hierarchy_main,numeric,PASS,0.9975132754017989,0.997513275401799,1.1102230246251565e-16,1e-12,Third terminal matter overlap
+F010,sec:pr2_sector_specific_compact_charge_norms,numeric,PASS,1.146113514918256,1.146113514918256,0.0,1e-12,Charged-lepton sector factor
+F011,sec:pr2_sector_specific_compact_charge_norms,numeric,PASS,1.1867006023955493,1.186700602395549,2.220446049250313e-16,1e-12,Up-quark sector factor
+F012,sec:pr2_sector_specific_compact_charge_norms,numeric,PASS,1.1623483499091734,1.162348349909173,4.440892098500626e-16,1e-12,Down-quark sector factor
+F013,sec:pr2_sector_specific_compact_charge_norms,numeric,PASS,1.0730567574591279,1.073056757459128,2.220446049250313e-16,1e-12,Dirac-neutrino sector factor
+F014,sec:pr2_sector_specific_overlap_spectra,numeric,PASS,0.006101928342312102,0.006101928,3.423121014076158e-10,1e-09,D_l first entry
+F015,sec:pr2_sector_specific_overlap_spectra,numeric,PASS,0.08352312030445454,0.08352312,3.044545310304514e-10,1e-09,D_l second entry
+F016,sec:pr2_sector_specific_overlap_spectra,numeric,PASS,1.143263446248378,1.143263446,2.483779848461154e-10,1e-09,D_l third entry
+F017,sec:pr2_sector_specific_overlap_spectra,numeric,PASS,1.02095090726311,1.02095090726311,0.0,1e-12,Up/down sheetwise sector ratio
+F018,sec:pr2_hypercharge_neutral_order_terms,numeric,PASS,0,0,0,1e-15,Charged-lepton hypercharge neutrality
+F019,sec:pr2_hypercharge_neutral_order_terms,numeric,PASS,1.1102230246251565e-16,0,1.1102230246251565e-16,1e-15,Down-quark hypercharge neutrality
+F020,sec:pr2_hypercharge_neutral_order_terms,numeric,PASS,0.0,0,0.0,1e-15,Up-quark hypercharge neutrality
+F021,sec:pr2_hypercharge_neutral_order_terms,numeric,PASS,0,0,0,1e-15,Dirac-neutrino hypercharge neutrality
+L001,sec:pr2_three_sheet_square_root_flavor_geometry,numeric,PASS,0.2222222222222222,0.2222222222222222,0.0,1e-12,Koide sheet phase
+L002,sec:pr2_koide_identity_three_sheet_geometry,numeric,PASS,-3.3306690738754696e-16,0,3.3306690738754696e-16,1e-12,Three-sheet cosine sum
+L003,sec:pr2_koide_identity_three_sheet_geometry,numeric,PASS,1.5000000000000002,1.5,2.220446049250313e-16,1e-12,Three-sheet cosine-square sum
+L004,sec:pr2_charged_lepton_compact_scale,numeric,PASS,0.9962866065651801,0.99628660656518,1.1102230246251565e-16,1e-12,Charged-lepton C1
+L005,sec:pr2_charged_lepton_compact_scale,numeric,PASS,0.9987763792935966,0.998776379293597,3.3306690738754696e-16,1e-12,Charged-lepton C2
+L006,sec:pr2_charged_lepton_compact_scale,numeric,PASS,313.85033218256996,313.850332183,4.3002046368201263e-10,1e-09,Charged-lepton compact scale in MeV
+L007,sec:pr2_generated_charged_lepton_masses,numeric,PASS,0.5109844628631769,0.510984463,1.3682310839868705e-10,1e-09,Electron mass candidate
+L008,sec:pr2_generated_charged_lepton_masses,numeric,PASS,105.65641884337434,105.656418843,3.743423349078512e-10,1e-09,Muon mass candidate
+L009,sec:pr2_generated_charged_lepton_masses,numeric,PASS,1776.9345897891822,1776.934589789,1.8212631403002888e-10,1e-09,Tau mass candidate
+L010,sec:pr2_koide_identity_three_sheet_geometry,numeric,PASS,0.6666666666666669,0.6666666666666666,2.220446049250313e-16,1e-12,Koide ratio
+L011,sec:pr2_generated_charged_lepton_masses,numeric,PASS,-28.35061955227179,-28.35,0.0006195522717895585,0.01,Electron ppm residual
+L012,sec:pr2_generated_charged_lepton_masses,numeric,PASS,-18.51870820847219,-18.52,0.0012917915278087833,0.01,Muon ppm residual
+L013,sec:pr2_generated_charged_lepton_masses,numeric,PASS,2.5829881774135215,2.58,0.00298817741352142,0.01,Tau ppm residual
+Q001,sec:pr2_compact_boundary_strong_coupling_candidate,numeric,PASS,0.11786150746914954,0.11786150746915,4.579669976578771e-16,1e-12,Compact strong-coupling candidate
+Q002,sec:pr2_pr_derived_heavy_quark_thresholds,numeric,PASS,172.8139732666624,172.8139732666624,0.0,1e-10,Top threshold candidate
+Q003,sec:pr2_pr_derived_heavy_quark_thresholds,numeric,PASS,4.1664504826753515,4.1664504826753515,0.0,1e-12,Bottom threshold candidate
+Q004,sec:pr2_pr_derived_heavy_quark_thresholds,numeric,PASS,1.274964814257465,1.274964814257465,0.0,1e-12,Charm threshold candidate
+Q005,sec:pr2_pr_derived_heavy_quark_thresholds,predicate,PASS,True,True,0,0,Heavy-threshold ordering
+Q006,sec:pr2_qcd_running_ledger_main,exact,PASS,9,9,0,0,beta0 for nf=3
+Q007,sec:pr2_qcd_running_ledger_main,numeric,PASS,8.333333333333334,8.333333333333334,0.0,1e-15,beta0 for nf=4
+Q008,sec:pr2_qcd_running_ledger_main,numeric,PASS,7.666666666666666,7.666666666666667,8.881784197001252e-16,1e-15,beta0 for nf=5
+Q009,sec:pr2_qcd_running_ledger_main,exact,PASS,7,7,0,0,beta0 for nf=6
+Q010,sec:pr2_qcd_running_ledger_main,numeric,PASS,0.5217391304347826,0.5217391304347826,0.0,1e-15,Mass-running exponent for nf=5
+Q011,sec:pr2_qcd_threshold_ledger,numeric,PASS,0.08776758507426072,0.08776758507426047,2.498001805406602e-16,1e-12,Lambda_6 from three-loop matching
+Q012,sec:pr2_qcd_threshold_ledger,numeric,PASS,0.20743308730041266,0.2074330873004123,3.608224830031759e-16,1e-12,Lambda_5 from alpha_3 at MZ
+Q013,sec:pr2_qcd_threshold_ledger,numeric,PASS,0.2861117918030317,0.2861117918030313,3.885780586188048e-16,1e-12,Lambda_4 from bottom matching
+Q014,sec:pr2_qcd_threshold_ledger,numeric,PASS,0.32465249641077853,0.3246524964107782,3.3306690738754696e-16,1e-12,Lambda_3 from charm matching
+Q015,sec:pr2_qcd_threshold_ledger,numeric,PASS,0.0,0,0.0,1e-12,Top-threshold coupling continuity
+Q016,sec:pr2_qcd_threshold_ledger,numeric,PASS,-5.551115123125783e-17,0,5.551115123125783e-17,1e-12,Bottom-threshold coupling continuity
+Q017,sec:pr2_qcd_threshold_ledger,numeric,PASS,-5.551115123125783e-17,0,5.551115123125783e-17,1e-12,Charm-threshold coupling continuity
+Q018,sec:pr2_qcd_threshold_ledger,numeric,PASS,2.9807846581959305,2.9807846581959314,8.881784197001252e-16,1e-12,b running diagnostic at MZ
+Q019,sec:pr2_qcd_threshold_ledger,numeric,PASS,0.9892172861698666,0.9892172861698667,1.1102230246251565e-16,1e-12,c running diagnostic at bottom threshold
+Q020,sec:pr2_qcd_threshold_ledger,numeric,PASS,0.7077112094571146,0.7077112094571149,2.220446049250313e-16,1e-12,c running diagnostic at MZ
+Q021,sec:pr2_light_sector_confinement_average_main,numeric,PASS,0.8983422324239495,0.8983422324239495,0.0,1e-12,Compact confinement average
+Q022,sec:pr2_light_sector_confinement_average_main,numeric,PASS,0.796684464847899,0.796684464847899,0.0,1e-12,Confinement endpoint reconstructs c_bc
+Q023,sec:pr2_light_quark_hierarchy_candidate,numeric,PASS,94.02851053757644,94.028510538,4.235687356413109e-10,1e-09,Strange-quark low-energy candidate
+Q024,sec:pr2_light_quark_hierarchy_candidate,numeric,PASS,4.76103949316046,4.761039493,1.6046008965986402e-10,1e-09,Down-quark low-energy candidate
+Q025,sec:pr2_light_quark_hierarchy_candidate,numeric,PASS,2.146462594886322,2.146462595,1.1367795593741903e-10,1e-09,Up-quark low-energy candidate
+Q026,sec:pr2_six_quark_hierarchy_candidate,predicate,PASS,True,True,0,0,Six-quark hierarchy ordering
+M001,sec:pr2_ckm_compact_mixing_candidate,numeric,PASS,0.22501999652593493,0.225019996525935,5.551115123125783e-17,1e-12,Compact Cabibbo sheet angle
+M002,sec:pr2_ckm_compact_mixing_candidate,numeric,PASS,0.8226832964134033,0.822683296413403,3.3306690738754696e-16,1e-12,Compact CKM hierarchy coefficient
+M003,sec:pr2_ckm_compact_mixing_candidate,numeric,PASS,0.39803507848525777,0.398035078485258,2.220446049250313e-16,1e-12,Compact unitarity-apex radius
+M004,sec:pr2_ckm_compact_mixing_candidate,numeric,PASS,1.1837414514697735,1.1837414514697735,0.0,1e-12,CKM phase in radians
+M005,sec:pr2_ckm_compact_mixing_candidate,numeric,PASS,0.04165574507343038,0.04165574507343,3.8163916471489756e-16,1e-12,CKM s23
+M006,sec:pr2_ckm_compact_mixing_candidate,numeric,PASS,0.0037309322972782083,0.003730932297278,2.0816681711721685e-16,1e-12,CKM s13
+M007,sec:pr2_ckm_compact_mixing_candidate,matrix,PASS,"[[0.9743473642010965, 0.2250184303975322, 0.0037309322972782083], [0.22488188683169003, 0.9734952285610574, 0.04165545515143898], [0.008680486702649863, 0.04091144033501555, 0.9991250688478993]]","[[0.974347364, 0.22501843, 0.003730932], [0.224881887, 0.973495229, 0.041655455], [0.008680487, 0.04091144, 0.999125069]]",4.389425489748078e-10,1e-09,CKM absolute matrix
+M008,sec:pr2_ckm_compact_mixing_candidate,matrix,PASS,"[[(1+0j), (-2.168404344971009e-17+2.710505431213761e-20j), (1.734723475976807e-18+0j)], [(-2.168404344971009e-17-2.710505431213761e-20j), (1+0j), (-6.938893903907228e-18+0j)], [(1.734723475976807e-18+0j), (-6.938893903907228e-18+0j), (0.9999999999999999+0j)]]","[[1, 0, 0], [0, 1, 0], [0, 0, 1]]",1.1102230246251565e-16,1e-14,CKM unitarity
+M009,sec:pr2_ckm_compact_mixing_candidate,numeric,PASS,3.152605677074798e-05,3.152605677e-05,7.479775262705934e-16,1e-13,CKM Jarlskog invariant
+M010,sec:pr2_pmns_compact_lepton_mixing_candidate,numeric,PASS,0.29944741080798315,0.299447410807983,1.6653345369377348e-16,1e-12,PMNS solar sin^2
+M011,sec:pr2_pmns_compact_lepton_mixing_candidate,numeric,PASS,33.17635664341673,33.176356643,4.1673331452329876e-10,1e-09,PMNS solar angle
+M012,sec:pr2_pmns_compact_lepton_mixing_candidate,numeric,PASS,0.5650088990906162,0.565008899090616,2.220446049250313e-16,1e-12,PMNS atmospheric sin^2
+M013,sec:pr2_pmns_compact_lepton_mixing_candidate,numeric,PASS,48.735310403027015,48.735310403,2.701483481359901e-11,1e-09,PMNS atmospheric angle
+M014,sec:pr2_pmns_compact_lepton_mixing_candidate,numeric,PASS,0.02227027012474273,0.022270270124743,2.706168622523819e-16,1e-12,PMNS reactor sin^2
+M015,sec:pr2_pmns_compact_lepton_mixing_candidate,numeric,PASS,8.582438058580022,8.582438059,4.199769421120436e-10,1e-09,PMNS reactor angle
+M016,sec:pr2_pmns_compact_lepton_mixing_candidate,numeric,PASS,3.414680454136145,3.414680454,1.3614487315294355e-10,1e-09,PMNS CP phase
+M017,sec:pr2_pmns_compact_lepton_mixing_candidate,matrix,PASS,"[[0.8276177220154983, 0.5410902291495704, 0.14923226904641881], [0.27168502960959384, 0.6113601609534672, 0.743253656758569], [0.49115796938654205, 0.5774600570756526, 0.6521531504104481]]","[[0.827618, 0.54109, 0.149232], [0.271685, 0.61136, 0.743254], [0.491158, 0.57746, 0.652153]]",3.4324143094455195e-07,1e-06,PMNS absolute matrix
+M018,sec:pr2_pmns_compact_lepton_mixing_candidate,matrix,PASS,"[[(1+0j), -3.469446951953614e-18j, -5.204170427930421e-18j], [3.469446951953614e-18j, (1+0j), 1.734723475976807e-18j], [5.204170427930421e-18j, -1.734723475976807e-18j, (1+0j)]]","[[1, 0, 0], [0, 1, 0], [0, 0, 1]]",5.204170427930421e-18,1e-14,PMNS unitarity
+M019,sec:pr2_pmns_compact_lepton_mixing_candidate,numeric,PASS,-0.008935540000414927,-0.00893554,4.149267734954165e-13,1e-09,PMNS Jarlskog invariant
+N001,sec:pr2_neutrino_normal_ordering_singlet_channel,numeric,PASS,0.9851464262607201,0.985147,5.737392798632612e-07,1e-06,Compact neutrino loss factor
+N002,sec:pr2_neutrino_normal_ordering_singlet_channel,numeric,PASS,0.029645516677699862,0.02964551668,2.3001392457366876e-12,1e-11,Solar-to-atmospheric splitting ratio
+N003,sec:pr2_generated_neutrino_spectrum,numeric,PASS,0,0,0,1e-12,Massless residual compact-singlet sheet
+N004,sec:pr2_generated_neutrino_spectrum,numeric,PASS,0.008627283010144291,0.00862728301,1.4429082928479886e-13,1e-12,Second neutrino mass
+N005,sec:pr2_generated_neutrino_spectrum,numeric,PASS,0.05010655366896437,0.05010655367,1.0356299151581538e-12,2e-12,Third neutrino mass
+N006,sec:pr2_generated_neutrino_spectrum,predicate,PASS,True,True,0,0,Normal-ordering hierarchy
+N007,sec:pr2_generated_neutrino_spectrum,numeric,PASS,7.443001213712434e-05,7.443001214e-05,2.8756565271376155e-15,1e-13,Solar mass-squared splitting
+N008,sec:pr2_generated_neutrino_spectrum,numeric,PASS,0.0025106667205808068,0.002510666721,4.1919332588458147e-13,1e-12,Atmospheric mass-squared splitting
+N009,sec:pr2_generated_neutrino_spectrum,numeric,PASS,0.02964551667769987,0.02964551668,2.3001323068427837e-12,1e-11,Splitting ratio
+N010,sec:pr2_generated_neutrino_spectrum,numeric,PASS,0.058733836679108656,0.05873383668,8.913425553203069e-13,1e-12,Cosmological neutrino mass sum
+N011,sec:pr2_generated_neutrino_spectrum,numeric,PASS,0.008815029409908177,0.00881502941,9.182238303040435e-14,1e-12,Beta-decay effective mass
+N012,sec:pr2_majorana_dominant_compact_singlet_projection,numeric,PASS,2.877974334504955e-13,2.88e-13,2.0256654950449624e-16,1e-15,Equivalent Dirac Yukawa diagnostic
+N013,sec:pr2_majorana_phase_boundary,numeric,PASS,2.8222253577925343,2.822225357793,4.658495811327157e-13,1e-12,Majorana interference phase
+N014,sec:pr2_majorana_phase_boundary,numeric,PASS,3.3684009588852373,3.368400958885,2.3714363805993344e-13,1e-12,Locked alpha31 phase
+N015,sec:pr2_majorana_phase_boundary,numeric,PASS,0.0015076944768346735,0.001507694477,1.6532651983536262e-13,1e-12,Neutrinoless double-beta effective mass
+N016,sec:pr2_flavor_basis_majorana_mass_matrix,matrix,PASS,"[[(0.0017270988240094306-0.0007791948706384693j), (0.007730476086915452+0.0025867086378409906j), (0.0015849503574889689+0.0022696560884999267j)], [(0.007730476086915453+0.002586708637840991j), (-0.023751433331542574-0.006398978360197691j), (-0.02671112219997916-0.005455615724837639j)], [(0.0015849503574889689+0.0022696560884999262j), (-0.026711122199979162-0.005455615724837638j), (-0.017891508521293738-0.004647374522675817j)]]","[[(0.0017270988240094306-0.0007791948706384693j), (0.007730476086915453+0.002586708637840991j), (0.0015849503574889689+0.0022696560884999262j)], [(0.007730476086915452+0.0025867086378409906j), (-0.023751433331542574-0.006398978360197691j), (-0.026711122199979162-0.005455615724837638j)], [(0.0015849503574889689+0.0022696560884999267j), (-0.02671112219997916-0.005455615724837639j), (-0.017891508521293738-0.004647374522675817j)]]",3.576224061345498e-18,1e-14,Flavor-basis Majorana matrix is symmetric

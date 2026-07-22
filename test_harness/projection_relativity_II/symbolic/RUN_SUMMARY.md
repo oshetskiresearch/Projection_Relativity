@@ -1,77 +1,67 @@
-# PR-II Symbolic Tester Rerun Summary
+# PR-II Symbolic Tester Release Summary
 
-Run date: 2026-06-23  
-Execution engine: Maple 2026  
-Source: latest GitHub raw manuscript fetch
+Run date: 2026-07-21
 
-## Source
+Execution engine: Maple 2026
+
+Status: **PASS**
+
+## Audited Source
 
 - Repository file: `manuscript/projection_relativity_II/Oshetski_Projection_Relativity_II_Main.tex`
 - Raw URL: `https://raw.githubusercontent.com/oshetskiresearch/Projection_Relativity/main/manuscript/projection_relativity_II/Oshetski_Projection_Relativity_II_Main.tex`
-- Fetched at UTC: `2026-06-23T15:18:52.4186457Z`
-- Bytes: `227630`
-- SHA256: `F4417EDD54539B15FFE1FE176CCCB1DE0D5E8E7771F5801C11DAEB0D8BCB1BCD`
+- Fetched at UTC: `2026-07-22T00:12:00.6173702Z`
+- Bytes: `222846`
+- SHA256: `C14579DEC15B29C315B48FEF80DC47031FA345BAAE9DE8F358F63F55E74DE214`
 
-## Result
+## Verification Result
 
-Status: PASS
-
-- Maple tests: `621`
-- Passed: `621`
+- Maple tests: `617`
+- Passed: `617`
 - Failed: `0`
 - Self-validation negative controls passed: `8`
-- Display blocks inventoried: `446`
+- Independent Python reference checks: `155/155` passed
+- Display blocks inventoried: `442`
 - Unmapped display blocks: `0`
-- Generated LaTeX-source assertions in Maple run: `454`
+- `MANUSCRIPT` cleanup rows: `0`
+- Generated LaTeX-source assertions in the Maple run: `450`
 
-## Coverage Quality
+The 617 Maple checks comprise 167 core/source-anchor checks and 450 generated source assertions. Every top-level display block in the audited source is mapped and classified.
 
-- Direct numeric/symbolic display matches: `53`
-- Section-chain PASS display blocks: `218`
-- Boundary/context/data/manuscript display blocks: `175`
-
-Status counts from the refreshed coverage report:
+## Coverage Classification
 
 | status | count |
 | --- | ---: |
-| PASS | 271 |
-| NOTE | 111 |
+| PASS | 268 |
+| NOTE | 112 |
 | DATA | 62 |
-| MANUSCRIPT | 2 |
 
-Coverage-mode counts:
-
-| mode | count |
+| coverage mode | count |
 | --- | ---: |
-| section-chain | 218 |
-| note-boundary | 100 |
-| boundary | 62 |
 | direct-symbolic | 42 |
 | direct-numeric | 11 |
-| context | 11 |
-| paper-cleanup | 2 |
+| section-chain | 215 |
+| note-boundary | 100 |
+| boundary | 62 |
+| context | 12 |
 
-## Important Notes
+`NOTE` and `DATA` are explicit scope classifications, not failed tests. The current source contains no unresolved `MANUSCRIPT` classification.
 
-- The GitHub source changed compared with the older remembered run: the current SHA256 is `F4417EDD54539B15FFE1FE176CCCB1DE0D5E8E7771F5801C11DAEB0D8BCB1BCD`.
-- The current source inventory is `446` display blocks, up from the older remembered `441`.
-- The current Maple pass count is `621`, up from the older remembered `616`.
-- The increase reflects the latest manuscript/source-audit inventory, not a failure.
-- The harness still reports `0` failures and `0` unmapped display blocks.
+## Release Evidence
 
-## Included Artifacts
-
-- `reports/pr2_maple_summary.md`
-- `reports/pr2_maple_failures.md`
-- `reports/pr2_maple_results.csv`
-- `reports/pr2_maple_traceability.csv`
-- `coverage/source_equation_coverage.md`
-- `coverage/source_equation_inventory.csv`
-- `coverage/coverage_quality_report.md`
-- `coverage/direct_proof_backlog.csv`
-- `source_manifest/github_source_manifest.json`
-- `equation_audit.md`
-- `proof_report.md`
-- `harness_validation.md`
-- `equation_derivations.md`
-- `qcd_threshold_recompute.md`
+- `results/pr2_maple_summary.md`
+- `results/pr2_maple_results.csv`
+- `results/pr2_maple_traceability.csv`
+- `results/pr2_reference_summary.md`
+- `results/pr2_reference_results.csv`
+- `results/pr2_reference_traceability.csv`
+- `results/source_equation_coverage.md`
+- `results/source_equation_inventory.csv`
+- `results/coverage_quality_report.md`
+- `results/github_source_manifest.json`
+- `results/equation_audit.md`
+- `results/proof_report.md`
+- `results/harness_validation.md`
+- `results/equation_derivations.md`
+- `results/qcd_threshold_recompute.md`
+- `results/pr2_symbolic_tester.zip`

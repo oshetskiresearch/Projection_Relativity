@@ -33,8 +33,6 @@
 # Clean Colab cell for Section 11
 # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-%matplotlib inline
-
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path

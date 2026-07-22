@@ -11,8 +11,8 @@ directory and classifies each block by coverage source:
 - contextual/boundary note coverage.
 
 The pass criterion is full accounting: zero unmapped display blocks. Direct
-Maple proof density is reported separately, and non-direct proof candidates are
-written to a backlog CSV.
+Maple proof density is reported separately from classified contextual, data,
+and repository-generation coverage.
 """
 
 from __future__ import annotations
@@ -45,7 +45,6 @@ class EquationBlock:
     coverage_source: str
     maple_assertions: str
     repo_coverage: str
-    direct_proof_backlog: str
     excerpt: str
 
 
@@ -237,7 +236,7 @@ def classify(rel_file: str, block: str) -> tuple[str, str, str, str, str, str]:
             "DIRECT_MAPLE_OR_LOCKED_VALUE",
             "Direct Maple assertion or locked-value assertion in PR3 Maple/Python harness",
             ";".join(assertions),
-            "scripts/run_pr3_paper_conformance.py; src/pr3_tests.mpl",
+            "test_harness/projection_relativity_III/symbolic/code/run_pr3_paper_conformance.py; test_harness/projection_relativity_III/symbolic/code/pr3_tests.mpl",
             "no",
         )
 
@@ -259,7 +258,7 @@ def classify(rel_file: str, block: str) -> tuple[str, str, str, str, str, str]:
             "DIAGNOSTIC_OR_POST_GENERATION_COMPARISON",
             "Post-generation diagnostic/data row; checked by table and paper claim tests where applicable",
             "",
-            "tables/pr3_cross_sector_diagnostic_table.csv; paper_claims_pr3.json",
+            "test_harness/projection_relativity_III/numerical/results/pr3_cross_sector_diagnostic_table.csv; test_harness/projection_relativity_III/symbolic/paper_claims_pr3.json",
             "no",
         )
 
@@ -311,7 +310,7 @@ def classify(rel_file: str, block: str) -> tuple[str, str, str, str, str, str]:
             "REPO_GENERATION_COVERED",
             "Covered by PR-III generator/data-pair and canonical release-byte audits",
             "",
-            "scripts/pr3_artifact_drift_audit.py; scripts/pr3_release_byte_exact_audit.py",
+            "test_harness/projection_relativity_III/numerical/code/pr3_artifact_drift_audit.py; test_harness/projection_relativity_III/numerical/code/pr3_release_byte_exact_audit.py",
             "yes",
         )
 
@@ -359,7 +358,7 @@ def classify(rel_file: str, block: str) -> tuple[str, str, str, str, str, str]:
             "REPO_GENERATION_COVERED",
             "Covered by section-to-generator mapping in the PR-III reproducibility package",
             "",
-            "schemas/pr3_full_regeneration_pairs.json; scripts/pr3_artifact_drift_audit.py",
+            "test_harness/projection_relativity_III/numerical/schemas/pr3_full_regeneration_pairs.json; test_harness/projection_relativity_III/numerical/code/pr3_artifact_drift_audit.py",
             "yes",
         )
 
@@ -369,7 +368,7 @@ def classify(rel_file: str, block: str) -> tuple[str, str, str, str, str, str]:
             "REPRODUCIBILITY_POLICY_CONTEXT",
             "Reproducibility policy statement; audited by repo audit commands",
             "",
-            "README_PR3_REPRODUCIBILITY.md; RUN_ORDER.md",
+            "test_harness/projection_relativity_III/numerical/README_PR3_REPRODUCIBILITY.md; test_harness/projection_relativity_III/numerical/RUN_ORDER.md",
             "no",
         )
 
@@ -390,7 +389,7 @@ def inventory(repo: Path, tex_root: Path) -> list[EquationBlock]:
     for path in tex_files:
         rel_file = path.relative_to(repo).as_posix()
         for env, start, end, block, section in find_display_blocks(path, rel_file):
-            status, coverage_class, source, assertions, repo_coverage, backlog = classify(rel_file, block)
+            status, coverage_class, source, assertions, repo_coverage, _candidate = classify(rel_file, block)
             label = first_label(block)
             rows.append(
                 EquationBlock(
@@ -406,7 +405,6 @@ def inventory(repo: Path, tex_root: Path) -> list[EquationBlock]:
                     coverage_source=source,
                     maple_assertions=assertions,
                     repo_coverage=repo_coverage,
-                    direct_proof_backlog=backlog,
                     excerpt=compact_math(block)[:220],
                 )
             )
@@ -429,13 +427,7 @@ def write_reports(rows: list[EquationBlock], outdir: Path, repo: Path, tex_root:
     class_counts = Counter(row.coverage_class for row in rows)
     unmapped = status_counts.get("UNMAPPED", 0)
     direct = sum(1 for row in rows if row.coverage_class == "DIRECT_MAPLE_OR_LOCKED_VALUE")
-    backlog_rows = [
-        row for row in rows
-        if row.direct_proof_backlog in {"yes", "maybe"} and row.coverage_class != "DIRECT_MAPLE_OR_LOCKED_VALUE"
-    ]
-
     write_csv(outdir / "source_equation_inventory.csv", rows)
-    write_csv(outdir / "direct_proof_backlog.csv", backlog_rows)
 
     summary = {
         "overall_status": "PASS" if unmapped == 0 else "FAIL",
@@ -447,7 +439,6 @@ def write_reports(rows: list[EquationBlock], outdir: Path, repo: Path, tex_root:
         "direct_maple_or_locked_value_fraction": direct / len(rows) if rows else 0,
         "status_counts": dict(status_counts),
         "coverage_class_counts": dict(class_counts),
-        "direct_proof_backlog_count": len(backlog_rows),
     }
     (outdir / "source_equation_audit_summary.json").write_text(
         json.dumps(summary, indent=2), encoding="utf-8"
@@ -463,7 +454,6 @@ def write_reports(rows: list[EquationBlock], outdir: Path, repo: Path, tex_root:
         f"- Total display blocks: {len(rows)}",
         f"- Unmapped display blocks: {unmapped}",
         f"- Direct Maple or locked-value covered blocks: {direct}",
-        f"- Direct proof backlog rows: {len(backlog_rows)}",
         "",
         "## Coverage Classes",
         "",
@@ -486,7 +476,7 @@ def write_reports(rows: list[EquationBlock], outdir: Path, repo: Path, tex_root:
     audit_lines = [
         "# PR-III Full Equation Audit",
         "",
-        "Generated by `scripts/pr3_equation_audit.py`.",
+        "Generated by `test_harness/projection_relativity_III/symbolic/code/pr3_equation_audit.py`.",
         "",
         "## Latest Run Summary",
         "",
@@ -496,7 +486,6 @@ def write_reports(rows: list[EquationBlock], outdir: Path, repo: Path, tex_root:
         f"Unmapped display blocks: {unmapped}",
         f"Direct Maple or locked-value coverage: {direct}",
         f"Repo-generation/source/data/context coverage: {len(rows) - direct - unmapped}",
-        f"Direct proof backlog rows: {len(backlog_rows)}",
         "```",
         "",
         "## Interpretation",
@@ -532,19 +521,18 @@ def write_reports(rows: list[EquationBlock], outdir: Path, repo: Path, tex_root:
         f"Unmapped display blocks: {unmapped}",
         f"Direct Maple or locked-value coverage: {direct}",
         f"Direct coverage fraction: {summary['direct_maple_or_locked_value_fraction']:.3f}",
-        f"Direct proof backlog rows: {len(backlog_rows)}",
         "```",
         "",
-        "## Recommended Follow-Up",
+        "## Interpretation",
         "",
-        "Convert high-value backlog rows into explicit Maple assertions when the manuscript source is frozen.",
+        "Every display block is mapped to a direct check or an explicit repository-generation, data, or contextual coverage class.",
     ]
     (outdir / "coverage_quality_report.md").write_text("\n".join(quality_lines) + "\n", encoding="utf-8")
 
 
 def parse_args(argv: Iterable[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--repo", type=Path, required=True, help="Path to Projection-Relativity_III_Sandbox checkout")
+    parser.add_argument("--repo", type=Path, required=True, help="Path to the Projection_Relativity public checkout")
     parser.add_argument("--tex-root", type=Path, default=None, help="Path to PR-III TeX fragments; defaults to repo/manscript when present, otherwise repo root")
     parser.add_argument("--output-dir", type=Path, default=Path("reports"), help="Output report directory")
     return parser.parse_args(argv)

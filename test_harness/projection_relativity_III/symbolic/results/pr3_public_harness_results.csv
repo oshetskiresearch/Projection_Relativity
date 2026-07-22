@@ -1,11 +1,14 @@
 id,section,status,actual,expected,tolerance,note
-file:scripts/run_all_pr3_audits.py,required-files,PASS,True,True,exists,Required repo file scripts/run_all_pr3_audits.py
-file:scripts/pr3_artifact_drift_audit.py,required-files,PASS,True,True,exists,Required repo file scripts/pr3_artifact_drift_audit.py
-file:scripts/pr3_release_byte_exact_audit.py,required-files,PASS,True,True,exists,Required repo file scripts/pr3_release_byte_exact_audit.py
-file:MANIFEST_PR3_LOCKED_OUTPUTS.json,required-files,PASS,True,True,exists,Required repo file MANIFEST_PR3_LOCKED_OUTPUTS.json
-file:tables/pr3_cross_sector_diagnostic_table.csv,required-files,PASS,True,True,exists,Required repo file tables/pr3_cross_sector_diagnostic_table.csv
-file:data/global_final_priii_consistency_statement.json,required-files,PASS,True,True,exists,Required repo file data/global_final_priii_consistency_statement.json
-file:data/global_anomaly_registry_audit.json,required-files,PASS,True,True,exists,Required repo file data/global_anomaly_registry_audit.json
+file:test_harness/projection_relativity_III/numerical/code/run_all_pr3_audits.py,required-files,PASS,True,True,exists,Required repo file test_harness/projection_relativity_III/numerical/code/run_all_pr3_audits.py
+file:test_harness/projection_relativity_III/numerical/code/pr3_artifact_drift_audit.py,required-files,PASS,True,True,exists,Required repo file test_harness/projection_relativity_III/numerical/code/pr3_artifact_drift_audit.py
+file:test_harness/projection_relativity_III/numerical/code/pr3_release_byte_exact_audit.py,required-files,PASS,True,True,exists,Required repo file test_harness/projection_relativity_III/numerical/code/pr3_release_byte_exact_audit.py
+file:test_harness/projection_relativity_III/numerical/MANIFEST_PR3_LOCKED_OUTPUTS.json,required-files,PASS,True,True,exists,Required repo file test_harness/projection_relativity_III/numerical/MANIFEST_PR3_LOCKED_OUTPUTS.json
+file:test_harness/projection_relativity_III/numerical/results/pr3_cross_sector_diagnostic_table.csv,required-files,PASS,True,True,exists,Required repo file test_harness/projection_relativity_III/numerical/results/pr3_cross_sector_diagnostic_table.csv
+file:data/projection_relativity_III/data/global_final_priii_consistency_statement.json,required-files,PASS,True,True,exists,Required repo file data/projection_relativity_III/data/global_final_priii_consistency_statement.json
+file:data/projection_relativity_III/data/global_anomaly_registry_audit.json,required-files,PASS,True,True,exists,Required repo file data/projection_relativity_III/data/global_anomaly_registry_audit.json
+repo_default_audit,repo-audit,PASS,PR-III reproducibility audit: PASS,returncode 0 with PASS,n/a,Repository audit command passed
+artifact_drift_audit,repo-audit,PASS,PR-III artifact drift audit: PASS,returncode 0 with PASS,n/a,Repository audit command passed
+release_byte_exact_audit,repo-audit,PASS,PR-III canonical release byte-exact audit: PASS,returncode 0 with PASS,n/a,Repository audit command passed
 alpha_inverse_PR,locked-output,PASS,137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901,137.035999207513414958891346101616594635677637490015536978556268584855576779314655494829901,1e-70,Locked PR-III output matches paper claim; abs error 0E-87
 M_W_PR_GeV,locked-output,PASS,80.373942851862121269660365960912048165641419593354239705150762943078449202475090,80.373942851862121269660365960912048165641419593354239705150762943078449202475090,1e-60,Locked PR-III output matches paper claim; abs error 0E-78
 M_Z_PR_GeV,locked-output,PASS,91.187676431043922257304294605837072137923832857909555944715358374802790284187517,91.187676431043922257304294605837072137923832857909555944715358374802790284187517,1e-60,Locked PR-III output matches paper claim; abs error 0E-78
@@ -56,23 +59,7 @@ c3:response_homogeneity,canonical-C3,PASS,125/144,125/144,exact,Quadratic respon
 c3:matter_ZZ_trace,canonical-C3,PASS,916/675,916/675,exact,One-generation ZZ charge trace
 c3:matter_AZ_trace,canonical-C3,PASS,34/45,34/45,exact,One-generation AZ charge trace
 c3:normalized_incidence,canonical-C3,PASS,"((Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)))","((Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 1)))",exact,Normalized three-sheet incidence map
-paper-text:Projection Relativity III,paper-text,PASS,present,Projection Relativity III,substring,Near-final paper contains required PR-III claim string
-paper-text:Zero-Parameter Radiative and Cross-Sector Closure,paper-text,PASS,present,Zero-Parameter Radiative and Cross-Sector Closure,substring,Near-final paper contains required PR-III claim string
-paper-text:canonical-closure uniqueness,paper-text,PASS,present,canonical-closure uniqueness,substring,Near-final paper contains required PR-III claim string
-paper-text:charged-adjoint trace,paper-text,PASS,present,charged-adjoint trace,substring,Near-final paper contains required PR-III claim string
-paper-text:positive defect,paper-text,PASS,present,positive defect,substring,Near-final paper contains required PR-III claim string
-paper-text:closed admissibility domain,paper-text,PASS,present,closed admissibility domain,substring,Near-final paper contains required PR-III claim string
-paper-text:equation quotient is a singleton,paper-text,PASS,present,equation quotient is a singleton,substring,Near-final paper contains required PR-III claim string
-paper-text:137.035999207513,paper-text,PASS,present,137.035999207513,substring,Near-final paper contains required PR-III claim string
-paper-text:80.3739428518621,paper-text,PASS,present,80.3739428518621,substring,Near-final paper contains required PR-III claim string
-paper-text:91.1876764310439,paper-text,PASS,present,91.1876764310439,substring,Near-final paper contains required PR-III claim string
-paper-text:+0.1376,paper-text,PASS,present,+0.1376,substring,Near-final paper contains required PR-III claim string
-paper-text:+0.3566,paper-text,PASS,present,+0.3566,substring,Near-final paper contains required PR-III claim string
-paper-text:+0.0364,paper-text,PASS,present,+0.0364,substring,Near-final paper contains required PR-III claim string
-paper-text:+0.6003,paper-text,PASS,present,+0.6003,substring,Near-final paper contains required PR-III claim string
-paper-text:0.117861507469150,paper-text,PASS,present,0.117861507469150,substring,Near-final paper contains required PR-III claim string
-paper-text:normal-ordering,paper-text,PASS,present,normal-ordering,substring,Near-final paper contains required PR-III claim string
-paper-text:no-fit,paper-text,PASS,present,no-fit,substring,Near-final paper contains required PR-III claim string
+paper-text:skipped,paper-text,PASS,not provided,optional,n/a,Paper text check skipped by request
 selftest:reject_wrong_alpha,negative-controls,PASS,False,False,must reject,Reject stale or mistyped alpha inverse
 selftest:reject_wrong_MW,negative-controls,PASS,False,False,must reject,Reject wrong W mass
 selftest:reject_all_orders_overclaim,negative-controls,PASS,False,False,must reject,Reject exact all-orders theorem overclaim

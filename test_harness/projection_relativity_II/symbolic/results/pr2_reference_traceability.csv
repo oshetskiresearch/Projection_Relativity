@@ -1,0 +1,156 @@
+id,section,status,note
+G001,sec:pr2_nonabelian_generator_algebra,PASS,"[T1,T2]=iT3"
+G002,sec:pr2_nonabelian_generator_algebra,PASS,"[T2,T3]=iT1"
+G003,sec:pr2_nonabelian_generator_algebra,PASS,"[T3,T1]=iT2"
+G004,sec:pr2_nonabelian_generator_algebra,PASS,Trace normalization for T1
+G005,sec:pr2_nonabelian_generator_algebra,PASS,Trace normalization for T2
+G006,sec:pr2_nonabelian_generator_algebra,PASS,Trace normalization for T3
+G007,sec:pr2_nonabelian_generator_algebra,PASS,Off-diagonal trace normalization
+G008,sec:pr2_nonabelian_generator_algebra,PASS,Fundamental Casimir is 3/4 I
+G009,sec:pr2_compact_weak_isospin_operator,PASS,j=0 spectral value numerator
+G010,sec:pr2_compact_weak_isospin_operator,PASS,j=1/2 spectral value numerator
+G011,sec:pr2_compact_weak_isospin_operator,PASS,j=1 adjoint Casimir
+G012,sec:pr2_charged_current_topological_ladder,PASS,T+ raises down to up
+G013,sec:pr2_charged_current_topological_ladder,PASS,T- lowers up to down
+G014,sec:pr2_charged_current_topological_ladder,PASS,T+ annihilates up
+G015,sec:pr2_charged_current_topological_ladder,PASS,T- annihilates down
+G016,sec:pr2_compact_electroweak_order_direction,PASS,Q annihilates the locking direction
+G017,sec:pr2_charged_current_ladder,PASS,"[Q,T+]=T+"
+G018,sec:pr2_charged_current_ladder,PASS,"[Q,T-]=-T-"
+EW001,sec:pr2_electroweak_connection_mass_ledger,PASS,Neutral mass matrix has zero determinant
+EW002,sec:pr2_electroweak_connection_mass_ledger,PASS,Nonzero neutral eigenvalue is MZ^2
+EW003,sec:pr2_tree_level_electroweak_consistency,PASS,rho_EW tree-level identity
+EW004,sec:pr2_charged_weak_projection_fermi_limit,PASS,Charged Fermi contact coefficient
+EW005,sec:pr2_neutral_current_projection,PASS,Neutral-current contact coefficient
+EW006,sec:pr2_compact_order_field_counting,PASS,Broken compact directions
+EW007,sec:pr2_compact_order_field_counting,PASS,One scalar order-mode remains
+EW008,sec:pr2_order_mode_gauge_boson_couplings,PASS,hWW coupling ratio
+EW009,sec:pr2_order_mode_gauge_boson_couplings,PASS,hZZ coupling ratio
+B001,sec:pr2_boundary_ledger_electroweak_lift,PASS,Radial stiffness gap
+B002,sec:pr2_boundary_ledger_electroweak_lift,PASS,Compact boundary stiffness
+B003,sec:pr2_boundary_ledger_electroweak_lift,PASS,Compact boundary cofactor
+B004,sec:pr2_boundary_ledger_electroweak_lift,PASS,PR boundary alpha inverse
+B005,sec:pr2_boundary_ledger_electroweak_lift,PASS,Generation suppression ratio
+B006,sec:pr2_weak_mixing_boundary_closure,PASS,Normalized weak boundary deficit
+B007,sec:pr2_weak_mixing_boundary_closure,PASS,Weak mixing sin^2
+B008,sec:pr2_weak_mixing_boundary_closure,PASS,Weak mixing cos^2
+B009,sec:pr2_weak_mixing_boundary_closure,PASS,g'/g = tan theta_W
+B010,sec:pr2_dimensionless_weak_order_factor,PASS,Dimensionless weak-order factor
+B011,sec:pr2_dimensionless_weak_order_factor,PASS,sqrt Xi
+B012,sec:pr2_terminal_weak_displacement_overlap,PASS,Terminal weak overlap
+B013,sec:pr2_compact_spectral_hierarchy_action,PASS,Base hierarchy action
+B014,sec:pr2_compact_spectral_hierarchy_action,PASS,Second-order action correction
+B015,sec:pr2_compact_spectral_hierarchy_action,PASS,Total hierarchy action
+B016,sec:pr2_compact_spectral_hierarchy_action,PASS,Weak displacement anchor
+B017,sec:pr2_generated_weak_scale_fermi_constant,PASS,Generated electroweak vacuum scale
+B018,sec:pr2_generated_weak_scale_fermi_constant,PASS,Generated Fermi constant
+B019,sec:pr2_generated_weak_scale_fermi_constant,PASS,Weak-scale diagnostic residual
+B020,sec:pr2_generated_weak_scale_fermi_constant,PASS,Fermi diagnostic residual
+B021,sec:pr2_mass_geometry_diagnostic_coupling,PASS,Diagnostic W mass using alpha(MZ)^-1
+B022,sec:pr2_mass_geometry_diagnostic_coupling,PASS,Diagnostic Z mass using alpha(MZ)^-1
+A001,sec:pr2_residual_em_charges_fermion_ledger,PASS,u_L charge
+A002,sec:pr2_residual_em_charges_fermion_ledger,PASS,d_L charge
+A003,sec:pr2_residual_em_charges_fermion_ledger,PASS,nu_L charge
+A004,sec:pr2_residual_em_charges_fermion_ledger,PASS,e_L charge
+A005,sec:pr2_pure_color_anomaly,PASS,Pure color anomaly
+A006,sec:pr2_mixed_color_hypercharge_anomaly,PASS,Mixed color-hypercharge anomaly
+A007,sec:pr2_mixed_weak_hypercharge_anomaly,PASS,Mixed weak-hypercharge anomaly
+A008,sec:pr2_mixed_gravitational_hypercharge_anomaly,PASS,Mixed gravitational-hypercharge anomaly
+A009,sec:pr2_cubic_hypercharge_anomaly,PASS,Cubic hypercharge anomaly
+A010,sec:pr2_witten_global_anomaly,PASS,One-generation Witten parity
+A011,sec:pr2_three_sheet_representation_ledger,PASS,Three-generation Witten parity
+F001,sec:pr2_generation_origin_flavor_sheets,PASS,Generation count from compact quotient
+F002,sec:pr2_generation_sheet_overlap_hierarchy_main,PASS,First sheet eta
+F003,sec:pr2_generation_sheet_overlap_hierarchy_main,PASS,Second sheet eta
+F004,sec:pr2_generation_sheet_overlap_hierarchy_main,PASS,Third sheet eta
+F005,sec:pr2_generation_sheet_overlap_hierarchy_main,PASS,Sheet hierarchy ordering
+F006,sec:pr2_generation_sheet_overlap_hierarchy_main,PASS,Successive hierarchy ratio
+F007,sec:pr2_generation_sheet_overlap_hierarchy_main,PASS,First terminal matter overlap
+F008,sec:pr2_generation_sheet_overlap_hierarchy_main,PASS,Second terminal matter overlap
+F009,sec:pr2_generation_sheet_overlap_hierarchy_main,PASS,Third terminal matter overlap
+F010,sec:pr2_sector_specific_compact_charge_norms,PASS,Charged-lepton sector factor
+F011,sec:pr2_sector_specific_compact_charge_norms,PASS,Up-quark sector factor
+F012,sec:pr2_sector_specific_compact_charge_norms,PASS,Down-quark sector factor
+F013,sec:pr2_sector_specific_compact_charge_norms,PASS,Dirac-neutrino sector factor
+F014,sec:pr2_sector_specific_overlap_spectra,PASS,D_l first entry
+F015,sec:pr2_sector_specific_overlap_spectra,PASS,D_l second entry
+F016,sec:pr2_sector_specific_overlap_spectra,PASS,D_l third entry
+F017,sec:pr2_sector_specific_overlap_spectra,PASS,Up/down sheetwise sector ratio
+F018,sec:pr2_hypercharge_neutral_order_terms,PASS,Charged-lepton hypercharge neutrality
+F019,sec:pr2_hypercharge_neutral_order_terms,PASS,Down-quark hypercharge neutrality
+F020,sec:pr2_hypercharge_neutral_order_terms,PASS,Up-quark hypercharge neutrality
+F021,sec:pr2_hypercharge_neutral_order_terms,PASS,Dirac-neutrino hypercharge neutrality
+L001,sec:pr2_three_sheet_square_root_flavor_geometry,PASS,Koide sheet phase
+L002,sec:pr2_koide_identity_three_sheet_geometry,PASS,Three-sheet cosine sum
+L003,sec:pr2_koide_identity_three_sheet_geometry,PASS,Three-sheet cosine-square sum
+L004,sec:pr2_charged_lepton_compact_scale,PASS,Charged-lepton C1
+L005,sec:pr2_charged_lepton_compact_scale,PASS,Charged-lepton C2
+L006,sec:pr2_charged_lepton_compact_scale,PASS,Charged-lepton compact scale in MeV
+L007,sec:pr2_generated_charged_lepton_masses,PASS,Electron mass candidate
+L008,sec:pr2_generated_charged_lepton_masses,PASS,Muon mass candidate
+L009,sec:pr2_generated_charged_lepton_masses,PASS,Tau mass candidate
+L010,sec:pr2_koide_identity_three_sheet_geometry,PASS,Koide ratio
+L011,sec:pr2_generated_charged_lepton_masses,PASS,Electron ppm residual
+L012,sec:pr2_generated_charged_lepton_masses,PASS,Muon ppm residual
+L013,sec:pr2_generated_charged_lepton_masses,PASS,Tau ppm residual
+Q001,sec:pr2_compact_boundary_strong_coupling_candidate,PASS,Compact strong-coupling candidate
+Q002,sec:pr2_pr_derived_heavy_quark_thresholds,PASS,Top threshold candidate
+Q003,sec:pr2_pr_derived_heavy_quark_thresholds,PASS,Bottom threshold candidate
+Q004,sec:pr2_pr_derived_heavy_quark_thresholds,PASS,Charm threshold candidate
+Q005,sec:pr2_pr_derived_heavy_quark_thresholds,PASS,Heavy-threshold ordering
+Q006,sec:pr2_qcd_running_ledger_main,PASS,beta0 for nf=3
+Q007,sec:pr2_qcd_running_ledger_main,PASS,beta0 for nf=4
+Q008,sec:pr2_qcd_running_ledger_main,PASS,beta0 for nf=5
+Q009,sec:pr2_qcd_running_ledger_main,PASS,beta0 for nf=6
+Q010,sec:pr2_qcd_running_ledger_main,PASS,Mass-running exponent for nf=5
+Q011,sec:pr2_qcd_threshold_ledger,PASS,Lambda_6 from three-loop matching
+Q012,sec:pr2_qcd_threshold_ledger,PASS,Lambda_5 from alpha_3 at MZ
+Q013,sec:pr2_qcd_threshold_ledger,PASS,Lambda_4 from bottom matching
+Q014,sec:pr2_qcd_threshold_ledger,PASS,Lambda_3 from charm matching
+Q015,sec:pr2_qcd_threshold_ledger,PASS,Top-threshold coupling continuity
+Q016,sec:pr2_qcd_threshold_ledger,PASS,Bottom-threshold coupling continuity
+Q017,sec:pr2_qcd_threshold_ledger,PASS,Charm-threshold coupling continuity
+Q018,sec:pr2_qcd_threshold_ledger,PASS,b running diagnostic at MZ
+Q019,sec:pr2_qcd_threshold_ledger,PASS,c running diagnostic at bottom threshold
+Q020,sec:pr2_qcd_threshold_ledger,PASS,c running diagnostic at MZ
+Q021,sec:pr2_light_sector_confinement_average_main,PASS,Compact confinement average
+Q022,sec:pr2_light_sector_confinement_average_main,PASS,Confinement endpoint reconstructs c_bc
+Q023,sec:pr2_light_quark_hierarchy_candidate,PASS,Strange-quark low-energy candidate
+Q024,sec:pr2_light_quark_hierarchy_candidate,PASS,Down-quark low-energy candidate
+Q025,sec:pr2_light_quark_hierarchy_candidate,PASS,Up-quark low-energy candidate
+Q026,sec:pr2_six_quark_hierarchy_candidate,PASS,Six-quark hierarchy ordering
+M001,sec:pr2_ckm_compact_mixing_candidate,PASS,Compact Cabibbo sheet angle
+M002,sec:pr2_ckm_compact_mixing_candidate,PASS,Compact CKM hierarchy coefficient
+M003,sec:pr2_ckm_compact_mixing_candidate,PASS,Compact unitarity-apex radius
+M004,sec:pr2_ckm_compact_mixing_candidate,PASS,CKM phase in radians
+M005,sec:pr2_ckm_compact_mixing_candidate,PASS,CKM s23
+M006,sec:pr2_ckm_compact_mixing_candidate,PASS,CKM s13
+M007,sec:pr2_ckm_compact_mixing_candidate,PASS,CKM absolute matrix
+M008,sec:pr2_ckm_compact_mixing_candidate,PASS,CKM unitarity
+M009,sec:pr2_ckm_compact_mixing_candidate,PASS,CKM Jarlskog invariant
+M010,sec:pr2_pmns_compact_lepton_mixing_candidate,PASS,PMNS solar sin^2
+M011,sec:pr2_pmns_compact_lepton_mixing_candidate,PASS,PMNS solar angle
+M012,sec:pr2_pmns_compact_lepton_mixing_candidate,PASS,PMNS atmospheric sin^2
+M013,sec:pr2_pmns_compact_lepton_mixing_candidate,PASS,PMNS atmospheric angle
+M014,sec:pr2_pmns_compact_lepton_mixing_candidate,PASS,PMNS reactor sin^2
+M015,sec:pr2_pmns_compact_lepton_mixing_candidate,PASS,PMNS reactor angle
+M016,sec:pr2_pmns_compact_lepton_mixing_candidate,PASS,PMNS CP phase
+M017,sec:pr2_pmns_compact_lepton_mixing_candidate,PASS,PMNS absolute matrix
+M018,sec:pr2_pmns_compact_lepton_mixing_candidate,PASS,PMNS unitarity
+M019,sec:pr2_pmns_compact_lepton_mixing_candidate,PASS,PMNS Jarlskog invariant
+N001,sec:pr2_neutrino_normal_ordering_singlet_channel,PASS,Compact neutrino loss factor
+N002,sec:pr2_neutrino_normal_ordering_singlet_channel,PASS,Solar-to-atmospheric splitting ratio
+N003,sec:pr2_generated_neutrino_spectrum,PASS,Massless residual compact-singlet sheet
+N004,sec:pr2_generated_neutrino_spectrum,PASS,Second neutrino mass
+N005,sec:pr2_generated_neutrino_spectrum,PASS,Third neutrino mass
+N006,sec:pr2_generated_neutrino_spectrum,PASS,Normal-ordering hierarchy
+N007,sec:pr2_generated_neutrino_spectrum,PASS,Solar mass-squared splitting
+N008,sec:pr2_generated_neutrino_spectrum,PASS,Atmospheric mass-squared splitting
+N009,sec:pr2_generated_neutrino_spectrum,PASS,Splitting ratio
+N010,sec:pr2_generated_neutrino_spectrum,PASS,Cosmological neutrino mass sum
+N011,sec:pr2_generated_neutrino_spectrum,PASS,Beta-decay effective mass
+N012,sec:pr2_majorana_dominant_compact_singlet_projection,PASS,Equivalent Dirac Yukawa diagnostic
+N013,sec:pr2_majorana_phase_boundary,PASS,Majorana interference phase
+N014,sec:pr2_majorana_phase_boundary,PASS,Locked alpha31 phase
+N015,sec:pr2_majorana_phase_boundary,PASS,Neutrinoless double-beta effective mass
+N016,sec:pr2_flavor_basis_majorana_mass_matrix,PASS,Flavor-basis Majorana matrix is symmetric

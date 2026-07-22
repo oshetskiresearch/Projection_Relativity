@@ -1,9 +1,9 @@
 {
   "project": "Projection Relativity III",
   "package": "public numerical reproducibility tester",
-  "source_repository": "oshetskiresearch/Projection-Relativity_III_Sandbox",
-  "source_snapshot_commit": "fbb61f3771db2674c2b551a2d767c923cd5f0a1f",
-  "verified_unchanged_through_commit": "14979ec5d6ecdc4f0fb8f8ed5e6345bec1cbf0fa",
+  "source_repository": "oshetskiresearch/Projection_Relativity",
+  "release_branch": "main",
+  "package_path": "test_harness/projection_relativity_III/numerical",
   "scope": {
     "included": [
       "PR-III Python generators in data/projection_relativity_III/code declared by schemas/pr3_full_regeneration_pairs.json",
@@ -21,7 +21,7 @@
   "expected_counts": {
     "generator_python_files": 41,
     "data_json_files": 44,
-    "schema_json_files": 6,
+    "schema_json_files": 5,
     "audit_python_files": 6,
     "regeneration_pairs": 41
   },

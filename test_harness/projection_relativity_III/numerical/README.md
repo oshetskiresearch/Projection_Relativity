@@ -17,7 +17,7 @@ The public repository separates construction artifacts from validation code:
   contains 41 PR-III Python generators covering Steps 01 through 09F.
 - [`../../../data/projection_relativity_III/data/`](../../../data/projection_relativity_III/data/)
   contains 44 PR-III JSON data and input-ledger files.
-- [`schemas/`](schemas/) contains six PR-III schema and policy files.
+- [`schemas/`](schemas/) contains five PR-III schema and policy files.
 - [`code/`](code/) contains six PR-III audit utilities.
 - [`results/`](results/) contains the published reports and supporting tables.
 
@@ -71,7 +71,7 @@ python run_pr3_numerical_validation.py
 To write reports to another directory:
 
 ```powershell
-python run_pr3_numerical_validation.py --output-dir C:\path\to\results
+python run_pr3_numerical_validation.py --output-dir results-copy
 ```
 
 ## Expected Result
@@ -113,10 +113,12 @@ results/
 ```
 
 The checked source boundary is recorded in
-[`PR3_NUMERICAL_SCOPE.json`](PR3_NUMERICAL_SCOPE.json). The PR-III construction
-payload is traceable to sandbox commit
+[`PR3_NUMERICAL_SCOPE.json`](PR3_NUMERICAL_SCOPE.json). The authoritative
+release source is this public repository. Its PR-III payload is historically
+traceable to sandbox commit
 `fbb61f3771db2674c2b551a2d767c923cd5f0a1f` and was verified unchanged through
-`14979ec5d6ecdc4f0fb8f8ed5e6345bec1cbf0fa` for the included paths.
+`14979ec5d6ecdc4f0fb8f8ed5e6345bec1cbf0fa` for the included paths; the sandbox
+is not required to run this tester.
 
 ## Claim Boundary
 

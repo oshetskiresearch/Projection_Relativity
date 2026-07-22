@@ -19,8 +19,9 @@ The runner intentionally separates:
 - artifact drift / canonical JSON equality
 - byte-exact release equality
 
-Byte-exact regeneration is not the default claim. Use --byte-exact to make
-canonical JSON mismatches fatal.
+The public Tier C claim is enforced by `pr3_release_byte_exact_audit.py` under
+the release-byte policy. The optional `--byte-exact` flag here is a stricter
+raw generator-JSON diagnostic and is not the Tier C release contract.
 """
 
 from __future__ import annotations
@@ -41,7 +42,8 @@ ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY_ROOT = ROOT.parents[2]
 PAYLOAD_ROOT = REPOSITORY_ROOT / "data" / "projection_relativity_III"
 SCHEMA_TARGETS = ROOT / "schemas" / "pr3_regeneration_targets.json"
-FULL_TARGETS = ROOT / "schemas" / "pr3_generator_data_pairs_full.json"
+FULL_TARGETS = ROOT / "schemas" / "pr3_full_regeneration_pairs.json"
+EXPECTED_MANIFEST_STATUS = "PRIII_REPRODUCIBILITY_PACKAGE_RELEASE_LOCKED"
 
 REQUIRED_STATUS = {
     "data/alpha_residual_closure_current_precision.json": "STEP_05H_RESIDUAL_BOUNDING_LOCKED",
@@ -61,7 +63,7 @@ REQUIRED_FILES = [
     "RUN_ORDER.md",
     "MANIFEST_PR3_LOCKED_OUTPUTS.json",
     "schemas/pr3_regeneration_targets.json",
-    "schemas/pr3_generator_data_pairs_full.json",
+    "schemas/pr3_full_regeneration_pairs.json",
     "schemas/pr3_artifact_drift_policy.json",
     "code/pr3_canonical_json.py",
     "results/PR3_FINAL_AUDIT_SUMMARY.md",
@@ -145,6 +147,12 @@ def compare_key_sets(label: str, expected: set[str], actual: set[str], failures:
         failures.append(f"{label}: missing keys {missing}")
     if extra:
         failures.append(f"{label}: extra keys {extra}")
+
+
+def require_keys(label: str, required: set[str], actual: set[str], failures: list[str]) -> None:
+    missing = sorted(required - actual)
+    if missing:
+        failures.append(f"{label}: missing keys {missing}")
 
 
 def discover_builder(module: ModuleType, preferred: str | None = None):
@@ -263,6 +271,47 @@ def compare_numeric_tree(
 def validate_manifest() -> list[str]:
     failures: list[str] = []
 
+    manifest_path = ROOT / "MANIFEST_PR3_LOCKED_OUTPUTS.json"
+    if not manifest_path.exists():
+        return ["missing: MANIFEST_PR3_LOCKED_OUTPUTS.json"]
+
+    manifest = load_json(manifest_path)
+    if manifest.get("status") != EXPECTED_MANIFEST_STATUS:
+        failures.append(
+            f"manifest status mismatch: expected {EXPECTED_MANIFEST_STATUS}, got {manifest.get('status')}"
+        )
+    if manifest.get("path_base") != "repository_root":
+        failures.append("manifest path_base must be repository_root")
+
+    contract = manifest.get("release_contract", {})
+    expected_contract = {
+        "full_generator_data_pair_count": 41,
+        "full_schema_numeric_regeneration_claimed": True,
+        "canonical_release_byte_regeneration_claimed": True,
+        "canonical_release_byte_match_count": 41,
+        "raw_checked_in_file_order_byte_identity_claimed": False,
+        "raw_generator_stdout_byte_identity_claimed": False,
+    }
+    for key, expected in expected_contract.items():
+        if contract.get(key) != expected:
+            failures.append(
+                f"manifest release_contract.{key}: expected {expected!r}, got {contract.get(key)!r}"
+            )
+
+    pair_manifest = load_json(ROOT / "schemas" / "pr3_full_regeneration_pairs.json")
+    pairs = pair_manifest.get("pairs", [])
+    if pair_manifest.get("status") != "PRIII_FULL_REGENERATION_PAIR_MANIFEST_LOCKED":
+        failures.append("full pair manifest is not release locked")
+    if pair_manifest.get("pair_count") != 41 or len(pairs) != 41:
+        failures.append(
+            f"full pair manifest count mismatch: declared={pair_manifest.get('pair_count')} actual={len(pairs)}"
+        )
+
+    for field in ("final_reports", "reproducibility_files"):
+        for rel_path in manifest.get(field, []):
+            if not (REPOSITORY_ROOT / rel_path).is_file():
+                failures.append(f"manifest {field} path missing: {rel_path}")
+
     for rel_path, expected_status in REQUIRED_STATUS.items():
         path = PAYLOAD_ROOT / rel_path
         if not path.exists():
@@ -288,12 +337,13 @@ def validate_regeneration_targets(targets_path: Path, *, byte_exact: bool, drift
         return [f"missing schema targets: {targets_path.relative_to(ROOT)}"]
 
     schema = load_json(targets_path)
-    for target in schema.get("targets", []):
+    targets = schema.get("targets") or schema.get("pairs", [])
+    for target in targets:
         name = target["name"]
         data_path = PAYLOAD_ROOT / target["data_path"]
         code_path = PAYLOAD_ROOT / target["code_path"]
         builder_name = target.get("builder_function", "AUTO")
-        expected_status = target["status"]
+        expected_status = target.get("status")
         required_top = set(target.get("required_top_level_keys", []))
         minimum_top = set(target.get("minimum_top_level_keys", ["project", "status"]))
         gate_field = target.get("gate_field")
@@ -307,6 +357,8 @@ def validate_regeneration_targets(targets_path: Path, *, byte_exact: bool, drift
             continue
 
         locked = load_json(data_path)
+        if expected_status is None:
+            expected_status = locked.get("status")
         try:
             generated, resolved_builder = regenerate_payload(code_path, builder_name)
         except Exception as error:
@@ -322,8 +374,8 @@ def validate_regeneration_targets(targets_path: Path, *, byte_exact: bool, drift
             compare_key_sets(f"{name} generated top-level schema", required_top, set(generated.keys()), failures)
             compare_key_sets(f"{name} locked top-level schema", required_top, set(locked.keys()), failures)
         else:
-            compare_key_sets(f"{name} generated minimum schema", minimum_top, set(generated.keys()), failures)
-            compare_key_sets(f"{name} locked minimum schema", minimum_top, set(locked.keys()), failures)
+            require_keys(f"{name} generated minimum schema", minimum_top, set(generated.keys()), failures)
+            require_keys(f"{name} locked minimum schema", minimum_top, set(locked.keys()), failures)
 
         if gate_field:
             locked_gates = locked.get(gate_field, {})
@@ -373,12 +425,12 @@ def main() -> None:
     parser.add_argument(
         "--full-targets",
         action="store_true",
-        help="Use schemas/pr3_generator_data_pairs_full.json instead of the curated target list.",
+        help="Use the canonical 41-pair schemas/pr3_full_regeneration_pairs.json manifest instead of the curated target list.",
     )
     parser.add_argument(
         "--byte-exact",
         action="store_true",
-        help="Make canonical JSON artifact differences fatal. This is not the default current PR-III claim.",
+        help="Make raw generated canonical-JSON differences fatal as a stricter diagnostic; this is not the normalized Tier C release-byte audit.",
     )
     parser.add_argument(
         "--drift-report",
@@ -406,10 +458,10 @@ def main() -> None:
     else:
         print("Manifest/status layer and targeted regeneration schema checks passed.")
     if args.byte_exact:
-        print("Byte-exact canonical JSON equality was required for targeted artifacts.")
+        print("Strict raw generated canonical-JSON equality was required for targeted artifacts.")
     else:
-        print("Byte-exact full regeneration is not claimed unless --byte-exact is used and passes.")
-    print("Locked through Step 09F; ready for manuscript consolidation after reproducibility hardening.")
+        print("Tier C canonical release-byte identity is enforced by code/pr3_release_byte_exact_audit.py.")
+    print("Locked through Step 09F; the public Tier A-C reproducibility contract is release closed.")
 
 
 if __name__ == "__main__":

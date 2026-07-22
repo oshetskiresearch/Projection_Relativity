@@ -224,4 +224,7 @@ raw checked-in file-order identity: NOT CLAIMED
 
 ## Manuscript status
 
-The next task is to convert the locked sandbox ledger into the PR-III manuscript. The manuscript must preserve the no-fit discipline, must not overclaim exact all-orders closure, and should state the reproducibility tier explicitly.
+The public PR-III manuscript is release synchronized with this ledger. The
+machine-readable checks preserve the no-fit discipline, distinguish canonical
+release-byte reproducibility from unclaimed raw file-order identity, and bound
+the stated result to the declared Tier A--C contract.

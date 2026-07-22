@@ -4,8 +4,8 @@ OVERALL_STATUS: PASS
 
 ## Counts
 
-- Total checks: 82
-- Passed: 82
+- Total checks: 69
+- Passed: 69
 - Failed: 0
 
 ## Sections
@@ -15,7 +15,8 @@ OVERALL_STATUS: PASS
 - global-status: PASS (7/7 passed)
 - locked-output: PASS (11/11 passed)
 - negative-controls: PASS (8/8 passed)
-- paper-text: PASS (17/17 passed)
+- paper-text: PASS (1/1 passed)
+- repo-audit: PASS (3/3 passed)
 - required-files: PASS (7/7 passed)
 - symbolic-status: PASS (7/7 passed)
 

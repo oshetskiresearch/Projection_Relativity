@@ -67,15 +67,15 @@ The manuscript audited by this package is:
 manuscript/projection_relativity_III/Oshetski_Projection_Relativity_III_Main.tex
 ```
 
-The locked comparison ledger is maintained in the
-[`Projection-Relativity_III_Sandbox`](https://github.com/oshetskiresearch/Projection-Relativity_III_Sandbox)
-repository.
+The locked comparison ledger is published in this repository under
+[`data/projection_relativity_III/`](../../../data/projection_relativity_III/),
+with its schema and audit contract under [`../numerical/`](../numerical/).
 
 ## Requirements
 
 - Maple with the command-line `cmaple` or `maple` executable.
 - Python 3.10 or newer for the equation and paper-value audits.
-- A local checkout of the PR-III sandbox ledger for locked-value comparison.
+- A local checkout of this public repository.
 
 ## Running the Checks
 
@@ -99,8 +99,16 @@ Run the manuscript value audit:
 
 ```powershell
 python symbolic\code\pr3_numeric_value_audit.py `
-  --repo C:\path\to\Projection-Relativity_III_Sandbox `
+  --repo ..\.. `
   --tex-root ..\..\manuscript\projection_relativity_III `
+  --output-dir results
+```
+
+Run the combined paper-conformance audit against the same public checkout:
+
+```powershell
+python symbolic\code\run_pr3_paper_conformance.py `
+  --repo ..\.. `
   --output-dir results
 ```
 
@@ -116,19 +124,19 @@ Maple symbolic checks: PASS, 67/67
 Maple negative controls: PASS, 12/12
 Equation audit: PASS, 253/253 display blocks mapped
 Direct Maple or locked-value coverage: 148 display blocks
-Manuscript value audit: PASS, 283/283 values matched
-Layout-only values classified separately: 115
+Manuscript value audit: PASS, 282/282 values matched
+Layout-only values classified separately: 116
 Unmatched manuscript values: 0
-Symbolic/public paper conformance: PASS, 82/82
+Symbolic/public paper conformance: PASS, 69/69
 ```
 
-The 2026-07-20 symbolic refresh adds direct checks for the revised canonical
+The 2026-07-21 release refresh includes direct checks for the revised canonical
 neutral `C3` section: the charged-adjoint trace, rank-one and photon-null
 gates, normalized quadratic-response identities, the exact `k=2` defect,
 the determinant Hessian, physical-`Z` reconstruction, matter charge traces,
 second-jet and EFT comparison families, and normalized incidence/equivalence
-conditions. The separate numerical validation harness was intentionally not
-rerun because the manuscript's locked numerical outputs did not change.
+conditions. The separate numerical validation harness was rerun against the
+public ledger and passed Tier A, Tier B `41/41`, and Tier C `41/41`.
 
 Detailed machine-readable and human-readable outputs are committed in
 [`results/`](results/). The run inputs and repository revisions are recorded

@@ -1,10 +1,20 @@
 # Projection Relativity II Symbolic Test Harness
 
-This directory contains the Maple symbolic tester and validation evidence for the Projection Relativity II manuscript.
+This directory contains the reproducible Maple tester and release evidence for the current Projection Relativity II manuscript.
 
-The harness is designed to fetch the current PR-II manuscript from GitHub, regenerate source-equation coverage, run the Maple symbolic checks, and produce reviewer-facing audit reports.
+## Release Result
 
-## Directory Contents
+The 2026-07-21 release audit passed all `617` Maple checks and all `8` negative-control self-tests. It inventoried all `442` top-level display blocks, with `0` unmapped blocks and `0` unresolved `MANUSCRIPT` rows. The independent Python reference runner also passed `155/155` numerical checks.
+
+The exact audited manuscript has SHA256:
+
+```text
+C14579DEC15B29C315B48FEF80DC47031FA345BAAE9DE8F358F63F55E74DE214
+```
+
+See `RUN_SUMMARY.md` for the complete release ledger.
+
+## User Map
 
 ```text
 symbolic/
@@ -13,147 +23,95 @@ symbolic/
 |-- code/
 |   `-- pr2_symbolic_tester_code_package.zip
 `-- results/
+    |-- coverage_quality_report.md
     |-- equation_audit.md
     |-- equation_derivations.md
+    |-- equation_map.md
+    |-- github_source_manifest.json
     |-- harness_validation.md
-    |-- pr2_symbolic_tester.zip
+    |-- pr2_maple_results.csv
+    |-- pr2_maple_summary.md
+    |-- pr2_maple_traceability.csv
+    |-- pr2_reference_results.csv
+    |-- pr2_reference_scope.md
+    |-- pr2_reference_summary.md
+    |-- pr2_reference_traceability.csv
     |-- proof_report.md
-    `-- qcd_threshold_recompute.md
+    |-- qcd_threshold_recompute.md
+    |-- source_equation_coverage.md
+    |-- source_equation_inventory.csv
+    `-- pr2_symbolic_tester.zip
 ```
-
-## What Is Included
 
 ### `code/`
 
-`code/pr2_symbolic_tester_code_package.zip` contains the runnable tester code:
+`pr2_symbolic_tester_code_package.zip` contains only the runnable release code and user documentation:
 
-- Maple harness entrypoints
-- Maple symbolic test modules
-- Python source-coverage generators
-- Windows PowerShell runners
-- GitHub source-fetch script
-- GitHub-friendly `.gitignore` and upload manifest
-
-The code package is intended for users who want to rerun the audit locally.
+- Maple harness entrypoints and test modules
+- manuscript source fetcher
+- source-equation inventory and Maple assertion generators
+- independent Python reference runner
+- portable Windows PowerShell runners
 
 ### `results/`
 
-`results/` contains the public-facing evidence from the latest symbolic tester run.
+The unpacked files provide direct access to the principal evidence. `pr2_symbolic_tester.zip` contains the complete result set, including the exact audited TeX source and its SHA256 manifest.
 
-Important files:
+The main reviewer-facing files are:
 
-- `proof_report.md` - detailed proof/check ledger for the passing Maple assertions
-- `equation_audit.md` - audit summary and coverage interpretation
-- `harness_validation.md` - negative-control/self-validation summary
-- `equation_derivations.md` - derivation routes for central equations
-- `qcd_threshold_recompute.md` - focused QCD threshold/running recomputation ledger
-- `pr2_symbolic_tester.zip` - complete result artifact package, including full CSV reports, coverage inventory, source manifest, and run summary
+- `proof_report.md`: complete passing Maple assertion ledger
+- `equation_map.md`: equation-to-test traceability map
+- `source_equation_coverage.md`: classification of every display block
+- `source_equation_inventory.csv`: machine-readable display inventory
+- `pr2_maple_results.csv`: all Maple outcomes
+- `pr2_maple_traceability.csv`: test-to-section traceability
+- `harness_validation.md`: negative-control results
+- `github_source_manifest.json`: exact source provenance
 
-`RUN_SUMMARY.md` at this directory root gives the compact headline result.
+Temporary files, internal construction notes, obsolete issue lists, and empty failure-report placeholders are not included in the release package.
 
-## Latest Verified Result
+## Reproduce the Audit
 
-The latest uploaded run was performed on 2026-06-23 using Maple 2026.
+Requirements:
 
-The tester fetched the current manuscript source from:
+- Windows PowerShell
+- Maple with `cmaple` or `maple`
+- Python 3
 
-```text
-https://raw.githubusercontent.com/oshetskiresearch/Projection_Relativity/main/manuscript/projection_relativity_II/Oshetski_Projection_Relativity_II_Main.tex
-```
-
-Fetched source:
-
-```text
-SHA256: F4417EDD54539B15FFE1FE176CCCB1DE0D5E8E7771F5801C11DAEB0D8BCB1BCD
-Bytes: 227630
-```
-
-Symbolic tester result:
-
-```text
-Maple tests: 621
-Passed: 621
-Failed: 0
-Self-validation negative controls: 8
-Display blocks inventoried: 446
-Unmapped display blocks: 0
-```
-
-## How To Rerun The Tester
-
-1. Download and extract:
-
-```text
-code/pr2_symbolic_tester_code_package.zip
-```
-
-2. From the extracted folder, run:
+Extract `code/pr2_symbolic_tester_code_package.zip`, open PowerShell in the extracted directory, and run:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\run_full_audit_windows.ps1
 ```
 
-The full runner performs this workflow:
+The runner fetches the current public PR-II manuscript, regenerates the full equation inventory and Maple source assertions, runs Maple, and regenerates the coverage report. It searches PATH and common Maple installation directories. For a nonstandard Maple installation, set `MAPLE_BIN` to its binary directory before running.
 
-1. Fetch the latest GitHub manuscript source.
-2. Regenerate the LaTeX display-equation inventory.
-3. Regenerate Maple source-coverage assertions.
-4. Run the Maple symbolic tester.
-5. Regenerate the coverage quality report.
+For an offline rerun after the source fixture has been fetched:
 
-## Requirements
-
-- Windows PowerShell
-- Maple with `cmaple`
-- Python 3
-
-The runner checks common Python locations and PATH. If Maple is installed in a nonstandard location, update `run_maple_windows.ps1` before rerunning.
-
-## Generated Outputs
-
-A rerun generates files such as:
-
-```text
-reports/pr2_maple_summary.md
-reports/pr2_maple_results.csv
-reports/pr2_maple_traceability.csv
-reports/pr2_maple_failures.md
-source/github_source_manifest.json
-source_equation_coverage.md
-source_equation_inventory.csv
-coverage_quality_report.md
-direct_proof_backlog.csv
-proof_report.md
+```powershell
+$env:PR2_SKIP_GITHUB_FETCH="1"
+.\run_full_audit_windows.ps1
 ```
 
-These generated files are intentionally separate from the code package and are represented publicly by the `results/` folder.
+## Coverage Labels
 
-## Interpreting Coverage Labels
+- `PASS`: directly recomputed or covered by an identified passing section chain
+- `NOTE`: contextual, repeated, definitional, or explicitly deferred material
+- `DATA`: external diagnostic/reference material not used as a generation input
+- `MANUSCRIPT`: reserved for unresolved source-cleanup items; the released audit has none
 
-The coverage inventory uses several labels:
+`NOTE` and `DATA` classifications are coverage boundaries, not test failures.
 
-- `PASS` means the displayed expression is directly checked or covered by a passing section chain.
-- `NOTE` marks contextual, repeated, structural, or PR-III-deferred displays that are accounted for but not treated as failed checks.
-- `DATA` marks external reference or diagnostic values that are not used as generation inputs.
-- `MANUSCRIPT` marks typographic or manuscript-cleanup issues that do not change the tested mathematical result.
-
-`NOTE`, `DATA`, and `MANUSCRIPT` rows are accounting labels, not test failures.
-
-## Package Hashes
-
-Current uploaded package hashes:
+## Package Integrity
 
 ```text
 code/pr2_symbolic_tester_code_package.zip
-SHA256: 0B2A32F1E86A716FB396DF98B0013C65A29C757527B08CBA775A06FFFE8AB29F
+SHA256: FC2BE7729C7F8525358036485D3A3BBA40686C4A80919EEB1228598320616AAA
 
 results/pr2_symbolic_tester.zip
-SHA256: 1C401C3E28B17CAA03AAF742CE660216CF57C37E80B29179EAD3C5E276952898
+SHA256: 5816C6517A009970CBEB4072B46E2670D05FA818F4F44EE537E074D2E5AD7993
 ```
 
 ## Scope
 
-This symbolic harness verifies the PR-II machine-checkable symbolic and numerical closure chain, source-equation accounting, negative controls, and audit traceability.
-
-It does not claim to complete deferred PR-III precision-layer obligations such as full radiative electroweak corrections, scalar mass closure, or full strong-sector precision matching.
-
+The harness verifies the PR-II machine-checkable symbolic and numerical closure chain, full source-equation accounting, negative controls, and audit traceability. External precision inputs and explicit PR-III deferred layers remain identified as `DATA` or `NOTE`; they are not silently counted as derived PR-II theorems.

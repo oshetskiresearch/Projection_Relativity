@@ -114,29 +114,12 @@ No Python dependencies are required for the Maple checker.
 1. Open Maple.
 2. Open a new worksheet.
 3. Make sure you are using a Maple input prompt, not a 2-D math text region.
-4. Paste and run the following commands, changing the path to your local repo:
+4. Set Maple's current directory to the root of your public repository clone,
+   then run:
 
 ```maple
 restart:
-currentdir("C:/path/to/Projection_Relativity"):
-read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
-PR_RunAll();
-```
-
-On Windows, an example path may look like:
-
-```maple
-restart:
-currentdir("C:/Users/your-name/Documents/GitHub/Projection_Relativity"):
-read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
-PR_RunAll();
-```
-
-On macOS or Linux, an example path may look like:
-
-```maple
-restart:
-currentdir("/Users/your-name/Projection_Relativity"):
+currentdir("PATH_TO_YOUR_CLONE"):
 read "test_harness/projection_relativity_I/symbolic/code/ProjectionRelativityAppendixVerify.mpl":
 PR_RunAll();
 ```

@@ -15,11 +15,12 @@ plot topics catalogued in the parent [`plot user map`](../../README.md).
 
 ## Runtime Notes
 
-The sources require combinations of NumPy, pandas, Matplotlib, and IPython.
-Several files preserve Colab/Jupyter magics such as `%matplotlib` or `!pip` and
-therefore are notebook-cell sources rather than directly executable standard
-Python files. Run those files in Colab/Jupyter, or convert the magic and package
-installation lines before using a normal Python interpreter.
+The sources require combinations of NumPy, pandas, Matplotlib, SciPy, and
+IPython. Install the dependencies in your environment before running a
+generator. The tracked `.py` files use standard Python syntax; notebook-only
+package-install and line-magic commands are not embedded in the release files.
+The branch-residual generator retains optional IPython display calls, while its
+calculation and file outputs remain normal Python operations.
 
 Colab-oriented sources use `/content/Projection_Relativity` as the canonical
 checkout path for the public repository:

@@ -1401,7 +1401,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `44176.`
+- actual: `44354.`
 - expected: `\label{sec:pr2_weak_mixing_boundary_closure}`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1410,7 +1410,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `45118.`
+- actual: `45296.`
 - expected: `0.231355763298189`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1419,7 +1419,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `62059.`
+- actual: `61991.`
 - expected: `246.21959589022453`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1428,7 +1428,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `62241.`
+- actual: `62173.`
 - expected: `1.166379220175995`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1437,7 +1437,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `98408.`
+- actual: `97888.`
 - expected: `\label{sec:pr2_fermion_representation_anomaly_cancellation}`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1446,7 +1446,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `132604.`
+- actual: `132083.`
 - expected: `\label{sec:pr2_charged_lepton_precision_candidate}`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1455,7 +1455,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `141379.`
+- actual: `139750.`
 - expected: `0.510984463`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1464,7 +1464,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `150891.`
+- actual: `149285.`
 - expected: `0.117861507469150`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1473,7 +1473,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `158231.`
+- actual: `156625.`
 - expected: `0.08776758507426047`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1482,7 +1482,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `175986.`
+- actual: `173729.`
 - expected: `3.152605677`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1491,7 +1491,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `180891.`
+- actual: `178317.`
 - expected: `-8.935540`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1500,7 +1500,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: source-text
-- actual: `198021.`
+- actual: `194529.`
 - expected: `1.507694477`
 - residual_or_error: `0.`
 - tolerance: `0.`
@@ -1509,8 +1509,8 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: exact
-- actual: `446.`
-- expected: `446.`
+- actual: `442.`
+- expected: `442.`
 - residual_or_error: `0.`
 - tolerance: `0.`
 
@@ -1550,7 +1550,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0002 - PR2-EQ-0002 lines 86-94 status NOTE mode context
+## LATEX-PR2-EQ-0002 - PR2-EQ-0002 lines 84-92 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1559,7 +1559,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0003 - PR2-EQ-0003 lines 101-105 status NOTE mode context
+## LATEX-PR2-EQ-0003 - PR2-EQ-0003 lines 94-98 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1568,7 +1568,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0004 - PR2-EQ-0004 lines 107-115 status NOTE mode context
+## LATEX-PR2-EQ-0004 - PR2-EQ-0004 lines 105-109 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1577,7 +1577,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0005 - PR2-EQ-0005 lines 119-129 status NOTE mode context
+## LATEX-PR2-EQ-0005 - PR2-EQ-0005 lines 111-119 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1586,7 +1586,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0006 - PR2-EQ-0006 lines 131-141 status NOTE mode context
+## LATEX-PR2-EQ-0006 - PR2-EQ-0006 lines 123-133 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1595,7 +1595,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0007 - PR2-EQ-0007 lines 152-158 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0007 - PR2-EQ-0007 lines 135-145 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1604,7 +1604,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0008 - PR2-EQ-0008 lines 160-166 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0008 - PR2-EQ-0008 lines 156-162 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1613,7 +1613,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0009 - PR2-EQ-0009 lines 170-185 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0009 - PR2-EQ-0009 lines 164-170 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1622,7 +1622,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0010 - PR2-EQ-0010 lines 194-196 status DATA mode boundary
+## LATEX-PR2-EQ-0010 - PR2-EQ-0010 lines 174-189 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1631,7 +1631,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0011 - PR2-EQ-0011 lines 225-231 status PASS mode section-chain
+## LATEX-PR2-EQ-0011 - PR2-EQ-0011 lines 198-200 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1640,7 +1640,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0012 - PR2-EQ-0012 lines 234-240 status PASS mode section-chain
+## LATEX-PR2-EQ-0012 - PR2-EQ-0012 lines 229-235 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1649,7 +1649,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0013 - PR2-EQ-0013 lines 243-247 status PASS mode section-chain
+## LATEX-PR2-EQ-0013 - PR2-EQ-0013 lines 238-244 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1658,7 +1658,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0014 - PR2-EQ-0014 lines 250-252 status PASS mode section-chain
+## LATEX-PR2-EQ-0014 - PR2-EQ-0014 lines 247-251 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1676,7 +1676,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0016 - PR2-EQ-0016 lines 259-267 status PASS mode section-chain
+## LATEX-PR2-EQ-0016 - PR2-EQ-0016 lines 258-260 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1685,7 +1685,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0017 - PR2-EQ-0017 lines 271-277 status PASS mode section-chain
+## LATEX-PR2-EQ-0017 - PR2-EQ-0017 lines 263-271 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1694,7 +1694,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0018 - PR2-EQ-0018 lines 279-287 status PASS mode section-chain
+## LATEX-PR2-EQ-0018 - PR2-EQ-0018 lines 275-281 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1703,7 +1703,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0019 - PR2-EQ-0019 lines 289-297 status PASS mode section-chain
+## LATEX-PR2-EQ-0019 - PR2-EQ-0019 lines 283-291 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1712,7 +1712,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0020 - PR2-EQ-0020 lines 340-350 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0020 - PR2-EQ-0020 lines 293-301 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1721,7 +1721,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0021 - PR2-EQ-0021 lines 354-364 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0021 - PR2-EQ-0021 lines 344-354 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1730,7 +1730,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0022 - PR2-EQ-0022 lines 366-368 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0022 - PR2-EQ-0022 lines 358-368 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1739,7 +1739,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0023 - PR2-EQ-0023 lines 370-377 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0023 - PR2-EQ-0023 lines 370-372 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1748,7 +1748,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0024 - PR2-EQ-0024 lines 379-386 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0024 - PR2-EQ-0024 lines 374-381 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1757,7 +1757,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0025 - PR2-EQ-0025 lines 389-393 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0025 - PR2-EQ-0025 lines 383-390 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1766,7 +1766,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0026 - PR2-EQ-0026 lines 395-401 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0026 - PR2-EQ-0026 lines 393-397 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1775,7 +1775,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0027 - PR2-EQ-0027 lines 404-411 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0027 - PR2-EQ-0027 lines 399-405 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1784,7 +1784,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0028 - PR2-EQ-0028 lines 413-419 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0028 - PR2-EQ-0028 lines 408-415 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1793,7 +1793,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0029 - PR2-EQ-0029 lines 471-477 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0029 - PR2-EQ-0029 lines 417-423 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1802,7 +1802,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0030 - PR2-EQ-0030 lines 479-485 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0030 - PR2-EQ-0030 lines 475-481 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1811,7 +1811,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0031 - PR2-EQ-0031 lines 489-496 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0031 - PR2-EQ-0031 lines 483-489 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1820,7 +1820,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0032 - PR2-EQ-0032 lines 498-505 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0032 - PR2-EQ-0032 lines 493-500 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1829,7 +1829,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0033 - PR2-EQ-0033 lines 560-570 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0033 - PR2-EQ-0033 lines 502-509 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1838,7 +1838,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0034 - PR2-EQ-0034 lines 578-584 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0034 - PR2-EQ-0034 lines 564-574 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1847,7 +1847,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0035 - PR2-EQ-0035 lines 586-592 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0035 - PR2-EQ-0035 lines 582-588 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1856,7 +1856,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0036 - PR2-EQ-0036 lines 594-598 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0036 - PR2-EQ-0036 lines 590-596 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1865,7 +1865,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0037 - PR2-EQ-0037 lines 601-606 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0037 - PR2-EQ-0037 lines 598-602 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1874,7 +1874,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0038 - PR2-EQ-0038 lines 609-613 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0038 - PR2-EQ-0038 lines 605-610 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1883,7 +1883,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0039 - PR2-EQ-0039 lines 615-621 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0039 - PR2-EQ-0039 lines 613-617 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1892,7 +1892,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0040 - PR2-EQ-0040 lines 627-631 status PASS mode section-chain
+## LATEX-PR2-EQ-0040 - PR2-EQ-0040 lines 619-625 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1901,7 +1901,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0041 - PR2-EQ-0041 lines 634-638 status PASS mode section-chain
+## LATEX-PR2-EQ-0041 - PR2-EQ-0041 lines 631-635 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1910,7 +1910,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0042 - PR2-EQ-0042 lines 640-646 status PASS mode section-chain
+## LATEX-PR2-EQ-0042 - PR2-EQ-0042 lines 638-642 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1919,7 +1919,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0043 - PR2-EQ-0043 lines 649-655 status PASS mode section-chain
+## LATEX-PR2-EQ-0043 - PR2-EQ-0043 lines 644-650 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1928,7 +1928,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0044 - PR2-EQ-0044 lines 657-667 status PASS mode section-chain
+## LATEX-PR2-EQ-0044 - PR2-EQ-0044 lines 653-659 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1937,7 +1937,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0045 - PR2-EQ-0045 lines 673-678 status PASS mode section-chain
+## LATEX-PR2-EQ-0045 - PR2-EQ-0045 lines 661-671 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1946,7 +1946,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0046 - PR2-EQ-0046 lines 680-685 status PASS mode section-chain
+## LATEX-PR2-EQ-0046 - PR2-EQ-0046 lines 677-682 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1955,7 +1955,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0047 - PR2-EQ-0047 lines 687-693 status PASS mode section-chain
+## LATEX-PR2-EQ-0047 - PR2-EQ-0047 lines 684-689 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1964,7 +1964,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0048 - PR2-EQ-0048 lines 695-703 status PASS mode section-chain
+## LATEX-PR2-EQ-0048 - PR2-EQ-0048 lines 691-697 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1973,7 +1973,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0049 - PR2-EQ-0049 lines 712-716 status PASS mode section-chain
+## LATEX-PR2-EQ-0049 - PR2-EQ-0049 lines 699-707 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1982,7 +1982,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0050 - PR2-EQ-0050 lines 718-732 status PASS mode section-chain
+## LATEX-PR2-EQ-0050 - PR2-EQ-0050 lines 716-720 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -1991,7 +1991,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0051 - PR2-EQ-0051 lines 734-744 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0051 - PR2-EQ-0051 lines 722-736 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2000,7 +2000,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0052 - PR2-EQ-0052 lines 751-753 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0052 - PR2-EQ-0052 lines 738-748 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2018,7 +2018,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0054 - PR2-EQ-0054 lines 759-766 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0054 - PR2-EQ-0054 lines 759-761 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2027,7 +2027,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0055 - PR2-EQ-0055 lines 768-777 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0055 - PR2-EQ-0055 lines 763-770 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2036,7 +2036,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0056 - PR2-EQ-0056 lines 779-787 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0056 - PR2-EQ-0056 lines 772-781 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2045,7 +2045,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0057 - PR2-EQ-0057 lines 790-796 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0057 - PR2-EQ-0057 lines 783-791 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2054,7 +2054,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0058 - PR2-EQ-0058 lines 802-813 status DATA mode boundary
+## LATEX-PR2-EQ-0058 - PR2-EQ-0058 lines 794-800 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2063,7 +2063,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0059 - PR2-EQ-0059 lines 817-823 status DATA mode boundary
+## LATEX-PR2-EQ-0059 - PR2-EQ-0059 lines 806-817 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2072,7 +2072,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0060 - PR2-EQ-0060 lines 831-833 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0060 - PR2-EQ-0060 lines 821-827 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2081,7 +2081,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0061 - PR2-EQ-0061 lines 836-842 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0061 - PR2-EQ-0061 lines 835-837 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2090,7 +2090,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0062 - PR2-EQ-0062 lines 844-850 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0062 - PR2-EQ-0062 lines 840-846 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2099,7 +2099,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0063 - PR2-EQ-0063 lines 926-936 status PASS mode section-chain
+## LATEX-PR2-EQ-0063 - PR2-EQ-0063 lines 848-854 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2108,7 +2108,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0064 - PR2-EQ-0064 lines 938-950 status PASS mode section-chain
+## LATEX-PR2-EQ-0064 - PR2-EQ-0064 lines 930-940 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2117,7 +2117,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0065 - PR2-EQ-0065 lines 952-962 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0065 - PR2-EQ-0065 lines 942-954 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2126,7 +2126,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0066 - PR2-EQ-0066 lines 965-971 status PASS mode section-chain
+## LATEX-PR2-EQ-0066 - PR2-EQ-0066 lines 956-966 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2135,7 +2135,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0067 - PR2-EQ-0067 lines 981-984 status PASS mode section-chain
+## LATEX-PR2-EQ-0067 - PR2-EQ-0067 lines 969-975 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2144,7 +2144,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0068 - PR2-EQ-0068 lines 987-996 status PASS mode section-chain
+## LATEX-PR2-EQ-0068 - PR2-EQ-0068 lines 985-988 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2153,7 +2153,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0069 - PR2-EQ-0069 lines 998-1002 status PASS mode section-chain
+## LATEX-PR2-EQ-0069 - PR2-EQ-0069 lines 991-1000 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2162,7 +2162,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0070 - PR2-EQ-0070 lines 1004-1012 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0070 - PR2-EQ-0070 lines 1002-1006 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2171,7 +2171,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0071 - PR2-EQ-0071 lines 1014-1020 status PASS mode section-chain
+## LATEX-PR2-EQ-0071 - PR2-EQ-0071 lines 1008-1016 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2180,7 +2180,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0072 - PR2-EQ-0072 lines 1023-1034 status PASS mode section-chain
+## LATEX-PR2-EQ-0072 - PR2-EQ-0072 lines 1018-1024 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2189,7 +2189,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0073 - PR2-EQ-0073 lines 1040-1052 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0073 - PR2-EQ-0073 lines 1027-1038 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2198,7 +2198,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0074 - PR2-EQ-0074 lines 1054-1058 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0074 - PR2-EQ-0074 lines 1044-1056 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2207,7 +2207,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0075 - PR2-EQ-0075 lines 1060-1070 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0075 - PR2-EQ-0075 lines 1058-1062 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2216,7 +2216,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0076 - PR2-EQ-0076 lines 1079-1081 status PASS mode section-chain
+## LATEX-PR2-EQ-0076 - PR2-EQ-0076 lines 1064-1074 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2225,7 +2225,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0077 - PR2-EQ-0077 lines 1083-1089 status MANUSCRIPT mode paper-cleanup
+## LATEX-PR2-EQ-0077 - PR2-EQ-0077 lines 1083-1085 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2234,7 +2234,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0078 - PR2-EQ-0078 lines 1091-1093 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0078 - PR2-EQ-0078 lines 1087-1093 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2243,7 +2243,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0079 - PR2-EQ-0079 lines 1100-1102 status PASS mode section-chain
+## LATEX-PR2-EQ-0079 - PR2-EQ-0079 lines 1095-1097 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2252,7 +2252,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0080 - PR2-EQ-0080 lines 1105-1109 status PASS mode section-chain
+## LATEX-PR2-EQ-0080 - PR2-EQ-0080 lines 1104-1106 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2261,7 +2261,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0081 - PR2-EQ-0081 lines 1111-1117 status PASS mode section-chain
+## LATEX-PR2-EQ-0081 - PR2-EQ-0081 lines 1109-1113 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2270,7 +2270,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0082 - PR2-EQ-0082 lines 1120-1126 status PASS mode section-chain
+## LATEX-PR2-EQ-0082 - PR2-EQ-0082 lines 1115-1121 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2279,7 +2279,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0083 - PR2-EQ-0083 lines 1128-1136 status PASS mode section-chain
+## LATEX-PR2-EQ-0083 - PR2-EQ-0083 lines 1124-1130 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2288,7 +2288,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0084 - PR2-EQ-0084 lines 1138-1144 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0084 - PR2-EQ-0084 lines 1132-1140 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2297,7 +2297,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0085 - PR2-EQ-0085 lines 1146-1152 status PASS mode section-chain
+## LATEX-PR2-EQ-0085 - PR2-EQ-0085 lines 1142-1148 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2306,7 +2306,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0086 - PR2-EQ-0086 lines 1154-1162 status PASS mode section-chain
+## LATEX-PR2-EQ-0086 - PR2-EQ-0086 lines 1150-1156 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2315,7 +2315,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0087 - PR2-EQ-0087 lines 1172-1183 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0087 - PR2-EQ-0087 lines 1158-1166 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2324,7 +2324,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0088 - PR2-EQ-0088 lines 1185-1189 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0088 - PR2-EQ-0088 lines 1176-1187 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2333,7 +2333,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0089 - PR2-EQ-0089 lines 1191-1202 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0089 - PR2-EQ-0089 lines 1189-1193 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2342,7 +2342,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0090 - PR2-EQ-0090 lines 1204-1208 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0090 - PR2-EQ-0090 lines 1195-1206 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2351,7 +2351,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0091 - PR2-EQ-0091 lines 1210-1214 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0091 - PR2-EQ-0091 lines 1208-1212 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2360,7 +2360,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0092 - PR2-EQ-0092 lines 1217-1225 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0092 - PR2-EQ-0092 lines 1214-1218 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2369,7 +2369,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0093 - PR2-EQ-0093 lines 1231-1242 status NOTE mode context
+## LATEX-PR2-EQ-0093 - PR2-EQ-0093 lines 1221-1229 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2378,7 +2378,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0094 - PR2-EQ-0094 lines 1244-1258 status NOTE mode context
+## LATEX-PR2-EQ-0094 - PR2-EQ-0094 lines 1235-1246 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2387,7 +2387,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0095 - PR2-EQ-0095 lines 1260-1276 status NOTE mode context
+## LATEX-PR2-EQ-0095 - PR2-EQ-0095 lines 1248-1262 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2396,7 +2396,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0096 - PR2-EQ-0096 lines 1282-1290 status DATA mode boundary
+## LATEX-PR2-EQ-0096 - PR2-EQ-0096 lines 1264-1280 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2405,7 +2405,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0097 - PR2-EQ-0097 lines 1293-1295 status DATA mode boundary
+## LATEX-PR2-EQ-0097 - PR2-EQ-0097 lines 1286-1294 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2423,7 +2423,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0099 - PR2-EQ-0099 lines 1301-1307 status DATA mode boundary
+## LATEX-PR2-EQ-0099 - PR2-EQ-0099 lines 1301-1303 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2432,7 +2432,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0100 - PR2-EQ-0100 lines 1313-1317 status NOTE mode context
+## LATEX-PR2-EQ-0100 - PR2-EQ-0100 lines 1305-1311 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2441,7 +2441,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0101 - PR2-EQ-0101 lines 1319-1324 status NOTE mode context
+## LATEX-PR2-EQ-0101 - PR2-EQ-0101 lines 1317-1321 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2450,7 +2450,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0102 - PR2-EQ-0102 lines 1385-1387 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0102 - PR2-EQ-0102 lines 1323-1328 status NOTE mode context
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2459,7 +2459,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0103 - PR2-EQ-0103 lines 1389-1393 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0103 - PR2-EQ-0103 lines 1389-1391 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2468,7 +2468,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0104 - PR2-EQ-0104 lines 1395-1399 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0104 - PR2-EQ-0104 lines 1393-1397 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2477,7 +2477,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0105 - PR2-EQ-0105 lines 1401-1409 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0105 - PR2-EQ-0105 lines 1399-1403 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2486,7 +2486,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0106 - PR2-EQ-0106 lines 1417-1422 status PASS mode section-chain
+## LATEX-PR2-EQ-0106 - PR2-EQ-0106 lines 1405-1413 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2495,7 +2495,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0107 - PR2-EQ-0107 lines 1424-1432 status PASS mode section-chain
+## LATEX-PR2-EQ-0107 - PR2-EQ-0107 lines 1421-1426 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2504,7 +2504,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0108 - PR2-EQ-0108 lines 1434-1440 status PASS mode section-chain
+## LATEX-PR2-EQ-0108 - PR2-EQ-0108 lines 1428-1436 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2513,7 +2513,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0109 - PR2-EQ-0109 lines 1443-1449 status PASS mode section-chain
+## LATEX-PR2-EQ-0109 - PR2-EQ-0109 lines 1438-1444 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2522,7 +2522,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0110 - PR2-EQ-0110 lines 1451-1457 status PASS mode section-chain
+## LATEX-PR2-EQ-0110 - PR2-EQ-0110 lines 1447-1453 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2531,7 +2531,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0111 - PR2-EQ-0111 lines 1460-1467 status PASS mode section-chain
+## LATEX-PR2-EQ-0111 - PR2-EQ-0111 lines 1455-1461 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2540,7 +2540,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0112 - PR2-EQ-0112 lines 1474-1476 status PASS mode section-chain
+## LATEX-PR2-EQ-0112 - PR2-EQ-0112 lines 1464-1471 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2549,7 +2549,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0113 - PR2-EQ-0113 lines 1478-1488 status PASS mode section-chain
+## LATEX-PR2-EQ-0113 - PR2-EQ-0113 lines 1478-1480 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2558,7 +2558,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0114 - PR2-EQ-0114 lines 1490-1496 status PASS mode section-chain
+## LATEX-PR2-EQ-0114 - PR2-EQ-0114 lines 1482-1492 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2567,7 +2567,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0115 - PR2-EQ-0115 lines 1498-1506 status PASS mode section-chain
+## LATEX-PR2-EQ-0115 - PR2-EQ-0115 lines 1494-1500 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2576,7 +2576,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0116 - PR2-EQ-0116 lines 1510-1514 status PASS mode section-chain
+## LATEX-PR2-EQ-0116 - PR2-EQ-0116 lines 1502-1510 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2585,7 +2585,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0117 - PR2-EQ-0117 lines 1521-1531 status PASS mode section-chain
+## LATEX-PR2-EQ-0117 - PR2-EQ-0117 lines 1514-1518 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2594,7 +2594,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0118 - PR2-EQ-0118 lines 1533-1541 status PASS mode section-chain
+## LATEX-PR2-EQ-0118 - PR2-EQ-0118 lines 1525-1535 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2603,7 +2603,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0119 - PR2-EQ-0119 lines 1544-1563 status PASS mode section-chain
+## LATEX-PR2-EQ-0119 - PR2-EQ-0119 lines 1537-1545 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2612,7 +2612,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0120 - PR2-EQ-0120 lines 1569-1575 status PASS mode section-chain
+## LATEX-PR2-EQ-0120 - PR2-EQ-0120 lines 1548-1567 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2621,7 +2621,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0121 - PR2-EQ-0121 lines 1578-1586 status PASS mode section-chain
+## LATEX-PR2-EQ-0121 - PR2-EQ-0121 lines 1573-1579 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2630,7 +2630,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0122 - PR2-EQ-0122 lines 1588-1592 status PASS mode section-chain
+## LATEX-PR2-EQ-0122 - PR2-EQ-0122 lines 1582-1590 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2639,7 +2639,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0123 - PR2-EQ-0123 lines 1595-1603 status PASS mode section-chain
+## LATEX-PR2-EQ-0123 - PR2-EQ-0123 lines 1592-1596 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2648,7 +2648,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0124 - PR2-EQ-0124 lines 1605-1611 status PASS mode section-chain
+## LATEX-PR2-EQ-0124 - PR2-EQ-0124 lines 1599-1607 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2657,7 +2657,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0125 - PR2-EQ-0125 lines 1613-1619 status PASS mode section-chain
+## LATEX-PR2-EQ-0125 - PR2-EQ-0125 lines 1609-1615 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2666,7 +2666,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0126 - PR2-EQ-0126 lines 1622-1634 status PASS mode section-chain
+## LATEX-PR2-EQ-0126 - PR2-EQ-0126 lines 1617-1623 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2675,7 +2675,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0127 - PR2-EQ-0127 lines 1639-1644 status PASS mode section-chain
+## LATEX-PR2-EQ-0127 - PR2-EQ-0127 lines 1626-1638 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2684,7 +2684,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0128 - PR2-EQ-0128 lines 1646-1652 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0128 - PR2-EQ-0128 lines 1643-1648 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2693,7 +2693,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0129 - PR2-EQ-0129 lines 1654-1667 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0129 - PR2-EQ-0129 lines 1650-1656 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2702,7 +2702,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0130 - PR2-EQ-0130 lines 1670-1674 status PASS mode section-chain
+## LATEX-PR2-EQ-0130 - PR2-EQ-0130 lines 1658-1671 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2711,7 +2711,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0131 - PR2-EQ-0131 lines 1676-1688 status PASS mode section-chain
+## LATEX-PR2-EQ-0131 - PR2-EQ-0131 lines 1674-1678 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2720,7 +2720,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0132 - PR2-EQ-0132 lines 1690-1702 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0132 - PR2-EQ-0132 lines 1680-1692 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2729,7 +2729,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0133 - PR2-EQ-0133 lines 1742-1748 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0133 - PR2-EQ-0133 lines 1694-1706 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2738,7 +2738,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0134 - PR2-EQ-0134 lines 1750-1759 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0134 - PR2-EQ-0134 lines 1746-1752 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2747,7 +2747,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0135 - PR2-EQ-0135 lines 1761-1773 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0135 - PR2-EQ-0135 lines 1754-1763 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2756,7 +2756,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0136 - PR2-EQ-0136 lines 1777-1783 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0136 - PR2-EQ-0136 lines 1765-1777 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2765,7 +2765,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0137 - PR2-EQ-0137 lines 1785-1791 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0137 - PR2-EQ-0137 lines 1781-1787 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2774,7 +2774,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0138 - PR2-EQ-0138 lines 1798-1814 status DATA mode boundary
+## LATEX-PR2-EQ-0138 - PR2-EQ-0138 lines 1789-1795 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2783,7 +2783,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0139 - PR2-EQ-0139 lines 1816-1828 status DATA mode boundary
+## LATEX-PR2-EQ-0139 - PR2-EQ-0139 lines 1802-1818 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2792,7 +2792,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0140 - PR2-EQ-0140 lines 1830-1850 status DATA mode boundary
+## LATEX-PR2-EQ-0140 - PR2-EQ-0140 lines 1820-1832 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2801,7 +2801,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0141 - PR2-EQ-0141 lines 1857-1859 status DATA mode boundary
+## LATEX-PR2-EQ-0141 - PR2-EQ-0141 lines 1834-1854 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2819,7 +2819,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0143 - PR2-EQ-0143 lines 1865-1877 status DATA mode boundary
+## LATEX-PR2-EQ-0143 - PR2-EQ-0143 lines 1865-1867 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2828,7 +2828,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0144 - PR2-EQ-0144 lines 1884-1889 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0144 - PR2-EQ-0144 lines 1869-1881 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2837,7 +2837,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0145 - PR2-EQ-0145 lines 1891-1896 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0145 - PR2-EQ-0145 lines 1888-1893 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2846,7 +2846,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0146 - PR2-EQ-0146 lines 1898-1904 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0146 - PR2-EQ-0146 lines 1895-1900 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2855,7 +2855,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0147 - PR2-EQ-0147 lines 1913-1923 status PASS mode section-chain
+## LATEX-PR2-EQ-0147 - PR2-EQ-0147 lines 1902-1908 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2864,7 +2864,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0148 - PR2-EQ-0148 lines 1925-1936 status PASS mode section-chain
+## LATEX-PR2-EQ-0148 - PR2-EQ-0148 lines 1917-1927 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2873,7 +2873,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0149 - PR2-EQ-0149 lines 1938-1945 status PASS mode section-chain
+## LATEX-PR2-EQ-0149 - PR2-EQ-0149 lines 1929-1940 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2882,7 +2882,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0150 - PR2-EQ-0150 lines 1947-1953 status PASS mode section-chain
+## LATEX-PR2-EQ-0150 - PR2-EQ-0150 lines 1942-1949 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2891,7 +2891,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0151 - PR2-EQ-0151 lines 1955-1968 status PASS mode section-chain
+## LATEX-PR2-EQ-0151 - PR2-EQ-0151 lines 1951-1957 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2900,7 +2900,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0152 - PR2-EQ-0152 lines 1972-1976 status PASS mode section-chain
+## LATEX-PR2-EQ-0152 - PR2-EQ-0152 lines 1959-1972 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2909,7 +2909,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0153 - PR2-EQ-0153 lines 1982-1986 status PASS mode section-chain
+## LATEX-PR2-EQ-0153 - PR2-EQ-0153 lines 1976-1980 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2918,7 +2918,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0154 - PR2-EQ-0154 lines 1988-1990 status PASS mode section-chain
+## LATEX-PR2-EQ-0154 - PR2-EQ-0154 lines 1986-1990 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2927,7 +2927,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0155 - PR2-EQ-0155 lines 1992-2000 status PASS mode section-chain
+## LATEX-PR2-EQ-0155 - PR2-EQ-0155 lines 1992-1994 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2936,7 +2936,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0156 - PR2-EQ-0156 lines 2002-2010 status PASS mode section-chain
+## LATEX-PR2-EQ-0156 - PR2-EQ-0156 lines 1996-2004 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2945,7 +2945,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0157 - PR2-EQ-0157 lines 2012-2021 status PASS mode section-chain
+## LATEX-PR2-EQ-0157 - PR2-EQ-0157 lines 2006-2014 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2954,7 +2954,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0158 - PR2-EQ-0158 lines 2023-2033 status PASS mode section-chain
+## LATEX-PR2-EQ-0158 - PR2-EQ-0158 lines 2016-2025 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2963,7 +2963,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0159 - PR2-EQ-0159 lines 2035-2045 status PASS mode section-chain
+## LATEX-PR2-EQ-0159 - PR2-EQ-0159 lines 2027-2037 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2972,7 +2972,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0160 - PR2-EQ-0160 lines 2048-2060 status PASS mode section-chain
+## LATEX-PR2-EQ-0160 - PR2-EQ-0160 lines 2039-2049 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2981,7 +2981,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0161 - PR2-EQ-0161 lines 2069-2076 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0161 - PR2-EQ-0161 lines 2052-2064 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2990,7 +2990,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0162 - PR2-EQ-0162 lines 2079-2086 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0162 - PR2-EQ-0162 lines 2073-2080 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -2999,7 +2999,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0163 - PR2-EQ-0163 lines 2088-2094 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0163 - PR2-EQ-0163 lines 2083-2090 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3008,7 +3008,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0164 - PR2-EQ-0164 lines 2096-2110 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0164 - PR2-EQ-0164 lines 2092-2098 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3017,7 +3017,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0165 - PR2-EQ-0165 lines 2112-2122 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0165 - PR2-EQ-0165 lines 2100-2114 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3026,7 +3026,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0166 - PR2-EQ-0166 lines 2130-2136 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0166 - PR2-EQ-0166 lines 2116-2126 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3035,7 +3035,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0167 - PR2-EQ-0167 lines 2139-2151 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0167 - PR2-EQ-0167 lines 2134-2140 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3044,7 +3044,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0168 - PR2-EQ-0168 lines 2161-2169 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0168 - PR2-EQ-0168 lines 2143-2155 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3053,7 +3053,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0169 - PR2-EQ-0169 lines 2171-2175 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0169 - PR2-EQ-0169 lines 2165-2173 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3062,7 +3062,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0170 - PR2-EQ-0170 lines 2184-2190 status DATA mode boundary
+## LATEX-PR2-EQ-0170 - PR2-EQ-0170 lines 2175-2179 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3071,7 +3071,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0171 - PR2-EQ-0171 lines 2191-2201 status DATA mode boundary
+## LATEX-PR2-EQ-0171 - PR2-EQ-0171 lines 2188-2194 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3080,7 +3080,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0172 - PR2-EQ-0172 lines 2202-2210 status DATA mode boundary
+## LATEX-PR2-EQ-0172 - PR2-EQ-0172 lines 2195-2205 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3089,7 +3089,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0173 - PR2-EQ-0173 lines 2212-2220 status DATA mode boundary
+## LATEX-PR2-EQ-0173 - PR2-EQ-0173 lines 2206-2214 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3098,7 +3098,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0174 - PR2-EQ-0174 lines 2222-2235 status DATA mode boundary
+## LATEX-PR2-EQ-0174 - PR2-EQ-0174 lines 2216-2224 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3107,7 +3107,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0175 - PR2-EQ-0175 lines 2244-2252 status DATA mode boundary
+## LATEX-PR2-EQ-0175 - PR2-EQ-0175 lines 2226-2239 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3116,7 +3116,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0176 - PR2-EQ-0176 lines 2256-2258 status DATA mode boundary
+## LATEX-PR2-EQ-0176 - PR2-EQ-0176 lines 2248-2256 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3125,7 +3125,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0177 - PR2-EQ-0177 lines 2262-2270 status DATA mode boundary
+## LATEX-PR2-EQ-0177 - PR2-EQ-0177 lines 2260-2262 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3134,7 +3134,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0178 - PR2-EQ-0178 lines 2274-2278 status DATA mode boundary
+## LATEX-PR2-EQ-0178 - PR2-EQ-0178 lines 2266-2274 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3143,7 +3143,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0179 - PR2-EQ-0179 lines 2280-2287 status DATA mode boundary
+## LATEX-PR2-EQ-0179 - PR2-EQ-0179 lines 2278-2282 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3152,7 +3152,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0180 - PR2-EQ-0180 lines 2290-2294 status DATA mode boundary
+## LATEX-PR2-EQ-0180 - PR2-EQ-0180 lines 2284-2291 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3161,7 +3161,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0181 - PR2-EQ-0181 lines 2301-2311 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0181 - PR2-EQ-0181 lines 2294-2298 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3170,7 +3170,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0182 - PR2-EQ-0182 lines 2318-2322 status PASS mode section-chain
+## LATEX-PR2-EQ-0182 - PR2-EQ-0182 lines 2305-2315 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3179,7 +3179,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0183 - PR2-EQ-0183 lines 2324-2338 status PASS mode section-chain
+## LATEX-PR2-EQ-0183 - PR2-EQ-0183 lines 2322-2326 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3188,7 +3188,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0184 - PR2-EQ-0184 lines 2340-2350 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0184 - PR2-EQ-0184 lines 2328-2342 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3197,7 +3197,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0185 - PR2-EQ-0185 lines 2352-2358 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0185 - PR2-EQ-0185 lines 2344-2354 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3206,7 +3206,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0186 - PR2-EQ-0186 lines 2360-2364 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0186 - PR2-EQ-0186 lines 2356-2362 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3215,7 +3215,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0187 - PR2-EQ-0187 lines 2366-2370 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0187 - PR2-EQ-0187 lines 2364-2368 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3224,7 +3224,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0188 - PR2-EQ-0188 lines 2372-2376 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0188 - PR2-EQ-0188 lines 2370-2374 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3233,7 +3233,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0189 - PR2-EQ-0189 lines 2378-2384 status PASS mode section-chain
+## LATEX-PR2-EQ-0189 - PR2-EQ-0189 lines 2376-2380 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3242,7 +3242,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0190 - PR2-EQ-0190 lines 2386-2392 status PASS mode section-chain
+## LATEX-PR2-EQ-0190 - PR2-EQ-0190 lines 2382-2388 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3251,7 +3251,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0191 - PR2-EQ-0191 lines 2394-2400 status PASS mode section-chain
+## LATEX-PR2-EQ-0191 - PR2-EQ-0191 lines 2390-2396 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3260,7 +3260,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0192 - PR2-EQ-0192 lines 2403-2411 status PASS mode section-chain
+## LATEX-PR2-EQ-0192 - PR2-EQ-0192 lines 2398-2404 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3269,7 +3269,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0193 - PR2-EQ-0193 lines 2416-2424 status PASS mode section-chain
+## LATEX-PR2-EQ-0193 - PR2-EQ-0193 lines 2407-2415 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3278,7 +3278,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0194 - PR2-EQ-0194 lines 2426-2435 status PASS mode section-chain
+## LATEX-PR2-EQ-0194 - PR2-EQ-0194 lines 2420-2428 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3287,7 +3287,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0195 - PR2-EQ-0195 lines 2439-2446 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0195 - PR2-EQ-0195 lines 2430-2439 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3296,7 +3296,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0196 - PR2-EQ-0196 lines 2448-2452 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0196 - PR2-EQ-0196 lines 2443-2450 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3305,7 +3305,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0197 - PR2-EQ-0197 lines 2454-2458 status PASS mode section-chain
+## LATEX-PR2-EQ-0197 - PR2-EQ-0197 lines 2452-2456 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3314,7 +3314,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0198 - PR2-EQ-0198 lines 2460-2466 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0198 - PR2-EQ-0198 lines 2458-2462 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3323,7 +3323,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0199 - PR2-EQ-0199 lines 2468-2474 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0199 - PR2-EQ-0199 lines 2464-2470 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3332,7 +3332,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0200 - PR2-EQ-0200 lines 2476-2482 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0200 - PR2-EQ-0200 lines 2472-2478 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3341,7 +3341,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0201 - PR2-EQ-0201 lines 2488-2500 status PASS mode section-chain
+## LATEX-PR2-EQ-0201 - PR2-EQ-0201 lines 2480-2486 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3350,7 +3350,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0202 - PR2-EQ-0202 lines 2503-2514 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0202 - PR2-EQ-0202 lines 2492-2504 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3359,7 +3359,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0203 - PR2-EQ-0203 lines 2517-2525 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0203 - PR2-EQ-0203 lines 2507-2518 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3368,7 +3368,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0204 - PR2-EQ-0204 lines 2527-2533 status PASS mode section-chain
+## LATEX-PR2-EQ-0204 - PR2-EQ-0204 lines 2521-2529 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3377,7 +3377,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0205 - PR2-EQ-0205 lines 2536-2551 status PASS mode section-chain
+## LATEX-PR2-EQ-0205 - PR2-EQ-0205 lines 2531-2537 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3386,7 +3386,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0206 - PR2-EQ-0206 lines 2553-2567 status PASS mode section-chain
+## LATEX-PR2-EQ-0206 - PR2-EQ-0206 lines 2540-2555 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3395,7 +3395,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0207 - PR2-EQ-0207 lines 2570-2576 status PASS mode section-chain
+## LATEX-PR2-EQ-0207 - PR2-EQ-0207 lines 2557-2571 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3404,7 +3404,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0208 - PR2-EQ-0208 lines 2578-2582 status PASS mode section-chain
+## LATEX-PR2-EQ-0208 - PR2-EQ-0208 lines 2574-2580 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3413,7 +3413,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0209 - PR2-EQ-0209 lines 2584-2592 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0209 - PR2-EQ-0209 lines 2582-2586 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3422,7 +3422,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0210 - PR2-EQ-0210 lines 2598-2604 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0210 - PR2-EQ-0210 lines 2588-2596 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3431,7 +3431,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0211 - PR2-EQ-0211 lines 2606-2616 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0211 - PR2-EQ-0211 lines 2602-2608 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3440,7 +3440,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0212 - PR2-EQ-0212 lines 2657-2663 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0212 - PR2-EQ-0212 lines 2610-2620 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3449,7 +3449,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0213 - PR2-EQ-0213 lines 2665-2669 status PASS mode section-chain
+## LATEX-PR2-EQ-0213 - PR2-EQ-0213 lines 2661-2667 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3458,7 +3458,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0214 - PR2-EQ-0214 lines 2671-2675 status PASS mode section-chain
+## LATEX-PR2-EQ-0214 - PR2-EQ-0214 lines 2669-2673 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3467,7 +3467,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0215 - PR2-EQ-0215 lines 2677-2687 status PASS mode section-chain
+## LATEX-PR2-EQ-0215 - PR2-EQ-0215 lines 2675-2679 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3476,7 +3476,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0216 - PR2-EQ-0216 lines 2719-2723 status DATA mode boundary
+## LATEX-PR2-EQ-0216 - PR2-EQ-0216 lines 2681-2691 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3485,7 +3485,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0217 - PR2-EQ-0217 lines 2727-2729 status DATA mode boundary
+## LATEX-PR2-EQ-0217 - PR2-EQ-0217 lines 2723-2727 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3494,7 +3494,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0218 - PR2-EQ-0218 lines 2733-2735 status DATA mode boundary
+## LATEX-PR2-EQ-0218 - PR2-EQ-0218 lines 2731-2733 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3503,7 +3503,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0219 - PR2-EQ-0219 lines 2739-2745 status DATA mode boundary
+## LATEX-PR2-EQ-0219 - PR2-EQ-0219 lines 2737-2739 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3512,7 +3512,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0220 - PR2-EQ-0220 lines 2747-2749 status DATA mode boundary
+## LATEX-PR2-EQ-0220 - PR2-EQ-0220 lines 2743-2749 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3521,7 +3521,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0221 - PR2-EQ-0221 lines 2759-2761 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0221 - PR2-EQ-0221 lines 2751-2753 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3539,7 +3539,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0223 - PR2-EQ-0223 lines 2773-2785 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0223 - PR2-EQ-0223 lines 2767-2769 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3548,7 +3548,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0224 - PR2-EQ-0224 lines 2788-2797 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0224 - PR2-EQ-0224 lines 2777-2789 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3557,7 +3557,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0225 - PR2-EQ-0225 lines 2799-2805 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0225 - PR2-EQ-0225 lines 2792-2801 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3566,7 +3566,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0226 - PR2-EQ-0226 lines 2811-2819 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0226 - PR2-EQ-0226 lines 2803-2809 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3575,7 +3575,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0227 - PR2-EQ-0227 lines 2821-2835 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0227 - PR2-EQ-0227 lines 2815-2823 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3584,7 +3584,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0228 - PR2-EQ-0228 lines 2837-2845 status PASS mode section-chain
+## LATEX-PR2-EQ-0228 - PR2-EQ-0228 lines 2825-2839 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3593,7 +3593,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0229 - PR2-EQ-0229 lines 2847-2861 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0229 - PR2-EQ-0229 lines 2841-2849 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3602,7 +3602,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0230 - PR2-EQ-0230 lines 2863-2869 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0230 - PR2-EQ-0230 lines 2851-2865 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3611,7 +3611,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0231 - PR2-EQ-0231 lines 2871-2877 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0231 - PR2-EQ-0231 lines 2867-2873 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3620,7 +3620,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0232 - PR2-EQ-0232 lines 2901-2907 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0232 - PR2-EQ-0232 lines 2875-2881 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3629,7 +3629,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0233 - PR2-EQ-0233 lines 2913-2915 status PASS mode section-chain
+## LATEX-PR2-EQ-0233 - PR2-EQ-0233 lines 2905-2911 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3638,7 +3638,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0234 - PR2-EQ-0234 lines 2917-2928 status PASS mode section-chain
+## LATEX-PR2-EQ-0234 - PR2-EQ-0234 lines 2917-2919 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3647,7 +3647,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0235 - PR2-EQ-0235 lines 2935-2945 status PASS mode section-chain
+## LATEX-PR2-EQ-0235 - PR2-EQ-0235 lines 2921-2932 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3656,7 +3656,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0236 - PR2-EQ-0236 lines 2953-2969 status PASS mode section-chain
+## LATEX-PR2-EQ-0236 - PR2-EQ-0236 lines 2939-2949 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3665,7 +3665,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0237 - PR2-EQ-0237 lines 2975-2991 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0237 - PR2-EQ-0237 lines 2957-2973 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3674,7 +3674,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0238 - PR2-EQ-0238 lines 3000-3004 status PASS mode section-chain
+## LATEX-PR2-EQ-0238 - PR2-EQ-0238 lines 2979-2995 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3683,7 +3683,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0239 - PR2-EQ-0239 lines 3010-3022 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0239 - PR2-EQ-0239 lines 3004-3008 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3692,7 +3692,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0240 - PR2-EQ-0240 lines 3024-3036 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0240 - PR2-EQ-0240 lines 3014-3026 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3701,7 +3701,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0241 - PR2-EQ-0241 lines 3038-3040 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0241 - PR2-EQ-0241 lines 3028-3040 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3719,7 +3719,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0243 - PR2-EQ-0243 lines 3046-3054 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0243 - PR2-EQ-0243 lines 3046-3048 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3728,7 +3728,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0244 - PR2-EQ-0244 lines 3063-3069 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0244 - PR2-EQ-0244 lines 3050-3058 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3737,7 +3737,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0245 - PR2-EQ-0245 lines 3083-3086 status DATA mode boundary
+## LATEX-PR2-EQ-0245 - PR2-EQ-0245 lines 3067-3073 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3746,7 +3746,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0246 - PR2-EQ-0246 lines 3090-3092 status DATA mode boundary
+## LATEX-PR2-EQ-0246 - PR2-EQ-0246 lines 3087-3090 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3755,7 +3755,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0247 - PR2-EQ-0247 lines 3098-3100 status DATA mode boundary
+## LATEX-PR2-EQ-0247 - PR2-EQ-0247 lines 3094-3096 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3764,7 +3764,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0248 - PR2-EQ-0248 lines 3102-3106 status DATA mode boundary
+## LATEX-PR2-EQ-0248 - PR2-EQ-0248 lines 3102-3104 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3773,7 +3773,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0249 - PR2-EQ-0249 lines 3115-3123 status PASS mode section-chain
+## LATEX-PR2-EQ-0249 - PR2-EQ-0249 lines 3106-3110 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3782,7 +3782,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0250 - PR2-EQ-0250 lines 3125-3131 status PASS mode section-chain
+## LATEX-PR2-EQ-0250 - PR2-EQ-0250 lines 3119-3127 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3791,7 +3791,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0251 - PR2-EQ-0251 lines 3133-3146 status PASS mode section-chain
+## LATEX-PR2-EQ-0251 - PR2-EQ-0251 lines 3129-3135 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3800,7 +3800,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0252 - PR2-EQ-0252 lines 3148-3154 status PASS mode section-chain
+## LATEX-PR2-EQ-0252 - PR2-EQ-0252 lines 3137-3150 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3809,7 +3809,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0253 - PR2-EQ-0253 lines 3156-3173 status PASS mode section-chain
+## LATEX-PR2-EQ-0253 - PR2-EQ-0253 lines 3152-3158 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3818,7 +3818,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0254 - PR2-EQ-0254 lines 3222-3234 status PASS mode section-chain
+## LATEX-PR2-EQ-0254 - PR2-EQ-0254 lines 3160-3177 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3827,7 +3827,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0255 - PR2-EQ-0255 lines 3236-3241 status PASS mode section-chain
+## LATEX-PR2-EQ-0255 - PR2-EQ-0255 lines 3226-3238 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3836,7 +3836,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0256 - PR2-EQ-0256 lines 3243-3258 status PASS mode section-chain
+## LATEX-PR2-EQ-0256 - PR2-EQ-0256 lines 3240-3245 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3845,7 +3845,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0257 - PR2-EQ-0257 lines 3260-3274 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0257 - PR2-EQ-0257 lines 3247-3262 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3854,7 +3854,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0258 - PR2-EQ-0258 lines 3278-3287 status PASS mode section-chain
+## LATEX-PR2-EQ-0258 - PR2-EQ-0258 lines 3264-3278 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3863,7 +3863,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0259 - PR2-EQ-0259 lines 3294-3296 status PASS mode section-chain
+## LATEX-PR2-EQ-0259 - PR2-EQ-0259 lines 3282-3291 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3872,7 +3872,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0260 - PR2-EQ-0260 lines 3300-3308 status PASS mode section-chain
+## LATEX-PR2-EQ-0260 - PR2-EQ-0260 lines 3298-3300 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3881,7 +3881,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0261 - PR2-EQ-0261 lines 3310-3314 status PASS mode section-chain
+## LATEX-PR2-EQ-0261 - PR2-EQ-0261 lines 3304-3312 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3890,7 +3890,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0262 - PR2-EQ-0262 lines 3316-3324 status PASS mode section-chain
+## LATEX-PR2-EQ-0262 - PR2-EQ-0262 lines 3314-3318 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3899,7 +3899,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0263 - PR2-EQ-0263 lines 3326-3334 status PASS mode section-chain
+## LATEX-PR2-EQ-0263 - PR2-EQ-0263 lines 3320-3328 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3908,7 +3908,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0264 - PR2-EQ-0264 lines 3335-3343 status PASS mode section-chain
+## LATEX-PR2-EQ-0264 - PR2-EQ-0264 lines 3330-3338 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3917,7 +3917,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0265 - PR2-EQ-0265 lines 3345-3351 status PASS mode section-chain
+## LATEX-PR2-EQ-0265 - PR2-EQ-0265 lines 3339-3347 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3926,7 +3926,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0266 - PR2-EQ-0266 lines 3353-3357 status PASS mode section-chain
+## LATEX-PR2-EQ-0266 - PR2-EQ-0266 lines 3349-3355 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3935,7 +3935,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0267 - PR2-EQ-0267 lines 3359-3367 status PASS mode section-chain
+## LATEX-PR2-EQ-0267 - PR2-EQ-0267 lines 3357-3361 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3944,7 +3944,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0268 - PR2-EQ-0268 lines 3370-3376 status PASS mode section-chain
+## LATEX-PR2-EQ-0268 - PR2-EQ-0268 lines 3363-3371 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3953,7 +3953,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0269 - PR2-EQ-0269 lines 3378-3382 status PASS mode section-chain
+## LATEX-PR2-EQ-0269 - PR2-EQ-0269 lines 3374-3380 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3962,7 +3962,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0270 - PR2-EQ-0270 lines 3384-3402 status PASS mode section-chain
+## LATEX-PR2-EQ-0270 - PR2-EQ-0270 lines 3382-3386 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3971,7 +3971,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0271 - PR2-EQ-0271 lines 3404-3412 status PASS mode section-chain
+## LATEX-PR2-EQ-0271 - PR2-EQ-0271 lines 3388-3406 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3980,7 +3980,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0272 - PR2-EQ-0272 lines 3422-3436 status PASS mode section-chain
+## LATEX-PR2-EQ-0272 - PR2-EQ-0272 lines 3408-3416 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3989,7 +3989,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0273 - PR2-EQ-0273 lines 3440-3444 status PASS mode section-chain
+## LATEX-PR2-EQ-0273 - PR2-EQ-0273 lines 3426-3440 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -3998,7 +3998,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0274 - PR2-EQ-0274 lines 3446-3456 status PASS mode section-chain
+## LATEX-PR2-EQ-0274 - PR2-EQ-0274 lines 3444-3448 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4007,7 +4007,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0275 - PR2-EQ-0275 lines 3459-3469 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0275 - PR2-EQ-0275 lines 3450-3460 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4016,7 +4016,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0276 - PR2-EQ-0276 lines 3471-3479 status PASS mode section-chain
+## LATEX-PR2-EQ-0276 - PR2-EQ-0276 lines 3463-3473 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4025,7 +4025,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0277 - PR2-EQ-0277 lines 3482-3492 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0277 - PR2-EQ-0277 lines 3475-3483 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4034,7 +4034,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0278 - PR2-EQ-0278 lines 3494-3504 status PASS mode section-chain
+## LATEX-PR2-EQ-0278 - PR2-EQ-0278 lines 3486-3496 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4043,7 +4043,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0279 - PR2-EQ-0279 lines 3507-3517 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0279 - PR2-EQ-0279 lines 3498-3508 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4052,7 +4052,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0280 - PR2-EQ-0280 lines 3519-3529 status PASS mode section-chain
+## LATEX-PR2-EQ-0280 - PR2-EQ-0280 lines 3511-3521 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4061,7 +4061,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0281 - PR2-EQ-0281 lines 3532-3542 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0281 - PR2-EQ-0281 lines 3523-3533 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4070,7 +4070,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0282 - PR2-EQ-0282 lines 3544-3552 status PASS mode section-chain
+## LATEX-PR2-EQ-0282 - PR2-EQ-0282 lines 3536-3546 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4079,7 +4079,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0283 - PR2-EQ-0283 lines 3558-3560 status PASS mode section-chain
+## LATEX-PR2-EQ-0283 - PR2-EQ-0283 lines 3548-3556 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4088,7 +4088,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0284 - PR2-EQ-0284 lines 3562-3570 status PASS mode section-chain
+## LATEX-PR2-EQ-0284 - PR2-EQ-0284 lines 3562-3564 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4097,7 +4097,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0285 - PR2-EQ-0285 lines 3594-3598 status PASS mode section-chain
+## LATEX-PR2-EQ-0285 - PR2-EQ-0285 lines 3566-3574 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4106,7 +4106,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0286 - PR2-EQ-0286 lines 3623-3631 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0286 - PR2-EQ-0286 lines 3598-3602 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4115,7 +4115,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0287 - PR2-EQ-0287 lines 3633-3641 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0287 - PR2-EQ-0287 lines 3627-3635 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4124,7 +4124,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0288 - PR2-EQ-0288 lines 3643-3647 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0288 - PR2-EQ-0288 lines 3637-3645 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4133,7 +4133,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0289 - PR2-EQ-0289 lines 3650-3656 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0289 - PR2-EQ-0289 lines 3647-3651 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4142,7 +4142,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0290 - PR2-EQ-0290 lines 3658-3664 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0290 - PR2-EQ-0290 lines 3654-3660 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4151,7 +4151,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0291 - PR2-EQ-0291 lines 3666-3672 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0291 - PR2-EQ-0291 lines 3662-3668 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4160,7 +4160,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0292 - PR2-EQ-0292 lines 3674-3680 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0292 - PR2-EQ-0292 lines 3670-3676 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4169,7 +4169,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0293 - PR2-EQ-0293 lines 3689-3693 status DATA mode boundary
+## LATEX-PR2-EQ-0293 - PR2-EQ-0293 lines 3678-3684 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4178,7 +4178,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0294 - PR2-EQ-0294 lines 3696-3709 status DATA mode boundary
+## LATEX-PR2-EQ-0294 - PR2-EQ-0294 lines 3693-3697 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4187,7 +4187,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0295 - PR2-EQ-0295 lines 3712-3722 status DATA mode boundary
+## LATEX-PR2-EQ-0295 - PR2-EQ-0295 lines 3700-3713 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4196,7 +4196,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0296 - PR2-EQ-0296 lines 3725-3741 status DATA mode boundary
+## LATEX-PR2-EQ-0296 - PR2-EQ-0296 lines 3716-3726 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4205,7 +4205,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0297 - PR2-EQ-0297 lines 3749-3751 status DATA mode boundary
+## LATEX-PR2-EQ-0297 - PR2-EQ-0297 lines 3729-3745 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4214,7 +4214,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0298 - PR2-EQ-0298 lines 3755-3757 status DATA mode boundary
+## LATEX-PR2-EQ-0298 - PR2-EQ-0298 lines 3753-3755 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4223,7 +4223,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0299 - PR2-EQ-0299 lines 3761-3763 status DATA mode boundary
+## LATEX-PR2-EQ-0299 - PR2-EQ-0299 lines 3759-3761 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4232,7 +4232,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0300 - PR2-EQ-0300 lines 3767-3773 status DATA mode boundary
+## LATEX-PR2-EQ-0300 - PR2-EQ-0300 lines 3765-3767 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4241,7 +4241,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0301 - PR2-EQ-0301 lines 3777-3781 status DATA mode boundary
+## LATEX-PR2-EQ-0301 - PR2-EQ-0301 lines 3771-3777 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4250,7 +4250,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0302 - PR2-EQ-0302 lines 3793-3795 status DATA mode boundary
+## LATEX-PR2-EQ-0302 - PR2-EQ-0302 lines 3781-3785 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4259,7 +4259,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0303 - PR2-EQ-0303 lines 3802-3808 status PASS mode section-chain
+## LATEX-PR2-EQ-0303 - PR2-EQ-0303 lines 3797-3799 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4268,7 +4268,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0304 - PR2-EQ-0304 lines 3810-3814 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0304 - PR2-EQ-0304 lines 3805-3813 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4277,7 +4277,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0305 - PR2-EQ-0305 lines 3816-3822 status PASS mode section-chain
+## LATEX-PR2-EQ-0305 - PR2-EQ-0305 lines 3815-3826 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4286,7 +4286,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0306 - PR2-EQ-0306 lines 3825-3835 status MANUSCRIPT mode paper-cleanup
+## LATEX-PR2-EQ-0306 - PR2-EQ-0306 lines 3828-3834 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4295,7 +4295,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0307 - PR2-EQ-0307 lines 3838-3849 status PASS mode section-chain
+## LATEX-PR2-EQ-0307 - PR2-EQ-0307 lines 3836-3840 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4304,7 +4304,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0308 - PR2-EQ-0308 lines 3851-3857 status PASS mode section-chain
+## LATEX-PR2-EQ-0308 - PR2-EQ-0308 lines 3846-3850 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4313,7 +4313,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0309 - PR2-EQ-0309 lines 3859-3863 status PASS mode section-chain
+## LATEX-PR2-EQ-0309 - PR2-EQ-0309 lines 3852-3862 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4322,7 +4322,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0310 - PR2-EQ-0310 lines 3869-3873 status PASS mode section-chain
+## LATEX-PR2-EQ-0310 - PR2-EQ-0310 lines 3864-3879 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4331,7 +4331,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0311 - PR2-EQ-0311 lines 3875-3885 status PASS mode section-chain
+## LATEX-PR2-EQ-0311 - PR2-EQ-0311 lines 3881-3889 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4340,7 +4340,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0312 - PR2-EQ-0312 lines 3887-3902 status PASS mode section-chain
+## LATEX-PR2-EQ-0312 - PR2-EQ-0312 lines 3891-3913 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4349,7 +4349,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0313 - PR2-EQ-0313 lines 3904-3912 status PASS mode section-chain
+## LATEX-PR2-EQ-0313 - PR2-EQ-0313 lines 3920-3926 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4358,7 +4358,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0314 - PR2-EQ-0314 lines 3914-3936 status PASS mode section-chain
+## LATEX-PR2-EQ-0314 - PR2-EQ-0314 lines 3928-3932 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4367,7 +4367,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0315 - PR2-EQ-0315 lines 3943-3949 status PASS mode section-chain
+## LATEX-PR2-EQ-0315 - PR2-EQ-0315 lines 3934-3940 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4376,7 +4376,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0316 - PR2-EQ-0316 lines 3951-3955 status PASS mode section-chain
+## LATEX-PR2-EQ-0316 - PR2-EQ-0316 lines 3942-3948 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4385,7 +4385,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0317 - PR2-EQ-0317 lines 3957-3963 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0317 - PR2-EQ-0317 lines 3951-3957 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4394,7 +4394,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0318 - PR2-EQ-0318 lines 3965-3971 status PASS mode section-chain
+## LATEX-PR2-EQ-0318 - PR2-EQ-0318 lines 3959-3968 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4403,7 +4403,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0319 - PR2-EQ-0319 lines 3974-3980 status PASS mode section-chain
+## LATEX-PR2-EQ-0319 - PR2-EQ-0319 lines 3970-3981 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4412,7 +4412,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0320 - PR2-EQ-0320 lines 3982-3991 status PASS mode section-chain
+## LATEX-PR2-EQ-0320 - PR2-EQ-0320 lines 3983-3987 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4421,7 +4421,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0321 - PR2-EQ-0321 lines 3993-4004 status PASS mode section-chain
+## LATEX-PR2-EQ-0321 - PR2-EQ-0321 lines 3989-3995 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4430,7 +4430,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0322 - PR2-EQ-0322 lines 4006-4010 status PASS mode section-chain
+## LATEX-PR2-EQ-0322 - PR2-EQ-0322 lines 3998-4010 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4439,7 +4439,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0323 - PR2-EQ-0323 lines 4012-4018 status PASS mode section-chain
+## LATEX-PR2-EQ-0323 - PR2-EQ-0323 lines 4015-4019 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4448,7 +4448,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0324 - PR2-EQ-0324 lines 4021-4033 status PASS mode section-chain
+## LATEX-PR2-EQ-0324 - PR2-EQ-0324 lines 4021-4027 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4457,7 +4457,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0325 - PR2-EQ-0325 lines 4038-4042 status PASS mode section-chain
+## LATEX-PR2-EQ-0325 - PR2-EQ-0325 lines 4057-4070 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4466,7 +4466,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0326 - PR2-EQ-0326 lines 4044-4050 status PASS mode section-chain
+## LATEX-PR2-EQ-0326 - PR2-EQ-0326 lines 4076-4087 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4475,7 +4475,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0327 - PR2-EQ-0327 lines 4080-4093 status PASS mode section-chain
+## LATEX-PR2-EQ-0327 - PR2-EQ-0327 lines 4091-4097 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4484,7 +4484,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0328 - PR2-EQ-0328 lines 4099-4110 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0328 - PR2-EQ-0328 lines 4099-4105 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4493,7 +4493,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0329 - PR2-EQ-0329 lines 4114-4120 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0329 - PR2-EQ-0329 lines 4107-4121 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4502,7 +4502,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0330 - PR2-EQ-0330 lines 4122-4128 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0330 - PR2-EQ-0330 lines 4123-4141 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4511,7 +4511,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0331 - PR2-EQ-0331 lines 4130-4144 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0331 - PR2-EQ-0331 lines 4147-4151 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4520,7 +4520,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0332 - PR2-EQ-0332 lines 4146-4164 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0332 - PR2-EQ-0332 lines 4160-4162 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4529,7 +4529,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0333 - PR2-EQ-0333 lines 4170-4174 status DATA mode boundary
+## LATEX-PR2-EQ-0333 - PR2-EQ-0333 lines 4164-4166 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4538,7 +4538,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0334 - PR2-EQ-0334 lines 4183-4185 status DATA mode boundary
+## LATEX-PR2-EQ-0334 - PR2-EQ-0334 lines 4169-4173 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4547,7 +4547,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0335 - PR2-EQ-0335 lines 4187-4189 status DATA mode boundary
+## LATEX-PR2-EQ-0335 - PR2-EQ-0335 lines 4177-4184 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4556,7 +4556,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0336 - PR2-EQ-0336 lines 4192-4196 status DATA mode boundary
+## LATEX-PR2-EQ-0336 - PR2-EQ-0336 lines 4188-4194 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4565,7 +4565,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0337 - PR2-EQ-0337 lines 4200-4207 status DATA mode boundary
+## LATEX-PR2-EQ-0337 - PR2-EQ-0337 lines 4201-4211 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4574,7 +4574,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0338 - PR2-EQ-0338 lines 4211-4217 status DATA mode boundary
+## LATEX-PR2-EQ-0338 - PR2-EQ-0338 lines 4221-4229 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4583,7 +4583,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0339 - PR2-EQ-0339 lines 4224-4234 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0339 - PR2-EQ-0339 lines 4231-4241 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4592,7 +4592,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0340 - PR2-EQ-0340 lines 4244-4252 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0340 - PR2-EQ-0340 lines 4243-4247 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4601,7 +4601,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0341 - PR2-EQ-0341 lines 4254-4264 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0341 - PR2-EQ-0341 lines 4249-4261 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4610,7 +4610,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0342 - PR2-EQ-0342 lines 4266-4270 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0342 - PR2-EQ-0342 lines 4267-4275 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4619,7 +4619,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0343 - PR2-EQ-0343 lines 4272-4284 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0343 - PR2-EQ-0343 lines 4277-4283 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4628,7 +4628,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0344 - PR2-EQ-0344 lines 4290-4298 status PASS mode section-chain
+## LATEX-PR2-EQ-0344 - PR2-EQ-0344 lines 4288-4302 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4637,7 +4637,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0345 - PR2-EQ-0345 lines 4300-4306 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0345 - PR2-EQ-0345 lines 4307-4319 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4646,7 +4646,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0346 - PR2-EQ-0346 lines 4311-4325 status PASS mode section-chain
+## LATEX-PR2-EQ-0346 - PR2-EQ-0346 lines 4321-4331 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4655,7 +4655,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0347 - PR2-EQ-0347 lines 4330-4342 status PASS mode section-chain
+## LATEX-PR2-EQ-0347 - PR2-EQ-0347 lines 4333-4335 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4664,7 +4664,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0348 - PR2-EQ-0348 lines 4344-4354 status PASS mode section-chain
+## LATEX-PR2-EQ-0348 - PR2-EQ-0348 lines 4337-4347 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4673,7 +4673,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0349 - PR2-EQ-0349 lines 4356-4358 status PASS mode section-chain
+## LATEX-PR2-EQ-0349 - PR2-EQ-0349 lines 4349-4355 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4682,7 +4682,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0350 - PR2-EQ-0350 lines 4360-4370 status PASS mode section-chain
+## LATEX-PR2-EQ-0350 - PR2-EQ-0350 lines 4357-4369 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4691,7 +4691,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0351 - PR2-EQ-0351 lines 4372-4378 status PASS mode section-chain
+## LATEX-PR2-EQ-0351 - PR2-EQ-0351 lines 4371-4375 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4700,7 +4700,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0352 - PR2-EQ-0352 lines 4380-4392 status PASS mode section-chain
+## LATEX-PR2-EQ-0352 - PR2-EQ-0352 lines 4377-4388 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4709,7 +4709,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0353 - PR2-EQ-0353 lines 4394-4398 status PASS mode section-chain
+## LATEX-PR2-EQ-0353 - PR2-EQ-0353 lines 4395-4399 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4718,7 +4718,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0354 - PR2-EQ-0354 lines 4400-4411 status PASS mode section-chain
+## LATEX-PR2-EQ-0354 - PR2-EQ-0354 lines 4401-4407 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4727,7 +4727,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0355 - PR2-EQ-0355 lines 4418-4422 status PASS mode section-chain
+## LATEX-PR2-EQ-0355 - PR2-EQ-0355 lines 4410-4418 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4736,7 +4736,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0356 - PR2-EQ-0356 lines 4424-4430 status PASS mode section-chain
+## LATEX-PR2-EQ-0356 - PR2-EQ-0356 lines 4420-4426 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4745,7 +4745,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0357 - PR2-EQ-0357 lines 4433-4441 status PASS mode section-chain
+## LATEX-PR2-EQ-0357 - PR2-EQ-0357 lines 4429-4442 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4754,7 +4754,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0358 - PR2-EQ-0358 lines 4443-4449 status PASS mode section-chain
+## LATEX-PR2-EQ-0358 - PR2-EQ-0358 lines 4444-4450 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4763,7 +4763,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0359 - PR2-EQ-0359 lines 4452-4465 status PASS mode section-chain
+## LATEX-PR2-EQ-0359 - PR2-EQ-0359 lines 4453-4463 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4772,7 +4772,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0360 - PR2-EQ-0360 lines 4467-4473 status PASS mode section-chain
+## LATEX-PR2-EQ-0360 - PR2-EQ-0360 lines 4471-4475 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4781,7 +4781,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0361 - PR2-EQ-0361 lines 4476-4486 status PASS mode section-chain
+## LATEX-PR2-EQ-0361 - PR2-EQ-0361 lines 4477-4485 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4790,7 +4790,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0362 - PR2-EQ-0362 lines 4494-4498 status PASS mode section-chain
+## LATEX-PR2-EQ-0362 - PR2-EQ-0362 lines 4529-4535 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4799,7 +4799,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0363 - PR2-EQ-0363 lines 4500-4508 status PASS mode section-chain
+## LATEX-PR2-EQ-0363 - PR2-EQ-0363 lines 4537-4548 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4808,7 +4808,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0364 - PR2-EQ-0364 lines 4551-4553 status PASS mode section-chain
+## LATEX-PR2-EQ-0364 - PR2-EQ-0364 lines 4551-4557 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4817,7 +4817,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0365 - PR2-EQ-0365 lines 4555-4557 status PASS mode section-chain
+## LATEX-PR2-EQ-0365 - PR2-EQ-0365 lines 4559-4561 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4826,7 +4826,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0366 - PR2-EQ-0366 lines 4560-4566 status PASS mode section-chain
+## LATEX-PR2-EQ-0366 - PR2-EQ-0366 lines 4563-4569 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4835,7 +4835,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0367 - PR2-EQ-0367 lines 4568-4579 status PASS mode section-chain
+## LATEX-PR2-EQ-0367 - PR2-EQ-0367 lines 4576-4587 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4844,7 +4844,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0368 - PR2-EQ-0368 lines 4582-4588 status PASS mode section-chain
+## LATEX-PR2-EQ-0368 - PR2-EQ-0368 lines 4589-4595 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4853,7 +4853,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0369 - PR2-EQ-0369 lines 4590-4592 status PASS mode section-chain
+## LATEX-PR2-EQ-0369 - PR2-EQ-0369 lines 4598-4607 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4862,7 +4862,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0370 - PR2-EQ-0370 lines 4594-4600 status PASS mode section-chain
+## LATEX-PR2-EQ-0370 - PR2-EQ-0370 lines 4609-4615 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4871,7 +4871,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0371 - PR2-EQ-0371 lines 4607-4618 status PASS mode section-chain
+## LATEX-PR2-EQ-0371 - PR2-EQ-0371 lines 4618-4629 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4880,7 +4880,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0372 - PR2-EQ-0372 lines 4620-4626 status PASS mode section-chain
+## LATEX-PR2-EQ-0372 - PR2-EQ-0372 lines 4631-4637 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4889,7 +4889,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0373 - PR2-EQ-0373 lines 4629-4638 status PASS mode section-chain
+## LATEX-PR2-EQ-0373 - PR2-EQ-0373 lines 4647-4661 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4898,7 +4898,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0374 - PR2-EQ-0374 lines 4640-4646 status PASS mode section-chain
+## LATEX-PR2-EQ-0374 - PR2-EQ-0374 lines 4716-4737 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4907,7 +4907,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0375 - PR2-EQ-0375 lines 4649-4660 status PASS mode section-chain
+## LATEX-PR2-EQ-0375 - PR2-EQ-0375 lines 4743-4755 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4916,7 +4916,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0376 - PR2-EQ-0376 lines 4662-4668 status PASS mode section-chain
+## LATEX-PR2-EQ-0376 - PR2-EQ-0376 lines 4757-4761 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4925,7 +4925,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0377 - PR2-EQ-0377 lines 4678-4692 status PASS mode section-chain
+## LATEX-PR2-EQ-0377 - PR2-EQ-0377 lines 4771-4773 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4934,7 +4934,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0378 - PR2-EQ-0378 lines 4747-4768 status PASS mode section-chain
+## LATEX-PR2-EQ-0378 - PR2-EQ-0378 lines 4779-4785 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4943,7 +4943,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0379 - PR2-EQ-0379 lines 4774-4786 status DATA mode boundary
+## LATEX-PR2-EQ-0379 - PR2-EQ-0379 lines 4789-4793 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4952,7 +4952,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0380 - PR2-EQ-0380 lines 4788-4792 status DATA mode boundary
+## LATEX-PR2-EQ-0380 - PR2-EQ-0380 lines 4795-4803 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4961,7 +4961,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0381 - PR2-EQ-0381 lines 4802-4804 status DATA mode boundary
+## LATEX-PR2-EQ-0381 - PR2-EQ-0381 lines 4811-4823 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4970,7 +4970,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0382 - PR2-EQ-0382 lines 4810-4816 status DATA mode boundary
+## LATEX-PR2-EQ-0382 - PR2-EQ-0382 lines 4825-4829 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4979,7 +4979,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0383 - PR2-EQ-0383 lines 4820-4824 status DATA mode boundary
+## LATEX-PR2-EQ-0383 - PR2-EQ-0383 lines 4841-4856 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4988,7 +4988,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0384 - PR2-EQ-0384 lines 4826-4834 status DATA mode boundary
+## LATEX-PR2-EQ-0384 - PR2-EQ-0384 lines 4862-4868 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -4997,7 +4997,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0385 - PR2-EQ-0385 lines 4842-4854 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0385 - PR2-EQ-0385 lines 4871-4884 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5006,7 +5006,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0386 - PR2-EQ-0386 lines 4856-4860 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0386 - PR2-EQ-0386 lines 4887-4899 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5015,7 +5015,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0387 - PR2-EQ-0387 lines 4872-4887 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0387 - PR2-EQ-0387 lines 4902-4914 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5024,7 +5024,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0388 - PR2-EQ-0388 lines 4893-4899 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0388 - PR2-EQ-0388 lines 4917-4929 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5033,7 +5033,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0389 - PR2-EQ-0389 lines 4902-4915 status PASS mode section-chain
+## LATEX-PR2-EQ-0389 - PR2-EQ-0389 lines 4949-4959 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5042,7 +5042,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0390 - PR2-EQ-0390 lines 4918-4930 status PASS mode section-chain
+## LATEX-PR2-EQ-0390 - PR2-EQ-0390 lines 4961-4970 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5051,7 +5051,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0391 - PR2-EQ-0391 lines 4933-4945 status PASS mode section-chain
+## LATEX-PR2-EQ-0391 - PR2-EQ-0391 lines 4972-4978 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5060,7 +5060,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0392 - PR2-EQ-0392 lines 4948-4960 status PASS mode section-chain
+## LATEX-PR2-EQ-0392 - PR2-EQ-0392 lines 5024-5030 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5069,7 +5069,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0393 - PR2-EQ-0393 lines 4980-4990 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0393 - PR2-EQ-0393 lines 5033-5037 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5078,7 +5078,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0394 - PR2-EQ-0394 lines 4992-5001 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0394 - PR2-EQ-0394 lines 5039-5051 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5087,7 +5087,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0395 - PR2-EQ-0395 lines 5003-5009 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0395 - PR2-EQ-0395 lines 5054-5058 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5096,7 +5096,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0396 - PR2-EQ-0396 lines 5055-5061 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0396 - PR2-EQ-0396 lines 5060-5072 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5105,7 +5105,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0397 - PR2-EQ-0397 lines 5064-5068 status PASS mode section-chain
+## LATEX-PR2-EQ-0397 - PR2-EQ-0397 lines 5075-5083 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5114,7 +5114,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0398 - PR2-EQ-0398 lines 5070-5082 status PASS mode section-chain
+## LATEX-PR2-EQ-0398 - PR2-EQ-0398 lines 5085-5097 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5123,7 +5123,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0399 - PR2-EQ-0399 lines 5085-5089 status PASS mode section-chain
+## LATEX-PR2-EQ-0399 - PR2-EQ-0399 lines 5100-5106 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5132,7 +5132,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0400 - PR2-EQ-0400 lines 5091-5103 status PASS mode section-chain
+## LATEX-PR2-EQ-0400 - PR2-EQ-0400 lines 5108-5116 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5141,7 +5141,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0401 - PR2-EQ-0401 lines 5106-5114 status PASS mode section-chain
+## LATEX-PR2-EQ-0401 - PR2-EQ-0401 lines 5119-5129 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5150,7 +5150,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0402 - PR2-EQ-0402 lines 5116-5128 status PASS mode section-chain
+## LATEX-PR2-EQ-0402 - PR2-EQ-0402 lines 5131-5140 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5159,7 +5159,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0403 - PR2-EQ-0403 lines 5131-5137 status PASS mode section-chain
+## LATEX-PR2-EQ-0403 - PR2-EQ-0403 lines 5142-5148 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5168,7 +5168,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0404 - PR2-EQ-0404 lines 5139-5147 status PASS mode section-chain
+## LATEX-PR2-EQ-0404 - PR2-EQ-0404 lines 5190-5192 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5177,7 +5177,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0405 - PR2-EQ-0405 lines 5150-5160 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0405 - PR2-EQ-0405 lines 5194-5204 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5186,7 +5186,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0406 - PR2-EQ-0406 lines 5162-5171 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0406 - PR2-EQ-0406 lines 5206-5216 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5195,7 +5195,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0407 - PR2-EQ-0407 lines 5173-5179 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0407 - PR2-EQ-0407 lines 5224-5228 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5204,7 +5204,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0408 - PR2-EQ-0408 lines 5222-5224 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0408 - PR2-EQ-0408 lines 5235-5237 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5213,7 +5213,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0409 - PR2-EQ-0409 lines 5226-5236 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0409 - PR2-EQ-0409 lines 5239-5248 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5222,7 +5222,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0410 - PR2-EQ-0410 lines 5238-5248 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0410 - PR2-EQ-0410 lines 5255-5259 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5231,7 +5231,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0411 - PR2-EQ-0411 lines 5256-5260 status DATA mode boundary
+## LATEX-PR2-EQ-0411 - PR2-EQ-0411 lines 5262-5268 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5240,7 +5240,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0412 - PR2-EQ-0412 lines 5267-5269 status DATA mode boundary
+## LATEX-PR2-EQ-0412 - PR2-EQ-0412 lines 5288-5292 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5249,7 +5249,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0413 - PR2-EQ-0413 lines 5271-5280 status DATA mode boundary
+## LATEX-PR2-EQ-0413 - PR2-EQ-0413 lines 5294-5298 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5258,7 +5258,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0414 - PR2-EQ-0414 lines 5287-5291 status DATA mode boundary
+## LATEX-PR2-EQ-0414 - PR2-EQ-0414 lines 5300-5304 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5267,7 +5267,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0415 - PR2-EQ-0415 lines 5294-5300 status DATA mode boundary
+## LATEX-PR2-EQ-0415 - PR2-EQ-0415 lines 5306-5321 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5276,7 +5276,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0416 - PR2-EQ-0416 lines 5320-5324 status PASS mode section-chain
+## LATEX-PR2-EQ-0416 - PR2-EQ-0416 lines 5323-5329 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5285,7 +5285,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0417 - PR2-EQ-0417 lines 5326-5330 status PASS mode section-chain
+## LATEX-PR2-EQ-0417 - PR2-EQ-0417 lines 5331-5339 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5294,7 +5294,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0418 - PR2-EQ-0418 lines 5332-5336 status PASS mode section-chain
+## LATEX-PR2-EQ-0418 - PR2-EQ-0418 lines 5341-5351 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5303,7 +5303,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0419 - PR2-EQ-0419 lines 5338-5353 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0419 - PR2-EQ-0419 lines 5353-5362 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5312,7 +5312,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0420 - PR2-EQ-0420 lines 5355-5361 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0420 - PR2-EQ-0420 lines 5368-5370 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5321,7 +5321,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0421 - PR2-EQ-0421 lines 5363-5371 status PASS mode section-chain
+## LATEX-PR2-EQ-0421 - PR2-EQ-0421 lines 5373-5375 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5330,7 +5330,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0422 - PR2-EQ-0422 lines 5373-5383 status PASS mode section-chain
+## LATEX-PR2-EQ-0422 - PR2-EQ-0422 lines 5377-5387 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5339,7 +5339,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0423 - PR2-EQ-0423 lines 5385-5394 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0423 - PR2-EQ-0423 lines 5389-5399 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5348,7 +5348,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0424 - PR2-EQ-0424 lines 5400-5402 status PASS mode section-chain
+## LATEX-PR2-EQ-0424 - PR2-EQ-0424 lines 5401-5411 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5357,7 +5357,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0425 - PR2-EQ-0425 lines 5405-5407 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0425 - PR2-EQ-0425 lines 5413-5423 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5366,7 +5366,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0426 - PR2-EQ-0426 lines 5409-5419 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0426 - PR2-EQ-0426 lines 5426-5432 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5375,7 +5375,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0427 - PR2-EQ-0427 lines 5421-5431 status PASS mode section-chain
+## LATEX-PR2-EQ-0427 - PR2-EQ-0427 lines 5434-5440 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5384,7 +5384,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0428 - PR2-EQ-0428 lines 5433-5443 status PASS mode direct-symbolic
+## LATEX-PR2-EQ-0428 - PR2-EQ-0428 lines 5488-5496 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5393,7 +5393,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0429 - PR2-EQ-0429 lines 5445-5455 status PASS mode section-chain
+## LATEX-PR2-EQ-0429 - PR2-EQ-0429 lines 5499-5503 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5402,7 +5402,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0430 - PR2-EQ-0430 lines 5458-5464 status PASS mode section-chain
+## LATEX-PR2-EQ-0430 - PR2-EQ-0430 lines 5507-5513 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5411,7 +5411,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0431 - PR2-EQ-0431 lines 5466-5472 status PASS mode section-chain
+## LATEX-PR2-EQ-0431 - PR2-EQ-0431 lines 5516-5528 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5420,7 +5420,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0432 - PR2-EQ-0432 lines 5520-5528 status PASS mode section-chain
+## LATEX-PR2-EQ-0432 - PR2-EQ-0432 lines 5537-5541 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5429,7 +5429,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0433 - PR2-EQ-0433 lines 5531-5535 status PASS mode section-chain
+## LATEX-PR2-EQ-0433 - PR2-EQ-0433 lines 5543-5553 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5438,7 +5438,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0434 - PR2-EQ-0434 lines 5539-5545 status PASS mode section-chain
+## LATEX-PR2-EQ-0434 - PR2-EQ-0434 lines 5556-5566 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5447,7 +5447,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0435 - PR2-EQ-0435 lines 5548-5560 status PASS mode section-chain
+## LATEX-PR2-EQ-0435 - PR2-EQ-0435 lines 5569-5575 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5456,7 +5456,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0436 - PR2-EQ-0436 lines 5569-5573 status PASS mode section-chain
+## LATEX-PR2-EQ-0436 - PR2-EQ-0436 lines 5578-5586 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5465,7 +5465,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0437 - PR2-EQ-0437 lines 5575-5585 status PASS mode section-chain
+## LATEX-PR2-EQ-0437 - PR2-EQ-0437 lines 5589-5595 status PASS mode direct-numeric
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5474,7 +5474,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0438 - PR2-EQ-0438 lines 5588-5598 status PASS mode section-chain
+## LATEX-PR2-EQ-0438 - PR2-EQ-0438 lines 5603-5616 status PASS mode direct-symbolic
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5483,7 +5483,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0439 - PR2-EQ-0439 lines 5601-5607 status PASS mode section-chain
+## LATEX-PR2-EQ-0439 - PR2-EQ-0439 lines 5619-5627 status PASS mode section-chain
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5492,7 +5492,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0440 - PR2-EQ-0440 lines 5610-5618 status PASS mode section-chain
+## LATEX-PR2-EQ-0440 - PR2-EQ-0440 lines 5639-5641 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5501,7 +5501,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0441 - PR2-EQ-0441 lines 5621-5627 status PASS mode direct-numeric
+## LATEX-PR2-EQ-0441 - PR2-EQ-0441 lines 5674-5681 status DATA mode boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5510,43 +5510,7 @@ Each entry records the proof method and residual/result for a passing assertion.
 - residual_or_error: `0.`
 - tolerance: `0.`
 
-## LATEX-PR2-EQ-0442 - PR2-EQ-0442 lines 5635-5648 status PASS mode direct-symbolic
-
-- paper_location: source:all-display-blocks
-- kind: predicate
-- actual: `true`
-- expected: `true`
-- residual_or_error: `0.`
-- tolerance: `0.`
-
-## LATEX-PR2-EQ-0443 - PR2-EQ-0443 lines 5651-5659 status PASS mode section-chain
-
-- paper_location: source:all-display-blocks
-- kind: predicate
-- actual: `true`
-- expected: `true`
-- residual_or_error: `0.`
-- tolerance: `0.`
-
-## LATEX-PR2-EQ-0444 - PR2-EQ-0444 lines 5671-5673 status DATA mode boundary
-
-- paper_location: source:all-display-blocks
-- kind: predicate
-- actual: `true`
-- expected: `true`
-- residual_or_error: `0.`
-- tolerance: `0.`
-
-## LATEX-PR2-EQ-0445 - PR2-EQ-0445 lines 5706-5713 status DATA mode boundary
-
-- paper_location: source:all-display-blocks
-- kind: predicate
-- actual: `true`
-- expected: `true`
-- residual_or_error: `0.`
-- tolerance: `0.`
-
-## LATEX-PR2-EQ-0446 - PR2-EQ-0446 lines 6449-6453 status NOTE mode note-boundary
+## LATEX-PR2-EQ-0442 - PR2-EQ-0442 lines 6415-6419 status NOTE mode note-boundary
 
 - paper_location: source:all-display-blocks
 - kind: predicate
@@ -5559,8 +5523,8 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: exact
-- actual: `271.`
-- expected: `271.`
+- actual: `268.`
+- expected: `268.`
 - residual_or_error: `0.`
 - tolerance: `0.`
 
@@ -5568,8 +5532,8 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: exact
-- actual: `111.`
-- expected: `111.`
+- actual: `112.`
+- expected: `112.`
 - residual_or_error: `0.`
 - tolerance: `0.`
 
@@ -5586,8 +5550,8 @@ Each entry records the proof method and residual/result for a passing assertion.
 
 - paper_location: source:Oshetski_Projection_Relativity_II_Main.tex
 - kind: exact
-- actual: `2.`
-- expected: `2.`
+- actual: `0.`
+- expected: `0.`
 - residual_or_error: `0.`
 - tolerance: `0.`
 

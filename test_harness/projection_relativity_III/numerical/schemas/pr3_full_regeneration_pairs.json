@@ -1,8 +1,12 @@
 {
   "project": "Projection Relativity III",
   "schema": "full generator/data pair manifest for artifact drift hardening",
-  "status": "PRIII_FULL_REGENERATION_PAIR_MANIFEST_DRAFT_PASS_004",
-  "byte_exact_release_claimed": false,
+  "status": "PRIII_FULL_REGENERATION_PAIR_MANIFEST_LOCKED",
+  "pair_count": 41,
+  "schema_numeric_regeneration_claimed": true,
+  "canonical_release_byte_regeneration_claimed": true,
+  "raw_checked_in_file_order_byte_identity_claimed": false,
+  "raw_generator_stdout_byte_identity_claimed": false,
   "pairs": [
     {"name":"Step 01 inheritance ledger","code_path":"code/pr3_v00_inheritance_ledger.py","data_path":"data/inheritance_ledger.json"},
     {"name":"Step 01B alpha baseline policy","code_path":"code/pr3_v00b_alpha_baseline_policy.py","data_path":"data/alpha_baseline_policy.json"},
@@ -48,7 +52,7 @@
   ],
   "notes": [
     "This manifest is intentionally broader than schemas/pr3_regeneration_targets.json.",
-    "The artifact drift audit may report builder-discovery issues where generator modules do not yet expose exactly one zero-argument build_* function.",
-    "The purpose of Pass 004 is to surface and classify those issues, not to claim byte-exact release regeneration."
+    "All 41 pairs are exercised by run_pr3_numerical_validation.py at the schema/numeric tier.",
+    "Canonical release-byte identity is enforced separately by code/pr3_release_byte_exact_audit.py under schemas/pr3_release_byte_exact_policy.json."
   ]
 }

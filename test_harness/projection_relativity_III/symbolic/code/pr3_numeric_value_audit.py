@@ -2,7 +2,7 @@
 """Numeric-value audit for PR-III manuscript source.
 
 This audit extracts decimal/scientific numeric literals from the manuscript TeX
-and compares them with the sandbox's locked JSON/CSV/report numeric ledger.
+and compares them with the locked JSON/CSV/report ledger in the public repository.
 
 It intentionally focuses on decimal values and scientific notation. Exact
 integer/fraction structural identities are covered by the Maple and equation
@@ -72,6 +72,7 @@ PM_SCALE_PATTERN = re.compile(
 )
 
 LAYOUT_CONTEXT_PATTERNS = [
+    r"\\usepackage\[[^]]*(?:margin|paper|textwidth)",
     r"\\setlength",
     r"\\renewcommand\{\\arraystretch\}",
     r"\\def\\",
@@ -231,18 +232,18 @@ def extract_numbers_from_text(text: str, source: str) -> list[LedgerValue]:
 
 
 def collect_ledger_values(repo: Path) -> list[LedgerValue]:
-    paths: list[Path] = []
-    for pattern in [
-        "MANIFEST_PR3_LOCKED_OUTPUTS.json",
-        "README_PR3_REPRODUCIBILITY.md",
-        "RUN_ORDER.md",
-        "data/*.json",
-        "tables/*.csv",
-        "reports/PR3_FINAL_AUDIT_SUMMARY.md",
-        "reports/step_*.md",
-        "schemas/pr3_numeric_tolerances.json",
-    ]:
-        paths.extend(repo.glob(pattern))
+    numerical = repo / "test_harness" / "projection_relativity_III" / "numerical"
+    payload = repo / "data" / "projection_relativity_III"
+    paths: list[Path] = [
+        numerical / "MANIFEST_PR3_LOCKED_OUTPUTS.json",
+        numerical / "README_PR3_REPRODUCIBILITY.md",
+        numerical / "RUN_ORDER.md",
+        numerical / "results" / "PR3_FINAL_AUDIT_SUMMARY.md",
+        numerical / "schemas" / "pr3_numeric_tolerances.json",
+    ]
+    paths.extend((payload / "data").glob("*.json"))
+    paths.extend((numerical / "results").glob("*.csv"))
+    paths.extend((numerical / "results").glob("step_*.md"))
 
     values: list[LedgerValue] = []
     for path in sorted(set(paths)):
@@ -377,7 +378,7 @@ def write_reports(rows: list[NumericRow], outdir: Path, repo: Path, tex_root: Pa
 
     summary = {
         "overall_status": "PASS" if not unmatched else "FAIL",
-        "repo": "https://github.com/oshetskiresearch/Projection-Relativity_III_Sandbox",
+        "repo": "https://github.com/oshetskiresearch/Projection_Relativity",
         "tex_root": "https://github.com/oshetskiresearch/Projection_Relativity/tree/main/manuscript/projection_relativity_III",
         "numeric_literals_inventoried": len(rows),
         "document_numeric_values_checked": len(checked),
@@ -403,7 +404,7 @@ def write_reports(rows: list[NumericRow], outdir: Path, repo: Path, tex_root: Pa
         f"- Layout/diagram literals skipped: {len(skipped)}",
         f"- Unmatched: {len(unmatched)}",
         "",
-        "The audit compares manuscript decimal/scientific numeric literals to the sandbox locked JSON/CSV/report ledger using Decimal rounding-aware tolerances. TeX layout dimensions and diagram coordinates are inventoried but excluded from the physics-value pass/fail gate.",
+        "The audit compares manuscript decimal/scientific numeric literals to the public repository's locked JSON/CSV/report ledger using Decimal rounding-aware tolerances. TeX layout dimensions and diagram coordinates are inventoried but excluded from the physics-value pass/fail gate.",
         "",
         "## Unmatched Values",
         "",
@@ -418,7 +419,7 @@ def write_reports(rows: list[NumericRow], outdir: Path, repo: Path, tex_root: Pa
 
 def parse_args(argv: Iterable[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--repo", type=Path, required=True, help="Path to Projection-Relativity_III_Sandbox checkout")
+    parser.add_argument("--repo", type=Path, required=True, help="Path to the Projection_Relativity public checkout")
     parser.add_argument("--tex-root", type=Path, required=True, help="Path to manuscript TeX root")
     parser.add_argument("--output-dir", type=Path, default=Path("reports"), help="Output report directory")
     return parser.parse_args(argv)

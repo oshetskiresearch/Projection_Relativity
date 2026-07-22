@@ -11,21 +11,22 @@
   },
   "output_directory": "results",
   "package": "public numerical reproducibility tester",
+  "package_path": "test_harness/projection_relativity_III/numerical",
   "project": "Projection Relativity III",
-  "source_repository": "oshetskiresearch/Projection-Relativity_III_Sandbox",
+  "release_branch": "main",
+  "source_repository": "oshetskiresearch/Projection_Relativity",
   "source_scope": {
     "counts": {
       "audit_python_files": 6,
       "data_json_files": 44,
       "generator_python_files": 41,
-      "schema_json_files": 6
+      "schema_json_files": 5
     },
     "forbidden_paths": [],
     "forbidden_references": [],
     "regeneration_pairs": 41,
-    "source_payload_files": 103
+    "source_payload_files": 102
   },
-  "source_snapshot_commit": "fbb61f3771db2674c2b551a2d767c923cd5f0a1f",
   "status": "PASS",
   "tiers": {
     "tier_a": {

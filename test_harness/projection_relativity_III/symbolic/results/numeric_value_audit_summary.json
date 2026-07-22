@@ -1,15 +1,15 @@
 {
   "overall_status": "PASS",
-  "repo": "https://github.com/oshetskiresearch/Projection-Relativity_III_Sandbox",
+  "repo": "https://github.com/oshetskiresearch/Projection_Relativity",
   "tex_root": "https://github.com/oshetskiresearch/Projection_Relativity/tree/main/manuscript/projection_relativity_III",
   "numeric_literals_inventoried": 398,
-  "document_numeric_values_checked": 283,
-  "matched": 283,
-  "skipped_layout_literals": 115,
+  "document_numeric_values_checked": 282,
+  "matched": 282,
+  "skipped_layout_literals": 116,
   "unmatched": 0,
   "status_counts": {
-    "PASS": 282,
-    "SKIP_LAYOUT": 115,
+    "SKIP_LAYOUT": 116,
+    "PASS": 281,
     "PASS_ABS_CONTEXT": 1
   }
 }

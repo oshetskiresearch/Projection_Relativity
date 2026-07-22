@@ -61,12 +61,17 @@ A passing run verifies:
 
 ## Provenance
 
-The package was selected from
+The authoritative release copy is this public repository directory. It was
+originally selected from
 [`oshetskiresearch/Projection-Relativity_III_Sandbox`](https://github.com/oshetskiresearch/Projection-Relativity_III_Sandbox)
 at PR-III payload snapshot
 `fbb61f3771db2674c2b551a2d767c923cd5f0a1f`. The included paths were verified
 unchanged through sandbox commit
 `14979ec5d6ecdc4f0fb8f8ed5e6345bec1cbf0fa`.
+
+Rerunning or auditing the released package requires only a clone of
+[`oshetskiresearch/Projection_Relativity`](https://github.com/oshetskiresearch/Projection_Relativity);
+the sandbox is historical provenance, not a runtime dependency.
 
 ## Claim Boundary
 

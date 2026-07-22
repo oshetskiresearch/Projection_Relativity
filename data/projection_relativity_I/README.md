@@ -190,11 +190,13 @@ A fresh clone can directly:
 4. inspect and extract the two usable Section 11.3 support archives; and
 5. inspect the Section 10 compact-phase precision audit.
 
-A fresh clone cannot reproduce the unavailable quasar, magnetic, or
-cosmological observational packages because no public support archives are
-provided for those channels. Their **not available** status is documentation,
-not a pointer to an external PR bundle. External raw datasets, where
-applicable, remain governed by their original providers.
+The publication-ready figure inputs needed to compile PR-I are included under
+`manuscript/projection_relativity_I/figures/`. A fresh clone still cannot rerun
+the unavailable quasar, magnetic, or cosmological observational analyses
+because no public raw-data support archives are provided for those channels.
+Their **not available** status describes the analysis packages, not the static
+figure inputs required to compile the released manuscript. External raw
+datasets, where applicable, remain governed by their original providers.
 
 ## Citation and Use
 

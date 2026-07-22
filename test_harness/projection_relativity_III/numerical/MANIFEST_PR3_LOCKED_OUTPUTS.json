@@ -1,7 +1,8 @@
 {
   "project": "Projection Relativity III",
-  "manifest": "PR3 locked outputs and reproducibility package",
-  "status": "PRIII_REPRODUCIBILITY_PACKAGE_HARDENING_IN_PROGRESS",
+  "manifest": "PR3 locked outputs and public reproducibility contract",
+  "status": "PRIII_REPRODUCIBILITY_PACKAGE_RELEASE_LOCKED",
+  "path_base": "repository_root",
   "ledger_status": {
     "PRIII_global_status": "CONSISTENCY_LOCKED",
     "precision_status": "ALPHA_MW_MZ_GF_ONE_SIGMA_DIAGNOSTIC_PASS",
@@ -24,53 +25,42 @@
     "alpha3_PR": "0.117861507469150"
   },
   "final_reports": [
-    "reports/step_09f_final_priii_consistency_statement.md",
-    "reports/step_09e_cross_sector_diagnostic_table.md",
-    "reports/step_09d_no_fit_provenance_manifest.md",
-    "reports/step_09c_running_continuity_audit.md",
-    "reports/step_09b_anomaly_registry_audit.md",
-    "reports/step_09a_global_ledger_lock_audit.md"
+    "test_harness/projection_relativity_III/numerical/results/PR3_FINAL_AUDIT_SUMMARY.md",
+    "test_harness/projection_relativity_III/numerical/results/PR3_NUMERICAL_VALIDATION_SUMMARY.md",
+    "test_harness/projection_relativity_III/numerical/results/tier_a_manifest_audit.txt",
+    "test_harness/projection_relativity_III/numerical/results/tier_b_artifact_drift_audit.json",
+    "test_harness/projection_relativity_III/numerical/results/tier_c_release_byte_exact_audit.json"
   ],
   "reproducibility_files": [
-    "README_PR3_REPRODUCIBILITY.md",
-    "RUN_ORDER.md",
-    "MANIFEST_PR3_LOCKED_OUTPUTS.json",
-    "schemas/pr3_regeneration_targets.json",
-    "schemas/pr3_generator_data_pairs_full.json",
-    "schemas/pr3_artifact_drift_policy.json",
-    "scripts/pr3_canonical_json.py",
-    "scripts/run_all_pr3_audits.py",
-    "reports/PR3_FINAL_AUDIT_SUMMARY.md",
-    "reports/reproducibility_hardening_pass_001.md",
-    "reports/reproducibility_hardening_pass_002.md",
-    "reports/reproducibility_hardening_pass_003.md",
-    "reports/reproducibility_hardening_pass_004.md",
-    "tables/pr3_locked_outputs.csv",
-    "tables/pr3_cross_sector_diagnostic_table.csv"
+    "test_harness/projection_relativity_III/numerical/README.md",
+    "test_harness/projection_relativity_III/numerical/README_PR3_REPRODUCIBILITY.md",
+    "test_harness/projection_relativity_III/numerical/RUN_ORDER.md",
+    "test_harness/projection_relativity_III/numerical/PR3_NUMERICAL_SCOPE.json",
+    "test_harness/projection_relativity_III/numerical/run_pr3_numerical_validation.py",
+    "test_harness/projection_relativity_III/numerical/schemas/pr3_full_regeneration_pairs.json",
+    "test_harness/projection_relativity_III/numerical/schemas/pr3_regeneration_targets.json",
+    "test_harness/projection_relativity_III/numerical/schemas/pr3_artifact_drift_policy.json",
+    "test_harness/projection_relativity_III/numerical/schemas/pr3_numeric_tolerances.json",
+    "test_harness/projection_relativity_III/numerical/schemas/pr3_release_byte_exact_policy.json",
+    "test_harness/projection_relativity_III/numerical/code/pr3_canonical_json.py",
+    "test_harness/projection_relativity_III/numerical/code/run_all_pr3_audits.py",
+    "test_harness/projection_relativity_III/numerical/code/pr3_artifact_drift_audit.py",
+    "test_harness/projection_relativity_III/numerical/code/pr3_schema_drift_summary.py",
+    "test_harness/projection_relativity_III/numerical/code/pr3_numeric_drift_summary.py",
+    "test_harness/projection_relativity_III/numerical/code/pr3_release_byte_exact_audit.py"
   ],
-  "hardening_status": {
+  "release_contract": {
     "manifest_level_checks": true,
     "targeted_regeneration_schema_checks": true,
-    "artifact_drift_policy_added": true,
-    "canonical_json_utility_added": true,
-    "full_generator_data_pair_map_added": true,
-    "runner_full_target_drift_classification_added": true,
-    "byte_exact_release_mode_available": true,
-    "hardening_passes": [
-      "reports/reproducibility_hardening_pass_001.md",
-      "reports/reproducibility_hardening_pass_002.md",
-      "reports/reproducibility_hardening_pass_003.md",
-      "reports/reproducibility_hardening_pass_004.md"
-    ],
-    "current_hardened_targets": [
-      "code/pr3_v05f_weak_angle_oblique_refinement.py",
-      "code/pr3_v05j_neutral_D3_refinement.py",
-      "code/pr3_v06b_neutrino_radiative_kernel.py",
-      "code/pr3_v08c_running_continuity_audit.py"
-    ],
-    "full_generator_data_pair_count": 29,
-    "full_regeneration_from_scratch_claimed": false,
-    "byte_exact_regeneration_claimed": false
+    "artifact_drift_policy_locked": true,
+    "canonical_json_policy_locked": true,
+    "full_generator_data_pair_manifest": "test_harness/projection_relativity_III/numerical/schemas/pr3_full_regeneration_pairs.json",
+    "full_generator_data_pair_count": 41,
+    "full_schema_numeric_regeneration_claimed": true,
+    "canonical_release_byte_regeneration_claimed": true,
+    "canonical_release_byte_match_count": 41,
+    "raw_checked_in_file_order_byte_identity_claimed": false,
+    "raw_generator_stdout_byte_identity_claimed": false
   },
-  "next_step": "run full-target drift report and canonical artifact rewrite pass"
+  "release_note": "Tier A manifest, Tier B 41-pair schema/numeric, and Tier C 41-pair canonical release-byte contracts are locked; Tier D raw-byte identities are not claimed."
 }

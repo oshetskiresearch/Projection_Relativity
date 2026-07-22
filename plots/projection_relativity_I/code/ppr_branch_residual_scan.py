@@ -457,7 +457,7 @@ display(Image(filename=str(branch_1d_png)))
 # Suggested captions for paper use
 # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-print("\Main-body caption for the 1D plot:")
+print("Main-body caption for the 1D plot:")
 print(r"""
 \caption{
 \label{fig:radial_branch_a4_residual}

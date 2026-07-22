@@ -275,6 +275,7 @@ def write_results(
         writer.writerows(asdict(item) for item in results)
 
     failed = [item for item in results if item.status != "PASS"]
+    scope_manifest = read_json(SCOPE_MANIFEST)
     summary = {
         "project": "Projection Relativity III",
         "package": "public numerical reproducibility tester",
@@ -282,12 +283,13 @@ def write_results(
         "checks_total": len(results),
         "checks_passed": len(results) - len(failed),
         "checks_failed": len(failed),
-        "source_repository": "oshetskiresearch/Projection-Relativity_III_Sandbox",
-        "source_snapshot_commit": read_json(SCOPE_MANIFEST)["source_snapshot_commit"],
+        "source_repository": scope_manifest["source_repository"],
+        "release_branch": scope_manifest["release_branch"],
+        "package_path": scope_manifest["package_path"],
         "output_directory": output_reference(output_dir),
         "source_scope": scope,
         "tiers": tier_data,
-        "claim_boundary": read_json(SCOPE_MANIFEST)["claim_boundary"],
+        "claim_boundary": scope_manifest["claim_boundary"],
     }
     write_json(output_dir / "PR3_NUMERICAL_VALIDATION_SUMMARY.json", summary)
 

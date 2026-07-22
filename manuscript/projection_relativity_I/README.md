@@ -13,11 +13,13 @@ Relativity**.
 | `Oshetski_Projection_Relativity_Supplement.tex` | Supplementary derivations and supporting analysis. |
 | `Oshetski_Projection_Relativity_Supplement.pdf` | Compiled supplement. |
 | `Oshetski_Projection_Relativity_References.bib` | BibTeX references shared by the PR-I sources. |
+| `figures/` | Publication-ready figure inputs referenced by the main TeX source. |
 | `CITATION.cff` | Machine-readable citation metadata. |
 
-PR-I figures and their generators are maintained in
-[`plots/projection_relativity_I/`](../../plots/projection_relativity_I/), not in
-a `/plots` subdirectory of the manuscript package.
+The `figures/` directory makes the manuscript compile directly from a fresh
+clone. Figure generators, generated bundles, and their availability boundaries
+remain documented in
+[`plots/projection_relativity_I/`](../../plots/projection_relativity_I/).
 
 The public validation and data maps are located at:
 
@@ -56,4 +58,3 @@ bibtex Oshetski_Projection_Relativity_Supplement
 pdflatex Oshetski_Projection_Relativity_Supplement.tex
 pdflatex Oshetski_Projection_Relativity_Supplement.tex
 ```
-

@@ -1,4 +1,4 @@
 PR-III reproducibility audit: PASS
 Manifest/status layer and targeted regeneration schema checks passed.
-Byte-exact full regeneration is not claimed unless --byte-exact is used and passes.
-Locked through Step 09F; ready for manuscript consolidation after reproducibility hardening.
+Tier C canonical release-byte identity is enforced by code/pr3_release_byte_exact_audit.py.
+Locked through Step 09F; the public Tier A-C reproducibility contract is release closed.

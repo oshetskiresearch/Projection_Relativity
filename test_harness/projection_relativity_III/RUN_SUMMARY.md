@@ -1,52 +1,41 @@
-# PR-III Symbolic Harness Run Summary
+# PR-III Public Harness Run Summary
 
-Run date: 2026-07-20
+Run date: 2026-07-21
+
+Repository: `oshetskiresearch/Projection_Relativity`
+
+Release branch: `main`
 
 ## Inputs
 
-- Public repository: `oshetskiresearch/Projection_Relativity`
-- Public repository commit checked before harness update: `97db32395138b7fac38b646f045edf0d702bd00c`
-- Locked sandbox ledger commit: `47a175c56676242fdfe1dfebdc15d680aa531109`
-- Public manuscript source: `manuscript/projection_relativity_III/Oshetski_Projection_Relativity_III_Main.tex`
-- Public manuscript PDF: `manuscript/projection_relativity_III/Oshetski_Projection_Relativity_III_Main.pdf`
+- Manuscript: `manuscript/projection_relativity_III/Oshetski_Projection_Relativity_III_Main.tex`
+- Public generator and data ledger: `data/projection_relativity_III/`
+- Numerical contract: `test_harness/projection_relativity_III/numerical/`
+- Symbolic contract: `test_harness/projection_relativity_III/symbolic/`
 - Maple engine: Maple 2026 command-line `cmaple`
+
+No private sandbox checkout or personal-computer path is required.
 
 ## Result
 
 ```text
 OVERALL_STATUS: PASS
-Python symbolic/public paper conformance: PASS, 82/82
-Equation audit: PASS, 253/253 display blocks mapped
+Maple symbolic checks: 67/67 PASS
+Maple negative controls: 12/12 PASS
+Equation audit: 253/253 display blocks mapped
 Direct Maple or locked-value coverage: 148 display blocks
-Numeric value audit: PASS, 283/283 manuscript numeric values matched
-Maple symbolic checks: PASS, 67/67
-Maple negative controls: PASS, 12/12
+Numeric value audit: 282/282 manuscript values matched
+Layout-only values: 116 classified separately
+Symbolic/public paper conformance: 69/69 PASS
+Numerical Tier A manifest/targeted audit: PASS
+Numerical Tier B schema/numeric pairs: 41/41 PASS
+Numerical Tier C canonical release bytes: 41/41 PASS
 ```
 
-The public PDF text was checked for the revised canonical-closure,
-closed-admissibility, positive-defect, and singleton-quotient statements, as
-well as the locked headline values and diagnostic positions.
+## Interpretation
 
-The separate numerical validation harness under `numerical/` was not rerun.
-This refresh is limited to the symbolic, equation-accounting, manuscript-value,
-and paper-conformance layers because the locked numerical predictions were
-unchanged.
+The equation-audit pass criterion is complete display-block accounting. Every display is mapped to a direct Maple/locked-value check or an explicit repository-generation, data, or contextual class; this does not recast definitions and contextual displays as independent Maple theorems.
 
-## Notes
+The numerical release contract claims schema/numeric reproducibility and canonical release-byte equality for all 41 declared pairs. Raw generator-stdout byte identity and raw checked-in file-order byte identity remain explicitly unclaimed.
 
-The wrapper expects the PR-III sandbox checkout as `-Repo` because the sandbox
-contains the locked PR-III JSON/CSV/report ledger and regeneration scripts.
-When this harness lives in the public repository at
-`test_harness/projection_relativity_III`, it automatically audits the public
-manuscript at `../../manuscript/projection_relativity_III`.
-
-The pass criterion for the equation audit is full display-block accounting:
-all display equations are mapped to direct Maple/locked-value checks,
-repository-generation coverage, diagnostic/data comparison, or explicit
-source/context coverage. It is not a claim that every display block is an
-independent Maple theorem.
-
-The public paper-conformance run used `--skip-repo-audits` so that the separate
-numerical/regeneration pipeline was not executed. Its 82 checks cover required
-artifacts, locked-value agreement, diagnostics, global and anomaly gates,
-the revised exact `C3` identities, PDF text, and negative controls.
+Detailed human-readable and machine-readable outputs are in `symbolic/results/` and `numerical/results/`.

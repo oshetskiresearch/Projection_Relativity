@@ -7,7 +7,6 @@ OVERALL_STATUS: PASS
 - Total display blocks: 253
 - Unmapped display blocks: 0
 - Direct Maple or locked-value covered blocks: 148
-- Direct proof backlog rows: 84
 
 ## Coverage Classes
 

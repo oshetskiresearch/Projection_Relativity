@@ -85,13 +85,13 @@ def load_claims(harness_root: Path) -> dict:
 
 def check_required_files(repo: Path, results: list[Result]) -> None:
     required = [
-        "scripts/run_all_pr3_audits.py",
-        "scripts/pr3_artifact_drift_audit.py",
-        "scripts/pr3_release_byte_exact_audit.py",
-        "MANIFEST_PR3_LOCKED_OUTPUTS.json",
-        "tables/pr3_cross_sector_diagnostic_table.csv",
-        "data/global_final_priii_consistency_statement.json",
-        "data/global_anomaly_registry_audit.json",
+        "test_harness/projection_relativity_III/numerical/code/run_all_pr3_audits.py",
+        "test_harness/projection_relativity_III/numerical/code/pr3_artifact_drift_audit.py",
+        "test_harness/projection_relativity_III/numerical/code/pr3_release_byte_exact_audit.py",
+        "test_harness/projection_relativity_III/numerical/MANIFEST_PR3_LOCKED_OUTPUTS.json",
+        "test_harness/projection_relativity_III/numerical/results/pr3_cross_sector_diagnostic_table.csv",
+        "data/projection_relativity_III/data/global_final_priii_consistency_statement.json",
+        "data/projection_relativity_III/data/global_anomaly_registry_audit.json",
     ]
     for rel in required:
         path = repo / rel
@@ -100,7 +100,7 @@ def check_required_files(repo: Path, results: list[Result]) -> None:
 
 
 def check_locked_outputs(repo: Path, claims: dict, results: list[Result]) -> None:
-    manifest = read_json(repo / "MANIFEST_PR3_LOCKED_OUTPUTS.json")
+    manifest = read_json(repo / "test_harness/projection_relativity_III/numerical/MANIFEST_PR3_LOCKED_OUTPUTS.json")
     locked = manifest.get("locked_outputs", {})
     for claim in claims["locked_output_claims"]:
         id_ = claim["id"]
@@ -124,7 +124,7 @@ def read_diagnostic_table(path: Path) -> dict[str, dict[str, str]]:
 
 
 def check_diagnostics(repo: Path, claims: dict, results: list[Result]) -> None:
-    rows = read_diagnostic_table(repo / "tables/pr3_cross_sector_diagnostic_table.csv")
+    rows = read_diagnostic_table(repo / "test_harness/projection_relativity_III/numerical/results/pr3_cross_sector_diagnostic_table.csv")
     for claim in claims["diagnostic_claims"]:
         observable = claim["observable"]
         row = rows.get(observable)
@@ -143,7 +143,7 @@ def check_diagnostics(repo: Path, claims: dict, results: list[Result]) -> None:
 
 
 def check_status_gates(repo: Path, claims: dict, results: list[Result]) -> None:
-    final = read_json(repo / "data/global_final_priii_consistency_statement.json")
+    final = read_json(repo / "data/projection_relativity_III/data/global_final_priii_consistency_statement.json")
     decision = final.get("global_decision", {})
     for key, expected in claims["global_status_gates"].items():
         actual = decision.get(key)
@@ -157,7 +157,7 @@ def check_status_gates(repo: Path, claims: dict, results: list[Result]) -> None:
 
 
 def check_anomaly_gates(repo: Path, results: list[Result]) -> None:
-    anomaly = read_json(repo / "data/global_anomaly_registry_audit.json")
+    anomaly = read_json(repo / "data/projection_relativity_III/data/global_anomaly_registry_audit.json")
     sums = anomaly.get("local_anomaly_sums_per_generation", {})
     for key, item in sums.items():
         add(results, f"anomaly:{key}", "symbolic-status", item.get("status") == "PASS",
@@ -263,7 +263,7 @@ def check_paper_text(paper_text: Path | None, claims: dict, results: list[Result
 
 
 def run_negative_controls(repo: Path, claims: dict, results: list[Result]) -> None:
-    manifest = read_json(repo / "MANIFEST_PR3_LOCKED_OUTPUTS.json")
+    manifest = read_json(repo / "test_harness/projection_relativity_III/numerical/MANIFEST_PR3_LOCKED_OUTPUTS.json")
     locked = manifest["locked_outputs"]
 
     ok, _ = decimal_close(locked["alpha_inverse_PR"], "137.035000000000", "1e-12")
@@ -274,12 +274,12 @@ def run_negative_controls(repo: Path, claims: dict, results: list[Result]) -> No
     add(results, "selftest:reject_wrong_MW", "negative-controls", not ok, ok, False,
         "must reject", "Reject wrong W mass")
 
-    final = read_json(repo / "data/global_final_priii_consistency_statement.json")
+    final = read_json(repo / "data/projection_relativity_III/data/global_final_priii_consistency_statement.json")
     overclaim = final["global_decision"].get("final_exact_all_orders_theorem") == "CLAIMED"
     add(results, "selftest:reject_all_orders_overclaim", "negative-controls",
         not overclaim, overclaim, False, "must reject", "Reject exact all-orders theorem overclaim")
 
-    anomaly = read_json(repo / "data/global_anomaly_registry_audit.json")
+    anomaly = read_json(repo / "data/projection_relativity_III/data/global_anomaly_registry_audit.json")
     u1 = Decimal(anomaly["local_anomaly_sums_per_generation"]["U1Y_cubed"]["value"])
     add(results, "selftest:reject_anomaly_violation", "negative-controls",
         u1 != Decimal("1"), u1, "not 1", "must reject", "Reject anomaly-violating ledger")
@@ -368,7 +368,7 @@ def write_reports(results: list[Result], outdir: Path) -> None:
 
 def parse_args(argv: Iterable[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--repo", type=Path, required=True, help="Path to Projection-Relativity_III_Sandbox checkout")
+    parser.add_argument("--repo", type=Path, required=True, help="Path to the Projection_Relativity public checkout")
     parser.add_argument("--paper-text", type=Path, default=None, help="Optional extracted PR3 paper text")
     parser.add_argument("--output-dir", type=Path, default=Path("reports"), help="Output report directory")
     parser.add_argument("--skip-repo-audits", action="store_true", help="Only run claim checks")
@@ -386,9 +386,10 @@ def main(argv: Iterable[str] | None = None) -> int:
 
     check_required_files(repo, results)
     if not args.skip_repo_audits:
-        run_command(repo, ["scripts/run_all_pr3_audits.py"], "repo_default_audit", results)
-        run_command(repo, ["scripts/pr3_artifact_drift_audit.py"], "artifact_drift_audit", results)
-        run_command(repo, ["scripts/pr3_release_byte_exact_audit.py"], "release_byte_exact_audit", results)
+        numerical = repo / "test_harness" / "projection_relativity_III" / "numerical"
+        run_command(numerical, ["code/run_all_pr3_audits.py"], "repo_default_audit", results)
+        run_command(numerical, ["code/pr3_artifact_drift_audit.py"], "artifact_drift_audit", results)
+        run_command(numerical, ["code/pr3_release_byte_exact_audit.py"], "release_byte_exact_audit", results)
 
     check_locked_outputs(repo, claims, results)
     check_diagnostics(repo, claims, results)

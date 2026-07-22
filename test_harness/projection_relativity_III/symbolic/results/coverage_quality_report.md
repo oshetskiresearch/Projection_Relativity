@@ -7,9 +7,8 @@ Total display blocks: 253
 Unmapped display blocks: 0
 Direct Maple or locked-value coverage: 148
 Direct coverage fraction: 0.585
-Direct proof backlog rows: 84
 ```
 
-## Recommended Follow-Up
+## Interpretation
 
-Convert high-value backlog rows into explicit Maple assertions when the manuscript source is frozen.
+Every display block is mapped to a direct check or an explicit repository-generation, data, or contextual coverage class.

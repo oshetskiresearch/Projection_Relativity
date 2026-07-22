@@ -24,8 +24,6 @@
 # pr_regularized_kruskal_szekeres_spacetime plot generation
 #
 # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-!pip install numpy scipy matplotlib
-!git clone https://github.com/oshetskiresearch/Projection_Relativity.git
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path

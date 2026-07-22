@@ -2647,7 +2647,7 @@ Matrix(4, 4, [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]])
 - simplified_result_or_error:
 
 ```maple
-"found at character 92476"
+"found at character 92474"
 ```
 
 ## SRC-E004 - source main contains locked magnetic area coefficient
@@ -2665,7 +2665,7 @@ Matrix(4, 4, [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]])
 - simplified_result_or_error:
 
 ```maple
-"found at character 144803"
+"found at character 144801"
 ```
 
 ## SRC-E005 - source main contains locked compact flux normalization
@@ -2683,7 +2683,7 @@ Matrix(4, 4, [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]])
 - simplified_result_or_error:
 
 ```maple
-"found at character 144401"
+"found at character 144399"
 ```
 
 ## SRC-E006 - source supplement contains boundary cofactor decimal

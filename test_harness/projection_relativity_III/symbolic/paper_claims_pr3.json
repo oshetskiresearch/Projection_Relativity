@@ -1,8 +1,8 @@
 {
   "project": "Projection Relativity III",
   "paper_source": "Projection_Relativity public PR-III manuscript and PDF",
-  "repository": "oshetskiresearch/Projection-Relativity_III_Sandbox",
-  "checked_commit": "47a175c56676242fdfe1dfebdc15d680aa531109",
+  "repository": "oshetskiresearch/Projection_Relativity",
+  "release_branch": "main",
   "locked_output_claims": [
     {
       "id": "alpha_inverse_PR",
