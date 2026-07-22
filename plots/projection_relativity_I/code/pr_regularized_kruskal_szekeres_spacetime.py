@@ -25,7 +25,7 @@
 #
 # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 !pip install numpy scipy matplotlib
-!git clone https://github.com/oshetskiresearch/Projection-Relativity.git
+!git clone https://github.com/oshetskiresearch/Projection_Relativity.git
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -60,7 +60,7 @@ def plot_regularized_kruskal_pr_clean(save_to_repo=False):
     out_pdf = Path("/content/pr_regularized_kruskal_szekeres_spacetime.pdf")
     out_svg = Path("/content/pr_regularized_kruskal_szekeres_spacetime.svg")
 
-    repo_fig_dir = Path("/content/Projection-Relativity/plots")
+    repo_fig_dir = Path("/content/Projection_Relativity/plots/projection_relativity_I")
 
     # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
     # Helper functions

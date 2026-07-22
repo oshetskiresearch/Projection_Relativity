@@ -1,7 +1,7 @@
 {
   "overall_status": "PASS",
-  "repo": "C:\\Users\\Michael Oshetski\\Documents\\Codex\\2026-07-20\\do\\work\\Projection-Relativity_III_Sandbox",
-  "tex_root": "C:\\Users\\Michael Oshetski\\Documents\\Codex\\2026-07-20\\do\\work\\Projection_Relativity\\manuscript\\projection_relativity_III",
+  "repo": "https://github.com/oshetskiresearch/Projection-Relativity_III_Sandbox",
+  "tex_root": "https://github.com/oshetskiresearch/Projection_Relativity/tree/main/manuscript/projection_relativity_III",
   "numeric_literals_inventoried": 398,
   "document_numeric_values_checked": 283,
   "matched": 283,

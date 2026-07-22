@@ -1,7 +1,7 @@
 {
   "overall_status": "PASS",
-  "repo": "C:\\Users\\Michael Oshetski\\Documents\\Codex\\2026-07-20\\do\\work\\Projection_Relativity",
-  "tex_root": "C:\\Users\\Michael Oshetski\\Documents\\Codex\\2026-07-20\\do\\work\\Projection_Relativity\\manuscript\\projection_relativity_III",
+  "repo": "https://github.com/oshetskiresearch/Projection_Relativity",
+  "tex_root": "manuscript/projection_relativity_III",
   "total_display_blocks": 253,
   "unmapped_display_blocks": 0,
   "direct_maple_or_locked_value_blocks": 148,

@@ -1,0 +1,28 @@
+# Python runtime artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.matplotlib/
+.venv/
+venv/
+
+# Local harness output bundles
+projection_relativity_numerical_validation_outputs/
+projection_relativity_numerical_validation_outputs.tar.gz
+pr2_harness_output/
+pr2_harness_output.zip
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db

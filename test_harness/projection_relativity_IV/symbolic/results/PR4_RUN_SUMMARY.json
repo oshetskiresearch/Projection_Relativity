@@ -27,7 +27,7 @@
   "interpretation": "The corrected completed admissible class is singleton. Broader P1-P7/common-reduct alternatives are retained and passed as negative controls, not counted as admissible PR branches.",
   "main_pdf_sha256": "8c28fc1e191393e97e065271e12e5d38c466400a201f80c61356d00937c9c3e7",
   "main_tex_sha256": "58f3bcd13adfd329c7db44b20486bec59fccf7dc60fc8db16bf62b94f31242f0",
-  "manuscript_commit": "494b5faa97280eab57cf396763194fd57b6cc98f",
+  "manuscript_commit": "c8c31f637686b79a4565218e8c70ddcb4a3f330f",
   "python": "3.12.13",
   "selector_coordinates": [
     "minimal radial coefficients",

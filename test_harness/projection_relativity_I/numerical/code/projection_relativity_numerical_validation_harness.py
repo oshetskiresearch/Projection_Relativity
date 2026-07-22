@@ -1400,17 +1400,21 @@ def candidate_tex_files() -> list[Path]:
         if tex.exists() and tex.is_file():
             found.append(tex.resolve())
 
-    roots = [Path("."), Path("/content")]
+    roots: list[Path] = []
+    script_file = globals().get("__file__")
+    if script_file:
+        roots.append(Path(script_file).resolve().parents[4])
+    public_repo = os.environ.get("PR_PUBLIC_REPO")
+    if public_repo:
+        roots.append(Path(public_repo).expanduser().resolve())
+    elif not script_file:
+        # Canonical checkout location used by the public Colab instructions.
+        roots.extend([Path("/content/Projection_Relativity"), Path.cwd()])
+
     for root in roots:
         if root.exists():
             for name in names:
                 found.extend(root.rglob(name))
-    for base in [Path.home() / "Desktop", Path.home() / "Downloads"]:
-        if base.exists():
-            for name in names:
-                tex = base / name
-                if tex.exists() and tex.is_file():
-                    found.append(tex.resolve())
     return sorted(set(found))
 
 

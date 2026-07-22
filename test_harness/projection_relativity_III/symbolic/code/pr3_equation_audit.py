@@ -439,8 +439,8 @@ def write_reports(rows: list[EquationBlock], outdir: Path, repo: Path, tex_root:
 
     summary = {
         "overall_status": "PASS" if unmapped == 0 else "FAIL",
-        "repo": str(repo),
-        "tex_root": str(tex_root),
+        "repo": "https://github.com/oshetskiresearch/Projection_Relativity",
+        "tex_root": "manuscript/projection_relativity_III",
         "total_display_blocks": len(rows),
         "unmapped_display_blocks": unmapped,
         "direct_maple_or_locked_value_blocks": direct,

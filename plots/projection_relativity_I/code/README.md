@@ -21,6 +21,17 @@ therefore are notebook-cell sources rather than directly executable standard
 Python files. Run those files in Colab/Jupyter, or convert the magic and package
 installation lines before using a normal Python interpreter.
 
+Colab-oriented sources use `/content/Projection_Relativity` as the canonical
+checkout path for the public repository:
+
+```bash
+git clone https://github.com/oshetskiresearch/Projection_Relativity.git
+```
+
+Any `generated/` directory created by these sources is a local working-output
+directory. Only the documented archives in the parent plot directory are
+release artifacts.
+
 The generated archives that are publicly available are stored one directory
 above this README. Their contents and interpretation boundaries are documented
 in [`plots/README.md`](../../README.md).

@@ -83,8 +83,9 @@ CRITICAL_KAPPA = MU2_MIN / 2.0
 OUTDIR = Path("/content/pr_double_null_wall_stability")
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
-REPO_RESULTS = Path("/content/Projection-Relativity_Sandbox/results/double_null_wall_stability")
-REPO_CODE = Path("/content/Projection-Relativity_Sandbox/code/singularity_tests")
+PUBLIC_REPO = Path("/content/Projection_Relativity")
+REPO_RESULTS = PUBLIC_REPO / "plots/projection_relativity_I/generated/double_null_wall_stability"
+REPO_CODE = PUBLIC_REPO / "plots/projection_relativity_I/code"
 
 # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 # Plot style

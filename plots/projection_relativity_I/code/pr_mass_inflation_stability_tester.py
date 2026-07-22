@@ -56,8 +56,9 @@ G_NEWTON = 1.0            # normalized units
 OUTDIR = Path("/content/pr_mass_inflation_stability")
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
-REPO_RESULTS = Path("/content/Projection-Relativity/results/mass_inflation_stability")
-REPO_CODE = Path("/content/Projection-Relativity/code/singularity_tests")
+PUBLIC_REPO = Path("/content/Projection_Relativity")
+REPO_RESULTS = PUBLIC_REPO / "plots/projection_relativity_I/generated/mass_inflation_stability"
+REPO_CODE = PUBLIC_REPO / "plots/projection_relativity_I/code"
 
 # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 # Plot formatting

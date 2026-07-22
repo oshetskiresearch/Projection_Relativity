@@ -87,13 +87,12 @@ a valid machine-checkable run.
 
 ## Run In Google Colab
 
-1. Open a new Colab notebook.
-2. Upload `projection_relativity_numerical_validation_harness.py` from the
-   repository's `test_harness/projection_relativity_I/numerical/code/`
-   directory.
-3. Optional but recommended: upload the current paper and supplement `.tex`
-   files into `/content` to activate document source checks.
-4. Run:
+1. Open the public notebook from the Colab badge in this directory, or upload
+   `projection_relativity_numerical_validation_harness.py` from
+   `test_harness/projection_relativity_I/numerical/code/`.
+2. Run the notebook's setup cell, which retrieves the current manuscript and
+   supplement directly from the public repository.
+3. Run:
 
 ```python
 %run projection_relativity_numerical_validation_harness.py
@@ -134,17 +133,20 @@ If `python` is not on your path, use the full path to your Python executable.
 
 ## Source-Text Checks
 
-The numerical harness can scan paper and supplement `.tex` files if they are
-available in the runtime.
+The numerical harness scans paper and supplement `.tex` files from the public
+repository checkout that contains the script. `PR_PUBLIC_REPO`, `PR_MAIN_TEX`,
+`PR_SUPPLEMENT_TEX`, and `PR_TEX_FILES` are explicit overrides for alternate
+checkouts or manually supplied source files.
 
-It searches common runtime locations such as:
+Notebook-cell execution also checks:
 
 ```text
-the repository root and its subdirectories
-/content
+/content/Projection_Relativity
+the current Colab working directory
 ```
 
-To activate source-text checks in Colab, upload:
+To activate source-text checks in Colab without cloning the repository, place
+the two public source files in the current notebook working directory:
 
 ```text
 Oshetski_Projection_Relativity_Main.tex

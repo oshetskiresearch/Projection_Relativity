@@ -97,7 +97,7 @@ def find_branch_residual_csv(filename=CSV_NAME):
         Path("/content") / filename,
         Path("/content/results/radial_spectral_gap") / filename,
         Path("/content/Projection_Relativity/results/radial_spectral_gap") / filename,
-        Path("/content/Projection-Relativity_Sandbox/results/radial_spectral_gap") / filename,
+        Path("/content/Projection_Relativity/data/projection_relativity_I") / filename,
         cwd / filename,
         cwd / "results/radial_spectral_gap" / filename,
         cwd / "data" / filename,

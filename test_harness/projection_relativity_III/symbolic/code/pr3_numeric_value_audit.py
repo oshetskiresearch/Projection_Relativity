@@ -377,8 +377,8 @@ def write_reports(rows: list[NumericRow], outdir: Path, repo: Path, tex_root: Pa
 
     summary = {
         "overall_status": "PASS" if not unmatched else "FAIL",
-        "repo": str(repo),
-        "tex_root": str(tex_root),
+        "repo": "https://github.com/oshetskiresearch/Projection-Relativity_III_Sandbox",
+        "tex_root": "https://github.com/oshetskiresearch/Projection_Relativity/tree/main/manuscript/projection_relativity_III",
         "numeric_literals_inventoried": len(rows),
         "document_numeric_values_checked": len(checked),
         "matched": len(passed),

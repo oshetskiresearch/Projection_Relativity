@@ -7,7 +7,9 @@ authors:
 title: "The Foundation of Projection Relativity: A Spectral-Projection Architecture for Emergent Relativity"
 version: 1.0.0
 date-released: 2026-06-03
-url: "https://github.com/oshetskiresearch/Projection_Relativity"
+doi: "10.5281/zenodo.20545407"
+url: "https://doi.org/10.5281/zenodo.20545407"
+repository-code: "https://github.com/oshetskiresearch/Projection_Relativity"
 preferred-citation:
   type: article
   authors:
@@ -16,3 +18,5 @@ preferred-citation:
       orcid: "https://orcid.org/0009-0007-3623-7586"
   title: "The Foundation of Projection Relativity: A Spectral-Projection Architecture for Emergent Relativity"
   year: 2026
+  doi: "10.5281/zenodo.20545407"
+  url: "https://doi.org/10.5281/zenodo.20545407"
